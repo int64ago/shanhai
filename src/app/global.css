@@ -1,0 +1,43 @@
+:root {
+  --paper: #efe6d2;
+  --ink: #1f1a14;
+  --cinnabar: #b5322a;
+  --bg: #d9d4c7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Songti SC', 'Noto Serif SC', 'STSong', serif;
+}
+
+.title {
+  position: fixed;
+  top: 24px;
+  right: 28px;
+  writing-mode: vertical-rl;
+  font-size: 28px;
+  letter-spacing: 0.3em;
+  pointer-events: none;
+  user-select: none;
+}
+
+.title .seal {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 4px 2px;
+  font-size: 13px;
+  color: var(--paper);
+  background: var(--cinnabar);
+  border-radius: 2px;
+}

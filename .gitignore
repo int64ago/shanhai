@@ -15,3 +15,4 @@ dist/
 # os / editors
 .DS_Store
 *.blend1
+*.swp

@@ -1,0 +1,13 @@
+{
+  "id": "m0-smoke-test",
+  "beast": "_test",
+  "budget": 2,
+  "tier": "Gen-2.5-Extreme-Low",
+  "prompt": "an ancient Chinese bronze ding cauldron with taotie motifs, three legs, two handles",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "material": "PBR",
+    "quality_override": 8000
+  }
+}
