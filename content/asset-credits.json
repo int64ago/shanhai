@@ -1,0 +1,11 @@
+{
+  "_note": "第三方素材授权登记；上线前统一核对。音频素材到位后同样登记在这里。",
+  "assets": [
+    {
+      "path": "public/models/_placeholder/fox.glb",
+      "source": "Hyper3D Rodin Gen-2.5 Extreme-Low（pipeline/rodin/jobs/m1-placeholder-fox.json）",
+      "author": "AI 生成",
+      "license": "待核实 Rodin 输出条款；仅作开发占位"
+    }
+  ]
+}

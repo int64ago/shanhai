@@ -1,43 +1,54 @@
+import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { ContactShadows, OrbitControls } from '@react-three/drei'
-import { ACESFilmicToneMapping, SRGBColorSpace } from 'three'
-import { Placeholder } from './Placeholder'
+import { OrbitControls, PerformanceMonitor } from '@react-three/drei'
+import { NoToneMapping, SRGBColorSpace } from 'three'
+import { useApp, useQuality } from '../app/store'
+import { PALETTE } from './palette'
+import { Sky } from './Sky'
+import { Mountains } from './Mountains'
+import { Mist } from './Mist'
+import { ContactShadows } from '@react-three/drei'
+import { PaperGround } from './PaperGround'
+import { INK } from '../systems/ink/palette'
+import { Effects } from './Effects'
+import { PlaceholderBeast } from './PlaceholderBeast'
+import { Jiuweihu } from '../beasts/jiuweihu/Jiuweihu'
+import { CameraRig } from './CameraRig'
 
-// M0 空场景：后续 M1 在这里接 HDRI、后期和画质分级
 export function Stage() {
+  const { dpr } = useQuality()
+  const stepQuality = useApp((s) => s.stepQuality)
+  const selected = useApp((s) => s.selected)
+
   return (
     <Canvas
-      shadows
-      dpr={[1, 2]}
-      camera={{ position: [3.5, 2, 5], fov: 35 }}
-      gl={{ antialias: true, toneMapping: ACESFilmicToneMapping, outputColorSpace: SRGBColorSpace }}
+      dpr={[1, dpr]}
+      camera={{ position: [3.2, 1.3, 3.8], fov: 32, near: 0.1, far: 1000 }}
+      // 色调映射交给后期的 AgX，渲染器本身不做
+      gl={{ antialias: false, toneMapping: NoToneMapping, outputColorSpace: SRGBColorSpace }}
     >
-      <color attach="background" args={['#d9d4c7']} />
-      <fog attach="fog" args={['#d9d4c7', 8, 30]} />
+      <PerformanceMonitor onDecline={() => stepQuality(-1)} onIncline={() => stepQuality(1)} flipflops={3} />
+      <CameraRig />
+      <fog attach="fog" args={[PALETTE.mist, 10, 44]} />
 
-      <hemisphereLight args={['#f4efe2', '#6b6658', 0.6]} />
-      <directionalLight
-        position={[4, 6, 3]}
-        intensity={2.2}
-        castShadow
-        shadow-mapSize={[2048, 2048]}
-        shadow-bias={-0.0002}
-      />
+      <Sky />
+      <Mountains />
+      <Mist />
 
-      <Placeholder />
-
-      <mesh rotation-x={-Math.PI / 2} receiveShadow>
-        <circleGeometry args={[30, 64]} />
-        <meshStandardMaterial color="#cfc8b8" roughness={0.95} />
-      </mesh>
-      <ContactShadows position={[0, 0.01, 0]} opacity={0.5} scale={8} blur={2.4} far={3} />
+      <PaperGround />
+      <ContactShadows position={[0, 0.005, 0]} color={INK.ink} opacity={0.45} scale={10} blur={2.2} far={2} resolution={512} />
+      <Suspense fallback={null}>{selected === 'jiuweihu' ? <Jiuweihu /> : <PlaceholderBeast />}</Suspense>
+      <Effects />
 
       <OrbitControls
-        target={[0, 0.8, 0]}
+        makeDefault
+        target={[0, 0.6, 0]}
         enablePan={false}
-        minDistance={2.5}
-        maxDistance={12}
-        maxPolarAngle={Math.PI / 2 - 0.05}
+        enableDamping
+        minDistance={2.2}
+        maxDistance={9}
+        minPolarAngle={0.6}
+        maxPolarAngle={Math.PI / 2 - 0.08}
       />
     </Canvas>
   )

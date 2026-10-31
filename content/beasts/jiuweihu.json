@@ -1,0 +1,28 @@
+{
+  "id": "jiuweihu",
+  "name": "九尾狐",
+  "source": [
+    {
+      "book": "山海经·南山经",
+      "text": "又东三百里，曰青丘之山，其阳多玉，其阴多青雘。有兽焉，其状如狐而九尾，其音如婴儿，能食人，食者不蛊。"
+    },
+    {
+      "book": "山海经·海外东经",
+      "text": "青丘国在其北，其狐四足九尾。"
+    }
+  ],
+  "_source_todo": "上线前对照通行校注本（袁珂《山海经校注》）逐字核对，并补郭璞注",
+  "inferred": [
+    { "item": "赤狐体态、白胸黑足", "basis": "艺术设计：以真实赤狐为解剖与毛色基础" },
+    { "item": "额间金色云纹", "basis": "艺术设计：东方神性点缀，非原文" },
+    { "item": "尾尖狐火", "basis": "艺术设计：后世志怪与民间形象的引申，非原文" }
+  ],
+  "scale": { "bodyLength": 1.0, "shoulderHeight": 0.42, "tailLength": 0.6, "_note": "设计参数，单位米，不作考据" },
+  "palette": { "primary": "#b8562a", "secondary": "#f2ede4", "accent": "#d9a441", "materials": ["dense fur", "gold leaf markings"] },
+  "actions": ["idle", "walk", "special:九尾开屏与狐火"],
+  "sounds": { "voice": "其音如婴儿：婴儿啼声与狐鸣叠加", "special": "狐火燃起" },
+  "parts": [
+    { "id": "body", "job": "pipeline/rodin/jobs/jiuweihu-body-v1.json" },
+    { "id": "tail", "job": "pipeline/rodin/jobs/jiuweihu-tail-v1.json", "instances": 9 }
+  ]
+}

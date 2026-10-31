@@ -1,1 +1,9 @@
 {"time":"2026-10-31T04:15:42.126Z","beast":"_test","job":"m0-smoke-test","hash":"8203c592a33a44fd","tier":"Gen-2.5-Extreme-Low","uuid":"7a65f219-ea34-4d31-9556-bacf0942afb5","consumed":0.5}
+{"time":"2026-10-31T04:31:55.255Z","beast":"_placeholder","job":"m1-placeholder-fox-xlow","hash":"9c31493ba32398f3","tier":"Gen-2.5-Extreme-Low","uuid":"98083e86-d71c-48da-bcef-a64344369851","consumed":0.5}
+{"time":"2026-10-31T05:08:50.580Z","beast":"jiuweihu","job":"jiuweihu-body-v1","hash":"8cd09a320612d3a0","tier":"Gen-2.5-Medium","uuid":"2010a660-b81d-47b1-8753-e9ce60e24da3","consumed":0.5}
+{"time":"2026-10-31T05:09:22.170Z","beast":"jiuweihu","job":"jiuweihu-tail-v1","hash":"62244795e1c7caff","tier":"Gen-2.5-Medium","uuid":"e2cc39b9-dbac-49d0-860f-27b6f0f6658d","consumed":0.5}
+{"time":"2026-10-31T05:11:14.445Z","beast":"jiuweihu","job":"jiuweihu-tail-v2","hash":"09c4457bcbfe29d2","tier":"Gen-2.5-Medium","uuid":"99afd850-5126-4309-be8c-f6313a89497d","consumed":0.5}
+{"time":"2026-10-31T05:12:33.377Z","beast":"jiuweihu","job":"jiuweihu-body-max","hash":"48983fc4b52e50bc","tier":"Gen-2.5-Extreme-High","uuid":"49daabf2-1855-47e9-aa1e-e7f421d0e8e2","consumed":3}
+{"time":"2026-10-31T05:12:38.359Z","beast":"jiuweihu","job":"jiuweihu-tail-max","hash":"f6a287a93b1094d4","tier":"Gen-2.5-Extreme-High","uuid":"985378ae-535e-4f19-9dab-c5cc5ce9acda","consumed":3}
+{"time":"2026-10-31T05:25:10.454Z","beast":"jiuweihu","job":"jiuweihu-body-max-v2","hash":"0296aafe4f25586b","tier":"Gen-2.5-Extreme-High","uuid":"d7e61370-74c4-43fd-ae4e-d6ae095384ef","consumed":3}
+{"time":"2026-10-31T11:02:09.189Z","beast":"jiuweihu","job":"jiuweihu-body-i2m","hash":"7779ddac537b005b","tier":"Gen-2.5-Extreme-High","uuid":"92ff437a-3c91-418e-9686-1fb91a0f65e8","consumed":3}

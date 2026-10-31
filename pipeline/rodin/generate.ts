@@ -22,7 +22,7 @@ const DEFAULT_BEAST_BUDGET = 20
 
 const POLL_INITIAL_MS = 5_000
 const POLL_MAX_MS = 30_000
-const POLL_DEADLINE_MS = 20 * 60_000
+const POLL_DEADLINE_MS = 60 * 60_000
 
 interface Job {
   /** 产物目录名，如 jiuweihu-tail-preview */
@@ -156,6 +156,8 @@ async function submit(job: Job, hash: string, dir: string): Promise<CacheMeta> {
   if (!res.uuid || !res.jobs?.subscription_key) {
     throw new Error(`提交返回缺少 uuid / subscription_key: ${JSON.stringify(res)}`)
   }
+  // 提交成功后才建缓存目录，失败的请求不留空目录
+  await mkdir(dir, { recursive: true })
   const meta: CacheMeta = {
     job,
     hash,
@@ -196,7 +198,7 @@ async function poll(subscriptionKey: string): Promise<void> {
     if (jobs.length > 0 && jobs.every((j) => j.status === 'Done')) return
     delay = Math.min(delay * 1.5, POLL_MAX_MS)
   }
-  throw new Error('轮询超时（20 分钟）')
+  throw new Error('轮询超时（60 分钟），重跑同一任务会从缓存继续轮询')
 }
 
 async function download(taskUuid: string, dir: string): Promise<string[]> {
@@ -247,7 +249,6 @@ async function run(jobPath: string, opts: { dryRun: boolean; force: boolean }) {
       }
       return
     }
-    await mkdir(dir, { recursive: true })
     meta = await submit(job, hash, dir)
   } else {
     console.log(`  命中缓存（${meta.status}），不重复提交`)

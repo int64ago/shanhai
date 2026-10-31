@@ -1,0 +1,12 @@
+{
+  "id": "jiuweihu-tail-v1",
+  "beast": "jiuweihu",
+  "budget": 60,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "a single long bushy fox tail as an isolated object, straight and extended horizontally, reddish orange fur fading to a snow-white tip, dense fluffy realistic fur, no body, photorealistic",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 10000
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "jiuweihu-body-max",
+  "beast": "jiuweihu",
+  "budget": 60,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "a realistic mythical fox spirit from ancient Chinese mythology, slender elegant red fox with snow-white chest and black legs, standing on all four legs in a neutral pose, legs straight and slightly apart, head facing forward, only a very short tail stub, faint golden cloud-pattern markings on the forehead, dense realistic fur, full body, photorealistic",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "texture_mode": "extreme-high",
+    "addons": "HighPack"
+  }
+}

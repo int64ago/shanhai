@@ -1,0 +1,13 @@
+{
+  "id": "m1-placeholder-fox-xlow",
+  "beast": "_placeholder",
+  "budget": 2,
+  "tier": "Gen-2.5-Extreme-Low",
+  "prompt": "a realistic red fox standing calmly on all four legs, full body, natural thick fur, neutral pose, side view, photorealistic animal",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "material": "PBR",
+    "quality_override": 20000
+  }
+}

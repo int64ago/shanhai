@@ -1,0 +1,20 @@
+{
+  "id": "jiuweihu-body-i2m",
+  "beast": "jiuweihu",
+  "budget": 60,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "a red fox standing upright on four straight legs, level back, head raised, white chest, black legs, golden cloud mark on forehead, tail removed",
+  "images": [
+    "concept/jiuweihu/view_34.png",
+    "concept/jiuweihu/view_side.png",
+    "concept/jiuweihu/view_front.png",
+    "concept/jiuweihu/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "texture_mode": "extreme-high",
+    "addons": "HighPack"
+  }
+}
