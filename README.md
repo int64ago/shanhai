@@ -22,21 +22,6 @@
 
 **Shanhai World (《山海异兽录》)** is an interactive Web 3D bestiary of mythical creatures from the ancient Chinese cosmography *Classic of Mountains and Seas* (《山海经》), rendered in real-time **Chinese Gongbi ink-wash style (工笔淡彩 + 水墨线描)** at **[shanhaiworld.org](https://shanhaiworld.org/)**.
 
-<table>
-  <tr>
-    <td width="50%">
-      <a href="https://shanhaiworld.org/?beast=jiuweihu&action=special">
-        <img src="./docs/images/jiuweihu.jpg" width="100%" alt="Jiuweihu — Nine-Tailed Fox" />
-      </a>
-    </td>
-    <td width="50%">
-      <a href="https://shanhaiworld.org/?beast=dijiang&action=special">
-        <img src="./docs/images/dijiang.jpg" width="100%" alt="Dijiang — Faceless Sac Spirit" />
-      </a>
-    </td>
-  </tr>
-</table>
-
 ---
 
 ## Design Philosophy

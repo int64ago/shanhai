@@ -22,21 +22,6 @@
 
 **《山海异兽录》（Shanhai World，[shanhaiworld.org](https://shanhaiworld.org/)）** 是一部在浏览器中展开的《山海经》十神兽实时 Web 3D 互动图鉴，以**国风工笔淡彩 + 水墨线描**重现上古异兽。
 
-<table>
-  <tr>
-    <td width="50%">
-      <a href="https://shanhaiworld.org/?beast=jiuweihu&action=special">
-        <img src="./docs/images/jiuweihu.jpg" width="100%" alt="九尾狐 · Jiuweihu" />
-      </a>
-    </td>
-    <td width="50%">
-      <a href="https://shanhaiworld.org/?beast=dijiang&action=special">
-        <img src="./docs/images/dijiang.jpg" width="100%" alt="帝江 · Dijiang" />
-      </a>
-    </td>
-  </tr>
-</table>
-
 ---
 
 ## 核心理念
