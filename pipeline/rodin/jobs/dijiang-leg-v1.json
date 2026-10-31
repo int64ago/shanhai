@@ -1,0 +1,12 @@
+{
+  "id": "dijiang-leg-v1",
+  "beast": "dijiang",
+  "budget": 60,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "a single short stout mythical beast leg standing vertically as an isolated object, thick fluffy golden-ochre and crimson fur on the upper thigh, tapering to a sturdy dark charcoal-black scaly paw with three strong claws resting flat on the ground, no body, isolated leg",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 12000
+  }
+}

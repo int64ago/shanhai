@@ -1,0 +1,20 @@
+{
+  "id": "dijiang-body-max",
+  "beast": "dijiang",
+  "budget": 60,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "an ancient Chinese mythical creature Dijiang torso only, a plump round furry sac-like beast body with thick layered golden-ochre and fiery cinnabar-red fur tufts, ornate dark crimson and gold swirling cloud-fire markings across the front, completely faceless with no eyes no nose no mouth, no legs, no wings, isolated furry creature body, rich sculpted fur texture",
+  "images": [
+    "concept/dijiang/view_34.png",
+    "concept/dijiang/view_side.png",
+    "concept/dijiang/view_front.png",
+    "concept/dijiang/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "texture_mode": "extreme-high",
+    "addons": "HighPack"
+  }
+}

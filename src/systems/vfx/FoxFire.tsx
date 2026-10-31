@@ -15,17 +15,19 @@ const PER_EMITTER = 48
 const _p = new Vector3()
 
 interface Props {
-  /** 发射点（尾尖），世界坐标每帧读取 */
+  /** 发射点（尾尖/翼尖），世界坐标每帧读取 */
   emitters: Object3D[]
   /** 0 = 熄灭，1 = 微焰，>1 = 神通爆发 */
   intensity: { current: number }
+  coreColor?: string
+  edgeColor?: string
 }
 
 /**
- * 狐火：青绿色、向上飘散的焰团。粒子在世界空间里模拟，尾巴甩动时会拖出焰尾。
+ * 水彩灵火（狐火青绿 / 帝江丹火朱金）：向上飘散的颜料晕团，中心淡、边缘积色水痕。
  * 用普通混合而不是叠加发光，否则在浅色宣纸上会被冲成白色看不见。
  */
-export function FoxFire({ emitters, intensity }: Props) {
+export function FoxFire({ emitters, intensity, coreColor = '#a9d6cf', edgeColor = '#2f7d79' }: Props) {
   const count = Math.max(emitters.length, 1) * PER_EMITTER
   const ref = useRef<Points>(null)
 
@@ -39,9 +41,8 @@ export function FoxFire({ emitters, intensity }: Props) {
       depthWrite: false,
       uniforms: {
         uTime: { value: 0 },
-        // 画在纸上的狐火：青绿颜料晕团，中心淡、边缘积色（水彩的“水痕”）
-        uCore: { value: new Color('#a9d6cf') },
-        uEdge: { value: new Color('#2f7d79') },
+        uCore: { value: new Color(coreColor) },
+        uEdge: { value: new Color(edgeColor) },
         uScale: { value: 1 },
       },
       vertexShader: /* glsl */ `
@@ -89,7 +90,7 @@ export function FoxFire({ emitters, intensity }: Props) {
       carry: new Float32Array(Math.max(emitters.length, 1)),
     }
     return { geometry, material, state }
-  }, [count, emitters.length])
+  }, [count, emitters.length, coreColor, edgeColor])
 
   useFrame((_, rawDt) => {
     const dt = Math.min(rawDt, 0.05)

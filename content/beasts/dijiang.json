@@ -1,0 +1,25 @@
+{
+  "id": "dijiang",
+  "name": "帝江",
+  "archetype": "sac",
+  "source": [
+    {
+      "book": "山海经·西山经",
+      "text": "又西三百五十里，曰天山，多金玉，有青雄黄。英水出焉，而西南流注于汤谷。有神焉，其状如黄囊，赤如丹火，六足四翼，浑敦无面目，是识歌舞，实惟帝江也。"
+    }
+  ],
+  "inferred": [
+    { "item": "黄囊映丹火设色", "basis": "据原文“其状如黄囊，赤如丹火”，外染赭黄、内透朱砂丹红" },
+    { "item": "体表暗金云气旋纹", "basis": "艺术设计：无五官囊体上的东方神性点缀，非原文" },
+    { "item": "旋舞击节与丹火气韵", "basis": "据原文“是识歌舞”，以囊体律动、四翼拍舞与丹火水彩粒子表现" }
+  ],
+  "scale": { "bodyWidth": 0.85, "bodyHeight": 0.72, "wingSpan": 1.5, "_note": "设计参数，单位米，不作考据" },
+  "palette": { "primary": "#c84b31", "secondary": "#d99b38", "accent": "#f0c96b", "materials": ["velvety sac skin", "feathered wings"] },
+  "actions": ["idle", "walk", "special:丹火歌舞"],
+  "sounds": { "voice": "识歌舞：编钟泛音与浑厚囊腔共鸣", "special": "四翼鼓风与丹火旋舞" },
+  "parts": [
+    { "id": "body", "job": "pipeline/rodin/jobs/dijiang-body-max.json" },
+    { "id": "wing", "job": "pipeline/rodin/jobs/dijiang-wing-max.json", "instances": 4 },
+    { "id": "leg", "job": "pipeline/rodin/jobs/dijiang-leg-max.json", "instances": 6 }
+  ]
+}

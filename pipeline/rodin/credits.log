@@ -7,3 +7,9 @@
 {"time":"2026-10-31T05:12:38.359Z","beast":"jiuweihu","job":"jiuweihu-tail-max","hash":"f6a287a93b1094d4","tier":"Gen-2.5-Extreme-High","uuid":"985378ae-535e-4f19-9dab-c5cc5ce9acda","consumed":3}
 {"time":"2026-10-31T05:25:10.454Z","beast":"jiuweihu","job":"jiuweihu-body-max-v2","hash":"0296aafe4f25586b","tier":"Gen-2.5-Extreme-High","uuid":"d7e61370-74c4-43fd-ae4e-d6ae095384ef","consumed":3}
 {"time":"2026-10-31T11:02:09.189Z","beast":"jiuweihu","job":"jiuweihu-body-i2m","hash":"7779ddac537b005b","tier":"Gen-2.5-Extreme-High","uuid":"92ff437a-3c91-418e-9686-1fb91a0f65e8","consumed":3}
+{"time":"2026-10-31T12:42:21.940Z","beast":"dijiang","job":"dijiang-body-v1","hash":"62ec6e6d8ca22b86","tier":"Gen-2.5-Medium","uuid":"643f7464-5a80-48d4-90bc-de41ddc53a65","consumed":0.5}
+{"time":"2026-10-31T12:42:24.043Z","beast":"dijiang","job":"dijiang-leg-v1","hash":"dee40e871efd6146","tier":"Gen-2.5-Medium","uuid":"c635b42f-1f40-4043-845b-b964f1b506bb","consumed":0.5}
+{"time":"2026-10-31T12:42:28.082Z","beast":"dijiang","job":"dijiang-wing-v1","hash":"45a7db67c1877b1b","tier":"Gen-2.5-Medium","uuid":"8e28dfd3-5909-4c2e-a625-306565532513","consumed":0.5}
+{"time":"2026-10-31T12:47:31.591Z","beast":"dijiang","job":"dijiang-wing-max","hash":"cdd22f42ad8fb75a","tier":"Gen-2.5-Extreme-High","uuid":"3197d7e9-ff67-45b9-9d60-d91c61eb76a5","consumed":3}
+{"time":"2026-10-31T12:47:31.804Z","beast":"dijiang","job":"dijiang-body-max","hash":"c50ca4328dfc4960","tier":"Gen-2.5-Extreme-High","uuid":"594c779d-938a-48a7-91be-a59262f99bd2","consumed":3}
+{"time":"2026-10-31T12:47:32.327Z","beast":"dijiang","job":"dijiang-leg-max","hash":"b240ad40a773e399","tier":"Gen-2.5-Extreme-High","uuid":"0d4d5aa4-df57-4c93-8fc6-7f3844efee8a","consumed":3}

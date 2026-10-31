@@ -266,6 +266,80 @@ class AudioEngine {
     sub.stop(t + 1.3)
   }
 
+  /**
+   * 帝江「是识歌舞」：浑厚囊腔鼓拍 + 五声音阶青铜编钟双音泛音，奏一小段欢快节拍。
+   */
+  dijiangSong(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const p = this.panner(pan)
+    const reverb = ctx.createConvolver()
+    reverb.buffer = this.impulse(2.8)
+    const wet = ctx.createGain()
+    wet.gain.value = 0.4
+    p.connect(this.sfx)
+    p.connect(reverb).connect(wet).connect(this.sfx)
+
+    // 四拍小曲（徵-宫-商-徵，高八度编钟双音 + 囊鼓）
+    const notes = [7, 12, 14, 19, 16, 12]
+    notes.forEach((deg, idx) => {
+      const t0 = ctx.currentTime + idx * 0.34
+      const freq = BASE_HZ * 2 * 2 ** (deg / 12)
+      // 编钟正鼓音 + 侧鼓音（小三度泛音列）
+      for (const [ratio, amp, decay] of [
+        [1, 0.22, 1.4],
+        [1.2, 0.12, 0.9],
+        [2.76, 0.06, 0.45],
+      ] as const) {
+        const osc = ctx.createOscillator()
+        osc.type = 'sine'
+        osc.frequency.setValueAtTime(freq * ratio, t0)
+        const g = ctx.createGain()
+        g.gain.setValueAtTime(0, t0)
+        g.gain.linearRampToValueAtTime(amp, t0 + 0.008)
+        g.gain.exponentialRampToValueAtTime(0.0008, t0 + decay)
+        osc.connect(g).connect(p)
+        osc.start(t0)
+        osc.stop(t0 + decay + 0.05)
+      }
+      // 浑厚囊鼓（强拍）
+      if (idx % 2 === 0) {
+        const drum = ctx.createOscillator()
+        drum.type = 'sine'
+        drum.frequency.setValueAtTime(115, t0)
+        drum.frequency.exponentialRampToValueAtTime(52, t0 + 0.22)
+        const dg = ctx.createGain()
+        dg.gain.setValueAtTime(0, t0)
+        dg.gain.linearRampToValueAtTime(0.38, t0 + 0.01)
+        dg.gain.exponentialRampToValueAtTime(0.001, t0 + 0.28)
+        drum.connect(dg).connect(p)
+        drum.start(t0)
+        drum.stop(t0 + 0.3)
+      }
+    })
+  }
+
+  /** 帝江四翼拍动：柔和的鼓风声 */
+  wingFlutter(pan = 0, gain = 0.4) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const t = ctx.currentTime
+    const src = ctx.createBufferSource()
+    src.buffer = this.noise(0.24)
+    const bp = ctx.createBiquadFilter()
+    bp.type = 'bandpass'
+    bp.frequency.setValueAtTime(320, t)
+    bp.frequency.exponentialRampToValueAtTime(680, t + 0.1)
+    bp.frequency.exponentialRampToValueAtTime(260, t + 0.22)
+    bp.Q.value = 1.4
+    const g = ctx.createGain()
+    g.gain.setValueAtTime(0, t)
+    g.gain.linearRampToValueAtTime(gain * 0.45, t + 0.04)
+    g.gain.exponentialRampToValueAtTime(0.001, t + 0.22)
+    src.connect(bp).connect(g).connect(this.panner(pan)).connect(this.sfx)
+    src.start(t)
+  }
+
   private noiseCache = new Map<number, AudioBuffer>()
 
   private noise(seconds: number) {

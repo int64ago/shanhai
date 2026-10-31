@@ -1,0 +1,12 @@
+{
+  "id": "dijiang-wing-v1",
+  "beast": "dijiang",
+  "budget": 60,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "a single mythical bird wing spread out horizontally as an isolated object, elongated wing shape about four times longer than wide, thick feathered shoulder root on one end tapering to long layered primary flight feathers on the tip, fiery cinnabar-red and golden-ochre feathers with dark ink-black feather tips, sculpted feathers, no body",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 15000
+  }
+}

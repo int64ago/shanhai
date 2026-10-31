@@ -13,6 +13,7 @@ import { INK } from '../systems/ink/palette'
 import { Effects } from './Effects'
 import { PlaceholderBeast } from './PlaceholderBeast'
 import { Jiuweihu } from '../beasts/jiuweihu/Jiuweihu'
+import { Dijiang } from '../beasts/dijiang/Dijiang'
 import { CameraRig } from './CameraRig'
 
 export function Stage() {
@@ -37,7 +38,9 @@ export function Stage() {
 
       <PaperGround />
       <ContactShadows position={[0, 0.005, 0]} color={INK.ink} opacity={0.45} scale={10} blur={2.2} far={2} resolution={512} />
-      <Suspense fallback={null}>{selected === 'jiuweihu' ? <Jiuweihu /> : <PlaceholderBeast />}</Suspense>
+      <Suspense fallback={null}>
+        {selected === 'jiuweihu' ? <Jiuweihu /> : selected === 'dijiang' ? <Dijiang /> : <PlaceholderBeast />}
+      </Suspense>
       <Effects />
 
       <OrbitControls
