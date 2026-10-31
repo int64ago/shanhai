@@ -1,0 +1,26 @@
+# Shanhai World (山海异兽录)
+
+> An interactive 3D bestiary of ten mythical beasts from the ancient Chinese *Classic of Mountains and Seas* (《山海经》), rendered in real-time Chinese Gongbi ink-wash style (工笔淡彩水墨) on the web.
+
+- Live Site: https://shanhaiworld.org/
+- Repository: https://github.com/int64ago/shanhai
+- License: MIT
+
+## Core Principles
+
+1. **Philological Integrity**: Every beast card strictly separates verbatim classical citations (`source`, from《山海经》) from modern visual/artistic extrapolations (`inferred`, rendered in a distinct cinnabar-bordered box).
+2. **Archetype-Driven 3D Pipeline**: Mythical anatomies are modeled as one of five core archetypes (`sac`, `avian`, `serpentine`, `quadruped`, `biped`) combined with modular procedural appendages (e.g., 9 tails, 4 wings, 6 legs, 9 heads, underarm eyes).
+3. **Real-Time Gongbi Ink-Wash Rendering**: Custom GLSL shaders (`src/systems/ink/`) render two-tone watercolor washes, rice-paper grain, and variable-pressure calligraphic outlines over animated `SkinnedMesh` assets.
+
+## Beasts Roster
+
+- **九尾狐 (Jiuweihu)** — *Classic of the Southern Mountains* (南山经): "其状如狐而九尾，其音如婴儿". Archetype: `quadruped` + 9 procedural tails. URL: `https://shanhaiworld.org/?beast=jiuweihu`
+- **帝江 (Dijiang)** — *Classic of the Western Mountains* (西山经): "其状如黄囊，赤如丹火，六足四翼，浑敦无面目，是识歌舞". Archetype: `sac` (headless/faceless) + 4 wings + 6 legs. URL: `https://shanhaiworld.org/?beast=dijiang`
+- **驳 (Bo)** — *Classic of the Western Mountains* (西山经): "其状如马，白身黑尾，一角，虎牙爪，音如鼓". Archetype: `quadruped`.
+- **陆吾 (Luwu)** — *Classic of the Western Mountains* (西山经): "虎身而九尾，人面而虎爪". Archetype: `quadruped` + 9 tails.
+- **毕方 (Bifang)** — *Classic of the Western Mountains* (西山经): "其状如鹤，一足，赤文青质而白喙". Archetype: `avian` (monoped).
+- **穷奇 (Qiongqi)** — *Classic of Regions Within the Seas: North* (海内北经): "其状如虎，有翼". Archetype: `quadruped` + 2 wings.
+- **饕餮 (Taotie)** — *Classic of the Northern Mountains* (北山经): "其状如羊身人面，其目在腋下，虎齿人爪". Archetype: `quadruped` + underarm eyes.
+- **开明兽 (Kaiming)** — *Classic of Regions Within the Seas: West* (海内西经): "身大类虎而九首，皆人面". Archetype: `quadruped` + 9 human-faced heads.
+- **凤凰 (Fenghuang)** — *Classic of the Southern Mountains* (南山经): "其状如鸡，五采而文". Archetype: `avian`.
+- **应龙 (Yinglong)** — *Classic of the Great Wilderness: East* (大荒东经): Winged rain dragon. Archetype: `serpentine` + 2 wings.

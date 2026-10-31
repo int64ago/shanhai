@@ -1,0 +1,9 @@
+# Cursor & Windsurf Agent Rules — Shanhai World (山海异兽录)
+
+Always read `AGENTS.md` and `.claude/skills/build-beast/SKILL.md` before modifying code, 3D pipeline scripts, or shaders.
+
+Key rules:
+1. Every beast in `content/beasts/<id>.json` has an explicit `archetype` (`sac`, `avian`, `serpentine`, `quadruped`, `biped`) and strictly separates verbatim《山海经》quotes (`source`) from artistic extrapolations (`inferred`). Do not assume all beasts have heads, faces, four legs, or tails.
+2. Never attach procedural child nodes (`attach.add(holder)`) inside `useMemo`; always attach and clean up inside `useEffect` (React 19 `StrictMode` invokes `useMemo` twice and discards the second return value).
+3. Never call `geometry.computeVertexNormals()` after non-uniform scaling on AI meshes, and never use negative scale (`scale.x = -1`) on meshes with `BackSide` ink outlines.
+4. Run `pnpm typecheck && pnpm validate && pnpm build` and verify visual changes with `scripts/shot.mjs` before completing tasks.

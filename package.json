@@ -1,13 +1,21 @@
 {
   "name": "shanhai",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.2.0",
+  "description": "Shanhai World (山海异兽录) — Interactive 3D Bestiary of the Classic of Mountains and Seas in Chinese Gongbi Ink-Wash Style",
+  "homepage": "https://shanhaiworld.org/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/int64ago/shanhai.git"
+  },
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "typecheck": "tsc -b",
+    "validate": "tsx pipeline/validate.ts",
     "rodin": "tsx pipeline/rodin/generate.ts",
     "rodin:balance": "tsx pipeline/rodin/generate.ts --balance"
   },

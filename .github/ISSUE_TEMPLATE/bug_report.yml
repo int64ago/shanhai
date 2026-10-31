@@ -1,0 +1,22 @@
+name: Bug Report / 问题反馈
+description: Report a rendering, animation, audio, or asset pipeline issue
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened? / 问题描述
+      placeholder: Describe the visual, audio, or pipeline issue.
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Beast / Action URL / 复现链接
+      placeholder: "https://shanhaiworld.org/?beast=dijiang&action=special"
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment / 运行环境
+      placeholder: "OS, Browser, GPU, or Blender/Node version"

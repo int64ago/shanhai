@@ -1,0 +1,37 @@
+name: Mythical Beast Request / 神兽提案
+description: Propose or refine a mythical beast from the Classic of Mountains and Seas (《山海经》)
+title: "[Beast] "
+labels: ["beast"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Beast Name / 神兽名称
+      placeholder: "e.g., 毕方 (Bifang)"
+    validations:
+      required: true
+  - type: dropdown
+    id: archetype
+    attributes:
+      label: Anatomical Archetype / 躯干构型
+      options:
+        - quadruped (走兽型 — e.g., 九尾狐, 驳, 陆吾)
+        - sac (浑沌囊体型 — e.g., 帝江)
+        - avian (羽禽/奇足禽型 — e.g., 毕方, 凤凰)
+        - serpentine (长龙/游弋型 — e.g., 应龙)
+        - biped (直立异人/异兽型 — e.g., 刑天)
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Classical Citation / 《山海经》原文与篇目
+      description: Verbatim quote and chapter name from《山海经》.
+      placeholder: "《山海经·西山经》：有鸟焉，其状如鹤，一足，赤文青质而白喙，名曰毕方，其鸣自叫也，见则其邑有讹火。"
+    validations:
+      required: true
+  - type: textarea
+    id: inferred
+    attributes:
+      label: Artistic Extrapolations & Modular Parts / 设计推断与部件拆解
+      placeholder: "Main body + modular appendages, color palette, special action & sound design."
