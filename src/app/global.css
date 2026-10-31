@@ -5,6 +5,7 @@
   --ink-soft: rgba(31, 26, 20, 0.55);
   --cinnabar: #b5322a;
   --bronze: #6b5a3a;
+  --jade: #2f5a53;
   --bg: #e4dccb;
   --serif: 'Songti SC', 'Noto Serif SC', 'STSong', 'SimSun', serif;
   --kai: 'Kaiti SC', 'STKaiti', 'KaiTi', var(--serif);
@@ -69,16 +70,22 @@ button {
   /* 竖排时 column 方向即从右往左排列各栏 */
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
-  max-height: calc(100% - 250px);
+  gap: 14px;
+  max-height: calc(100% - 265px);
   padding: 20px 16px;
   writing-mode: vertical-rl;
   background:
-    linear-gradient(rgba(239, 230, 210, 0.82), rgba(232, 221, 198, 0.82)),
+    linear-gradient(rgba(239, 230, 210, 0.84), rgba(232, 221, 198, 0.84)),
     repeating-linear-gradient(90deg, transparent 0 38px, rgba(107, 90, 58, 0.08) 38px 39px);
   border: 1px solid var(--paper-edge);
   box-shadow: 0 8px 30px rgba(31, 26, 20, 0.12);
   backdrop-filter: blur(6px);
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .card-name {
@@ -86,14 +93,50 @@ button {
   font-family: var(--kai);
   font-size: 32px;
   font-weight: normal;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.22em;
+}
+
+.card-pinyin {
+  writing-mode: horizontal-tb;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--bronze);
+  padding: 2px 5px;
+  border: 1px solid rgba(107, 90, 58, 0.3);
+  border-radius: 3px;
+  background: rgba(239, 230, 210, 0.65);
+}
+
+.story-btn {
+  padding: 6px 3px;
+  font-family: var(--kai);
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  color: var(--cinnabar);
+  border: 1.5px solid var(--cinnabar);
+  border-radius: 3px;
+  background: rgba(239, 230, 210, 0.75);
+  transition:
+    background 0.2s,
+    color 0.2s,
+    box-shadow 0.2s;
+}
+
+.story-btn:hover,
+.story-btn.is-playing {
+  color: var(--paper);
+  background: var(--cinnabar);
+}
+
+.story-btn.is-playing {
+  box-shadow: 0 0 12px rgba(181, 50, 42, 0.55);
 }
 
 .card-source {
   margin: 0;
   font-size: 16px;
   line-height: 1.85;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
 }
 
 .card-source cite {
@@ -117,23 +160,23 @@ button {
   margin: 0;
   padding: 6px 2px;
   font-size: 12px;
-  letter-spacing: 0.15em;
-  color: var(--cinnabar);
-  border: 1px solid currentColor;
+  letter-spacing: 0.14em;
+  color: var(--bronze);
+  border: 1px solid rgba(107, 90, 58, 0.45);
 }
 
-/* 卡片里的设计推断：朱色细框，和原文分开 */
+/* 卡片里的设计推断 / 形制拆解：朱色细框，和原文分开 */
 .card-inferred {
   padding: 8px 4px;
   font-size: 13px;
-  line-height: 1.8;
-  letter-spacing: 0.15em;
+  line-height: 1.75;
+  letter-spacing: 0.14em;
   color: var(--cinnabar);
   border: 1px solid rgba(181, 50, 42, 0.5);
 }
 
 .card-inferred p {
-  margin: 0 0 0 0.6em;
+  margin: 0 0 0 0.55em;
 }
 
 .card-label.is-inferred {
@@ -141,11 +184,48 @@ button {
   background: var(--cinnabar);
 }
 
+/* 评书人实时解说字幕条 */
+.story-caption {
+  position: fixed;
+  left: 50%;
+  top: 26px;
+  transform: translateX(-50%);
+  max-width: min(680px, calc(100% - 340px));
+  padding: 10px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(239, 230, 210, 0.9);
+  border: 1px solid rgba(181, 50, 42, 0.45);
+  box-shadow: 0 6px 24px rgba(31, 26, 20, 0.14);
+  backdrop-filter: blur(6px);
+  z-index: 15;
+}
+
+.story-badge {
+  flex: none;
+  padding: 3px 7px;
+  font-family: var(--kai);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--paper);
+  background: var(--cinnabar);
+  border-radius: 3px;
+}
+
+.story-caption p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.65;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+}
+
 /* 动作栏 */
 .actions {
   position: fixed;
   left: 50%;
-  bottom: 128px;
+  bottom: 186px;
   display: flex;
   gap: 12px;
   transform: translateX(-50%);
@@ -161,7 +241,7 @@ button {
   color: var(--ink);
   border: 1px solid rgba(31, 26, 20, 0.35);
   border-radius: 17px;
-  background: rgba(239, 230, 210, 0.75);
+  background: rgba(239, 230, 210, 0.78);
   backdrop-filter: blur(4px);
   transition:
     background 0.2s,
@@ -184,7 +264,7 @@ button {
 .controls {
   position: fixed;
   right: 32px;
-  bottom: 118px;
+  bottom: 148px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -200,26 +280,110 @@ button {
   color: var(--cinnabar);
   border: 1.5px solid var(--cinnabar);
   border-radius: 4px;
-  background: rgba(239, 230, 210, 0.7);
+  background: rgba(239, 230, 210, 0.75);
   transition:
     background 0.2s,
     color 0.2s;
 }
 
-.seal-btn:hover {
+.seal-btn:hover,
+.seal-btn.is-active {
   color: var(--paper);
   background: var(--cinnabar);
 }
 
-/* 底部卷轴 */
-.scroll {
+/* 底部二级山海卷轴容器 */
+.scroll-wrap {
   position: fixed;
   left: 50%;
-  bottom: 18px;
+  bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  max-width: calc(100% - 32px);
+  width: min(1080px, calc(100% - 32px));
+  transform: translateX(-50%);
+}
+
+.scroll-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  padding: 0 12px;
+}
+
+.scroll-tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding: 2px 0;
+}
+
+.scroll-tab {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 3px;
+  padding: 3px 9px;
+  font-family: var(--kai);
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  color: var(--ink-soft);
+  border: 1px solid rgba(107, 90, 58, 0.28);
+  border-radius: 12px;
+  background: rgba(239, 230, 210, 0.72);
+  backdrop-filter: blur(4px);
+  transition:
+    color 0.18s,
+    background 0.18s,
+    border-color 0.18s;
+}
+
+.scroll-tab small {
+  font-family: var(--serif);
+  font-size: 10px;
+  opacity: 0.75;
+}
+
+.scroll-tab:hover {
+  color: var(--cinnabar);
+  border-color: rgba(181, 50, 42, 0.45);
+}
+
+.scroll-tab.is-active {
+  color: var(--paper);
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.catalog-trigger {
+  flex: none;
+  padding: 4px 12px;
+  font-family: var(--kai);
+  font-size: 14px;
+  letter-spacing: 0.14em;
+  color: var(--paper);
+  background: var(--cinnabar);
+  border: 1px solid var(--cinnabar);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(181, 50, 42, 0.25);
+  transition: opacity 0.2s;
+}
+
+.catalog-trigger:hover {
+  opacity: 0.9;
+}
+
+/* 底部卷轴本体 */
+.scroll {
   display: flex;
   align-items: stretch;
-  max-width: calc(100% - 32px);
-  transform: translateX(-50%);
+  width: 100%;
 }
 
 .scroll-rod {
@@ -230,16 +394,35 @@ button {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
+.scroll-arrow {
+  flex: none;
+  width: 24px;
+  margin: 6px 0;
+  font-size: 20px;
+  color: var(--bronze);
+  background: linear-gradient(var(--paper), #e2d5b7);
+  border-top: 1px solid var(--paper-edge);
+  border-bottom: 1px solid var(--paper-edge);
+  transition: color 0.2s;
+}
+
+.scroll-arrow:hover {
+  color: var(--cinnabar);
+}
+
 .scroll-paper {
+  flex: 1;
   display: flex;
   gap: 4px;
   margin: 6px 0;
-  padding: 8px 14px;
+  padding: 8px 10px;
   list-style: none;
   overflow-x: auto;
   scrollbar-width: none;
   background: linear-gradient(var(--paper), #e6dabf);
-  box-shadow: inset 0 0 18px rgba(107, 90, 58, 0.25);
+  border-top: 1px solid var(--paper-edge);
+  border-bottom: 1px solid var(--paper-edge);
+  box-shadow: inset 0 0 18px rgba(107, 90, 58, 0.22);
 }
 
 .scroll-item {
@@ -248,7 +431,7 @@ button {
   writing-mode: vertical-rl;
   font-family: var(--kai);
   font-size: 17px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
   white-space: nowrap;
   transition: color 0.2s;
 }
@@ -263,6 +446,17 @@ button {
 
 .scroll-item.is-active {
   color: var(--ink);
+  font-weight: 600;
+}
+
+.ready-dot {
+  position: absolute;
+  top: 2px;
+  right: 3px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--jade);
 }
 
 .scroll-item.is-active::after {
@@ -277,6 +471,307 @@ button {
   background: var(--cinnabar);
 }
 
+/* ==================== 「山海总目」全屏古籍检阅阁 ==================== */
+.catalog-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(24, 19, 14, 0.52);
+  backdrop-filter: blur(6px);
+}
+
+.catalog-panel {
+  display: flex;
+  flex-direction: column;
+  width: min(1240px, 100%);
+  height: min(860px, 100%);
+  background:
+    linear-gradient(rgba(239, 230, 210, 0.97), rgba(228, 216, 191, 0.97)),
+    repeating-linear-gradient(90deg, transparent 0 44px, rgba(107, 90, 58, 0.06) 44px 45px);
+  border: 2px solid #8a7350;
+  box-shadow: 0 22px 64px rgba(0, 0, 0, 0.38);
+  overflow: hidden;
+}
+
+.catalog-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px 14px;
+  border-bottom: 1px solid var(--paper-edge);
+}
+
+.catalog-title {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--kai);
+  font-size: 26px;
+  font-weight: normal;
+  letter-spacing: 0.14em;
+}
+
+.catalog-badge {
+  padding: 3px 9px;
+  font-family: var(--serif);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--paper);
+  background: var(--cinnabar);
+  border-radius: 3px;
+}
+
+.catalog-sub {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: var(--ink-soft);
+  letter-spacing: 0.06em;
+}
+
+.catalog-search-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.catalog-search {
+  width: 270px;
+  height: 36px;
+  padding: 0 12px;
+  font: inherit;
+  font-size: 13px;
+  color: var(--ink);
+  background: rgba(255, 251, 242, 0.8);
+  border: 1px solid #b5a485;
+  border-radius: 4px;
+  outline: none;
+}
+
+.catalog-search:focus {
+  border-color: var(--cinnabar);
+}
+
+.catalog-close {
+  width: 34px;
+  height: 34px;
+  font-size: 16px;
+  color: var(--ink);
+  border: 1px solid #b5a485;
+  border-radius: 4px;
+  background: rgba(255, 251, 242, 0.65);
+}
+
+.catalog-close:hover {
+  color: var(--paper);
+  background: var(--cinnabar);
+  border-color: var(--cinnabar);
+}
+
+.catalog-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 24px;
+  background: rgba(220, 208, 182, 0.42);
+  border-bottom: 1px solid var(--paper-edge);
+}
+
+.filter-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.filter-label {
+  padding: 2px 7px;
+  font-family: var(--kai);
+  font-size: 12px;
+  color: var(--paper);
+  background: var(--bronze);
+  border-radius: 2px;
+}
+
+.filter-chip {
+  padding: 3px 10px;
+  font-size: 12.5px;
+  color: var(--ink);
+  border: 1px solid rgba(107, 90, 58, 0.35);
+  border-radius: 13px;
+  background: rgba(239, 230, 210, 0.8);
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+
+.filter-chip:hover {
+  border-color: var(--cinnabar);
+  color: var(--cinnabar);
+}
+
+.filter-chip.is-active {
+  color: var(--paper);
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.catalog-grid {
+  flex: 1;
+  overflow-y: auto;
+  padding: 18px 24px 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 14px;
+  align-content: start;
+}
+
+.beast-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 16px;
+  background: rgba(248, 242, 228, 0.86);
+  border: 1px solid #cbbba0;
+  box-shadow: 0 2px 8px rgba(31, 26, 20, 0.05);
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
+}
+
+.beast-card:hover {
+  border-color: var(--bronze);
+}
+
+.beast-card.is-selected {
+  border: 1.5px solid var(--cinnabar);
+  background: rgba(252, 245, 232, 0.96);
+}
+
+.beast-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.beast-card-name {
+  margin: 0;
+  font-family: var(--kai);
+  font-size: 21px;
+  font-weight: normal;
+  letter-spacing: 0.12em;
+}
+
+.beast-card-pinyin {
+  margin-left: 8px;
+  font-family: var(--serif);
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  color: var(--bronze);
+}
+
+.beast-card-source {
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+.beast-card-badges {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.arch-tag {
+  padding: 2px 7px;
+  font-size: 11px;
+  color: var(--jade);
+  border: 1px solid rgba(47, 90, 83, 0.45);
+  border-radius: 3px;
+  background: rgba(47, 90, 83, 0.07);
+}
+
+.status-seal {
+  padding: 2px 6px;
+  font-family: var(--kai);
+  font-size: 11px;
+  color: var(--ink-soft);
+  border: 1px solid rgba(31, 26, 20, 0.28);
+  border-radius: 3px;
+}
+
+.status-seal.is-ready {
+  color: var(--paper);
+  background: var(--cinnabar);
+  border-color: var(--cinnabar);
+}
+
+.beast-card-quote {
+  margin: 0;
+  padding: 7px 10px;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--ink);
+  background: rgba(232, 222, 201, 0.55);
+  border-left: 2.5px solid var(--ink);
+}
+
+.beast-card-blueprint {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  line-height: 1.55;
+  color: #4a3d2c;
+}
+
+.beast-card-blueprint strong {
+  color: var(--cinnabar);
+  font-weight: normal;
+}
+
+.beast-card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  padding-top: 4px;
+}
+
+.card-act-btn {
+  padding: 5px 11px;
+  font-family: var(--kai);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+  border: 1px solid #b5a485;
+  border-radius: 3px;
+  background: rgba(239, 230, 210, 0.7);
+}
+
+.card-act-btn:hover,
+.card-act-btn.is-playing {
+  color: var(--cinnabar);
+  border-color: var(--cinnabar);
+}
+
+.card-act-btn.is-primary {
+  color: var(--paper);
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.card-act-btn.is-primary:hover {
+  background: var(--cinnabar);
+  border-color: var(--cinnabar);
+}
+
 @media (max-width: 640px) {
   .title {
     top: 16px;
@@ -288,7 +783,7 @@ button {
     top: 16px;
     left: 16px;
     gap: 10px;
-    max-height: 34%;
+    max-height: 36%;
     padding: 12px 10px;
   }
 
@@ -302,21 +797,34 @@ button {
   }
 
   .card-note,
-  .card-inferred {
+  .card-inferred,
+  .story-caption {
     display: none;
   }
 
   .actions {
-    bottom: 120px;
+    bottom: 146px;
   }
 
   .controls {
     right: 16px;
-    bottom: 110px;
+    bottom: 140px;
   }
 
   .scroll-item {
     font-size: 15px;
     padding: 6px 6px;
+  }
+
+  .catalog-backdrop {
+    padding: 10px;
+  }
+
+  .catalog-header {
+    flex-direction: column;
+  }
+
+  .catalog-search {
+    width: 100%;
   }
 }

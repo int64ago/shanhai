@@ -17,7 +17,9 @@
     "typecheck": "tsc -b",
     "validate": "tsx pipeline/validate.ts",
     "rodin": "tsx pipeline/rodin/generate.ts",
-    "rodin:balance": "tsx pipeline/rodin/generate.ts --balance"
+    "rodin:balance": "tsx pipeline/rodin/generate.ts --balance",
+    "tts": "tsx pipeline/tts/narrate.ts",
+    "tts:all": "tsx pipeline/tts/narrate.ts --all"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.9",

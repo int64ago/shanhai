@@ -15,6 +15,9 @@ class AudioEngine {
   sfx!: GainNode
   private stopAmbient: (() => void) | null = null
   private muted = false
+  private narrationEl: HTMLAudioElement | null = null
+  private narrationTimer = 0
+  private onNarrationEnd: (() => void) | null = null
 
   get context() {
     return this.ctx
@@ -38,8 +41,101 @@ class AudioEngine {
 
   setMuted(muted: boolean) {
     this.muted = muted
+    if (this.narrationEl) this.narrationEl.muted = muted
     if (!this.ctx) return
     this.master.gain.setTargetAtTime(muted ? 0 : 1, this.ctx.currentTime, 0.15)
+  }
+
+  /**
+   * 播放百炼 CosyVoice (longsanshu 龙三叔) 评书人语音解说：
+   * 开场先敲一声清脆醒木，同时压低背景风声与古琴，解说结束自动恢复。
+   */
+  async playNarration(beastId: string, onEnd?: () => void) {
+    await this.unlock()
+    this.stopNarration()
+    this.onNarrationEnd = onEnd ?? null
+
+    // 压低环境音，衬托说书人声
+    if (this.ctx) {
+      this.ambient.gain.setTargetAtTime(0.24, this.ctx.currentTime, 0.2)
+    }
+    this.xingmu()
+
+    const el = new Audio(`/audio/narration/${beastId}.mp3`)
+    el.muted = this.muted
+    el.volume = 0.95
+    this.narrationEl = el
+
+    const finish = () => {
+      if (this.narrationEl !== el) return
+      this.narrationEl = null
+      if (this.ctx) {
+        this.ambient.gain.setTargetAtTime(0.8, this.ctx.currentTime, 0.5)
+      }
+      const cb = this.onNarrationEnd
+      this.onNarrationEnd = null
+      cb?.()
+    }
+
+    el.addEventListener('ended', finish, { once: true })
+    el.addEventListener('error', finish, { once: true })
+
+    this.narrationTimer = window.setTimeout(() => {
+      if (this.narrationEl === el) {
+        void el.play().catch(finish)
+      }
+    }, 220)
+  }
+
+  stopNarration() {
+    if (this.narrationTimer) {
+      clearTimeout(this.narrationTimer)
+      this.narrationTimer = 0
+    }
+    if (this.narrationEl) {
+      const el = this.narrationEl
+      this.narrationEl = null
+      el.pause()
+      el.src = ''
+    }
+    if (this.ctx) {
+      this.ambient.gain.setTargetAtTime(0.8, this.ctx.currentTime, 0.4)
+    }
+    const cb = this.onNarrationEnd
+    this.onNarrationEnd = null
+    cb?.()
+  }
+
+  /** 说书人开场醒木（惊堂木）：短促硬木叩击共振 + 堂音混响 */
+  private xingmu() {
+    const ctx = this.ctx
+    if (!ctx) return
+    const t = ctx.currentTime
+    const noise = ctx.createBufferSource()
+    noise.buffer = this.noise(0.06)
+    const bp = ctx.createBiquadFilter()
+    bp.type = 'bandpass'
+    bp.frequency.setValueAtTime(1650, t)
+    bp.Q.value = 3.2
+    const ng = ctx.createGain()
+    ng.gain.setValueAtTime(0, t)
+    ng.gain.linearRampToValueAtTime(0.32, t + 0.002)
+    ng.gain.exponentialRampToValueAtTime(0.001, t + 0.055)
+
+    const wood = ctx.createOscillator()
+    wood.type = 'triangle'
+    wood.frequency.setValueAtTime(820, t)
+    wood.frequency.exponentialRampToValueAtTime(340, t + 0.045)
+    const wg = ctx.createGain()
+    wg.gain.setValueAtTime(0, t)
+    wg.gain.linearRampToValueAtTime(0.28, t + 0.002)
+    wg.gain.exponentialRampToValueAtTime(0.001, t + 0.05)
+
+    noise.connect(bp).connect(ng).connect(this.sfx)
+    wood.connect(wg).connect(this.sfx)
+    noise.start(t)
+    wood.start(t)
+    wood.stop(t + 0.06)
   }
 
   playAmbient(scene: 'valley') {

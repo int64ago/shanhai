@@ -1,9 +1,13 @@
 import { create } from 'zustand'
+import type { BeastRegion } from './beasts'
+import { audio } from '../systems/audio/AudioEngine'
 
 export type Quality = 'high' | 'medium' | 'low'
 
 /** 通用动作槽：每只神兽把自己的动作映射到这几个槽上 */
 export type BeastAction = 'idle' | 'walk' | 'special'
+
+export type RegionFilter = 'all' | 'ready' | BeastRegion
 
 export interface QualitySettings {
   dpr: number
@@ -28,6 +32,16 @@ interface AppState {
 
   selected: string
   select: (id: string) => void
+
+  regionFilter: RegionFilter
+  setRegionFilter: (f: RegionFilter) => void
+
+  catalogOpen: boolean
+  setCatalogOpen: (open: boolean) => void
+
+  narrating: boolean
+  toggleNarration: () => void
+  stopNarration: () => void
 
   action: BeastAction
   setAction: (a: BeastAction) => void
@@ -68,7 +82,46 @@ export const useApp = create<AppState>((set, get) => ({
   },
 
   selected: initialBeast(),
-  select: (selected) => set({ selected, action: 'idle' }),
+  select: (selected) => {
+    const wasNarrating = get().narrating
+    if (wasNarrating) {
+      audio.stopNarration()
+    }
+    set({ selected, action: 'idle', narrating: false })
+  },
+
+  regionFilter: 'all',
+  setRegionFilter: (regionFilter) => set({ regionFilter }),
+
+  catalogOpen: false,
+  setCatalogOpen: (catalogOpen) => set({ catalogOpen }),
+
+  narrating: false,
+  toggleNarration: () => {
+    const { narrating, selected, muted } = get()
+    if (narrating) {
+      audio.stopNarration()
+      set({ narrating: false })
+      return
+    }
+    if (muted) {
+      try {
+        localStorage.setItem('shanhai:muted', '0')
+      } catch {
+        // ignore
+      }
+      audio.setMuted(false)
+      set({ muted: false })
+    }
+    set({ narrating: true, audioUnlocked: true })
+    void audio.playNarration(selected, () => {
+      set({ narrating: false })
+    })
+  },
+  stopNarration: () => {
+    audio.stopNarration()
+    set({ narrating: false })
+  },
 
   action: initialAction(),
   setAction: (action) => set({ action }),

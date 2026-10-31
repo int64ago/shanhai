@@ -20,7 +20,7 @@
 
 ---
 
-**Shanhai World (《山海异兽录》)** is an interactive Web 3D bestiary of mythical creatures from the ancient Chinese cosmography *Classic of Mountains and Seas* (《山海经》), rendered in real-time **Chinese Gongbi ink-wash style (工笔淡彩 + 水墨线描)** at **[shanhaiworld.org](https://shanhaiworld.org/)**.
+**Shanhai World (《山海异兽录》)** is an interactive Web 3D bestiary of **62 mythical creatures across all 18 volumes** of the ancient Chinese cosmography *Classic of Mountains and Seas* (《山海经》), rendered in real-time **Chinese Gongbi ink-wash style (工笔淡彩 + 水墨线描)** with **traditional Chinese storyteller voice narration (评书人语音解说)** at **[shanhaiworld.org](https://shanhaiworld.org/)**.
 
 ---
 
@@ -28,7 +28,7 @@
 
 - **Real-Time Gongbi Ink-Wash Shader (`src/systems/ink/`)** — Two-step watercolor washes with water-edge pooling over procedural rice-paper grain, paired with variable-pressure calligraphic outlines (`gl_Position` depth-biased back-face hulls).
 - **Archetype-Driven Modular Anatomy** — Mythical beasts in《山海经》do not all have a head, eyes, four legs, or a tail. Every creature is built from one of **five anatomical archetypes** (`sac`, `avian`, `serpentine`, `quadruped`, `biped`) plus **modular procedural appendages** (nine tails, four wings, six legs, nine human-faced heads, underarm eyes).
-- **Strict Philological Separation** — Every vertical scroll card separates **verbatim classical citations (`原文`)** from **modern artistic extrapolations (`设计`)** in a distinct cinnabar-bordered column.
+- **18-Volume Compendium & Storyteller Narration (`pipeline/tts/`)** — Two-tier regional scroll navigation (`南山` · `西山` · `北山` · `东山` · `中山` · `海外` · `海内` · `大荒`) plus a full-screen searchable **Compendium (`山海总目`)** with rare-character pinyin, verbatim classical quotes (`原文`), 3D anatomical blueprints (`形制`), and traditional storyteller narration (`说书`, powered by Alibaba Cloud Bailian CosyVoice `longsanshu`).
 
 ---
 
@@ -56,7 +56,7 @@ Every beast is produced through a reproducible, script-driven pipeline (`pipelin
 | Stage | Tooling | What It Does |
 | :--- | :--- | :--- |
 | **1. Spec & Decomposition** | `content/beasts/<id>.json` | Defines verbatim《山海经》sources, inferred design notes, `archetype`, and modular appendage jobs. |
-| **2. Two-Stage 3D Generation** | `pipeline/rodin/generate.ts` + `turnaround.py` | Generates a Stage-1 base mesh, corrects posture in headless Blender to render 4 orthographic views (`concept/<id>/`), then runs Rodin Gen-2.5 `Extreme-High` (50k tris, 12K textures). |
+| **2. Two-Stage 3D Generation** | `pipeline/rodin/generate.ts` + `turnaround.py` | Generates a Stage-1 base mesh, corrects posture in headless Blender to render 4 orthographic views (`concept/<id>/`), then runs Rodin Gen-2.5 `Extreme-High` (50k tris, 4K textures). |
 | **3. Archetype Auto-Rigging** | `pipeline/blender/rig_<archetype>.py` | Normalizes scale/orientation (`+Z` forward, `z = 0` ground), builds the archetype skeleton with 3-tier weight fallback, and bakes `idle`, `walk`, and `alert` NLA cycles. |
 | **4. Compression & Validation** | `gltf-transform` + `pipeline/validate.ts` | Compresses textures to WebP and geometry via `meshopt` (~1.5 MB per beast), verifying Git LFS binary integrity and the ≤ 15 MB budget. |
 | **5. Ink-Wash Web Runtime** | `src/systems/ink/` + `src/beasts/<id>/` | Applies Gongbi watercolor shading, calligraphic outlines, procedural appendage bone chains, watercolor particles, and Web Audio synthesis. |

@@ -10,9 +10,28 @@ export function Controls() {
   const quality = useApp((s) => s.quality)
   const locked = useApp((s) => s.qualityLocked)
   const setQuality = useApp((s) => s.setQuality)
+  const narrating = useApp((s) => s.narrating)
+  const toggleNarration = useApp((s) => s.toggleNarration)
+  const setCatalogOpen = useApp((s) => s.setCatalogOpen)
 
   return (
     <div className="controls">
+      <button
+        className="seal-btn"
+        onClick={() => setCatalogOpen(true)}
+        aria-label="打开山海总目"
+        title="山海总目：检索《山海经》十八卷全部异兽与造型考据（快捷键 M）"
+      >
+        总目
+      </button>
+      <button
+        className={`seal-btn${narrating ? ' is-active' : ''}`}
+        onClick={toggleNarration}
+        aria-label={narrating ? '停止评书解说' : '播放评书解说'}
+        title="百炼 CosyVoice（龙三叔）说书人语音解说"
+      >
+        {narrating ? '止语' : '说书'}
+      </button>
       <button
         className="seal-btn"
         onClick={toggleMuted}

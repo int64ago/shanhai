@@ -30,6 +30,27 @@ function checkGlbFile(path: string): number {
 function main() {
   checkGlbFile(join(ROOT, 'public/models/_placeholder/fox.glb'))
 
+  const seen = new Set<string>()
+  for (const beast of BEASTS) {
+    if (seen.has(beast.id)) throw new Error(`重复的神兽 id: ${beast.id}`)
+    seen.add(beast.id)
+    if (!VALID_ARCHETYPES.has(beast.archetype)) {
+      throw new Error(`[${beast.id}] 非法 archetype: ${beast.archetype}`)
+    }
+    if (!beast.quote || !beast.anatomy || !beast.story) {
+      throw new Error(`[${beast.id}] 缺少 quote / anatomy / story 考据字段`)
+    }
+    const mp3Path = join(ROOT, 'public/audio/narration', `${beast.id}.mp3`)
+    if (!existsSync(mp3Path)) {
+      throw new Error(`[${beast.id}] 缺少评书人语音文件: ${mp3Path}（请运行 pnpm tts ${beast.id}）`)
+    }
+    const mp3Head = readFileSync(mp3Path).subarray(0, 16).toString('ascii', 0, 4)
+    if (mp3Head === 'vers') {
+      throw new Error(`语音文件是未拉取的 Git LFS 指针: ${mp3Path}`)
+    }
+  }
+  console.log(`✔ 全卷图鉴校验通过: ${BEASTS.length} 尊神兽考据、造型参考与评书语音齐全`)
+
   const readyBeasts = BEASTS.filter((b) => b.ready)
   for (const beast of readyBeasts) {
     const contentPath = join(ROOT, 'content/beasts', `${beast.id}.json`)

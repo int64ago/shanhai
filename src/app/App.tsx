@@ -3,6 +3,7 @@ import { Scroll } from '../ui/Scroll'
 import { Card } from '../ui/Card'
 import { Controls } from '../ui/Controls'
 import { ActionBar } from '../ui/ActionBar'
+import { CatalogModal } from '../ui/CatalogModal'
 import { useAudio } from '../systems/audio/useAudio'
 
 export function App() {
@@ -13,12 +14,13 @@ export function App() {
       <Stage />
       <header className="title">
         山海异兽录
-        <span className="seal">试作</span>
+        <span className="seal">十八卷</span>
       </header>
       <Card />
       <Controls />
       <ActionBar />
       <Scroll />
+      <CatalogModal />
     </>
   )
 }

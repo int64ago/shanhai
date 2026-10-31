@@ -41,17 +41,19 @@ AI 3D 生成无法正确处理“多头、多尾、多翼、六足、单足”�
 
 ## 2. 两阶段 Rodin 3D 生成（初版 → 按构型矫正出四视图 → 多视图高模）
 
-### 2.1 第一阶段：文生 3D 初版（或概念图生初版）
-- 为主躯干和每个独立器官母件分别编写 `pipeline/rodin/jobs/<id>-<part>-v1.json`。
+### 2.1 第一阶段：文生 3D 初版（`0.5` 积分 / 部件）
+- 为主躯干和每个独立器官母件分别编写 `pipeline/rodin/jobs/<id>-<part>-v1.json`，使用 `tier: "Gen-2.5-Medium"`（单次 `0.5` 积分）。
 - **提示词规范**：
   - **主躯干**：写明构型特征（如无面目囊体写 `smooth rounded sac-like creature with no face, no eyes, no mouth`；单足禽写 `crane-like mythical bird standing on a single central leg`；走兽写 `standing tall on four straight legs, level back`）。若某器官拆出去外挂，必须在躯干提示词中排除它（如 `tail removed`、`headless neck stump`）。
   - **细长独立器官**（单尾、单翼、单足、长颈）：必须写明长宽比与根梢变化（如 `isolated single ..., elongated shape about 5x longer than its thickness, tapered at the root, no body`），否则 AI 会生成短胖团块。
 
-### 2.2 第二阶段：Blender 按构型矫正姿态 + 正交四视图 → 图生 3D 高模
+### 2.2 第二阶段：Blender 按构型矫正姿态 + 正交四视图 → 图生 3D 高模（`1.0` 积分 / 部件）
 1. 用 `normalize.py` 将初版模型归一到米制与 +Z 朝向。
 2. 若初版存在 AI 典型姿态缺陷（如走兽后躯下蹲、单足禽重心偏斜、多余残肢），在 Blender 中用 `turnaround.py`（或构型专用矫正参数）修正网格，并渲染无透视正交四视图 `concept/<id>/view_{34,side,front,back}.png`。
    - **渲染后必须用 Read 检查四视图**，确认轮廓、对称性、重心与无多余残肢后再提交高模。
-3. 提交 `Gen-2.5-Extreme-High`（+ `texture_mode=extreme-high` + `HighPack`）多视图图生 3D（`view_34.png` 放第一张定材质）。运行时统一取返回的 `base_high_pbr.glb`。
+3. 提交 `Gen-2.5-Extreme-High`（5 万面顶配几何 + 默认 4K 贴图 + `addons: "HighPack"`）多视图图生 3D（`view_34.png` 放第一张定材质）：
+   - **不要传 `texture_mode: "extreme-high"`**：工笔水墨分染管线最终会将贴图压缩为 2K/4K WebP 并做阶梯水彩分染，不传 `texture_mode: "extreme-high"` 可省去额外的 `+2.0` 积分（Stage 2 单件仅需 `1.0` 积分，两阶段合计 **`1.5` 积分 / 部件**）。
+   - 运行时统一取返回的 `base_high_pbr.glb`（若返回 `base.glb` 则自动回退）。
 
 ---
 
