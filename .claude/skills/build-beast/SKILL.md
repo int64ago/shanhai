@@ -1,150 +1,122 @@
 ---
 name: build-beast
-description: "按《山海异兽录》已验证的国风工笔水墨 3D 管线制作或更新一只山海经神兽（设定 JSON → Rodin 初版 → Blender 矫正姿态出四视图 → Rodin 多视图高模 → Blender 去重尾/绑骨骼/生成慢步动画 → gltf-transform 压缩 → 水墨着色与运行时奇异部件挂接 → 截图自检）。当用户要求制作、生成、绑定或优化某只神兽时调用。"
+description: "通用的《山海经》神兽制作工作流（构型判定与异体拆分 → 两阶段 Rodin 生成 → 按构型清理/绑骨/生成动画 → gltf-transform 压缩 → 国风工笔水墨着色与动态器官挂接 → 视觉自检）。不预设神兽必有头、面目、四足或尾巴，适配囊体无面目（帝江）、单足禽（毕方）、长龙行波（应龙）、多首/多尾/腋下目等任意山海经异相。"
 ---
 
-# 山海经神兽制作工作流（Build Beast）
+# 山海经神兽通用制作工作流（Build Beast）
 
-本技能沉淀自 **M2 九尾狐试点** 的完整踩坑与调优过程。每做一只新神兽（驳、陆吾、毕方、帝江、穷奇、饕餮、开明兽、凤凰、应龙），严格按以下 7 步执行。
+《山海经》异兽的本质是**“主躯干构型（Archetype）+ 异体器官挂接（Modular Appendages）”**——有的无头无面目（帝江、刑天），有的一足（毕方、夔），有的六足四翼，有的九首九尾，有的目在腋下（饕餮），有的长躯无足或凌空游弋（应龙）。
 
----
-
-## 1. 古籍设定与部件拆解（`content/beasts/<id>.json`）
-
-1. 新建 `content/beasts/<id>.json`：
-   - `source`：只收《山海经》原文与篇目，严禁把后世引申或现代设定混进原文。
-   - `inferred`：所有视觉补足（毛色、纹样、特效）逐条标明依据（如“艺术设计”或古本插图出处），供左侧古籍卡片朱框单独展示。
-2. **主体与奇异部件拆分原则**：
-   - **能一次生成的标准体型**（如 `驳`：马身独角）：整体生成，不拆部件。
-   - **多尾 / 多首 / 双翼 / 腋下眼**（如 `九尾狐`、`陆吾`、`开明兽`、`穷奇`、`饕餮`）：**标准躯干**与**单个奇异部件**分开生成。躯干走 Blender 自动骨架，奇异部件在运行时或挂接点上复制并程序化驱动，绝不让 AI 直接生成九头九尾（必粘连错乱）。
+因此**绝不能预设神兽都有“头、五官、四足、尾巴”**。每做一只神兽，严格按以下 6 步通用流程执行。
 
 ---
 
-## 2. 两阶段 Rodin 3D 生成（方案 4：初版 → 姿态矫正四视图 → 多视图高模）
+## 1. 解剖构型判定与部件拆解（`content/beasts/<id>.json`）
 
-AI 文生 3D 的四足动物普遍存在**后腿半蹲、自带多余短尾**的问题，直接改提示词收效甚微。必须走两阶段生成：
+### 1.1 古籍原文与设计推断分栏
+- `source`：只收《山海经》原文与篇目，不混入后世引申。
+- `inferred`：所有视觉补足（色彩、纹饰、气韵特效）逐条标明依据，供左侧古籍卡片朱框独立展示。
 
-### 2.1 第一阶段：文生 3D 初版（拿解剖与贴图基底）
-- 写 `pipeline/rodin/jobs/<id>-body-v1.json`：
-  - 提示词写明解剖比例、毛色分布、东方点缀（每兽最多 1–2 处，如额间云纹、独角），并注明 `standing tall on four straight legs, level back, head facing forward`。
-  - 若单独生成细长部件（尾、翼、长颈），提示词必须写明长宽比（如 `elongated tapered shape about five times longer than its thickness, thin at the root`），否则会生成短胖团块。
-- 执行 `pnpm rodin pipeline/rodin/jobs/<id>-body-v1.json`。
+### 1.2 选定主躯干构型（`archetype`）
+根据原文描述，将神兽归入以下 5 种基础构型之一（决定骨架模板、站姿归一方式与基础运动）：
 
-### 2.2 第二阶段：Blender 姿态矫正 + 渲染正交四视图 → 图生 3D 高模
-1. 先将初版模型归一：
-   ```bash
-   /Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup \
-     --python pipeline/blender/normalize.py -- \
-     raw/<id>-body-v1/base_high_pbr.glb /tmp/<id>_norm.glb --length 1.0 --max-texture 2048
-   ```
-2. 用 `pipeline/blender/turnaround.py` 自动抬高后躯、拉直后腿、压平多余短尾，并渲染无透视正交四视图（`view_34.png`、`view_side.png`、`view_front.png`、`view_back.png`）：
-   ```bash
-   mkdir -p concept/<id>
-   /Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup \
-     --python pipeline/blender/turnaround.py -- /tmp/<id>_norm.glb concept/<id>
-   ```
-   - 渲染后**必须先用 Read 查看四视图**，确认背线平直、四腿直立、正背面无畸变。
-3. 写 `pipeline/rodin/jobs/<id>-body-i2m.json`，把 4 张视图放入 `images`（`view_34.png` 放第一张以决定材质），配置拉满：
-   ```json
-   {
-     "tier": "Gen-2.5-Extreme-High",
-     "images": [
-       "concept/<id>/view_34.png",
-       "concept/<id>/view_side.png",
-       "concept/<id>/view_front.png",
-       "concept/<id>/view_back.png"
-     ],
-     "params": {
-       "mesh_mode": "Raw",
-       "geometry_file_format": "glb",
-       "quality_override": 50000,
-       "texture_mode": "extreme-high",
-       "addons": "HighPack"
-     }
-   }
-   ```
-   - 注意：`Extreme-High` 会返回两个 GLB：`base_high_pbr.glb`（5 万面 + 12K 颜色贴图 + 4K 法线，运行时用这个）和 `model_export_raw.glb`（1000 万面无贴图高模）。
+| 构型 `archetype` | 典型神兽 | 解剖特征（不预设头/足） | 主骨架与运动方式 |
+| :--- | :--- | :--- | :--- |
+| **`sac`（浑沌囊体型）** | 帝江 | **无头、无面目**，浑圆囊/卵状躯干，外挂六足四翼 | 中心骨 + 体积保持呼吸骨（横胀纵缩）；运动靠果冻弹跳、旋转歌舞与外挂翼足拍动 |
+| **`avian`（羽禽 / 奇足禽型）** | 毕方（一足）、凤凰 | 禽躯、双翼/多翼，**足数可变（1 足居中 / 2 足 / 3 足）** | 倾斜躯干 + 颈头链 + `N` 条足链（单足时落点居中于 `x=0`）；运动为单足弹跳、振翅、盘旋 |
+| **`serpentine`（长龙 / 游弋型）** | 应龙 | 细长流线躯干，凌空或涉水，可带翼/短肢 | 等距多节脊椎链（16–32 节）+ 可选翼/肢；运动靠全身三维行波游动，不依赖地面步态 |
+| **`quadruped`（走兽型）** | 驳、九尾狐、陆吾、穷奇、饕餮、开明兽 | 四肢支撑、水平脊柱；**可无原生头**（开明兽九首外挂）、**可异位五官**（饕餮目在腋下）、**可无原生尾** | 脊柱 + 四肢链（可选颈头骨）；运动为呼吸待机、防滑步态、蓄力威慑 |
+| **`biped`（直立异人/异兽型）** | 刑天、神人 | 直立躯干、双足支撑，可无首（乳目脐口）或多臂 | 直立脊柱 + 双下肢 + 上肢 |
+
+### 1.3 主体与奇异器官（Appendages）拆分原则
+AI 3D 生成无法正确处理“多头、多尾、多翼、六足、单足”的拓扑粘连。通用拆分规则：
+1. **单件可直出**：标准体块且无粘连风险的器官（如 `驳` 的独角马身）整体一次生成。
+2. **奇异器官拆成“1 个母件 + 运行时 N 份挂接”**：
+   - 多尾（九尾狐、陆吾）→ 躯干去尾 + 单尾母件 × 9
+   - 多首（开明兽）→ 无首/短颈桩躯干 + 单个人面虎首母件 × 9
+   - 多翼 / 多足（帝江六足四翼、穷奇双翼）→ 浑圆囊体/躯干 + 单翼母件 × 2/4 + 单足母件 × 6
+   - 异位器官（饕餮腋下目）→ 躯干 + 独立眼球/眼眶组件嵌于腋下挂点
 
 ---
 
-## 3. Blender 自动化清理、去重尾、绑骨与动画（`pipeline/build_beast.sh`）
+## 2. 两阶段 Rodin 3D 生成（初版 → 按构型矫正出四视图 → 多视图高模）
 
-一行命令跑完标准化、绑骨、关键帧与 `gltf-transform` 压缩：
-```bash
-pipeline/build_beast.sh <id> <body-job-id> [part-job-id]
-```
+### 2.1 第一阶段：文生 3D 初版（或概念图生初版）
+- 为主躯干和每个独立器官母件分别编写 `pipeline/rodin/jobs/<id>-<part>-v1.json`。
+- **提示词规范**：
+  - **主躯干**：写明构型特征（如无面目囊体写 `smooth rounded sac-like creature with no face, no eyes, no mouth`；单足禽写 `crane-like mythical bird standing on a single central leg`；走兽写 `standing tall on four straight legs, level back`）。若某器官拆出去外挂，必须在躯干提示词中排除它（如 `tail removed`、`headless neck stump`）。
+  - **细长独立器官**（单尾、单翼、单足、长颈）：必须写明长宽比与根梢变化（如 `isolated single ..., elongated shape about 5x longer than its thickness, tapered at the root, no body`），否则 AI 会生成短胖团块。
 
-### 关键机制与必查项：
-1. **12K 贴图预缩（`normalize.py --max-texture 4096`）**：Rodin 最高档的 12K PNG 会让中间 GLB 膨胀到 130MB+，必须在 `normalize.py` 里先缩到 4096，最后由 `gltf-transform` 压成 2048 WebP。
-2. **多尾神兽去重尾（`normalize.py --trim-tail`）**：
-   - 即使四视图压了尾巴，Rodin 图生 3D 仍常在两后腿之间生成一条下垂短尾。若不清理，叠上外挂尾巴会出现“两组尾巴”。
-   - `--trim-tail` 只删两腿中缝（`|x| < 0.052`）和踝部后方明显超出后腿轮廓的尾尖，**绝不能切进两侧后腿（`|x| >= 0.052`）**，否则从右侧（`-X`）看后腿脚踝会被削成细丝。
-   - **必须同时检查左右两侧预览（`+X` 与 `-X`）**，因为 AI 模型左右后腿前后位置常有微小不对称。
-3. **三层蒙皮权重兜底（`rig_quadruped.py`）**：
-   - AI 网格上默认热扩散（`ARMATURE_AUTO`）几乎 100% 失败。
-   - 脚本自动退到：① 水密体素代理求权重 + `DATA_TRANSFER` 传回；② 若仍失败，退到按骨骼线段距离（反距离幂）算权重 + 网格平滑（100% 成功）。
-4. **尾根挂接骨位置（`tail_attach`）**：
-   - `tail_attach` 必须定在**骶骨高度**（`hips_z` 偏上、中轴后缘往内缩 `2.5%` 身长），绝不能取整个后半身最靠后的点（否则会落到后膝或下垂尾尖上）。
-5. **四拍慢步与脚掌防翘趾（`anim_walk`）**：
-   - 步态用 `leg_cycle(p, duty=0.6)`：支撑相匀速后移（防滑步），摆动相平滑前送。
-   - 脚掌骨 `foot` 的旋转必须抵消上两节旋转 `-(u_ang + l_ang) + 0.15 * lift`，保证支撑相脚掌平踩地面、抬腿时趾尖自然微垂，避免出现“脚尖翘天上用脚后跟走路”。
+### 2.2 第二阶段：Blender 按构型矫正姿态 + 正交四视图 → 图生 3D 高模
+1. 用 `normalize.py` 将初版模型归一到米制与 +Z 朝向。
+2. 若初版存在 AI 典型姿态缺陷（如走兽后躯下蹲、单足禽重心偏斜、多余残肢），在 Blender 中用 `turnaround.py`（或构型专用矫正参数）修正网格，并渲染无透视正交四视图 `concept/<id>/view_{34,side,front,back}.png`。
+   - **渲染后必须用 Read 检查四视图**，确认轮廓、对称性、重心与无多余残肢后再提交高模。
+3. 提交 `Gen-2.5-Extreme-High`（+ `texture_mode=extreme-high` + `HighPack`）多视图图生 3D（`view_34.png` 放第一张定材质）。运行时统一取返回的 `base_high_pbr.glb`。
+
+---
+
+## 3. Blender 自动化清理、按构型绑骨与基础动画
+
+脚本处理必须根据第 1 步选定的 `archetype` 分发，**只打开该构型需要的几何清理项**：
+
+1. **通用清理与标准化（`normalize.py`）**：
+   - 合并重复顶点、剔除漂浮碎块、12K 贴图预缩至 `4096`（`--max-texture 4096`）、原点置于底部中心 `z=0`、正面朝 glTF `+Z`（Blender `-Y`）。
+   - **可选几何清理**：仅当神兽有外挂尾且 AI 躯干残留了原生短尾时，才加 `--trim-tail`（且清理时必须同时渲染 `+X` 左视、`-X` 右视、`+Y` 背视三张图，确保不伤及两侧肢体）。无尾或原生单尾神兽不加此项。
+2. **按构型绑骨与三层权重兜底**：
+   - 根据 `archetype` 调用对应绑定脚本（`rig_quadruped.py` / `rig_avian.py` / `rig_sac.py` / `rig_serpentine.py`）：
+     - **不假设必有 `head` / `legs`**：脚本只创建该构型实际存在的骨骼节点，以及供运行时挂载外挂器官的挂接骨（`*_attach`，注意挂接骨须定在解剖根部并往体内微缩 `2–3%`，防止外挂件悬空）。
+   - **三层蒙皮权重兜底（所有有骨构型通用）**：
+     AI 网格上 Blender 默认热扩散（`ARMATURE_AUTO`）常因非流形失败，统一依次回退：① 水密体素代理求权重 + `DATA_TRANSFER` 传回；② 骨骼线段反距离幂权重 + 网格平滑（100% 成功）。
+3. **动作生成（`idle` / `move` / `special`）**：
+   - 每只神兽导出 3 段基础动作（槽位统一映射为前端的 `idle` / `walk` / `special`，其中 `walk` 槽在UI上为“行”，对不同构型分别是：走兽慢步、毕方单足跃行、帝江歌舞律动、应龙行波游弋）。
+   - 凡有足着地行走/跳跃的构型，支撑相必须匀速后移防滑步，且末端足骨抵消上肢旋转以保持脚掌/爪平踩地面。
+4. **压缩（`gltf-transform optimize`）**：
+   - 关闭自动减面与扁平化（`--simplify false --flatten false --join false`），启用 WebP 贴图（主躯干 2048，外挂件 1024）与 `meshopt` 几何压缩。
 
 ---
 
 ## 4. 国风工笔淡彩 / 水墨渲染（`src/systems/ink/`）
 
-所有神兽统一使用 `src/systems/ink/` 着色，不再走 PBR 写实毛发：
-1. **工笔设色（`inkMaterial.ts`）**：
-   - 从贴图提取色相：`vec3 hue = albedo / max(max(albedo.r, max(albedo.g, albedo.b)), 0.24)`。**分母下限必须保持在 `0.24` 左右**，否则深褐色的瞳孔、眼线、鼻吻会被归一化拉成亮橙色，导致“白眼/瞎眼”。
-   - 暗部浓墨阈值 `lum < 0.18` 平滑入墨，保留五官神采与黑足。
-   - 纸纹与水渍噪声**必须采样模型空间坐标 `vObj`**，不可采样世界坐标 `vWorld`（否则神兽走动或转头时，墨迹会在皮毛表面滑动，看起来像嘴脸在怪动）。
-2. **毛笔提按外轮廓（`createOutlineMaterial`）**：
-   - 反向外壳沿法线外扩，顶点着色器末尾**必须保留裁剪空间深度微偏 `gl_Position.z += 0.0012 * gl_Position.w`**，防止胸毛、吻部的浅凹凸背面穿出正面形成黑斑横杠。
-   - 外挂部件（如九尾、羽翼）同样调用 `createOutline(mesh, 0.0035)` 加细墨线，保证与躯干画风一致，不要用半透明噪点镂空尾面。
+所有构型与外挂器官统一经 `inkify()` 或 `createInkMaterial()` 着色：
+1. **设色与浓墨分染（`inkMaterial.ts`）**：
+   - 提取贴图色相时分母设下限（`max(r, g, b, 0.24)`）：若神兽有眼（无论在面部、腋下、胸腹）或有深色斑纹/黑爪，可防止深褐色细节被归一化拉亮成浅橙色。
+   - 若神兽无面目（如帝江），同样适用两道水彩分染（`wash1` / `wash2`）与受光留白，靠体表墨韵层次表现体积。
+   - 水渍与纸纤维噪声**一律采样未变形的模型空间坐标 `vObj`**，禁止采样世界坐标 `vWorld`，避免运动时墨迹在体表游动。
+2. **毛笔提按外轮廓（`createOutline`）**：
+   - 主躯干与所有外挂器官（尾、首、翼、足）统一加反向外壳墨线，保证整兽画风一致。
+   - 顶点着色器末尾保留裁剪空间深度微偏 `gl_Position.z += 0.0012 * gl_Position.w`，防止体表浅凹凸背面穿出黑斑。
 
 ---
 
-## 5. 运行时组件与交互规范（`src/beasts/<id>/`）
+## 5. 运行时组装与交互规范（`src/beasts/<id>/`）
 
-1. **禁止鼠标注视扭头**：
-   - **不要**加鼠标跟随转头（Look-At IK），神兽头部只随自身动画（`idle` / `walk` / `alert`）自然运动。
-2. **React 19 `StrictMode` 场景图副作用规范**：
-   - `useGLTF(url)` 返回的 `scene` 是全局缓存单例。
-   - 在 `useMemo` 中调用 `inkify(scene)` 是安全的（内部有 `scene.userData.inked` 幂等保护）。
-   - **严禁在 `useMemo` 里把外挂部件节点（如 `holder`）直接 `attach.add(holder)`**！因为 React 19 `StrictMode` 会执行两次 `useMemo` 并**丢弃第二次返回值、保留第一次返回值**，在 `useMemo` 里清理或挂载会导致残留静止部件或主部件脱离场景树。
-   - 外挂节点必须在 `useEffect` 中挂载并在 cleanup 中移除：
-     ```ts
-     useEffect(() => {
-       rig.attach.add(rig.holder)
-       return () => {
-         rig.attach.remove(rig.holder)
-         rig.mixer.stopAllAction()
-       }
-     }, [rig])
-     ```
-   - 计算外挂节点的抵消旋转 `restQ` 时，必须取 `attach` **相对于 `scene` 根节点**的旋转（`attach.getWorldQuaternion().premultiply(scene.getWorldQuaternion().invert())`），排除外层 `<group>` 的旋转。
-3. **非等比缩放与法线安全**：
-   - 对 AI 网格做非等比缩放后，**严禁调用 `geometry.computeVertexNormals()`**（AI 网格常含退化三角形，会算出 `NaN` 法线并污染画面），应直接对已有法线按缩放比逆转置修正并做零长保护。
-4. **特效与宣纸融合**：
-   - 宣纸浅色背景上**禁用 `AdditiveBlending` 发光粒子**（会被冲白看不见），一律改用正常 Alpha 混合的水彩晕染粒子（中心浅、边缘积色水痕）。
+1. **动态骨骼链生成器（外挂尾 / 颈 / 翼 / 触须通用）**：
+   - 外挂静态网格沿主轴归一化、根部移至原点，按距离线性分配蒙皮权重到 `N` 节动态 `Bone`，在 `useFrame` 中用错相位行波驱动（多件排布时做奇偶高低/前后错层，避免共面呆板）。
+   - 若对网格做了非等比缩放，**严禁调用 `geometry.computeVertexNormals()`**（AI 网格退化面会算出 `NaN` 法线导致全屏黑），直接对原法线做逆转置修正并做零长保护。
+2. **React 19 `StrictMode` 挂载铁律**：
+   - **严禁在 `useMemo` 内直接 `attachBone.add(holder)`**（React 19 `StrictMode` 会执行两次 `useMemo` 并丢弃第二次返回值、保留第一次返回值，在 `useMemo` 里修改单例 `scene` 会导致部件脱离场景树或残留静止副本）。
+   - 所有挂接到 `scene` 上的外挂节点必须在 `useEffect` 中 `add` 并在 cleanup 中 `remove`。
+   - 计算挂接点抵消旋转时，取 `attachBone` **相对于 `scene` 根节点**的旋转（排除外层 `<group>` 旋转）。
+3. **交互与特效**：
+   - 不做鼠标跟随扭头（无头神兽本就无头，有头神兽也只随自身动画自然呼吸摆动）。
+   - 宣纸浅色背景禁用 `AdditiveBlending`，火焰、云气、丹光、水雾统一用正常 Alpha 混合的水彩晕染粒子。
 
 ---
 
-## 6. 视觉自检（交付前必跑）
+## 6. 交付前视觉自检
 
-每次改完模型、骨骼或着色器，必须在无头 Chrome 中跑通截图并用 Read 肉眼核查：
+每次完成或修改神兽后，必须在无头 Chrome 中抓图并用 Read 肉眼核查：
 ```bash
-# 1. 静 / 行 / 神通 全景图（自动等待 [beast] ready）
+# 1. 静 / 行 / 神通 三态全景（自动等待控制台 [beast] ready <id>）
 for a in idle walk special; do
-  node scripts/shot.mjs "http://localhost:5199/?action=$a" /tmp/shanhai-check/<id>-$a.png 1440x900 2200
+  node scripts/shot.mjs "http://localhost:5199/?beast=<id>&action=$a" /tmp/shanhai-check/<id>-$a.png 1440x900 2200
 done
-# 2. 行走连续帧特写（检查后腿厚度、脚掌是否翘趾、外挂部件是否脱节）
-node scripts/closeups.mjs "http://localhost:5199/?action=walk" /tmp/shanhai-check/<id>-w 3 280 320,160,1060,580
+# 2. 运动连续帧特写（检查肢体/外挂件变形、接地与穿插）
+node scripts/closeups.mjs "http://localhost:5199/?beast=<id>&action=walk" /tmp/shanhai-check/<id>-w 3 280 320,160,1060,580
 ```
 核查清单：
-- [ ] 五官清晰（瞳孔有神、无白眼），胸腹与面部无外轮廓穿模黑斑
-- [ ] 无多余原生短尾或 `StrictMode` 残影部件
-- [ ] 行走时四足脚掌平踩地面、小腿无削细变形、步速与位移匹配不打滑
-- [ ] 左侧古籍卡片竖排从右向左阅读正常，“原文”与“设计”朱框严格分栏
-- [ ] `pnpm typecheck && pnpm build` 零报错，单兽 GLB 总大小 ≤ 15MB（常规 1.5–3MB）
-- [ ] 新增 `.glb` / `.png` / `.ogg` 等二进制资产已由 Git LFS 跟踪（`git lfs status` 确认）
+- [ ] 解剖特征严格符合《山海经》原文（如无面目、单足、目在腋下、多首/多尾数量与位置准确）
+- [ ] 体表无外轮廓穿模黑斑，有眼部位不发白，外挂器官与躯干墨线/设色统一、根部无悬空或残影
+- [ ] “静 / 行 / 神通”三态过渡自然，着地肢体不滑步、不翘趾，空中/水生/囊体构型律动流畅
+- [ ] 古籍卡片“原文”与“设计”朱框分栏清晰
+- [ ] `pnpm typecheck && pnpm build` 零报错，新增二进制资产已由 Git LFS 追踪（`git lfs status`）

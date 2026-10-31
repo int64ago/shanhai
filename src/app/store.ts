@@ -38,7 +38,11 @@ interface AppState {
   unlockAudio: () => void
 }
 
-// 调试用：?action=walk / special 直接进入对应动作，方便截图验收
+// 调试用：?beast=<id>&action=walk|special 直接切到对应神兽与动作，方便截图验收
+function initialBeast(): string {
+  return new URLSearchParams(location.search).get('beast') || 'jiuweihu'
+}
+
 function initialAction(): BeastAction {
   const a = new URLSearchParams(location.search).get('action')
   return a === 'walk' || a === 'special' ? a : 'idle'
@@ -63,7 +67,7 @@ export const useApp = create<AppState>((set, get) => ({
     if (next) set({ quality: next })
   },
 
-  selected: 'jiuweihu',
+  selected: initialBeast(),
   select: (selected) => set({ selected, action: 'idle' }),
 
   action: initialAction(),

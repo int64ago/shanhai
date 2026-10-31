@@ -1,6 +1,7 @@
 {
   "id": "jiuweihu",
   "name": "九尾狐",
+  "archetype": "quadruped",
   "source": [
     {
       "book": "山海经·南山经",
@@ -22,7 +23,7 @@
   "actions": ["idle", "walk", "special:九尾开屏与狐火"],
   "sounds": { "voice": "其音如婴儿：婴儿啼声与狐鸣叠加", "special": "狐火燃起" },
   "parts": [
-    { "id": "body", "job": "pipeline/rodin/jobs/jiuweihu-body-v1.json" },
-    { "id": "tail", "job": "pipeline/rodin/jobs/jiuweihu-tail-v1.json", "instances": 9 }
+    { "id": "body", "job": "pipeline/rodin/jobs/jiuweihu-body-i2m.json" },
+    { "id": "tail", "job": "pipeline/rodin/jobs/jiuweihu-tail-max.json", "instances": 9 }
   ]
 }
