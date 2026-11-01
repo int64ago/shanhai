@@ -504,6 +504,51 @@ class AudioEngine {
     growl.stop(tRoar + 1.55)
   }
 
+  /**
+   * 毕方「其鸣自訆也，见则其邑有讹火」：双音节仙鹤高唳（模拟“毕—方—”自呼其名）+ 丹火爆燃呼啸。
+   */
+  bifangCall(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const p = this.panner(pan)
+    const reverb = ctx.createConvolver()
+    reverb.buffer = this.impulse(2.8)
+    const wet = ctx.createGain()
+    wet.gain.value = 0.45
+    p.connect(this.sfx)
+    p.connect(reverb).connect(wet).connect(this.sfx)
+
+    // 双音节鹤唳：第一声短促下切（“毕”），第二声清越悠扬上扬（“方—”）
+    for (const [offset, dur, f0, f1, f2] of [
+      [0.0, 0.28, 1180, 1340, 860],
+      [0.36, 0.92, 920, 1280, 1120],
+    ] as const) {
+      const t0 = ctx.currentTime + offset
+      const osc = ctx.createOscillator()
+      osc.type = 'sawtooth'
+      osc.frequency.setValueAtTime(f0, t0)
+      osc.frequency.exponentialRampToValueAtTime(f1, t0 + dur * 0.35)
+      osc.frequency.exponentialRampToValueAtTime(f2, t0 + dur)
+
+      const bp1 = ctx.createBiquadFilter()
+      bp1.type = 'bandpass'
+      bp1.frequency.setValueAtTime(1450, t0)
+      bp1.Q.value = 5.5
+
+      const g = ctx.createGain()
+      g.gain.setValueAtTime(0, t0)
+      g.gain.linearRampToValueAtTime(0.34, t0 + 0.025)
+      g.gain.exponentialRampToValueAtTime(0.001, t0 + dur)
+
+      osc.connect(bp1).connect(g).connect(p)
+      osc.start(t0)
+      osc.stop(t0 + dur + 0.03)
+    }
+
+    // 讹火流焰（顺接 foxFire 丹火呼啸）
+    this.foxFire(pan)
+  }
+
   private noiseCache = new Map<number, AudioBuffer>()
 
   private noise(seconds: number) {

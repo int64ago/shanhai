@@ -15,3 +15,5 @@
 {"time":"2026-10-31T12:47:32.327Z","beast":"dijiang","job":"dijiang-leg-max","hash":"b240ad40a773e399","tier":"Gen-2.5-Extreme-High","uuid":"0d4d5aa4-df57-4c93-8fc6-7f3844efee8a","consumed":3}
 {"time":"2026-11-01T00:20:48.734Z","beast":"bo","job":"bo-body-v1","hash":"2a5407d023459bb5","tier":"Gen-2.5-Medium","uuid":"2d47512b-2cc3-4a42-9230-afea6ed55bf8","consumed":0.5}
 {"time":"2026-11-01T01:44:13.326Z","beast":"bo","job":"bo-body-max","hash":"9a3645b59d812c5b","tier":"Gen-2.5-Extreme-High","uuid":"262e226a-1a3b-4202-b806-7e9cda24cc5e","consumed":1}
+{"time":"2026-11-01T03:47:52.385Z","beast":"bifang","job":"bifang-body-v1","hash":"41c2ba4dd3c6aba3","tier":"Gen-2.5-Medium","uuid":"959bfdee-5119-4850-95d2-a8d9609dbc44","consumed":0.5}
+{"time":"2026-11-01T04:09:41.676Z","beast":"bifang","job":"bifang-body-max","hash":"6faefafeb92f6e81","tier":"Gen-2.5-Extreme-High","uuid":"23ee5ddf-0977-41f6-af71-a1fcef3337e7","consumed":1}

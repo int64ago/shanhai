@@ -1,0 +1,18 @@
+{
+  "id": "bifang-body-max",
+  "beast": "bifang",
+  "budget": 60,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "an ancient Chinese mythical crane bird Bifang from Shan Hai Jing, standing tall on a single central crane leg, slender crane body with symmetrical wings spread out to both sides, teal-cyan plumage with bright crimson-red flame markings, long ivory-white crane beak, flowing tail plumes",
+  "images": [
+    "concept/bifang/view_34.png",
+    "concept/bifang/view_side.png",
+    "concept/bifang/view_front.png",
+    "concept/bifang/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000
+  }
+}

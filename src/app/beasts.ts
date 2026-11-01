@@ -243,7 +243,7 @@ export const BEASTS: BeastEntry[] = [
     palette: '石青底羽、朱砂赤纹、粉白长喙、青赤讹火晕染',
     story:
       '章莪之山，寸草不生，多产瑶碧美玉。山中有奇鸟名曰毕方，体态如鹤，却只生有一足居中而立，青色羽底上遍布赤红火纹，长喙如玉，鸣声自呼“毕方”，所到之处常伴诡异讹火。',
-    ready: false,
+    ready: true,
   },
   {
     id: 'zheng',

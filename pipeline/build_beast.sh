@@ -54,11 +54,13 @@ if [[ "$ARCHETYPE" == "quadruped" && ${#PARTS[@]} -gt 0 ]]; then
   done
 elif [[ "$ARCHETYPE" == "sac" ]]; then
   BODY_LEN=0.78
+elif [[ "$ARCHETYPE" == "avian" ]]; then
+  BODY_LEN=1.22
 fi
 
 blender normalize.py "$(pick_glb "$BODY_JOB")" "$WORK/body_norm.glb" --length "$BODY_LEN" ${TRIM_FLAG[@]+"${TRIM_FLAG[@]}"}
 blender "rig_${ARCHETYPE}.py" "$WORK/body_norm.glb" "$WORK/body_rig.glb" --preview "$WORK/rig.png"
-optimize "$WORK/body_rig.glb" "$OUT/body.glb" 2048
+optimize "$WORK/body_rig.glb" "$OUT/body.glb" 1024
 
 for spec in ${PARTS[@]+"${PARTS[@]}"}; do
   if [[ "$spec" == *:* ]]; then
