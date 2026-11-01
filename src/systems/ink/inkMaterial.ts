@@ -146,17 +146,19 @@ export function createInkMaterial({
 /**
  * 外轮廓墨线（反向外壳）：沿法线外扩、只画背面。宽度随位置起伏，模拟毛笔提按。
  */
-export function createOutlineMaterial(width = 0.006) {
+export function createOutlineMaterial(width = 0.006, depthBias = 0.0012) {
   return new ShaderMaterial({
     side: BackSide,
     uniforms: {
       uInk: { value: new Color(INK.ink) },
       uWidth: { value: width },
+      uDepthBias: { value: depthBias },
     },
     vertexShader: /* glsl */ `
       #include <common>
       #include <skinning_pars_vertex>
       uniform float uWidth;
+      uniform float uDepthBias;
       ${NOISE_GLSL}
       void main() {
         #include <beginnormal_vertex>
@@ -168,7 +170,7 @@ export function createOutlineMaterial(width = 0.006) {
         #include <skinning_vertex>
         #include <project_vertex>
         // 轻微深度后退，防止 AI 网格表面的浅凹凸（胸毛、吻部）被自身背面穿出黑斑
-        gl_Position.z += 0.0012 * gl_Position.w;
+        gl_Position.z += uDepthBias * gl_Position.w;
       }
     `,
     fragmentShader: /* glsl */ `

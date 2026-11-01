@@ -17,7 +17,7 @@ import math
 import sys
 
 import bpy
-from mathutils import Vector
+from mathutils import Matrix, Vector
 
 
 def parse_args():
@@ -131,7 +131,7 @@ def setup_render(size):
     return cam
 
 
-def render_views(obj, cam, out_dir):
+def render_views(obj, cam, out_dir, only_view=None):
     pts = [v.co for v in obj.data.vertices]
     lo = Vector((min(p.x for p in pts), min(p.y for p in pts), min(p.z for p in pts)))
     hi = Vector((max(p.x for p in pts), max(p.y for p in pts), max(p.z for p in pts)))
@@ -147,8 +147,18 @@ def render_views(obj, cam, out_dir):
         ('back', Vector((0, d, 0))),
     ]
     for name, offset in views:
-        cam.location = center + offset
-        cam.rotation_euler = (center - cam.location).to_track_quat('-Z', 'Y').to_euler()
+        if only_view and name != only_view:
+            continue
+        # Separate cameras keep background EEVEE from reusing an evaluated
+        # transform from the previous view on Blender 5.2/macOS.
+        shot_cam = cam.copy()
+        shot_cam.data = cam.data.copy()
+        bpy.context.scene.collection.objects.link(shot_cam)
+        location = center + offset
+        rotation = (center - location).to_track_quat('-Z', 'Y')
+        shot_cam.matrix_world = Matrix.LocRotScale(location, rotation, Vector((1, 1, 1)))
+        bpy.context.scene.camera = shot_cam
+        bpy.context.view_layer.update()
         bpy.context.scene.render.filepath = f'{out_dir}/view_{name}.png'
         bpy.ops.render.render(write_still=True)
         print('VIEW', name)
@@ -162,4 +172,5 @@ def main():
     render_views(obj, cam, args.out_dir)
 
 
-main()
+if __name__ == '__main__':
+    main()

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef } from 'react'
+import { useEffect, useMemo, useRef, type ComponentType } from 'react'
 import { useFrame, useThree } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import { AnimationMixer, MathUtils, Mesh, Object3D, Quaternion, Vector3, type AnimationAction, type Group, type Texture } from 'three'
@@ -9,12 +9,20 @@ import { createInkMaterial } from '../systems/ink/inkMaterial'
 import { FoxFire } from '../systems/vfx/FoxFire'
 import { aimTail, createTail, prepareTailGeometry, TAIL_BONES } from './jiuweihu/tails'
 
+export interface QuadrupedEffectProps {
+  intensity: { current: number }
+}
+
 interface Props {
   id: string
   /** 原文规定的尾数；0 表示保留模型原生尾。 */
   tailCount?: number
   tailColor?: string
   inkBoost?: number
+  outline?: number
+  outlineDepthBias?: number
+  /** 无外挂尾时也可在兽身坐标内呈现神通；默认仍用尾尖灵火。 */
+  specialEffect?: ComponentType<QuadrupedEffectProps>
   onCall: (pan: number) => void
 }
 
@@ -23,9 +31,9 @@ const SPEED = 0.3
 const SPECIAL_SECONDS = 4.6
 
 /** 四足兽共用步态与外挂尾，异相数量、设色和鸣声由各兽明确配置。 */
-export function Quadruped({ id, tailCount = 0, tailColor = '#b7492b', inkBoost = 0, onCall }: Props) {
+export function Quadruped({ id, tailCount = 0, tailColor = '#b7492b', inkBoost = 0, outline = 0.0055, outlineDepthBias, specialEffect: SpecialEffect, onCall }: Props) {
   const body = useGLTF(`/models/${id}/body.glb`)
-  const tailSource = useGLTF('/models/jiuweihu/tail.glb')
+  const tailSource = useGLTF(tailCount > 0 ? '/models/jiuweihu/tail.glb' : `/models/${id}/body.glb`)
   const action = useApp((s) => s.action)
   const setAction = useApp((s) => s.setAction)
   const camera = useThree((s) => s.camera)
@@ -39,21 +47,21 @@ export function Quadruped({ id, tailCount = 0, tailColor = '#b7492b', inkBoost =
 
   const rig = useMemo(() => {
     const scene = body.scene
-    inkify(scene, { saturation: 0.88, outline: 0.0055 })
+    inkify(scene, { saturation: 0.88, outline, outlineDepthBias })
     scene.traverse((o) => { if (o instanceof Mesh) o.frustumCulled = false })
     scene.updateMatrixWorld(true)
     const mixer = new AnimationMixer(scene)
     const clips: Record<string, AnimationAction> = {}
     for (const clip of body.animations) clips[clip.name] = mixer.clipAction(clip)
     const attach = scene.getObjectByName('tail_attach')
-    if (!attach) throw new Error(`${id}: 缺少 tail_attach 骨骼`)
     const holder = new Object3D()
-    const relative = attach.getWorldQuaternion(new Quaternion()).premultiply(scene.getWorldQuaternion(new Quaternion()).invert())
-    holder.quaternion.copy(relative.invert())
-    const scale = attach.getWorldScale(new Vector3())
-    holder.scale.set(1 / scale.x, 1 / scale.y, 1 / scale.z)
     const tails = []
     if (tailCount > 0) {
+      if (!attach) throw new Error(`${id}: 缺少 tail_attach 骨骼`)
+      const relative = attach.getWorldQuaternion(new Quaternion()).premultiply(scene.getWorldQuaternion(new Quaternion()).invert())
+      holder.quaternion.copy(relative.invert())
+      const scale = attach.getWorldScale(new Vector3())
+      holder.scale.set(1 / scale.x, 1 / scale.y, 1 / scale.z)
       let source: Mesh | undefined
       tailSource.scene.updateMatrixWorld(true)
       tailSource.scene.traverse((o) => { if (!source && o instanceof Mesh) source = o })
@@ -71,13 +79,13 @@ export function Quadruped({ id, tailCount = 0, tailColor = '#b7492b', inkBoost =
       }
     }
     return { scene, mixer, clips, attach, holder, tails, emitters: tails.map((t) => t.tip) }
-  }, [body, tailSource, id, tailCount, tailColor, inkBoost])
+  }, [body, tailSource, id, tailCount, tailColor, inkBoost, outline, outlineDepthBias])
 
   useEffect(() => {
-    rig.attach.add(rig.holder)
+    if (rig.tails.length) rig.attach?.add(rig.holder)
     if (import.meta.env.DEV) console.info(`[beast] ready ${id}`)
     return () => {
-      rig.attach.remove(rig.holder)
+      rig.attach?.remove(rig.holder)
       rig.mixer.stopAllAction()
     }
   }, [rig, id])
@@ -143,7 +151,8 @@ export function Quadruped({ id, tailCount = 0, tailColor = '#b7492b', inkBoost =
   return <>
     <group ref={root} position={[0, 0, RADIUS]} rotation-y={Math.PI / 2 - 0.22}>
       <primitive object={rig.scene} />
+      {SpecialEffect && <SpecialEffect intensity={intensity} />}
     </group>
-    {rig.emitters.length > 0 && <FoxFire emitters={rig.emitters} intensity={intensity} coreColor="#e9c488" edgeColor="#ad6632" />}
+    {!SpecialEffect && rig.emitters.length > 0 && <FoxFire emitters={rig.emitters} intensity={intensity} coreColor="#e9c488" edgeColor="#ad6632" />}
   </>
 }

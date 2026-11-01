@@ -4,6 +4,7 @@ import { createInkMaterial, createOutlineMaterial } from './inkMaterial'
 export interface InkifyOptions {
   saturation?: number
   outline?: number
+  outlineDepthBias?: number
 }
 
 /**
@@ -11,7 +12,7 @@ export interface InkifyOptions {
  * 外轮廓与原网格共享几何体和骨骼，蒙皮时一起变形。
  * 可重复调用（React StrictMode 会把 useMemo 执行两遍），已处理过的模型直接跳过。
  */
-export function inkify(root: Object3D, { saturation, outline = 0.006 }: InkifyOptions = {}) {
+export function inkify(root: Object3D, { saturation, outline = 0.006, outlineDepthBias }: InkifyOptions = {}) {
   if (root.userData.inked) return
   root.userData.inked = true
   const meshes: Mesh[] = []
@@ -23,13 +24,13 @@ export function inkify(root: Object3D, { saturation, outline = 0.006 }: InkifyOp
     mesh.material = createInkMaterial({ map: src.map ?? null, saturation })
     mesh.castShadow = false
     mesh.receiveShadow = false
-    if (outline > 0) mesh.parent!.add(createOutline(mesh, outline))
+    if (outline > 0) mesh.parent!.add(createOutline(mesh, outline, outlineDepthBias))
   }
   return meshes
 }
 
-export function createOutline(mesh: Mesh, width: number) {
-  const mat = createOutlineMaterial(width)
+export function createOutline(mesh: Mesh, width: number, depthBias?: number) {
+  const mat = createOutlineMaterial(width, depthBias)
   let outline: Mesh
   if (mesh instanceof SkinnedMesh) {
     const s = new SkinnedMesh(mesh.geometry, mat)

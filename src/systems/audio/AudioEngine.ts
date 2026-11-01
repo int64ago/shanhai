@@ -573,6 +573,48 @@ class AudioEngine {
     }
   }
 
+  /** 夫诸原文未记鸣声；以清越鹿鸣与泉水轻响作交互听觉补足。 */
+  fuzhuCall(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const out = this.panner(pan)
+    out.connect(this.sfx)
+    const t = ctx.currentTime
+
+    for (const [offset, duration, hz] of [[0, 0.62, 660], [0.74, 0.86, 550]]) {
+      const start = t + offset
+      for (const [ratio, level] of [[1, 0.17], [2, 0.045], [3, 0.012]]) {
+        const voice = ctx.createOscillator()
+        voice.type = 'sine'
+        voice.frequency.setValueAtTime(hz * ratio * 0.88, start)
+        voice.frequency.exponentialRampToValueAtTime(hz * ratio, start + 0.14)
+        voice.frequency.exponentialRampToValueAtTime(hz * ratio * 0.76, start + duration)
+        const gain = ctx.createGain()
+        gain.gain.setValueAtTime(0, start)
+        gain.gain.linearRampToValueAtTime(level, start + 0.065)
+        gain.gain.exponentialRampToValueAtTime(0.001, start + duration)
+        voice.connect(gain).connect(out)
+        voice.start(start)
+        voice.stop(start + duration + 0.03)
+      }
+    }
+
+    const water = ctx.createBufferSource()
+    water.buffer = this.noise(2.8)
+    const filter = ctx.createBiquadFilter()
+    filter.type = 'bandpass'
+    filter.Q.value = 0.7
+    filter.frequency.setValueAtTime(680, t)
+    filter.frequency.exponentialRampToValueAtTime(1700, t + 0.8)
+    filter.frequency.exponentialRampToValueAtTime(480, t + 2.7)
+    const gain = ctx.createGain()
+    gain.gain.setValueAtTime(0, t)
+    gain.gain.linearRampToValueAtTime(0.1, t + 0.5)
+    gain.gain.exponentialRampToValueAtTime(0.001, t + 2.75)
+    water.connect(filter).connect(gain).connect(out)
+    water.start(t)
+  }
+
   private noiseCache = new Map<number, AudioBuffer>()
 
   private noise(seconds: number) {

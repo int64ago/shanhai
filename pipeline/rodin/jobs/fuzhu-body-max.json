@@ -1,0 +1,18 @@
+{
+  "id": "fuzhu-body-max",
+  "beast": "fuzhu",
+  "budget": 3,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Fuzhu white deer from Shan Hai Jing, preserve reference anatomy, exactly FOUR separate smooth unbranched ivory antler horns on its head in two bilateral pairs, pale jade horn tips, one deer head, white deer body, four distinct straight standing legs with cloven hooves, short natural deer tail, neutral standing pose, preserve white fur and dark eyes, no pedestal",
+  "images": [
+    "concept/fuzhu/view_34.png",
+    "concept/fuzhu/view_side.png",
+    "concept/fuzhu/view_front.png",
+    "concept/fuzhu/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000
+  }
+}

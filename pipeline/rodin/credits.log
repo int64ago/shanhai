@@ -19,3 +19,5 @@
 {"time":"2026-11-01T04:09:41.676Z","beast":"bifang","job":"bifang-body-max","hash":"6faefafeb92f6e81","tier":"Gen-2.5-Extreme-High","uuid":"23ee5ddf-0977-41f6-af71-a1fcef3337e7","consumed":1}
 {"time":"2026-11-01T05:34:04.267Z","beast":"lushu","job":"lushu-body-v1","hash":"640a4bdba077249c","tier":"Gen-2.5-Medium","uuid":"27b63e30-cfeb-4ae8-9921-b012a718d6d9","consumed":0.5}
 {"time":"2026-11-01T09:12:10.819Z","beast":"lushu","job":"lushu-body-max","hash":"aa09d45f683b707d","tier":"Gen-2.5-Extreme-High","uuid":"0a08ed3c-20a6-4e1e-bf55-5c3fe02da6db","consumed":1}
+{"time":"2026-11-01T10:07:44.937Z","beast":"fuzhu","job":"fuzhu-body-v1","hash":"8eb06af6f35e25c9","tier":"Gen-2.5-Medium","uuid":"318690a3-e8f2-40e6-a29e-682664ecb5cc","consumed":0.5}
+{"time":"2026-11-01T10:17:57.682Z","beast":"fuzhu","job":"fuzhu-body-max","hash":"8ba8ef8631118fb0","tier":"Gen-2.5-Extreme-High","uuid":"7b95334a-3520-475f-8134-301186bc8405","consumed":1}

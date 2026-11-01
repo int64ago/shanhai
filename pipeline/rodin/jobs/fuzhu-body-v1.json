@@ -1,0 +1,12 @@
+{
+  "id": "fuzhu-body-v1",
+  "beast": "fuzhu",
+  "budget": 3,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "Fuzhu mythical white deer from Shan Hai Jing, elegant realistic adult white deer with exactly FOUR separate smooth unbranched long antler horns on top of its head arranged in two bilateral pairs, front pair and rear pair, four ivory horns with pale jade tips, no branching antlers, one deer head, dark eyes and nose, pure white short fur, slender graceful neck, level back, standing tall on FOUR separate straight legs with four cloven hooves firmly on ground, neutral symmetric standing pose, small natural short deer tail, clean full body, no pedestal, no water, no decorations",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}
