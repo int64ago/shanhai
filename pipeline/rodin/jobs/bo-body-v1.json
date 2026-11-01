@@ -1,0 +1,12 @@
+{
+  "id": "bo-body-v1",
+  "beast": "bo",
+  "budget": 60,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "an ancient Chinese mythical beast Bo from Shan Hai Jing, a powerful muscular white horse-like creature with a single sharp spiral horn on its forehead, fierce tiger fangs, standing tall and symmetric on four straight strong legs with dark tiger claws, level back, pure snow-white coat with dark black legs and black mane, tail removed, short tail stump only, game-ready 3D creature asset",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

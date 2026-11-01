@@ -213,7 +213,7 @@ export const BEASTS: BeastEntry[] = [
     palette: '留白宣纸素身、焦墨长尾与四爪、青白独角、胸腔鼓音波纹',
     story:
       '中曲山上，有威猛神兽名曰驳。远看白身黑尾似骏马，近观额顶耸立一角，口生猛虎獠牙，足踏虎爪，嘶鸣之声如战鼓轰雷，专食山中虎豹，古人视为御兵止戈之瑞兽。',
-    ready: false,
+    ready: true,
   },
   {
     id: 'luwu',

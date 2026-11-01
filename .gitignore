@@ -6,6 +6,9 @@
 # raw AI outputs / caches
 raw/
 pipeline/rodin/cache/
+concept/*/
+!concept/jiuweihu/
+!concept/dijiang/
 
 # deps & builds
 node_modules/

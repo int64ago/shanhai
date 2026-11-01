@@ -436,6 +436,74 @@ class AudioEngine {
     src.start(t)
   }
 
+  /**
+   * 驳「其音如鼓，食虎豹，可以御兵」：三声沉雷战鼓锤击 + 低沉虎啸胸腔共鸣 + 金铁辟兵余音。
+   */
+  boDrumRoar(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const p = this.panner(pan)
+    const reverb = ctx.createConvolver()
+    reverb.buffer = this.impulse(2.6)
+    const wet = ctx.createGain()
+    wet.gain.value = 0.42
+    p.connect(this.sfx)
+    p.connect(reverb).connect(wet).connect(this.sfx)
+
+    // 三声雷鼓（「音如鼓」）
+    for (const [offset, fStart, fEnd, amp] of [
+      [0, 128, 44, 0.52],
+      [0.28, 118, 42, 0.42],
+      [0.62, 142, 38, 0.62],
+    ] as const) {
+      const t0 = ctx.currentTime + offset
+      const drum = ctx.createOscillator()
+      drum.type = 'sine'
+      drum.frequency.setValueAtTime(fStart, t0)
+      drum.frequency.exponentialRampToValueAtTime(fEnd, t0 + 0.34)
+      const dg = ctx.createGain()
+      dg.gain.setValueAtTime(0, t0)
+      dg.gain.linearRampToValueAtTime(amp, t0 + 0.008)
+      dg.gain.exponentialRampToValueAtTime(0.001, t0 + 0.42)
+      drum.connect(dg).connect(p)
+      drum.start(t0)
+      drum.stop(t0 + 0.45)
+
+      // 鼓皮击打瞬态
+      const skin = ctx.createBufferSource()
+      skin.buffer = this.noise(0.09)
+      const lp = ctx.createBiquadFilter()
+      lp.type = 'bandpass'
+      lp.frequency.setValueAtTime(360, t0)
+      lp.Q.value = 1.6
+      const sg = ctx.createGain()
+      sg.gain.setValueAtTime(0, t0)
+      sg.gain.linearRampToValueAtTime(amp * 0.45, t0 + 0.004)
+      sg.gain.exponentialRampToValueAtTime(0.001, t0 + 0.08)
+      skin.connect(lp).connect(sg).connect(p)
+      skin.start(t0)
+    }
+
+    // 胸腔低吼 + 独角破甲金铁泛音（「食虎豹，可以御兵」）
+    const tRoar = ctx.currentTime + 0.12
+    const growl = ctx.createOscillator()
+    growl.type = 'sawtooth'
+    growl.frequency.setValueAtTime(92, tRoar)
+    growl.frequency.linearRampToValueAtTime(118, tRoar + 0.35)
+    growl.frequency.exponentialRampToValueAtTime(64, tRoar + 1.45)
+    const bp = ctx.createBiquadFilter()
+    bp.type = 'bandpass'
+    bp.frequency.setValueAtTime(240, tRoar)
+    bp.Q.value = 2.8
+    const gg = ctx.createGain()
+    gg.gain.setValueAtTime(0, tRoar)
+    gg.gain.linearRampToValueAtTime(0.28, tRoar + 0.14)
+    gg.gain.exponentialRampToValueAtTime(0.001, tRoar + 1.5)
+    growl.connect(bp).connect(gg).connect(p)
+    growl.start(tRoar)
+    growl.stop(tRoar + 1.55)
+  }
+
   private noiseCache = new Map<number, AudioBuffer>()
 
   private noise(seconds: number) {

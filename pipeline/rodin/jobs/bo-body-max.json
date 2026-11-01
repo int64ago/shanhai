@@ -1,0 +1,18 @@
+{
+  "id": "bo-body-max",
+  "beast": "bo",
+  "budget": 60,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "an ancient Chinese mythical beast Bo from Shan Hai Jing, a powerful muscular snow-white horse-like creature with a single sharp spiral horn centered on its forehead, fierce tiger fangs, standing tall and symmetric on four straight strong legs with dark black lower legs and tiger claws, flowing black mane, short tail stump only, no long tail",
+  "images": [
+    "concept/bo/view_34.png",
+    "concept/bo/view_side.png",
+    "concept/bo/view_front.png",
+    "concept/bo/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000
+  }
+}

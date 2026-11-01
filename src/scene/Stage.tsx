@@ -14,6 +14,7 @@ import { Effects } from './Effects'
 import { PlaceholderBeast } from './PlaceholderBeast'
 import { Jiuweihu } from '../beasts/jiuweihu/Jiuweihu'
 import { Dijiang } from '../beasts/dijiang/Dijiang'
+import { Bo } from '../beasts/bo/Bo'
 import { CameraRig } from './CameraRig'
 
 export function Stage() {
@@ -39,7 +40,15 @@ export function Stage() {
       <PaperGround />
       <ContactShadows position={[0, 0.005, 0]} color={INK.ink} opacity={0.45} scale={10} blur={2.2} far={2} resolution={512} />
       <Suspense fallback={null}>
-        {selected === 'jiuweihu' ? <Jiuweihu /> : selected === 'dijiang' ? <Dijiang /> : <PlaceholderBeast />}
+        {selected === 'jiuweihu' ? (
+          <Jiuweihu />
+        ) : selected === 'dijiang' ? (
+          <Dijiang />
+        ) : selected === 'bo' ? (
+          <Bo />
+        ) : (
+          <PlaceholderBeast />
+        )}
       </Suspense>
       <Effects />
 

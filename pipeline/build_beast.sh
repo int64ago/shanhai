@@ -49,7 +49,7 @@ echo "== body (archetype=$ARCHETYPE)"
 TRIM_FLAG=()
 BODY_LEN=1.0
 if [[ "$ARCHETYPE" == "quadruped" && ${#PARTS[@]} -gt 0 ]]; then
-  for spec in "${PARTS[@]}"; do
+  for spec in ${PARTS[@]+"${PARTS[@]}"}; do
     [[ "$spec" == tail:* || "$spec" != *:* ]] && TRIM_FLAG=(--trim-tail)
   done
 elif [[ "$ARCHETYPE" == "sac" ]]; then
@@ -60,7 +60,7 @@ blender normalize.py "$(pick_glb "$BODY_JOB")" "$WORK/body_norm.glb" --length "$
 blender "rig_${ARCHETYPE}.py" "$WORK/body_norm.glb" "$WORK/body_rig.glb" --preview "$WORK/rig.png"
 optimize "$WORK/body_rig.glb" "$OUT/body.glb" 2048
 
-for spec in "${PARTS[@]}"; do
+for spec in ${PARTS[@]+"${PARTS[@]}"}; do
   if [[ "$spec" == *:* ]]; then
     IFS=':' read -r PNAME PJOB PLEN <<< "$spec"
     PLEN=${PLEN:-0.7}

@@ -8,6 +8,10 @@ export interface InkOptions {
   saturation?: number
   /** 写意尾巴模式：沿 +X 方向的长度（模型单位），> 0 时启用笔触与飞白 */
   tailLength?: number
+  /** 可选设色染印（如黑尾、赤尾、丹羽） */
+  tint?: string
+  /** 浓墨加成（0..1，如黑尾取 0.72） */
+  inkBoost?: number
 }
 
 /** 光从左上前方来，与场景的留白方向一致 */
@@ -50,6 +54,8 @@ const FRAGMENT = /* glsl */ `
   uniform vec3 uLight;
   uniform float uSat;
   uniform float uTailLen;
+  uniform vec3 uTint;
+  uniform float uInkBoost;
   varying vec2 vUv;
   varying vec3 vN;
   varying vec3 vViewDir;
@@ -72,8 +78,8 @@ const FRAGMENT = /* glsl */ `
 
     // 颜料：贴图色相，提亮到水彩的透明感；分母设下限，避免深褐色的瞳孔、眼线被拉成亮橙色
     vec3 hue = albedo / max(max(albedo.r, max(albedo.g, albedo.b)), 0.24);
-    vec3 pigment = mix(vec3(1.0), hue, uSat);
-    float ink = 1.0 - smoothstep(0.02, 0.18, lum);       // 深处：瞳孔、眼线、腿、耳尖、鼻 → 浓墨
+    vec3 pigment = mix(vec3(1.0), hue, uSat) * uTint;
+    float ink = clamp((1.0 - smoothstep(0.02, 0.18, lum)) + uInkBoost, 0.0, 1.0);       // 深处：瞳孔、眼线、腿、耳尖、鼻 → 浓墨
 
     float tone = clamp((1.0 - ndl) * 0.9 + (1.0 - lum) * 0.28 + (wet - 0.5) * 0.35, 0.0, 1.0);
 
@@ -85,10 +91,10 @@ const FRAGMENT = /* glsl */ `
       float streak = fbm(vec2(u * 2.0, a * 6.0));
       float hair = vnoise(vec2(u * 8.0, a * 36.0));
       tone = clamp(tone * 0.65 + (1.0 - u) * 0.25 + (streak - 0.5) * 0.32, 0.0, 1.0);
-      ink = max(ink * 0.25, smoothstep(0.14, 0.0, u) * 0.22);
+      ink = max(ink * (0.25 + uInkBoost * 0.65), smoothstep(0.14, 0.0, u) * 0.22 + uInkBoost * 0.68);
       if (u > 0.88 && hair < (u - 0.88) * 6.5) discard;
-      // 尾尖留白：赤狐尾梢本就是白的，这里用纸色晕出去
-      pigment = mix(pigment, vec3(1.0), smoothstep(0.68, 0.90, u));
+      // 尾尖留白：赤狐尾梢本就是白的，黑尾/染色尾则按 uInkBoost 保留浓墨尾梢
+      pigment = mix(pigment, vec3(1.0), smoothstep(0.68, 0.90, u) * (1.0 - uInkBoost));
     }
 
     // 第一遍淡彩铺底，第二遍在背光处叠一层，边界带水渍的硬边
@@ -108,7 +114,13 @@ const FRAGMENT = /* glsl */ `
   }
 `
 
-export function createInkMaterial({ map, saturation = 0.8, tailLength = 0 }: InkOptions) {
+export function createInkMaterial({
+  map,
+  saturation = 0.8,
+  tailLength = 0,
+  tint = '#ffffff',
+  inkBoost = 0,
+}: InkOptions) {
   return new ShaderMaterial({
     uniforms: {
       uMap: { value: map },
@@ -118,6 +130,8 @@ export function createInkMaterial({ map, saturation = 0.8, tailLength = 0 }: Ink
       uLight: { value: LIGHT },
       uSat: { value: saturation },
       uTailLen: { value: tailLength },
+      uTint: { value: new Color(tint) },
+      uInkBoost: { value: inkBoost },
     },
     vertexShader: VERTEX,
     fragmentShader: FRAGMENT,
