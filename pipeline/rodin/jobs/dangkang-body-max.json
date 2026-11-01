@@ -1,0 +1,9 @@
+{
+  "id": "dangkang-body-max",
+  "beast": "dangkang",
+  "budget": 3,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Dangkang auspicious boar from Shan Hai Jing, preserve reference shape and color, one broad pig head with snout and two curved ivory tusks, stout rounded blue grey boar body with muted golden ochre mane, four short separate sturdy legs and cloven hooves, level back, natural short pig tail, neutral standing pose, no pedestal or accessories",
+  "images": ["concept/dangkang/view_34.png", "concept/dangkang/view_side.png", "concept/dangkang/view_front.png", "concept/dangkang/view_back.png"],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000 }
+}

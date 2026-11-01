@@ -1,0 +1,8 @@
+{
+  "id": "dangkang-body-v1",
+  "beast": "dangkang",
+  "budget": 3,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "Dangkang auspicious mythical boar from Shan Hai Jing, realistic stout rounded wild boar with one pig head, broad pig snout, two ivory white upward curved tusks at mouth corners, small alert ears, blue grey short bristly fur with muted golden ochre mane along spine, natural animal anatomy, standing on FOUR distinct short sturdy straight legs with four separate cloven hooves firmly on ground, level back, neutral standing pose, short natural pig tail, full body, Chinese mythical beast, no saddle, no clothing, no jewelry, no pedestal, no plants",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

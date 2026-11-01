@@ -615,6 +615,50 @@ class AudioEngine {
     water.start(t)
   }
 
+  /** 当康「其鸣自叫」：两音节鼻腔豚鸣，具体音色为艺术演绎。 */
+  dangkangCall(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const out = this.panner(pan)
+    out.connect(this.sfx)
+
+    for (const [offset, duration, hz, formant] of [[0, 0.34, 155, 680], [0.46, 0.58, 128, 480]]) {
+      const t = ctx.currentTime + offset
+      const voice = ctx.createOscillator()
+      voice.type = 'sawtooth'
+      voice.frequency.setValueAtTime(hz * 0.85, t)
+      voice.frequency.exponentialRampToValueAtTime(hz * 1.15, t + duration * 0.3)
+      voice.frequency.exponentialRampToValueAtTime(hz * 0.72, t + duration)
+      const envelope = ctx.createGain()
+      envelope.gain.setValueAtTime(0, t)
+      envelope.gain.linearRampToValueAtTime(0.28, t + 0.045)
+      envelope.gain.exponentialRampToValueAtTime(0.001, t + duration)
+
+      // 双共振峰保留低沉鼻音与较弱的口腔泛音。
+      for (const [frequency, level] of [[formant, 1], [formant * 2.6, 0.3]]) {
+        const filter = ctx.createBiquadFilter()
+        filter.type = 'bandpass'
+        filter.frequency.setValueAtTime(frequency, t)
+        filter.Q.value = 4.5
+        const gain = ctx.createGain()
+        gain.gain.value = level
+        voice.connect(filter).connect(gain).connect(envelope)
+      }
+      const breath = ctx.createBufferSource()
+      breath.buffer = this.noise(duration)
+      const lowpass = ctx.createBiquadFilter()
+      lowpass.type = 'lowpass'
+      lowpass.frequency.value = 950
+      const breathGain = ctx.createGain()
+      breathGain.gain.value = 0.15
+      breath.connect(lowpass).connect(breathGain).connect(envelope)
+      envelope.connect(out)
+      voice.start(t)
+      voice.stop(t + duration + 0.03)
+      breath.start(t)
+    }
+  }
+
   private noiseCache = new Map<number, AudioBuffer>()
 
   private noise(seconds: number) {

@@ -8,7 +8,7 @@
 
 用法：
   Blender --background --factory-startup --python pipeline/blender/turnaround.py -- \
-      <in.glb> <out_dir> [--raise auto|<米>] [--keep-tail] [--size 1024]
+      <in.glb> <out_dir> [--raise auto|<米>] [--keep-tail] [--size 1024] [--view 34|side|front|back]
 
 输出 <out_dir>/view_{34,side,front,back}.png，第一张（3/4 视角）用于材质生成。
 """
@@ -28,6 +28,7 @@ def parse_args():
     p.add_argument('--raise', dest='raise_', default='auto')
     p.add_argument('--keep-tail', action='store_true')
     p.add_argument('--size', type=int, default=1024)
+    p.add_argument('--view', choices=['34', 'side', 'front', 'back'])
     return p.parse_args(argv)
 
 
@@ -169,7 +170,7 @@ def main():
     obj = load(args.input)
     fix_pose(obj, args.raise_, args.keep_tail)
     cam = setup_render(args.size)
-    render_views(obj, cam, args.out_dir)
+    render_views(obj, cam, args.out_dir, only_view=args.view)
 
 
 if __name__ == '__main__':
