@@ -549,6 +549,30 @@ class AudioEngine {
     this.foxFire(pan)
   }
 
+  /** 鹿蜀「其音如谣」：五声短句与柔和的声带泛音。 */
+  lushuSong(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const out = this.panner(pan)
+    out.connect(this.sfx)
+    for (const [i, degree] of [0, 4, 7, 9, 7, 4, 2, 0].entries()) {
+      const t = ctx.currentTime + i * 0.32
+      const hz = BASE_HZ * 2 * 2 ** (degree / 12)
+      for (const [ratio, level] of [[1, 0.18], [2, 0.05], [3, 0.018]]) {
+        const osc = ctx.createOscillator()
+        osc.frequency.setValueAtTime(hz * ratio * 0.97, t)
+        osc.frequency.exponentialRampToValueAtTime(hz * ratio, t + 0.08)
+        const gain = ctx.createGain()
+        gain.gain.setValueAtTime(0, t)
+        gain.gain.linearRampToValueAtTime(level, t + 0.06)
+        gain.gain.exponentialRampToValueAtTime(0.001, t + 0.55)
+        osc.connect(gain).connect(out)
+        osc.start(t)
+        osc.stop(t + 0.6)
+      }
+    }
+  }
+
   private noiseCache = new Map<number, AudioBuffer>()
 
   private noise(seconds: number) {

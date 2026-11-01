@@ -1,0 +1,12 @@
+{
+  "id": "lushu-body-v1",
+  "beast": "lushu",
+  "budget": 60,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "an ancient Chinese mythical horse-like beast Lushu from Shan Hai Jing, graceful muscular wild horse body with a pure snow-white head and face, golden-amber torso covered with bold black tiger stripes, standing tall and symmetric on four straight legs, level back, tail removed, short tail stump only, game-ready 3D creature asset",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

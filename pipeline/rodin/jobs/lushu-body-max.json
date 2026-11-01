@@ -1,0 +1,9 @@
+{
+  "id": "lushu-body-max",
+  "beast": "lushu",
+  "budget": 3,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Lushu from Shan Hai Jing, one white horse head, golden amber horse body with black tiger stripes, four separate straight standing legs and four hooves, short tail stump only, no long tail, preserve reference anatomy and colors",
+  "images": ["concept/lushu/view_34.png", "concept/lushu/view_side.png", "concept/lushu/view_front.png", "concept/lushu/view_back.png"],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000 }
+}

@@ -12,6 +12,8 @@ export interface InkOptions {
   tint?: string
   /** 浓墨加成（0..1，如黑尾取 0.72） */
   inkBoost?: number
+  /** 尾尖留白强度：白梢狐尾取 1，赤尾等通体设色取 0。 */
+  tipWhite?: number
 }
 
 /** 光从左上前方来，与场景的留白方向一致 */
@@ -56,6 +58,7 @@ const FRAGMENT = /* glsl */ `
   uniform float uTailLen;
   uniform vec3 uTint;
   uniform float uInkBoost;
+  uniform float uTipWhite;
   varying vec2 vUv;
   varying vec3 vN;
   varying vec3 vViewDir;
@@ -94,7 +97,7 @@ const FRAGMENT = /* glsl */ `
       ink = max(ink * (0.25 + uInkBoost * 0.65), smoothstep(0.14, 0.0, u) * 0.22 + uInkBoost * 0.68);
       if (u > 0.88 && hair < (u - 0.88) * 6.5) discard;
       // 尾尖留白：赤狐尾梢本就是白的，黑尾/染色尾则按 uInkBoost 保留浓墨尾梢
-      pigment = mix(pigment, vec3(1.0), smoothstep(0.68, 0.90, u) * (1.0 - uInkBoost));
+      pigment = mix(pigment, vec3(1.0), smoothstep(0.68, 0.90, u) * uTipWhite * (1.0 - uInkBoost));
     }
 
     // 第一遍淡彩铺底，第二遍在背光处叠一层，边界带水渍的硬边
@@ -120,6 +123,7 @@ export function createInkMaterial({
   tailLength = 0,
   tint = '#ffffff',
   inkBoost = 0,
+  tipWhite = 1,
 }: InkOptions) {
   return new ShaderMaterial({
     uniforms: {
@@ -132,6 +136,7 @@ export function createInkMaterial({
       uTailLen: { value: tailLength },
       uTint: { value: new Color(tint) },
       uInkBoost: { value: inkBoost },
+      uTipWhite: { value: tipWhite },
     },
     vertexShader: VERTEX,
     fragmentShader: FRAGMENT,

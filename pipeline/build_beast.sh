@@ -60,7 +60,7 @@ fi
 
 blender normalize.py "$(pick_glb "$BODY_JOB")" "$WORK/body_norm.glb" --length "$BODY_LEN" ${TRIM_FLAG[@]+"${TRIM_FLAG[@]}"}
 blender "rig_${ARCHETYPE}.py" "$WORK/body_norm.glb" "$WORK/body_rig.glb" --preview "$WORK/rig.png"
-optimize "$WORK/body_rig.glb" "$OUT/body.glb" 1024
+optimize "$WORK/body_rig.glb" "$OUT/body.glb" 2048
 
 for spec in ${PARTS[@]+"${PARTS[@]}"}; do
   if [[ "$spec" == *:* ]]; then

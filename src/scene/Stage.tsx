@@ -16,6 +16,7 @@ import { Jiuweihu } from '../beasts/jiuweihu/Jiuweihu'
 import { Dijiang } from '../beasts/dijiang/Dijiang'
 import { Bo } from '../beasts/bo/Bo'
 import { Bifang } from '../beasts/bifang/Bifang'
+import { Lushu } from '../beasts/lushu/Lushu'
 import { CameraRig } from './CameraRig'
 
 export function Stage() {
@@ -49,6 +50,8 @@ export function Stage() {
           <Bo />
         ) : selected === 'bifang' ? (
           <Bifang />
+        ) : selected === 'lushu' ? (
+          <Lushu />
         ) : (
           <PlaceholderBeast />
         )}

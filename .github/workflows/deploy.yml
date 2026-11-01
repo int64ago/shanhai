@@ -53,9 +53,11 @@ jobs:
 
       - name: Deploy to Cloudflare (shanhaiworld.org)
         if: env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != ''
-        run: npx --yes wrangler@4 deploy
+        run: |
+          npx --yes wrangler@4 deploy
+          node scripts/check-deployment.mjs https://shanhaiworld.org
 
-      - name: Notice when Cloudflare secrets are not configured
+      - name: Fail when Cloudflare secrets are not configured
         if: env.CLOUDFLARE_API_TOKEN == '' || env.CLOUDFLARE_ACCOUNT_ID == ''
         run: |
           {
@@ -66,3 +68,5 @@ jobs:
             echo "- \`CLOUDFLARE_API_TOKEN\` (Workers Scripts: Edit, Workers Routes: Edit)"
             echo "- \`CLOUDFLARE_ACCOUNT_ID\`"
           } >> "$GITHUB_STEP_SUMMARY"
+          echo "::error::Cloudflare deployment did not run: configure CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID."
+          exit 1

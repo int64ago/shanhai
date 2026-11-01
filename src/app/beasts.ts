@@ -106,7 +106,7 @@ export const BEASTS: BeastEntry[] = [
     palette: '素白马首、赭黄虎斑纹身躯、朱砂长尾',
     story:
       '杻阳山上，有瑞兽名曰鹿蜀。生得骏马身段，雪白头颅，身上却披着猛虎般的墨色斑纹，拖一条赤红长尾。它奔走山林时鸣声婉转，如人吟唱民谣，古人言佩其皮毛，最宜子孙昌盛。',
-    ready: false,
+    ready: true,
   },
   {
     id: 'xingxing',
