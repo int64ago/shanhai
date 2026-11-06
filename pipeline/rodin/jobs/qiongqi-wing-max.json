@@ -1,0 +1,9 @@
+{
+  "id": "qiongqi-wing-max",
+  "beast": "qiongqi",
+  "budget": 4,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "ONE isolated extended eagle wing, preserve reference proportions, narrow root at left and long flight feathers toward right tip, layered charcoal feathers with muted blue grey edges, realistic feather surface, no bird body, no second wing, no base",
+  "images": ["concept/qiongqi-wing/view_34.png", "concept/qiongqi-wing/view_side.png", "concept/qiongqi-wing/view_front.png", "concept/qiongqi-wing/view_back.png"],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000 }
+}

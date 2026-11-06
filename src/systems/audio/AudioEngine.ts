@@ -697,6 +697,63 @@ class AudioEngine {
     }
   }
 
+  /** 《海内北经》未记穷奇鸣声；低沉虎啸与气声为「状如虎」的交互艺术补足。 */
+  qiongqiCall(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const t = ctx.currentTime
+    const duration = 1.8
+    const out = this.panner(pan)
+    out.connect(this.sfx)
+
+    const voice = ctx.createOscillator()
+    voice.type = 'sawtooth'
+    voice.frequency.setValueAtTime(86, t)
+    voice.frequency.exponentialRampToValueAtTime(124, t + 0.22)
+    voice.frequency.exponentialRampToValueAtTime(57, t + duration)
+    const envelope = ctx.createGain()
+    envelope.gain.setValueAtTime(0, t)
+    envelope.gain.linearRampToValueAtTime(0.4, t + 0.1)
+    envelope.gain.linearRampToValueAtTime(0.3, t + 0.55)
+    envelope.gain.exponentialRampToValueAtTime(0.001, t + duration)
+
+    // 宽共振峰模拟胸腔和喉部，快速振幅调制带出粗粝的咆哮质感。
+    for (const [hz, level] of [[290, 1], [850, 0.45]]) {
+      const filter = ctx.createBiquadFilter()
+      filter.type = 'bandpass'
+      filter.frequency.setValueAtTime(hz, t)
+      filter.frequency.exponentialRampToValueAtTime(hz * 0.65, t + duration)
+      filter.Q.value = 1.8
+      const gain = ctx.createGain()
+      gain.gain.value = level
+      voice.connect(filter).connect(gain).connect(envelope)
+    }
+    const roughness = ctx.createGain()
+    roughness.gain.value = 0.78
+    const rasp = ctx.createOscillator()
+    rasp.frequency.setValueAtTime(27, t)
+    rasp.frequency.linearRampToValueAtTime(18, t + duration)
+    const raspDepth = ctx.createGain()
+    raspDepth.gain.value = 0.19
+    rasp.connect(raspDepth).connect(roughness.gain)
+    envelope.connect(roughness).connect(out)
+
+    const breath = ctx.createBufferSource()
+    breath.buffer = this.noise(duration)
+    const lowpass = ctx.createBiquadFilter()
+    lowpass.type = 'lowpass'
+    lowpass.frequency.value = 1350
+    const breathGain = ctx.createGain()
+    breathGain.gain.value = 0.22
+    breath.connect(lowpass).connect(breathGain).connect(envelope)
+
+    voice.start(t)
+    rasp.start(t)
+    breath.start(t)
+    voice.stop(t + duration + 0.03)
+    rasp.stop(t + duration + 0.03)
+  }
+
   private noiseCache = new Map<number, AudioBuffer>()
 
   private noise(seconds: number) {

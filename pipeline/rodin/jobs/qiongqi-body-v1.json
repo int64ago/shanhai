@@ -1,0 +1,8 @@
+{
+  "id": "qiongqi-body-v1",
+  "beast": "qiongqi",
+  "budget": 4,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "Qiongqi mythical beast body from Shan Hai Jing, powerful realistic TIGER, warm muted ochre orange short fur and dark charcoal tiger stripes, white muzzle and throat, one tiger head, long level back, FOUR separate straight standing legs and four feline paws on ground, neutral alert standing pose, natural long tiger tail behind rump, wings REMOVED smooth bare shoulders for modular wing attachment, NO WINGS, no horns, no spikes, no armor, no base, full body",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

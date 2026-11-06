@@ -1,0 +1,8 @@
+{
+  "id": "qiongqi-wing-v1",
+  "beast": "qiongqi",
+  "budget": 4,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE isolated large feathered eagle wing, fully extended horizontal span about four times its chord width, narrow fleshy attachment root at LEFT end, layered dark charcoal black feathers with muted blue grey feather edges, long flight feathers tapering to RIGHT wingtip, anatomically clear single wing only, feather plane broad horizontal, no bird body, no head, no legs, no second wing, no pedestal, no accessories",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

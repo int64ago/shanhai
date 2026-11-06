@@ -1,0 +1,9 @@
+{
+  "id": "qiongqi-body-max",
+  "beast": "qiongqi",
+  "budget": 4,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Qiongqi tiger body, preserve reference warm ochre tiger fur, dark charcoal stripes, white muzzle and throat, level back, FOUR separate standing legs with all four paws grounded, natural long tiger tail, smooth bare shoulders for modular wings, NO WINGS, no horns, no spikes, no accessories, no base",
+  "images": ["concept/qiongqi/view_34.png", "concept/qiongqi/view_side.png", "concept/qiongqi/view_front.png", "concept/qiongqi/view_back.png"],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000 }
+}
