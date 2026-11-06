@@ -1,0 +1,8 @@
+{
+  "id": "taotie-head-v1",
+  "beast": "taotie",
+  "budget": 6,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One isolated HUMAN HEAD for an ancient mythical creature, clearly human proportions, broad human nose, human lips and chin, stern old human male face, two short ivory tiger canine fangs at mouth corners, warm umber tan skin, entirely SMOOTH SKIN across both eye regions, eyeless upper face with no eye sockets no eyeballs no eyelids, short dark brown hair and short beard, thick short neck stump, no body, no shoulders, no horns, no goat muzzle, no animal snout, no pedestal, sculpture in neutral pose",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

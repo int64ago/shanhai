@@ -1,0 +1,9 @@
+{
+  "id": "taotie-hand-max",
+  "beast": "taotie",
+  "budget": 6,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "One isolated human clawed hand lying horizontal flat palm down, preserve reference FIVE digits exactly four long fingers plus ONE lateral thumb, dark pointed human fingernails, warm tan leathery skin, short wrist behind palm, fingers extending forward along ground, no extra thumb no extra fingers no arm no pedestal",
+  "images": ["concept/taotie-hand/view_34.png", "concept/taotie-hand/view_side.png", "concept/taotie-hand/view_front.png", "concept/taotie-hand/view_back.png"],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000 }
+}

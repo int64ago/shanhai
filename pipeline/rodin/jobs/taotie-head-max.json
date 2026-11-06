@@ -1,0 +1,9 @@
+{
+  "id": "taotie-head-max",
+  "beast": "taotie",
+  "budget": 6,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Isolated mythical human head, preserve reference human nose lips chin dark hair short beard and two ivory tiger canine fangs, warm umber tan skin, eyes absent replaced by unbroken smooth skin, no eyeballs no eye openings, short neck stump, no body no shoulders no horns no pedestal",
+  "images": ["concept/taotie-head/view_34.png", "concept/taotie-head/view_side.png", "concept/taotie-head/view_front.png", "concept/taotie-head/view_back.png"],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000 }
+}

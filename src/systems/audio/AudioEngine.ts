@@ -754,6 +754,45 @@ class AudioEngine {
     rasp.stop(t + duration + 0.03)
   }
 
+  /** 狍鸮「其音如婴儿」：滑音与双共振峰合成啼声，不使用真人录音。 */
+  taotieCall(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const out = this.panner(pan)
+    out.connect(this.sfx)
+    for (const [offset, duration, hz] of [[0, 0.65, 520], [0.83, 0.85, 610]]) {
+      const t = ctx.currentTime + offset
+      const voice = ctx.createOscillator()
+      voice.type = 'sawtooth'
+      voice.frequency.setValueAtTime(hz * 0.8, t)
+      voice.frequency.linearRampToValueAtTime(hz * 1.2, t + 0.17)
+      voice.frequency.exponentialRampToValueAtTime(hz * 0.72, t + duration)
+      const envelope = ctx.createGain()
+      envelope.gain.setValueAtTime(0, t)
+      envelope.gain.linearRampToValueAtTime(0.24, t + 0.08)
+      envelope.gain.exponentialRampToValueAtTime(0.001, t + duration)
+      envelope.connect(out)
+      for (const [frequency, level] of [[1100, 1], [2300, 0.35]]) {
+        const filter = ctx.createBiquadFilter()
+        filter.type = 'bandpass'
+        filter.frequency.value = frequency
+        filter.Q.value = 2.1
+        const gain = ctx.createGain()
+        gain.gain.value = level
+        voice.connect(filter).connect(gain).connect(envelope)
+      }
+      const vibrato = ctx.createOscillator()
+      vibrato.frequency.value = 6
+      const depth = ctx.createGain()
+      depth.gain.value = 14
+      vibrato.connect(depth).connect(voice.frequency)
+      voice.start(t)
+      vibrato.start(t)
+      voice.stop(t + duration + 0.03)
+      vibrato.stop(t + duration + 0.03)
+    }
+  }
+
   private noiseCache = new Map<number, AudioBuffer>()
 
   private noise(seconds: number) {

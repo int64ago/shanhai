@@ -1,0 +1,8 @@
+{
+  "id": "taotie-hand-v1",
+  "beast": "taotie",
+  "budget": 6,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE isolated humanlike clawed HAND lying flat palm facing DOWN, five distinct fingers including one shorter thumb, elongated strong human fingers with pointed dark fingernails, warm muted umber tan leathery skin, short narrow wrist stump behind palm, fingers extend forward horizontally together in relaxed weight bearing pose, human hand anatomy, no arm, no hoof, no animal paw, no other objects, no pedestal",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

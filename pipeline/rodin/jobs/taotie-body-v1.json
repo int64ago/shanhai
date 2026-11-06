@@ -1,0 +1,8 @@
+{
+  "id": "taotie-body-v1",
+  "beast": "taotie",
+  "budget": 3,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "Paoxiao also called Taotie from Shan Hai Jing, quadruped mythical beast with robust GOAT BODY, warm muted umber brown coarse short wool, exactly FOUR separate sturdy standing legs and four humanlike clawed HANDS as feet, one broad dignified HUMAN FACE with human nose and mouth, two short tiger fang teeth visible beside mouth, upper face has smooth continuous skin with NO EYES and NO EYEBALLS, eyes will be attached separately under armpits, two natural curling ram horns, short native goat tail, level horizontal back, all four hands on ground, neutral standing pose, open clear space under front shoulders for separate eye attachments, no extra eyes anywhere, no wings, no armor, no accessories, no base, full body",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

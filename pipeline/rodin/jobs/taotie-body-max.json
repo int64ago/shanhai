@@ -1,0 +1,9 @@
+{
+  "id": "taotie-body-max",
+  "beast": "taotie",
+  "budget": 6,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Preserve reference headless goat torso for modular mythical beast, sturdy warm umber brown sheep body, level back, FOUR separate sturdy legs ending in flat ankle stumps for separate hand feet, large smooth slanted neck stump at front, native short goat tail, NO HEAD NO HORNS NO EYES NO HOOVES NO FEET, no wings no armor no accessories no base",
+  "images": ["concept/taotie/view_34.png", "concept/taotie/view_side.png", "concept/taotie/view_front.png", "concept/taotie/view_back.png"],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000 }
+}
