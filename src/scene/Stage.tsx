@@ -19,6 +19,7 @@ import { Bifang } from '../beasts/bifang/Bifang'
 import { Lushu } from '../beasts/lushu/Lushu'
 import { Fuzhu } from '../beasts/fuzhu/Fuzhu'
 import { Dangkang } from '../beasts/dangkang/Dangkang'
+import { Zheng } from '../beasts/zheng/Zheng'
 import { CameraRig } from './CameraRig'
 
 export function Stage() {
@@ -58,6 +59,8 @@ export function Stage() {
           <Fuzhu />
         ) : selected === 'dangkang' ? (
           <Dangkang />
+        ) : selected === 'zheng' ? (
+          <Zheng />
         ) : (
           <PlaceholderBeast />
         )}

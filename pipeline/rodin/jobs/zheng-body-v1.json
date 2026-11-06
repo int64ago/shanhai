@@ -1,0 +1,8 @@
+{
+  "id": "zheng-body-v1",
+  "beast": "zheng",
+  "budget": 5,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "Zheng mythical beast from Shan Hai Jing, athletic red leopard with exactly ONE short dark jade horn centered on forehead, one leopard head, cinnabar rust red short fur with dark leopard rosette spots, realistic feline anatomy, long horizontal torso, standing tall on FOUR separate straight legs with four feline paws on ground, neutral standing pose, TAIL REMOVED only tiny rump stump, no long tail, no wings, no armor, full body, no pedestal",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

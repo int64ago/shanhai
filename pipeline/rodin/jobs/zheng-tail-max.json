@@ -1,0 +1,9 @@
+{
+  "id": "zheng-tail-max",
+  "beast": "zheng",
+  "budget": 5,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "One isolated long slender leopard tail, preserve reference proportions and cinnabar red fur with dark leopard spots, cylindrical round cross-section, straight longitudinal axis, thicker narrow root tapering gently to a softly rounded tip, short smooth feline fur, no body, no legs, no base, no broad flat surfaces",
+  "images": ["concept/zheng-tail/view_34.png", "concept/zheng-tail/view_side.png", "concept/zheng-tail/view_front.png", "concept/zheng-tail/view_back.png"],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000 }
+}

@@ -659,6 +659,44 @@ class AudioEngine {
     }
   }
 
+  /** 狰「其音如击石」：石块短击与不成整数比的石磬余振，节奏为交互演绎。 */
+  zhengCall(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const out = this.panner(pan)
+    out.connect(this.sfx)
+
+    for (const [offset, pitch, strength] of [[0, 740, 1], [0.3, 610, 0.78], [0.72, 880, 0.9]]) {
+      const t = ctx.currentTime + offset
+      for (const [ratio, level, decay] of [[1, 0.2, 0.85], [1.47, 0.1, 0.52], [2.09, 0.05, 0.28], [2.71, 0.025, 0.16]]) {
+        const tone = ctx.createOscillator()
+        tone.type = 'sine'
+        tone.frequency.setValueAtTime(pitch * ratio * 1.015, t)
+        tone.frequency.exponentialRampToValueAtTime(pitch * ratio, t + 0.025)
+        const gain = ctx.createGain()
+        gain.gain.setValueAtTime(0, t)
+        gain.gain.linearRampToValueAtTime(level * strength, t + 0.003)
+        gain.gain.exponentialRampToValueAtTime(0.0005, t + decay)
+        tone.connect(gain).connect(out)
+        tone.start(t)
+        tone.stop(t + decay + 0.03)
+      }
+
+      const impact = ctx.createBufferSource()
+      impact.buffer = this.noise(0.065)
+      const filter = ctx.createBiquadFilter()
+      filter.type = 'bandpass'
+      filter.frequency.value = 2400
+      filter.Q.value = 0.8
+      const gain = ctx.createGain()
+      gain.gain.setValueAtTime(0, t)
+      gain.gain.linearRampToValueAtTime(0.12 * strength, t + 0.002)
+      gain.gain.exponentialRampToValueAtTime(0.0005, t + 0.06)
+      impact.connect(filter).connect(gain).connect(out)
+      impact.start(t)
+    }
+  }
+
   private noiseCache = new Map<number, AudioBuffer>()
 
   private noise(seconds: number) {

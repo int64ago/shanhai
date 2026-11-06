@@ -1,0 +1,8 @@
+{
+  "id": "zheng-tail-v1",
+  "beast": "zheng",
+  "budget": 5,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One isolated straight leopard tail, elongated cylindrical feline tail about 12 times longer than its thickness, horizontal straight pose along its long axis, narrow attachment root at left end and softly rounded tip at right end, short cinnabar red fur with dark leopard spots and dark rings near tip, slender smooth cat tail not fluffy fox tail, no body, no legs, no head, no base, no accessories",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

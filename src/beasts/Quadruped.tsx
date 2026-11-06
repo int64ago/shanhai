@@ -18,11 +18,15 @@ interface Props {
   /** 原文规定的尾数；0 表示保留模型原生尾。 */
   tailCount?: number
   tailColor?: string
+  tailUrl?: string
+  /** 尾部截面直径与长度之比。 */
+  tailGirth?: number
+  tailSaturation?: number
   inkBoost?: number
   outline?: number
   outlineDepthBias?: number
-  /** 无外挂尾时也可在兽身坐标内呈现神通；默认仍用尾尖灵火。 */
-  specialEffect?: ComponentType<QuadrupedEffectProps>
+  /** 无外挂尾时也可呈现神通；默认尾尖灵火，null 表示仅动作与鸣声。 */
+  specialEffect?: ComponentType<QuadrupedEffectProps> | null
   onCall: (pan: number) => void
 }
 
@@ -31,9 +35,9 @@ const SPEED = 0.3
 const SPECIAL_SECONDS = 4.6
 
 /** 四足兽共用步态与外挂尾，异相数量、设色和鸣声由各兽明确配置。 */
-export function Quadruped({ id, tailCount = 0, tailColor = '#b7492b', inkBoost = 0, outline = 0.0055, outlineDepthBias, specialEffect: SpecialEffect, onCall }: Props) {
+export function Quadruped({ id, tailCount = 0, tailColor = '#b7492b', tailUrl = '/models/jiuweihu/tail.glb', tailGirth, tailSaturation = 0.25, inkBoost = 0, outline = 0.0055, outlineDepthBias, specialEffect: SpecialEffect, onCall }: Props) {
   const body = useGLTF(`/models/${id}/body.glb`)
-  const tailSource = useGLTF(tailCount > 0 ? '/models/jiuweihu/tail.glb' : `/models/${id}/body.glb`)
+  const tailSource = useGLTF(tailCount > 0 ? tailUrl : `/models/${id}/body.glb`)
   const action = useApp((s) => s.action)
   const setAction = useApp((s) => s.setAction)
   const camera = useThree((s) => s.camera)
@@ -66,10 +70,10 @@ export function Quadruped({ id, tailCount = 0, tailColor = '#b7492b', inkBoost =
       tailSource.scene.updateMatrixWorld(true)
       tailSource.scene.traverse((o) => { if (!source && o instanceof Mesh) source = o })
       if (!source) throw new Error('缺少尾巴母件网格')
-      const { geometry, length } = prepareTailGeometry(source, tailCount > 1 ? 0.21 : 0.16)
+      const { geometry, length } = prepareTailGeometry(source, tailGirth ?? (tailCount > 1 ? 0.21 : 0.16))
       const material = createInkMaterial({
         map: (source.material as { map?: Texture }).map ?? null,
-        saturation: 0.25, tailLength: length, tint: tailColor, inkBoost, tipWhite: 0,
+        saturation: tailSaturation, tailLength: length, tint: tailColor, inkBoost, tipWhite: 0,
       })
       for (let i = 0; i < tailCount; i++) {
         const tail = createTail(geometry, material, length)
@@ -79,7 +83,7 @@ export function Quadruped({ id, tailCount = 0, tailColor = '#b7492b', inkBoost =
       }
     }
     return { scene, mixer, clips, attach, holder, tails, emitters: tails.map((t) => t.tip) }
-  }, [body, tailSource, id, tailCount, tailColor, inkBoost, outline, outlineDepthBias])
+  }, [body, tailSource, id, tailCount, tailColor, tailGirth, tailSaturation, inkBoost, outline, outlineDepthBias])
 
   useEffect(() => {
     if (rig.tails.length) rig.attach?.add(rig.holder)
@@ -153,6 +157,6 @@ export function Quadruped({ id, tailCount = 0, tailColor = '#b7492b', inkBoost =
       <primitive object={rig.scene} />
       {SpecialEffect && <SpecialEffect intensity={intensity} />}
     </group>
-    {!SpecialEffect && rig.emitters.length > 0 && <FoxFire emitters={rig.emitters} intensity={intensity} coreColor="#e9c488" edgeColor="#ad6632" />}
+    {SpecialEffect === undefined && rig.emitters.length > 0 && <FoxFire emitters={rig.emitters} intensity={intensity} coreColor="#e9c488" edgeColor="#ad6632" />}
   </>
 }

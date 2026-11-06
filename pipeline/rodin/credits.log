@@ -23,3 +23,7 @@
 {"time":"2026-11-01T10:17:57.682Z","beast":"fuzhu","job":"fuzhu-body-max","hash":"8ba8ef8631118fb0","tier":"Gen-2.5-Extreme-High","uuid":"7b95334a-3520-475f-8134-301186bc8405","consumed":1}
 {"time":"2026-11-01T14:02:34.658Z","beast":"dangkang","job":"dangkang-body-v1","hash":"0df487f020c553d4","tier":"Gen-2.5-Medium","uuid":"0faf0111-67ea-4e9f-a27c-cb24161400cb","consumed":0.5}
 {"time":"2026-11-01T14:11:39.848Z","beast":"dangkang","job":"dangkang-body-max","hash":"11240d3eabcb56a0","tier":"Gen-2.5-Extreme-High","uuid":"2498dcb5-bd82-4d1c-abfa-33691eac8c39","consumed":1}
+{"time":"2026-11-06T13:44:59.948Z","beast":"zheng","job":"zheng-body-v1","hash":"046c8ee7b77d1ee0","tier":"Gen-2.5-Medium","uuid":"f96aea20-0b1a-4f9c-ab21-0bbba6e3245b","consumed":0.5}
+{"time":"2026-11-06T13:45:40.802Z","beast":"zheng","job":"zheng-tail-v1","hash":"c03f8d1e0f3761ec","tier":"Gen-2.5-Medium","uuid":"782f0e5a-8199-4f4b-98ed-270799d26720","consumed":0.5}
+{"time":"2026-11-06T13:56:24.859Z","beast":"zheng","job":"zheng-body-max","hash":"f991afa5f2f6257c","tier":"Gen-2.5-Extreme-High","uuid":"9cb3d641-b308-4a68-98c9-2c6b23a210a3","consumed":1}
+{"time":"2026-11-06T13:57:50.641Z","beast":"zheng","job":"zheng-tail-max","hash":"27e337a565474394","tier":"Gen-2.5-Extreme-High","uuid":"5df9c54f-7b07-4a10-9fa9-1c9639bcd23a","consumed":1}
