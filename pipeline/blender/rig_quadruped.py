@@ -28,6 +28,8 @@ def parse_args():
     p.add_argument('input')
     p.add_argument('output')
     p.add_argument('--preview')
+    p.add_argument('--rigid-part', action='append', default=[], metavar='MATERIAL_PREFIX:BONE',
+                   help='Rigidly bind matching material vertices to a bone; repeatable')
     return p.parse_args(argv)
 
 
@@ -447,6 +449,34 @@ def render_preview(obj, arm, path, lm):
     bpy.data.objects.remove(cam)
 
 
+def bind_rigid_parts(obj, arm, specs):
+    """Override automatic weights for material-selected rigid appendages."""
+    for spec in specs:
+        prefix, separator, bone_name = spec.partition(':')
+        if not separator or not prefix or not bone_name:
+            raise ValueError(f'Expected MATERIAL_PREFIX:BONE, got {spec!r}')
+        if bone_name not in arm.data.bones:
+            raise ValueError(f'Rigid part {spec!r}: bone {bone_name!r} does not exist')
+        slots = {
+            i for i, material in enumerate(obj.data.materials)
+            if material and material.name.startswith(prefix)
+        }
+        indices = sorted({
+            vertex for polygon in obj.data.polygons
+            if polygon.material_index in slots
+            for vertex in polygon.vertices
+        })
+        if not indices:
+            raise ValueError(f'Rigid part {spec!r}: no matching polygon vertices')
+        for group in obj.vertex_groups:
+            group.remove(indices)
+        target = obj.vertex_groups.get(bone_name)
+        if target is None:
+            target = obj.vertex_groups.new(name=bone_name)
+        target.add(indices, 1.0, 'REPLACE')
+        print(f'SKIN rigid part {prefix!r}: {len(indices)} vertices -> {bone_name}')
+
+
 def main():
     args = parse_args()
     obj = load(args.input)
@@ -456,6 +486,7 @@ def main():
     print('LEGS', {k: tuple(round(c, 3) for c in v) for k, v in lm['legs'].items()})
     arm = build_armature(lm)
     skin(obj, arm)
+    bind_rigid_parts(obj, arm, args.rigid_part)
     anim_idle(arm, lm)
     anim_walk(arm, lm)
     anim_alert(arm, lm)

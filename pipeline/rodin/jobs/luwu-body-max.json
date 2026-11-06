@@ -1,0 +1,9 @@
+{
+  "id": "luwu-body-max",
+  "beast": "luwu",
+  "budget": 6,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Preserve reference HEADLESS TAILLESS orange ochre tiger torso with dark stripes, powerful horizontal body level back, FOUR separate sturdy weight-bearing feline legs and FOUR tiger paws with pointed claws, clean compact front neck stump for separate human head, smooth rump with NO native tail, retain exact four-leg standing anatomy, NO head NO face NO tail NO human hands NO hooves NO horns NO wings NO clothes NO pedestal",
+  "images": ["concept/luwu/view_34.png", "concept/luwu/view_side.png", "concept/luwu/view_front.png", "concept/luwu/view_back.png"],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000 }
+}

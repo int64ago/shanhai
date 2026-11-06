@@ -1,0 +1,8 @@
+{
+  "id": "luwu-tail-v1",
+  "beast": "luwu",
+  "budget": 6,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE isolated long slender TIGER TAIL, straight horizontal rod-like cylindrical tail about TWELVE times longer than thickness, round cross section not a ribbon, orange ochre short fur with dark tiger rings and a dark rounded tip, thick attachment root at one end gradually tapering to small rounded distal tip, length axis horizontal left to right, no curls no branches no body no legs no base no fox plume no flat slab, isolated single appendage",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

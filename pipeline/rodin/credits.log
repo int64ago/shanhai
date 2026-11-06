@@ -37,3 +37,9 @@
 {"time":"2026-11-06T14:39:06.522Z","beast":"taotie","job":"taotie-head-max","hash":"b5d507240555ee19","tier":"Gen-2.5-Extreme-High","uuid":"c6bde2a1-759f-43f8-957f-1d37ff204522","consumed":1}
 {"time":"2026-11-06T14:40:47.361Z","beast":"taotie","job":"taotie-body-max","hash":"329c02fe71982b2c","tier":"Gen-2.5-Extreme-High","uuid":"6105bc16-e06d-4419-a096-db4cccf5e44b","consumed":1}
 {"time":"2026-11-06T14:45:54.959Z","beast":"taotie","job":"taotie-hand-max","hash":"306ac5ba1d47895e","tier":"Gen-2.5-Extreme-High","uuid":"2ef3d1c7-7842-4024-ae4b-0d454638e5c5","consumed":1}
+{"time":"2026-11-06T15:19:47.192Z","beast":"luwu","job":"luwu-body-v1","hash":"5fa447fa1c41e500","tier":"Gen-2.5-Medium","uuid":"2e64ab27-d9c4-40c3-be9b-c182faca40d0","consumed":0.5}
+{"time":"2026-11-06T15:20:00.739Z","beast":"luwu","job":"luwu-head-v1","hash":"684452c15a8d8de5","tier":"Gen-2.5-Medium","uuid":"544f71c7-492a-47bf-a312-09931432064f","consumed":0.5}
+{"time":"2026-11-06T15:20:13.401Z","beast":"luwu","job":"luwu-tail-v1","hash":"5090ed6ac2f899df","tier":"Gen-2.5-Medium","uuid":"8a8a3dcd-2bd3-42fa-9d94-4c9eafe9eb73","consumed":0.5}
+{"time":"2026-11-06T15:24:19.884Z","beast":"luwu","job":"luwu-head-max","hash":"f726eaf257c0373c","tier":"Gen-2.5-Extreme-High","uuid":"9e3f8c0b-64d5-44bb-bb6d-665ce47866aa","consumed":1}
+{"time":"2026-11-06T15:30:14.875Z","beast":"luwu","job":"luwu-tail-max","hash":"d040b88e80a54f80","tier":"Gen-2.5-Extreme-High","uuid":"f1eff84a-4efa-4a2e-8234-01121cda35f2","consumed":1}
+{"time":"2026-11-06T15:31:20.719Z","beast":"luwu","job":"luwu-body-max","hash":"ef6baeebb88b8371","tier":"Gen-2.5-Extreme-High","uuid":"ea4008ef-025b-4aaf-b89e-0998b4b9cf8d","consumed":1}

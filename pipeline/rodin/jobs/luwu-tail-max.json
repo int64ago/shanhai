@@ -1,0 +1,9 @@
+{
+  "id": "luwu-tail-max",
+  "beast": "luwu",
+  "budget": 6,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Preserve reference SINGLE long slender straight tiger tail, cylindrical round cross section, about TWELVE times longer than thickness, orange ochre short fur with dark tiger rings and dark rounded tip, thicker root tapering gradually to tip, no branches no curling no fluffy fox plume no body no legs no flat ribbon no slab no base",
+  "images": ["concept/luwu-tail/view_34.png", "concept/luwu-tail/view_side.png", "concept/luwu-tail/view_front.png", "concept/luwu-tail/view_back.png"],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000 }
+}

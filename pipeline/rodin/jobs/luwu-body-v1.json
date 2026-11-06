@@ -1,0 +1,8 @@
+{
+  "id": "luwu-body-v1",
+  "beast": "luwu",
+  "budget": 6,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE headless tailless tiger body for a modular Chinese mythical guardian, powerful long horizontal tiger torso, orange ochre fur with dark tiger stripes and pale belly, standing tall on FOUR separate straight weight-bearing feline legs, FOUR large tiger paws with visible pointed claws resting flat on ground, level back and raised hips, clean short broad neck stump at front for a separately attached human head, smooth rump with tail completely REMOVED, NO HEAD NO FACE NO TAIL NO human hands NO hooves NO horns NO wings NO armor NO base, neutral side-facing quadruped stance",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

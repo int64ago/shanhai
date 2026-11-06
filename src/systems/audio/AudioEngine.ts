@@ -754,6 +754,11 @@ class AudioEngine {
     rasp.stop(t + duration + 0.03)
   }
 
+  /** 《西次三经》未记陆吾鸣声；据「虎身」沿用合成虎啸，属于交互艺术补足。 */
+  luwuCall(pan = 0) {
+    this.qiongqiCall(pan)
+  }
+
   /** 狍鸮「其音如婴儿」：滑音与双共振峰合成啼声，不使用真人录音。 */
   taotieCall(pan = 0) {
     const ctx = this.ctx

@@ -1,0 +1,8 @@
+{
+  "id": "luwu-head-v1",
+  "beast": "luwu",
+  "budget": 6,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE isolated HUMAN HEAD and short thick human neck stump for an ancient Chinese mythological mountain guardian, anatomically entirely human face, TWO open dark human eyes, human nose bridge nostrils lips chin and ears, calm solemn adult expression, warm tan skin, swept-back black hair, short dark beard, closed human mouth, upright head facing straight forward, cut flat at bottom of SHORT neck, NO BODY NO SHOULDERS NO CLOTHES NO pedestal NO animal muzzle NO whisker pads NO feline ears NO fangs NO crown NO horns",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

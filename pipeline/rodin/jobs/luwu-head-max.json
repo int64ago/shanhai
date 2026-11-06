@@ -1,0 +1,9 @@
+{
+  "id": "luwu-head-max",
+  "beast": "luwu",
+  "budget": 6,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Preserve reference ONE isolated anatomically human head and SHORT neck stump, two open dark human eyes, human nose lips chin and ears, swept-back black hair and short beard, warm tan skin, solemn calm expression, smooth compact neck cut flat below, NO shoulders NO body NO clothes NO collar NO base NO animal muzzle NO feline ears NO fangs NO horns NO crown",
+  "images": ["concept/luwu-head/view_34.png", "concept/luwu-head/view_side.png", "concept/luwu-head/view_front.png", "concept/luwu-head/view_back.png"],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000 }
+}

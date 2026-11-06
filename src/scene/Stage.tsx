@@ -22,6 +22,7 @@ import { Dangkang } from '../beasts/dangkang/Dangkang'
 import { Zheng } from '../beasts/zheng/Zheng'
 import { Qiongqi } from '../beasts/qiongqi/Qiongqi'
 import { Taotie } from '../beasts/taotie/Taotie'
+import { Luwu } from '../beasts/luwu/Luwu'
 import { CameraRig } from './CameraRig'
 
 export function Stage() {
@@ -67,6 +68,8 @@ export function Stage() {
           <Qiongqi />
         ) : selected === 'taotie' ? (
           <Taotie />
+        ) : selected === 'luwu' ? (
+          <Luwu />
         ) : (
           <PlaceholderBeast />
         )}
