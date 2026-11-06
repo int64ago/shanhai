@@ -1,0 +1,9 @@
+{
+  "id": "mengji-body-max",
+  "beast": "mengji",
+  "budget": 6,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Mengji from Shan Hai Jing, preserve reference leopard anatomy, plain pure white short fur with no spots on the body, compact black ink ornamental pattern on the forehead only, four separate standing legs and feline paws, level back, smooth rounded rump, NO TAIL, no horns, no wings, no accessories",
+  "images": ["concept/mengji/view_34.png", "concept/mengji/view_side.png", "concept/mengji/view_front.png", "concept/mengji/view_back.png"],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000 }
+}

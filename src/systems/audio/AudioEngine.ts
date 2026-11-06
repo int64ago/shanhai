@@ -746,6 +746,56 @@ class AudioEngine {
     }
   }
 
+  /**
+   * 孟极「其鸣自呼」：两音节豹类喉音，音高走势按今音 mèng（降）jí（升）模拟，属听觉演绎。
+   * 延后 1.9 秒发声，对应 alert 动作中伏地之后昂首的时刻。
+   */
+  mengjiCall(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const out = this.panner(pan)
+    out.connect(this.sfx)
+    const syllables = [
+      { offset: 1.9, duration: 0.5, from: 250, to: 150, formants: [[420, 1], [1150, 0.35]] },
+      { offset: 2.5, duration: 0.46, from: 205, to: 300, formants: [[340, 0.75], [2250, 0.55]] },
+    ]
+
+    for (const { offset, duration, from, to, formants } of syllables) {
+      const t = ctx.currentTime + offset
+      const voice = ctx.createOscillator()
+      voice.type = 'sawtooth'
+      voice.frequency.setValueAtTime(from, t)
+      voice.frequency.exponentialRampToValueAtTime(to, t + duration)
+      const envelope = ctx.createGain()
+      envelope.gain.setValueAtTime(0, t)
+      envelope.gain.linearRampToValueAtTime(0.3, t + 0.05)
+      envelope.gain.setValueAtTime(0.3, t + duration * 0.55)
+      envelope.gain.exponentialRampToValueAtTime(0.001, t + duration)
+      for (const [frequency, level] of formants) {
+        const filter = ctx.createBiquadFilter()
+        filter.type = 'bandpass'
+        filter.frequency.value = frequency
+        filter.Q.value = 5
+        const gain = ctx.createGain()
+        gain.gain.value = level
+        voice.connect(filter).connect(gain).connect(envelope)
+      }
+      // 喉间气声，让两音节偏兽吼而非人声。
+      const breath = ctx.createBufferSource()
+      breath.buffer = this.noise(duration)
+      const lowpass = ctx.createBiquadFilter()
+      lowpass.type = 'lowpass'
+      lowpass.frequency.value = 1300
+      const breathGain = ctx.createGain()
+      breathGain.gain.value = 0.2
+      breath.connect(lowpass).connect(breathGain).connect(envelope)
+      envelope.connect(out)
+      voice.start(t)
+      voice.stop(t + duration + 0.03)
+      breath.start(t)
+    }
+  }
+
   /** 《海内北经》未记穷奇鸣声；低沉虎啸与气声为「状如虎」的交互艺术补足。 */
   qiongqiCall(pan = 0) {
     const ctx = this.ctx

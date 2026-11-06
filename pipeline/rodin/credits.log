@@ -46,3 +46,5 @@
 {"time":"2026-11-06T16:21:31.657Z","beast":"tiangou","job":"tiangou-body-v1","hash":"f821ad7eb323a18c","tier":"Gen-2.5-Medium","uuid":"5c0d710d-24df-450c-bf9e-ef8124fa8f9d","consumed":0.5}
 {"time":"2026-11-06T16:23:34.722Z","beast":"tiangou","job":"tiangou-body-v2","hash":"95fc870469fa3af2","tier":"Gen-2.5-Medium","uuid":"39bcd25b-ec2e-4d34-9ba4-eefb3c76cb46","consumed":0.5}
 {"time":"2026-11-06T16:29:06.371Z","beast":"tiangou","job":"tiangou-body-max","hash":"b9b1e0777714cada","tier":"Gen-2.5-Extreme-High","uuid":"908216db-194e-4a75-96f1-27767f1c464e","consumed":1}
+{"time":"2026-11-06T16:22:02.069Z","beast":"mengji","job":"mengji-body-v1","hash":"977f05e97d51caaa","tier":"Gen-2.5-Medium","uuid":"71953770-a64a-42bd-a2c3-0eedeb293621","consumed":0.5}
+{"time":"2026-11-06T16:26:00.070Z","beast":"mengji","job":"mengji-body-max","hash":"e54275b5c7199ef6","tier":"Gen-2.5-Extreme-High","uuid":"f8d9587a-6027-4da2-920c-95c4f4cad63f","consumed":1}

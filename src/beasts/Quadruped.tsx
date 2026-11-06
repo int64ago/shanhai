@@ -22,6 +22,8 @@ interface Props {
   /** 尾部截面直径与长度之比。 */
   tailGirth?: number
   tailSaturation?: number
+  /** 神通时的尾部仰角；伏地型动作可用低平姿态。 */
+  specialTailElevation?: number
   inkBoost?: number
   outline?: number
   outlineDepthBias?: number
@@ -39,7 +41,7 @@ const SPEED = 0.3
 const SPECIAL_SECONDS = 4.6
 
 /** 四足兽共用步态与外挂尾，异相数量、设色和鸣声由各兽明确配置。 */
-export function Quadruped({ id, tailCount = 0, tailColor = '#b7492b', tailUrl = '/models/jiuweihu/tail.glb', tailGirth, tailSaturation = 0.25, inkBoost = 0, outline = 0.0055, outlineDepthBias, specialEffect: SpecialEffect, appendages: Appendages, initialHeading = Math.PI / 2 - 0.22, onCall }: Props) {
+export function Quadruped({ id, tailCount = 0, tailColor = '#b7492b', tailUrl = '/models/jiuweihu/tail.glb', tailGirth, tailSaturation = 0.25, specialTailElevation = 0.85, inkBoost = 0, outline = 0.0055, outlineDepthBias, specialEffect: SpecialEffect, appendages: Appendages, initialHeading = Math.PI / 2 - 0.22, onCall }: Props) {
   const body = useGLTF(`/models/${id}/body.glb`)
   const tailSource = useGLTF(tailCount > 0 ? tailUrl : `/models/${id}/body.glb`)
   const action = useApp((s) => s.action)
@@ -140,7 +142,7 @@ export function Quadruped({ id, tailCount = 0, tailColor = '#b7492b', tailUrl = 
     if (action === 'special' && t - specialStart.current > SPECIAL_SECONDS) setAction('idle')
     rig.tails.forEach((tail, i) => {
       const spread = tailCount > 1 ? (i / (tailCount - 1) - 0.5) * 2.4 : Math.sin(t) * 0.16
-      const elevation = action === 'special' ? 0.85 : tailCount > 1 ? 0.55 : -0.28
+      const elevation = action === 'special' ? specialTailElevation : tailCount > 1 ? 0.55 : -0.28
       aimTail(tail.pivot, elevation + (i % 2) * 0.08, spread)
       tail.bones.forEach((bone, j) => {
         const k = j / TAIL_BONES

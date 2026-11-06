@@ -1,0 +1,8 @@
+{
+  "id": "mengji-body-v1",
+  "beast": "mengji",
+  "budget": 6,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "Mengji mythical beast from Shan Hai Jing, lean athletic leopard, realistic feline anatomy, one leopard head with rounded ears, pure plain white short fur over the whole body with NO spots and NO rosettes on the body, only a compact dark ink-black ornamental pattern painted on the forehead between the eyes, long horizontal torso, level back, standing tall on FOUR separate straight legs with four feline paws on ground, neutral standing pose, TAIL REMOVED only tiny rump stump, no long tail, no horns, no wings, no armor, full body, no pedestal",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}
