@@ -28,6 +28,8 @@ def parse_args():
     p.add_argument('input')
     p.add_argument('output')
     p.add_argument('--preview')
+    p.add_argument('--headless', action='store_true',
+                   help='Omit native neck/head bones for a headless torso')
     p.add_argument('--rigid-part', action='append', default=[], metavar='MATERIAL_PREFIX:BONE',
                    help='Rigidly bind matching material vertices to a bone; repeatable')
     return p.parse_args(argv)
@@ -110,7 +112,7 @@ def landmarks(obj):
 
 # ---------------------------------------------------------------- 骨架
 
-def build_armature(lm):
+def build_armature(lm, headless=False):
     arm_data = bpy.data.armatures.new('rig')
     arm = bpy.data.objects.new('rig', arm_data)
     bpy.context.scene.collection.objects.link(arm)
@@ -139,9 +141,10 @@ def build_armature(lm):
     bone('spine2', s2, chest, 'spine1')
     neck_base = chest + Vector((0, 0, (lm['chest_top'] - chest.z) * 0.5))
     bone('chest', chest, neck_base, 'spine2')
-    head_base = lm['head'] + Vector((0, (lm['head'].y - lm['snout'].y) * 0.6, 0))
-    bone('neck', neck_base, head_base, 'chest')
-    bone('head', head_base, lm['snout'], 'neck')
+    if not headless:
+        head_base = lm['head'] + Vector((0, (lm['head'].y - lm['snout'].y) * 0.6, 0))
+        bone('neck', neck_base, head_base, 'chest')
+        bone('head', head_base, lm['snout'], 'neck')
     tail_dir = (lm['rear'] - hips).normalized()
     bone('tail_attach', lm['rear'], lm['rear'] + tail_dir * h * 0.15, 'hips', deform=False)
 
@@ -339,12 +342,15 @@ def anim_idle(arm, lm):
     for f in range(0, n + 1, 6):
         t = f / n * 2 * math.pi
         breath = math.sin(t * 2)
-        key_pose(arm, f, {
+        pose = {
             'spine1': world_rot(arm.pose.bones['spine1'], X, 0.012 * breath),
             'chest': world_rot(arm.pose.bones['chest'], X, -0.02 * breath),
-            'neck': world_rot(arm.pose.bones['neck'], Z, 0.12 * math.sin(t)) @ world_rot(arm.pose.bones['neck'], X, 0.03 * math.sin(t * 2 + 1)),
-            'head': world_rot(arm.pose.bones['head'], Y, 0.05 * math.sin(t + 0.6)),
-        })
+        }
+        if 'neck' in arm.pose.bones:
+            pose['neck'] = world_rot(arm.pose.bones['neck'], Z, 0.12 * math.sin(t)) @ world_rot(arm.pose.bones['neck'], X, 0.03 * math.sin(t * 2 + 1))
+        if 'head' in arm.pose.bones:
+            pose['head'] = world_rot(arm.pose.bones['head'], Y, 0.05 * math.sin(t + 0.6))
+        key_pose(arm, f, pose)
         key_loc(arm, f, 'hips', Vector((0, 0.003 * lm['height'] * breath, 0)))
     finish_action(arm, action)
 
@@ -390,7 +396,8 @@ def anim_walk(arm, lm):
         sway = math.sin(t * 2 * math.pi)
         pose['spine1'] = world_rot(arm.pose.bones['spine1'], Z, 0.04 * sway)
         pose['spine2'] = world_rot(arm.pose.bones['spine2'], Z, -0.03 * sway)
-        pose['neck'] = world_rot(arm.pose.bones['neck'], X, 0.03 * bob) @ world_rot(arm.pose.bones['neck'], Z, -0.02 * sway)
+        if 'neck' in arm.pose.bones:
+            pose['neck'] = world_rot(arm.pose.bones['neck'], X, 0.03 * bob) @ world_rot(arm.pose.bones['neck'], Z, -0.02 * sway)
         key_pose(arm, f, pose)
         key_loc(arm, f, 'hips', Vector((0, 0.006 * lm['height'] * bob, 0)))
     finish_action(arm, action)
@@ -402,14 +409,17 @@ def anim_alert(arm, lm):
     n = 2 * FPS
     for f in range(0, n + 1, 3):
         t = f / n * 2 * math.pi
-        key_pose(arm, f, {
+        pose = {
             'spine2': world_rot(arm.pose.bones['spine2'], X, 0.06),
             'chest': world_rot(arm.pose.bones['chest'], X, -0.18),
-            'neck': world_rot(arm.pose.bones['neck'], X, -0.22) @ world_rot(arm.pose.bones['neck'], Z, 0.25 * math.sin(t)),
-            'head': world_rot(arm.pose.bones['head'], X, 0.15),
-            'front_l_upper': world_rot(arm.pose.bones['front_l_upper'], X, -0.08),
-            'front_r_upper': world_rot(arm.pose.bones['front_r_upper'], X, -0.08),
-        })
+        }
+        if 'neck' in arm.pose.bones:
+            pose['neck'] = world_rot(arm.pose.bones['neck'], X, -0.22) @ world_rot(arm.pose.bones['neck'], Z, 0.25 * math.sin(t))
+        if 'head' in arm.pose.bones:
+            pose['head'] = world_rot(arm.pose.bones['head'], X, 0.15)
+        pose['front_l_upper'] = world_rot(arm.pose.bones['front_l_upper'], X, -0.08)
+        pose['front_r_upper'] = world_rot(arm.pose.bones['front_r_upper'], X, -0.08)
+        key_pose(arm, f, pose)
     finish_action(arm, action)
 
 
@@ -484,7 +494,7 @@ def main():
     lm = landmarks(obj)
     print('LANDMARKS', {k: (tuple(round(c, 3) for c in v) if isinstance(v, Vector) else v) for k, v in lm.items() if k != 'legs'})
     print('LEGS', {k: tuple(round(c, 3) for c in v) for k, v in lm['legs'].items()})
-    arm = build_armature(lm)
+    arm = build_armature(lm, headless=args.headless)
     skin(obj, arm)
     bind_rigid_parts(obj, arm, args.rigid_part)
     anim_idle(arm, lm)

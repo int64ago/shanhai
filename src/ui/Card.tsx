@@ -40,7 +40,7 @@ export function Card() {
 
         {content ? (
           content.source.map((s) => (
-            <p className="card-source" key={s.book}>
+            <p className="card-source" key={`${s.book}:${s.text}`}>
               <span className="card-label">原文</span>
               {s.text}
               <cite>——《{s.book}》</cite>

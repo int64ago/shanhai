@@ -29,6 +29,8 @@ interface Props {
   specialEffect?: ComponentType<QuadrupedEffectProps> | null
   /** 可选异体器官，自行在 effect 中挂接到 scene 骨骼并清理。 */
   appendages?: ComponentType<{ scene: Object3D }>
+  /** 初始朝向；+X 作为开明兽东向站姿的场景约定。 */
+  initialHeading?: number
   onCall: (pan: number) => void
 }
 
@@ -37,7 +39,7 @@ const SPEED = 0.3
 const SPECIAL_SECONDS = 4.6
 
 /** 四足兽共用步态与外挂尾，异相数量、设色和鸣声由各兽明确配置。 */
-export function Quadruped({ id, tailCount = 0, tailColor = '#b7492b', tailUrl = '/models/jiuweihu/tail.glb', tailGirth, tailSaturation = 0.25, inkBoost = 0, outline = 0.0055, outlineDepthBias, specialEffect: SpecialEffect, appendages: Appendages, onCall }: Props) {
+export function Quadruped({ id, tailCount = 0, tailColor = '#b7492b', tailUrl = '/models/jiuweihu/tail.glb', tailGirth, tailSaturation = 0.25, inkBoost = 0, outline = 0.0055, outlineDepthBias, specialEffect: SpecialEffect, appendages: Appendages, initialHeading = Math.PI / 2 - 0.22, onCall }: Props) {
   const body = useGLTF(`/models/${id}/body.glb`)
   const tailSource = useGLTF(tailCount > 0 ? tailUrl : `/models/${id}/body.glb`)
   const action = useApp((s) => s.action)
@@ -155,7 +157,7 @@ export function Quadruped({ id, tailCount = 0, tailColor = '#b7492b', tailUrl = 
   })
 
   return <>
-    <group ref={root} position={[0, 0, RADIUS]} rotation-y={Math.PI / 2 - 0.22}>
+    <group ref={root} position={[0, 0, RADIUS]} rotation-y={initialHeading}>
       <primitive object={rig.scene} />
       {Appendages && <Appendages scene={rig.scene} />}
       {SpecialEffect && <SpecialEffect intensity={intensity} />}

@@ -759,6 +759,11 @@ class AudioEngine {
     this.qiongqiCall(pan)
   }
 
+  /** 《海内西经》未记开明兽鸣声；据「类虎」沿用合成虎啸，属于交互艺术补足。 */
+  kaimingCall(pan = 0) {
+    this.qiongqiCall(pan)
+  }
+
   /** 狍鸮「其音如婴儿」：滑音与双共振峰合成啼声，不使用真人录音。 */
   taotieCall(pan = 0) {
     const ctx = this.ctx
