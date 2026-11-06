@@ -1,0 +1,12 @@
+{
+  "id": "tiangou-body-v2",
+  "beast": "tiangou",
+  "budget": 3,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "Tiangou mythical wild cat from Shan Hai Jing, adult wild leopard cat in full standing stance like a walking tiger, NOT sitting, long horizontal body about 1.5 times longer than its height, back perfectly level with rump exactly as high as the shoulders, all FOUR legs long straight and vertical, hind legs fully extended with hips high, four separate cat paws flat on the ground, head held forward at shoulder level on a short neck, one feline head that is entirely pure snow white including face, forehead, ears, and upper neck with no markings on the head, small rounded cat ears, dark eyes, body short fur in warm grey-ochre with small dark brown spots, tail removed, smooth rounded rump with no tail, clean full body, no wings, no horns, no pedestal, no decorations",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

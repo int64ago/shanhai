@@ -659,6 +659,55 @@ class AudioEngine {
     }
   }
 
+  /** 天狗「其音如榴榴」：两声相连的颤音；郭璞注「或作猫猫」，故取近猫鸣的音色，音高与节奏为听觉演绎。 */
+  tiangouCall(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const out = this.panner(pan)
+    out.connect(this.sfx)
+
+    for (const [offset, duration, hz] of [[0, 0.44, 560], [0.5, 0.62, 640]]) {
+      const t = ctx.currentTime + offset
+      const voice = ctx.createOscillator()
+      voice.type = 'sawtooth'
+      voice.frequency.setValueAtTime(hz * 0.8, t)
+      voice.frequency.exponentialRampToValueAtTime(hz, t + duration * 0.3)
+      voice.frequency.exponentialRampToValueAtTime(hz * 0.68, t + duration)
+
+      const envelope = ctx.createGain()
+      envelope.gain.setValueAtTime(0, t)
+      envelope.gain.linearRampToValueAtTime(0.26, t + 0.05)
+      envelope.gain.exponentialRampToValueAtTime(0.001, t + duration)
+
+      // 猫鸣由「i」滑向「u」：两个共振峰随音节下移。
+      for (const [start, end, level] of [[1500, 760, 1], [3200, 1900, 0.4]]) {
+        const formant = ctx.createBiquadFilter()
+        formant.type = 'bandpass'
+        formant.frequency.setValueAtTime(start, t)
+        formant.frequency.exponentialRampToValueAtTime(end, t + duration)
+        formant.Q.value = 3.2
+        const gain = ctx.createGain()
+        gain.gain.value = level
+        voice.connect(formant).connect(gain).connect(envelope)
+      }
+
+      // 「榴」的舌颤：快速振幅调制。
+      const trill = ctx.createGain()
+      trill.gain.value = 0.72
+      const flutter = ctx.createOscillator()
+      flutter.frequency.value = 23
+      const depth = ctx.createGain()
+      depth.gain.value = 0.28
+      flutter.connect(depth).connect(trill.gain)
+      envelope.connect(trill).connect(out)
+
+      voice.start(t)
+      flutter.start(t)
+      voice.stop(t + duration + 0.03)
+      flutter.stop(t + duration + 0.03)
+    }
+  }
+
   /** 狰「其音如击石」：石块短击与不成整数比的石磬余振，节奏为交互演绎。 */
   zhengCall(pan = 0) {
     const ctx = this.ctx

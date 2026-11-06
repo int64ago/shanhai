@@ -20,6 +20,7 @@ import { Lushu } from '../beasts/lushu/Lushu'
 import { Fuzhu } from '../beasts/fuzhu/Fuzhu'
 import { Dangkang } from '../beasts/dangkang/Dangkang'
 import { Zheng } from '../beasts/zheng/Zheng'
+import { Tiangou } from '../beasts/tiangou/Tiangou'
 import { Qiongqi } from '../beasts/qiongqi/Qiongqi'
 import { Taotie } from '../beasts/taotie/Taotie'
 import { Luwu } from '../beasts/luwu/Luwu'
@@ -65,6 +66,8 @@ export function Stage() {
           <Dangkang />
         ) : selected === 'zheng' ? (
           <Zheng />
+        ) : selected === 'tiangou' ? (
+          <Tiangou />
         ) : selected === 'qiongqi' ? (
           <Qiongqi />
         ) : selected === 'taotie' ? (

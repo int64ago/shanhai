@@ -43,3 +43,6 @@
 {"time":"2026-11-06T15:24:19.884Z","beast":"luwu","job":"luwu-head-max","hash":"f726eaf257c0373c","tier":"Gen-2.5-Extreme-High","uuid":"9e3f8c0b-64d5-44bb-bb6d-665ce47866aa","consumed":1}
 {"time":"2026-11-06T15:30:14.875Z","beast":"luwu","job":"luwu-tail-max","hash":"d040b88e80a54f80","tier":"Gen-2.5-Extreme-High","uuid":"f1eff84a-4efa-4a2e-8234-01121cda35f2","consumed":1}
 {"time":"2026-11-06T15:31:20.719Z","beast":"luwu","job":"luwu-body-max","hash":"ef6baeebb88b8371","tier":"Gen-2.5-Extreme-High","uuid":"ea4008ef-025b-4aaf-b89e-0998b4b9cf8d","consumed":1}
+{"time":"2026-11-06T16:21:31.657Z","beast":"tiangou","job":"tiangou-body-v1","hash":"f821ad7eb323a18c","tier":"Gen-2.5-Medium","uuid":"5c0d710d-24df-450c-bf9e-ef8124fa8f9d","consumed":0.5}
+{"time":"2026-11-06T16:23:34.722Z","beast":"tiangou","job":"tiangou-body-v2","hash":"95fc870469fa3af2","tier":"Gen-2.5-Medium","uuid":"39bcd25b-ec2e-4d34-9ba4-eefb3c76cb46","consumed":0.5}
+{"time":"2026-11-06T16:29:06.371Z","beast":"tiangou","job":"tiangou-body-max","hash":"b9b1e0777714cada","tier":"Gen-2.5-Extreme-High","uuid":"908216db-194e-4a75-96f1-27767f1c464e","consumed":1}

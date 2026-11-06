@@ -1,0 +1,18 @@
+{
+  "id": "tiangou-body-max",
+  "beast": "tiangou",
+  "budget": 3,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Tiangou wild cat from Shan Hai Jing, preserve reference anatomy, lean standing leopard cat with level back, one feline head entirely pure white, small cat ears, dark eyes, spotted warm ochre and grey short fur body, four separate straight legs with cat paws flat on ground, smooth rounded rump with no tail, neutral standing pose, no pedestal",
+  "images": [
+    "concept/tiangou/view_34.png",
+    "concept/tiangou/view_side.png",
+    "concept/tiangou/view_front.png",
+    "concept/tiangou/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000
+  }
+}

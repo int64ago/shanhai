@@ -1,0 +1,12 @@
+{
+  "id": "tiangou-body-v1",
+  "beast": "tiangou",
+  "budget": 3,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "Tiangou mythical wild cat from Shan Hai Jing, realistic adult leopard cat, lean agile feline body with short fur in warm grey-ochre with small dark brown spots, the entire head and upper neck pure white with a clear boundary at the neck, small rounded cat ears, dark eyes, one feline head, level back, standing tall on FOUR separate straight legs with four cat paws firmly on ground, neutral symmetric standing pose, tail removed, smooth rounded rump with no tail, clean full body, no wings, no horns, no pedestal, no decorations",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}
