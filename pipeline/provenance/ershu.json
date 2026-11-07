@@ -1,0 +1,133 @@
+{
+  "id": "ershu",
+  "checked": "2026-11-08",
+  "offlineOnly": true,
+  "newGenerationTransactions": [],
+  "newTtsTransactions": [],
+  "acceptanceStatus": "v15 sculpt and runtime visually accepted by coordinator after Read inspection of all 20 focused/full sculpt images and all 16 four-phase moving neck/tail-root closeups. Fresh v15 browser QA passed. v11 is rejected historical evidence only. Worker commit is for independent parent integration; no release or deployment performed.",
+  "sourceVerification": {
+    "rawUrl": "https://zh.wikisource.org/w/index.php?title=山海經/北山經&action=raw",
+    "cachedRawPath": "/tmp/shanhai-north-source-7geYiv/beishan.wiki",
+    "rawBytes": 16537,
+    "rawSha256": "20f78c8db2e53c56c8fab20f26acedd4bd409a9c5ee5e92f74c76c991726ec09",
+    "chapter": "山海經·北山經·北山經之首",
+    "quote": "又北二百里，曰丹熏之山，其上多樗柏，其草多韭䪥，多丹雘。熏水出焉，而西流注于棠水。有獸焉，其狀如鼠，而菟首麋身，其音如獆犬，以其尾飛，名曰耳鼠，食之不䐆，又可以禦百毒。",
+    "quoteUtf8Sha256": "07897e1c7e53dab4f10f8b980465bfd514d475168a6aa03fb0d388b99e4ced73",
+    "matchingMethod": "Independently read cached raw source, heading line 11 and exact continuous Danxun entry line 26; no stitched quotation or modern paraphrase. Distinct from the rabbit-bodied, mouse-headed flying mouse in 北次三經.",
+    "inferences": "Rabbit eye/muzzle/cheek/ear/neck details, cervid shoulder-waist-haunch proportions, hooves, coat, one curved tapering tail, ring relief, animation, flight mechanism and audio timbre are separate artistic inferences in content/beasts/ershu.json."
+  },
+  "donor": {
+    "path": "raw/fuzhu-body-max/base_basic_pbr.glb",
+    "readOnlyAbsolutePath": "/Users/int64ago/workspace/shanhai/raw/fuzhu-body-max/base_basic_pbr.glb",
+    "bytes": 9445736,
+    "sha256": "9285fa2aa47dd1e949f403a1a89b71c954cf24a337512fc40619742f4a243344",
+    "triangles": 50000,
+    "primitiveVertices": 33930,
+    "receipt": {
+      "path": "pipeline/rodin/credits.log",
+      "time": "2026-11-01T10:17:57.682Z",
+      "beast": "fuzhu",
+      "job": "fuzhu-body-max",
+      "hash": "8ba8ef8631118fb0",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "7b95334a-3520-475f-8134-301186bc8405",
+      "consumed": 1
+    },
+    "tierEvidence": "Historical receipt plus exact existing donor SHA and measured geometry; no quality claim inferred from base_basic_pbr.glb filename."
+  },
+  "measuredStages": {
+    "oldRuntime": {
+      "bytes": 850844,
+      "sha256": "1907ec243954b8761d414b01f043b910c0d530a745529be8181adc4179875468",
+      "triangles": 104575
+    },
+    "normalizedDonorTriangles": 49938,
+    "trimmedClosedDonorTriangles": 39324,
+    "continuousBodyHeadNeckTriangles": 412984,
+    "sculpt": {
+      "bytes": 18113812,
+      "sha256": "f13c4c97bb2c5f9b89c485e9d7c71fd142ab06647685c49b8d6cb2f67ca8bade",
+      "triangles": 447004,
+      "primitiveVertices": 224741
+    },
+    "rig": {
+      "bytes": 22792032,
+      "sha256": "d48288b07787022556762a925476f5153a97d29d922123543c3eb710218006e9",
+      "triangles": 447004,
+      "primitiveVertices": 224741,
+      "bones": 32,
+      "tailBones": 10,
+      "clipsSeconds": { "idle": 4, "walk": 1.5, "special": 5.4 },
+      "weighting": "Direct heat weighting succeeded on v15 body. Filled 1264 unweighted supplemental vertices by nearest anatomical bone, then axial tissue restrictions, smooth head/neck segment weights and rigid hoof weights; final zero unweighted vertices. v11 proxy fallback is historical only."
+    },
+    "runtime": {
+      "path": "public/models/ershu/body.glb",
+      "bytes": 2654564,
+      "sha256": "1949da6c9677d58a06ebc118cd7b369672d0c3ec41c0ca616daf0ed816361854",
+      "triangles": 447004,
+      "primitiveVertices": 224741,
+      "meshDefinitions": 15,
+      "renderPrimitives": 18,
+      "compression": "meshopt + WebP 2048, simplify=false, flatten=false, join=false; no triangle reduction"
+    }
+  },
+  "sculptReview": {
+    "evidenceDirectory": "/tmp/ershu-remake-v15",
+    "texturedViews": "textured-four/view_{34,side,front,back}.png",
+    "neutralGrayViews": "gray-four/view_{34,side,front,back}.png",
+    "focusedViews": "{gray,textured}/{rump34,rump-back,rump-side,chest,chest-side,whole34}.png",
+    "coordinatorReadInspectedImages": 20,
+    "structuralPreviewAccepted": true,
+    "outlinesHidden": true,
+    "allEightReadInspectedBeforeRuntimeQA": true,
+    "rejectedIterations": [
+      "v1-v2: whole-body modifier voxel union erased the open donor torso; rejected.",
+      "v3: sculpt voxel operator retained a visibly broken double surface; rejected.",
+      "v4-v6: exact union on the open donor cut away remote skull tissue; rejected.",
+      "v7: explicitly closed the nonplanar 125-edge neck opening skipped by holes_fill; intact continuous union, but retained deer beard and rough neck transition.",
+      "v8-v10: removed beard, refined smaller cheek and neck volumes, fixed world-space eye placement, relaxed the continuous neck surface; discarded the photographic coat seam.",
+      "v11: technically verified runtime, but coordinator anatomy review rejected posterior cervical ridge, native-tail-cut rump crease, pointed chest shield and protruding eyes. Runtime remains frozen evidence only.",
+      "v12: sculpt SHA256 0e9c04510db6af04902f6ffb85822bc2f940b3383e2909aca8fb62425dd800b2, 18762952 bytes, 469620 triangles. Eyes seated and nape continuous; self/coordinator rejected oversized spherical croup addition and remaining pointed chest lip. Evidence /tmp/ershu-remake-v12; never rigged or promoted.",
+      "v13-v14: removed added croup volume, directly faired existing croup and sternum; rejected pinned smoothing perimeter and residual chest junction. Normal/remesh diagnostic confirmed reconstruction alone was insufficient. Evidence /tmp/ershu-remake-v13 and /tmp/ershu-remake-v14; never rigged or promoted."
+    ],
+    "finalApproach": "Closed donor boundary, positive oriented solid, exact union of separately unified rabbit tissue, nuchal tissue bridge, compressed seated eyes with orbital/lid deformation of the skull. Existing sternum and croup are faired without added pads, then per-vertex graded smoothing over a wider neighborhood preserves surrounding tangents; continuous final voxel reconstruction and nearest-surface UV transfer. Common fine-grain coat map and real flattened hoof soles. Ear inner colors occupy the concave closed pinna surface; no floating inner pads. Tail is an S-curved tapered surface with embedded root and ten deforming bones."
+  },
+  "runtimeVerification": {
+    "script": "scripts/qa-ershu.mjs",
+    "report": "/tmp/ershu-remake-v15/browser-complete/qa.json",
+    "passed": true,
+    "fetchedGlbHashMatchesRuntime": true,
+    "cacheSnapshotBeforeFirstMount": true,
+    "cacheAndSharedResourceDisposalsUnchanged": true,
+    "actualRemountCycles": 3,
+    "eachRemountAdvancesAllThreeClipsWithCpuSkinnedHeadNeckTailMotion": true,
+    "ownedMaterialSkeletonAndAllocatedBoneTextureDisposalsEach": 1,
+    "sharedResourceDisposals": 0,
+    "freshActionsAfterUncacheRoot": true,
+    "soleProbe": "Three actual noncollinear rigid sole vertices per cloven hoof; full support intervals including phase zero/start/end at 120 Hz, startup and all six directed action switches before effect/after effect/after dt=0.",
+    "maxSupportXyzDriftMeters": 0.00000872625893566121,
+    "minPlantedSoleY": -0.000025084121218599265,
+    "maxPlantedSoleY": -0.000013553142929390027,
+    "maxAbsoluteGroundTiltDegrees": 0.0000755866981892138,
+    "absoluteGroundToleranceMeters": 0.0015,
+    "everyPlantedSegmentMinYAndMaxYAsserted": true,
+    "supportSchedule": "Authored flight group reaches exact ground after complete damped interrupted landing. Grounded idle/special: four-foot support. Walk/outgoing-walk: each leg phase<0.68 with front_l=.25, front_r=.75, back_l=0, back_r=.5 offsets. Independent of per-leg solver flags; actual skinned sole XYZ/height/normal measured every frame, no trimmed endpoints.",
+    "fullDampedInterruptedLandingsAsserted": ["specialToWalk", "specialToIdle", "fullSpecialLanding"],
+    "narration": "Existing audio decoded to 52.9763125 seconds with nonzero RMS; actual playback advanced, stop paused/reset currentTime=0/detached element. No new synthesis.",
+    "sfx": "Actual ershuCall and footstep oscillator/output signal verified; interrupted special timer cancelled; complete special returned to idle.",
+    "shotAndCloseupsDirectory": "/tmp/ershu-remake-v15",
+    "dynamicNeckTailRootViews": "/tmp/ershu-remake-v15/browser-complete/special-{0.7,1.5,2.7,4.4}-{neck,tail-root}-{side,rear34}.png",
+    "dynamicViewsReadInspected": 16,
+    "dynamicViewBinding": "Each entry in qa.json motionDetails records actual special phase, camera and final GLB SHA, matching fetched response bytes. Worker and coordinator Read inspected all 16 images: neck continuous, narrow attachment outline but no white cap or exposed gap.",
+    "landingFirstGroundedFramesAt120Hz": { "specialToWalk": 198, "specialToIdle": 170, "fullSpecialLanding": 588 },
+    "imageBindingManifest": "/tmp/ershu-remake-v15/evidence-manifest.json",
+    "limitations": "Stylized rabbit/cervid proportions and coat are artistic inference. Triangle count deliberately increased for continuous sculpt; mobile GPU performance was not benchmarked."
+  },
+  "rebuild": [
+    "Blender --background --factory-startup --python pipeline/blender/normalize.py -- <read-only-fuzhu-donor> <normalized.glb> --length 1.05",
+    "Blender --background --factory-startup --python pipeline/blender/prepare_ershu.py -- <normalized.glb> <sculpt.glb> <textured-views>",
+    "Blender --background --factory-startup --python pipeline/blender/prepare_ershu.py -- <sculpt.glb> <unused.glb> <gray-views> --render-only --gray",
+    "Blender --background --factory-startup --python pipeline/blender/rig_ershu.py -- <sculpt.glb> <rig.glb>",
+    "pnpm exec gltf-transform optimize <rig.glb> public/models/ershu/body.glb --compress meshopt --texture-compress webp --texture-size 2048 --simplify false --flatten false --join false"
+  ]
+}

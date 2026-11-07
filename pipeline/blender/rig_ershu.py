@@ -1,4 +1,4 @@
-"""Ershu's own rig: hare ears, HIGH deer body, one ten-bone flying tail.
+"""Ershu's own rig: continuous cervid/rabbit tissue, pinnae and ten-bone tail.
 
 Input is prepare_ershu.py's multi-mesh sculpt. Walk uses analytic two-bone IK:
 stance hooves move uniformly backwards at ground height. Its 0.19 m stride,
@@ -33,8 +33,8 @@ def extra_bones(arm):
     eb = arm.data.edit_bones
     for side in (-1, 1):
         bone = eb.new(f'ear_{"l" if side == 1 else "r"}')
-        bone.head = (side * 0.055, -0.302, 0.812)
-        bone.tail = (side * 0.12, -0.25, 1.10)
+        bone.head = (side * 0.048, -0.285, 0.794)
+        bone.tail = (side * 0.14, -0.196, 1.08)
         bone.parent = eb['head']
     for i in range(TAIL_BONES):
         bone = eb.new(f'ershu_tail_{i:02}')
@@ -58,7 +58,7 @@ def skin_tail(obj, arm):
     obj.vertex_groups.clear()
     groups = [obj.vertex_groups.new(name=f'ershu_tail_{i:02}') for i in range(TAIL_BONES)]
     for vertex in obj.data.vertices:
-        t = max(0, min(1, (vertex.co.y - 0.400) / 0.82))
+        t = max(0, min(1, (vertex.co.y - 0.387) / 0.79))
         k = max(0, min(TAIL_BONES - 1, t * TAIL_BONES - 0.5))
         lo = int(k)
         fraction = k - lo
@@ -175,7 +175,7 @@ def main():
     bpy.ops.wm.read_factory_settings(use_empty=True)
     bpy.ops.import_scene.gltf(filepath=source)
     meshes = [o for o in bpy.context.scene.objects if o.type == 'MESH']
-    body = next(o for o in meshes if o.name == 'ershu_high_deer_body')
+    body = next(o for o in meshes if o.name == 'ershu_cervid_rabbit_sculpt')
     for obj in meshes:
         bpy.context.view_layer.objects.active = obj
         bpy.ops.object.select_all(action='DESELECT')
@@ -183,7 +183,7 @@ def main():
         bpy.ops.object.parent_clear(type='CLEAR_KEEP_TRANSFORM')
         bpy.ops.object.transform_apply(location=True, rotation=True, scale=True)
     lm = base.landmarks(body)
-    lm.update(height=0.85, head=Vector((0, -0.32, 0.745)), snout=Vector((0, -0.479, 0.727)), rear=Vector((0, 0.400, 0.612)))
+    lm.update(height=0.85, head=Vector((0, -0.32, 0.77)), snout=Vector((0, -0.466, 0.739)), rear=Vector((0, 0.387, 0.610)))
     arm = base.build_armature(lm)
     arm.name = 'ershu_rig'
     extra_bones(arm)
@@ -201,20 +201,33 @@ def main():
             missing += 1
     # Restrict the upper torso and beard to axial bones. Folding legs must not
     # pull the neck cap into shoulder spikes through heat-weight proximity.
-    axial = [arm.data.bones[n] for n in ('hips', 'spine1', 'spine2', 'chest', 'neck')]
+    axial = [arm.data.bones[n] for n in ('hips', 'spine1', 'spine2', 'chest', 'neck', 'head')]
     for vertex in body.data.vertices:
         z = vertex.co.z
         if z <= 0.38:
             continue
         blend = smooth(0.38, 0.49, z)
         weights = {body.vertex_groups[g.group].name: g.weight * (1 - blend) for g in vertex.groups}
-        nearest = min(axial, key=lambda bone: (bone.head_local - vertex.co).length_squared)
-        weights[nearest.name] = weights.get(nearest.name, 0) + blend
+        def segment_distance(bone):
+            delta=bone.tail_local-bone.head_local
+            u=max(0,min(1,(vertex.co-bone.head_local).dot(delta)/delta.length_squared))
+            return max(.005,(vertex.co-bone.head_local-u*delta).length)
+        candidates=sorted(axial,key=segment_distance)[:3]
+        scores=[segment_distance(bone)**-4 for bone in candidates]
+        for bone,score in zip(candidates,scores):
+            weights[bone.name]=weights.get(bone.name,0)+blend*score/sum(scores)
         for group in body.vertex_groups:
             group.remove([vertex.index])
         for name, weight in weights.items():
             if weight > 1e-6:
                 body.vertex_groups[name].add([vertex.index], weight, 'REPLACE')
+    # The entire hoof, including the flattened sole, follows its foot rigidly.
+    feet=[arm.data.bones[f'{leg}_foot'] for leg in ('front_l','front_r','back_l','back_r')]
+    for vertex in body.data.vertices:
+        if vertex.co.z>.07:continue
+        foot=min(feet,key=lambda bone:(bone.head_local-vertex.co).length_squared)
+        for group in body.vertex_groups:group.remove([vertex.index])
+        body.vertex_groups[foot.name].add([vertex.index],1,'REPLACE')
     base.normalize_weights(body)
     print('ERSHU_SKIN filled', missing, 'unweighted', base.unweighted_count(body))
     for obj in meshes:
@@ -223,7 +236,7 @@ def main():
         if obj.name == 'ershu_tail':
             skin_tail(obj, arm)
         elif obj.name.startswith('ershu_ear_'):
-            side = 'l' if obj.name.startswith('ershu_ear_1_') else 'r'
+            side = 'l' if obj.name == 'ershu_ear_1' else 'r'
             rigid(obj, arm, f'ear_{side}')
         else:
             rigid(obj, arm, 'head')
