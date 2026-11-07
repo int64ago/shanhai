@@ -61,3 +61,6 @@
 {"time":"2026-11-06T17:01:02.620Z","beast":"jingwei","job":"jingwei-body-max","hash":"21e8f0401fa3431b","tier":"Gen-2.5-Extreme-High","uuid":"3954a021-1bf6-4764-9355-00eaad9c4dd6","consumed":1}
 {"time":"2026-11-06T17:04:40.870Z","beast":"zhuhuai","job":"zhuhuai-body-v1","hash":"05c3f83401ea0f3a","tier":"Gen-2.5-Medium","uuid":"85114158-3fc7-4b22-ae88-2b17b61cef88","consumed":0.5}
 {"time":"2026-11-07T02:19:26.985Z","beast":"zhuhuai","job":"zhuhuai-body-max","hash":"3a58e6a52790b425","tier":"Gen-2.5-Extreme-High","uuid":"a05682d7-8854-4f16-9d1d-dd4835fb3bd8","consumed":1}
+{"time":"2026-11-06T16:56:47.935Z","beast":"chenghuang","job":"chenghuang-body-v1","hash":"b5eabbf1ae684c28","tier":"Gen-2.5-Medium","uuid":"2c5d3318-fae4-42eb-b445-36ae68e1c6ae","consumed":0.5}
+{"time":"2026-11-06T17:00:44.942Z","beast":"chenghuang","job":"chenghuang-body-v2","hash":"f7051dc127911091","tier":"Gen-2.5-Medium","uuid":"d8635c71-d695-4c0d-95b0-24826e17d188","consumed":0.5}
+{"time":"2026-11-07T02:19:04.712Z","beast":"chenghuang","job":"chenghuang-body-max","hash":"3e78c63216a9d3bf","tier":"Gen-2.5-Extreme-High","uuid":"08b2e25f-820d-4486-9397-66cffa0a8658","consumed":1}

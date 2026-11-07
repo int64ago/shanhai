@@ -1,0 +1,12 @@
+{
+  "id": "chenghuang-body-v2",
+  "beast": "chenghuang",
+  "budget": 6,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "White fox body for Chenghuang from Shan Hai Jing, one realistic adult white FOX with pointed muzzle, two upright triangular fox ears, ivory white fur and dark charcoal eyes and nose, elongated horizontal torso, level back, rump as high as shoulders, standing tall on FOUR separate straight legs, four paws flat on ground, hind legs fully extended not sitting. TAIL REMOVED entirely, no tail, rounded smooth bare rump for attaching a separate tail. Bare smooth back for attaching a separate back horn later, NO HORNS, no wings, no horse, no saddle, no jewelry, no base, full body neutral symmetric standing pose",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

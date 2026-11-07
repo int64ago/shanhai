@@ -1,0 +1,15 @@
+{
+  "id": "chenghuang-body-v1",
+  "beast": "chenghuang",
+  "budget": 6,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "Chenghuang from Shan Hai Jing, FOX shaped animal, elegant adult white fox with slender pointed muzzle, two upright triangular fox ears, dense ivory white fur, dark charcoal eyes and nose, standing tall on FOUR separate straight legs, all four paws flat on ground, level horizontal back, alert neutral symmetric standing pose, short neat tail stump for separate fox tail attachment, smooth bare back for separate dorsal horn attachment, NO HORNS ON HEAD, no horns anywhere yet, no wings, no horse anatomy, no saddle, no jewelry, no base, full body realistic animal",
+  "params": {
+    "mesh_mode": "Quad",
+    "quality": "medium",
+    "mesh_simplify": true,
+    "geometry_file_format": "glb",
+    "material": "PBR",
+    "poly_count": 20000
+  }
+}

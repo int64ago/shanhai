@@ -1,0 +1,19 @@
+{
+  "id": "chenghuang-body-max",
+  "beast": "chenghuang",
+  "budget": 6,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Chenghuang white FOX body, preserve the reference fox anatomy and pure white fur, pointed fox muzzle and two upright triangular fox ears, dark eyes and dark nose, FOUR separate standing legs and four paws on ground, level back, rump as high as shoulders, smooth rounded bare rump NO TAIL, no hanging tail, tail will be attached separately, bare back no horns yet, NO head horns, no wings, no horse anatomy, no jewelry, no base, neutral symmetric standing pose",
+  "images": [
+    "concept/chenghuang/view_34.png",
+    "concept/chenghuang/view_side.png",
+    "concept/chenghuang/view_front.png",
+    "concept/chenghuang/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

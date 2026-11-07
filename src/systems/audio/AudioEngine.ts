@@ -685,6 +685,33 @@ class AudioEngine {
     }
   }
 
+  /** 乘黄原文未记鸣声；据「状如狐」补一声短促轻鸣，音高与音色为交互演绎。 */
+  chenghuangCall(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const out = this.panner(pan)
+    out.connect(this.sfx)
+    const t = ctx.currentTime
+    const duration = 0.48
+    const voice = ctx.createOscillator()
+    voice.type = 'triangle'
+    voice.frequency.setValueAtTime(590, t)
+    voice.frequency.exponentialRampToValueAtTime(840, t + 0.07)
+    voice.frequency.exponentialRampToValueAtTime(460, t + duration)
+    const filter = ctx.createBiquadFilter()
+    filter.type = 'bandpass'
+    filter.frequency.value = 1400
+    filter.Q.value = 1.2
+    const gain = ctx.createGain()
+    gain.gain.setValueAtTime(0, t)
+    gain.gain.linearRampToValueAtTime(0.2, t + 0.025)
+    gain.gain.exponentialRampToValueAtTime(0.001, t + duration)
+    voice.connect(filter).connect(gain).connect(out)
+    voice.start(t)
+    voice.stop(t + duration + 0.03)
+    voice.onended = () => { voice.disconnect(); filter.disconnect(); gain.disconnect(); out.disconnect() }
+  }
+
   /** 天狗「其音如榴榴」：两声相连的颤音；郭璞注「或作猫猫」，故取近猫鸣的音色，音高与节奏为听觉演绎。 */
   tiangouCall(pan = 0) {
     const ctx = this.ctx
