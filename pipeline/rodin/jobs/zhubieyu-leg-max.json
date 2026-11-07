@@ -1,0 +1,19 @@
+{
+  "id": "zhubieyu-leg-max",
+  "beast": "zhubieyu",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Exactly one natural isolated aquatic limb matching these four views, elongated fleshy shank tapering to a curved ankle and one low flat webbed foot with three short rounded toes. Continuous organic anatomy, fine pebbled skin, soft warm grey-pink with muted celadon mottling. Root is a short smooth attachment cut, foot sole completely flat, no fur, no armor, no claws, no sphere, no pearl, no body, no head, no second leg, no pedestal. Detailed finished creature limb master.",
+  "images": [
+    "concept/zhubieyu/leg/view_34.png",
+    "concept/zhubieyu/leg/view_side.png",
+    "concept/zhubieyu/leg/view_front.png",
+    "concept/zhubieyu/leg/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

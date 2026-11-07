@@ -52,6 +52,7 @@ import { Jinwu } from '../beasts/jinwu/Jinwu'
 import { Yingzhao } from '../beasts/yingzhao/Yingzhao'
 import { Yayu } from '../beasts/yayu/Yayu'
 import { Xuangui } from '../beasts/xuangui/Xuangui'
+import { Zhubieyu } from '../beasts/zhubieyu/Zhubieyu'
 import { CameraRig } from './CameraRig'
 
 export function Stage() {
@@ -157,6 +158,8 @@ export function Stage() {
           <Yayu />
         ) : selected === 'xuangui' ? (
           <Xuangui />
+        ) : selected === 'zhubieyu' ? (
+          <Zhubieyu />
         ) : (
           <PlaceholderBeast />
         )}

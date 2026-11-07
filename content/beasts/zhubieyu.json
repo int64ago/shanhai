@@ -1,0 +1,192 @@
+{
+  "id": "zhubieyu",
+  "name": "珠蟞鱼",
+  "archetype": "sac",
+  "source": [
+    {
+      "book": "山海經（四庫全書本）卷四·東山經·東次二經",
+      "text": "又南三百八十里，曰葛山之首，無草木。澧水出焉，東流注于余澤，其中多珠蟞魚，其狀如肺而有目，六足有珠，其味酸甘，食之無癘。"
+    }
+  ],
+  "inferred": [
+    {
+      "item": "低伏分叶囊躯与细密水生肌理",
+      "basis": "肺状来自原文；两叶、浅沟、低伏姿态、无独立头部、无尾及具体皮肤褶理均为形态补足，不把无骨或透明当作原文。采用为本兽新生成的肺状HIGH母件。"
+    },
+    {
+      "item": "前侧双眼与橄榄色虹膜",
+      "basis": "四库本只记有目，未定眼数眼位；本作取双眼嵌于两叶前侧，墨瞳、眼睑及反光为原创细节。四目校补、六目征引只列版本对照，不混入source。"
+    },
+    {
+      "item": "三对短足、三枚圆趾与三脚架慢步",
+      "basis": "六足数量有原文依据；腹侧三对排列、三趾微蹼、关节和地面行走是设计补足。六份足来自同一全新HIGH自然足母件，根部向躯内嵌入。"
+    },
+    {
+      "item": "背侧一颗嵌珠与包覆皮褶",
+      "basis": "六足有珠没有明定六珠或足端衔珠；本作选择一颗青白椭圆珠嵌于背部内脊，细珠层和贴肤皮褶为原创几何，珠数、珠位、大小及色彩均为推断。"
+    },
+    {
+      "item": "灰青浅赭水墨、呼吸与展珠涟漪",
+      "basis": "经文未记设色、珠光、动作或鸣声。灰青浅赭墨斑、囊体呼吸、六足交替、展珠水晕与水泡低鸣均为交互艺术演绎；不把食之無癘扩写为辟除所有疫病。"
+    }
+  ],
+  "sourceVerification": {
+    "selectedEdition": "山海經（四庫全書本）卷四，郭璞傳，東山經·東次二經",
+    "url": "https://zh.wikisource.org/wiki/山海經_(四庫全書本)/卷04",
+    "rawUrl": "https://zh.wikisource.org/w/index.php?title=山海經_(四庫全書本)/卷04&action=raw",
+    "checked": "2026-11-07",
+    "rawBytes": 9720,
+    "rawSha256": "1c6b2bcfb75712f1ab9b532737945f0268d924fcdbd72388bbc3693698cf4130",
+    "parentVerification": "父会话独立读取下载原始正文，只剥离平衡SK notes夹注后核对连续正文。山名字图SKchar 3575按明确记录转写葛并补现代标点，不声称带标点的引文与原始字节相等；保留所选四库本肺、有目，不混入四目或六目异文。",
+    "locator": "卷04中東次二經之首曰空桑之山段下，第五个山名条（将空桑计为第一条）；前段起又南水行五百里流沙三百里至于葛山之尾，后段起又南三百八十里曰餘峩之山。公开转录没有影印叶码，不虚构页码。",
+    "mountain": "葛山之首",
+    "mountainGlyph": {
+      "template": "SKchar|3575",
+      "file": "https://commons.wikimedia.org/wiki/File:SKQS_3575.svg",
+      "displayAlt": "葛",
+      "note": "四库本公开转录的山名首字用字图，显示替代文字为葛；此处据该字图转写葛，补现代标点。正文其余字不作胏/肺或目数拼校。"
+    },
+    "mainTextWithoutModernPunctuation": "又南三百八十里曰葛山之首無草木澧水出焉東流注于余澤其中多珠蟞魚其狀如肺而有目六足有珠其味酸甘食之無癘",
+    "excludedAnnotations": [
+      "澧下音禮",
+      "珠蟞魚下音鼈",
+      "無癘下注無時氣病也及所引吕氏春秋朱蟞条；均非本条经文正文"
+    ],
+    "variants": [
+      {
+        "witness": "Wikisource普通東山經页转录",
+        "url": "https://zh.wikisource.org/wiki/山海經/東山經",
+        "reading": "其狀如胏而有目，六足有珠",
+        "comparison": "胏与所选四库本肺字不同，二者同为有目而不定眼数；本条source仅采用四库本肺字，不把普通页的胏字换入所选引文。"
+      },
+      {
+        "witness": "读书网所载郭注及后出校记",
+        "url": "https://www.dushu.com/guoxue/107902/1163882.html",
+        "reading": "其狀如肺而有目；校记载譚校本補作其狀如肺而有四目",
+        "comparison": "这是现代网页提供的校补线索；未将其当成所选四库本有四目，也未宣称四目在所有版本一致。"
+      },
+      {
+        "witness": "古今圖書集成征引山海經",
+        "url": "https://zh.wikisource.org/wiki/Page:Gujin_Tushu_Jicheng,_Volume_527_(1700-1725).djvu/18",
+        "reading": "其狀如肺，而六目六足，有珠",
+        "comparison": "征引文字作六目，与四目校补及四库本有目有别。此链接定位到该引文图像/校录页18，不冒充山海經四库本自身叶码。"
+      }
+    ],
+    "catalogCorrections": [
+      "旧目录葛山之尾误并入本段，改为葛山之首；尾与首为相邻两站，不是本次发现的版本异文",
+      "澧水东流注余泽，旧南流无所选底本依据",
+      "旧四目、前端眼位、无骨、六足皆衔明珠和珠光流转均未见所选正文规定",
+      "保持现有ID及底本名珠蟞鱼；不以指令中的朱獱鱼或朱鳖鱼改名"
+    ]
+  },
+  "production": {
+    "status": "ready",
+    "ready": true,
+    "modelProduced": true,
+    "method": "Two NEW Medium → corrected four-view → Extreme-High masters; six copies of the new natural limb; own 21-bone sac rig. No reused mismatched beast geometry.",
+    "newRodinTransactions": 4,
+    "newRodinCredits": 3,
+    "budget": 12,
+    "parts": [
+      {
+        "job": "zhubieyu-body-v1",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "2b58eb0b-869e-4105-bf8a-f41dd93f2a06",
+        "consumed": 0.5,
+        "inputHash": "69c4b26458ea6e77",
+        "raw": "raw/zhubieyu-body-v1/base_basic_pbr.glb",
+        "rawSha256": "89caa6ad65965c207302b82d7e4978a5076ae7d99aaf3dcb81db4989e2f4fbf2",
+        "sourceTriangles": 11828
+      },
+      {
+        "job": "zhubieyu-leg-v1",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "30ea9e70-a106-4110-ae45-edaa1871e025",
+        "consumed": 0.5,
+        "inputHash": "86128d8a4044e21d",
+        "raw": "raw/zhubieyu-leg-v1/base_basic_pbr.glb",
+        "rawSha256": "fbdc23c0731ea01697084ce34cff597d5b8256af1a90616b3cbfff5ed85ef285",
+        "sourceTriangles": 11802
+      },
+      {
+        "job": "zhubieyu-body-max",
+        "tier": "Gen-2.5-Extreme-High",
+        "uuid": "b61fc1a6-d1b1-4244-8713-70cbeb999dcc",
+        "consumed": 1,
+        "inputHash": "ca628b6c73f31798",
+        "raw": "raw/zhubieyu-body-max/base_high_pbr.glb",
+        "rawSha256": "913de0c4513d0d2824d622ce5f42225189dbc25f8a4b0ff7cb38adf10e8b1e74",
+        "sourceTriangles": 50000,
+        "bytes": 27317716
+      },
+      {
+        "job": "zhubieyu-leg-max",
+        "tier": "Gen-2.5-Extreme-High",
+        "uuid": "229b947a-e85f-47e8-ad9b-73c046b1988a",
+        "consumed": 1,
+        "inputHash": "326d0096dfde0804",
+        "raw": "raw/zhubieyu-leg-max/base_high_pbr.glb",
+        "rawSha256": "143d2d5ec642595259b518e87e240d6bf9c8c889828371e7368181adb6292580",
+        "sourceTriangles": 50000,
+        "bytes": 29169268
+      }
+    ],
+    "normalizedTriangles": {
+      "body": 49962,
+      "legEach": 49974
+    },
+    "adaptation": "Body horizontally corrected before HIGH. Dense HIGH skin and UV retained. Six limbs proportioned, splayed and embedded into the mantle with finite inverse-transpose Jacobian normal transforms. Actual planar soles have rigid foot weights and inverse circular support positions/yaw. Two eyes, eyelids, finely ridged nacre pearl and skin-conforming mantle fold are authored geometry. meshopt/WebP; simplify/flatten/join false; no extreme-high texture surcharge.",
+    "scripts": [
+      "pipeline/blender/prepare_zhubieyu.py",
+      "pipeline/blender/assemble_zhubieyu.py",
+      "pipeline/blender/rig_zhubieyu.py"
+    ],
+    "runtime": {
+      "path": "public/models/zhubieyu/body.glb",
+      "sha256": "a110b693e54ae10edddef0e5583dc016f558323eeb14dcf0d49be40c6898ddd9",
+      "triangles": 370382,
+      "compression": "meshopt medium; resample false; simplify/flatten/join false; WebP body 2048 / limb 1024. Default high animation filtering was rejected after actual sole drift; unfiltered animation passes."
+    },
+    "qa": {
+      "script": "scripts/qa-zhubieyu.mjs",
+      "report": "/tmp/zhubieyu-parent-final-qa3/browser-qa.json",
+      "method": "Parent integrated runtime on localhost:5215; idle 127, walk 421, special 235 actual render frames. Three noncollinear rigid sole mesh vertices per foot, world XYZ, both plane edges and normal; scene and skeleton refreshed before sampling.",
+      "maxSoleDriftMeters": {
+        "idle": 1.3222401458783293e-7,
+        "walk": 0.00001209665797497322,
+        "special": 5.125427641124983e-7
+      },
+      "maxSoleDirectionRadians": 0.000008758169375871154,
+      "maxSolePlaneNormalRadians": 0.000004219897300385886,
+      "maxSoleHeightErrorMeters": 0.000011067687159027617,
+      "lifecycle": "Three selection remounts preserve 59 nodes, 17 surfaces/outlines, 21 bones, six feet, two eyes and one pearl. All vertex deformation, normals, weights and skeleton matrices finite. Each cleanup disposes all 17 owned skeleton textures, zero remain live. Special interrupt cancels pending bubble timer; active call stopped once; special returns to idle.",
+      "visual": "Medium corrected four views for both parts Read before HIGH; both HIGH four views, final assembly four views, runtime idle/walk/special, three walk and three special closeups, plus five alternate camera shots inspected with Read. No detached roots, extra limbs, surface black patches or floating pearls observed.",
+      "browserErrors": 0,
+      "ripple": "Parent verified the same attached JSX material across all three actions, advancing time with strengths 0.04 / 0.18 / 0.98688. Three remounts each dispose the old ripple material and geometry exactly once and all 17 cloned skeleton textures; zero remain live.",
+      "parentEvidence": [
+        "/tmp/shanhai-check/zhubieyu-parent-input-audit.json",
+        "/tmp/zhubieyu-parent-final-qa3/browser-qa.json",
+        "/tmp/shanhai-check/zhubieyu-final-idle.png",
+        "/tmp/shanhai-check/zhubieyu-final-walk.png",
+        "/tmp/shanhai-check/zhubieyu-final-special.png",
+        "/tmp/shanhai-check/zhubieyu-final-w0.png",
+        "/tmp/shanhai-check/zhubieyu-final-w1.png",
+        "/tmp/shanhai-check/zhubieyu-final-w2.png"
+      ]
+    },
+    "narration": {
+      "pipeline": "pipeline/tts/narrate.ts --force zhubieyu",
+      "model": "cosyvoice-v2",
+      "voice": "longsanshu",
+      "format": "mp3",
+      "sampleRate": 22050,
+      "channels": 1,
+      "bytes": 1364727,
+      "durationSeconds": 85.28975,
+      "actualPlaybackSeconds": 2.348539,
+      "mediaError": null,
+      "stopButton": true,
+      "sfxPeakRms": 0.06807608984539444
+    }
+  }
+}

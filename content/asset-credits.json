@@ -25,6 +25,28 @@
       "license": "沿用项目既有百炼语音输出条款"
     },
     {
+      "path": "public/models/zhubieyu/body.glb",
+      "source": "本兽全新两阶段Hyper3D Rodin生成：肺状主体与自然单足各Medium 0.5积分，经Blender矫正并Read四面后，各以34首张的四视图提交Gen-2.5-Extreme-High/HighPack 1积分。共4次新事务、实际3积分，未用extreme-high附加贴图。两个原始HIGH均50000三角面；normalize后主体49962面、单足49974面，保留稠密表面与UV，六足由同一新足母件复制并向体内埋根。双眼、眼睑、单珠细珠层和贴肤皮褶为项目原创几何。独立21骨、idle/walk/special，实际sole平面刚性权重、圆周位置与yaw逆向烘焙，meshopt/WebP不减面压缩。完整UUID、输入hash、raw SHA256、各阶段成本见content/beasts/zhubieyu.json production。",
+      "sourceComponents": [
+        {"job": "zhubieyu-body-max", "tier": "Gen-2.5-Extreme-High", "uuid": "b61fc1a6-d1b1-4244-8713-70cbeb999dcc", "path": "raw/zhubieyu-body-max/base_high_pbr.glb", "sha256": "913de0c4513d0d2824d622ce5f42225189dbc25f8a4b0ff7cb38adf10e8b1e74"},
+        {"job": "zhubieyu-leg-max", "tier": "Gen-2.5-Extreme-High", "uuid": "229b947a-e85f-47e8-ad9b-73c046b1988a", "path": "raw/zhubieyu-leg-max/base_high_pbr.glb", "sha256": "143d2d5ec642595259b518e87e240d6bf9c8c889828371e7368181adb6292580"}
+      ],
+      "author": "项目全新Hyper3D Rodin输出与原创组装、眼珠细节、绑定动画",
+      "license": "沿用项目既有Hyper3D Rodin输出条款；新增离线与运行时制作属项目自制"
+    },
+    {
+      "path": "concept/zhubieyu/{body,leg,high-body,high-leg,final}/view_{34,side,front,back}.png",
+      "source": "本兽两个新Medium的矫正多视图、高模检视与最终组装四面，Blender本地渲染；HIGH任务输入图首张为34，无旧兽母件混入。",
+      "author": "项目自制",
+      "license": "沿用珠蟞鱼模型授权"
+    },
+    {
+      "path": "public/audio/narration/zhubieyu.mp3",
+      "source": "pipeline/tts/narrate.ts --force zhubieyu，百炼cosyvoice-v2/longsanshu。故事采用四库卷四葛山之首、澧水东流、有目、六足有珠；双眼、背侧一珠、灰青浅赭、动作和水泡配音明确作为艺术推断。",
+      "author": "项目撰稿与CosyVoice合成",
+      "license": "沿用项目既有CosyVoice合成输出条款"
+    },
+    {
       "path": "public/models/yayu/body.glb",
       "source": "零新生成，仅只读复用三个经账本、SHA256 和实际面数核验的 Gen-2.5-Extreme-High 母件，各原始输入均为 50,000 三角面。诸怀 HIGH 牛躯去掉原牛首/兽耳、原分蹄足端和原尾，裁后含封口 31,270 面；新增渐细颈肩和四条系部，并与该牛躯离线体素融合为连续 425,680 面。该重塑与朱赭涂色为项目离线制作，未声称是新的 HIGH 生成输出。陆吾 HIGH 人首去衣领及颈底凸缘，含封口 41,192 面，保留五官与发须；面部赤褐色为新绘制。鹿蜀 HIGH 四个单蹄裁后分别含封口 770/748/715/736 面，未以牛分蹄替代马足；新涂墨褐色并平整蹄底。另补单牛尾。独立 21 骨，idle/walk/special，全模 472,401 三角面；meshopt/WebP，simplify/flatten/join 均 false。支撑相逆向烘焙真实圆周目标与整蹄 yaw，QA 测全部实际 sole 世界顶点位移及方向。脚本 pipeline/blender/prepare_yayu.py、rig_yayu.py。",
       "sourceComponents": [

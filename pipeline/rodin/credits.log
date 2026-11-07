@@ -71,3 +71,7 @@
 {"time":"2026-11-07T14:00:31.738Z","beast":"xuangui","job":"xuangui-head-max","hash":"06ccc648ef259fee","tier":"Gen-2.5-Extreme-High","uuid":"781ad381-efe1-4874-ba48-a33040e7766f","consumed":1}
 {"time":"2026-11-07T14:01:00.102Z","beast":"xuangui","job":"xuangui-tail-max","hash":"395d3d20845a31a8","tier":"Gen-2.5-Extreme-High","uuid":"6201df5f-8a5c-4965-8d6e-0c6cb21a76d4","consumed":1}
 {"time":"2026-11-07T14:04:00.246Z","beast":"xuangui","job":"xuangui-body-max","hash":"abcf7f6c93d880e1","tier":"Gen-2.5-Extreme-High","uuid":"455876d0-eb15-4208-919b-db888e970766","consumed":1}
+{"time":"2026-11-07T13:54:34.509Z","beast":"zhubieyu","job":"zhubieyu-body-v1","hash":"69c4b26458ea6e77","tier":"Gen-2.5-Medium","uuid":"2b58eb0b-869e-4105-bf8a-f41dd93f2a06","consumed":0.5}
+{"time":"2026-11-07T13:54:54.706Z","beast":"zhubieyu","job":"zhubieyu-leg-v1","hash":"86128d8a4044e21d","tier":"Gen-2.5-Medium","uuid":"30ea9e70-a106-4110-ae45-edaa1871e025","consumed":0.5}
+{"time":"2026-11-07T14:01:07.599Z","beast":"zhubieyu","job":"zhubieyu-body-max","hash":"ca628b6c73f31798","tier":"Gen-2.5-Extreme-High","uuid":"b61fc1a6-d1b1-4244-8713-70cbeb999dcc","consumed":1}
+{"time":"2026-11-07T14:01:27.336Z","beast":"zhubieyu","job":"zhubieyu-leg-max","hash":"326d0096dfde0804","tier":"Gen-2.5-Extreme-High","uuid":"229b947a-e85f-47e8-ad9b-73c046b1988a","consumed":1}

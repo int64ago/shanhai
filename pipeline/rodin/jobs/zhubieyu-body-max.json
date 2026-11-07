@@ -1,0 +1,19 @@
+{
+  "id": "zhubieyu-body-max",
+  "beast": "zhubieyu",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Finished Zhubieyu mythical freshwater creature torso master matching these four views, a low horizontal organic lung-shaped mantle, two naturally connected rounded lobes, a shallow central dorsal cleft, tapered anterior, delicate pebbled skin and flowing fine dermal ridges, warm grey-pink with muted celadon mottling and charcoal speckles. Preserve the coherent organic body and subtle living aquatic skin. No exposed organs, no blood, no vessels, no pedestal, no fur, no legs, no feet, no wings, no tail, no eyes or pearls in this torso master. Refined natural creature sculpture.",
+  "images": [
+    "concept/zhubieyu/body/view_34.png",
+    "concept/zhubieyu/body/view_side.png",
+    "concept/zhubieyu/body/view_front.png",
+    "concept/zhubieyu/body/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

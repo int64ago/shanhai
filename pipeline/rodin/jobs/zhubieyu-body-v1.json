@@ -1,0 +1,12 @@
+{
+  "id": "zhubieyu-body-v1",
+  "beast": "zhubieyu",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "Finished creature body master for Zhubieyu, an ancient Chinese freshwater mythical animal whose shape resembles lungs. A beautiful organic lobed fishlike sac torso with two asymmetrical rounded mantle lobes and a shallow central dorsal cleft, broad lower lobes tapering toward the anterior, low horizontal resting posture, coherent living animal anatomy. Subtle flowing dermal ridges, delicate fine pebbled aquatic skin, soft warm grey-pink and muted jade undertones, natural dark mottling, mature refined creature sculpture rather than a medical anatomy model. One continuous organic body, not separate eggs or spheres. No limbs, no feet, no wings, no tail, no horns, no clothing, no pedestal, no cutaway organs, no blood, no exposed vessels, no human face, no eyes or pearls in this torso master; these are separate authored components. Isolated full torso, neutral studio lighting, realistic sculptural surface detail, elegant ancient river creature.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 12000
+  }
+}

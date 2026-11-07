@@ -1,0 +1,12 @@
+{
+  "id": "zhubieyu-leg-v1",
+  "beast": "zhubieyu",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "Exactly one isolated natural aquatic animal leg, a short graceful amphibious river creature limb from fleshy tapered shoulder root to broad low webbed foot with three distinct short smooth rounded toes. Elongated limb about 4 times longer than ankle thickness, root thicker and smoothly tapered at attachment, gentle elbow and ankle bend, toes pointing forward and plantar underside resting completely flat on the ground. Soft warm grey-pink skin, subtle muted jade mottling and fine pebbled skin matching a refined organic mythical fish creature. Natural continuous anatomical transitions, credible joints, no fur, no armor, no pearl, no sphere, no pedestal, no body, no head, no second leg, no detached fragments. Finished detailed sculptural isolated single limb, neutral studio light.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 12000
+  }
+}

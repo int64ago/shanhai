@@ -851,6 +851,37 @@ class AudioEngine {
     breath.start(t)
   }
 
+  /** 珠蟞鱼的水泡低鸣为交互配音，四库本没有记载鸣声。 */
+  zhubieyuCall(pan = 0): () => void {
+    const ctx = this.ctx
+    if (!ctx) return () => {}
+    const out = this.panner(pan)
+    out.connect(this.sfx)
+    const voices: OscillatorNode[] = []
+    let ended = 0
+    for (const [offset, hz] of [[0, 420], [0.16, 560], [0.36, 350]]) {
+      const start = ctx.currentTime + offset
+      const voice = ctx.createOscillator()
+      voice.type = 'sine'
+      voice.frequency.setValueAtTime(hz, start)
+      voice.frequency.exponentialRampToValueAtTime(hz * 0.38, start + 0.26)
+      const envelope = ctx.createGain()
+      envelope.gain.setValueAtTime(0, start)
+      envelope.gain.linearRampToValueAtTime(0.18, start + 0.018)
+      envelope.gain.exponentialRampToValueAtTime(0.001, start + 0.30)
+      voice.connect(envelope).connect(out)
+      voice.onended = () => {
+        voice.disconnect()
+        envelope.disconnect()
+        if (++ended === 3) out.disconnect()
+      }
+      voice.start(start)
+      voice.stop(start + 0.32)
+      voices.push(voice)
+    }
+    return () => { for (const voice of voices) { try { voice.stop() } catch { /* Already ended. */ } } }
+  }
+
   /** 狪狪「其鸣自訆」：两拍圆润鼻音豚鸣，节律借今音，非古音复原。 */
   tongtongCall(pan = 0) {
     const ctx = this.ctx
