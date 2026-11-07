@@ -1,0 +1,8 @@
+{
+  "id": "changyou-body-v2",
+  "beast": "changyou",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "Realistic slender gibbon-like monkey, full body zoological animal sculpture. Very long thin arms reaching ankle level, small sloping shoulders, narrow short pear-shaped furry monkey torso and small hips, shorter bent legs and broad long-toed feet flat on ground. Hands hang apart from legs, relaxed bent elbows, distinct long fingers and thumbs. Upright natural ape standing pose, feet apart. Small macaque head with protruding muzzle, deep brown eyes and brow ridge. Dense charcoal grey brown fur covers torso shoulders and limbs, muzzle palms and soles dark grey skin. Smooth EARLESS head; modular ears added later. Single thin long monkey tail curled behind and clear of limbs. Natural slender animal proportions, no exaggerated musculature, no clothing, no props or base.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

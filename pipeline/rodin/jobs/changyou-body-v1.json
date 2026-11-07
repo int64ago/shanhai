@@ -1,0 +1,8 @@
+{
+  "id": "changyou-body-v1",
+  "beast": "changyou",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "Full body realistic macaque primate for Changyou. Narrow ribcage tapering to small pelvis, sloping shoulders and scapula, long muscular arms hanging naturally with bent elbows, wrists and five distinct fingers including opposable thumbs. Shorter bent hind legs, planted broad primate feet with readable toes. Relaxed semi-upright biped stance, separate feet, arms separated from waist and hands clear of legs. Natural monkey face: projecting short muzzle, deep brown eyes, brow ridge, dark gray face, warm gray brown short fur. EARLESS smooth temples, NO ears: four independent ears assembled later. No horns, clothes, human torso or human proportions, no bulky oval gorilla barrel. One slender natural monkey tail curling gently behind, clear of limbs. Entire animal including hands and feet, neutral symmetric pose, no base, props or scenery.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

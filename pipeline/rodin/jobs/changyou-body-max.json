@@ -1,0 +1,9 @@
+{
+  "id": "changyou-body-max",
+  "beast": "changyou",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Realistic slender monkey full body, preserve corrected references: very long relaxed arms, distinct fingers and thumbs, bent shorter legs and broad planted long-toed feet, narrow furry torso and sloping primate shoulders. Macaque muzzle and dark eyes. Rich charcoal grey brown fur all over torso and limbs. Smooth EARLESS temples covered in fur, REMOVE residual ear shapes and pink ear markings in side reference, no external ears at all. Four separate ears assembled later. Keep single tail clear of hands and feet. Natural zoological animal proportions, no human musculature, no props or base.",
+  "images": ["concept/changyou-fixed/view_34.png", "concept/changyou-fixed/view_side.png", "concept/changyou-fixed/view_front.png", "concept/changyou-fixed/view_back.png"],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000, "addons": "HighPack" }
+}

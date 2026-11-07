@@ -75,3 +75,8 @@
 {"time":"2026-11-07T13:54:54.706Z","beast":"zhubieyu","job":"zhubieyu-leg-v1","hash":"86128d8a4044e21d","tier":"Gen-2.5-Medium","uuid":"30ea9e70-a106-4110-ae45-edaa1871e025","consumed":0.5}
 {"time":"2026-11-07T14:01:07.599Z","beast":"zhubieyu","job":"zhubieyu-body-max","hash":"ca628b6c73f31798","tier":"Gen-2.5-Extreme-High","uuid":"b61fc1a6-d1b1-4244-8713-70cbeb999dcc","consumed":1}
 {"time":"2026-11-07T14:01:27.336Z","beast":"zhubieyu","job":"zhubieyu-leg-max","hash":"326d0096dfde0804","tier":"Gen-2.5-Extreme-High","uuid":"229b947a-e85f-47e8-ad9b-73c046b1988a","consumed":1}
+{"time":"2026-11-07T13:53:01.338Z","beast":"changyou","job":"changyou-ear-v1","hash":"a84409c61ded65c9","tier":"Gen-2.5-Medium","uuid":"61c38609-afc8-4509-ad13-3b866ddab40a","consumed":0.5}
+{"time":"2026-11-07T13:53:49.609Z","beast":"changyou","job":"changyou-body-v1","hash":"48585d03f5a0831d","tier":"Gen-2.5-Medium","uuid":"b09ea686-ff9e-49bc-9306-773ce730a458","consumed":0.5}
+{"time":"2026-11-07T13:55:14.404Z","beast":"changyou","job":"changyou-ear-max","hash":"962d2ad0c27399fd","tier":"Gen-2.5-Extreme-High","uuid":"2a1d0e99-42a3-4892-9e44-ee6d258022dc","consumed":1}
+{"time":"2026-11-07T14:00:06.005Z","beast":"changyou","job":"changyou-body-v2","hash":"6acf3d4b7ca55976","tier":"Gen-2.5-Medium","uuid":"0eaf9b8b-d3dc-4ce3-8d41-d217f757e45c","consumed":0.5}
+{"time":"2026-11-07T14:08:20.322Z","beast":"changyou","job":"changyou-body-max","hash":"b0fa593320ef1199","tier":"Gen-2.5-Extreme-High","uuid":"90da19a9-02f9-47cc-8713-7def30b586f1","consumed":1}

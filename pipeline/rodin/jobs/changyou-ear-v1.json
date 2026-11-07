@@ -1,0 +1,8 @@
+{
+  "id": "changyou-ear-v1",
+  "beast": "changyou",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One isolated anatomical macaque primate external ear, single rounded oval fleshy pinna, warm grey brown skin with thin short brown fur along outer helix, beautifully detailed thick curved helix rim and antihelix, shallow dark recessed concha, softly folded tragus, tapered narrow lobule. Natural organic soft tissue transition into a short broad fleshy attachment root at inner lower edge, not a severed sharp disc, about twice as tall as thick. Front surface visible, a coherent three dimensional organ with closed soft back surface. Exactly ONE ear only, no head, no face, no eye, no skull, no body, no props, no pedestal, no earrings, not human decorative jewelry, not a pointed elf ear, not a leaf.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

@@ -365,6 +365,41 @@ class AudioEngine {
     vib.stop(t + dur + 0.05)
   }
 
+  /** 长右「其音如吟」：低声长吟的艺术演绎，不附加超常听力或司水含义。 */
+  changyouHum(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const t = ctx.currentTime
+    const duration = 2.3
+    const voice = ctx.createOscillator()
+    voice.type = 'triangle'
+    voice.frequency.setValueAtTime(155, t)
+    voice.frequency.linearRampToValueAtTime(182, t + 0.8)
+    voice.frequency.linearRampToValueAtTime(136, t + duration)
+    const vibrato = ctx.createOscillator()
+    vibrato.frequency.value = 4.2
+    const depth = ctx.createGain()
+    depth.gain.value = 3.2
+    vibrato.connect(depth).connect(voice.frequency)
+    const vowel = ctx.createBiquadFilter()
+    vowel.type = 'lowpass'
+    vowel.frequency.value = 950
+    vowel.Q.value = 1.1
+    const envelope = ctx.createGain()
+    envelope.gain.setValueAtTime(0, t)
+    envelope.gain.linearRampToValueAtTime(0.7, t + 0.22)
+    envelope.gain.linearRampToValueAtTime(0.48, t + 1.6)
+    envelope.gain.exponentialRampToValueAtTime(0.001, t + duration)
+    const p = this.panner(pan)
+    voice.connect(vowel).connect(envelope).connect(p).connect(this.sfx)
+    voice.onended = () => {
+      voice.disconnect(); vibrato.disconnect(); depth.disconnect()
+      vowel.disconnect(); envelope.disconnect(); p.disconnect()
+    }
+    voice.start(t); vibrato.start(t)
+    voice.stop(t + duration); vibrato.stop(t + duration)
+  }
+
   /** 狐火燃起：带通噪声由低到高扫频的呼啸 + 低频鼓胀 */
   foxFire(pan = 0) {
     const ctx = this.ctx

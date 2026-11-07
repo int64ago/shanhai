@@ -47,6 +47,38 @@
       "license": "沿用项目既有CosyVoice合成输出条款"
     },
     {
+      "path": "public/models/changyou/body.glb",
+      "source": "全新 Hyper3D Rodin 两阶段生成：无耳灵长主体与独立单耳母件，Medium→矫正四面Read→Gen-2.5-Extreme-High HighPack，34图首张，不加texture_mode附加项。主体初版因人形肌肉比例弃用，重试长臂窄毛躯；实际主体和耳HIGH原件各50000三角面。清理原生耳形与UV耳纹，四耳分别向外张开、内缘软组织深入颞部；专用26骨灵长骨架、双足逆圆周足底XYZ及朝向补偿。离线蒙皮/组织根部修整不冒称生成服务原输出。最终249930面，meshopt/WebP，不减面、不flatten、不join。详细收据及QA见pipeline/provenance/changyou.json。",
+      "sourceComponents": [
+        {
+          "job": "changyou-body-max",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "90da19a9-02f9-47cc-8713-7def30b586f1",
+          "sha256": "8813c68ea730228db820fbb21f96de51463f3b810e4e0fbb692233582853cd09"
+        },
+        {
+          "job": "changyou-ear-max",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "2a1d0e99-42a3-4892-9e44-ee6d258022dc",
+          "sha256": "5b430d13565e25c03c0741f1bcf449c2e0578613d2ff1e3b8838b65b492b821c"
+        }
+      ],
+      "author": "Hyper3D Rodin与项目离线修整、组装和绑定",
+      "license": "沿用项目既有Hyper3D Rodin输出条款"
+    },
+    {
+      "path": "concept/changyou*/view_{34,side,front,back}.png",
+      "source": "新Medium参考及最终HIGH四耳猿体的Blender正交四面，逐图Read核查；生成参考34图首张。",
+      "author": "项目自制",
+      "license": "沿用长右模型授权"
+    },
+    {
+      "path": "public/audio/narration/changyou.mp3",
+      "source": "48bb77de研究稿的cosyvoice-v2 / longsanshu评书，采用南山经南次二经原文与设计分栏，不含听觉极灵、司水等无据神职。真实浏览器解码44.617125秒、22050Hz单声道并验证播放。",
+      "author": "项目撰稿与CosyVoice合成",
+      "license": "沿用项目既有CosyVoice合成输出条款"
+    },
+    {
       "path": "public/models/yayu/body.glb",
       "source": "零新生成，仅只读复用三个经账本、SHA256 和实际面数核验的 Gen-2.5-Extreme-High 母件，各原始输入均为 50,000 三角面。诸怀 HIGH 牛躯去掉原牛首/兽耳、原分蹄足端和原尾，裁后含封口 31,270 面；新增渐细颈肩和四条系部，并与该牛躯离线体素融合为连续 425,680 面。该重塑与朱赭涂色为项目离线制作，未声称是新的 HIGH 生成输出。陆吾 HIGH 人首去衣领及颈底凸缘，含封口 41,192 面，保留五官与发须；面部赤褐色为新绘制。鹿蜀 HIGH 四个单蹄裁后分别含封口 770/748/715/736 面，未以牛分蹄替代马足；新涂墨褐色并平整蹄底。另补单牛尾。独立 21 骨，idle/walk/special，全模 472,401 三角面；meshopt/WebP，simplify/flatten/join 均 false。支撑相逆向烘焙真实圆周目标与整蹄 yaw，QA 测全部实际 sole 世界顶点位移及方向。脚本 pipeline/blender/prepare_yayu.py、rig_yayu.py。",
       "sourceComponents": [

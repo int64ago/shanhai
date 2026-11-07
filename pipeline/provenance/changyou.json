@@ -1,0 +1,564 @@
+{
+  "beast": "changyou",
+  "status": "verified-new-two-stage-high",
+  "researchOrigin": "48bb77de275c53968d69a1b24f627219fc4e1247; only classical research and corrected narration imported, no old geometry",
+  "source": {
+    "url": "https://www.gutenberg.org/cache/epub/25288/pg25288.txt",
+    "book": "山海經·南山經·南次二經",
+    "downloadedParagraph": "東南四百五十里，曰長右之山，無草木，多水。有獸焉，其狀如禺而四耳，其名長右， 其音如吟，見則郡縣大水。",
+    "transcriptionPolicy": "Fetched this actual text during production; preserve its punctuation and internal ASCII space after 其名長右，. No claim that punctuation normalization is byte-identical. Original paragraph boundaries CRLF are not part of the displayed quote.",
+    "requirements": [
+      "如禺",
+      "四耳",
+      "其音如吟",
+      "見則郡縣大水"
+    ],
+    "inferences": [
+      "Long arms, sloping primate shoulders, narrow furry torso, bent knees, hands, toes, single tail and biped gait",
+      "Two ears at upper temples and two at lower temporal/cheek roots",
+      "Grey brown fur, pink grey face, palms and pinnae",
+      "Restrained head/arm gesture and synthesized low hum; no water-deity office"
+    ],
+    "rawBytes": 145380,
+    "rawSha256": "66288b2e25543bfb1b46f2823599725656db1df8d8f3f8cd490103734f3142ad",
+    "parentVerification": "Independently downloaded complete Gutenberg text including END marker; displayed quote is an exact continuous substring, retaining internal ASCII space. Raw byte count and SHA256 refer to the entire downloaded file."
+  },
+  "budget": {
+    "limit": 12,
+    "actualConsumed": 3.5,
+    "successfulTransactions": 5,
+    "initialTwoPartTarget": 3,
+    "qualityRetryConsumed": 0.5
+  },
+  "transactions": [
+    {
+      "job": "changyou-ear-v1",
+      "tier": "Gen-2.5-Medium",
+      "hash": "a84409c61ded65c9",
+      "uuid": "61c38609-afc8-4509-ad13-3b866ddab40a",
+      "consumed": 0.5,
+      "disposition": "four rendered views Read before HIGH; used only as image reference"
+    },
+    {
+      "job": "changyou-body-v1",
+      "tier": "Gen-2.5-Medium",
+      "hash": "48585d03f5a0831d",
+      "uuid": "b09ea686-ff9e-49bc-9306-773ce730a458",
+      "consumed": 0.5,
+      "disposition": "rejected: arms too short and torso too muscular/humanlike; not shipped"
+    },
+    {
+      "job": "changyou-ear-max",
+      "tier": "Gen-2.5-Extreme-High",
+      "hash": "962d2ad0c27399fd",
+      "uuid": "2a1d0e99-42a3-4892-9e44-ee6d258022dc",
+      "consumed": 1,
+      "file": "raw/changyou-ear-max/base_high_pbr.glb",
+      "sha256": "5b430d13565e25c03c0741f1bcf449c2e0578613d2ff1e3b8838b65b492b821c",
+      "originalTriangles": 50000,
+      "originalBytes": 37931464,
+      "disposition": "four independent transformed copies in final model"
+    },
+    {
+      "job": "changyou-body-v2",
+      "tier": "Gen-2.5-Medium",
+      "hash": "6acf3d4b7ca55976",
+      "uuid": "0eaf9b8b-d3dc-4ce3-8d41-d217f757e45c",
+      "consumed": 0.5,
+      "disposition": "baked facing correction and tucked native ear projections; corrected four views Read before HIGH; no Medium geometry shipped"
+    },
+    {
+      "job": "changyou-body-max",
+      "tier": "Gen-2.5-Extreme-High",
+      "hash": "b0fa593320ef1199",
+      "uuid": "90da19a9-02f9-47cc-8713-7def30b586f1",
+      "consumed": 1,
+      "file": "raw/changyou-body-max/base_high_pbr.glb",
+      "sha256": "8813c68ea730228db820fbb21f96de51463f3b810e4e0fbb692233582853cd09",
+      "originalTriangles": 50000,
+      "originalBytes": 25485332,
+      "disposition": "new full primate body in final model; residual native pinna relief tucked and UV ear markings repainted to sampled temporal fur"
+    }
+  ],
+  "nonTransactions": [
+    {
+      "job": "changyou-body-v1",
+      "result": "HTTP 400 prompt >1024 characters, no task UUID or credit receipt; shortened and dry-run again"
+    },
+    {
+      "job": "changyou-body-v2 first text",
+      "result": "Provider IMAGE_CONTENT_VIOLATION, no task UUID or credit receipt; simplified zoological anatomy text and dry-run again"
+    }
+  ],
+  "generationPolicy": "All five jobs dry-run before submitting. New task-specific empty raw/cache directories. No downloaded scripts executed; all processing runs from trusted worktree scripts. No texture_mode add-on. Both HIGH jobs use HighPack and actual returned base_high_pbr.glb. No approval rejection occurred.",
+  "stageTwoInputs": {
+    "body": [
+      "concept/changyou-fixed/view_34.png",
+      "concept/changyou-fixed/view_side.png",
+      "concept/changyou-fixed/view_front.png",
+      "concept/changyou-fixed/view_back.png"
+    ],
+    "ear": [
+      "concept/changyou-ear/view_34.png",
+      "concept/changyou-ear/view_side.png",
+      "concept/changyou-ear/view_front.png",
+      "concept/changyou-ear/view_back.png"
+    ]
+  },
+  "offlinePreparation": {
+    "scripts": [
+      "pipeline/blender/prepare_changyou.py",
+      "pipeline/blender/rig_changyou.py"
+    ],
+    "body": "Normalize HIGH to 0.76m longest horizontal extent; retain original projecting muzzle, eyes, long arm/elbow/wrist/hand continuity, narrow furry torso, bent legs, foot toes and one native tail. Only supporting soles flattened below 8mm. Native ear rim and temporal UV markings erased, preserving eyes/muzzle.",
+    "ears": "Normalize HIGH ear to .2m horizontal extent, scale each copy to .13/.11m height; sweep each pinna outward .95rad. Lengthen medial dermis into temporal scalp; no negative runtime scales. Four separate ear bones, no hidden original pair.",
+    "earRootPenetrationVertices": {
+      "ear_l_0": 2148,
+      "ear_l_1": 2500,
+      "ear_r_0": 3121,
+      "ear_r_1": 4976
+    },
+    "earRootMeasurement": "Actual assembled mesh BVH +X ray exit normal test, independently measured before acceptance; each root has thousands of vertices inside temporal tissue, not floating near it.",
+    "rig": "26-bone dedicated primate skeleton: axial chain, two upper/lower/hand chains, two upper/lower/foot chains, four independent ear roots, five tail bones. Geometrically classified segment-distance weights, sole vertices rigid to foot, no unweighted vertices. Hand and curled-tail regions flood through coincident UV-seam vertices; measured tail junction cutoff .50m isolates 1595 vertices. Joint weights smoothed eight passes and all real toe/sole weights restored rigidly to foot bones.",
+    "gait": "2.4sec double-support biped slow walk; duty .66, circle radius1m speed .08m/sec, exact inverse circular foot XYZ and yaw baked per frame. Runtime uses matching tangent heading without yaw damping. Special restrained head/arm gesture, returns idle after4sec.",
+    "compression": "meshopt and WebP2048, simplify=false flatten=false join=false"
+  },
+  "visualAcceptance": {
+    "finalConcepts": [
+      "concept/changyou/view_34.png",
+      "concept/changyou/view_side.png",
+      "concept/changyou/view_front.png",
+      "concept/changyou/view_back.png"
+    ],
+    "review": "Read all final orthographic views and actual browser front/back/both sides/ear closeup, idle/walk/special plus three continuous walking crops. Confirmed nonhuman muzzle/long-arm narrow primate anatomy, two readable hands and feet, exactly four outward pinnae, cleared native ear marks, tissue roots, single tail, matching ink palette, no black normal failure or detached copy.",
+    "iteration": "First assembled ears faced forward too much. Revised outward pinna rotation and deeper medial dermis, then removed residual native-ear UV markings identified in side view, rebuilt and reran full browser QA. ready stayed false through this review. Motion crops found inner-elbow axial contamination and lateral toes mistaken for the nearby hanging hand. Corrected anatomical regions, bridged UV seams for connectivity, smoothed joints, and independently checked all toe vertices during an arm gesture before final readiness."
+  },
+  "runtimeQA": {
+    "script": "scripts/qa-changyou.mjs",
+    "reportPath": "/tmp/changyou-qa/report.json",
+    "passed": true,
+    "baseline": {
+      "invalid": 0,
+      "nodes": 39,
+      "vertices": 128706,
+      "meshes": 5,
+      "outlines": 5,
+      "bones": 26,
+      "ears": 4,
+      "feet": 2,
+      "hands": 2
+    },
+    "gestureFeet": {
+      "vertices": 1971,
+      "maxDrift": 0
+    },
+    "contact": {
+      "points": {
+        "leg_l_foot": 59,
+        "leg_r_foot": 93
+      },
+      "frames": 397,
+      "plants": [
+        {
+          "foot": "leg_l_foot",
+          "maxDrift": 0.0002507953769654836,
+          "maxDirection": 0.0005818973443130788,
+          "samples": 51,
+          "minY": 0.0006004978377456283,
+          "maxY": 0.000733638722234975
+        },
+        {
+          "foot": "leg_r_foot",
+          "maxDrift": 0.0003093214050644076,
+          "maxDirection": 0.0006992518178971081,
+          "samples": 80,
+          "minY": 0.0006196798198280229,
+          "maxY": 0.0008522545531771675
+        },
+        {
+          "foot": "leg_l_foot",
+          "maxDrift": 0.0004599362583423464,
+          "maxDirection": 0.001165116515400424,
+          "samples": 80,
+          "minY": 0.0005515561589174434,
+          "maxY": 0.0007456120711237801
+        },
+        {
+          "foot": "leg_r_foot",
+          "maxDrift": 0.0003090317693809254,
+          "maxDirection": 0.0006981406546328843,
+          "samples": 80,
+          "minY": 0.0006197501620804902,
+          "maxY": 0.0008522544159464962
+        },
+        {
+          "foot": "leg_l_foot",
+          "maxDrift": 0.0004609006888904946,
+          "maxDirection": 0.0011658217494271437,
+          "samples": 80,
+          "minY": 0.0005515584098364501,
+          "maxY": 0.0007455393189937931
+        },
+        {
+          "foot": "leg_r_foot",
+          "maxDrift": 0.0002794824578293282,
+          "maxDirection": 0.0006563949159850091,
+          "samples": 66,
+          "minY": 0.0006196799536771769,
+          "maxY": 0.0008426269861607771
+        }
+      ],
+      "maxWorldXYZDrift": 0.0004609006888904946,
+      "maxSoleDirectionRadians": 0.0011658217494271437
+    },
+    "remounts": [
+      {
+        "state": {
+          "invalid": 0,
+          "nodes": 39,
+          "vertices": 128706,
+          "meshes": 5,
+          "outlines": 5,
+          "bones": 26,
+          "ears": 4,
+          "feet": 2,
+          "hands": 2
+        },
+        "ownership": {
+          "textures": 5,
+          "disposedTextures": 5,
+          "disposedMaterials": 10,
+          "materials": 10,
+          "disposedGeometry": 0,
+          "liveSkeletonTextures": 0
+        }
+      },
+      {
+        "state": {
+          "invalid": 0,
+          "nodes": 39,
+          "vertices": 128706,
+          "meshes": 5,
+          "outlines": 5,
+          "bones": 26,
+          "ears": 4,
+          "feet": 2,
+          "hands": 2
+        },
+        "ownership": {
+          "textures": 5,
+          "disposedTextures": 5,
+          "disposedMaterials": 10,
+          "materials": 10,
+          "disposedGeometry": 0,
+          "liveSkeletonTextures": 0
+        }
+      },
+      {
+        "state": {
+          "invalid": 0,
+          "nodes": 39,
+          "vertices": 128706,
+          "meshes": 5,
+          "outlines": 5,
+          "bones": 26,
+          "ears": 4,
+          "feet": 2,
+          "hands": 2
+        },
+        "ownership": {
+          "textures": 5,
+          "disposedTextures": 5,
+          "disposedMaterials": 10,
+          "materials": 10,
+          "disposedGeometry": 0,
+          "liveSkeletonTextures": 0
+        }
+      }
+    ],
+    "audio": {
+      "context": "running",
+      "humPeak": 0.4735153913497925,
+      "narrationSeconds": 44.617125,
+      "narrationRms": 0.11391267952246069,
+      "playing": true
+    },
+    "errors": []
+  },
+  "delivery": {
+    "model": "public/models/changyou/body.glb",
+    "triangles": 249930,
+    "bytes": 1758072,
+    "clips": [
+      "idle",
+      "walk",
+      "special"
+    ],
+    "readyAfterAnatomyAndQAPassed": true,
+    "pushed": false,
+    "deployed": false,
+    "sha256": "688f69abbc8deb8c3b589cb59eb0c58f821a110380fd701a04193b6b773fd8d6"
+  },
+  "parentAcceptance": {
+    "checked": "2026-11-08",
+    "inputAudit": {
+      "transactions": 5,
+      "consumed": 3.5,
+      "sourceOriginals": [
+        {
+          "file": "raw/changyou-ear-max/base_high_pbr.glb",
+          "sha256": "5b430d13565e25c03c0741f1bcf449c2e0578613d2ff1e3b8838b65b492b821c",
+          "bytes": 37931464,
+          "triangles": 50000
+        },
+        {
+          "file": "raw/changyou-body-max/base_high_pbr.glb",
+          "sha256": "8813c68ea730228db820fbb21f96de51463f3b810e4e0fbb692233582853cd09",
+          "bytes": 25485332,
+          "triangles": 50000
+        }
+      ],
+      "runtime": {
+        "bytes": 1758072,
+        "sha256": "688f69abbc8deb8c3b589cb59eb0c58f821a110380fd701a04193b6b773fd8d6"
+      }
+    },
+    "visual": "Parent read idle/walk/special, three continuous walking crops, front/back/left/right/ear-detail views, and 390/800 narration-playing screenshots. Four pinnae have embedded roots, primate muzzle/long arms and distinct hands/toes remain readable; no detached parts or obvious clipping in sampled motion. At 800px the existing card partially occludes the model; controls remain reachable.",
+    "runtime": {
+      "report": "/tmp/changyou-parent-final-qa2/report.json",
+      "baseline": {
+        "invalid": 0,
+        "nodes": 39,
+        "vertices": 128706,
+        "meshes": 5,
+        "outlines": 5,
+        "bones": 26,
+        "ears": 4,
+        "feet": 2,
+        "hands": 2
+      },
+      "gestureFeet": {
+        "vertices": 1971,
+        "maxDrift": 0
+      },
+      "contact": {
+        "frames": 397,
+        "points": {
+          "leg_l_foot": 59,
+          "leg_r_foot": 93
+        },
+        "maxWorldXYZDrift": 0.000459961320895516,
+        "maxSoleDirectionRadians": 0.0011625830123683021,
+        "maxSolePlaneNormalRadians": 0.001165189692464245,
+        "plants": [
+          {
+            "foot": "leg_l_foot",
+            "maxDrift": 0.0002499325332437123,
+            "maxDirection": 0.0005818918662204837,
+            "maxPlaneNormal": 0.0005816123511332471,
+            "samples": 51,
+            "minY": 0.0006005108659009606,
+            "maxY": 0.0007335235404115625
+          },
+          {
+            "foot": "leg_r_foot",
+            "maxDrift": 0.0003084708920234093,
+            "maxDirection": 0.0006967769560414897,
+            "maxPlaneNormal": 0.000703941881090268,
+            "samples": 80,
+            "minY": 0.0006198205689602609,
+            "maxY": 0.0008521107355133895
+          },
+          {
+            "foot": "leg_l_foot",
+            "maxDrift": 0.000459961320895516,
+            "maxDirection": 0.0011625830123683021,
+            "maxPlaneNormal": 0.001165189692464245,
+            "samples": 80,
+            "minY": 0.0005517701851910362,
+            "maxY": 0.0007454002150089067
+          },
+          {
+            "foot": "leg_r_foot",
+            "maxDrift": 0.0003084703566484773,
+            "maxDirection": 0.000696775654416771,
+            "maxPlaneNormal": 0.0007039406054888381,
+            "samples": 80,
+            "minY": 0.0006198206362653114,
+            "maxY": 0.0008521105984341526
+          },
+          {
+            "foot": "leg_l_foot",
+            "maxDrift": 0.0004593084787560483,
+            "maxDirection": 0.0011616286134798401,
+            "maxPlaneNormal": 0.001164235717569395,
+            "samples": 80,
+            "minY": 0.0005518763914480473,
+            "maxY": 0.0007454000822704199
+          },
+          {
+            "foot": "leg_r_foot",
+            "maxDrift": 0.00027775983984771853,
+            "maxDirection": 0.0006545621272381687,
+            "maxPlaneNormal": 0.0006517686005031766,
+            "samples": 66,
+            "minY": 0.0006198913769692727,
+            "maxY": 0.0008425101521848388
+          }
+        ]
+      },
+      "remounts": [
+        {
+          "state": {
+            "invalid": 0,
+            "nodes": 39,
+            "vertices": 128706,
+            "meshes": 5,
+            "outlines": 5,
+            "bones": 26,
+            "ears": 4,
+            "feet": 2,
+            "hands": 2
+          },
+          "ownership": {
+            "textures": 5,
+            "disposedTextures": 5,
+            "disposedMaterials": 10,
+            "materials": 10,
+            "disposedGeometry": 0,
+            "liveSkeletonTextures": 0
+          }
+        },
+        {
+          "state": {
+            "invalid": 0,
+            "nodes": 39,
+            "vertices": 128706,
+            "meshes": 5,
+            "outlines": 5,
+            "bones": 26,
+            "ears": 4,
+            "feet": 2,
+            "hands": 2
+          },
+          "ownership": {
+            "textures": 5,
+            "disposedTextures": 5,
+            "disposedMaterials": 10,
+            "materials": 10,
+            "disposedGeometry": 0,
+            "liveSkeletonTextures": 0
+          }
+        },
+        {
+          "state": {
+            "invalid": 0,
+            "nodes": 39,
+            "vertices": 128706,
+            "meshes": 5,
+            "outlines": 5,
+            "bones": 26,
+            "ears": 4,
+            "feet": 2,
+            "hands": 2
+          },
+          "ownership": {
+            "textures": 5,
+            "disposedTextures": 5,
+            "disposedMaterials": 10,
+            "materials": 10,
+            "disposedGeometry": 0,
+            "liveSkeletonTextures": 0
+          }
+        }
+      ],
+      "audio": {
+        "context": "running",
+        "humPeak": 0.4739916920661926,
+        "narrationSeconds": 44.61714285714286,
+        "narrationRms": 0.1139131846106613,
+        "playing": true
+      },
+      "errors": [],
+      "passed": true
+    },
+    "cards": {
+      "id": "changyou",
+      "widths": [
+        {
+          "width": 390,
+          "bounds": {
+            "card": {
+              "left": 16,
+              "right": 203.125,
+              "top": 16,
+              "bottom": 340,
+              "hit": true
+            },
+            "title": {
+              "left": 144.8125,
+              "right": 177.8125,
+              "top": 29,
+              "bottom": 87.5625,
+              "hit": true
+            },
+            "button": {
+              "left": 148.3125,
+              "right": 174.3125,
+              "top": 129.5625,
+              "bottom": 173.46875,
+              "hit": true
+            },
+            "viewport": 390,
+            "scroll": 390
+          },
+          "playing": {
+            "time": 0.21732,
+            "paused": false,
+            "narrating": true
+          },
+          "stopped": true
+        },
+        {
+          "width": 800,
+          "bounds": {
+            "card": {
+              "left": 32,
+              "right": 361.296875,
+              "top": 28,
+              "bottom": 663,
+              "hit": true
+            },
+            "title": {
+              "left": 290.984375,
+              "right": 335.984375,
+              "top": 49,
+              "bottom": 127.09375,
+              "hit": true
+            },
+            "button": {
+              "left": 300.484375,
+              "right": 326.484375,
+              "top": 169.09375,
+              "bottom": 213,
+              "hit": true
+            },
+            "viewport": 800,
+            "scroll": 800
+          },
+          "playing": {
+            "time": 0.215814,
+            "paused": false,
+            "narrating": true
+          },
+          "stopped": true
+        }
+      ],
+      "errors": []
+    },
+    "audio": {
+      "bytes": 713965,
+      "sha256": "195978872c6c0a4299f4f8592165c8a1a131e3d7460f26fe62d51f0bd6571550"
+    }
+  }
+}

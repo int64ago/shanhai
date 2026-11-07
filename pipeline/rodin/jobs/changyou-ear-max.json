@@ -1,0 +1,9 @@
+{
+  "id": "changyou-ear-max",
+  "beast": "changyou",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "One isolated macaque primate external ear. Preserve reference rounded helix, antihelix, recessed concha and small tragus, warm grey brown short fur and dark skin. Coherent fleshy closed back and soft attachment root, natural anatomical ear, no head, no body, no jewelry, no extra organs.",
+  "images": ["concept/changyou-ear/view_34.png", "concept/changyou-ear/view_side.png", "concept/changyou-ear/view_front.png", "concept/changyou-ear/view_back.png"],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000, "addons": "HighPack" }
+}
