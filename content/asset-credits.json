@@ -258,9 +258,9 @@
     },
     {
       "path": "public/models/zouwu/",
-      "source": "Offline reuse of zheng-body-max and zheng-tail-max, both Gen-2.5-Extreme-High (49,751 / 49,964 triangles). Returned base_basic_pbr.glb masters verified against pipeline/rodin/credits.log; original hashes and exact preparations recorded in content/beasts/zouwu.json. Five-colour coat, horn removal, 2.4-body-length single tail and own paw-target animations by pipeline/blender/prepare_zouwu.py and rig_zouwu.py. Zero new Rodin transactions or credits.",
-      "author": "项目自有 AI 生成素材与离线改制",
-      "license": "Hyper3D Rodin 生成输出（沿用项目既有源资产条款）"
+      "source": "Body: offline reuse of zheng-body-max, Gen-2.5-Extreme-High (49,751 triangles), with five-colour coat and horn removal; original hashes recorded in content/beasts/zouwu.json. Tail: original local Blender circular tapered surface (6,936 triangles), procedural coat, 2.40-body-length arc matching the existing narrated design and 36 flexible joints, replacing the old stretched tail entirely. Existing cat geometry and weights retained; paw contacts rebaked against the runtime circular path. Scripts: pipeline/blender/prepare_zouwu.py and rig_zouwu.py. Zero new Rodin transactions or credits.",
+      "author": "项目自有 AI 躯干素材与本地原创尾部",
+      "license": "躯干沿用 Hyper3D Rodin 既有源资产条款；重建尾网格与贴图为项目原创"
     },
     {
       "path": "public/models/tongtong/body.glb",

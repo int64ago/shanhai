@@ -4,8 +4,8 @@
   "archetype": "quadruped",
   "source": [
     {
-      "book": "山海经·海内北经",
-      "text": "林氏国有珍兽，大若虎，五采毕具，尾长于身，名曰驺吾，乘之日行千里。"
+      "book": "山海經·海內北經",
+      "text": "林氏國有珍獸，大若虎，五采畢具，尾長于身，名曰騶吾，乘之日行千里。"
     }
   ],
   "inferred": [
@@ -18,8 +18,8 @@
       "basis": "据「五采毕具」设五色；前朱后绿的色区、白腹、墨斑与尾部斑纹均为艺术推断。"
     },
     {
-      "item": "一条长尾，长度为鼻端至臀部的 2.4 倍",
-      "basis": "据「尾长于身」作单尾；原文没有尾长倍数，2.4 倍比例与舒展回摆的姿态为设计选择。"
+      "item": "一条圆润渐细的长尾，弧长约为鼻端至臀部的 2.4 倍",
+      "basis": "据「尾长于身」作单尾；原文没有尾长倍数，约 2.4 倍比例、下垂回勾与柔软尾梢为设计选择。"
     },
     {
       "item": "缓步与蓄势轻跃，尾梢延后回摆",
@@ -33,10 +33,13 @@
   "sourceVerification": {
     "url": "https://zh.wikisource.org/wiki/山海經/海內北經",
     "checked": "2026-11-07",
-    "note": "本页作「五采畢具，尾長于身，名曰騶吾」；引文以简体呈现，保留五采、于用字。正文未给出五倍或任何其他倍数。"
+    "rawUrl": "https://zh.wikisource.org/w/index.php?title=山海經/海內北經&action=raw",
+    "rawBytes": 3459,
+    "rawSha256": "23d01e77c430d513db0174cb599b454a5160ed415fd1ed0fa913e6eb89accd7c",
+    "note": "父会话读取下载原始正文，确认source为连续逐字片段，保留五采、于和騶吾字形。正文未给出尾长倍数；约2.4倍为与既有说书一致的设计选择。"
   },
   "production": {
-    "method": "Offline reuse of verified existing Extreme-High masters; no new generation transaction.",
+    "method": "Offline reuse of verified existing Extreme-High body; local Blender tail rebuild and runtime flexible chain; no new generation transaction.",
     "newRodinCredits": 0,
     "body": {
       "job": "zheng-body-max",
@@ -47,22 +50,16 @@
       "preparedInput": "raw/_build/zheng/body_high_fixed.glb",
       "preparedSha256": "04543b1a7e75d27b8a2204034dd337256703b981e1e14a138f8662bedb3af5d7",
       "triangles": 49751,
-      "changes": "Measured forehead horn flattened into skull; five-colour texture painted over original coat, original UV/fur detail retained; own three-clip paw-target rig. No new tail trim."
+      "changes": "Measured forehead horn flattened into skull; five-colour texture painted over original coat, original UV/fur detail retained. Existing mesh, authored normals, skin weights and skeleton retained; three clips rebaked with inverse circular paw targets and full sole orientation. No new tail trim."
     },
     "tail": {
-      "job": "zheng-tail-max",
-      "tier": "Gen-2.5-Extreme-High",
-      "uuid": "5df9c54f-7b07-4a10-9fa9-1c9639bcd23a",
-      "rawFile": "raw/zheng-tail-max/base_basic_pbr.glb",
-      "rawSha256": "1b8ada26543347529cba616a5f0108e426993e6f985405993bd520936dea7b2b",
-      "preparedInput": "raw/_build/zheng/tail_high_norm.glb",
-      "preparedSha256": "a43f92f34e456b916c9f79c361d658970f905a7b002052cce00c9cae6a54f734",
-      "triangles": 49964,
+      "method": "Local Blender round tapered surface and original procedural coat; replaces the stretched zheng-tail-max mesh entirely.",
+      "triangles": 6936,
       "bodyLength": 0.9815559387207031,
-      "tailLength": 2.3557342529296874,
-      "ratio": 2.4,
-      "segments": 24,
-      "changes": "Offline longitudinal extension with inverse-transpose guarded authored normals; one continuous skinned chain, no runtime mesh stretching."
+      "tailLength": 2.3597342529296874,
+      "ratio": 2.4040751625477537,
+      "segments": 36,
+      "changes": "144 circular rings, analytic normals, continuous adjacent-joint weights; gravity arc and restrained phase-delayed absolute tangents. Effect-owned geometry, materials and skeleton disposed on cleanup."
     },
     "scripts": [
       "pipeline/blender/prepare_zouwu.py",

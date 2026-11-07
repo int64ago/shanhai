@@ -1,27 +1,31 @@
 import { useEffect, useMemo, useRef } from 'react'
 import { useFrame, useThree } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
-import { AnimationMixer, Bone, Box3, Float32BufferAttribute, Group, MathUtils, Mesh, MeshStandardMaterial, Object3D, Quaternion, Skeleton, SkinnedMesh, Uint16BufferAttribute, Vector3, type AnimationAction } from 'three'
+import { clone } from 'three/examples/jsm/utils/SkeletonUtils.js'
+import { AnimationMixer, Bone, Box3, Float32BufferAttribute, Group, LoopOnce, LoopRepeat, MathUtils, Mesh, MeshStandardMaterial, Object3D, Quaternion, Skeleton, SkinnedMesh, Uint16BufferAttribute, Vector3, type AnimationAction, type Material } from 'three'
 import { useApp } from '../../app/store'
 import { audio } from '../../systems/audio/AudioEngine'
-import { createOutline, inkify } from '../../systems/ink/inkify'
+import { createOutline } from '../../systems/ink/inkify'
 import { createInkMaterial } from '../../systems/ink/inkMaterial'
+import { createPawPlants, stabilizePaws } from './paws'
 
-const SEGMENTS = 24
+const SEGMENTS = 36
 const SECONDS = 4.6
+const RADIUS = 1.8
+const SPEED = 0.18
 const X = new Vector3(1, 0, 0)
 
-/** One continuous HIGH tail, extended offline to 2.4 nose-to-rump lengths. */
+/** Locally rebuilt round/tapered surface, with four rings per flexible joint. */
 function makeTail(source: Mesh) {
   const geometry = source.geometry.clone()
-  // Meshopt dequantization lives on the source node. Expand normalized integer
-  // attributes before baking that matrix, or writes clamp the long tail to ±1.
+  // Meshopt's integer attributes must be expanded before baking node transforms.
   for (const name of ['position', 'normal']) {
     const attribute = geometry.getAttribute(name)
     const values = new Float32Array(attribute.count * 3)
     for (let i = 0; i < attribute.count; i++) values.set([attribute.getX(i), attribute.getY(i), attribute.getZ(i)], i * 3)
     geometry.setAttribute(name, new Float32BufferAttribute(values, 3))
   }
+  // applyMatrix4 uses the inverse transpose for the authored analytic normals.
   geometry.applyMatrix4(source.matrixWorld)
   const position = geometry.getAttribute('position')
   const bounds = new Box3().setFromBufferAttribute(position as never)
@@ -51,10 +55,13 @@ function makeTail(source: Mesh) {
   mesh.add(bones[0])
   mesh.bind(new Skeleton(bones))
   const pivot = new Object3D()
-  pivot.quaternion.setFromUnitVectors(X, new Vector3(0, 0.045, -1).normalize())
-  pivot.add(mesh, createOutline(mesh, 0.0025))
-  return { pivot, mesh, bones, length }
+  pivot.quaternion.setFromUnitVectors(X, new Vector3(0, 0, -1))
+  const outline = createOutline(mesh, 0.0018)
+  pivot.add(mesh, outline)
+  return { pivot, mesh, bones, length, outline, phase: 0, speed: 1, burst: 0,
+    direction: new Vector3(), previous: new Quaternion(), absolute: new Quaternion() }
 }
+type Tail = ReturnType<typeof makeTail>
 
 export function Zouwu() {
   const body = useGLTF('/models/zouwu/body.glb')
@@ -64,39 +71,67 @@ export function Zouwu() {
   const camera = useThree((s) => s.camera)
   const controls = useThree((s) => s.controls) as unknown as { target: Vector3; update: () => void } | null
   const root = useRef<Group>(null)
-  const time = useRef(0)
-  const since = useRef(0)
   const walk = useRef({ angle: 0, phase: 0 })
   const follow = useMemo(() => new Vector3(), [])
   const rig = useMemo(() => {
-    const scene = body.scene
+    // Cached useGLTF objects remain untouched. GPU resources are made in the
+    // effect so StrictMode's discarded memo cannot allocate orphaned materials.
+    const scene = clone(body.scene)
     const mixer = new AnimationMixer(scene)
     const clips: Record<string, AnimationAction> = {}
     for (const clip of body.animations) clips[clip.name] = mixer.clipAction(clip)
-    scene.updateMatrixWorld(true)
     const attach = scene.getObjectByName('tail_attach')
     if (!attach) throw new Error('zouwu: missing tail root')
+    return { scene, mixer, clips, attach, plants: createPawPlants(scene), chain: null as Tail | null }
+  }, [body])
+
+  useEffect(() => {
+    const originals = new Map<Mesh, Material | Material[]>()
+    const owned: Material[] = []
+    const outlines: Mesh[] = []
+    rig.scene.traverse((node) => {
+      if (!(node instanceof Mesh)) return
+      originals.set(node, node.material)
+      node.frustumCulled = false
+      const material = createInkMaterial({ map: (node.material as MeshStandardMaterial).map, saturation: 0.88 })
+      node.material = material
+      owned.push(material)
+    })
+    for (const node of originals.keys()) {
+      const outline = createOutline(node, 0.004)
+      node.parent!.add(outline)
+      outlines.push(outline)
+    }
+    rig.scene.updateMatrixWorld(true)
     tail.scene.updateMatrixWorld(true)
     let source: Mesh | undefined
     tail.scene.traverse((o) => { if (!source && o instanceof Mesh) source = o })
-    if (!source) throw new Error('zouwu: missing HIGH tail')
+    if (!source) throw new Error('zouwu: missing local tail')
     const chain = makeTail(source)
     const holder = new Object3D()
     holder.name = 'zouwu_tail_holder'
-    // The cancellation excludes the rotating outer beast group.
-    holder.quaternion.copy(attach.getWorldQuaternion(new Quaternion()).premultiply(scene.getWorldQuaternion(new Quaternion()).invert()).invert())
+    holder.quaternion.copy(rig.attach.getWorldQuaternion(new Quaternion()).premultiply(rig.scene.getWorldQuaternion(new Quaternion()).invert()).invert())
     holder.add(chain.pivot)
-    return { scene, mixer, clips, attach, holder, chain }
-  }, [body, tail])
-
-  useEffect(() => {
-    // All cached-scene additions, including outlines, happen in an effect.
-    inkify(rig.scene, { saturation: 0.88, outline: 0.004 })
-    rig.scene.traverse((o) => { if (o instanceof Mesh) o.frustumCulled = false })
-    rig.attach.add(rig.holder)
+    rig.attach.add(holder)
+    rig.chain = chain
+    for (const paw of rig.plants.paws) paw.planted = false
     if (import.meta.env.DEV) console.info('[beast] ready zouwu')
-    return () => { rig.attach.remove(rig.holder); rig.mixer.stopAllAction() }
-  }, [rig])
+    return () => {
+      rig.chain = null
+      holder.removeFromParent()
+      rig.mixer.stopAllAction()
+      chain.mesh.skeleton.dispose()
+      chain.mesh.geometry.dispose()
+      ;(chain.mesh.material as Material).dispose()
+      ;(chain.outline.material as Material).dispose()
+      for (const outline of outlines) { outline.removeFromParent(); (outline.material as Material).dispose() }
+      for (const [mesh, material] of originals) mesh.material = material
+      for (const material of owned) material.dispose()
+      const skeletons = new Set<Skeleton>()
+      rig.scene.traverse(node => { if (node instanceof SkinnedMesh) skeletons.add(node.skeleton) })
+      for (const skeleton of skeletons) skeleton.dispose()
+    }
+  }, [rig, tail])
 
   useEffect(() => {
     if (!controls) return
@@ -105,19 +140,17 @@ export function Zouwu() {
     camera.position.set(3.1, 1.65, 6.5)
     controls.target.set(-0.25, 0.48, 0.6)
     controls.update()
-    return () => {
-      camera.position.copy(previousPosition)
-      controls.target.copy(previousTarget)
-      controls.update()
-    }
+    return () => { camera.position.copy(previousPosition); controls.target.copy(previousTarget); controls.update() }
   }, [camera, controls])
 
   useEffect(() => {
     const name = action === 'special' ? 'alert' : action
     const clip = rig.clips[name]
     if (!clip) throw new Error(`zouwu: missing ${name}`)
-    clip.reset().setEffectiveWeight(1).fadeIn(0.2).play()
-    since.current = time.current
+    clip.reset().setEffectiveWeight(1).fadeIn(0.2)
+    clip.setLoop(action === 'special' ? LoopOnce : LoopRepeat, action === 'special' ? 1 : Infinity)
+    clip.clampWhenFinished = action === 'special'
+    clip.play()
     let timer: number | undefined
     if (action === 'special') timer = window.setTimeout(() => audio.zouwuCall(), 800)
     return () => { clip.fadeOut(0.2); clearTimeout(timer) }
@@ -125,16 +158,15 @@ export function Zouwu() {
 
   useFrame((_, rawDt) => {
     const dt = Math.min(rawDt, 0.05)
-    time.current += dt
-    const t = time.current
     const g = root.current
-    if (!g) return
+    const chain = rig.chain
+    if (!g || !chain) return
     rig.mixer.update(dt)
+    if (import.meta.env.DEV) g.userData.animationTime = rig.clips[action === 'special' ? 'alert' : action].time
     if (action === 'walk') {
-      // A broad, slow arc matches the offline stance displacement (0.18/s).
-      walk.current.angle += 0.18 / 1.8 * dt
+      walk.current.angle += SPEED / RADIUS * dt
       const a = walk.current.angle
-      g.position.set(0.55 + 1.8 * Math.sin(a), 0, 0.6 + 1.8 * (Math.cos(a) - 1))
+      g.position.set(0.55 + RADIUS * Math.sin(a), 0, 0.6 + RADIUS * (Math.cos(a) - 1))
       g.rotation.y = Math.PI / 2 + a
       const phase = rig.clips.walk.time / 1.6 % 1
       for (const beat of [0, 0.25, 0.5, 0.75]) {
@@ -142,27 +174,38 @@ export function Zouwu() {
       }
       walk.current.phase = phase
     }
+    stabilizePaws(rig.plants, g)
     if (controls) {
-      follow.set(g.position.x - Math.sin(g.rotation.y) * 0.8, 0.48, g.position.z - Math.cos(g.rotation.y) * 0.8)
+      follow.set(g.position.x - Math.sin(g.rotation.y) * 0.5, 0.42, g.position.z - Math.cos(g.rotation.y) * 0.5)
       follow.sub(controls.target).multiplyScalar(1 - Math.exp(-2 * dt))
       controls.target.add(follow)
       camera.position.add(follow)
     }
-    const s = t - since.current
-    if (action === 'special' && s > SECONDS) setAction('idle')
-    // A low S curve preserves the visible body. Travelling curvature lags
-    // progressively behind the rump; the bound sends a stronger wave down it.
-    const burst = action === 'special' ? Math.exp(-Math.pow((s - 2.05) / 0.72, 2)) : 0
+    const s = rig.clips.alert.time
+    if (action === 'special' && s >= SECONDS - 0.001) setAction('idle')
+    // Prescribe absolute tangents, then convert to parent-local quaternions.
+    // This gives a weight-bearing root, a low gravity arc, and a soft upturned
+    // tip without accumulating dozens of per-joint oscillations into a rope.
+    chain.speed = MathUtils.damp(chain.speed, action === 'walk' ? 1.8 : 1, 4, dt)
+    chain.phase += dt * chain.speed
+    chain.burst = MathUtils.damp(chain.burst, action === 'special' ? Math.exp(-Math.pow((s - 2.1) / 0.55, 2)) : 0, 6, dt)
+    chain.previous.identity()
     for (let i = 0; i <= SEGMENTS; i++) {
       const k = i / SEGMENTS
-      const lag = i * 0.21
-      const speed = action === 'walk' ? 2.4 : 1.05
-      rig.chain.bones[i].rotation.y = 0.11 * Math.sin(k * Math.PI * 2 - 0.4) + (0.02 + k * 0.045 + burst * 0.055) * Math.sin(t * speed - lag)
-      rig.chain.bones[i].rotation.z = 0.02 * Math.sin(k * Math.PI * 2) + (0.01 + burst * 0.025) * Math.sin(t * 1.3 - lag)
+      const lag = k * 2.8
+      const pitch = 0.04 - 0.32 * Math.sin(k * Math.PI) + 1.25 * MathUtils.smoothstep(k, 0.52, 1)
+        + (0.025 + 0.11 * k) * Math.sin(chain.phase - lag)
+        - chain.burst * 0.09 * Math.sin(k * Math.PI)
+      const yaw = 0.1 * Math.sin(k * Math.PI) + (0.025 + 0.12 * k) * Math.sin(chain.phase * 0.83 - lag)
+        + chain.burst * 0.12 * Math.sin(lag)
+      chain.direction.set(Math.cos(pitch) * Math.cos(yaw), Math.sin(pitch), Math.cos(pitch) * Math.sin(yaw))
+      chain.absolute.setFromUnitVectors(X, chain.direction)
+      chain.bones[i].quaternion.copy(chain.previous).invert().multiply(chain.absolute)
+      chain.previous.copy(chain.absolute)
     }
   })
 
-  return <group ref={root} position={[0.55, 0, 0.6]} rotation-y={Math.PI / 2}>
+  return <group ref={root} name="zouwu_root" position={[0.55, 0, 0.6]} rotation-y={Math.PI / 2}>
     <primitive object={rig.scene} />
   </group>
 }

@@ -1,10 +1,11 @@
 """Offline HIGH reuse for Zouwu; no generation or network requests.
 
-Inputs: Zheng body_high_fixed.glb and tail_high_norm.glb, derived from the
-Extreme-High zheng-body-max / zheng-tail-max masters. Keep the original dense
-geometry and UV fur detail. Flatten only the measured forehead horn, paint
-five-colour fur, and extend one tail to exactly 2.4 nose-to-rump lengths.
-The classical text specifies only 尾長于身; 2.4 is an artistic choice.
+Body input: Zheng body_high_fixed.glb from the Extreme-High zheng-body-max
+master. The historical tail input is retained for CLI compatibility but its
+stretched geometry is discarded. Keep the original dense body and UV fur detail.
+Flatten the measured forehead horn, paint five-colour fur, and locally rebuild
+a round tail at 2.4 body lengths, matching the existing narrated design.
+The classical text specifies only 尾長于身; the ratio is an artistic choice.
 """
 import argparse
 import json
@@ -120,40 +121,68 @@ def body(args):
 
 
 def tail(args, length):
-    obj = load(args.tail)
-    pts = [v.co.copy() for v in obj.data.vertices]
-    spans = [max(p[i] for p in pts)-min(p[i] for p in pts) for i in range(3)]
-    axis = max(range(3), key=lambda i: spans[i])
-    if axis != 0:
-        raise ValueError(f'Expected +X tail master, got spans {spans}')
-    lo, hi = min(p.x for p in pts), max(p.x for p in pts)
-    cy = (min(p.y for p in pts)+max(p.y for p in pts))/2
-    cz = (min(p.z for p in pts)+max(p.z for p in pts))/2
-    sx, sy, sz = length*2.4/(hi-lo), .075/spans[1], .075/spans[2]
-    normals = [n.vector.copy() for n in obj.data.corner_normals]
-    transforms = []
-    for vertex in obj.data.vertices:
-        p = vertex.co
-        u, w = 2*(p.y-cy)/spans[1], 2*(p.z-cz)/spans[2]
-        fy, fz = math.sqrt(max(.01, 1-w*w/2)), math.sqrt(max(.01, 1-u*u/2))
-        # Map the rectangular master cross-section to a rounded tail while
-        # retaining its original UVs and dense surface; use J^-T for normals.
-        transforms.append(Matrix(((sx, 0, 0), (0, sy*fy, -.0375*u*w/(2*fy)*2/spans[2]), (0, -.0375*w*u/(2*fz)*2/spans[1], sz*fz))).inverted_safe().transposed())
-        p.x = (p.x-lo)*sx
-        p.y = .0375*u*fy
-        p.z = .0375*w*fz
-    for loop, n in zip(obj.data.loops, normals):
-        n[:] = transforms[loop.vertex_index] @ n
-        if n.length > 1e-8:
-            n.normalize()
-        else:
-            n[:] = (0, 0, 1)
-    obj.data.normals_split_custom_set(normals)
-    obj.data.update()
+    """Local round, tapered replacement; the stretched flat master is discarded.
+
+    Dense longitudinal rings give every joint continuous neighbouring weights.
+    Analytic surface normals avoid recomputing the old AI mesh's degenerate faces.
+    The rest mesh is straight for skin binding; gravity curvature lives in the rig.
+    """
+    bpy.ops.wm.read_factory_settings(use_empty=True)
+    rings, sides = 144, 24
+    tail_length = length * 2.4
+    vertices, faces, normals = [], [], []
+    for i in range(rings + 1):
+        t = i / rings
+        radius = .004 + .045 * (1-t)**.75
+        slope = -.045*.75*max(1-t, 1/rings)**(-.25)/tail_length
+        for j in range(sides + 1):
+            theta = j/sides*math.tau
+            vertices.append((tail_length*t, radius*math.cos(theta), radius*math.sin(theta)))
+            normals.append(Vector((-slope, math.cos(theta), math.sin(theta))).normalized())
+    for i in range(rings):
+        for j in range(sides):
+            a = i*(sides+1)+j
+            faces.append((a, a+1, a+sides+2, a+sides+1))
+    # Small rounded end rather than the inherited pointed blade.
+    vertices.append((tail_length+.004, 0, 0)); normals.append(Vector((1,0,0)))
+    end = len(vertices)-1
+    for j in range(sides): faces.append((rings*(sides+1)+j, rings*(sides+1)+j+1, end))
+    mesh = bpy.data.meshes.new('zouwu_round_tapered_tail')
+    mesh.from_pydata(vertices, [], faces); mesh.update()
+    obj = bpy.data.objects.new('zouwu_tail', mesh); bpy.context.collection.objects.link(obj)
+    uv = mesh.uv_layers.new(name='tail_coat')
+    for polygon in mesh.polygons:
+        polygon.use_smooth = True
+        for loop_index in polygon.loop_indices:
+            index = mesh.loops[loop_index].vertex_index
+            uv.data[loop_index].uv = (min(index//(sides+1)/rings,1), (index%(sides+1))/sides)
+    mesh.normals_split_custom_set([normals[loop.vertex_index] for loop in mesh.loops])
+    # Paint deterministic ochre fur with broken ink rings and a green root that
+    # meets the existing malachite rump. No network or texture generation API.
+    width, height = 1024, 256
+    u, v = np.meshgrid(np.linspace(0,1,width), np.linspace(0,1,height))
+    root = np.clip(u/.22,0,1)[...,None]
+    colour = np.array([.10,.36,.29])*(1-root)+np.array([.69,.43,.17])*root
+    wave = u*11 + .09*np.sin(v*math.tau*3) + .035*np.sin(u*91+v*math.tau*7)
+    ring = np.exp(-((np.sin(wave*math.pi))/.26)**2)
+    broken = .65+.35*np.sin(v*math.tau*4+u*23)**2
+    ink = np.clip(ring*broken*.9 + np.clip((u-.94)/.06,0,1)*.75,0,.92)[...,None]
+    fur = (.94+.04*np.sin(u*1800+v*37)+.02*np.sin(v*490+u*57))[...,None]
+    pixels = np.ones((height,width,4),dtype=np.float32)
+    pixels[:,:,:3] = (colour*(1-ink)+np.array([.065,.055,.042])*ink)*fur
+    image = bpy.data.images.new('zouwu_local_tail_coat',width=width,height=height)
+    image.pixels.foreach_set(pixels.ravel()); image.pack()
+    material = bpy.data.materials.new('zouwu_local_tail'); material.use_nodes = True
+    shader = material.node_tree.nodes.get('Principled BSDF'); shader.inputs['Roughness'].default_value=.85
+    texture = material.node_tree.nodes.new('ShaderNodeTexImage'); texture.image=image
+    material.node_tree.links.new(texture.outputs['Color'],shader.inputs['Base Color'])
+    mesh.materials.append(material)
+    obj.select_set(True); bpy.context.view_layer.objects.active=obj
     bpy.ops.export_scene.gltf(filepath=str(args.work/'tail_prepared.glb'), export_format='GLB', use_selection=True, export_animations=False)
-    info = {'bodyLength': length, 'tailLength': length*2.4, 'tailBodyRatio': 2.4, 'tailVertices': len(obj.data.vertices), 'tailTriangles': len(obj.data.polygons)}
-    (args.work/'measurements.json').write_text(json.dumps(info, indent=2))
-    print('ZOUWU_TAIL', info)
+    info = {'bodyLength':length,'tailLength':tail_length+.004,'tailBodyRatio':(tail_length+.004)/length,
+            'tailVertices':len(vertices),'tailTriangles':rings*sides*2+sides,'segments':36}
+    (args.work/'measurements.json').write_text(json.dumps(info,indent=2))
+    print('ZOUWU_TAIL',info)
 
 
 p = argparse.ArgumentParser(description=__doc__)
@@ -161,6 +190,7 @@ p.add_argument('body')
 p.add_argument('tail')
 p.add_argument('work', type=Path)
 p.add_argument('views', type=Path)
+p.add_argument('--tail-only-body-length', type=float, help='Rebuild just the local tail, retaining the existing body asset')
 a = p.parse_args(sys.argv[sys.argv.index('--')+1:])
 a.work.mkdir(parents=True, exist_ok=True)
-tail(a, body(a))
+tail(a, a.tail_only_body_length if a.tail_only_body_length is not None else body(a))
