@@ -1,0 +1,9 @@
+{
+  "id": "boyi-quality-remake-body-high",
+  "beast": "boyi",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Preserve the reference organic hornless sheep body and natural four articulated sheep legs with realistic cloven hooves, level back and thick softly layered ivory wool. Keep the long anatomically sculpted sheep muzzle with a nose and mouth. Smooth unbroken short ivory wool covers the sides of the head: NO EYES, NO EYE SOCKETS, NO EYELIDS anywhere on the face. NO EARS. NO TAIL. Head, shoulders, chest, hips and all leg joints must flow continuously; complete natural anatomy. Uniform warm ivory wool, fine wool detail, clean continuous surfaces, not faceted patches.",
+  "images": ["concept/boyi-quality-body/view_34.png", "concept/boyi-quality-body/view_side.png", "concept/boyi-quality-body/view_front.png", "concept/boyi-quality-body/view_back.png"],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000, "addons": "HighPack" }
+}

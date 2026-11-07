@@ -230,15 +230,19 @@
     },
     {
       "path": "public/models/boyi/body.glb",
-      "source": "仅离线改制既有 HIGH 羊形母件：raw/taotie-body-max/base_basic_pbr.glb，50,000 三角面；原任务 taotie-body-max，Gen-2.5-Extreme-High，uuid 6105bc16-e06d-4419-a096-db4cccf5e44b，已载于 pipeline/rodin/credits.log（2026-11-06T14:40:47.361Z）。文件虽名 basic，已核对 HIGH 任务与几何；未使用 Medium，未提交新的生成事务。裁掉原生短尾、头颈截面突出部分及扁平畸形踝桩，清除裁切孤岛，保留 21,622 面的 HIGH 躯干与上肢，再与新胸部和四条下肢离线体素融合，连续羊躯为 357,428 面，投回原 HIGH 毛皮 UV。另雕刻无角且无面部眼睛的羊首、四耳、四足分蹄、恰好九尾及两只背目，绑定独立 98 骨与 idle/walk/special；最终 489,256 三角面，meshopt/WebP 压缩不减面。重建脚本：pipeline/blender/prepare_boyi.py、rig_boyi.py。",
-      "sourceSha256": "9bdd299ed4cac498e39f422c7850884e826c5de0fb87d29cb75502d7d8463c24",
+      "source": "本轮独立授权重新生成：羊躯、单耳、单尾分别经过 Gen-2.5-Medium → Blender 矫正及 Read 四视图 → Gen-2.5-Extreme-High，34 首图、HighPack、50,000 面，未加 texture_mode 附费。羊躯 HIGH 首次产生补片硬折面，重做连续 Medium 雕刻引导后重新 HIGH；7 笔真实事务共 5.5 积分，独立本轮上限 12，起始账本 67 行且猼訑历史计费 0。采用新的 HIGH-v2 有机羊躯及原生四足分蹄、四份新 HIGH 单耳、九份新 HIGH 有体积毛尾；旧饕餮羊躯、原程序直杆腿、方蹄和刺条尾均已替换。背目眼数为推断，原创眼组件逐顶点贴合实际背部曲面，面部不补眼。足底局部平整、加深趾间裂隙并沿共边分离实际蹄网格；同一足骨绑定接缝。独立 98 骨，四耳九尾双背目和 idle/walk/special；714,527 三角面，3,924,436 字节，meshopt/WebP，不减面、不 flatten、不 join。UUID、全部原始 HIGH SHA256、未采用首轮、四视图逐图哈希及本轮 baseline 均在 pipeline/provenance/boyi.json。脚本 prepare_boyi.py、rig_boyi.py、scripts/qa-boyi.mjs。",
+      "sourceComponents": [
+        { "path": "raw/boyi-quality-remake-body-high-v2/base_high_pbr.glb", "job": "boyi-quality-remake-body-high-v2", "tier": "Gen-2.5-Extreme-High", "uuid": "0b970715-eb69-451f-878b-005b50009ec1", "sha256": "3771c14d9e20a626dc738e04e70bbf004cdfbe7779f7aff0a038d8d26045a743" },
+        { "path": "raw/boyi-quality-remake-ear-high/base_high_pbr.glb", "job": "boyi-quality-remake-ear-high", "tier": "Gen-2.5-Extreme-High", "uuid": "da06d17a-7bfa-4190-9e7a-5c539523c89a", "sha256": "34e147e0ae35fbfd1f6f1993ad48a1563817a51a557a7f902076abf0ce72d542" },
+        { "path": "raw/boyi-quality-remake-tail-high/base_high_pbr.glb", "job": "boyi-quality-remake-tail-high", "tier": "Gen-2.5-Extreme-High", "uuid": "4db15744-ad6c-4644-8d49-bbfac39b333d", "sha256": "f20ef44b927264d60336a2009481573808653955b768dea2382e56b86707bc72" }
+      ],
       "sourceReference": "https://zh.wikisource.org/wiki/山海經/南山經 · 南山經之首 · 基山。原文其狀如羊、九尾四耳、其目在背、佩之不畏；背目数量、无角、毛色、耳尾形状及羊鸣均在 inferred 中明确标出。佩之不畏不是主动攻击法术。",
-      "author": "项目自有 HIGH AI 生成羊躯与离线程序雕刻",
+      "author": "本轮 Hyper3D HIGH 羊躯、耳尾母件与项目离线矫正、背目及绑定",
       "license": "Hyper3D Rodin 生成输出（沿用项目既有源资产条款）；新增离线雕刻与绑定为项目自制"
     },
     {
-      "path": "concept/boyi/view_{34,side,front,back,left}.png",
-      "source": "由最终离线猼訑雕刻在 Blender 中独立渲染，非生成服务输出；正、背、双侧与三分之四视图核查四耳九尾、背目、无角羊首、原生尾清理及分蹄接地。",
+      "path": "concept/boyi-{quality-body,quality-body-v2,quality-ear,quality-tail,final}/view_{34,side,front,back}.png",
+      "source": "本轮生成 Medium 的 Blender 矫正四视图用于对应 HIGH 引导；羊躯 v2 连续雕刻替换首轮补片引导。final 为最终组装的离线四视图，核查有机羊躯、四耳九尾体积与嵌入根部、贴背双目及真实分蹄。图像均为项目 Blender 渲染；逐图输入哈希见 provenance。",
       "author": "项目自制",
       "license": "沿用猼訑模型授权"
     },

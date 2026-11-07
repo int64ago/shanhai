@@ -1,0 +1,1142 @@
+{
+  "beast": "boyi",
+  "method": "New authorized Medium to Blender-corrected orthographic views to Extreme-High HighPack; three separate organic masters and one body HIGH quality retry",
+  "baseline": {
+    "time": "2026-11-07T14:43:14.989Z",
+    "head": "1b0318dc57f5e6f8c74fdfdbc8d9d81e64fdbd3d",
+    "worktree": "/Users/int64ago/workspace/shanhai/.claude/worktrees/beast-bingfeng/.claude/worktrees/boyi-quality",
+    "creditLogRows": 67,
+    "boyiHistorical": [],
+    "boyiHistoricalCredits": 0,
+    "authorizedAdditionalCredits": 12
+  },
+  "authorization": {
+    "additionalCreditCeiling": 12,
+    "scope": "boyi only"
+  },
+  "newTransactions": 7,
+  "actualNewCredits": 5.5,
+  "browserQA": {
+    "script": "scripts/qa-boyi.mjs",
+    "previewPort": 5226,
+    "fullReport": "/tmp/shanhai-quality-remakes-20261107/boyi/run-20261107/qa-final/browser-qa.json",
+    "method": "360 requestAnimationFrame samples of the actual running app and natural circular walk; update world and skeleton matrices, CPU-skin every actual sole vertex in XYZ, and derive the real sole plane normal and tangent from three noncollinear vertices. Stance is selected by the running animation phase, not by apparent stillness.",
+    "soleVertices": [
+      126,
+      92,
+      119,
+      111
+    ],
+    "maxStanceDriftMeters": [
+      0.000002477067859812874,
+      0.000003629742302565582,
+      0.0000026497310233862023,
+      0.0000030769636726294288
+    ],
+    "maxStanceDirectionRadians": 0.000003697109923979898,
+    "maxSolePlaneTiltRadians": 0.0001237244599197233,
+    "maxStanceHeightMeters": 0.00018429759389799322,
+    "nodes": 153,
+    "meshes": 26,
+    "bones": 98,
+    "finiteActionSamples": 91,
+    "remounts": 3,
+    "ownedMaterialsDisposedPerRemount": [
+      52,
+      52,
+      52
+    ],
+    "checks": "Four ears, nine volumetric tails, 72 tail bones, two dorsal eyes, zero face eyes or horns; auto return to idle, special-to-walk-to-idle interruption, pending call cancellation, three remounts with stable node/mesh/outline counts and complete owned material disposal; browser errors zero.",
+    "audio": {
+      "durationSeconds": 56.842438,
+      "decodedRMS": 0.1002649243813607,
+      "context": "running",
+      "mediaError": null,
+      "sheepCallCallbacks": 3,
+      "footstepCallbacks": 26
+    },
+    "visuals": "/tmp/shanhai-quality-remakes-20261107/boyi/run-20261107: boyi-{idle,walk,special}.png, four walk closeups, three special closeups, qa-final/boyi-angle-{front,back,left,right,dorsal}.png; all required front/side/back, states and closeup frames inspected with Read."
+  },
+  "receipts": [
+    {
+      "time": "2026-11-07T14:44:42.256Z",
+      "beast": "boyi",
+      "job": "boyi-quality-remake-body-v1",
+      "hash": "db452126a213efaa",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "193cc9b8-7851-49bf-9945-a4bcbf78cc42",
+      "consumed": 0.5,
+      "input": "raw/boyi-quality-remake-body-v1/base_basic_pbr.glb",
+      "sha256": "af5db661a918be08f332eb845614256be1ee108a263649dc5dfc144bf6aac266",
+      "bytes": 3100096,
+      "triangles": 19372,
+      "accepted": true,
+      "images": []
+    },
+    {
+      "time": "2026-11-07T14:44:53.088Z",
+      "beast": "boyi",
+      "job": "boyi-quality-remake-ear-v1",
+      "hash": "ad4dee647d069f1c",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "87ad2154-b18e-4724-8acf-cf6ff880c326",
+      "consumed": 0.5,
+      "input": "raw/boyi-quality-remake-ear-v1/base_basic_pbr.glb",
+      "sha256": "68183f66e455ba4991ee07a02d94eaf26e71119e0911ea64d824e6f9c61245ec",
+      "bytes": 2089664,
+      "triangles": 19928,
+      "accepted": true,
+      "images": []
+    },
+    {
+      "time": "2026-11-07T14:45:21.787Z",
+      "beast": "boyi",
+      "job": "boyi-quality-remake-tail-v1",
+      "hash": "531cea7cc9dc4c71",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "b8d6df11-87af-4545-bf69-2fab9f3b366e",
+      "consumed": 0.5,
+      "input": "raw/boyi-quality-remake-tail-v1/base_basic_pbr.glb",
+      "sha256": "bc265d0873d6c1b3629fcd00b5a9b4fdbd1635d628dac88d8597f91477dabcc9",
+      "bytes": 2498220,
+      "triangles": 18450,
+      "accepted": true,
+      "images": []
+    },
+    {
+      "time": "2026-11-07T15:03:35.397Z",
+      "beast": "boyi",
+      "job": "boyi-quality-remake-body-high",
+      "hash": "57c532453a475f5b",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "83d52034-d0e4-4ef3-9d5f-a06f9fd9c0a1",
+      "consumed": 1,
+      "input": "raw/boyi-quality-remake-body-high/base_high_pbr.glb",
+      "sha256": "cc2f4cbd9e7498d1478204d50b6764592d0f3074108b97d52ed01313087d6844",
+      "bytes": 31145840,
+      "triangles": 50000,
+      "accepted": false,
+      "images": [
+        {
+          "path": "concept/boyi-quality-body/view_34.png",
+          "sha256": "ec329a0229e7140afe6583aecf571280aba75f4d776778e4ee434a948063c9c4"
+        },
+        {
+          "path": "concept/boyi-quality-body/view_side.png",
+          "sha256": "1d7d6ec2a61d1d43059d87f30af83fe5971617259b585bd61eba86a15dda4265"
+        },
+        {
+          "path": "concept/boyi-quality-body/view_front.png",
+          "sha256": "20dc841d007ce0126b7abad35fc4a6ac58b99c79d4f95f4a74720f16746c9df3"
+        },
+        {
+          "path": "concept/boyi-quality-body/view_back.png",
+          "sha256": "cea6dbe996c1c18c5deeac3a4769e8d99f1b1367848db4fcf3ad9636891c8d65"
+        }
+      ]
+    },
+    {
+      "time": "2026-11-07T15:03:54.127Z",
+      "beast": "boyi",
+      "job": "boyi-quality-remake-ear-high",
+      "hash": "c4c784fc432070d0",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "da06d17a-7bfa-4190-9e7a-5c539523c89a",
+      "consumed": 1,
+      "input": "raw/boyi-quality-remake-ear-high/base_high_pbr.glb",
+      "sha256": "34e147e0ae35fbfd1f6f1993ad48a1563817a51a557a7f902076abf0ce72d542",
+      "bytes": 27130148,
+      "triangles": 50000,
+      "accepted": true,
+      "images": [
+        {
+          "path": "concept/boyi-quality-ear/view_34.png",
+          "sha256": "894c21393493bc20a23a3ca24944cd50f56f210ebe83f626638ddd6e5ce94205"
+        },
+        {
+          "path": "concept/boyi-quality-ear/view_side.png",
+          "sha256": "98f98403152a351cd31aab72c999d4633788287cade3acb7e87fa5ce8fbd4bb5"
+        },
+        {
+          "path": "concept/boyi-quality-ear/view_front.png",
+          "sha256": "47f13e5a0e2280360b1dd7b0c0ec3390fa8a6fa3e976ac2ae759936a5333f1ee"
+        },
+        {
+          "path": "concept/boyi-quality-ear/view_back.png",
+          "sha256": "70b3c666b7ac3142bc759de2e8a3d0c6148fa84da1b6cc28a05171e750d5e3a3"
+        }
+      ]
+    },
+    {
+      "time": "2026-11-07T15:04:12.974Z",
+      "beast": "boyi",
+      "job": "boyi-quality-remake-tail-high",
+      "hash": "bd9214f4a98144b5",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "4db15744-ad6c-4644-8d49-bbfac39b333d",
+      "consumed": 1,
+      "input": "raw/boyi-quality-remake-tail-high/base_high_pbr.glb",
+      "sha256": "f20ef44b927264d60336a2009481573808653955b768dea2382e56b86707bc72",
+      "bytes": 27044740,
+      "triangles": 50000,
+      "accepted": true,
+      "images": [
+        {
+          "path": "concept/boyi-quality-tail/view_34.png",
+          "sha256": "4ef4e0e440ad1a8660977a7f204129000fb5121ff0a458b25b7e05cdffa17fe3"
+        },
+        {
+          "path": "concept/boyi-quality-tail/view_side.png",
+          "sha256": "acedb5f7b9ccd47b0695575b890419fdc08df032247d10514f28172882e4c4e7"
+        },
+        {
+          "path": "concept/boyi-quality-tail/view_front.png",
+          "sha256": "7495813df132a482e8e1fd6343ffb1c2d0af08f4bb68f2f2269901f3c922c3c4"
+        },
+        {
+          "path": "concept/boyi-quality-tail/view_back.png",
+          "sha256": "425558668ff8ee21d37b8383650938bee23035312499def2320bce690fe6bbf1"
+        }
+      ]
+    },
+    {
+      "time": "2026-11-07T15:12:29.957Z",
+      "beast": "boyi",
+      "job": "boyi-quality-remake-body-high-v2",
+      "hash": "aadb8d5aa425b367",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "0b970715-eb69-451f-878b-005b50009ec1",
+      "consumed": 1,
+      "input": "raw/boyi-quality-remake-body-high-v2/base_high_pbr.glb",
+      "sha256": "3771c14d9e20a626dc738e04e70bbf004cdfbe7779f7aff0a038d8d26045a743",
+      "bytes": 28582256,
+      "triangles": 50000,
+      "accepted": true,
+      "images": [
+        {
+          "path": "concept/boyi-quality-body-v2/view_34.png",
+          "sha256": "72f6bac87be4652b159cea3773b0b8a9391ded7e148e1699b6c10876c88f6c2c"
+        },
+        {
+          "path": "concept/boyi-quality-body-v2/view_side.png",
+          "sha256": "adc4ae10f2c3643c7d4869e1f7bbb86b0730315ded3e33e7fa642f90147e4718"
+        },
+        {
+          "path": "concept/boyi-quality-body-v2/view_front.png",
+          "sha256": "c733ffb3147abba9ee05b4cde282d2e9e94bf63f3f02afb397e6f3d414bd38f6"
+        },
+        {
+          "path": "concept/boyi-quality-body-v2/view_back.png",
+          "sha256": "92cc9ce317f9790893d7968b08cc5b82d0da9b759160ee0fdacdcad155f06df5"
+        }
+      ]
+    }
+  ],
+  "acceptedHighJobs": [
+    "boyi-quality-remake-body-high-v2",
+    "boyi-quality-remake-ear-high",
+    "boyi-quality-remake-tail-high"
+  ],
+  "runtime": {
+    "path": "public/models/boyi/body.glb",
+    "sha256": "cc55c806f32b687b5d4cf2cbddc9c4e7aa73314df762894e38ccf43ad8a73f53",
+    "bytes": 3924436,
+    "triangles": 714527,
+    "compression": "meshopt and 2048 WebP; simplify=false flatten=false join=false",
+    "bones": 98,
+    "ears": 4,
+    "tails": 9,
+    "tailBones": 72,
+    "dorsalEyes": 2,
+    "facialEyes": 0,
+    "legs": 4
+  },
+  "adaptation": [
+    "New HIGH sheep anatomy retains organic shoulders, chest, haunches, knees, hocks, fetlocks and the four generated cloven feet. No prior taotie torso or primitive legs/hooves are reused.",
+    "Medium source ear was extracted from its unwanted head; body native ears, eyes and tail were removed before the accepted HIGH views. Body-v2 unifies only the Medium sculpt guide to prevent generated hard plates; the final body is the new 50,000-triangle HIGH-v2 output.",
+    "Actual generated hooves split along shared edge rings, sole levelled and interdigital cleft deepened. Seam vertices bind rigidly to the same foot bone.",
+    "New HIGH single ear fits four positive-scale organic roots; new HIGH volumetric wool tail fits nine staggered curved eight-bone chains with embedded roots. Original HIGH surfaces, albedo and UVs retained for the organ copies.",
+    "Two original authored dorsal eyes conform vertex-by-vertex to the actual HIGH back surface. Eye count, horizontal pupils, hornless sheep anatomy, coat palette and nonmagical calm display remain explicitly inferred.",
+    "Independent cloned 98-bone rig, three clips, analytic baked leg IK and three convergent world-contact passes per frame. Real naturally running gait QA skins all sole vertices in XYZ and derives sole-plane normal and direction."
+  ],
+  "sourceVerification": {
+    "rawUrl": "https://zh.wikisource.org/w/index.php?title=山海經/南山經&action=raw",
+    "rawPath": "/tmp/shanhai-fenghuang-source-p1okED/nanshan.wiki",
+    "rawBytes": 13299,
+    "rawSha256": "8aeb335a1ae37b7bb5f847c52d460b9b2725eabbae933c08a67bc10717ec56b8",
+    "quote": "又東三百里，曰基山，其陽多玉，其陰多怪木。有獸焉，其狀如羊，九尾四耳，其目在背，其名曰猼訑，佩之不畏。",
+    "matchingMethod": "Exact continuous entry after balanced annotation template removal"
+  },
+  "parentAcceptance": {
+    "checked": "2026-11-08",
+    "status": "Parent reviewed candidate; production verification recorded separately after release",
+    "script": "scripts/qa-boyi.mjs",
+    "previewPort": 5215,
+    "report": {
+      "path": "/tmp/boyi-parent-final-qa/browser-qa.json",
+      "sha256": "f9bd87c618e3247d8c6167502e1fcb433e92e998d679b01bf9a16d20da03ebb9"
+    },
+    "inputAudit": "/tmp/shanhai-check/boyi-parent-input-audit.json",
+    "independentlyVerifiedHighOriginals": [
+      {
+        "job": "boyi-quality-remake-body-high",
+        "uuid": "83d52034-d0e4-4ef3-9d5f-a06f9fd9c0a1",
+        "path": "raw/boyi-quality-remake-body-high/base_high_pbr.glb",
+        "sha256": "cc2f4cbd9e7498d1478204d50b6764592d0f3074108b97d52ed01313087d6844",
+        "bytes": 31145840,
+        "triangles": 50000,
+        "accepted": false
+      },
+      {
+        "job": "boyi-quality-remake-ear-high",
+        "uuid": "da06d17a-7bfa-4190-9e7a-5c539523c89a",
+        "path": "raw/boyi-quality-remake-ear-high/base_high_pbr.glb",
+        "sha256": "34e147e0ae35fbfd1f6f1993ad48a1563817a51a557a7f902076abf0ce72d542",
+        "bytes": 27130148,
+        "triangles": 50000,
+        "accepted": true
+      },
+      {
+        "job": "boyi-quality-remake-tail-high",
+        "uuid": "4db15744-ad6c-4644-8d49-bbfac39b333d",
+        "path": "raw/boyi-quality-remake-tail-high/base_high_pbr.glb",
+        "sha256": "f20ef44b927264d60336a2009481573808653955b768dea2382e56b86707bc72",
+        "bytes": 27044740,
+        "triangles": 50000,
+        "accepted": true
+      },
+      {
+        "job": "boyi-quality-remake-body-high-v2",
+        "uuid": "0b970715-eb69-451f-878b-005b50009ec1",
+        "path": "raw/boyi-quality-remake-body-high-v2/base_high_pbr.glb",
+        "sha256": "3771c14d9e20a626dc738e04e70bbf004cdfbe7779f7aff0a038d8d26045a743",
+        "bytes": 28582256,
+        "triangles": 50000,
+        "accepted": true
+      }
+    ],
+    "baseline": {
+      "invalid": 0,
+      "nodes": 153,
+      "meshes": 26,
+      "outlines": 26,
+      "bones": 98,
+      "tails": 9,
+      "tailBones": 72,
+      "ears": 4,
+      "eyes": 2,
+      "facialEyes": 0,
+      "horns": 0,
+      "legs": 4,
+      "feet": {
+        "boyi_hoof_back_l": -0.0000551279028469312,
+        "boyi_hoof_back_r": -0.00005624299903426305,
+        "boyi_hoof_front_l": -0.000045460552300542745,
+        "boyi_hoof_front_r": -0.00004986906769954835
+      }
+    },
+    "stance": [
+      {
+        "name": "boyi_hoof_back_l",
+        "soleVertices": 126,
+        "maxStanceDrift": 0.0000024377778249983793,
+        "maxStanceHeight": 0.00018477784925707147,
+        "maxDirectionRadians": 0.000003648898552321567,
+        "maxPlaneTiltRadians": 0.00009355197271182818,
+        "samples": 206,
+        "stances": 4,
+        "heightRange": [
+          -0.00018478266894375595,
+          0.03975993486707206
+        ]
+      },
+      {
+        "name": "boyi_hoof_back_r",
+        "soleVertices": 92,
+        "maxStanceDrift": 0.0000035832099634273646,
+        "maxStanceHeight": 0.00017504133152981133,
+        "maxDirectionRadians": 0.000003693384390904889,
+        "maxPlaneTiltRadians": 0.00011630408343431182,
+        "samples": 196,
+        "stances": 4,
+        "heightRange": [
+          -0.00018255367467540778,
+          0.03974002576154021
+        ]
+      },
+      {
+        "name": "boyi_hoof_front_l",
+        "soleVertices": 119,
+        "maxStanceDrift": 0.000002653300080857014,
+        "maxStanceHeight": 0.00012419533506497632,
+        "maxDirectionRadians": 0.0000025860277282225377,
+        "maxPlaneTiltRadians": 0.00012441750759244733,
+        "samples": 216,
+        "stances": 4,
+        "heightRange": [
+          -0.00013265577445392696,
+          0.03978776772007213
+        ]
+      },
+      {
+        "name": "boyi_hoof_front_r",
+        "soleVertices": 111,
+        "maxStanceDrift": 0.000003065530538309123,
+        "maxStanceHeight": 0.00014969563509774353,
+        "maxDirectionRadians": 0.000001962432579178449,
+        "maxPlaneTiltRadians": 0.00011945036457846467,
+        "samples": 192,
+        "stances": 5,
+        "heightRange": [
+          -0.00014969563509774353,
+          0.03977885456759828
+        ]
+      }
+    ],
+    "cache": {
+      "snapshottedBeforeFirstMount": true,
+      "unchanged": true,
+      "sharedResources": 40,
+      "sharedDisposals": 0,
+      "sourceOutlines": 0,
+      "ownedSkeletons": true
+    },
+    "remounts": [
+      {
+        "disposal": {
+          "expected": 52,
+          "disposed": 52,
+          "sharedGeometriesDisposed": 0,
+          "sharedTexturesDisposed": 0,
+          "skeletons": 26,
+          "boneTextures": 26,
+          "boneTextureDisposals": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "clearedSkeletons": 26
+        },
+        "animations": {
+          "idle": {
+            "invalid": 0,
+            "tails": [
+              {
+                "name": "boyi_tail_00",
+                "maxDisplacement": 0.009507654619828063
+              },
+              {
+                "name": "boyi_tail_01",
+                "maxDisplacement": 0.009988069075350972
+              },
+              {
+                "name": "boyi_tail_02",
+                "maxDisplacement": 0.006529900653019219
+              },
+              {
+                "name": "boyi_tail_03",
+                "maxDisplacement": 0.006064630651414168
+              },
+              {
+                "name": "boyi_tail_04",
+                "maxDisplacement": 0.004132112988217636
+              },
+              {
+                "name": "boyi_tail_05",
+                "maxDisplacement": 0.0072111787558359645
+              },
+              {
+                "name": "boyi_tail_06",
+                "maxDisplacement": 0.009056379096332301
+              },
+              {
+                "name": "boyi_tail_07",
+                "maxDisplacement": 0.010076724642816172
+              },
+              {
+                "name": "boyi_tail_08",
+                "maxDisplacement": 0.00901328862095626
+              }
+            ],
+            "skeletons": 26,
+            "freshSkeletons": true,
+            "freshBoneTextures": true
+          },
+          "walk": {
+            "invalid": 0,
+            "tails": [
+              {
+                "name": "boyi_tail_00",
+                "maxDisplacement": 0.016578605980034248
+              },
+              {
+                "name": "boyi_tail_01",
+                "maxDisplacement": 0.026025006454834847
+              },
+              {
+                "name": "boyi_tail_02",
+                "maxDisplacement": 0.03590615715485525
+              },
+              {
+                "name": "boyi_tail_03",
+                "maxDisplacement": 0.047388567237442954
+              },
+              {
+                "name": "boyi_tail_04",
+                "maxDisplacement": 0.050619713056259424
+              },
+              {
+                "name": "boyi_tail_05",
+                "maxDisplacement": 0.0471377452376947
+              },
+              {
+                "name": "boyi_tail_06",
+                "maxDisplacement": 0.02905535438910629
+              },
+              {
+                "name": "boyi_tail_07",
+                "maxDisplacement": 0.028308062013407315
+              },
+              {
+                "name": "boyi_tail_08",
+                "maxDisplacement": 0.02009393326556505
+              }
+            ],
+            "skeletons": 26,
+            "freshSkeletons": true,
+            "freshBoneTextures": true
+          },
+          "special": {
+            "invalid": 0,
+            "tails": [
+              {
+                "name": "boyi_tail_00",
+                "maxDisplacement": 0.07234232125538305
+              },
+              {
+                "name": "boyi_tail_01",
+                "maxDisplacement": 0.059225328272323366
+              },
+              {
+                "name": "boyi_tail_02",
+                "maxDisplacement": 0.03281215089293935
+              },
+              {
+                "name": "boyi_tail_03",
+                "maxDisplacement": 0.03226690305823927
+              },
+              {
+                "name": "boyi_tail_04",
+                "maxDisplacement": 0.04517924431342053
+              },
+              {
+                "name": "boyi_tail_05",
+                "maxDisplacement": 0.06104751404172464
+              },
+              {
+                "name": "boyi_tail_06",
+                "maxDisplacement": 0.06756308550748226
+              },
+              {
+                "name": "boyi_tail_07",
+                "maxDisplacement": 0.08213169194545586
+              },
+              {
+                "name": "boyi_tail_08",
+                "maxDisplacement": 0.07805450629669865
+              }
+            ],
+            "skeletons": 26,
+            "freshSkeletons": true,
+            "freshBoneTextures": true
+          }
+        }
+      },
+      {
+        "disposal": {
+          "expected": 52,
+          "disposed": 52,
+          "sharedGeometriesDisposed": 0,
+          "sharedTexturesDisposed": 0,
+          "skeletons": 26,
+          "boneTextures": 26,
+          "boneTextureDisposals": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "clearedSkeletons": 26
+        },
+        "animations": {
+          "idle": {
+            "invalid": 0,
+            "tails": [
+              {
+                "name": "boyi_tail_00",
+                "maxDisplacement": 0.009381569756459932
+              },
+              {
+                "name": "boyi_tail_01",
+                "maxDisplacement": 0.010043816930428053
+              },
+              {
+                "name": "boyi_tail_02",
+                "maxDisplacement": 0.007149329693972972
+              },
+              {
+                "name": "boyi_tail_03",
+                "maxDisplacement": 0.006329842064570156
+              },
+              {
+                "name": "boyi_tail_04",
+                "maxDisplacement": 0.003671089031548407
+              },
+              {
+                "name": "boyi_tail_05",
+                "maxDisplacement": 0.006578835469188691
+              },
+              {
+                "name": "boyi_tail_06",
+                "maxDisplacement": 0.00877212345293208
+              },
+              {
+                "name": "boyi_tail_07",
+                "maxDisplacement": 0.010127146071128199
+              },
+              {
+                "name": "boyi_tail_08",
+                "maxDisplacement": 0.009159521867375679
+              }
+            ],
+            "skeletons": 26,
+            "freshSkeletons": true,
+            "freshBoneTextures": true
+          },
+          "walk": {
+            "invalid": 0,
+            "tails": [
+              {
+                "name": "boyi_tail_00",
+                "maxDisplacement": 0.017170129157731077
+              },
+              {
+                "name": "boyi_tail_01",
+                "maxDisplacement": 0.0257352552328756
+              },
+              {
+                "name": "boyi_tail_02",
+                "maxDisplacement": 0.03511946559524977
+              },
+              {
+                "name": "boyi_tail_03",
+                "maxDisplacement": 0.04693282823041023
+              },
+              {
+                "name": "boyi_tail_04",
+                "maxDisplacement": 0.05074645420112333
+              },
+              {
+                "name": "boyi_tail_05",
+                "maxDisplacement": 0.04752347912675816
+              },
+              {
+                "name": "boyi_tail_06",
+                "maxDisplacement": 0.029819180217623587
+              },
+              {
+                "name": "boyi_tail_07",
+                "maxDisplacement": 0.028720284398131138
+              },
+              {
+                "name": "boyi_tail_08",
+                "maxDisplacement": 0.019458926018036147
+              }
+            ],
+            "skeletons": 26,
+            "freshSkeletons": true,
+            "freshBoneTextures": true
+          },
+          "special": {
+            "invalid": 0,
+            "tails": [
+              {
+                "name": "boyi_tail_00",
+                "maxDisplacement": 0.0701985851009125
+              },
+              {
+                "name": "boyi_tail_01",
+                "maxDisplacement": 0.056776511685117464
+              },
+              {
+                "name": "boyi_tail_02",
+                "maxDisplacement": 0.03053633324973359
+              },
+              {
+                "name": "boyi_tail_03",
+                "maxDisplacement": 0.033597976509369944
+              },
+              {
+                "name": "boyi_tail_04",
+                "maxDisplacement": 0.04870835802755929
+              },
+              {
+                "name": "boyi_tail_05",
+                "maxDisplacement": 0.06355597209165416
+              },
+              {
+                "name": "boyi_tail_06",
+                "maxDisplacement": 0.06806581144717234
+              },
+              {
+                "name": "boyi_tail_07",
+                "maxDisplacement": 0.08168789642606049
+              },
+              {
+                "name": "boyi_tail_08",
+                "maxDisplacement": 0.07554328671535393
+              }
+            ],
+            "skeletons": 26,
+            "freshSkeletons": true,
+            "freshBoneTextures": true
+          }
+        }
+      },
+      {
+        "disposal": {
+          "expected": 52,
+          "disposed": 52,
+          "sharedGeometriesDisposed": 0,
+          "sharedTexturesDisposed": 0,
+          "skeletons": 26,
+          "boneTextures": 26,
+          "boneTextureDisposals": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "clearedSkeletons": 26
+        },
+        "animations": {
+          "idle": {
+            "invalid": 0,
+            "tails": [
+              {
+                "name": "boyi_tail_00",
+                "maxDisplacement": 0.009488712657755312
+              },
+              {
+                "name": "boyi_tail_01",
+                "maxDisplacement": 0.009978506680205739
+              },
+              {
+                "name": "boyi_tail_02",
+                "maxDisplacement": 0.006545582220633546
+              },
+              {
+                "name": "boyi_tail_03",
+                "maxDisplacement": 0.006062973050494465
+              },
+              {
+                "name": "boyi_tail_04",
+                "maxDisplacement": 0.004097893263634006
+              },
+              {
+                "name": "boyi_tail_05",
+                "maxDisplacement": 0.007160672666884
+              },
+              {
+                "name": "boyi_tail_06",
+                "maxDisplacement": 0.009023029514229359
+              },
+              {
+                "name": "boyi_tail_07",
+                "maxDisplacement": 0.010053073437929784
+              },
+              {
+                "name": "boyi_tail_08",
+                "maxDisplacement": 0.008996403031574255
+              }
+            ],
+            "skeletons": 26,
+            "freshSkeletons": true,
+            "freshBoneTextures": true
+          },
+          "walk": {
+            "invalid": 0,
+            "tails": [
+              {
+                "name": "boyi_tail_00",
+                "maxDisplacement": 0.017704717408555934
+              },
+              {
+                "name": "boyi_tail_01",
+                "maxDisplacement": 0.025518901733810946
+              },
+              {
+                "name": "boyi_tail_02",
+                "maxDisplacement": 0.034417432323886554
+              },
+              {
+                "name": "boyi_tail_03",
+                "maxDisplacement": 0.04652664363850795
+              },
+              {
+                "name": "boyi_tail_04",
+                "maxDisplacement": 0.050820719712647594
+              },
+              {
+                "name": "boyi_tail_05",
+                "maxDisplacement": 0.047848175427843205
+              },
+              {
+                "name": "boyi_tail_06",
+                "maxDisplacement": 0.030506051009816883
+              },
+              {
+                "name": "boyi_tail_07",
+                "maxDisplacement": 0.029101557429657317
+              },
+              {
+                "name": "boyi_tail_08",
+                "maxDisplacement": 0.018935195598931306
+              }
+            ],
+            "skeletons": 26,
+            "freshSkeletons": true,
+            "freshBoneTextures": true
+          },
+          "special": {
+            "invalid": 0,
+            "tails": [
+              {
+                "name": "boyi_tail_00",
+                "maxDisplacement": 0.07126890050481324
+              },
+              {
+                "name": "boyi_tail_01",
+                "maxDisplacement": 0.058018334549366044
+              },
+              {
+                "name": "boyi_tail_02",
+                "maxDisplacement": 0.03168373846034665
+              },
+              {
+                "name": "boyi_tail_03",
+                "maxDisplacement": 0.03279033347142085
+              },
+              {
+                "name": "boyi_tail_04",
+                "maxDisplacement": 0.046805439411867156
+              },
+              {
+                "name": "boyi_tail_05",
+                "maxDisplacement": 0.06219654930052519
+              },
+              {
+                "name": "boyi_tail_06",
+                "maxDisplacement": 0.06776752011999196
+              },
+              {
+                "name": "boyi_tail_07",
+                "maxDisplacement": 0.08186090395671489
+              },
+              {
+                "name": "boyi_tail_08",
+                "maxDisplacement": 0.07679563920325086
+              }
+            ],
+            "skeletons": 26,
+            "freshSkeletons": true,
+            "freshBoneTextures": true
+          }
+        }
+      }
+    ],
+    "audio": {
+      "src": "http://localhost:5215/audio/narration/boyi.mp3",
+      "duration": 56.842438,
+      "currentTime": 1.654612,
+      "error": null,
+      "context": "running",
+      "decodedRMS": 0.1002649243813607,
+      "decodedSeconds": 56.8424375,
+      "calls": {
+        "boyi": 6,
+        "footsteps": 32
+      },
+      "callPeakRms": 0.016639698491626397,
+      "contextState": "running",
+      "unmountedDelayedCalls": 0,
+      "mp3Bytes": 909570,
+      "mp3Sha256": "7983467a9ba1e94e0d2d8ca93db00d0354d4b3b3a01a6635ab768cea9ae856da",
+      "narrationStopValidated": true
+    },
+    "cards": {
+      "widths": [
+        {
+          "width": 390,
+          "bounds": {
+            "card": {
+              "left": 16,
+              "right": 176.953125,
+              "top": 16,
+              "bottom": 340,
+              "hit": true
+            },
+            "title": {
+              "left": 131.71875,
+              "right": 164.71875,
+              "top": 29,
+              "bottom": 87.5625,
+              "hit": true
+            },
+            "button": {
+              "left": 135.21875,
+              "right": 161.21875,
+              "top": 129.5625,
+              "bottom": 173.46875,
+              "hit": true
+            },
+            "viewport": 390,
+            "scroll": 390
+          },
+          "playing": {
+            "time": 0.207356,
+            "paused": false,
+            "narrating": true
+          },
+          "stopped": true
+        },
+        {
+          "width": 800,
+          "bounds": {
+            "card": {
+              "left": 32,
+              "right": 374.546875,
+              "top": 28,
+              "bottom": 663,
+              "hit": true
+            },
+            "title": {
+              "left": 312.546875,
+              "right": 357.546875,
+              "top": 49,
+              "bottom": 127.09375,
+              "hit": true
+            },
+            "button": {
+              "left": 322.046875,
+              "right": 348.046875,
+              "top": 169.09375,
+              "bottom": 213,
+              "hit": true
+            },
+            "viewport": 800,
+            "scroll": 800
+          },
+          "playing": {
+            "time": 0.203262,
+            "paused": false,
+            "narrating": true
+          },
+          "stopped": true
+        }
+      ],
+      "tabletLimitation": "Existing shared 800px layout covers much of the model, while narration controls remain reachable; 390px shows the whole beast below the text card."
+    },
+    "visualReview": "Parent Read inspected final concept four views, runtime three states, eight motion closeups, opposing views and unobstructed dorsal/eye/tail-root closeups. Sheep muzzle and organic four-leg anatomy, four ears, nine volumetric tails with embedded roots, and two conforming dorsal eyes are visible. No face eyes, horns, evident stretching strands or detached appendages in sampled poses. HIGH tier, counts and numerical QA were not substitutes for image review.",
+    "images": [
+      {
+        "path": "/tmp/shanhai-check/boyi-parent-idle.png",
+        "bytes": 858861,
+        "sha256": "8bc5f72e65568f781f3563dc8cac8727cf0de3196ab9ad134bb2417f6bd7e19d"
+      },
+      {
+        "path": "/tmp/shanhai-check/boyi-parent-walk.png",
+        "bytes": 862662,
+        "sha256": "7dba349bffe74b74db8608a8bc36ab9132b9b10c00238f940fb4a151df50fef1"
+      },
+      {
+        "path": "/tmp/shanhai-check/boyi-parent-special.png",
+        "bytes": 859523,
+        "sha256": "d6983b57c5095c5f93bfb9b25370d0e6f0bfc24267e9edaab8ebb313fafd307d"
+      },
+      {
+        "path": "/tmp/shanhai-check/boyi-parent-w0.png",
+        "bytes": 448987,
+        "sha256": "2edd352aa4a0f14f1fa16f47237f999f99bf2cb43cd928320efb8f34c54839b1"
+      },
+      {
+        "path": "/tmp/shanhai-check/boyi-parent-s0.png",
+        "bytes": 446766,
+        "sha256": "a51ff0a93464f9da91399edd8850305ae7a1c326f6c412db4679b66aac83b7f2"
+      },
+      {
+        "path": "/tmp/shanhai-check/boyi-parent-w1.png",
+        "bytes": 446437,
+        "sha256": "53d5e32df8ce583c41fc1846a4f3ea774171f72844b1135e82a39043766146a7"
+      },
+      {
+        "path": "/tmp/shanhai-check/boyi-parent-s1.png",
+        "bytes": 446676,
+        "sha256": "dfaee13ba526c5db7705d2da6a7e380b37c121c7e4a613032ce23385029779c4"
+      },
+      {
+        "path": "/tmp/shanhai-check/boyi-parent-w2.png",
+        "bytes": 447967,
+        "sha256": "863eb1dc82e55750f885e75715aad545b54709b60d81ae4dacc933a27ed5097d"
+      },
+      {
+        "path": "/tmp/shanhai-check/boyi-parent-s2.png",
+        "bytes": 443980,
+        "sha256": "1e67f0328fa356e7cdf99f539688b2d1dcc076fd7981c018cb63fb826298faa9"
+      },
+      {
+        "path": "/tmp/shanhai-check/boyi-parent-w3.png",
+        "bytes": 451627,
+        "sha256": "9eb2712dff99069bbaed32b016b8f6c97ed393b34c362a50f6f2d6387b6e5141"
+      },
+      {
+        "path": "/tmp/shanhai-check/boyi-parent-s3.png",
+        "bytes": 445085,
+        "sha256": "f9bc40c3c4647fda5332ede61da5590280d860dcbe4a446020680b2e2a82afc4"
+      },
+      {
+        "path": "/tmp/boyi-parent-final-qa/boyi-angle-front.png",
+        "bytes": 855092,
+        "sha256": "bf46372c9b53545ee9fce9996721add646ffa870f176df660b6c0770bb7dbc3b"
+      },
+      {
+        "path": "/tmp/boyi-parent-final-qa/boyi-angle-back.png",
+        "bytes": 861183,
+        "sha256": "aa0b0b16764b423fc07d7b08f988f2e90c7743bc19937e3170ab0b4c9ebd2ec8"
+      },
+      {
+        "path": "/tmp/boyi-parent-final-qa/boyi-angle-left.png",
+        "bytes": 850138,
+        "sha256": "f250740d04874bfa567a4ca2dc884f082e93c0fb58604aad06eb5d0a238e08c0"
+      },
+      {
+        "path": "/tmp/boyi-parent-final-qa/boyi-angle-right.png",
+        "bytes": 845358,
+        "sha256": "7ac84b802ea6724ac43d55e9ca64dae1c1fdc3b2e57ebc48e065bad4a49e2338"
+      },
+      {
+        "path": "/tmp/boyi-parent-final-qa/boyi-angle-dorsal.png",
+        "bytes": 873338,
+        "sha256": "a18f705eae72734e27c37301457dad32aae7805ce50116e6a70cce8cd693eb19"
+      },
+      {
+        "path": "/tmp/boyi-parent-details/dorsal.png",
+        "bytes": 913031,
+        "sha256": "c083105dcfd19d5eb9e4cdc3c465b24c770016a72def8097337fb2a8a36ae785"
+      },
+      {
+        "path": "/tmp/boyi-parent-details/eyes.png",
+        "bytes": 964126,
+        "sha256": "a974fd4909e7eb4125d5cd1f2800962c9547053425e48369cb678c31ee861ef7"
+      },
+      {
+        "path": "/tmp/boyi-parent-details/tail-roots.png",
+        "bytes": 981059,
+        "sha256": "74195428b4a1b7ceac1bf415c6d7631e877f41d7c75969d4db6406da07513843"
+      },
+      {
+        "path": "/tmp/boyi-parent-details/front.png",
+        "bytes": 898146,
+        "sha256": "eaae128a4797aaf68521b6e72ba0ed89c0c0b34531968e1ffae1ed18bea3bab0"
+      },
+      {
+        "path": "/tmp/boyi-parent-details/left.png",
+        "bytes": 906420,
+        "sha256": "c492fa90c9ab0c942c565dc0205a3370a2d9a177c1f45aa48212ddfa2cb407a9"
+      },
+      {
+        "path": "/tmp/boyi-parent-details/right.png",
+        "bytes": 897311,
+        "sha256": "8fbcd92ff6fbccfd865693fcf5e796e79b5615cf236f2882ecf72f287ba49445"
+      },
+      {
+        "path": "/tmp/boyi-parent-card/390-playing.png",
+        "bytes": 278872,
+        "sha256": "6e2268934662a80ea68612fbce169936b2d200b634a73eb632efe38bcfe6dfc1"
+      },
+      {
+        "path": "/tmp/boyi-parent-card/800-playing.png",
+        "bytes": 453633,
+        "sha256": "ca078f16c49b55e11b668e51c174d0e8792af6067c2f73a934ea7c980c8ba1d5"
+      }
+    ],
+    "errors": []
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "boyi-quality-remake-body-v1",
+  "beast": "boyi",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One realistic hornless sheep with a long sheep muzzle, organic wool-covered torso, four anatomically articulated legs and natural cloven hooves. Unbroken skin and wool on the face: no eyes and no eye sockets. No ears and no tail, these are separate modular parts. Level back, standing pose, no accessories. Natural chest, shoulders, haunches and fetlocks, no geometric blocks.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

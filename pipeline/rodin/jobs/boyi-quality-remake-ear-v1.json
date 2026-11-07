@@ -1,0 +1,12 @@
+{
+  "id": "boyi-quality-remake-ear-v1",
+  "beast": "boyi",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One isolated sheep ear with a thick fleshy tapered attachment root and a natural thin concave pinna, about three times longer than wide. Fine short wool outside, softly pink inner skin, no head, no body, no other ears, no stand.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

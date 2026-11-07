@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef } from 'react'
 import { useFrame, useThree } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import { clone } from 'three/examples/jsm/utils/SkeletonUtils.js'
-import { AnimationMixer, DoubleSide, LoopOnce, LoopRepeat, MathUtils, Mesh, MeshStandardMaterial, Vector3, type AnimationAction, type Group, type Material } from 'three'
+import { AnimationMixer, DoubleSide, LoopOnce, LoopRepeat, MathUtils, Mesh, MeshStandardMaterial, SkinnedMesh, Vector3, type AnimationAction, type Group, type Material, type Skeleton } from 'three'
 import { useApp } from '../../app/store'
 import { audio } from '../../systems/audio/AudioEngine'
 import { createInkMaterial } from '../../systems/ink/inkMaterial'
@@ -68,6 +68,11 @@ export function Boyi() {
       }
       for (const [mesh, material] of originals) mesh.material = material
       for (const material of owned) material.dispose()
+      const skeletons = new Set<Skeleton>()
+      rig.scene.traverse((node) => {
+        if (node instanceof SkinnedMesh) skeletons.add(node.skeleton)
+      })
+      for (const skeleton of skeletons) skeleton.dispose()
     }
   }, [rig])
 
@@ -105,11 +110,14 @@ export function Boyi() {
       group.position.z += Math.sin(path.current.angle) * RADIUS
       group.rotation.y = Math.PI - path.current.angle
       const current = rig.clips.walk.time / rig.clips.walk.getClip().duration % 1
+      if (import.meta.env.DEV) group.userData.walkPhase = current
       for (const beat of [0, 0.25, 0.5, 0.75]) {
         if ((phase.current < beat && current >= beat) || (beat === 0 && current < phase.current)) audio.footstep(0, 0.3)
       }
       phase.current = current
-      contacts.update(group, current, 0.68)
+      // This sheep has a wider rear stance; converge the planted hocks before
+      // rendering so the entire generated hoof stays anchored around a turn.
+      for (let iteration = 0; iteration < 3; iteration++) contacts.update(group, current, 0.68)
     }
     if (action === 'special' && rig.clips.special.time >= SPECIAL_SECONDS - 0.001) setAction('idle')
     if (controls) {
@@ -120,7 +128,7 @@ export function Boyi() {
   })
 
   return <group ref={root} name="boyi_root" position={[0, 0, RADIUS]} rotation-y={Math.PI / 2}>
-    <primitive object={rig.scene} />
+    <primitive object={rig.scene} dispose={null} />
   </group>
 }
 

@@ -14,7 +14,7 @@ sys.dont_write_bytecode = True
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 import rig_quadruped as base
 from rig_ershu import leg_ik, smooth, rigid
-from prepare_boyi import EARS, FOOT_POINTS, ear_root, tail_center
+from prepare_boyi import EARS, ear_root, tail_center
 
 FPS = 30
 TAIL_BONES = 8
@@ -47,9 +47,9 @@ def extra_bones(arm):
 
 def tail_skin(obj,arm,index):
     groups=[obj.vertex_groups.new(name=f'boyi_tail_{index:02}_{j:02}') for j in range(TAIL_BONES)]
-    span=.35-.10*abs((index-4)/4)
+    span=.43-.045*abs((index-4)/4)
     for vertex in obj.data.vertices:
-        t=max(0,min(1,(vertex.co.y-.305)/span))
+        t=max(0,min(1,(vertex.co.y-.440)/span))
         k=max(0,min(TAIL_BONES-1,t*TAIL_BONES-.5))
         lo=int(k)
         weight=k-lo
@@ -68,8 +68,8 @@ def appendage_pose(arm,phase,strength,display=0):
         for segment in range(TAIL_BONES):
             bone=arm.pose.bones[f'boyi_tail_{index:02}_{segment:02}']
             wave=strength*.07*math.sin(phase-segment*.6+index*.45)
-            spread=display*fan*(.30 if segment==0 else .012)
-            lift=display*(-.18 if segment==0 else -.012)
+            spread=-display*fan*(.18 if segment==0 else .010)
+            lift=display*(.07 if segment==0 else .004)
             pose[bone.name]=base.world_rot(bone,base.X,wave+lift) @ base.world_rot(bone,base.Z,spread)
     for side,pair in EARS:
         bone=arm.pose.bones[f'boyi_ear_{side}_{pair}']
@@ -107,10 +107,10 @@ def walk(arm):
         pose=appendage_pose(arm,math.tau*t,.60)
         for leg,offset in phases.items():
             swing,lift=base.leg_cycle((t+offset)%1,duty=.68)
-            pose.update(leg_ik(arm,leg,-.08*swing,.018+.040*lift))
+            pose.update(leg_ik(arm,leg,-.08*swing,.028+.040*lift))
         pose['head']=base.world_rot(arm.pose.bones['head'],base.X,.012*math.sin(math.tau*t))
         base.key_pose(arm,frame,pose)
-        base.key_loc(arm,frame,'root',Vector((0,-.018,0)))
+        base.key_loc(arm,frame,'root',Vector((0,-.028,0)))
         eye_scale(arm,frame)
     base.finish_action(arm,action)
 
@@ -140,21 +140,38 @@ def main():
         bpy.ops.object.parent_clear(type='CLEAR_KEEP_TRANSFORM')
         bpy.ops.object.transform_apply(location=True,rotation=True,scale=True)
     body=bpy.data.objects['boyi_high_sheep_body']
-    lm={'height':.9,'length':1.2,'legs':FOOT_POINTS,'front_y':-.265,'back_y':.24,
-        'chest':Vector((0,-.265,.49)),'chest_top':.70,'hips':Vector((0,.24,.49)),
-        'head':Vector((0,-.38,.78)),'snout':Vector((0,-.56,.62)),'rear':Vector((0,.305,.58))}
+    lm=base.landmarks(body)
+    feet={}
+    for obj in meshes:
+        if not obj.name.startswith('boyi_hoof_'):
+            continue
+        points=[v.co for v in obj.data.vertices if v.co.z<.009]
+        point=sum(points,Vector())/len(points)
+        point.z=0
+        feet[obj.name.removeprefix('boyi_hoof_')]=point
+    if len(feet)!=4:
+        raise RuntimeError('Expected four actual HIGH sheep hooves')
+    lm.update(legs=feet,head=Vector((0,-.385,.755)),snout=Vector((0,-.56,.675)),rear=Vector((0,.44,.595)))
+    print('BOYI actual HIGH landmarks', {k:tuple(v) for k,v in feet.items()},'height',lm['height'])
     arm=base.build_armature(lm)
     arm.name='boyi_rig'
     # Weight the watertight HIGH-derived body before adding extra organ bones.
     base.skin(body,arm)
     axial=[arm.data.bones[n] for n in ('hips','spine1','spine2','chest','neck')]
     for vertex in body.data.vertices:
-        if vertex.co.z<.40:
+        p=vertex.co
+        if p.z<.17:
+            nearest=min(feet,key=lambda name:(feet[name]-p).length_squared)
+            target=f'{nearest}_foot'
+            blend=1-smooth(.105,.17,p.z)
+        elif p.z>.40:
+            candidates=axial+[arm.data.bones['head']] if p.y<-.28 and p.z>.59 else axial
+            target=min(candidates,key=lambda b:(b.head_local-p).length_squared).name
+            blend=smooth(.40,.51,p.z)
+        else:
             continue
-        blend=smooth(.40,.51,vertex.co.z)
         weights={body.vertex_groups[g.group].name:g.weight*(1-blend) for g in vertex.groups}
-        nearest=min(axial,key=lambda b:(b.head_local-vertex.co).length_squared)
-        weights[nearest.name]=weights.get(nearest.name,0)+blend
+        weights[target]=weights.get(target,0)+blend
         for group in body.vertex_groups:
             group.remove([vertex.index])
         for name,weight in weights.items():

@@ -8,6 +8,14 @@
       "text": "又東三百里，曰基山，其陽多玉，其陰多怪木。有獸焉，其狀如羊，九尾四耳，其目在背，其名曰猼訑，佩之不畏。"
     }
   ],
+  "sourceVerification": {
+    "checked": "2026-11-08",
+    "rawUrl": "https://zh.wikisource.org/w/index.php?title=山海經/南山經&action=raw",
+    "rawBytes": 13299,
+    "rawSha256": "8aeb335a1ae37b7bb5f847c52d460b9b2725eabbae933c08a67bc10717ec56b8",
+    "matchingMethod": "Exact continuous entry after balanced annotation template removal.",
+    "provenance": "pipeline/provenance/boyi.json"
+  },
   "inferred": [
     {
       "item": "羊形长吻、无角与四足分蹄",
@@ -18,8 +26,8 @@
       "basis": "九尾、四耳数量直接依据原文；两对耳的前后排列、叶形耳廓、九尾根部的排列、毛尾形状和尾长均为羊类形态的视觉补足。"
     },
     {
-      "item": "背上双目、横向瞳孔与灰赭毛色",
-      "basis": "「其目在背」只规定眼的位置，未规定眼数。两眼、背部具体位置、横向瞳孔、浅金虹膜、粉褐耳内与灰赭羊毛均为艺术推断。"
+      "item": "背上双目、横向瞳孔与象牙白羊毛",
+      "basis": "「其目在背」只规定眼的位置，未规定眼数。两眼、背部具体位置、横向瞳孔、浅金虹膜、粉褐耳内、象牙白羊毛与灰赭分染均为艺术推断。"
     },
     {
       "item": "稳立昂首、舒耳展尾与轻柔羊鸣",

@@ -1,0 +1,9 @@
+{
+  "id": "boyi-quality-remake-ear-high",
+  "beast": "boyi",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "One SINGLE isolated sheep ear matching the reference concave organic pinna. Elongated soft leaf shape, rounded tapered tip, thick narrow fleshy root closing smoothly, thin curled edges, very fine short ivory wool on the outside and muted pink inner skin. Complete continuous anatomy, no cut artifacts. NO HEAD, NO FACE, NO BODY, NO SECOND EAR, no pedestal. About three times longer than wide. Retain three-dimensional concave depth, not a flat sheet.",
+  "images": ["concept/boyi-quality-ear/view_34.png", "concept/boyi-quality-ear/view_side.png", "concept/boyi-quality-ear/view_front.png", "concept/boyi-quality-ear/view_back.png"],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000, "addons": "HighPack" }
+}

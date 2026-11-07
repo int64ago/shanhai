@@ -92,3 +92,10 @@
 {"time":"2026-11-07T14:46:40.536Z","beast":"bifang","job":"bifang-quality-remake-body-high","hash":"d727ea805468e873","tier":"Gen-2.5-Extreme-High","uuid":"fae5a2c8-442d-4e1a-9a53-929e9a677e78","consumed":1}
 {"time":"2026-11-07T14:46:59.975Z","beast":"bifang","job":"bifang-quality-remake-leg-high","hash":"dc21de6be0722994","tier":"Gen-2.5-Extreme-High","uuid":"b27f3612-b3a7-4f08-9756-b59b3256cf03","consumed":1}
 {"time":"2026-11-07T14:48:03.705Z","beast":"bifang","job":"bifang-quality-remake-wing-high","hash":"0108bc353431bfa0","tier":"Gen-2.5-Extreme-High","uuid":"6a908272-7e1b-42ff-b5ce-73706728066d","consumed":1}
+{"time":"2026-11-07T14:44:42.256Z","beast":"boyi","job":"boyi-quality-remake-body-v1","hash":"db452126a213efaa","tier":"Gen-2.5-Medium","uuid":"193cc9b8-7851-49bf-9945-a4bcbf78cc42","consumed":0.5}
+{"time":"2026-11-07T14:44:53.088Z","beast":"boyi","job":"boyi-quality-remake-ear-v1","hash":"ad4dee647d069f1c","tier":"Gen-2.5-Medium","uuid":"87ad2154-b18e-4724-8acf-cf6ff880c326","consumed":0.5}
+{"time":"2026-11-07T14:45:21.787Z","beast":"boyi","job":"boyi-quality-remake-tail-v1","hash":"531cea7cc9dc4c71","tier":"Gen-2.5-Medium","uuid":"b8d6df11-87af-4545-bf69-2fab9f3b366e","consumed":0.5}
+{"time":"2026-11-07T15:03:35.397Z","beast":"boyi","job":"boyi-quality-remake-body-high","hash":"57c532453a475f5b","tier":"Gen-2.5-Extreme-High","uuid":"83d52034-d0e4-4ef3-9d5f-a06f9fd9c0a1","consumed":1}
+{"time":"2026-11-07T15:03:54.127Z","beast":"boyi","job":"boyi-quality-remake-ear-high","hash":"c4c784fc432070d0","tier":"Gen-2.5-Extreme-High","uuid":"da06d17a-7bfa-4190-9e7a-5c539523c89a","consumed":1}
+{"time":"2026-11-07T15:04:12.974Z","beast":"boyi","job":"boyi-quality-remake-tail-high","hash":"bd9214f4a98144b5","tier":"Gen-2.5-Extreme-High","uuid":"4db15744-ad6c-4644-8d49-bbfac39b333d","consumed":1}
+{"time":"2026-11-07T15:12:29.957Z","beast":"boyi","job":"boyi-quality-remake-body-high-v2","hash":"aadb8d5aa425b367","tier":"Gen-2.5-Extreme-High","uuid":"0b970715-eb69-451f-878b-005b50009ec1","consumed":1}

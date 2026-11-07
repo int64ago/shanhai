@@ -1,0 +1,9 @@
+{
+  "id": "boyi-quality-remake-tail-high",
+  "beast": "boyi",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "One SINGLE isolated long woolly sheep tail matching the reference organic gently curved silhouette. The long soft tail is about SIX times longer than its thickness. Thick rounded attachment root, continuous substantial three-dimensional volume, natural taper to a soft blunt rounded tip, layered ivory wool locks, a gentle relaxed bend. NO BODY, NO OTHER TAILS, NO HEAD, NO EAR, no spike, no flat ribbon, no stand. Uniform ivory sheep wool, fine coherent fleece details.",
+  "images": ["concept/boyi-quality-tail/view_34.png", "concept/boyi-quality-tail/view_side.png", "concept/boyi-quality-tail/view_front.png", "concept/boyi-quality-tail/view_back.png"],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000, "addons": "HighPack" }
+}
