@@ -1,0 +1,12 @@
+{
+  "id": "bifang-quality-remake-body-v1",
+  "beast": "bifang",
+  "budget": 13.5,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One elegant crane torso with a long anatomically curved neck, realistic crane head and long pointed ivory-white beak. Teal-blue plumage with crimson feather markings, layered back and short natural tail. No wings and no legs, separate modular parts. Level balanced body, no stump pedestal, no other heads, no text.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

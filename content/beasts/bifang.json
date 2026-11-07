@@ -4,13 +4,22 @@
   "archetype": "avian",
   "source": [
     {
-      "book": "山海经·西山经",
-      "text": "又西二百八十里，曰章莪之山，无草木，多瑶碧。所为甚怪。有鸟焉，其状如鹤，一足，赤文青质而白喙，名曰毕方，其鸣自訆也，见则其邑有讹火。"
+      "book": "山海经·西山经·西次三经",
+      "text": "有鳥焉，其狀如鶴，一足，赤文青質而白喙，名曰畢方，其鳴自叫也，見則其邑有譌火。"
     }
   ],
+  "sourceVerification": {
+    "checked": "2026-11-08",
+    "rawUrl": "https://zh.wikisource.org/w/index.php?title=山海經/西山經&action=raw",
+    "rawBytes": 33142,
+    "rawSha256": "001592c670f18397c5321e874b88321913482e1260eea1eabc96a792faf1bf96",
+    "matchingMethod": "Exact continuous bird entry after balanced annotation template removal; original raw retained, including 譌火.",
+    "provenance": "pipeline/provenance/bifang.json"
+  },
   "inferred": [
-    { "item": "石青鹤躯配朱砂赤纹羽衣与象牙白喙", "basis": "据「其状如鹤，赤文青质而白喙」设色" },
-    { "item": "居中独足鹤立与宽展双翼三节骨骼链", "basis": "据「一足」于中轴塑修长单腿支撑与展翅平衡动态" },
-    { "item": "双音自呼清唳与翼尖丹朱讹火", "basis": "据「其鸣自訆也，见则其邑有讹火」作合成鹤唳与水墨流火" }
+    { "item": "长颈、尖白喙、圆腹和层叠鹤羽", "basis": "据「其状如鹤」选择鹤类比例；具体体态、羽层、眼色和短尾为造型补足。" },
+    { "item": "石青底羽与朱砂赤色羽纹", "basis": "原文明确「赤文青质而白喙」；青色的具体色阶、赤纹在覆羽与飞羽上的分布为设色推断。" },
+    { "item": "中轴独足、自然鸟趾与双翼收展", "basis": "「一足」为原文；足的位置、三前趾和后趾、双翼数量、肩肘腕结构及单足跃行节律为鹤类解剖与平衡动作补足。" },
+    { "item": "独足站定舒翼、合成鹤唳和少量丹色流火", "basis": "据「其鸣自叫也，见则其邑有讹火」作声音与水墨特效；原文未规定具体音色，也未说毕方主动施火。" }
   ]
 }

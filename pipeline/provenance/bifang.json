@@ -1,0 +1,750 @@
+{
+  "id": "bifang",
+  "checked": "2026-11-08",
+  "source": {
+    "rawUrl": "https://zh.wikisource.org/w/index.php?title=山海經/西山經&action=raw",
+    "rawBytes": 33142,
+    "rawSha256": "001592c670f18397c5321e874b88321913482e1260eea1eabc96a792faf1bf96",
+    "quote": "有鳥焉，其狀如鶴，一足，赤文青質而白喙，名曰畢方，其鳴自叫也，見則其邑有譌火。",
+    "method": "Exact continuous bird entry after balanced annotation template removal; original raw retained. Canonical text uses 譌火."
+  },
+  "production": {
+    "newTransactions": 7,
+    "newCredits": 5,
+    "baselineCredits": 1.5,
+    "additionalCeiling": 12,
+    "transactions": [
+      {
+        "time": "2026-11-07T14:39:10.442Z",
+        "beast": "bifang",
+        "job": "bifang-quality-remake-body-v1",
+        "hash": "4f9c5355d972ec17",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "e6041b0e-172a-4346-b27d-2ce6c5e4cdb9",
+        "consumed": 0.5
+      },
+      {
+        "time": "2026-11-07T14:39:33.433Z",
+        "beast": "bifang",
+        "job": "bifang-quality-remake-wing-v1",
+        "hash": "ff9e79edf958ffd5",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "b1723944-4391-4eeb-aff7-ab3f2b86543a",
+        "consumed": 0.5
+      },
+      {
+        "time": "2026-11-07T14:39:53.436Z",
+        "beast": "bifang",
+        "job": "bifang-quality-remake-leg-v1",
+        "hash": "8b8cb1954fef8e1d",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "2445c9fa-c0a9-41f1-a22c-a335ec081e3b",
+        "consumed": 0.5
+      },
+      {
+        "time": "2026-11-07T14:43:56.940Z",
+        "beast": "bifang",
+        "job": "bifang-quality-remake-wing-v2",
+        "hash": "952cc1e4008b9587",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "ecf91dc9-676b-4a79-b003-a1efbc94a439",
+        "consumed": 0.5
+      },
+      {
+        "time": "2026-11-07T14:46:40.536Z",
+        "beast": "bifang",
+        "job": "bifang-quality-remake-body-high",
+        "hash": "d727ea805468e873",
+        "tier": "Gen-2.5-Extreme-High",
+        "uuid": "fae5a2c8-442d-4e1a-9a53-929e9a677e78",
+        "consumed": 1
+      },
+      {
+        "time": "2026-11-07T14:46:59.975Z",
+        "beast": "bifang",
+        "job": "bifang-quality-remake-leg-high",
+        "hash": "dc21de6be0722994",
+        "tier": "Gen-2.5-Extreme-High",
+        "uuid": "b27f3612-b3a7-4f08-9756-b59b3256cf03",
+        "consumed": 1
+      },
+      {
+        "time": "2026-11-07T14:48:03.705Z",
+        "beast": "bifang",
+        "job": "bifang-quality-remake-wing-high",
+        "hash": "0108bc353431bfa0",
+        "tier": "Gen-2.5-Extreme-High",
+        "uuid": "6a908272-7e1b-42ff-b5ce-73706728066d",
+        "consumed": 1
+      }
+    ],
+    "highOriginals": [
+      {
+        "path": "raw/bifang-quality-remake-body-high/base_high_pbr.glb",
+        "job": "bifang-quality-remake-body-high",
+        "tier": "Gen-2.5-Extreme-High",
+        "uuid": "fae5a2c8-442d-4e1a-9a53-929e9a677e78",
+        "sha256": "d558f4a212cbe068d1ae138238094ef88ea651a4d0c3f93c46210df7299bb13d",
+        "bytes": 28653924,
+        "triangles": 50000
+      },
+      {
+        "path": "raw/bifang-quality-remake-leg-high/base_high_pbr.glb",
+        "job": "bifang-quality-remake-leg-high",
+        "tier": "Gen-2.5-Extreme-High",
+        "uuid": "b27f3612-b3a7-4f08-9756-b59b3256cf03",
+        "sha256": "cebf14a07c1120320f0d342c894043a5be363a61ad19775c3f51168f14e1f569",
+        "bytes": 25805252,
+        "triangles": 50000
+      },
+      {
+        "path": "raw/bifang-quality-remake-wing-high/base_high_pbr.glb",
+        "job": "bifang-quality-remake-wing-high",
+        "tier": "Gen-2.5-Extreme-High",
+        "uuid": "6a908272-7e1b-42ff-b5ce-73706728066d",
+        "sha256": "391bdc32c5821e0811ddeb2a799d1afe3577c527d58cbf7cc869e6f2efc7c105",
+        "bytes": 36794136,
+        "triangles": 50000
+      }
+    ],
+    "runtime": {
+      "bytes": 2460368,
+      "sha256": "d68acf6d3478a6553f5180ac2055a08f955485da06aa6604c43927302e3c8aea",
+      "bones": 23,
+      "triangles": 204606
+    },
+    "method": "Fresh crane body, single leg and single wing HIGH masters; offline opposite wing with reversed winding, sculpted thigh feather transition, 23-bone rig with 120Hz IK and linear support velocity matching 0.14m/s. No runtime negative scale, simplification, flatten, join or support-key resampling.",
+    "scripts": [
+      "pipeline/blender/prepare_bifang.py",
+      "pipeline/blender/rig_bifang.py"
+    ]
+  },
+  "parentAcceptance": {
+    "status": "parent-reviewed-candidate; release verification recorded separately after deployment",
+    "script": "scripts/qa-bifang.mjs",
+    "report": {
+      "path": "/tmp/bifang-parent-final-qa3/qa.json",
+      "sha256": "c24f1635aa88d5840247ecf41c2ab968605f271fd8463c1064dc63cd565331f4"
+    },
+    "inputReport": "/tmp/shanhai-check/bifang-parent-input-audit.json",
+    "support": {
+      "idle": {
+        "method": "Three non-collinear actual deformed toe sole vertices, real useFrame at 60Hz, full world XYZ and toe heading through each support phase",
+        "candidates": 349,
+        "minSoleY": -0.00024499537706895724,
+        "maxSoleY": 0.0002507152994391526,
+        "maxXYZ": 0.0003466188155673771,
+        "maxXZ": 0.000055935300142970975,
+        "maxY": 0.00034436978775886917,
+        "maxYawDegrees": 0.001399125774797003,
+        "maxPlaneNormalRadians": 0.00011123640284832626
+      },
+      "walk": {
+        "method": "Three non-collinear actual deformed toe sole vertices, real useFrame at 60Hz, full world XYZ and toe heading through each support phase",
+        "candidates": 349,
+        "minSoleY": -0.0002332639406021353,
+        "maxSoleY": 0.00014457038382420517,
+        "maxXYZ": 0.00037277277547929206,
+        "maxXZ": 0.000044561456619506924,
+        "maxY": 0.00037277277414954346,
+        "maxYawDegrees": 0.0015219702468782272,
+        "maxPlaneNormalRadians": 0.0000929501410244018
+      },
+      "special": {
+        "method": "Three non-collinear actual deformed toe sole vertices, real useFrame at 60Hz, full world XYZ and toe heading through each support phase",
+        "candidates": 349,
+        "minSoleY": -0.0002373500315023258,
+        "maxSoleY": 0.0002494628904040619,
+        "maxXYZ": 0.000484560302634868,
+        "maxXZ": 0.00007668593004599096,
+        "maxY": 0.0004831628780281316,
+        "maxYawDegrees": 0.0019300251289624893,
+        "maxPlaneNormalRadians": 0.00015859006813121067
+      }
+    },
+    "lifecycle": {
+      "cachedSourceSnapshottedBeforeFirstMount": true,
+      "clonedScene": true,
+      "trackedSharedResources": 18,
+      "cacheUnchanged": true,
+      "sharedDisposals": 0,
+      "remounts": [
+        {
+          "removed": true,
+          "skeletons": 5,
+          "allocated": 5,
+          "disposedTextures": 5,
+          "disposalCounts": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "allSkeletonTexturesNull": true,
+          "cacheUnchanged": true,
+          "sharedDisposals": 0,
+          "nodes": 36,
+          "meshes": 5,
+          "outlines": 5,
+          "invalid": [],
+          "roots": 1,
+          "animations": [
+            {
+              "action": "idle",
+              "timeAdvance": 0.24799999999999967,
+              "ownedSkeletons": true,
+              "emitterReads": [
+                {
+                  "name": "wing_l_attach",
+                  "reads": 21,
+                  "maxMotion": 0.00048828125,
+                  "cloned": true
+                },
+                {
+                  "name": "wing_r_attach",
+                  "reads": 21,
+                  "maxMotion": 0.00048828125,
+                  "cloned": true
+                },
+                {
+                  "name": "beak_attach",
+                  "reads": 21,
+                  "maxMotion": 0.0023052092152213654,
+                  "cloned": true
+                },
+                {
+                  "name": "tail_attach",
+                  "reads": 21,
+                  "maxMotion": 0.0018498367887168124,
+                  "cloned": true
+                }
+              ],
+              "cachedEmitterReads": 0,
+              "cacheUnchanged": true
+            },
+            {
+              "action": "walk",
+              "timeAdvance": 0.2499000000953674,
+              "ownedSkeletons": true,
+              "emitterReads": [
+                {
+                  "name": "wing_l_attach",
+                  "reads": 22,
+                  "maxMotion": 0.6757471684786425,
+                  "cloned": true
+                },
+                {
+                  "name": "wing_r_attach",
+                  "reads": 22,
+                  "maxMotion": 0.6757471684786424,
+                  "cloned": true
+                },
+                {
+                  "name": "beak_attach",
+                  "reads": 22,
+                  "maxMotion": 0.06026002732813729,
+                  "cloned": true
+                },
+                {
+                  "name": "tail_attach",
+                  "reads": 22,
+                  "maxMotion": 0.05042289007215448,
+                  "cloned": true
+                }
+              ],
+              "cachedEmitterReads": 0,
+              "cacheUnchanged": true
+            },
+            {
+              "action": "special",
+              "timeAdvance": 0.2667000000476837,
+              "ownedSkeletons": true,
+              "emitterReads": [
+                {
+                  "name": "wing_l_attach",
+                  "reads": 22,
+                  "maxMotion": 0.6613559033861491,
+                  "cloned": true
+                },
+                {
+                  "name": "wing_r_attach",
+                  "reads": 22,
+                  "maxMotion": 0.6613559033861492,
+                  "cloned": true
+                },
+                {
+                  "name": "beak_attach",
+                  "reads": 22,
+                  "maxMotion": 0.027625161867164894,
+                  "cloned": true
+                },
+                {
+                  "name": "tail_attach",
+                  "reads": 22,
+                  "maxMotion": 0.009027948723185483,
+                  "cloned": true
+                }
+              ],
+              "cachedEmitterReads": 0,
+              "cacheUnchanged": true
+            }
+          ]
+        },
+        {
+          "removed": true,
+          "skeletons": 5,
+          "allocated": 5,
+          "disposedTextures": 5,
+          "disposalCounts": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "allSkeletonTexturesNull": true,
+          "cacheUnchanged": true,
+          "sharedDisposals": 0,
+          "nodes": 36,
+          "meshes": 5,
+          "outlines": 5,
+          "invalid": [],
+          "roots": 1,
+          "animations": [
+            {
+              "action": "idle",
+              "timeAdvance": 0.25,
+              "ownedSkeletons": true,
+              "emitterReads": [
+                {
+                  "name": "wing_l_attach",
+                  "reads": 21,
+                  "maxMotion": 0.00048828125,
+                  "cloned": true
+                },
+                {
+                  "name": "wing_r_attach",
+                  "reads": 21,
+                  "maxMotion": 0.00048828125,
+                  "cloned": true
+                },
+                {
+                  "name": "beak_attach",
+                  "reads": 21,
+                  "maxMotion": 0.002250343325029718,
+                  "cloned": true
+                },
+                {
+                  "name": "tail_attach",
+                  "reads": 21,
+                  "maxMotion": 0.0018284713237398213,
+                  "cloned": true
+                }
+              ],
+              "cachedEmitterReads": 0,
+              "cacheUnchanged": true
+            },
+            {
+              "action": "walk",
+              "timeAdvance": 0.25040000009536745,
+              "ownedSkeletons": true,
+              "emitterReads": [
+                {
+                  "name": "wing_l_attach",
+                  "reads": 21,
+                  "maxMotion": 0.6627131823222556,
+                  "cloned": true
+                },
+                {
+                  "name": "wing_r_attach",
+                  "reads": 21,
+                  "maxMotion": 0.6627131823222557,
+                  "cloned": true
+                },
+                {
+                  "name": "beak_attach",
+                  "reads": 21,
+                  "maxMotion": 0.05813216297975764,
+                  "cloned": true
+                },
+                {
+                  "name": "tail_attach",
+                  "reads": 21,
+                  "maxMotion": 0.04833736495092107,
+                  "cloned": true
+                }
+              ],
+              "cachedEmitterReads": 0,
+              "cacheUnchanged": true
+            },
+            {
+              "action": "special",
+              "timeAdvance": 0.24989999985694888,
+              "ownedSkeletons": true,
+              "emitterReads": [
+                {
+                  "name": "wing_l_attach",
+                  "reads": 22,
+                  "maxMotion": 0.6506039370981297,
+                  "cloned": true
+                },
+                {
+                  "name": "wing_r_attach",
+                  "reads": 22,
+                  "maxMotion": 0.6506039370981297,
+                  "cloned": true
+                },
+                {
+                  "name": "beak_attach",
+                  "reads": 22,
+                  "maxMotion": 0.028129865505351653,
+                  "cloned": true
+                },
+                {
+                  "name": "tail_attach",
+                  "reads": 22,
+                  "maxMotion": 0.009508901633546195,
+                  "cloned": true
+                }
+              ],
+              "cachedEmitterReads": 0,
+              "cacheUnchanged": true
+            }
+          ]
+        },
+        {
+          "removed": true,
+          "skeletons": 5,
+          "allocated": 5,
+          "disposedTextures": 5,
+          "disposalCounts": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "allSkeletonTexturesNull": true,
+          "cacheUnchanged": true,
+          "sharedDisposals": 0,
+          "nodes": 36,
+          "meshes": 5,
+          "outlines": 5,
+          "invalid": [],
+          "roots": 1,
+          "animations": [
+            {
+              "action": "idle",
+              "timeAdvance": 0.24999999999999978,
+              "ownedSkeletons": true,
+              "emitterReads": [
+                {
+                  "name": "wing_l_attach",
+                  "reads": 21,
+                  "maxMotion": 0.00048828125,
+                  "cloned": true
+                },
+                {
+                  "name": "wing_r_attach",
+                  "reads": 21,
+                  "maxMotion": 0.00048828125,
+                  "cloned": true
+                },
+                {
+                  "name": "beak_attach",
+                  "reads": 21,
+                  "maxMotion": 0.0022665226893582267,
+                  "cloned": true
+                },
+                {
+                  "name": "tail_attach",
+                  "reads": 21,
+                  "maxMotion": 0.001842820147477342,
+                  "cloned": true
+                }
+              ],
+              "cachedEmitterReads": 0,
+              "cacheUnchanged": true
+            },
+            {
+              "action": "walk",
+              "timeAdvance": 0.25,
+              "ownedSkeletons": true,
+              "emitterReads": [
+                {
+                  "name": "wing_l_attach",
+                  "reads": 21,
+                  "maxMotion": 0.6635755904487463,
+                  "cloned": true
+                },
+                {
+                  "name": "wing_r_attach",
+                  "reads": 21,
+                  "maxMotion": 0.663575590448746,
+                  "cloned": true
+                },
+                {
+                  "name": "beak_attach",
+                  "reads": 21,
+                  "maxMotion": 0.05830557436483275,
+                  "cloned": true
+                },
+                {
+                  "name": "tail_attach",
+                  "reads": 21,
+                  "maxMotion": 0.04847096719129337,
+                  "cloned": true
+                }
+              ],
+              "cachedEmitterReads": 0,
+              "cacheUnchanged": true
+            },
+            {
+              "action": "special",
+              "timeAdvance": 0.2667000000476837,
+              "ownedSkeletons": true,
+              "emitterReads": [
+                {
+                  "name": "wing_l_attach",
+                  "reads": 22,
+                  "maxMotion": 0.6508497522693572,
+                  "cloned": true
+                },
+                {
+                  "name": "wing_r_attach",
+                  "reads": 22,
+                  "maxMotion": 0.6508497522693573,
+                  "cloned": true
+                },
+                {
+                  "name": "beak_attach",
+                  "reads": 22,
+                  "maxMotion": 0.028129865505351872,
+                  "cloned": true
+                },
+                {
+                  "name": "tail_attach",
+                  "reads": 22,
+                  "maxMotion": 0.00950890163354642,
+                  "cloned": true
+                }
+              ],
+              "cachedEmitterReads": 0,
+              "cacheUnchanged": true
+            }
+          ]
+        }
+      ]
+    },
+    "audio": {
+      "duration": 21.21141666666667,
+      "sampleRate": 48000,
+      "channels": 1,
+      "rms": 0.08875443923276743,
+      "invalid": 0,
+      "callPeakRms": 0.16291533921875018,
+      "contextState": "running",
+      "narrationPlay": {
+        "duration": 21.211375,
+        "currentTime": 0.213333,
+        "paused": false,
+        "error": null
+      },
+      "narrationStopped": true,
+      "interruptedDelayedCalls": 0,
+      "unmountedDelayedCalls": 0,
+      "mp3Bytes": 339473,
+      "mp3Sha256": "8c9d30233c16280d9cf820aaebc6282d78fe419aa48df57d31c40fb2cd420e23"
+    },
+    "cards": {
+      "report": "/tmp/bifang-parent-card-final/report.json",
+      "widths": [
+        {
+          "width": 390,
+          "bounds": {
+            "card": {
+              "left": 16,
+              "right": 187.65625,
+              "top": 16,
+              "bottom": 340,
+              "hit": true
+            },
+            "title": {
+              "left": 137.078125,
+              "right": 170.078125,
+              "top": 29,
+              "bottom": 87.5625,
+              "hit": true
+            },
+            "button": {
+              "left": 140.578125,
+              "right": 166.578125,
+              "top": 129.5625,
+              "bottom": 173.46875,
+              "hit": true
+            },
+            "viewport": 390,
+            "scroll": 390
+          },
+          "playing": {
+            "time": 0.216478,
+            "paused": false,
+            "narrating": true
+          },
+          "stopped": true
+        },
+        {
+          "width": 800,
+          "bounds": {
+            "card": {
+              "left": 32,
+              "right": 375.71875,
+              "top": 28,
+              "bottom": 663,
+              "hit": true
+            },
+            "title": {
+              "left": 313.140625,
+              "right": 358.140625,
+              "top": 49,
+              "bottom": 127.09375,
+              "hit": true
+            },
+            "button": {
+              "left": 322.640625,
+              "right": 348.640625,
+              "top": 169.09375,
+              "bottom": 213,
+              "hit": true
+            },
+            "viewport": 800,
+            "scroll": 800
+          },
+          "playing": {
+            "time": 0.218642,
+            "paused": false,
+            "narrating": true
+          },
+          "stopped": true
+        }
+      ],
+      "portraitFraming": "Per-Bifang portrait camera target raised to keep the tall head below the text card; all three portrait states inspected.",
+      "tabletLimitation": "Existing 800px shared layout lets the card cover much of the model; narration remains reachable."
+    },
+    "visualReview": "Parent Read inspected three states, eight motion closeups, final opposing runtime views and all three portrait states. Crane-like long curved neck and pointed pale bill, one axial leg with bird toes, rooted articulated paired wings, rounded feathered body, blue ground and red markings; no evident stretching strands or detached appendages in sampled poses. HIGH and polygon counts were not used as substitutes for these images.",
+    "images": [
+      {
+        "path": "/tmp/shanhai-check/bifang-parent-idle.png",
+        "bytes": 877316,
+        "sha256": "628554e00a01996e5c6f96364ed732bb78d8dcf10af56b8e54004af0fb962668"
+      },
+      {
+        "path": "/tmp/shanhai-check/bifang-parent-walk.png",
+        "bytes": 882677,
+        "sha256": "c59878a696f7a85a09cad5a8b75f894f565db0b0d6c90a468a511966bb48a3f6"
+      },
+      {
+        "path": "/tmp/shanhai-check/bifang-parent-special.png",
+        "bytes": 890722,
+        "sha256": "996455f567c88560d3e8b97bf86a3c3a13ccb674bd5044034768f22017fdd3f6"
+      },
+      {
+        "path": "/tmp/shanhai-check/bifang-parent-w0.png",
+        "bytes": 473253,
+        "sha256": "593f87b370423a1c119c98bbf79964782bcfdda2d31349a4086fc1773b1ea97b"
+      },
+      {
+        "path": "/tmp/shanhai-check/bifang-parent-s0.png",
+        "bytes": 479279,
+        "sha256": "a482f9d39e93b7c0046093d5197715194fa5b4a05c2b6de2858983759d2ab438"
+      },
+      {
+        "path": "/tmp/shanhai-check/bifang-parent-w1.png",
+        "bytes": 485174,
+        "sha256": "26486abb5b0c2f12b736885aeddbf8b644dc303e3e008dc35fec3db165da5db5"
+      },
+      {
+        "path": "/tmp/shanhai-check/bifang-parent-s1.png",
+        "bytes": 483456,
+        "sha256": "74b9bdf5da80e4403be9fcc27e22ec442625715b2f47dae597f7b7489eb3d497"
+      },
+      {
+        "path": "/tmp/shanhai-check/bifang-parent-w2.png",
+        "bytes": 476719,
+        "sha256": "e58d6857fa4563ed4343f95d18560fec722fa4537fad4db7d72e831ec140f7df"
+      },
+      {
+        "path": "/tmp/shanhai-check/bifang-parent-s2.png",
+        "bytes": 481100,
+        "sha256": "04191f40f9a639573878287da10b67999627d073adb0fd2d89f4e9861504bd14"
+      },
+      {
+        "path": "/tmp/shanhai-check/bifang-parent-w3.png",
+        "bytes": 473040,
+        "sha256": "f28c7f4ddd07aad3157244911f6c0e2bf3208dd091c66c8fc802f90983672f4f"
+      },
+      {
+        "path": "/tmp/shanhai-check/bifang-parent-s3.png",
+        "bytes": 482146,
+        "sha256": "111b5aa1904de7fae431d74ac01ed4461fb4ee3a210207676ffa8aa61fbfc1f8"
+      },
+      {
+        "path": "/tmp/bifang-parent-final-qa3/front.png",
+        "bytes": 916801,
+        "sha256": "25601fe858cdda44946c1057accfd52d3554232ba9a73b6893702b8e78848e10"
+      },
+      {
+        "path": "/tmp/bifang-parent-final-qa3/back.png",
+        "bytes": 963657,
+        "sha256": "da216a50ed8c32ee8b9b11c8f319f0985827c25003346f50d96ad6693135e2a3"
+      },
+      {
+        "path": "/tmp/bifang-parent-final-qa3/side.png",
+        "bytes": 924330,
+        "sha256": "8283fadb5668033bf47d8ead08e3a75283454e32dd2dd6cb0d4972556ef21f9a"
+      },
+      {
+        "path": "/tmp/bifang-parent-final-qa3/other-side.png",
+        "bytes": 959638,
+        "sha256": "6798406012c6a84793f425744686345a2f70631189227e6bb58cf6da01986d1f"
+      },
+      {
+        "path": "/tmp/bifang-parent-final-qa3/display.png",
+        "bytes": 921468,
+        "sha256": "184a99ba5fef47535bd39babaa734687c0987705b4d820f0cade5097be5ac55c"
+      },
+      {
+        "path": "/tmp/bifang-parent-final-qa3/step.png",
+        "bytes": 939333,
+        "sha256": "f00d06dc919a54981959689b0b5001d44ea8d7734b2784495388d720a9f67dbd"
+      },
+      {
+        "path": "/tmp/shanhai-check/bifang-portrait-idle.png",
+        "bytes": 276488,
+        "sha256": "5a7e791b41864ea86764845f3ec8d48079a97d7eb54910b2fed22c4388422a96"
+      },
+      {
+        "path": "/tmp/shanhai-check/bifang-portrait-walk.png",
+        "bytes": 277690,
+        "sha256": "f6812d0260990ece880504466fdab5ef259f4e15e30a2ca964a3ee0ce8d57036"
+      },
+      {
+        "path": "/tmp/shanhai-check/bifang-portrait-special.png",
+        "bytes": 279739,
+        "sha256": "156f063670b0d6560e322eb7066a1583a9e46c89f60ab2f3b19d3479a6c3124f"
+      },
+      {
+        "path": "/tmp/bifang-parent-card-final/390-playing.png",
+        "bytes": 275596,
+        "sha256": "81fa29bfe0973f26d8e434e54ab1ec1cc524fa96072efb09d040fddfe75dd578"
+      },
+      {
+        "path": "/tmp/bifang-parent-card-final/800-playing.png",
+        "bytes": 458307,
+        "sha256": "32e207d1a29214da062d3a69164f3de77079af5976ddbfe1d88de5e918492c79"
+      }
+    ],
+    "errors": []
+  }
+}

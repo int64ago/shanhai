@@ -1,0 +1,8 @@
+{
+  "id": "bifang-quality-remake-wing-v2",
+  "beast": "bifang",
+  "budget": 13.5,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "A SINGLE detached LEFT WING from a sandhill crane. Just ONE wing, no mirrored pair. Horizontally elongated wing in an open flight pose: small tapered shoulder root on the left, elbow halfway, wrist then long separated primary flight feathers extending to the right. Wing span five times its chord width. Rounded three-dimensional feathered shoulder and layered overlapping coverts, secondary and primary feathers, visible aerodynamic thickness. Teal-blue feathers with irregular crimson red feather markings. Complete isolated single anatomical bird wing, NOT torso, NOT cape, NOT a pair of wings, no head, no beak, no legs, no text.",
+  "params": {"mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000}
+}

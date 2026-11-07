@@ -1,0 +1,12 @@
+{
+  "id": "bifang-quality-remake-wing-v1",
+  "beast": "bifang",
+  "budget": 13.5,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One isolated natural crane wing with thick shoulder musculature, rounded feather coverts, articulated elbow and wrist, long layered flight feathers. Blue-teal feathers with organic crimson markings, gently extended pose, tapered outer feathers. No body, no other wing, no paper fan.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

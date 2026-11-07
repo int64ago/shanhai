@@ -79,6 +79,24 @@
       "license": "沿用项目既有CosyVoice合成输出条款"
     },
     {
+      "path": "public/models/bifang/body.glb",
+      "source": "全新 Hyper3D 两阶段重做：鹤躯、单足、单翼母件分别 Medium→Blender矫正四面并Read检查→Gen-2.5-Extreme-High。首版单翼误生双翼弃用，Medium重试单翼成功；本轮4次Medium各0.5、3次HIGH各1，实际新增5积分，历史基线1.5，新增上限12。HIGH全部首张34、HighPack、50000面、无texture_mode极高附加，使用真实base_high_pbr.glb。离线把鹤躯平切底部修成圆腹，独足居中挂接，单翼镜像配对并反转右侧面绕序，无运行时负缩放。新增少量立体上腿覆羽为离线造型补足。独立23骨；idle、1.4秒单足跃行walk、4.8秒站定舒翼special。120Hz线性IK，支撑相足掌反向速度匹配运行时0.14m/s固定朝向，三态测量三个非共线真实变形足底顶点的世界XYZ与趾向。meshopt/WebP 2048、不减面不合并不扁平、不重采样。重建脚本pipeline/blender/prepare_bifang.py、rig_bifang.py，实记pipeline/rodin/credits.log。",
+      "sourceComponents": [
+        { "path": "raw/bifang-quality-remake-body-high/base_high_pbr.glb", "job": "bifang-quality-remake-body-high", "tier": "Gen-2.5-Extreme-High", "uuid": "fae5a2c8-442d-4e1a-9a53-929e9a677e78", "sha256": "d558f4a212cbe068d1ae138238094ef88ea651a4d0c3f93c46210df7299bb13d" },
+        { "path": "raw/bifang-quality-remake-leg-high/base_high_pbr.glb", "job": "bifang-quality-remake-leg-high", "tier": "Gen-2.5-Extreme-High", "uuid": "b27f3612-b3a7-4f08-9756-b59b3256cf03", "sha256": "cebf14a07c1120320f0d342c894043a5be363a61ad19775c3f51168f14e1f569" },
+        { "path": "raw/bifang-quality-remake-wing-high/base_high_pbr.glb", "job": "bifang-quality-remake-wing-high", "tier": "Gen-2.5-Extreme-High", "uuid": "6a908272-7e1b-42ff-b5ce-73706728066d", "sha256": "391bdc32c5821e0811ddeb2a799d1afe3577c527d58cbf7cc869e6f2efc7c105" }
+      ],
+      "sourceReference": "https://zh.wikisource.org/wiki/山海經/西山經 · 章莪之山：有鳥焉，其狀如鶴，一足，赤文青質而白喙，名曰畢方，其鳴自叫也，見則其邑有譌火。足位、趾形、翼数、羽层、色阶、纹路位置、具体声音与丹火特效均独立列inferred。",
+      "author": "Hyper3D Rodin新生成与项目离线矫正、覆羽雕刻、组装和绑定",
+      "license": "沿用项目既有Hyper3D Rodin输出条款；离线工作为项目自制"
+    },
+    {
+      "path": "concept/bifang-quality-{body-corrected,leg-corrected,wing-v2,final}/view_{34,side,front,back}.png",
+      "source": "前三组为本轮新Medium部件的Blender归一与矫正参考，实际逐图Read检查后作为HIGH输入；final为最终新HIGH组装与独足姿态四视图。首图34决定材质。",
+      "author": "项目自制",
+      "license": "沿用毕方模型授权"
+    },
+    {
       "path": "public/models/yayu/body.glb",
       "source": "零新生成，仅只读复用三个经账本、SHA256 和实际面数核验的 Gen-2.5-Extreme-High 母件，各原始输入均为 50,000 三角面。诸怀 HIGH 牛躯去掉原牛首/兽耳、原分蹄足端和原尾，裁后含封口 31,270 面；新增渐细颈肩和四条系部，并与该牛躯离线体素融合为连续 425,680 面。该重塑与朱赭涂色为项目离线制作，未声称是新的 HIGH 生成输出。陆吾 HIGH 人首去衣领及颈底凸缘，含封口 41,192 面，保留五官与发须；面部赤褐色为新绘制。鹿蜀 HIGH 四个单蹄裁后分别含封口 770/748/715/736 面，未以牛分蹄替代马足；新涂墨褐色并平整蹄底。另补单牛尾。独立 21 骨，idle/walk/special，全模 472,401 三角面；meshopt/WebP，simplify/flatten/join 均 false。支撑相逆向烘焙真实圆周目标与整蹄 yaw，QA 测全部实际 sole 世界顶点位移及方向。脚本 pipeline/blender/prepare_yayu.py、rig_yayu.py。",
       "sourceComponents": [

@@ -1,0 +1,12 @@
+{
+  "id": "bifang-quality-remake-leg-v1",
+  "beast": "bifang",
+  "budget": 13.5,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One isolated crane leg with a complete muscular thigh attachment, natural avian knee and hock, long slender tarsus and a realistic spreading three-toed foot with small claws. Clear organic joint transitions, standing contact plane, about eight times longer than thick. No body, no second leg, no stand.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

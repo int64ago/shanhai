@@ -1,0 +1,19 @@
+{
+  "id": "bifang-quality-remake-body-high",
+  "beast": "bifang",
+  "budget": 13.5,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "An elegant crane body with a long curved neck, natural crane head, long sharp ivory white beak, blue-teal plumage and crimson feather markings. Rounded natural belly, short tail, no legs and no wings. Preserve the four views and sculpt layered feathers.",
+  "images": [
+    "concept/bifang-quality-body-corrected/view_34.png",
+    "concept/bifang-quality-body-corrected/view_side.png",
+    "concept/bifang-quality-body-corrected/view_front.png",
+    "concept/bifang-quality-body-corrected/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

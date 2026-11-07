@@ -1,0 +1,7 @@
+{
+  "id": "bifang-quality-remake-wing-high", "beast": "bifang", "budget": 13.5,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "One single isolated crane wing, preserve the exact reference silhouette. Rounded thick feathered shoulder, articulated elbow and wrist, overlapping three-dimensional teal feather coverts with organic crimson red markings, long separated primary flight feathers with visible thickness and layered vanes. No second wing, no body, no head. Four views of the same single mother wing.",
+  "images": ["concept/bifang-quality-wing-v2/view_34.png", "concept/bifang-quality-wing-v2/view_side.png", "concept/bifang-quality-wing-v2/view_front.png", "concept/bifang-quality-wing-v2/view_back.png"],
+  "params": {"mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000, "addons": "HighPack"}
+}

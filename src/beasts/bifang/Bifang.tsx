@@ -1,190 +1,133 @@
 import { useEffect, useMemo, useRef } from 'react'
 import { useFrame, useThree } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
-import {
-  AnimationMixer,
-  LoopRepeat,
-  MathUtils,
-  Mesh,
-  Vector3,
-  type AnimationAction,
-  type Group,
-} from 'three'
-import { useApp, type BeastAction } from '../../app/store'
-import { inkify } from '../../systems/ink/inkify'
+import { AnimationMixer, MathUtils, Mesh, SkinnedMesh, Vector3, type AnimationAction, type Group, type Material, type MeshStandardMaterial } from 'three'
+import { clone } from 'three/examples/jsm/utils/SkeletonUtils.js'
+import { useApp } from '../../app/store'
+import { createOutline } from '../../systems/ink/inkify'
+import { createInkMaterial } from '../../systems/ink/inkMaterial'
 import { audio } from '../../systems/audio/AudioEngine'
 import { FoxFire } from '../../systems/vfx/FoxFire'
 
 const BODY_URL = '/models/bifang/body.glb'
-const FADE = 0.28
-const SPECIAL_SECONDS = 4.8
-const WALK_RADIUS = 1.05
-const WALK_SPEED = 0.32
-const ALERT_DISTANCE = 2.4
-
-const FIRE_GOALS: Record<BeastAction, number> = {
-  idle: 0.42,
-  walk: 0.65,
-  special: 2.8,
-}
-
-const _v = new Vector3()
+const WALK_SPEED = 0.14 // Matches the baked single-foot support velocity.
+const WALK_SECONDS = 1.4
+const DUTY = 0.38
+const FIRE = { idle: 0.10, walk: 0.18, special: 1.35 }
 
 export function Bifang() {
   const body = useGLTF(BODY_URL)
-  const action = useApp((s) => s.action)
-  const setAction = useApp((s) => s.setAction)
-  const camera = useThree((s) => s.camera)
-  const controls = useThree((s) => s.controls) as unknown as { target: Vector3 } | null
-
+  const action = useApp(s => s.action)
+  const setAction = useApp(s => s.setAction)
+  const camera = useThree(s => s.camera)
+  const narrow = useThree(s => s.size.width < 600)
+  const controls = useThree(s => s.controls) as unknown as { target: Vector3 } | null
   const root = useRef<Group>(null)
-  const fire = useRef(FIRE_GOALS.idle)
-  const walk = useRef({ angle: Math.PI / 2, lastPhase: 0 })
-  const specialStart = useRef(0)
   const clock = useRef(0)
+  const start = useRef(0)
+  const phase = useRef(0)
+  const fire = useRef(FIRE.idle)
+  const motion = useMemo(() => new Vector3(), [])
+  const cameraShift = useMemo(() => new Vector3(), [])
+  const target = useMemo(() => new Vector3(), [])
+  const panVector = useMemo(() => new Vector3(), [])
 
   const rig = useMemo(() => {
-    const scene = body.scene
-    scene.traverse((o) => {
-      if (o instanceof Mesh) o.frustumCulled = false
-    })
-    // 毕方：「赤文青质而白喙」，保留石青与朱砂丹纹的明快工笔设色
-    inkify(scene, { saturation: 0.9, outline: 0.0055 })
-    scene.updateMatrixWorld(true)
-
+    // Own the bones and animation state while sharing immutable cached assets.
+    const scene = clone(body.scene)
     const mixer = new AnimationMixer(scene)
     const clips: Record<string, AnimationAction> = {}
-    for (const clip of body.animations) {
-      const a = mixer.clipAction(clip)
-      a.setLoop(LoopRepeat, Infinity)
-      clips[clip.name] = a
-    }
-
-    const bone = (name: string) => {
-      const b = scene.getObjectByName(name)
-      if (!b) throw new Error(`毕方骨骼缺失: ${name}`)
-      return b
-    }
-
-    // 讹火发射点：双翼尖、长喙与尾翎
-    const emitters = [
-      bone('wing_l_attach'),
-      bone('wing_r_attach'),
-      bone('beak_attach'),
-      bone('tail_attach'),
-    ]
-
+    for (const clip of body.animations) clips[clip.name] = mixer.clipAction(clip)
+    const emitters = ['wing_l_attach', 'wing_r_attach', 'beak_attach', 'tail_attach'].map(name => {
+      const node = scene.getObjectByName(name)
+      if (!node) throw new Error(`bifang: missing ${name}`)
+      return node
+    })
     return { scene, mixer, clips, emitters }
   }, [body])
 
   useEffect(() => {
+    const meshes: Mesh[] = []
+    rig.scene.traverse(node => { if (node instanceof Mesh && !node.userData.inkOutline) meshes.push(node) })
+    const resources = meshes.map(mesh => {
+      const original = mesh.material as MeshStandardMaterial
+      const material = createInkMaterial({ map: original.map ?? null, saturation: 0.88,
+        tint: original.map ? undefined : `#${original.color.getHexString()}` })
+      const outline = createOutline(mesh, 0.0025)
+      mesh.material = material
+      mesh.frustumCulled = false
+      mesh.parent!.add(outline)
+      return { mesh, original, material, outline }
+    })
     if (import.meta.env.DEV) console.info('[beast] ready bifang')
     return () => {
       rig.mixer.stopAllAction()
+      for (const { mesh, original, material, outline } of resources) {
+        outline.removeFromParent()
+        ;(outline.material as Material).dispose()
+        mesh.material = original
+        material.dispose()
+      }
+      // Outlines share these owned skeletons; dispose each once after removal.
+      // Cached geometry, source materials and their textures stay reusable.
+      const skeletons = new Set<SkinnedMesh['skeleton']>()
+      rig.scene.traverse(node => { if (node instanceof SkinnedMesh) skeletons.add(node.skeleton) })
+      for (const skeleton of skeletons) skeleton.dispose()
     }
   }, [rig])
 
-  const current = useRef<AnimationAction | null>(null)
-  const play = (name: string) => {
-    const next = rig.clips[name]
-    if (!next || next === current.current) return
-    next.reset().setEffectiveWeight(1).fadeIn(FADE).play()
-    current.current?.fadeOut(FADE)
-    current.current = next
-  }
-
-  const panOf = () => {
-    if (!root.current) return 0
-    root.current.getWorldPosition(_v).project(camera)
-    return MathUtils.clamp(_v.x, -1, 1) * 0.8
-  }
+  useEffect(() => () => {
+    camera.position.sub(cameraShift)
+    controls?.target.sub(cameraShift)
+    cameraShift.set(0, 0, 0)
+  }, [camera, controls, cameraShift])
 
   useEffect(() => {
-    if (action === 'walk') play('walk')
-    else if (action === 'special') {
-      play('alert')
-      specialStart.current = clock.current
-      fire.current = 3.5
-      const pan = panOf()
-      window.setTimeout(() => audio.bifangCall(pan), 80)
-    } else play('idle')
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const clip = rig.clips[action]
+    if (!clip) throw new Error(`bifang: missing ${action} animation`)
+    clip.reset().setEffectiveWeight(1).fadeIn(0.18).play()
+    start.current = clock.current
+    phase.current = 0
+    // A cancelled display or unmount must cancel its pending call as well.
+    const timer = action === 'special' ? window.setTimeout(() => audio.bifangCall(), 900) : undefined
+    return () => { clip.fadeOut(0.18); clearTimeout(timer) }
   }, [action, rig])
 
-  useEffect(() => {
-    if (action !== 'idle') return
-    const id = window.setInterval(() => {
-      if (Math.random() < 0.32) audio.bifangCall(panOf())
-    }, 19000)
-    return () => clearInterval(id)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [action])
-
   useFrame((_, rawDt) => {
-    const dt = Math.min(rawDt, 1 / 20)
+    const dt = Math.min(rawDt, 0.05)
     clock.current += dt
-    const t = clock.current
+    rig.mixer.update(dt)
     const g = root.current
     if (!g) return
-
     if (action === 'walk') {
-      walk.current.angle -= (WALK_SPEED / WALK_RADIUS) * dt
-      const a = walk.current.angle
-      g.position.x = Math.cos(a) * WALK_RADIUS
-      g.position.z = Math.sin(a) * WALK_RADIUS
-      const yaw = Math.atan2(Math.sin(a), -Math.cos(a))
-      g.rotation.y = MathUtils.damp(g.rotation.y, yaw, 6, dt)
-
-      // 独足鹤跃落地声 + 振翅声
-      const walkAction = rig.clips.walk
-      const phase = (walkAction.time % walkAction.getClip().duration) / walkAction.getClip().duration
-      const last = walk.current.lastPhase
-      const pan = panOf()
-      if (last < 0.5 && phase >= 0.5) {
-        audio.footstep(pan, 0.45)
-      }
-      if (phase < last) {
-        audio.wingFlutter(pan, 0.38)
-      }
-      walk.current.lastPhase = phase
+      // Fixed heading preserves both world-space sole position and toe yaw.
+      motion.set(Math.sin(g.rotation.y), 0, Math.cos(g.rotation.y)).multiplyScalar(WALK_SPEED * dt)
+      g.position.add(motion)
+      camera.position.add(motion)
+      cameraShift.add(motion)
+      controls?.target.add(motion)
+      const p = rig.clips.walk.time / WALK_SECONDS % 1
+      g.getWorldPosition(panVector).project(camera)
+      const pan = MathUtils.clamp(panVector.x, -1, 1) * 0.8
+      if (p < phase.current) audio.footstep(pan, 0.40)
+      if (phase.current < DUTY && p >= DUTY) audio.wingFlutter(pan, 0.30)
+      phase.current = p
     }
-
-    if (action === 'special') {
-      const elapsed = t - specialStart.current
-      if (elapsed > SPECIAL_SECONDS) setAction('idle')
-      // 神通「讹火自訆」：单足轻跃腾空，双翼振起丹火
-      const soar = Math.sin(Math.min(elapsed / SPECIAL_SECONDS, 1) * Math.PI) * 0.22
-      g.position.y = MathUtils.damp(g.position.y, soar, 5, dt)
-    } else {
-      g.position.y = MathUtils.damp(g.position.y, 0, 6, dt)
-    }
-
-    if (action === 'idle') {
-      g.getWorldPosition(_v)
-      const near = camera.position.distanceTo(_v) < ALERT_DISTANCE
-      play(near ? 'alert' : 'idle')
-    }
-
-    rig.mixer.update(dt)
-    fire.current = MathUtils.damp(fire.current, FIRE_GOALS[action], 1.6, dt)
-
+    if (action === 'special' && clock.current - start.current > 4.8) setAction('idle')
+    fire.current = MathUtils.damp(fire.current, FIRE[action], 2.5, dt)
     if (controls) {
-      g.getWorldPosition(_v)
-      _v.y = 0.54
-      controls.target.x = MathUtils.damp(controls.target.x, _v.x, 2, dt)
-      controls.target.y = MathUtils.damp(controls.target.y, _v.y, 2, dt)
-      controls.target.z = MathUtils.damp(controls.target.z, _v.z, 2, dt)
+      // Keep the tall head below the portrait text card.
+      target.copy(g.position); target.y = narrow ? 1.05 : 0.76
+      controls.target.lerp(target, 1 - Math.exp(-2 * dt))
     }
   })
 
-  return (
-    <>
-      <group ref={root} position={[0, 0, WALK_RADIUS]} rotation-y={Math.PI / 2 - 0.22}>
-        <primitive object={rig.scene} />
-      </group>
-      <FoxFire emitters={rig.emitters} intensity={fire} />
-    </>
-  )
+  return <>
+    <group ref={root} position={[0, 0, 0.55]} rotation-y={1.25}>
+      <primitive object={rig.scene} name="bifang_scene" dispose={null} />
+    </group>
+    <FoxFire emitters={rig.emitters} intensity={fire} coreColor="#d98a62" edgeColor="#9e3b2a" />
+  </>
 }
 
 useGLTF.preload(BODY_URL)

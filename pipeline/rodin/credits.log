@@ -85,3 +85,10 @@
 {"time":"2026-11-07T14:44:41.005Z","beast":"fenghuang","job":"fenghuang-quality-remake-body-high","hash":"4a3b90ca9f61c4ee","tier":"Gen-2.5-Extreme-High","uuid":"c4a1733a-9615-4ffe-aa76-cfa67cbb18e7","consumed":1}
 {"time":"2026-11-07T14:46:24.707Z","beast":"fenghuang","job":"fenghuang-quality-remake-wing-v2","hash":"beb6a8dce02d81fc","tier":"Gen-2.5-Medium","uuid":"eb551cfd-4d3e-4014-8ace-c7fb99d40316","consumed":0.5}
 {"time":"2026-11-07T14:50:27.456Z","beast":"fenghuang","job":"fenghuang-quality-remake-wing-high","hash":"1e85232e72e9b785","tier":"Gen-2.5-Extreme-High","uuid":"099fe0be-21b5-441a-8972-88af666fe8ef","consumed":1}
+{"time":"2026-11-07T14:39:10.442Z","beast":"bifang","job":"bifang-quality-remake-body-v1","hash":"4f9c5355d972ec17","tier":"Gen-2.5-Medium","uuid":"e6041b0e-172a-4346-b27d-2ce6c5e4cdb9","consumed":0.5}
+{"time":"2026-11-07T14:39:33.433Z","beast":"bifang","job":"bifang-quality-remake-wing-v1","hash":"ff9e79edf958ffd5","tier":"Gen-2.5-Medium","uuid":"b1723944-4391-4eeb-aff7-ab3f2b86543a","consumed":0.5}
+{"time":"2026-11-07T14:39:53.436Z","beast":"bifang","job":"bifang-quality-remake-leg-v1","hash":"8b8cb1954fef8e1d","tier":"Gen-2.5-Medium","uuid":"2445c9fa-c0a9-41f1-a22c-a335ec081e3b","consumed":0.5}
+{"time":"2026-11-07T14:43:56.940Z","beast":"bifang","job":"bifang-quality-remake-wing-v2","hash":"952cc1e4008b9587","tier":"Gen-2.5-Medium","uuid":"ecf91dc9-676b-4a79-b003-a1efbc94a439","consumed":0.5}
+{"time":"2026-11-07T14:46:40.536Z","beast":"bifang","job":"bifang-quality-remake-body-high","hash":"d727ea805468e873","tier":"Gen-2.5-Extreme-High","uuid":"fae5a2c8-442d-4e1a-9a53-929e9a677e78","consumed":1}
+{"time":"2026-11-07T14:46:59.975Z","beast":"bifang","job":"bifang-quality-remake-leg-high","hash":"dc21de6be0722994","tier":"Gen-2.5-Extreme-High","uuid":"b27f3612-b3a7-4f08-9756-b59b3256cf03","consumed":1}
+{"time":"2026-11-07T14:48:03.705Z","beast":"bifang","job":"bifang-quality-remake-wing-high","hash":"0108bc353431bfa0","tier":"Gen-2.5-Extreme-High","uuid":"6a908272-7e1b-42ff-b5ce-73706728066d","consumed":1}
