@@ -8,6 +8,18 @@
       "license": "沿用既有 Hyper3D Rodin 源资产条款"
     },
     {
+      "path": "public/models/min_bird/body.glb",
+      "source": "项目既有 jingwei-body-max/base_high_pbr.glb（Gen-2.5-Extreme-High，原始 50,000 三角面，清理后保留 49,902 面）离线改制；账本 UUID 3954a021-1bf6-4764-9355-00eaad9c4dd6，SHA-256 fefde14bf4e80074c368eb8bea4ce373b3f03db24890517ae7f83eaf54175319。短尾、短双足、大头长直赤喙、双翼收拢、重绘羽色及独立动作均由 Blender 完成；零新增生成交易。详见 content/beasts/min_bird.json production。",
+      "author": "项目自有 AI 高模素材与离线改制",
+      "license": "Hyper3D Rodin 生成输出（沿用项目既有源资产条款）"
+    },
+    {
+      "path": "public/audio/narration/min_bird.mp3",
+      "source": "修订后的西山经符禺之山原创评书，pipeline/tts/narrate.ts，CosyVoice cosyvoice-v2 / longsanshu",
+      "author": "项目原创解说与合成配音",
+      "license": "沿用项目百炼 CosyVoice 合成音频条款"
+    },
+    {
       "path": "public/models/_placeholder/fox.glb",
       "source": "Hyper3D Rodin Gen-2.5 Extreme-Low（pipeline/rodin/jobs/m1-placeholder-fox.json）",
       "author": "AI 生成",

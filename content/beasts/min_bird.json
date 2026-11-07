@@ -1,0 +1,32 @@
+{
+  "id": "min_bird",
+  "name": "鴖",
+  "archetype": "avian",
+  "source": [
+    { "book": "山海經·西山經·西山經之首", "text": "其鳥多鴖，其狀如翠而赤喙，可以禦火。" }
+  ],
+  "inferred": [
+    { "item": "翠鸟体态；青碧羽、米白喉与赭色胸腹为设色推断", "basis": "符禺之山原文以「翠」比形、以「赤喙」记色。按翠鸟取大头、长直喙、短尾、双翼双短足；具体羽色、胸腹色块、比例与双足解剖为绘制补足，原文未逐项规定。" },
+    { "item": "双足短跃与收翼护身为动作演绎；御火未定形", "basis": "静立轻息、双足着地后短跃、稍展双翼再收拢均为观察鸟类后的艺术设计。「可以禦火」仅说明传说中的御火能力，原文未说明方法；护身姿态是象征性演绎，不据此认定鴖会喷火、引火或抵挡任何现实火灾。" },
+    { "item": "清短双哨为拟声；原文未记鸣声", "basis": "用短促上扬的合成鸟哨作交互听觉补足，音高、音色与节奏均属推断；鴖的古代真实鸣声无从据此还原。" }
+  ],
+  "references": [
+    { "url": "https://zh.wikisource.org/wiki/山海經/西山經", "note": "核对西山經之首、符禺之山及鴖原文；正文采用此繁体传本的「禦」。" },
+    { "url": "https://www.gutenberg.org/cache/epub/25288/pg25288.txt", "note": "交叉核对西山經符禺之山，异体字以【民鳥】表示，作「可以御火」。" }
+  ],
+  "production": {
+    "method": "offline HIGH geometry reuse and procedural Blender remodeling; zero new generation transactions",
+    "master": "jingwei-body-max/base_high_pbr.glb",
+    "masterSha256": "fefde14bf4e80074c368eb8bea4ce373b3f03db24890517ae7f83eaf54175319",
+    "ledgerJob": "jingwei-body-max",
+    "ledgerTier": "Gen-2.5-Extreme-High",
+    "ledgerUuid": "3954a021-1bf6-4764-9355-00eaad9c4dd6",
+    "ledgerHash": "21e8f0401fa3431b",
+    "masterTriangles": 50000,
+    "finalTriangles": 49902,
+    "cleanup": "normalize.py merged duplicate vertices; 98 degenerate triangles removed before remodeling; runtime optimize used simplify=false",
+    "changes": "shortened paired tarsi and tail; enlarged skull; straightened and extended bill; folded both feather wings; UV repaint; custom 19-bone two-foot contact rig with idle/walk/alert clips",
+    "scripts": ["pipeline/blender/prepare_min_bird.py", "pipeline/blender/rig_min_bird.py"],
+    "narration": { "workflow": "pipeline/tts/narrate.ts --force min_bird", "model": "cosyvoice-v2", "voice": "longsanshu" }
+  }
+}

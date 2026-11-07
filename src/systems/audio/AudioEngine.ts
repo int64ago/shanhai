@@ -549,6 +549,28 @@ class AudioEngine {
     this.foxFire(pan)
   }
 
+  /** 鴖原文未记鸣声；清短双哨仅为鸟类听觉推断。 */
+  minBirdCall(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const out = this.panner(pan)
+    out.connect(this.sfx)
+    for (const [offset, start, end] of [[0, 2350, 3100], [0.24, 2800, 3550]]) {
+      const t = ctx.currentTime + offset
+      const osc = ctx.createOscillator()
+      osc.type = 'sine'
+      osc.frequency.setValueAtTime(start, t)
+      osc.frequency.exponentialRampToValueAtTime(end, t + 0.11)
+      const gain = ctx.createGain()
+      gain.gain.setValueAtTime(0, t)
+      gain.gain.linearRampToValueAtTime(0.12, t + 0.018)
+      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.16)
+      osc.connect(gain).connect(out)
+      osc.start(t)
+      osc.stop(t + 0.18)
+    }
+  }
+
   /** 精卫「其鸣自詨」：近似自呼「精—卫」的双声鸦鸣，音色与节奏为艺术推断。 */
   jingweiCall(pan = 0) {
     const ctx = this.ctx
