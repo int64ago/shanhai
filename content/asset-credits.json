@@ -6,6 +6,12 @@
       "source": "Hyper3D Rodin Gen-2.5 Extreme-Low（pipeline/rodin/jobs/m1-placeholder-fox.json）",
       "author": "AI 生成",
       "license": "待核实 Rodin 输出条款；仅作开发占位"
+    },
+    {
+      "path": "public/models/tianma/body.glb",
+      "source": "既有 chenghuang-body-max/base_high_pbr.glb 高模离线复用；49,988 三角面犬科母件，按天马白犬参考调整面颊与犬吻、重绘黑头，再独立绑定飞行动作（pipeline/blender/adapt_tianma_high.py、rig_tianma.py）。未追加高模生成任务；尾部复用 public/models/zheng/tail.glb。",
+      "author": "项目自有 AI 生成素材与离线改制",
+      "license": "Hyper3D Rodin 生成输出（沿用项目既有源资产条款）"
     }
   ]
 }

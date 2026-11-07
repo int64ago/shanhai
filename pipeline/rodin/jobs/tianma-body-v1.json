@@ -1,0 +1,8 @@
+{
+  "id": "tianma-body-v1",
+  "beast": "tianma",
+  "budget": 4,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One adult mythical Tianma from Shan Hai Jing, anatomically a lean WHITE DOG with an entirely BLACK HEAD, NOT a horse. Natural medium sized athletic spitz dog, pointed black canine ears, long black dog muzzle, dark eyes, closed mouth. Head and both ears uniform jet black stopping at the neck, whole neck and torso and ALL FOUR legs plain snow white short fur with no markings. Standing squarely tall on four straight separate extended legs, four flat white canine paws clearly separated, horizontal level back with rump as high as shoulders, side-on full body. Head facing forward at shoulder height. TAIL REMOVED, smooth rounded tailless rump. No wings, no feathers, no horns, no mane, no horse hooves, no pedestal, no accessories, no terrain, neutral studio model.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

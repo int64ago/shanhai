@@ -685,6 +685,34 @@ class AudioEngine {
     }
   }
 
+  /** 天马「其鸣自訆」：借今音的两个音节作犬声演绎，非古音复原。 */
+  tianmaCall(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const out = this.panner(pan)
+    out.connect(this.sfx)
+    for (const [offset, duration, hz, formant] of [[0, 0.38, 290, 1700], [0.48, 0.52, 220, 780]]) {
+      const t = ctx.currentTime + offset
+      const voice = ctx.createOscillator()
+      voice.type = 'sawtooth'
+      voice.frequency.setValueAtTime(hz * 0.78, t)
+      voice.frequency.exponentialRampToValueAtTime(hz, t + 0.05)
+      voice.frequency.exponentialRampToValueAtTime(hz * 0.62, t + duration)
+      const filter = ctx.createBiquadFilter()
+      filter.type = 'bandpass'
+      filter.frequency.setValueAtTime(formant, t)
+      filter.frequency.exponentialRampToValueAtTime(formant * 0.7, t + duration)
+      filter.Q.value = 1.8
+      const envelope = ctx.createGain()
+      envelope.gain.setValueAtTime(0, t)
+      envelope.gain.linearRampToValueAtTime(0.3, t + 0.025)
+      envelope.gain.exponentialRampToValueAtTime(0.001, t + duration)
+      voice.connect(filter).connect(envelope).connect(out)
+      voice.start(t)
+      voice.stop(t + duration + 0.03)
+    }
+  }
+
   /** 乘黄原文未记鸣声；据「状如狐」补一声短促轻鸣，音高与音色为交互演绎。 */
   chenghuangCall(pan = 0) {
     const ctx = this.ctx
