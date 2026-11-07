@@ -30,9 +30,12 @@ def make_rig(obj):
     lm=rig.landmarks(obj);arm=rig.build_armature(lm,headless=True)
     bpy.context.view_layer.objects.active=arm;bpy.ops.object.mode_set(mode='EDIT');eb=arm.data.edit_bones
     for side,sign in [('l',1),('r',-1)]:
-        root=Vector((sign*.17,-.24,.875))
-        bone=eb.new(f'neck_{side}');bone.head=(sign*.045,-.20,.70);bone.tail=root;bone.parent=eb['chest']
-        bone=eb.new(f'head_{side}');bone.head=root;bone.tail=root+Vector((sign*.14,-.07,.02));bone.parent=eb[f'neck_{side}']
+        root=Vector((sign*.130,-.245,.845))
+        points=[Vector((sign*.035,-.185,.665)),Vector((sign*.085,-.210,.735)),Vector((sign*.120,-.235,.800)),root]
+        names=[f'neck_{side}',f'neck_{side}_mid',f'neck_{side}_tip']
+        for i,name in enumerate(names):
+            bone=eb.new(name);bone.head=points[i];bone.tail=points[i+1];bone.parent=eb['chest' if i==0 else names[i-1]]
+        bone=eb.new(f'head_{side}');bone.head=root;bone.tail=root+Vector((sign*.14,-.07,.02));bone.parent=eb[names[-1]]
     for i in range(13):
         bone=eb.new(f'tail_{i}');bone.head=tail_point(i/12);bone.tail=tail_point((i+1)/12) if i<12 else tail_point(1)+Vector((0,.02,0))
         bone.parent=eb['hips'] if i==0 else eb[f'tail_{i-1}']
@@ -52,24 +55,32 @@ def skin(obj,arm,lm):
             if w>1e-6:groups[name].add([v.index],w,'REPLACE')
     for v in obj.data.vertices:
         part=parts[v.index]
-        if part.startswith('ScreenPengHead'):
-            replace(v,{'head_l' if part.endswith('L') else 'head_r':1})
+        if part.startswith('ScreenPengHead') or (v.co.y<-.04 and v.co.z>.645):
+            # Shared welded vertices receive one continuous field independent
+            # of their UV/material boundary. The fork's centre stays on chest;
+            # above the saddle each side has its own three-bone neck chain.
+            weights={};side_weight=max(0,min(1,(v.co.x+.025)/.050))
+            for side,w in [('l',side_weight),('r',1-side_weight)]:
+                sign=1 if side=='l' else -1
+                normal=Vector((sign*.65*math.sin(math.radians(48)),-.65*math.cos(math.radians(48)),.76)).normalized()
+                d=(v.co-Vector((sign*.130,-.245,.845))).dot(normal)
+                t=max(0,min(1.2,max((v.co.z-.645)/.200,.90+d/.10)))
+                anchors=[(0,'chest'),(.27,f'neck_{side}'),(.60,f'neck_{side}_mid'),(.90,f'neck_{side}_tip'),(1.20,f'head_{side}')]
+                for (a,an),(b,bn) in zip(anchors,anchors[1:]):
+                    if a<=t<=b:
+                        f=(t-a)/(b-a);weights[an]=weights.get(an,0)+w*(1-f);weights[bn]=weights.get(bn,0)+w*f;break
+                else:weights[f'head_{side}']=weights.get(f'head_{side}',0)+w
+            replace(v,weights)
         elif part.startswith('ScreenPengTail'):
             t=max(0,min(12,(v.co.y-.40)/.60*12));a=min(12,int(t));b=min(12,a+1)
             weights={f'tail_{a}':1-(t-a)}
             weights[f'tail_{b}']=weights.get(f'tail_{b}',0)+(t-a);replace(v,weights)
-        elif part.startswith('ScreenPengNeck'):
-            names=['chest','neck_l','neck_r','head_l','head_r'];scores={}
-            for name in names:
-                bone=arm.data.bones[name];a,b=bone.head_local,bone.tail_local;ab=b-a;t=max(0,min(1,(v.co-a).dot(ab)/ab.length_squared))
-                scores[name]=max(.02,(v.co-a-ab*t).length)**-3
-            total=sum(scores.values());replace(v,{n:w/total for n,w in scores.items()})
         elif v.co.z<.14:
             leg=min(lm['legs'],key=lambda n:(Vector((v.co.x,v.co.y,0))-lm['legs'][n]).length_squared)
             w=1-smooth(.08,.14,v.co.z);old={g.group:g.weight for g in v.groups}
             for index,weight in old.items():obj.vertex_groups[index].add([v.index],weight*(1-w),'REPLACE')
             foot=groups[f'{leg}_foot'];foot.add([v.index],old.get(foot.index,0)*(1-w)+w,'REPLACE')
-    rig.normalize_weights(obj);print('SKIN Screen Peng: two rigid HIGH heads, authored shoulder blend, 13 tail bones, rigid soles')
+    rig.normalize_weights(obj);print('SKIN Screen Peng: two independent three-bone neck chains, continuous welded shoulder weights, 13 tail bones, rigid soles')
 
 
 def solve(arm,leg,drop,stride=0,lift=0):
@@ -106,7 +117,10 @@ def animate(arm,lm,name,seconds):
             for part,angle in zip(('upper','lower','foot'),solve(arm,leg,drop,stride,lift)):
                 pb=arm.pose.bones[f'{leg}_{part}'];pose[pb.name]=world_rot(pb,X,angle)
         for side,sign in [('l',1),('r',-1)]:
-            pb=arm.pose.bones[f'neck_{side}'];pose[pb.name]=world_rot(pb,(0,0,1),sign*(.018*math.sin(phase*math.tau+sign*.6)+.09*display))
+            for i,suffix in enumerate(['','_mid','_tip']):
+                pb=arm.pose.bones[f'neck_{side}{suffix}']
+                angle=sign*(.010*math.sin(phase*math.tau+sign*.6-i*.4)+(.025+i*.009)*display)
+                pose[pb.name]=world_rot(pb,(0,0,1),angle)
             pb=arm.pose.bones[f'head_{side}'];pose[pb.name]=world_rot(pb,X,.022*math.sin(phase*math.tau+sign)+.035*display)
         for i in range(13):
             pb=arm.pose.bones[f'tail_{i}'];pose[pb.name]=world_rot(pb,(0,0,1),.018*math.sin(phase*math.tau-i*.4))

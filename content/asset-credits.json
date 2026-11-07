@@ -328,9 +328,9 @@
     },
     {
       "path": "public/models/screen_peng/body.glb",
-      "source": "Offline reuse of verified zheng-body-max and zheng-tail-max, both Gen-2.5-Extreme-High (49,751 and 49,964 source triangles). Body central head removed; two lateral 7,612-triangle head crops from the same HIGH body master, with original authored bifurcating shoulder and fur texture. Single HIGH tail reshaped offline. Individual UUIDs/hashes/counts and inference recorded in content/beasts/screen_peng.json; zero new Rodin transactions or credits.",
-      "author": "项目自有 AI 高模离线改制；分叉颈肩与补足纹样为项目原创",
-      "license": "沿用项目既有 Hyper3D Rodin 输出条款；新增颈肩为原创几何，不冒称新 AI 高模"
+      "source": "Offline reuse of verified zheng-body-max and zheng-tail-max, both Gen-2.5-Extreme-High with 50,000 raw triangles each; normalized donors contain 49,751 and 49,964 triangles. The native upper feline shoulder/throat tissue is smoothly deformed into two branches and voxel-unioned, then actually stitched across six open boundary loops to retained lower body and complete lateral head surfaces. Retained UVs and a donor-projected coat atlas preserve the original fur; unintended pink sternum texels are neutralized. No buried cut caps or primitive neck sleeves. Independent three-bone neck chains, a single reshaped tail, and plantar support cleanup are offline adaptations. UUIDs, hashes, exact cleanup counts and QA are recorded in content/beasts/screen_peng.json; zero new generation, Rodin credits or TTS requests.",
+      "author": "项目既有 AI 高模离线改制；原生颈肩重构、UV 投影烘焙与绑定为项目制作",
+      "license": "沿用项目既有 Hyper3D Rodin 输出条款；颈肩为既有母件离线重构，不冒称新生成高模"
     },
     {
       "path": "public/audio/narration/screen_peng.mp3",
