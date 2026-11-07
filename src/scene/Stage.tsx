@@ -46,6 +46,7 @@ import { Boyi } from '../beasts/boyi/Boyi'
 import { Tongtong } from '../beasts/tongtong/Tongtong'
 import { Fenghuang } from '../beasts/fenghuang/Fenghuang'
 import { Fengxi } from '../beasts/fengxi/Fengxi'
+import { ScreenPeng } from '../beasts/screen_peng/ScreenPeng'
 import { CameraRig } from './CameraRig'
 
 export function Stage() {
@@ -139,6 +140,8 @@ export function Stage() {
           <Fenghuang />
         ) : selected === 'fengxi' ? (
           <Fengxi />
+        ) : selected === 'screen_peng' ? (
+          <ScreenPeng />
         ) : (
           <PlaceholderBeast />
         )}

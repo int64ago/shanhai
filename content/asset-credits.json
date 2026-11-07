@@ -108,6 +108,18 @@
       "license": "待核实 Rodin 输出条款；仅作开发占位"
     },
     {
+      "path": "public/models/screen_peng/body.glb",
+      "source": "Offline reuse of verified zheng-body-max and zheng-tail-max, both Gen-2.5-Extreme-High (49,751 and 49,964 source triangles). Body central head removed; two lateral 7,612-triangle head crops from the same HIGH body master, with original authored bifurcating shoulder and fur texture. Single HIGH tail reshaped offline. Individual UUIDs/hashes/counts and inference recorded in content/beasts/screen_peng.json; zero new Rodin transactions or credits.",
+      "author": "项目自有 AI 高模离线改制；分叉颈肩与补足纹样为项目原创",
+      "license": "沿用项目既有 Hyper3D Rodin 输出条款；新增颈肩为原创几何，不冒称新 AI 高模"
+    },
+    {
+      "path": "public/audio/narration/screen_peng.mp3",
+      "source": "Original source-corrected narration through pipeline/tts/narrate.ts, CosyVoice v2 / longsanshu, MP3 22050 Hz.",
+      "author": "项目原创解说词；百炼龙三叔合成",
+      "license": "沿用项目既有百炼语音输出条款"
+    },
+    {
       "path": "public/models/fenghuang/body.glb",
       "source": "Offline adaptation of verified jingwei-body-max/base_high_pbr.glb, Gen-2.5-Extreme-High, 49,902 source triangles. Compact chicken-shaped bill, breast and wings; raised short tail, original low crown and short fan feather geometry. Five anatomical virtue glyphs baked into feather UVs using locally installed Arial Unicode. Source UUID/hashes and inference recorded in content/beasts/fenghuang.json. Zero new Rodin transactions or credits.",
       "author": "项目自有 AI 高模离线改制、原创羽翎建模与纹样设计",

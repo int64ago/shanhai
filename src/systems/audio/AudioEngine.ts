@@ -1076,6 +1076,28 @@ class AudioEngine {
     }
   }
 
+  /** 屏蓬左右首相应的低吟；本条没有记载鸣声。 */
+  screenPengCall() {
+    const ctx = this.ctx
+    if (!ctx) return
+    for (const [i, pan] of [-0.3, 0.3].entries()) {
+      const t = ctx.currentTime + i * 0.42
+      const out = this.panner(pan)
+      out.connect(this.sfx)
+      const voice = ctx.createOscillator()
+      voice.type = 'triangle'
+      voice.frequency.setValueAtTime(i === 0 ? 145 : 160, t)
+      voice.frequency.exponentialRampToValueAtTime(i === 0 ? 106 : 118, t + 0.32)
+      const gain = ctx.createGain()
+      gain.gain.setValueAtTime(0, t)
+      gain.gain.linearRampToValueAtTime(0.14, t + 0.045)
+      gain.gain.exponentialRampToValueAtTime(0.0005, t + 0.36)
+      voice.connect(gain).connect(out)
+      voice.start(t)
+      voice.stop(t + 0.38)
+    }
+  }
+
   /** 凤凰「自歌自舞」的和鸣；具体音阶与音色为艺术补足。 */
   fenghuangCall(pan = 0) {
     const ctx = this.ctx

@@ -1,0 +1,25 @@
+{
+  "id": "screen_peng",
+  "name": "屏蓬",
+  "archetype": "quadruped",
+  "source": [{"book": "山海经·大荒西经", "text": "有獸，左右有首，名曰屏蓬。"}],
+  "inferred": [
+    {"item": "四足猫科兽形与一条中短尾", "basis": "原文只称兽，未指定物种、足数、尾数或尾长；猫科躯干、四足足掌、耳鼻形态和单尾均为设计补足，不将猪形并入 source。"},
+    {"item": "同一宽肩向左右分出短颈，各接一首", "basis": "据「左右有首」明确画出横向并列的两首；具体双颈、同一肩带的连接结构、头颈大小及位置均为构型解释，不作前后双首。"},
+    {"item": "双首分别向外略朝前", "basis": "经文未记两首的具体朝向、视线或转动范围；左右对称向外张望的角度是为了辨认左右双首而作的设计选择。"},
+    {"item": "赭褐斑毛、米白颌胸与琥珀双眸", "basis": "本条没有猪形、黑色或其他色彩记录；全部毛色、斑纹、鼻爪色及两首相同的琥珀眼色均为艺术设色。"},
+    {"item": "四足稳步、双首侧望与交替低吟", "basis": "正文未记习性、动作或鸣声；四拍缓步、微呼吸、双首侧望、尾部回摆及合成低吟均为交互演绎，不补写争执不能前进等后世说法。"}
+  ],
+  "sourceVerification": {"url": "https://zh.wikisource.org/wiki/山海經/大荒西經", "checked": "2026-11-07", "contextBefore": "大荒之中，有山，名曰鏖鏊鉅，日月所入者。", "contextAfter": "有巫山者。有壑山者。有金門之山，有人名曰黄姖之尸。", "note": "本条独立为有獸，左右有首，名曰屏蓬。相邻山名并未明确写屏蓬居于该山，故不拼接引文或推演栖地；没有猪形、黑色、前后双首，也不与并封混为一兽。"},
+  "production": {
+    "newRodinTransactions": 0,
+    "newRodinCredits": 0,
+    "bodyAndHeads": {"job": "zheng-body-max", "tier": "Gen-2.5-Extreme-High", "uuid": "9cb3d641-b308-4a68-98c9-2c6b23a210a3", "raw": "raw/zheng-body-max/base_basic_pbr.glb", "sha256": "f48ffea66bce62031803ca220022c8a7d1509e782d45f55bf1ca0127074e61e4", "normalized": "raw/_build/zheng/body_high_fixed.glb", "normalizedSha256": "04543b1a7e75d27b8a2204034dd337256703b981e1e14a138f8662bedb3af5d7", "sourceTriangles": 49751, "headCropTrianglesEach": 7612, "note": "Returned filename is base_basic_pbr.glb; Extreme-High identity independently checked in credits.log plus hashes and mesh counts. Both lateral heads are duplicated crops from this verified master, not separately generated HIGH jobs."},
+    "tail": {"job": "zheng-tail-max", "tier": "Gen-2.5-Extreme-High", "uuid": "5df9c54f-7b07-4a10-9fa9-1c9639bcd23a", "raw": "raw/zheng-tail-max/base_basic_pbr.glb", "sha256": "1b8ada26543347529cba616a5f0108e426993e6f985405993bd520936dea7b2b", "normalized": "raw/_build/zheng/tail_high_norm.glb", "normalizedSha256": "a43f92f34e456b916c9f79c361d658970f905a7b002052cce00c9cae6a54f734", "sourceTriangles": 49964},
+    "adaptation": "Source forehead horn flattened and painted into coat; original central head/upper neck removed. Two 7,612-triangle HIGH crops rotated laterally with positive scales, through an original authored smoothly unioned bifurcating shoulder. Only new shoulder geometry is voxel-unioned, never the dense HIGH body/head/tail surfaces. Source UV/fur retained and recoloured. Authored shoulder fur is original texture work, not claimed AI HIGH generation. One HIGH tail curved and shortened offline. Guarded inverse-transpose numerical Jacobians transform source normals without computeVertexNormals. Own 35-bone rig with two independent neck/head chains and thirteen tail bones.",
+    "scripts": ["pipeline/blender/prepare_screen_peng.py", "pipeline/blender/rig_screen_peng.py"],
+    "parentAudit": {"script": "scripts/qa-screen-peng.mjs", "resources": "Cached scene ink materials and outlines installed in an effect; cleanup removes outlines, restores original materials, and disposes owned materials.", "method": "Real useFrame advance at 60 Hz: 432 walk frames, 252 idle/special frames; three noncollinear CPU-skinned sole vertices per paw, world XYZ displacement, yaw and triangle normal. Refresh scene matrixWorld and skeleton before each sample.", "maxSoleDriftMeters": {"idle": 0.000075708, "walk": 0.000114312, "special": 0.000103377}, "maxSoleNormalDegrees": 0.012862, "checks": "Three remounts preserve 48 nodes, five surfaces, five outlines, one root and two lateral heads; no nonfinite data or browser errors. Actual narration 70.269375s advances in running AudioContext without media error; cry invoked; special returns to idle. Concept four views and final three poses plus six motion closeups inspected."},
+    "animationEncoding": "120 Hz LINEAR samples preserve exact quarter-cycle paw landings. gltf-transform optimize uses --simplify false --flatten false --join false --instance false --palette false --resample false --texture-compress webp --texture-size 2048 --compress meshopt; animation resampling must remain disabled to preserve planted support.",
+    "narration": {"pipeline": "pipeline/tts/narrate.ts", "model": "cosyvoice-v2", "voice": "longsanshu", "format": "mp3", "sampleRate": 22050}
+  }
+}
