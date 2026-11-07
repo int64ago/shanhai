@@ -1,0 +1,8 @@
+{
+  "id": "zhuhuai-body-v1",
+  "beast": "zhuhuai",
+  "budget": 6,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "Zhuhuai mythical ox from Shan Hai Jing, strong realistic bovine quadruped with broad ox muzzle and massive level-backed stocky cattle body, short dark warm brown fur, standing tall on FOUR clearly separate straight legs with cloven hooves flat on ground, neutral symmetric standing pose facing forward. HORNLESS smooth clean forehead and skull, NO horns, NO antlers; four horns will be attached separately later. Two conspicuous HUMAN shaped almond eyes facing slightly forward, pale ivory sclera surrounding round dark brown human irises and round black pupils, readable eyelids. Two large pinkish brown PIG ears, broad triangular flaps splayed sideways with softly folded tips, not pointed cattle horns. Single thin natural bovine tail hanging close behind the rump with a small dark hair tuft, no extra limbs, no pedestal, no decorations",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

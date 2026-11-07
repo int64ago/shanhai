@@ -871,6 +871,39 @@ class AudioEngine {
     mew.stop(start + 0.53)
   }
 
+  /** 诸怀「其音如鸣雁」：分节鼻音雁叫，音高与节奏为听觉演绎。 */
+  zhuhuaiCall(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const out = this.panner(pan)
+    out.connect(this.sfx)
+    for (const [offset, duration, pitch] of [[0, 0.46, 390], [0.6, 0.58, 330], [1.4, 0.42, 420]]) {
+      const t = ctx.currentTime + offset
+      const voice = ctx.createOscillator()
+      voice.type = 'sawtooth'
+      voice.frequency.setValueAtTime(pitch * 0.8, t)
+      voice.frequency.exponentialRampToValueAtTime(pitch * 1.18, t + 0.08)
+      voice.frequency.exponentialRampToValueAtTime(pitch * 0.76, t + duration)
+      const envelope = ctx.createGain()
+      envelope.gain.setValueAtTime(0, t)
+      envelope.gain.linearRampToValueAtTime(0.23, t + 0.045)
+      envelope.gain.setValueAtTime(0.19, t + duration * 0.6)
+      envelope.gain.exponentialRampToValueAtTime(0.0005, t + duration)
+      for (const [frequency, level] of [[950, 1], [1800, 0.4]]) {
+        const filter = ctx.createBiquadFilter()
+        filter.type = 'bandpass'
+        filter.frequency.value = frequency
+        filter.Q.value = 3.5
+        const gain = ctx.createGain()
+        gain.gain.value = level
+        voice.connect(filter).connect(gain).connect(envelope)
+      }
+      envelope.connect(out)
+      voice.start(t)
+      voice.stop(t + duration + 0.02)
+    }
+  }
+
   /** 《海内北经》未记穷奇鸣声；低沉虎啸与气声为「状如虎」的交互艺术补足。 */
   qiongqiCall(pan = 0) {
     const ctx = this.ctx
