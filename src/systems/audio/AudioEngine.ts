@@ -894,6 +894,32 @@ class AudioEngine {
     }
   }
 
+  /** 鬿雀的短促粗鸣为听觉补足；本条古经没有记载鸣声。 */
+  qiqueCall(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const out = this.panner(pan)
+    out.connect(this.sfx)
+    for (const delay of [0, 0.22]) {
+      const t = ctx.currentTime + delay
+      const tone = ctx.createOscillator()
+      tone.type = 'sawtooth'
+      tone.frequency.setValueAtTime(520, t)
+      tone.frequency.exponentialRampToValueAtTime(290, t + 0.19)
+      const filter = ctx.createBiquadFilter()
+      filter.type = 'bandpass'
+      filter.frequency.value = 1500
+      filter.Q.value = 1.5
+      const gain = ctx.createGain()
+      gain.gain.setValueAtTime(0, t)
+      gain.gain.linearRampToValueAtTime(0.13, t + 0.012)
+      gain.gain.exponentialRampToValueAtTime(0.0005, t + 0.20)
+      tone.connect(filter).connect(gain).connect(out)
+      tone.start(t)
+      tone.stop(t + 0.22)
+    }
+  }
+
   /** 驺吾的温和猫科低吟，属于听觉补足；《海内北经》未记鸣声。 */
   zouwuCall(pan = 0) {
     const ctx = this.ctx

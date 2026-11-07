@@ -58,6 +58,18 @@
       "license": "待核实 Rodin 输出条款；仅作开发占位"
     },
     {
+      "path": "public/models/qique/body.glb",
+      "source": "Offline anatomical adaptation of verified jingwei-body-max/base_high_pbr.glb, Gen-2.5-Extreme-High, 49,902 source triangles. Shortened beak, fuller breast, raised fowl tail, white head; original avian bare lower legs and toes replaced by bespoke authored continuous narrow ankles, low rodent-like palms, ten digits and ten hooked feline claws; upper joins buried under feather cuffs. Source job/hash and modifications recorded in content/beasts/qique.json; no new Rodin transaction or credit.",
+      "author": "项目自有 AI 高模离线改制与原创足爪建模",
+      "license": "沿用项目既有 Hyper3D Rodin 输出条款；新增足爪为项目原创几何"
+    },
+    {
+      "path": "public/audio/narration/qique.mp3",
+      "source": "Original corrected story synthesized by existing pipeline/tts/narrate.ts, cosyvoice-v2 / longsanshu, MP3 22050 Hz.",
+      "author": "项目原创解说词；百炼龙三叔合成",
+      "license": "沿用项目既有百炼语音输出条款"
+    },
+    {
       "path": "public/models/zouwu/",
       "source": "Offline reuse of zheng-body-max and zheng-tail-max, both Gen-2.5-Extreme-High (49,751 / 49,964 triangles). Returned base_basic_pbr.glb masters verified against pipeline/rodin/credits.log; original hashes and exact preparations recorded in content/beasts/zouwu.json. Five-colour coat, horn removal, 2.4-body-length single tail and own paw-target animations by pipeline/blender/prepare_zouwu.py and rig_zouwu.py. Zero new Rodin transactions or credits.",
       "author": "项目自有 AI 生成素材与离线改制",

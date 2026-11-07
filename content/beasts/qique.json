@@ -1,0 +1,23 @@
+{
+  "id": "qique",
+  "name": "鬿雀",
+  "archetype": "avian",
+  "source": [{"book": "山海经·东山经·东次四经", "text": "有鸟焉，其状如鸡而白首，鼠足而虎爪，其名曰鬿雀，亦食人。"}],
+  "inferred": [
+    {"item": "鸡形丰胸、短喙与上翘尾羽", "basis": "据「其状如鸡」作禽鸟轮廓；胸腹比例、喙长、双翼与尾羽姿态为未详处的视觉补足，不另添鸡冠。"},
+    {"item": "霜白头羽与赭褐背翼", "basis": "白首直接据「白首」；白羽的边界、赭褐背翼、深色眼喙均为艺术设色。"},
+    {"item": "双足裸踝接鼠样足掌，每足五趾", "basis": "据「鼠足」画出低平足掌、细长裸踝和独立细趾；双足及五趾取鼠类后足作设计参考，经文未记足数、趾数或肤色。"},
+    {"item": "趾端骨色弯钩虎爪", "basis": "据「虎爪」在鼠足趾端配粗根、弯曲而尖锐的爪；具体长度、骨色与伸展状态为设计推断。"},
+    {"item": "交替缓步、展翼抬足示爪与短促粗鸣", "basis": "古经记「亦食人」，未详动作和鸣声；行走、展翼示爪及合成鸣声均为交互艺术演绎，不补写盘旋北海的故事。"}
+  ],
+  "sourceVerification": {"url": "https://zh.wikisource.org/wiki/山海經/東山經", "checked": "2026-11-07", "note": "东次四经首山为北號之山，临于北海；其狀如雞而白首、鼠足而虎爪、亦食人均逐项见于正文。仅引完整鸟条，不将山名与隔开的鸟条拼作连续引文。"},
+  "production": {
+    "newRodinTransactions": 0,
+    "newRodinCredits": 0,
+    "bodySource": {"job": "jingwei-body-max", "tier": "Gen-2.5-Extreme-High", "uuid": "3954a021-1bf6-4764-9355-00eaad9c4dd6", "raw": "raw/jingwei-body-max/base_high_pbr.glb", "sha256": "fefde14bf4e80074c368eb8bea4ce373b3f03db24890517ae7f83eaf54175319", "normalized": "raw/_build/jingwei/body_norm.glb", "normalizedSha256": "ab687f14f5eeaa30ee656338a9173df1fc2ad221e382f346952c22bafd32018b", "sourceTriangles": 49902},
+    "adaptation": "Offline anatomy adaptation of the verified HIGH feather master: shortened beak, deeper breast, lifted shorter fowl tail, original avian bare lower legs and toes removed. Bespoke manually sculpted continuous narrow ankles, low palms, ten separate digits and ten curved feline claws replace them, with the upper transitions buried under feather cuffs. New feet are authored geometry, not a claimed AI HIGH generation. Dense feather geometry retained without simplification. Guarded authored normals transformed without computeVertexNormals.",
+    "scripts": ["pipeline/blender/prepare_qique.py", "pipeline/blender/rig_qique.py"],
+    "locomotion": "Baked curved stance targets and inverse sole yaw match the runtime 0.16 m/s, 0.8 m radius path. Independent inner/outer foot arcs preserve rigid toe contact; entering walk preserves the current position and heading. Browser CPU-skinned toe samples measured maximum stance drift 0.20 mm left and 0.08 mm right over 180 rendered frames.",
+    "narration": {"pipeline": "pipeline/tts/narrate.ts", "model": "cosyvoice-v2", "voice": "longsanshu", "format": "mp3", "sampleRate": 22050}
+  }
+}
