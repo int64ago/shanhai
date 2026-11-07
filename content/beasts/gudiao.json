@@ -1,0 +1,44 @@
+{
+  "id": "gudiao",
+  "name": "蛊雕",
+  "archetype": "avian",
+  "source": [
+    { "book": "山海經·南山經·南次二經", "text": "又東五百里，曰鹿吳之山，上無草木，多金石。澤更之水出焉，而南流注于滂水。水有獸焉，名曰蠱雕，其狀如雕而有角，其音如嬰兒之音，是食人。" }
+  ],
+  "inferred": [
+    { "item": "雕形羽禽，双翼双足与钩喙利爪为解剖补足", "basis": "正文明确「其状如雕」，据此取单首、羽翼、双足的猛禽形态；未采用后世豹躯说。头胸比例、弯钩喙、粗足曲爪、单束尾羽及体量依雕类补足，原文未逐项规定。" },
+    { "item": "一枚后弯额角为推断，角根埋入额顶", "basis": "正文只记「有角」，未规定数量、位置、长短与曲度；本作明确选择单角，角质纹理、宽根及后弯形制均为艺术推断，不当作经文定数。" },
+    { "item": "苍褐羽、淡赭头胸、暗喙黄足与赭角均属推断设色", "basis": "原文未记蛊雕颜色；按雕形安排深浅羽色、眼部细节及喙足角颜色，未赋予豹纹或其他文字未载的纹样。" },
+    { "item": "啼音、短跃与舒翼警示为展示演绎", "basis": "「其音如婴儿之音」仅为啼声相似的依据，具体声调、节奏和合成音色属推断；双足短跃、昂首舒翼均依猛禽动作设计。保留「是食人」的古籍记载，不增称模仿人声诱捕或赐予神通；水中记载不等于正文规定了水生呼吸或豹身四足。" }
+  ],
+  "references": [
+    { "url": "https://zh.wikisource.org/wiki/山海經/南山經", "note": "南次二经鹿吴之山；正文为水有兽焉、其状如雕而有角、其音如婴儿之音、是食人，蠱字旁有一作纂的校注，不将校注并入正文。" },
+    { "url": "https://www.gutenberg.org/cache/epub/25288/pg25288.txt", "note": "交叉核对鹿吳之山至是食人完整原文，确认为南次二经。" }
+  ],
+  "production": {
+    "method": "verified HIGH avian geometry and offline Blender eagle remodeling; zero new generation transactions",
+    "master": "jingwei-body-max/base_high_pbr.glb",
+    "masterSha256": "fefde14bf4e80074c368eb8bea4ce373b3f03db24890517ae7f83eaf54175319",
+    "ledgerTier": "Gen-2.5-Extreme-High",
+    "ledgerUuid": "3954a021-1bf6-4764-9355-00eaad9c4dd6",
+    "ledgerHash": "21e8f0401fa3431b",
+    "masterTriangles": 50000,
+    "retainedHighTriangles": 49902,
+    "hornTriangles": 1196,
+    "runtimeTriangles": 51098,
+    "runtimeBytes": 476828,
+    "runtimeBones": 19,
+    "runtime": { "body": 1, "heads": 1, "horns": 1, "wings": 2, "legs": 2, "tails": 1 },
+    "changes": "broader eagle breast and skull, lowered brow, enlarged hooked bill and feet, wider folded primaries, tawny anatomical UV washes; one procedural swept horn with its wide collar embedded inside the crown, rigid head weights in the body skin; two-foot IK hopping and grounded warning display",
+    "scripts": ["pipeline/blender/prepare_gudiao.py", "pipeline/blender/rig_gudiao.py"],
+    "parentAudit": {
+      "script": "scripts/qa-gudiao.mjs",
+      "runtimeResources": "Owned clone with effect-installed ink materials and outlines, fully removed, restored and disposed on cleanup, including StrictMode replay.",
+      "method": "145 actual rendered frames for each action. Two noncollinear sole triangles sampled via getVertexPosition after scene.updateMatrixWorld(true) and skeleton.update; measure all six vertices in world coordinates plus sole edge and normal direction.",
+      "maxSoleDriftMeters": { "idle": 0.000163292, "walk": 0.000060859, "special": 0.000161002 },
+      "maxSoleRotationRadians": 0.000993424,
+      "checks": "Six snapshots after repeated switches retain one individual, one head, one horn, two wings, two feet, 19 bones, two meshes and two outlines. Horn root remains attached within numerical precision. Actual narration advances without media errors, six cry oscillators produce RMS 0.0122867, narration stops, special returns to idle. No browser errors."
+    },
+    "narration": { "workflow": "pipeline/tts/narrate.ts --force gudiao", "model": "cosyvoice-v2", "voice": "longsanshu" }
+  }
+}

@@ -549,6 +549,44 @@ class AudioEngine {
     this.foxFire(pan)
   }
 
+  /** 蛊雕「其音如婴儿之音」的拟声；具体声调和节奏为推断。 */
+  gudiaoCry() {
+    const ctx = this.ctx
+    if (!ctx) return
+    const out = this.panner(0)
+    out.connect(this.sfx)
+    for (let i = 0; i < 3; i++) {
+      const t = ctx.currentTime + i * 0.72
+      const osc = ctx.createOscillator()
+      osc.type = 'sawtooth'
+      osc.frequency.setValueAtTime(470 + i * 30, t)
+      osc.frequency.exponentialRampToValueAtTime(780 + i * 25, t + 0.18)
+      osc.frequency.exponentialRampToValueAtTime(390 + i * 20, t + 0.58)
+      const tremolo = ctx.createOscillator()
+      tremolo.frequency.value = 6.5
+      const depth = ctx.createGain()
+      depth.gain.value = 22
+      tremolo.connect(depth).connect(osc.frequency)
+      const filter = ctx.createBiquadFilter()
+      filter.type = 'bandpass'
+      filter.frequency.value = 1250
+      filter.Q.value = 1.6
+      const gain = ctx.createGain()
+      gain.gain.setValueAtTime(0, t)
+      gain.gain.linearRampToValueAtTime(0.075, t + 0.09)
+      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.62)
+      osc.connect(filter).connect(gain).connect(out)
+      osc.start(t)
+      tremolo.start(t)
+      osc.stop(t + 0.65)
+      tremolo.stop(t + 0.65)
+      tremolo.onended = () => {
+        osc.disconnect(); tremolo.disconnect(); depth.disconnect(); filter.disconnect(); gain.disconnect()
+        if (i === 2) out.disconnect()
+      }
+    }
+  }
+
   /** 鵸鵌「善笑」的短促三首应答；实际音色和节奏为艺术推断。 */
   qituLaugh() {
     const ctx = this.ctx

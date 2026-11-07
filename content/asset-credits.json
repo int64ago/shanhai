@@ -8,6 +8,18 @@
       "license": "沿用既有 Hyper3D Rodin 源资产条款"
     },
     {
+      "path": "public/models/gudiao/body.glb",
+      "source": "既有 jingwei-body-max/base_high_pbr.glb，Gen-2.5-Extreme-High 原始50,000面，清理后保留49,902面；SHA-256 fefde14bf4e80074c368eb8bea4ce373b3f03db24890517ae7f83eaf54175319，账本 UUID 3954a021-1bf6-4764-9355-00eaad9c4dd6。离线重塑雕形头喙、胸翼、双足并重绘羽色；一枚推断额角以宽根埋入额顶，随头骨蒙皮。零新增生成交易，详见 content/beasts/gudiao.json production。",
+      "author": "项目自有 AI HIGH 素材与离线改制、程序化角形",
+      "license": "Hyper3D Rodin 生成输出（沿用项目既有源资产条款）；角形为项目原创"
+    },
+    {
+      "path": "public/audio/narration/gudiao.mp3",
+      "source": "南次二经鹿吴之山蛊雕原创完整解说，原有 CosyVoice cosyvoice-v2 / longsanshu 工作流",
+      "author": "项目原创解说与合成配音",
+      "license": "沿用项目百炼 CosyVoice 合成音频条款"
+    },
+    {
       "path": "public/models/qitu/{body,head,tail}.glb",
       "source": "项目既有 jingwei-body-max/base_high_pbr.glb，Gen-2.5-Extreme-High 原始50,000面；SHA-256 fefde14bf4e80074c368eb8bea4ce373b3f03db24890517ae7f83eaf54175319，账本 UUID 3954a021-1bf6-4764-9355-00eaad9c4dd6。焊合UV接缝后分离完整头颈与原生尾羽，裁除躯干原首原尾，封口、延颈、折翼、重绘、独立绑定，运行时三首六尾。全程离线复用，零新增生成交易，详见 content/beasts/qitu.json production。",
       "author": "项目自有 AI HIGH 素材与离线改制",
