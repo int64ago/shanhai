@@ -2,6 +2,30 @@
   "_note": "第三方素材授权登记；上线前统一核对。音频素材到位后同样登记在这里。",
   "assets": [
     {
+      "path": "public/models/yayu/body.glb",
+      "source": "零新生成，仅只读复用三个经账本、SHA256 和实际面数核验的 Gen-2.5-Extreme-High 母件，各原始输入均为 50,000 三角面。诸怀 HIGH 牛躯去掉原牛首/兽耳、原分蹄足端和原尾，裁后含封口 31,270 面；新增渐细颈肩和四条系部，并与该牛躯离线体素融合为连续 425,680 面。该重塑与朱赭涂色为项目离线制作，未声称是新的 HIGH 生成输出。陆吾 HIGH 人首去衣领及颈底凸缘，含封口 41,192 面，保留五官与发须；面部赤褐色为新绘制。鹿蜀 HIGH 四个单蹄裁后分别含封口 770/748/715/736 面，未以牛分蹄替代马足；新涂墨褐色并平整蹄底。另补单牛尾。独立 21 骨，idle/walk/special，全模 472,401 三角面；meshopt/WebP，simplify/flatten/join 均 false。支撑相逆向烘焙真实圆周目标与整蹄 yaw，QA 测全部实际 sole 世界顶点位移及方向。脚本 pipeline/blender/prepare_yayu.py、rig_yayu.py。",
+      "sourceComponents": [
+        { "path": "raw/zhuhuai-body-max/base_basic_pbr.glb", "verifiedLocation": ".claude/worktrees/beast-zhuhuai/raw/zhuhuai-body-max/base_basic_pbr.glb", "job": "zhuhuai-body-max", "tier": "Gen-2.5-Extreme-High", "uuid": "a05682d7-8854-4f16-9d1d-dd4835fb3bd8", "sha256": "7ebc4af0473b83c89a2940f7490e71ef4aa941972db1b3f6aa41e781f4de460d" },
+        { "path": "raw/luwu-head-max/base_basic_pbr.glb", "job": "luwu-head-max", "tier": "Gen-2.5-Extreme-High", "uuid": "9e3f8c0b-64d5-44bb-bb6d-665ce47866aa", "sha256": "98341132b84ef9b8d3a3e1dee9ed1961a2c7fe61202064bd3e326d0c9c7f402e" },
+        { "path": "raw/lushu-body-max/base_basic_pbr.glb", "job": "lushu-body-max", "tier": "Gen-2.5-Extreme-High", "uuid": "0a08ed3c-20a6-4e1e-bf55-5c3fe02da6db", "sha256": "4674581c5c0cca6dff4bbb4c570004abb876be5bd1e2edf7bb9b98704dc61740" }
+      ],
+      "sourceReference": "https://zh.wikisource.org/wiki/山海經/北山經 · 北山經之首 · 少咸之山：有獸焉，其狀如牛，而赤身、人面、馬足，名曰窫窳，其音如嬰兒，是食人。仅采用本篇，角尾、比例、发须、设色和动作另列 inferred。",
+      "author": "项目既有 HIGH AI 素材与离线重塑、涂色、组装及绑定",
+      "license": "沿用项目既有 Hyper3D Rodin 输出条款；新增离线制作属项目自制"
+    },
+    {
+      "path": "concept/yayu/view_{34,side,front,back,left}.png",
+      "source": "最终窫窳离线模型在 Blender 中逐方向独立渲染，非生成服务输出；核查牛体、人面、渐细颈肩、原牛首/分蹄清理、四马蹄和单尾。",
+      "author": "项目自制",
+      "license": "沿用窫窳模型授权"
+    },
+    {
+      "path": "public/audio/narration/yayu.mp3",
+      "source": "pipeline/tts/narrate.ts，阿里云百炼 cosyvoice-v2 / longsanshu，依据最终 src/app/beasts.ts 窫窳故事重录。63.033438 秒，单声道 22050 Hz MP3。故事只采用北山經之首少咸之山本条。",
+      "author": "项目撰稿与 CosyVoice 合成",
+      "license": "沿用项目既有 CosyVoice 合成输出条款"
+    },
+    {
       "path": "public/models/yingzhao/body.glb",
       "source": "只读复用三个既有、逐件核对的 Gen-2.5-Extreme-High 母件，均为原任务的 50,000 三角面输出，未使用 Medium、未提交新的生成事务。鹿蜀虎纹马躯去除整个原马首/双耳/鬃片与原短尾，保留 32,021 面原躯与四足单蹄；陆吾独立人首去掉白色衣领/底片，保留 42,306 面人脸、发须和短颈；穷奇独立鸟翼离线左右配对，反射坐标后重算法线，运行时无负缩放。新建渐细颈与圆肩只对新增体积融合，保留 HIGH 马腿原表面。颈根后移并向胸内下埋，消除原平底轮廓；颈部用单一连续 UV 贴图，在 z=0.68–0.78 m 淡出虎纹、z=0.695–0.800 m 渐变到实测 HIGH 人颈肤色（sRGB 0.8000/0.6314/0.5216，4728 个 UV 采样），移除按高度切换材质的围领硬边。贴图为确定性的离线绘制，未改变既有 HIGH 人首、马躯或蹄足。概念渲染保留各组件独立 UV，以不可见全体包围网格取景。尾根裁口圆滑修补后补单条马尾。独立 31 骨骨架含两翼各五骨和一尾骨，idle/walk/special；全模 250,025 三角面，meshopt/WebP 不减面压缩。圆周步态按真实 root 半径/速度反向烘焙足位与足掌 yaw，并降低行走躯干 18 mm 留足 IK 可达余量。重建脚本：pipeline/blender/prepare_yingzhao.py、rig_yingzhao.py。",
       "sourceComponents": [

@@ -1,0 +1,177 @@
+{
+  "id": "yayu",
+  "name": "窫窳",
+  "archetype": "quadruped",
+  "source": [
+    {
+      "book": "山海經·北山經·北山經之首",
+      "text": "又北二百里，曰少咸之山，無草木，多青碧。有獸焉，其狀如牛，而赤身、人面、馬足，名曰窫窳，其音如嬰兒，是食人。"
+    }
+  ],
+  "inferred": [
+    {
+      "item": "牛状四足躯干、单张人面与短颈肩",
+      "basis": "其状如牛、人面、马足据本篇；四足布局、完整人首的比例、短颈与肩胸肌肉、发须、耳形和面部赤褐肤色为造型补足。无角为本次设计选择，原文没有规定角的有无。只呈现少咸之山本条形态。"
+    },
+    {
+      "item": "朱赭赤身与四只墨褐单蹄",
+      "basis": "赤身据原文；朱赭的具体色值、深浅毛皮、墨褐马蹄和短毛质感为设色推断。四只单蹄沿用可信马足几何，牛躯下肢与马蹄间的短系部为新增离线雕刻，不冒称生成服务新 HIGH 输出。"
+    },
+    {
+      "item": "一条细长牛尾与尾端短簇",
+      "basis": "本条未规定尾的有无、数量与形状。以牛状身体为依据补一条下垂细尾及深色尾簇，原母件尾已清理，尾部为项目离线制作。"
+    },
+    {
+      "item": "稳立顾盼、四拍缓步与拟婴啼",
+      "basis": "地面缓步及稳立微俯首的表演是展示动作，未声称原文记载神通。其音如婴儿据正文，合成鸣声的音高、共振峰、颤音、节奏与混响为听觉演绎。是食人作为原文习性保留，不据此添加法术。"
+    }
+  ],
+  "sourceAudit": {
+    "url": "https://zh.wikisource.org/w/index.php?title=山海經/北山經&action=raw",
+    "sha256": "20f78c8db2e53c56c8fab20f26acedd4bd409a9c5ee5e92f74c76c991726ec09",
+    "bytes": 16537,
+    "line": 46,
+    "method": "父直接读取转录字节；source完整等于第46行的连续子串，保留赤身、人面、馬足的原标点。仅采用少咸之山本条，不混入其他篇章同名记载。"
+  },
+  "parentAudit": {
+    "source": "Direct raw transcription byte hash and continuous source substring verified; all three HIGH input byte hashes and original ledger task identities checked.",
+    "anatomy": {
+      "invalid": 0,
+      "nodes": 41,
+      "meshes": 8,
+      "outlines": 8,
+      "bones": 21,
+      "hooves": 4,
+      "wings": 0,
+      "wingBones": 0,
+      "heads": 1,
+      "tails": 1,
+      "horns": 0,
+      "legs": 4,
+      "feet": {
+        "back_l_foot": -0.000057991436585982936,
+        "back_r_foot": -0.00006198920306232925,
+        "front_l_foot": -0.00006106983358779294,
+        "front_r_foot": -0.00006597474789113433
+      }
+    },
+    "worldContact": {
+      "frames": 442,
+      "solePoints": {
+        "back_l_foot": 88,
+        "back_r_foot": 88,
+        "front_l_foot": 92,
+        "front_r_foot": 109
+      },
+      "maxXYZMeters": 0.00015677652092326827,
+      "maxDirectionRadians": 0.0005110761191961186,
+      "plantedStances": 16
+    },
+    "lifecycle": {
+      "remounts": 3,
+      "skeletonCleanup": [
+        {
+          "textures": 8,
+          "disposed": 8,
+          "live": 0
+        },
+        {
+          "textures": 8,
+          "disposed": 8,
+          "live": 0
+        },
+        {
+          "textures": 8,
+          "disposed": 8,
+          "live": 0
+        }
+      ],
+      "note": "Effect-owned ink/outline removed and original materials restored; only cloned skeleton textures disposed, shared geometry/textures retained."
+    },
+    "narration": {
+      "src": "http://localhost:5215/audio/narration/yayu.mp3",
+      "duration": 63.033438,
+      "currentTime": 1.584339,
+      "error": null,
+      "context": "running"
+    },
+    "narrationStopped": true,
+    "sfx": {
+      "peakRMS": 0.07662413724013065,
+      "context": "running"
+    },
+    "specialReturn": "idle",
+    "responsive": [
+      {
+        "width": 390,
+        "bounds": {
+          "card": {
+            "left": 16,
+            "right": 202.78125,
+            "top": 16,
+            "bottom": 340,
+            "hit": true
+          },
+          "title": {
+            "left": 156.53125,
+            "right": 189.53125,
+            "top": 29,
+            "bottom": 87.5625,
+            "hit": true
+          },
+          "button": {
+            "left": 160.03125,
+            "right": 186.03125,
+            "top": 129.5625,
+            "bottom": 173.46875,
+            "hit": true
+          },
+          "viewport": 390,
+          "scroll": 390
+        },
+        "playing": {
+          "time": 0.21609,
+          "paused": false,
+          "narrating": true
+        },
+        "stopped": true
+      },
+      {
+        "width": 800,
+        "bounds": {
+          "card": {
+            "left": 32,
+            "right": 374.546875,
+            "top": 28,
+            "bottom": 663,
+            "hit": true
+          },
+          "title": {
+            "left": 312.546875,
+            "right": 357.546875,
+            "top": 49,
+            "bottom": 127.09375,
+            "hit": true
+          },
+          "button": {
+            "left": 322.046875,
+            "right": 348.046875,
+            "top": 169.09375,
+            "bottom": 213,
+            "hit": true
+          },
+          "viewport": 800,
+          "scroll": 800
+        },
+        "playing": {
+          "time": 0.3949,
+          "paused": false,
+          "narrating": true
+        },
+        "stopped": true
+      }
+    ],
+    "visual": "Parent Read all five delivered concept views, final idle/walk/special full scene and three consecutive walk/special frames, plus phone/tablet playing screenshots. Ox torso, one human face, four single horse hooves, continuous neck and single inferred tail checked; no horns or borrowed dragon-head story.",
+    "performanceLimit": "No mobile hardware benchmark claimed."
+  }
+}
