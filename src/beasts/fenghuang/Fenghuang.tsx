@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useRef } from 'react'
 import { useFrame, useThree } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
-import { AnimationMixer, Mesh, Vector3, type AnimationAction, type Group, type Material, type MeshStandardMaterial } from 'three'
+import { clone } from 'three/examples/jsm/utils/SkeletonUtils.js'
+import { AnimationMixer, Mesh, SkinnedMesh, Vector3, type AnimationAction, type Group, type Material, type MeshStandardMaterial } from 'three'
 import { useApp } from '../../app/store'
 import { createOutline } from '../../systems/ink/inkify'
 import { createInkMaterial } from '../../systems/ink/inkMaterial'
@@ -22,19 +23,22 @@ export function Fenghuang() {
   const cameraShift = useMemo(() => new Vector3(), [])
   const target = useMemo(() => new Vector3(), [])
   const rig = useMemo(() => {
-    const mixer = new AnimationMixer(body.scene)
+    const scene = clone(body.scene)
+    const mixer = new AnimationMixer(scene)
     const clips: Record<string, AnimationAction> = {}
-    for (const clip of body.animations) clips[clip.name] = mixer.clipAction(clip)
-    return { scene: body.scene, mixer, clips }
+    return { scene, mixer, clips }
   }, [body])
 
   useEffect(() => {
+    // StrictMode replays this setup after cleanup. Build fresh actions after
+    // uncacheRoot releases their bindings; old actions retain stale bindings.
+    for (const clip of body.animations) rig.clips[clip.name] = rig.mixer.clipAction(clip)
     const meshes: Mesh[] = []
     rig.scene.traverse((node) => { if (node instanceof Mesh) meshes.push(node) })
     const resources = meshes.map((mesh) => {
       const original = mesh.material as MeshStandardMaterial
       const material = createInkMaterial({ map: original.map ?? null, saturation: 0.91 })
-      const outline = createOutline(mesh, 0.0026)
+      const outline = createOutline(mesh, 0.0012)
       mesh.material = material
       mesh.frustumCulled = false
       mesh.parent!.add(outline)
@@ -43,14 +47,20 @@ export function Fenghuang() {
     if (import.meta.env.DEV) console.info('[beast] ready fenghuang')
     return () => {
       rig.mixer.stopAllAction()
+      rig.mixer.uncacheRoot(rig.scene)
       for (const { mesh, original, material, outline } of resources) {
         outline.removeFromParent()
         ;(outline.material as Material).dispose()
         mesh.material = original
         material.dispose()
       }
+      // Clone-owned skeletons may be shared with outlines. Dispose each once;
+      // cached geometry, source materials and image textures remain shared.
+      const skeletons = new Set<SkinnedMesh['skeleton']>()
+      for (const mesh of meshes) if (mesh instanceof SkinnedMesh) skeletons.add(mesh.skeleton)
+      for (const skeleton of skeletons) skeleton.dispose()
     }
-  }, [rig])
+  }, [rig, body.animations])
 
   useEffect(() => () => {
     camera.position.sub(cameraShift)
@@ -97,6 +107,6 @@ export function Fenghuang() {
   })
 
   return <group ref={root} position={[0, 0, 0.85]} rotation-y={0.7}>
-    <primitive object={rig.scene} name="fenghuang_scene" />
+    <primitive object={rig.scene} name="fenghuang_scene" dispose={null} />
   </group>
 }

@@ -80,3 +80,8 @@
 {"time":"2026-11-07T13:55:14.404Z","beast":"changyou","job":"changyou-ear-max","hash":"962d2ad0c27399fd","tier":"Gen-2.5-Extreme-High","uuid":"2a1d0e99-42a3-4892-9e44-ee6d258022dc","consumed":1}
 {"time":"2026-11-07T14:00:06.005Z","beast":"changyou","job":"changyou-body-v2","hash":"6acf3d4b7ca55976","tier":"Gen-2.5-Medium","uuid":"0eaf9b8b-d3dc-4ce3-8d41-d217f757e45c","consumed":0.5}
 {"time":"2026-11-07T14:08:20.322Z","beast":"changyou","job":"changyou-body-max","hash":"b0fa593320ef1199","tier":"Gen-2.5-Extreme-High","uuid":"90da19a9-02f9-47cc-8713-7def30b586f1","consumed":1}
+{"time":"2026-11-07T14:41:10.100Z","beast":"fenghuang","job":"fenghuang-quality-remake-body-v1","hash":"c140d9f3b3cefe8c","tier":"Gen-2.5-Medium","uuid":"54f1b708-4588-4445-b565-d8e72772318c","consumed":0.5}
+{"time":"2026-11-07T14:41:30.428Z","beast":"fenghuang","job":"fenghuang-quality-remake-wing-v1","hash":"011f0008cf8d3f9b","tier":"Gen-2.5-Medium","uuid":"7ceab45d-cd07-4c65-b3a0-f37a5255ab84","consumed":0.5}
+{"time":"2026-11-07T14:44:41.005Z","beast":"fenghuang","job":"fenghuang-quality-remake-body-high","hash":"4a3b90ca9f61c4ee","tier":"Gen-2.5-Extreme-High","uuid":"c4a1733a-9615-4ffe-aa76-cfa67cbb18e7","consumed":1}
+{"time":"2026-11-07T14:46:24.707Z","beast":"fenghuang","job":"fenghuang-quality-remake-wing-v2","hash":"beb6a8dce02d81fc","tier":"Gen-2.5-Medium","uuid":"eb551cfd-4d3e-4014-8ace-c7fb99d40316","consumed":0.5}
+{"time":"2026-11-07T14:50:27.456Z","beast":"fenghuang","job":"fenghuang-quality-remake-wing-high","hash":"1e85232e72e9b785","tier":"Gen-2.5-Extreme-High","uuid":"099fe0be-21b5-441a-8972-88af666fe8ef","consumed":1}

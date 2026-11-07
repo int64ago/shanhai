@@ -1,0 +1,8 @@
+{
+  "id": "fenghuang-quality-remake-wing-v2",
+  "beast": "fenghuang",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "A SINGLE LEFT CHICKEN WING removed at the shoulder, isolated anatomical specimen. One small rounded shoulder joint at the LEFT end, one upper arm running horizontally RIGHT, one elbow and one wrist, long primary feathers reaching farther RIGHT. Asymmetrical bent wing outline, extended in a horizontal plane, narrow leading edge at the top, one single row of overlapping flight feathers trailing DOWN from that edge. All feather shafts point the same rightward direction, not two fans. Volumetric rounded muscle at the root and raised layered coverts, vermilion red shoulder coverts, teal and gold secondaries, cream black tips. Overall three times longer horizontally than its thickness. No body, no head, no neck, no paired wings, no symmetry, no central ridge, no butterfly, no leaf, no ornament, no text, no base. Scientific natural bird anatomy, three dimensional realistic feather structure.",
+  "params": {"mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000, "seed": 7829}
+}

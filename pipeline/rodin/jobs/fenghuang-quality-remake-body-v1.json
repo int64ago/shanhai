@@ -1,0 +1,8 @@
+{
+  "id": "fenghuang-quality-remake-body-v1",
+  "beast": "fenghuang",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One anatomically convincing chicken-shaped mythic bird, natural short curved beak, dark eyes, low feather crest, compact layered raised tail. Two articulated chicken legs with scaled shanks and three forward toes and one rear toe on each foot, both feet planted. Organic three dimensional deep breast with natural keel, oval ribcage tapering into curved pelvis, feathered thighs, sloping back and rising neck. Rich sculpted overlapping feather layers, vermilion teal gold cream and black plumage. Wings completely removed for later modular attachment, smooth feathered shoulder attachment regions. Full body standing neutral pose, no text, no symbols, no pedestal, no human torso, no flat circular chest, no long ornamental tail.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

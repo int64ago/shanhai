@@ -1,0 +1,9 @@
+{
+  "id": "fenghuang-quality-remake-body-high",
+  "beast": "fenghuang",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "An anatomically convincing five-colour chicken-shaped mythical bird matching these four views. Preserve the organic deep breast keel, sloping back, rounded pelvis, natural two scaled chicken legs and toes, short raised tail, dark eyes and short beak. Dense sculpted overlapping feather layers, vermilion teal gold cream black. Body master for modular wings: the small side shoulder coverts remain close to the torso, no extended flight wings. No text, no symbols, no platform. Preserve natural anatomy, never flatten the chest into a disc.",
+  "images": ["concept/fenghuang/body-medium/view_34.png", "concept/fenghuang/body-medium/view_side.png", "concept/fenghuang/body-medium/view_front.png", "concept/fenghuang/body-medium/view_back.png"],
+  "params": {"mesh_mode": "Raw", "geometry_file_format": "glb", "addons": "HighPack", "quality_override": 50000}
+}

@@ -1,0 +1,9 @@
+{
+  "id": "fenghuang-quality-remake-wing-high",
+  "beast": "fenghuang",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "One single asymmetrical chicken wing anatomical specimen matching the reference views exactly. One shoulder root at left end, thick muscular coverts, elbow and wrist, overlapping red teal gold coverts, long cream and black primary flight feathers directed rightwards in one feather fan. Preserve the three-dimensional layered feather relief, curved quills and thick shoulder, real avian wing anatomy. No body, no paired wing, no symmetry, no central ridge, no text, no pedestal.",
+  "images": ["concept/fenghuang/wing-medium-v2/view_34.png", "concept/fenghuang/wing-medium-v2/view_side.png", "concept/fenghuang/wing-medium-v2/view_front.png", "concept/fenghuang/wing-medium-v2/view_back.png"],
+  "params": {"mesh_mode": "Raw", "geometry_file_format": "glb", "addons": "HighPack", "quality_override": 50000}
+}

@@ -288,9 +288,9 @@
     },
     {
       "path": "public/models/fenghuang/body.glb",
-      "source": "Offline adaptation of verified jingwei-body-max/base_high_pbr.glb, Gen-2.5-Extreme-High, 49,902 source triangles. Compact chicken-shaped bill, breast and wings; raised short tail, original low crown and short fan feather geometry. Five anatomical virtue glyphs baked into feather UVs using locally installed Arial Unicode. Source UUID/hashes and inference recorded in content/beasts/fenghuang.json. Zero new Rodin transactions or credits.",
-      "author": "项目自有 AI 高模离线改制、原创羽翎建模与纹样设计",
-      "license": "沿用项目既有 Hyper3D Rodin 输出条款；新增羽翎为项目原创几何；字形为本机字体栅格化纹样，不分发字体文件"
+      "source": "New dedicated two-stage Hyper3D body and single-wing masters: fenghuang-quality-remake-body-high (UUID c4a1733a-9615-4ffe-aa76-cfa67cbb18e7, SHA256 916b9f326ec9b96f5120921f47e7b3555b683ede08e579d06d6db11b9534440f) and fenghuang-quality-remake-wing-high (UUID 099fe0be-21b5-441a-8972-88af666fe8ef, SHA256 57809fd7cee324aa4ffd8837b34a53bc4be5b787f50d8dd2533b18dc05ec3c68). Both Extreme-High / HighPack, 50000 raw triangles each, no texture_mode surcharge. Medium four-view Read inspection before HIGH; first wing Medium rejected for paired symmetric fan and replaced by a single anatomical wing. Five transactions cost 3.5 new credits total against a 12-credit ceiling, ledger and baseline in pipeline/rodin. Organic chicken breast, pelvis, scaled legs and short native tail preserved. Paired wings with authored normal inverse transpose, baked feather UV virtue marks, 18-bone independent rig and actual world-space toe contact QA. 149816 cleaned triangles, meshopt/WebP 2048, no simplification. Scripts prepare_fenghuang.py / rig_fenghuang.py; all UUIDs and hashes in content/beasts/fenghuang.json.",
+      "author": "新 Hyper3D Rodin HIGH 禽体与翼母件；项目离线组装、羽纹绘制与绑定",
+      "license": "Hyper3D Rodin 生成输出沿用项目既有条款；离线纹样与动作为项目原创；字形为本机字体栅格化纹样，不分发字体文件"
     },
     {
       "path": "public/audio/narration/fenghuang.mp3",

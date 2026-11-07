@@ -1,0 +1,8 @@
+{
+  "id": "fenghuang-quality-remake-wing-v1",
+  "beast": "fenghuang",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One isolated realistic feathered chicken wing, about three times longer than its maximum width, thick muscular rounded shoulder root tapering towards the wrist and feather tips. Articulated upper arm and wrist, sculpted overlapping small coverts over broad separated primary and secondary flight feathers. Gently extended natural wing pose, real three-dimensional feather volume with curved quills, vermilion teal gold cream and black plumage. Single wing only, no bird body, no other wing, no flat paper fan, no text, no pedestal.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}
