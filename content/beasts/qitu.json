@@ -1,0 +1,38 @@
+{
+  "id": "qitu",
+  "name": "鵸鵌",
+  "archetype": "avian",
+  "source": [
+    { "book": "山海經·西山經·西次三經", "text": "有鳥焉，其狀如烏，三首六尾而善笑，名曰鵸鵌，服之使人不厭，又可以禦凶。" }
+  ],
+  "inferred": [
+    { "item": "乌形一身、三首六尾；双翼双足为鸟类解剖补足", "basis": "翼望之山条文明记「其状如乌，三首六尾」；据此保留一副乌形禽躯，三颗头各有颈部，六束尾羽各有尾根。双翼、双足、头颈长度、扇尾布局与具体体量依普通鸟类形态补足，原文未逐项规定。" },
+    { "item": "玄青灰羽、暗喙暗足为推断设色", "basis": "据「状如乌」取深色鸦形气质；原文未明记羽色、喙足颜色、眼部细节或纹样，具体青灰色阶及羽光属于艺术推断。" },
+    { "item": "三首错相笑动、六尾独摆与双足短跃为动作演绎", "basis": "「善笑」作为三首轻点、颈喉律动和合成短促笑鸣的依据，具体音色、节奏及各首应答关系均属推断。六尾独立摆动、舒翼与地面短跃依禽鸟动作设计，原文未记飞行或步态细节。" },
+    { "item": "不厌与御凶仅作古经神异记载；展示以凝神收翼寄意", "basis": "逐字保留「服之使人不厭，又可以禦凶」，不替原文指定服用或佩用的方法，也不增造火焰、光罩或现代实效。末段收翼、三首静望为象征性的艺术演绎。" }
+  ],
+  "references": [
+    { "url": "https://zh.wikisource.org/wiki/山海經/西山經", "note": "独立核对西次三经翼望之山的鵸鵌条文；与同山三尾一目兽讙及三危之山的其他鸟条分开，采用禦字。" },
+    { "url": "https://www.gutenberg.org/cache/epub/25288/pg25288.txt", "note": "交叉核对三首六尾、善笑、服之使人不厭，电子本用【奇鳥】【余鳥】表示兽名。" }
+  ],
+  "production": {
+    "method": "verified HIGH avian geometry extraction and offline Blender remodeling; zero new generation transactions",
+    "master": "jingwei-body-max/base_high_pbr.glb",
+    "masterSha256": "fefde14bf4e80074c368eb8bea4ce373b3f03db24890517ae7f83eaf54175319",
+    "ledgerTier": "Gen-2.5-Extreme-High",
+    "ledgerUuid": "3954a021-1bf6-4764-9355-00eaad9c4dd6",
+    "ledgerHash": "21e8f0401fa3431b",
+    "masterTriangles": 50000,
+    "runtime": { "body": 1, "heads": 3, "tails": 6, "legs": 2, "wings": 2 },
+    "modules": {
+      "body": { "triangles": 34224, "bytes": 321676, "bones": 21 },
+      "head": { "triangles": 12252, "bytes": 103320, "bones": 3 },
+      "tail": { "triangles": 5946, "bytes": 63112, "bones": 4 },
+      "assembledTriangles": 106656,
+      "assembledBones": 54
+    },
+    "changes": "UV seam weld before capped head extraction; original-space tail extraction before wing folding; native head and tail removed; longer neck template; six narrow tail bundles; dark inferred palette; separate animated head/tail skeletons with effect-mounted buried roots and body-relative inverse rest rotations",
+    "scripts": ["pipeline/blender/prepare_qitu.py", "pipeline/blender/rig_qitu.py"],
+    "narration": { "workflow": "pipeline/tts/narrate.ts --force qitu", "model": "cosyvoice-v2", "voice": "longsanshu" }
+  }
+}

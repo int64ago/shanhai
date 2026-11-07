@@ -32,6 +32,7 @@ import { Lili } from '../beasts/lili/Lili'
 import { Jingwei } from '../beasts/jingwei/Jingwei'
 import { MinBird } from '../beasts/min_bird/MinBird'
 import { Qingniao } from '../beasts/qingniao/Qingniao'
+import { Qitu } from '../beasts/qitu/Qitu'
 import { Zhuhuai } from '../beasts/zhuhuai/Zhuhuai'
 import { Chenghuang } from '../beasts/chenghuang/Chenghuang'
 import { Huan } from '../beasts/huan/Huan'
@@ -101,6 +102,8 @@ export function Stage() {
           <Bibi />
         ) : selected === 'lili' ? (
           <Lili />
+        ) : selected === 'qitu' ? (
+          <Qitu />
         ) : selected === 'qingniao' ? (
           <Qingniao />
         ) : selected === 'min_bird' ? (

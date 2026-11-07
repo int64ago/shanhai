@@ -549,6 +549,35 @@ class AudioEngine {
     this.foxFire(pan)
   }
 
+  /** 鵸鵌「善笑」的短促三首应答；实际音色和节奏为艺术推断。 */
+  qituLaugh() {
+    const ctx = this.ctx
+    if (!ctx) return
+    for (let voice = 0; voice < 3; voice++) {
+      const out = this.panner((voice - 1) * 0.4)
+      out.connect(this.sfx)
+      for (let syllable = 0; syllable < 4; syllable++) {
+        const t = ctx.currentTime + voice * 0.17 + syllable * 0.19
+        const osc = ctx.createOscillator()
+        osc.type = 'triangle'
+        const hz = 620 + voice * 125 - syllable * 35
+        osc.frequency.setValueAtTime(hz * 1.25, t)
+        osc.frequency.exponentialRampToValueAtTime(hz * 0.8, t + 0.13)
+        const filter = ctx.createBiquadFilter()
+        filter.type = 'bandpass'
+        filter.frequency.value = 1350 + voice * 180
+        filter.Q.value = 1.8
+        const gain = ctx.createGain()
+        gain.gain.setValueAtTime(0, t)
+        gain.gain.linearRampToValueAtTime(0.11, t + 0.018)
+        gain.gain.exponentialRampToValueAtTime(0.001, t + 0.15)
+        osc.connect(filter).connect(gain).connect(out)
+        osc.start(t)
+        osc.stop(t + 0.17)
+      }
+    }
+  }
+
   /** 三青鸟两篇原文均未记鸣声；三声错落鸟鸣为听觉推断。 */
   qingniaoCall() {
     const ctx = this.ctx

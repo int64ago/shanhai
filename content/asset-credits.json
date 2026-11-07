@@ -8,6 +8,18 @@
       "license": "沿用既有 Hyper3D Rodin 源资产条款"
     },
     {
+      "path": "public/models/qitu/{body,head,tail}.glb",
+      "source": "项目既有 jingwei-body-max/base_high_pbr.glb，Gen-2.5-Extreme-High 原始50,000面；SHA-256 fefde14bf4e80074c368eb8bea4ce373b3f03db24890517ae7f83eaf54175319，账本 UUID 3954a021-1bf6-4764-9355-00eaad9c4dd6。焊合UV接缝后分离完整头颈与原生尾羽，裁除躯干原首原尾，封口、延颈、折翼、重绘、独立绑定，运行时三首六尾。全程离线复用，零新增生成交易，详见 content/beasts/qitu.json production。",
+      "author": "项目自有 AI HIGH 素材与离线改制",
+      "license": "Hyper3D Rodin 生成输出（沿用项目既有源资产条款）"
+    },
+    {
+      "path": "public/audio/narration/qitu.mp3",
+      "source": "西次三经翼望之山鵸鵌原创完整解说，现有 CosyVoice cosyvoice-v2 / longsanshu 工作流",
+      "author": "项目原创解说与合成配音",
+      "license": "沿用项目百炼 CosyVoice 合成音频条款"
+    },
+    {
       "path": "public/models/qingniao/body.glb",
       "source": "既有 jingwei-body-max/base_high_pbr.glb（Gen-2.5-Extreme-High，原始 50,000 面，清理后 49,902 面）离线改制；SHA-256 fefde14bf4e80074c368eb8bea4ce373b3f03db24890517ae7f83eaf54175319，账本 UUID 3954a021-1bf6-4764-9355-00eaad9c4dd6。赤首黑目蓝羽重绘、折翼和自定义动作；运行时三只完整鸟体各有独立骨架与混合器。零新增生成交易，详见 content/beasts/qingniao.json production。",
       "author": "项目自有 AI 高模素材与离线改制",
