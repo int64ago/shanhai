@@ -1,0 +1,20 @@
+{
+  "id": "feiyi_snake-leg-high",
+  "beast": "feiyi_snake",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "One isolated natural reptilian leg from these corrected four views. Preserve the softly tapered muscular upper haunch, bent knee, tendons, ankle and four separate spreading clawed toes on a flat plantar plane. Smooth organic anatomical transitions and fine overlapping scales, grey umber with pale stone inner skin and dark claws. Upper haunch is the anatomical insertion surface, no rectangular peg, no mechanical socket, no sphere joint, no other limb, no torso or pedestal. Keep all toes intact and the foot planted.",
+  "images": [
+    "concept/feiyi_snake/leg-corrected/view_34.png",
+    "concept/feiyi_snake/leg-corrected/view_side.png",
+    "concept/feiyi_snake/leg-corrected/view_front.png",
+    "concept/feiyi_snake/leg-corrected/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack",
+    "seed": 48242
+  }
+}

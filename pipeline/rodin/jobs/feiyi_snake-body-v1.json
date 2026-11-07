@@ -1,0 +1,13 @@
+{
+  "id": "feiyi_snake-body-v1",
+  "beast": "feiyi_snake",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "A complete anatomically convincing ancient Chinese mythical serpent body, isolated full body including one living snake head and a long continuous gradually tapering tail. Relaxed extended shallow S curve seen from the side, NOT coiled into a ring, body horizontal and fully separated from itself. Length about eight times maximum trunk diameter, muscular oval cross sections varying organically from broad ribcage through slender neck to delicate tail tip. Low raised alert snake head looking forward, distinct closed jaws, subtle nostrils, dark glossy eyes, broad overlapping belly scutes, individually defined small dorsal scales. No horns, no crest, no dragon whiskers. All legs and all wings removed for modular assembly, smooth anatomical flanks with no stumps. Restrained warm grey umber scales with dark brown reticulated edges and pale stone belly, realistic organic sculpting, natural muted surface, no pedestal, no ground, no props, no accessories.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 18000,
+    "seed": 48241
+  }
+}

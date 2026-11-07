@@ -1,0 +1,13 @@
+{
+  "id": "feiyi_snake-body-v2",
+  "beast": "feiyi_snake",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One entire LONG STRAIGHT SNAKE stretched out end to end, nose at one end and tail tip at the opposite end. Straight horizontal length twelve times its thickest diameter, completely UNCOILED, like a scientific museum specimen. Single low alert broad snake head with closed jaws and dark eyes. Neck gently widens to a muscular thick organic trunk, then continuously tapers over the rear half into a very slender pointed tail. Subtle dorsal curve only, no U bend, no spiral, no ring, no self overlap. Real snake anatomy and highly detailed small scales, broad pale belly scutes. Muted grey umber reticulated scales and pale stone belly. NO legs, NO wings, NO horns, NO pedestal or ground. Full isolated elongated animal fully visible, realistic natural history sculpt.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 18000,
+    "seed": 48341
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "id": "feiyi_snake",
+  "name": "肥遗",
+  "archetype": "serpentine",
+  "source": [
+    {
+      "book": "山海經·西山經·西山經之首",
+      "text": "又西六十里，曰太華之山，削成而四方，其高五千仞，其廣十里，鳥獸莫居。有蛇焉，名曰肥𧔥，六足四翼，見則天下大旱。"
+    }
+  ],
+  "inferred": [
+    {
+      "item": "单首渐细蛇身、三对蜥形足与两对羽翼",
+      "basis": "本条明确为蛇、六足、四翼；单首完整蛇身采用蛇的一般形态，不引入北山经浑夕山一首两身。左右三对足与两对翼、各根位置、足趾数、羽翼质地和关节比例均为设计推断，经文未规定。"
+    },
+    {
+      "item": "灰褐网纹鳞、石白腹鳞与褐灰叠羽",
+      "basis": "太华山本条未记颜色与鳞纹。灰褐鳞背、浅腹、灰白羽列与深褐羽梢为统一工笔淡彩的设色推断，未采用英山同名鸟的黄身赤喙。"
+    },
+    {
+      "item": "六足慢行、低幅蛇脊行波与四翼舒展",
+      "basis": "六足支撑与蛇身低幅柔动是动作设计；神通槽以停步昂首舒翼呈现旱兆之肃静，不表示挥翼能够施旱。经文未记鸣声，不赋予固定兽吼；仅将足步与振翼声作为环境拟音。"
+    }
+  ],
+  "references": [
+    {
+      "url": "https://zh.wikisource.org/wiki/山海經/西山經",
+      "note": "本轮逐字重核太華山正文，剔除注语；原字作肥𧔥，通行展示名肥遗。英山另有如鶉、黃身赤喙的鸟类肥遗，其形色不并入本条。"
+    },
+    {
+      "url": "https://www.gutenberg.org/cache/epub/25288/pg25288.txt",
+      "note": "本轮交叉核对太华山六足四翼蛇与见则天下大旱。此电子本名末字缺为囗，source采用维基文库所载原字。"
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/山海經/北山經",
+      "note": "本轮核对渾夕山一首兩身、見則其國大旱为另一条同名蛇，不混入太华山六足四翼构型。"
+    }
+  ],
+  "parts": [
+    {
+      "id": "body",
+      "job": "pipeline/rodin/jobs/feiyi_snake-body-high.json",
+      "instances": 1
+    },
+    {
+      "id": "leg",
+      "job": "pipeline/rodin/jobs/feiyi_snake-leg-high.json",
+      "instances": 6
+    },
+    {
+      "id": "wing",
+      "job": "pipeline/rodin/jobs/feiyi_snake-wing-high.json",
+      "instances": 4
+    }
+  ],
+  "production": {
+    "status": "verified",
+    "ready": true,
+    "method": "new Medium masters, Blender correction and inspected orthographic four views, new Extreme-High multi-view masters; no old geometry reused",
+    "budgetCredits": 12,
+    "consumedCredits": 5,
+    "transactions": [
+      {
+        "job": "feiyi_snake-body-v1",
+        "tier": "Gen-2.5-Medium",
+        "jobHash": "7857878aef962179",
+        "uuid": "211d2974-2431-43f0-9849-172177a88569",
+        "consumedCredits": 0.5,
+        "accepted": false
+      },
+      {
+        "job": "feiyi_snake-leg-v1",
+        "tier": "Gen-2.5-Medium",
+        "jobHash": "0cd34e2966c9f49b",
+        "uuid": "eaf98074-5141-4a14-a4ff-d94c9e514210",
+        "consumedCredits": 0.5,
+        "accepted": true
+      },
+      {
+        "job": "feiyi_snake-wing-v1",
+        "tier": "Gen-2.5-Medium",
+        "jobHash": "bf87198b361f85c6",
+        "uuid": "637ebb3e-6b61-4213-a44c-32ec5019d334",
+        "consumedCredits": 0.5,
+        "accepted": true
+      },
+      {
+        "job": "feiyi_snake-body-v2",
+        "tier": "Gen-2.5-Medium",
+        "jobHash": "eb03217bee444994",
+        "uuid": "4ae13eef-1f8a-435c-a2a4-4493bbb88d88",
+        "consumedCredits": 0.5,
+        "accepted": true
+      },
+      {
+        "job": "feiyi_snake-wing-high",
+        "tier": "Gen-2.5-Extreme-High",
+        "jobHash": "97edbc49d3ba9d32",
+        "uuid": "9e8c8330-e6b6-45c0-ac3d-2d5f8dae2309",
+        "consumedCredits": 1,
+        "accepted": true,
+        "originalTriangles": 50000,
+        "originalSha256": "297901b0a352315ee33c2838e83871f7123377f971990854c71b501ce9b01e9e"
+      },
+      {
+        "job": "feiyi_snake-body-high",
+        "tier": "Gen-2.5-Extreme-High",
+        "jobHash": "7a94c0470614bed0",
+        "uuid": "ae6821a1-975e-4859-812a-3c9045da4127",
+        "consumedCredits": 1,
+        "accepted": true,
+        "originalTriangles": 50000,
+        "originalSha256": "a5bb55c90f8456a3990b811da612e940c91f9fac00b21b6dcd8381d3d4b13314"
+      },
+      {
+        "job": "feiyi_snake-leg-high",
+        "tier": "Gen-2.5-Extreme-High",
+        "jobHash": "f39619b3b179bcb9",
+        "uuid": "8a881ea4-5354-43cd-9087-5c42d1c8c9ee",
+        "consumedCredits": 1,
+        "accepted": true,
+        "originalTriangles": 50000,
+        "originalSha256": "c20ab3c3e13a684771d66f3be1ec931b0122bfc08ebe58fa785663f69bd93055"
+      }
+    ],
+    "runtime": {
+      "path": "public/models/feiyi_snake/body.glb",
+      "bytes": 6224276,
+      "sha256": "a0ff07e4268999e8b193a2b833dd9bc3abb94a2e19a7e386554389ed7c1070b8",
+      "triangles": 549080,
+      "meshes": 11,
+      "bones": 63,
+      "spineBones": 24,
+      "clips": [
+        "idle",
+        "walk",
+        "special"
+      ],
+      "compression": "meshopt and WebP 2048; simplify/flatten/join/resample false; Blender export_optimize_animation_size false preserves long-spine sole contact"
+    },
+    "paletteCorrection": {
+      "date": "2026-11-08",
+      "reason": "Parent visual acceptance found near-black dorsal/head fields despite the declared gray umber design. Disabling outlines did not remove them; unlit source albedo was already dark, continuous normal rendering and removing ink mixing isolated dark texture plus the shared luminance ink ramp.",
+      "method": "Offline gray umber sRGB pigment curve on body albedo only, with feathered masks preserving both eye islands; no shared shader or runtime material changes. Append the new 2K WebP while retaining the original BIN prefix byte-for-byte, so geometry, normals, six-foot skinning, animations and all other textures remain identical.",
+      "script": "pipeline/grade-feiyi-snake.mjs",
+      "sourceCommit": "d1edb8dbf8fa74115798c7336d814a1f8a392a6e",
+      "inputRuntimeSha256": "59f2e6d041a1199c181ec048d4f56d9eafc3c2a0c87991d63b0bb6a4857da70a",
+      "preservedBinPrefixSha256": "2de7bb8d37bcb97e830136bd10cf22d90c463130dcbfdba4979386c3999d7fcb",
+      "preservedBinPrefixBytes": 5715716,
+      "gradeReport": "concept/feiyi_snake/qa-palette/grade.json",
+      "diagnosisReport": "concept/feiyi_snake/qa-palette/diagnosis.json",
+      "dorsalSamples": 9637,
+      "medianDorsalLinearLuminance": 0.1541553836158755,
+      "nearBlackDorsalFraction": 0,
+      "additionalCredits": 0,
+      "totalCreditsUnchanged": 5
+    },
+    "verification": {
+      "commands": [
+        "pnpm typecheck && pnpm validate && pnpm build",
+        "node scripts/qa-feiyi-snake.mjs http://localhost:5224 /tmp/feiyi-palette-fix",
+        "node scripts/shot.mjs for idle/walk/special and 390x900 mobile",
+        "node scripts/closeups.mjs for four continuous walking frames"
+      ],
+      "report": "concept/feiyi_snake/qa-palette/browser-qa.json",
+      "screenshots": "concept/feiyi_snake/qa-palette/{idle,walk,special,mobile,angle-front,angle-back,angle-left,angle-right,angle-dorsal,w0,w1,w2,w3}.png",
+      "visuallyInspected": "Read actual corrected three-state shots, mobile, four continuous walking closeups and front/back/dorsal. Gray umber scale reticulation is visible across back and head; dark eyes and pale belly remain distinct. Complete scaled serpent and tapered tail, six articulated feet and four embedded feather wings remain intact.",
+      "frames": 385,
+      "maxWorldSoleDriftMeters": 0.0003724391442539365,
+      "maxSoleDirectionDriftRadians": 0.0003950205943188123,
+      "remounts": 3,
+      "skeletonTexturesDisposed": true,
+      "narrationPlayStop": true,
+      "specialWingSfxPeakRMS": 0.005721070419144192,
+      "specialReturnsIdle": true,
+      "specialInterruption": true,
+      "consoleOrHttpErrors": 0,
+      "knownPresentationLimit": "Historical worker missing-glyph issue resolved by bundled Shanhai Rare Han subset; parent Chrome actual-font and screenshot verification recorded in pipeline/provenance/feiyi_snake.json. Existing shared 800px card overlap and initial camera easing remain documented there."
+    },
+    "initialRejectedRequests": {
+      "count": 3,
+      "reason": "seed above API maximum 65535; HTTP400 before task creation",
+      "consumedCredits": 0
+    },
+    "bodyRetry": {
+      "rejected": "feiyi_snake-body-v1",
+      "reason": "tightly folded U silhouette prevents clear long trunk and six-leg layout",
+      "replacement": "feiyi_snake-body-v2"
+    },
+    "narration": {
+      "sourceCommit": "0f14a692244b73b37bba0abecd137097283f2f4b",
+      "model": "cosyvoice-v2",
+      "voice": "longsanshu",
+      "durationSeconds": 98.821188
+    },
+    "parentAcceptance": "pipeline/provenance/feiyi_snake.json"
+  },
+  "sourceVerification": {
+    "rawUrl": "https://zh.wikisource.org/w/index.php?title=山海經/西山經&action=raw",
+    "rawBytes": 33142,
+    "rawSha256": "001592c670f18397c5321e874b88321913482e1260eea1eabc96a792faf1bf96",
+    "quote": "又西六十里，曰太華之山，削成而四方，其高五千仞，其廣十里，鳥獸莫居。有蛇焉，名曰肥𧔥，六足四翼，見則天下大旱。",
+    "matchingMethod": "Exact continuous Taihua entry after balanced annotation template removal; 𧔥 retained",
+    "provenance": "pipeline/provenance/feiyi_snake.json"
+  }
+}

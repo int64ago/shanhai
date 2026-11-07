@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Shanhai Rare Han';
+  src: url('/fonts/rare-han/ShanhaiRareHan-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+27525;
+}
+
 :root {
   --paper: #efe6d2;
   --paper-edge: #d8ccb2;
@@ -7,7 +16,7 @@
   --bronze: #6b5a3a;
   --jade: #2f5a53;
   --bg: #e4dccb;
-  --serif: 'Songti SC', 'Noto Serif SC', 'STSong', 'SimSun', serif;
+  --serif: 'Shanhai Rare Han', 'Songti SC', 'Noto Serif SC', 'STSong', 'SimSun', serif;
   --kai: 'Kaiti SC', 'STKaiti', 'KaiTi', var(--serif);
 }
 

@@ -1,0 +1,18 @@
+{
+  "texture": {
+    "width": 2048,
+    "height": 2048,
+    "colorSpace": "srgb",
+    "linearLuminanceQuantiles": [
+      0,
+      0.015165025944143842,
+      0.03646352484888297,
+      0.3423454933361475,
+      0.6875724572694432,
+      0.7203588695307592,
+      1
+    ],
+    "fractionBelowInkStart": 0.1414492130279541,
+    "fractionBelowInkEnd": 0.44182467460632324
+  }
+}

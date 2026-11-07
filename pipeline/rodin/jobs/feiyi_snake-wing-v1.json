@@ -1,0 +1,13 @@
+{
+  "id": "feiyi_snake-wing-v1",
+  "beast": "feiyi_snake",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "A single isolated feathered wing of an ancient Chinese mythical serpent, open in a graceful gently swept fan. Complete anatomical wing from thick muscular tapered shoulder insertion root through articulated elbow and wrist to slender primary feather tips. Wing span about three times maximum chord width. Clearly separated overlapping rows of small coverts, broad secondary feathers, individually sculpted long tapered primary feathers with fine central quills, smoothly connected layered shoulder feathers, no floating feather parts. Muted warm grey brown coverts, pale stone secondary feathers and dark umber primary tips, natural material matching warm grey umber reptilian body, restrained gongbi natural history aesthetic. One wing only, no body, no feet, no detached parts, no pedestal or props, high quality organic sculpt.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 18000,
+    "seed": 48243
+  }
+}

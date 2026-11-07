@@ -2,6 +2,12 @@
   "_note": "第三方素材授权登记；上线前统一核对。音频素材到位后同样登记在这里。",
   "assets": [
     {
+      "path": "public/fonts/rare-han/ShanhaiRareHan-Regular.ttf",
+      "source": "BabelStone Han TrueType，https://www.babelstone.co.uk/Fonts/Download/BabelStoneHan.ttf；源文件 51,971,284 bytes，SHA256 d8bb747b3fdccd84a60bd0aa56bb90937270d0bd15f1101cd8f2a5a3709dd0a3。2026-11-08 以 pipeline/fonts/subset-rare-han.py（纯 Python 标准库）仅保留 .notdef 与 U+27525 𧔥，重建字形编号、cmap 与名称表，修改字体改名 Shanhai Rare Han；保留原版权、hinting 与 Arphic Public License。子集 16,872 bytes，SHA256 a53d4be6528de8e4220ab6711af94d0f786bc530b1aeab584314d038ff15e901；CSS unicode-range 仅作用于 U+27525。",
+      "author": "BabelStone Han 原字体作者及 Arphic Technology；项目制作并改名子集",
+      "license": "Arphic Public License；原文 public/fonts/rare-han/ARPHICPL.TXT；修改说明 public/fonts/rare-han/NOTICE.txt"
+    },
+    {
       "path": "public/models/xuangui/body.glb",
       "source": "全新 Hyper3D Rodin 三部件两阶段生成。Medium 龟体/鸟首颈/蛇尾各 0.5，Read 矫正四视图后分别提交 Gen-2.5-Extreme-High / HighPack 各 1，共六笔实耗 4.5 积分；未传 texture_mode extreme-high。原始 HIGH 三角化实际面数为 33056 / 34096 / 33082，总 100234 面，未冒称每件五万面。龟体拥有背腹甲、甲桥及四个出肢口，鸟颈根加宽嵌入前甲口，单条渐细蛇尾接入后甲口；25 骨含独立足掌、四段颈链和八段尾链，idle/walk/special。meshopt/WebP，simplify/flatten/join/resample 均 false。所有任务 UUID、实耗、输入 hash 和 HIGH 文件 SHA256 见 content/beasts/xuangui.json 与 pipeline/rodin/credits.log。",
       "sourceComponents": [
@@ -95,6 +101,30 @@
       "source": "前三组为本轮新Medium部件的Blender归一与矫正参考，实际逐图Read检查后作为HIGH输入；final为最终新HIGH组装与独足姿态四视图。首图34决定材质。",
       "author": "项目自制",
       "license": "沿用毕方模型授权"
+    },
+    {
+      "path": "public/models/feiyi_snake/body.glb",
+      "source": "本轮全新 Hyper3D Rodin 两阶段生成：四次 Medium（蛇身首版 U 形拒用并重试一次、自然足母件、羽翼母件），Blender 按蛇构型归一、修圆足根并 Read 四面后，分别提交三次 Gen-2.5-Extreme-High + HighPack，多视图各实际 1 积分。7 个实际生成任务共 5.0 积分，上限 12；另三次种子越界 HTTP400 未创建任务、未扣费。最终三份 HIGH 原始输出均为 50,000 三角面、均为 base_high_pbr.glb；未使用旧库存、未把 Medium 当 HIGH。主体保留有机头颈、完整腹鳞、渐细长尾；足母件 6 份、羽翼母件 4 份自然下埋接合，未新增球形足根或替代管状蛇身。24 节蛇脊、六条三节足链、四组五节羽翼链，合计 63 骨。离线反射坐标后重算法线，运行时均为正缩放。最终 549,080 三角面；meshopt/WebP 2K，不减面、不 flatten/join、不 resample，Blender 也保留全部动画采样，避免长脊链抽帧误差。父视觉验收后追加零付费的蛇身贴图离线灰褐校色（pipeline/grade-feiyi-snake.mjs）：原深色贴图与浓墨阈值叠加导致背/头过黑，采用明度曲线并保留双眼 UV 深色，未修改共享 shader。原 BIN 前缀 5,715,716 bytes 逐字节保留，几何/法线/蒙皮/动画与其余贴图均未改；仅追加校色后的 2K WebP 并重定向蛇身 baseColor image。既有 7 任务 / 5.0 积分账目不变。runtime 6,224,276 bytes，SHA256 a0ff07e4268999e8b193a2b833dd9bc3abb94a2e19a7e386554389ed7c1070b8；校色前 runtime SHA256 59f2e6d041a1199c181ec048d4f56d9eafc3c2a0c87991d63b0bb6a4857da70a。",
+      "sourceComponents": [
+        { "path": "raw/feiyi_snake-body-high/base_high_pbr.glb", "job": "feiyi_snake-body-high", "tier": "Gen-2.5-Extreme-High", "uuid": "ae6821a1-975e-4859-812a-3c9045da4127", "jobHash": "7a94c0470614bed0", "sha256": "a5bb55c90f8456a3990b811da612e940c91f9fac00b21b6dcd8381d3d4b13314", "triangles": 50000, "consumed": 1 },
+        { "path": "raw/feiyi_snake-leg-high/base_high_pbr.glb", "job": "feiyi_snake-leg-high", "tier": "Gen-2.5-Extreme-High", "uuid": "8a881ea4-5354-43cd-9087-5c42d1c8c9ee", "jobHash": "f39619b3b179bcb9", "sha256": "c20ab3c3e13a684771d66f3be1ec931b0122bfc08ebe58fa785663f69bd93055", "triangles": 50000, "consumed": 1 },
+        { "path": "raw/feiyi_snake-wing-high/base_high_pbr.glb", "job": "feiyi_snake-wing-high", "tier": "Gen-2.5-Extreme-High", "uuid": "9e8c8330-e6b6-45c0-ac3d-2d5f8dae2309", "jobHash": "97edbc49d3ba9d32", "sha256": "297901b0a352315ee33c2838e83871f7123377f971990854c71b501ce9b01e9e", "triangles": 50000, "consumed": 1 }
+      ],
+      "sourceReference": "山海經·西山經之首·太華山：有蛇焉，名曰肥𧔥，六足四翼，見則天下大旱。与英山同名鸟、渾夕山一首兩身蛇分开。位置、趾形、羽质、设色及动作均为 inferred。",
+      "author": "Hyper3D Rodin AI 生成；项目 Blender 解剖校正、组装、绑定与水墨着色",
+      "license": "沿用项目既有 Hyper3D Rodin 生成输出条款；离线制作属项目自制"
+    },
+    {
+      "path": "concept/feiyi_snake/{body-v2,leg-corrected,wing}/view_{34,side,front,back}.png",
+      "source": "本轮新 Medium 母件在 Blender 按构型校正后生成的正交四视图，逐张 Read 后作为三份全新 HIGH 的图生输入；第一张为三分之四视角。",
+      "author": "项目自制概念渲染",
+      "license": "沿用肥遗蛇模型授权"
+    },
+    {
+      "path": "public/audio/narration/feiyi_snake.mp3",
+      "source": "仅取原研究提交 0f14a692244b73b37bba0abecd137097283f2f4b 对应的 source-verified CosyVoice cosyvoice-v2 / longsanshu 评书，98.821188 秒；当前故事文本与该音频原稿一致。未导入旧提交模型或 ready 状态。",
+      "author": "项目撰稿与 CosyVoice 合成",
+      "license": "沿用项目既有 CosyVoice 合成输出条款"
     },
     {
       "path": "public/models/yayu/body.glb",

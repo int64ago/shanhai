@@ -1,0 +1,66 @@
+{
+  "inputSha256": "59f2e6d041a1199c181ec048d4f56d9eafc3c2a0c87991d63b0bb6a4857da70a",
+  "outputSha256": "a0ff07e4268999e8b193a2b833dd9bc3abb94a2e19a7e386554389ed7c1070b8",
+  "outputBytes": 6224276,
+  "sourceImageSha256": "7cb6814423d683eb85c684152719a15317feb0c814d6829f65065e9c8e8d8b2e",
+  "gradedImageSha256": "b9169d7c0f332b4ace4676473726e4694bc8afcaea189b1618cd1d5e54e44dd2",
+  "preservedBinPrefixSha256": "2de7bb8d37bcb97e830136bd10cf22d90c463130dcbfdba4979386c3999d7fcb",
+  "preservedBinPrefixBytes": 5715716,
+  "unchangedGeometrySkinAnimations": true,
+  "width": 2048,
+  "height": 2048,
+  "srgbLuminanceKnots": [
+    [
+      0,
+      0.28
+    ],
+    [
+      0.03,
+      0.31
+    ],
+    [
+      0.08,
+      0.35
+    ],
+    [
+      0.16,
+      0.395
+    ],
+    [
+      0.25,
+      0.45
+    ],
+    [
+      0.4,
+      0.55
+    ],
+    [
+      0.65,
+      0.65
+    ],
+    [
+      0.85,
+      0.85
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "eyeMasks": [
+    [
+      760,
+      531,
+      88,
+      40
+    ],
+    [
+      588,
+      65,
+      45,
+      28
+    ]
+  ],
+  "protectedPixels": 6346,
+  "additionalCredits": 0
+}

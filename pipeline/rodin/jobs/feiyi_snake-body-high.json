@@ -1,0 +1,20 @@
+{
+  "id": "feiyi_snake-body-high",
+  "beast": "feiyi_snake",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Complete single straight elongated snake from the four reference views, preserve the continuous muscular organic body with varying oval cross sections, distinct living snake head, closed jaws and dark eyes, broad belly scutes, and rear half gradually tapering to a slender tail tip. Keep full uncoiled length and muted grey umber reticulated scales with pale stone belly. Fine crisp organic sculpt. No legs, no wings, no horns, no extra heads, no pedestal, no ground.",
+  "images": [
+    "concept/feiyi_snake/body-v2/view_34.png",
+    "concept/feiyi_snake/body-v2/view_side.png",
+    "concept/feiyi_snake/body-v2/view_front.png",
+    "concept/feiyi_snake/body-v2/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack",
+    "seed": 48341
+  }
+}

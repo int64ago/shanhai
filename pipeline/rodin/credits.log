@@ -99,3 +99,10 @@
 {"time":"2026-11-07T15:03:54.127Z","beast":"boyi","job":"boyi-quality-remake-ear-high","hash":"c4c784fc432070d0","tier":"Gen-2.5-Extreme-High","uuid":"da06d17a-7bfa-4190-9e7a-5c539523c89a","consumed":1}
 {"time":"2026-11-07T15:04:12.974Z","beast":"boyi","job":"boyi-quality-remake-tail-high","hash":"bd9214f4a98144b5","tier":"Gen-2.5-Extreme-High","uuid":"4db15744-ad6c-4644-8d49-bbfac39b333d","consumed":1}
 {"time":"2026-11-07T15:12:29.957Z","beast":"boyi","job":"boyi-quality-remake-body-high-v2","hash":"aadb8d5aa425b367","tier":"Gen-2.5-Extreme-High","uuid":"0b970715-eb69-451f-878b-005b50009ec1","consumed":1}
+{"time":"2026-11-07T13:57:01.028Z","beast":"feiyi_snake","job":"feiyi_snake-body-v1","hash":"7857878aef962179","tier":"Gen-2.5-Medium","uuid":"211d2974-2431-43f0-9849-172177a88569","consumed":0.5}
+{"time":"2026-11-07T13:57:25.073Z","beast":"feiyi_snake","job":"feiyi_snake-leg-v1","hash":"0cd34e2966c9f49b","tier":"Gen-2.5-Medium","uuid":"eaf98074-5141-4a14-a4ff-d94c9e514210","consumed":0.5}
+{"time":"2026-11-07T13:57:44.812Z","beast":"feiyi_snake","job":"feiyi_snake-wing-v1","hash":"bf87198b361f85c6","tier":"Gen-2.5-Medium","uuid":"637ebb3e-6b61-4213-a44c-32ec5019d334","consumed":0.5}
+{"time":"2026-11-07T14:01:14.912Z","beast":"feiyi_snake","job":"feiyi_snake-body-v2","hash":"eb03217bee444994","tier":"Gen-2.5-Medium","uuid":"4ae13eef-1f8a-435c-a2a4-4493bbb88d88","consumed":0.5}
+{"time":"2026-11-07T14:03:46.075Z","beast":"feiyi_snake","job":"feiyi_snake-wing-high","hash":"97edbc49d3ba9d32","tier":"Gen-2.5-Extreme-High","uuid":"9e8c8330-e6b6-45c0-ac3d-2d5f8dae2309","consumed":1}
+{"time":"2026-11-07T14:05:35.735Z","beast":"feiyi_snake","job":"feiyi_snake-body-high","hash":"7a94c0470614bed0","tier":"Gen-2.5-Extreme-High","uuid":"ae6821a1-975e-4859-812a-3c9045da4127","consumed":1}
+{"time":"2026-11-07T14:11:44.684Z","beast":"feiyi_snake","job":"feiyi_snake-leg-high","hash":"f39619b3b179bcb9","tier":"Gen-2.5-Extreme-High","uuid":"8a881ea4-5354-43cd-9087-5c42d1c8c9ee","consumed":1}

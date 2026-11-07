@@ -1,0 +1,13 @@
+{
+  "id": "feiyi_snake-leg-v1",
+  "beast": "feiyi_snake",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One single isolated naturally articulated reptilian leg for an ancient mythical serpent, complete from broad flattened muscular upper haunch root through bent knee and narrow ankle to one planted foot. About three times longer than ankle thickness, semi sprawling monitor lizard anatomy with a gently curved thigh, clearly sculpted tendons and believable joint transitions, no ball joints, no spherical root. Four distinct moderately long toes spreading forward on the same flat sole plane, short curved dark claws, visible overlapping fine scales and natural skin folds, warm grey umber scales with dark brown reticulation matching a snake and pale stone inner skin. Upper thigh widens into an organic flattened insertion root suitable for sinking into a torso. Entire isolated single leg visible, no body, no second leg, no wings, no pedestal, no props, high quality organic anatomical sculpt.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 12000,
+    "seed": 48242
+  }
+}

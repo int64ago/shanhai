@@ -1,0 +1,1416 @@
+{
+  "id": "feiyi_snake",
+  "checked": "2026-11-08",
+  "sourceVerification": {
+    "rawUrl": "https://zh.wikisource.org/w/index.php?title=山海經/西山經&action=raw",
+    "rawBytes": 33142,
+    "rawSha256": "001592c670f18397c5321e874b88321913482e1260eea1eabc96a792faf1bf96",
+    "quote": "又西六十里，曰太華之山，削成而四方，其高五千仞，其廣十里，鳥獸莫居。有蛇焉，名曰肥𧔥，六足四翼，見則天下大旱。",
+    "matchingMethod": "Exact continuous Taihua entry after balanced annotation template removal; 𧔥 retained"
+  },
+  "transactions": [
+    {
+      "time": "2026-11-07T13:57:01.028Z",
+      "beast": "feiyi_snake",
+      "job": "feiyi_snake-body-v1",
+      "hash": "7857878aef962179",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "211d2974-2431-43f0-9849-172177a88569",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-07T13:57:25.073Z",
+      "beast": "feiyi_snake",
+      "job": "feiyi_snake-leg-v1",
+      "hash": "0cd34e2966c9f49b",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "eaf98074-5141-4a14-a4ff-d94c9e514210",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-07T13:57:44.812Z",
+      "beast": "feiyi_snake",
+      "job": "feiyi_snake-wing-v1",
+      "hash": "bf87198b361f85c6",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "637ebb3e-6b61-4213-a44c-32ec5019d334",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-07T14:01:14.912Z",
+      "beast": "feiyi_snake",
+      "job": "feiyi_snake-body-v2",
+      "hash": "eb03217bee444994",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "4ae13eef-1f8a-435c-a2a4-4493bbb88d88",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-07T14:03:46.075Z",
+      "beast": "feiyi_snake",
+      "job": "feiyi_snake-wing-high",
+      "hash": "97edbc49d3ba9d32",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "9e8c8330-e6b6-45c0-ac3d-2d5f8dae2309",
+      "consumed": 1
+    },
+    {
+      "time": "2026-11-07T14:05:35.735Z",
+      "beast": "feiyi_snake",
+      "job": "feiyi_snake-body-high",
+      "hash": "7a94c0470614bed0",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "ae6821a1-975e-4859-812a-3c9045da4127",
+      "consumed": 1
+    },
+    {
+      "time": "2026-11-07T14:11:44.684Z",
+      "beast": "feiyi_snake",
+      "job": "feiyi_snake-leg-high",
+      "hash": "f39619b3b179bcb9",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "8a881ea4-5354-43cd-9087-5c42d1c8c9ee",
+      "consumed": 1
+    }
+  ],
+  "consumedCredits": 5,
+  "independentlyVerifiedHighOriginals": [
+    {
+      "path": "raw/feiyi_snake-wing-high/base_high_pbr.glb",
+      "job": "feiyi_snake-wing-high",
+      "uuid": "9e8c8330-e6b6-45c0-ac3d-2d5f8dae2309",
+      "bytes": 30051036,
+      "triangles": 50000,
+      "sha256": "297901b0a352315ee33c2838e83871f7123377f971990854c71b501ce9b01e9e"
+    },
+    {
+      "path": "raw/feiyi_snake-body-high/base_high_pbr.glb",
+      "job": "feiyi_snake-body-high",
+      "uuid": "ae6821a1-975e-4859-812a-3c9045da4127",
+      "bytes": 38435868,
+      "triangles": 50000,
+      "sha256": "a5bb55c90f8456a3990b811da612e940c91f9fac00b21b6dcd8381d3d4b13314"
+    },
+    {
+      "path": "raw/feiyi_snake-leg-high/base_high_pbr.glb",
+      "job": "feiyi_snake-leg-high",
+      "uuid": "8a881ea4-5354-43cd-9087-5c42d1c8c9ee",
+      "bytes": 42081180,
+      "triangles": 50000,
+      "sha256": "c20ab3c3e13a684771d66f3be1ec931b0122bfc08ebe58fa785663f69bd93055"
+    }
+  ],
+  "runtime": {
+    "path": "public/models/feiyi_snake/body.glb",
+    "bytes": 6224276,
+    "sha256": "a0ff07e4268999e8b193a2b833dd9bc3abb94a2e19a7e386554389ed7c1070b8",
+    "triangles": 549080,
+    "meshes": 11,
+    "bones": 63,
+    "spineBones": 24,
+    "clips": [
+      "idle",
+      "walk",
+      "special"
+    ],
+    "compression": "meshopt and WebP 2048; simplify/flatten/join/resample false; Blender export_optimize_animation_size false preserves long-spine sole contact"
+  },
+  "palette": {
+    "originalSha256": "59f2e6d041a1199c181ec048d4f56d9eafc3c2a0c87991d63b0bb6a4857da70a",
+    "gradedSha256": "a0ff07e4268999e8b193a2b833dd9bc3abb94a2e19a7e386554389ed7c1070b8",
+    "preservedBinPrefixBytes": 5715716,
+    "preservedBinPrefixSha256": "2de7bb8d37bcb97e830136bd10cf22d90c463130dcbfdba4979386c3999d7fcb",
+    "geometrySkinAnimationsUnchanged": true
+  },
+  "parentAcceptance": {
+    "status": "Parent reviewed candidate; production verification recorded separately after release",
+    "script": "scripts/qa-feiyi-snake.mjs",
+    "previewPort": 5215,
+    "report": {
+      "path": "/tmp/feiyi-parent-final-qa/browser-qa.json",
+      "sha256": "ff27ac586729f8369cb2fd7a35ae5a0ab1aa1ad639e5a1bc77cb6bf4f5d35ef2"
+    },
+    "inputAudit": "/tmp/shanhai-check/feiyi-parent-input-audit.json",
+    "baseline": {
+      "nodes": 88,
+      "invalid": 0,
+      "meshes": 11,
+      "outlines": 11,
+      "bones": 63,
+      "body": 1,
+      "legs": 6,
+      "wings": 4,
+      "spine": 24,
+      "feet": {
+        "feiyi_leg_0_l": -0.00012949943885870452,
+        "feiyi_leg_0_r": -0.00014372478716004333,
+        "feiyi_leg_1_l": -0.00014621273424908487,
+        "feiyi_leg_1_r": -0.00016369321881679055,
+        "feiyi_leg_2_l": -0.0001009152065218899,
+        "feiyi_leg_2_r": -0.00014389324533684023
+      }
+    },
+    "worldContact": {
+      "frames": 386,
+      "pointsPerFoot": {
+        "feiyi_leg_0_l": 3568,
+        "feiyi_leg_0_r": 3570,
+        "feiyi_leg_1_l": 3573,
+        "feiyi_leg_1_r": 3580,
+        "feiyi_leg_2_l": 3568,
+        "feiyi_leg_2_r": 3573
+      },
+      "plants": [
+        {
+          "leg": "feiyi_leg_0_l",
+          "initialNormal": [
+            -0.0000524816260007489,
+            0.9999999952466074,
+            -0.00008217337990389552
+          ],
+          "maxDrift": 0.00020996456962473257,
+          "maxDirection": 0.00034482721975978136,
+          "maxNormalChange": 0.00023312356933358113,
+          "maxPlaneTilt": 0.00017052993709129106,
+          "samples": 51,
+          "minY": -0.00020757484785172142,
+          "maxY": 0.002046904582128084
+        },
+        {
+          "leg": "feiyi_leg_1_r",
+          "initialNormal": [
+            -0.000026042502552386667,
+            0.9999999989265623,
+            -0.000038323142384743216
+          ],
+          "maxDrift": 0.0002214487379830108,
+          "maxDirection": 0.0002926052651711657,
+          "maxNormalChange": 0.00023554466629299622,
+          "maxPlaneTilt": 0.0002722241462578666,
+          "samples": 51,
+          "minY": -0.00027115858772580603,
+          "maxY": 0.002146595294438919
+        },
+        {
+          "leg": "feiyi_leg_2_l",
+          "initialNormal": [
+            -0.00005104569099338359,
+            0.9999999966167036,
+            -0.00006450527161615821
+          ],
+          "maxDrift": 0.00033952983252559814,
+          "maxDirection": 0.00031732157806809043,
+          "maxNormalChange": 0.00028155194922148375,
+          "maxPlaneTilt": 0.00027884588102928843,
+          "samples": 51,
+          "minY": -0.0003245709573143629,
+          "maxY": 0.002208291014217295
+        },
+        {
+          "leg": "feiyi_leg_0_r",
+          "initialNormal": [
+            -0.000056572633690412894,
+            0.9999999957899156,
+            0.0000722475334185145
+          ],
+          "maxDrift": 0.00013074232838804133,
+          "maxDirection": 0.0002576534193950261,
+          "maxNormalChange": 0.00025669194311429356,
+          "maxPlaneTilt": 0.0001864907330178744,
+          "samples": 87,
+          "minY": -0.00017990817702506767,
+          "maxY": 0.002084041667913178
+        },
+        {
+          "leg": "feiyi_leg_1_l",
+          "initialNormal": [
+            0.00007556201918852603,
+            0.9999999971451716,
+            -1.9467131260995843e-7
+          ],
+          "maxDrift": 0.0002397004965714735,
+          "maxDirection": 0.00025373097418724256,
+          "maxNormalChange": 0.0002507466698126289,
+          "maxPlaneTilt": 0.00025187528306285173,
+          "samples": 87,
+          "minY": -0.00026962118767973053,
+          "maxY": 0.0021705915708575274
+        },
+        {
+          "leg": "feiyi_leg_2_r",
+          "initialNormal": [
+            0.00006836024024214107,
+            0.9999999976562104,
+            -0.000003802201159510439
+          ],
+          "maxDrift": 0.0003611124181367664,
+          "maxDirection": 0.0003657745723002698,
+          "maxNormalChange": 0.0003592519750846206,
+          "maxPlaneTilt": 0.00034824303778363145,
+          "samples": 87,
+          "minY": -0.0003321205109043657,
+          "maxY": 0.0022807122406872937
+        },
+        {
+          "leg": "feiyi_leg_0_l",
+          "initialNormal": [
+            0.000021847524663357555,
+            0.9999999996133074,
+            0.00001720671198395876
+          ],
+          "maxDrift": 0.00017147188306728046,
+          "maxDirection": 0.00025510072775977813,
+          "maxNormalChange": 0.00021201655063515348,
+          "maxPlaneTilt": 0.00018984567296811725,
+          "samples": 87,
+          "minY": -0.00020049484351800095,
+          "maxY": 0.002053368950545975
+        },
+        {
+          "leg": "feiyi_leg_1_r",
+          "initialNormal": [
+            -0.000010648872536715275,
+            0.9999999999389675,
+            -0.0000029439290578911546
+          ],
+          "maxDrift": 0.00018452824234627764,
+          "maxDirection": 0.0002789074384747138,
+          "maxNormalChange": 0.0002779655748201078,
+          "maxPlaneTilt": 0.00028257718498437575,
+          "samples": 87,
+          "minY": -0.0002596027072235829,
+          "maxY": 0.0021465951861449058
+        },
+        {
+          "leg": "feiyi_leg_2_l",
+          "initialNormal": [
+            0.000019505778311381975,
+            0.9999999972306344,
+            -0.00007182099928168008
+          ],
+          "maxDrift": 0.0002708769687090048,
+          "maxDirection": 0.0002451154503677785,
+          "maxNormalChange": 0.0002447369297258262,
+          "maxPlaneTilt": 0.00029199503669061883,
+          "samples": 87,
+          "minY": -0.0003043492356615829,
+          "maxY": 0.002208290847099919
+        },
+        {
+          "leg": "feiyi_leg_0_r",
+          "initialNormal": [
+            -0.00004625493884988181,
+            0.999999995789939,
+            0.00007925025204434492
+          ],
+          "maxDrift": 0.00013067303628393052,
+          "maxDirection": 0.00025686233039629914,
+          "maxNormalChange": 0.00025587044123794733,
+          "maxPlaneTilt": 0.0001912426037436427,
+          "samples": 87,
+          "minY": -0.00017607092202409635,
+          "maxY": 0.002083722385742698
+        },
+        {
+          "leg": "feiyi_leg_1_l",
+          "initialNormal": [
+            0.00007483837893493244,
+            0.9999999971451363,
+            -0.000010437634658864852
+          ],
+          "maxDrift": 0.0002396998790198121,
+          "maxDirection": 0.0002637826879341111,
+          "maxNormalChange": 0.00025743214710142337,
+          "maxPlaneTilt": 0.0002572172578072404,
+          "samples": 87,
+          "minY": -0.00025736222503086603,
+          "maxY": 0.0021741926846422783
+        },
+        {
+          "leg": "feiyi_leg_2_r",
+          "initialNormal": [
+            0.00006721411420200393,
+            0.9999999976561726,
+            -0.00001303523816325824
+          ],
+          "maxDrift": 0.00036826861862641116,
+          "maxDirection": 0.00038854529522916887,
+          "maxNormalChange": 0.0003808026822002667,
+          "maxPlaneTilt": 0.0003679509013175852,
+          "samples": 87,
+          "minY": -0.0003141543595859275,
+          "maxY": 0.0022868560907620124
+        },
+        {
+          "leg": "feiyi_leg_0_l",
+          "initialNormal": [
+            0.000023908504583068655,
+            0.99999999961656,
+            0.000013973669284240876
+          ],
+          "maxDrift": 0.00017167720671025478,
+          "maxDirection": 0.00023020696866915983,
+          "maxNormalChange": 0.00021976000082039724,
+          "maxPlaneTilt": 0.00019762091018366167,
+          "samples": 87,
+          "minY": -0.00019751922081115425,
+          "maxY": 0.002047815997985508
+        },
+        {
+          "leg": "feiyi_leg_1_r",
+          "initialNormal": [
+            -0.00001134684051643126,
+            0.9999999999344814,
+            -0.0000015119610226585378
+          ],
+          "maxDrift": 0.0001813101202370908,
+          "maxDirection": 0.00025608506860304726,
+          "maxNormalChange": 0.0002560247248749396,
+          "maxPlaneTilt": 0.0002609799733286105,
+          "samples": 87,
+          "minY": -0.00025479263585523326,
+          "maxY": 0.0021460324295421995
+        },
+        {
+          "leg": "feiyi_leg_2_l",
+          "initialNormal": [
+            0.000009090376673830022,
+            0.9999999972074957,
+            -0.0000741779863517239
+          ],
+          "maxDrift": 0.000271902860705412,
+          "maxDirection": 0.00023964321382964032,
+          "maxNormalChange": 0.00022746415419446671,
+          "maxPlaneTilt": 0.00026399812320914876,
+          "samples": 87,
+          "minY": -0.0002962828994102218,
+          "maxY": 0.002207416755188124
+        },
+        {
+          "leg": "feiyi_leg_0_r",
+          "initialNormal": [
+            -0.00003649703970159077,
+            0.9999999960286546,
+            0.00008130594712824128
+          ],
+          "maxDrift": 0.0001297379447782188,
+          "maxDirection": 0.0002550539784758984,
+          "maxNormalChange": 0.0002543709282974619,
+          "maxPlaneTilt": 0.00019064721063169167,
+          "samples": 66,
+          "minY": -0.0001743512005495107,
+          "maxY": 0.0020837222338040413
+        },
+        {
+          "leg": "feiyi_leg_1_l",
+          "initialNormal": [
+            0.00007765522445943295,
+            0.9999999967662953,
+            -0.00002090635307338657
+          ],
+          "maxDrift": 0.0002362169477594735,
+          "maxDirection": 0.0002631043538427909,
+          "maxNormalChange": 0.00025379476841412075,
+          "maxPlaneTilt": 0.0002565489226432275,
+          "samples": 66,
+          "minY": -0.00025230334245651687,
+          "maxY": 0.002173741416604036
+        },
+        {
+          "leg": "feiyi_leg_2_r",
+          "initialNormal": [
+            0.00007137260255559783,
+            0.9999999972394177,
+            -0.000020666785924495085
+          ],
+          "maxDrift": 0.00036823797627814317,
+          "maxDirection": 0.00036817004264519556,
+          "maxNormalChange": 0.00035266912611195216,
+          "maxPlaneTilt": 0.0003335255884069279,
+          "samples": 66,
+          "minY": -0.0003068038983889132,
+          "maxY": 0.002286086248802277
+        }
+      ],
+      "maxDrift": 0.00036826861862641116,
+      "maxDirection": 0.00038854529522916887
+    },
+    "cache": {
+      "snapshottedBeforeFirstMount": true,
+      "unchanged": true,
+      "sharedResources": 23,
+      "sharedDisposals": 0,
+      "sourceOutlines": 0,
+      "ownedSkeletons": true
+    },
+    "remounts": [
+      {
+        "current": {
+          "nodes": 88,
+          "invalid": 0,
+          "meshes": 11,
+          "outlines": 11,
+          "bones": 63,
+          "body": 1,
+          "legs": 6,
+          "wings": 4,
+          "spine": 24,
+          "feet": {
+            "feiyi_leg_0_l": -0.00003473434464368319,
+            "feiyi_leg_0_r": -0.000039609235863963255,
+            "feiyi_leg_1_l": -0.000028007230840065844,
+            "feiyi_leg_1_r": -0.00003636304025281256,
+            "feiyi_leg_2_l": -0.00004528623569297063,
+            "feiyi_leg_2_r": -0.00004843940552967663
+          }
+        },
+        "cleanup": {
+          "textures": 11,
+          "textureDisposals": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "skeletons": 11,
+          "live": 0,
+          "materials": 22,
+          "materialDisposals": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "animations": {
+          "idle": {
+            "invalid": 0,
+            "startTime": 0.647,
+            "endTime": 1.0469000000953674,
+            "meshes": [
+              {
+                "name": "feiyi_leg_0_l",
+                "maxDisplacement": 0.0025881521909938555
+              },
+              {
+                "name": "feiyi_leg_0_r",
+                "maxDisplacement": 0.0025322716096901833
+              },
+              {
+                "name": "feiyi_leg_1_l",
+                "maxDisplacement": 0.002584046998461362
+              },
+              {
+                "name": "feiyi_leg_1_r",
+                "maxDisplacement": 0.0033353382147838125
+              },
+              {
+                "name": "feiyi_leg_2_l",
+                "maxDisplacement": 0.003723578971597651
+              },
+              {
+                "name": "feiyi_leg_2_r",
+                "maxDisplacement": 0.0038097316257924047
+              },
+              {
+                "name": "feiyi_snake_body",
+                "maxDisplacement": 0.002625133761463909
+              },
+              {
+                "name": "feiyi_wing_0_l",
+                "maxDisplacement": 0.005489416424784149
+              },
+              {
+                "name": "feiyi_wing_0_r",
+                "maxDisplacement": 0.007373928139986434
+              },
+              {
+                "name": "feiyi_wing_1_l",
+                "maxDisplacement": 0.010987459936631366
+              },
+              {
+                "name": "feiyi_wing_1_r",
+                "maxDisplacement": 0.008831112042565831
+              }
+            ],
+            "freshSkeletons": true,
+            "freshBoneTextures": true
+          },
+          "walk": {
+            "invalid": 0,
+            "startTime": 0.5499999999999999,
+            "endTime": 0.9500000000000001,
+            "meshes": [
+              {
+                "name": "feiyi_leg_0_l",
+                "maxDisplacement": 0.03369049042899796
+              },
+              {
+                "name": "feiyi_leg_0_r",
+                "maxDisplacement": 0.12394929615393036
+              },
+              {
+                "name": "feiyi_leg_1_l",
+                "maxDisplacement": 0.09022791596707193
+              },
+              {
+                "name": "feiyi_leg_1_r",
+                "maxDisplacement": 0.03687825353097642
+              },
+              {
+                "name": "feiyi_leg_2_l",
+                "maxDisplacement": 0.03071802323123829
+              },
+              {
+                "name": "feiyi_leg_2_r",
+                "maxDisplacement": 0.12110236391109654
+              },
+              {
+                "name": "feiyi_snake_body",
+                "maxDisplacement": 0.014196603964728846
+              },
+              {
+                "name": "feiyi_wing_0_l",
+                "maxDisplacement": 0.02945323552372395
+              },
+              {
+                "name": "feiyi_wing_0_r",
+                "maxDisplacement": 0.02435655894841823
+              },
+              {
+                "name": "feiyi_wing_1_l",
+                "maxDisplacement": 0.028831321122194137
+              },
+              {
+                "name": "feiyi_wing_1_r",
+                "maxDisplacement": 0.03374197723131995
+              }
+            ],
+            "freshSkeletons": true,
+            "freshBoneTextures": true
+          },
+          "special": {
+            "invalid": 0,
+            "startTime": 0.55,
+            "endTime": 0.9503999998569488,
+            "meshes": [
+              {
+                "name": "feiyi_leg_0_l",
+                "maxDisplacement": 0.004681260384171825
+              },
+              {
+                "name": "feiyi_leg_0_r",
+                "maxDisplacement": 0.0048754696717677164
+              },
+              {
+                "name": "feiyi_leg_1_l",
+                "maxDisplacement": 0.006759677192067586
+              },
+              {
+                "name": "feiyi_leg_1_r",
+                "maxDisplacement": 0.008684444567781512
+              },
+              {
+                "name": "feiyi_leg_2_l",
+                "maxDisplacement": 0.008158646945250272
+              },
+              {
+                "name": "feiyi_leg_2_r",
+                "maxDisplacement": 0.007687637981859728
+              },
+              {
+                "name": "feiyi_snake_body",
+                "maxDisplacement": 0.03616671070376275
+              },
+              {
+                "name": "feiyi_wing_0_l",
+                "maxDisplacement": 0.06548073917164439
+              },
+              {
+                "name": "feiyi_wing_0_r",
+                "maxDisplacement": 0.1008530876151102
+              },
+              {
+                "name": "feiyi_wing_1_l",
+                "maxDisplacement": 0.12006072824689126
+              },
+              {
+                "name": "feiyi_wing_1_r",
+                "maxDisplacement": 0.11786923359454952
+              }
+            ],
+            "freshSkeletons": true,
+            "freshBoneTextures": true
+          }
+        },
+        "unmountedDelayedCalls": 0
+      },
+      {
+        "current": {
+          "nodes": 88,
+          "invalid": 0,
+          "meshes": 11,
+          "outlines": 11,
+          "bones": 63,
+          "body": 1,
+          "legs": 6,
+          "wings": 4,
+          "spine": 24,
+          "feet": {
+            "feiyi_leg_0_l": -0.00003473434178022372,
+            "feiyi_leg_0_r": -0.00003960923254855975,
+            "feiyi_leg_1_l": -0.000028007228355997338,
+            "feiyi_leg_1_r": -0.00003636303710080613,
+            "feiyi_leg_2_l": -0.00004528623202804116,
+            "feiyi_leg_2_r": -0.00004843940158102966
+          }
+        },
+        "cleanup": {
+          "textures": 11,
+          "textureDisposals": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "skeletons": 11,
+          "live": 0,
+          "materials": 22,
+          "materialDisposals": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "animations": {
+          "idle": {
+            "invalid": 0,
+            "startTime": 0.6437999999523163,
+            "endTime": 1.0445,
+            "meshes": [
+              {
+                "name": "feiyi_leg_0_l",
+                "maxDisplacement": 0.002584257794330694
+              },
+              {
+                "name": "feiyi_leg_0_r",
+                "maxDisplacement": 0.0025287767771641424
+              },
+              {
+                "name": "feiyi_leg_1_l",
+                "maxDisplacement": 0.002588180326265514
+              },
+              {
+                "name": "feiyi_leg_1_r",
+                "maxDisplacement": 0.0033375736714467844
+              },
+              {
+                "name": "feiyi_leg_2_l",
+                "maxDisplacement": 0.003704040383733889
+              },
+              {
+                "name": "feiyi_leg_2_r",
+                "maxDisplacement": 0.0037942961856380843
+              },
+              {
+                "name": "feiyi_snake_body",
+                "maxDisplacement": 0.002623023121116913
+              },
+              {
+                "name": "feiyi_wing_0_l",
+                "maxDisplacement": 0.005521270719083665
+              },
+              {
+                "name": "feiyi_wing_0_r",
+                "maxDisplacement": 0.007379744253905781
+              },
+              {
+                "name": "feiyi_wing_1_l",
+                "maxDisplacement": 0.010983529745619508
+              },
+              {
+                "name": "feiyi_wing_1_r",
+                "maxDisplacement": 0.008817063986730506
+              }
+            ],
+            "freshSkeletons": true,
+            "freshBoneTextures": true
+          },
+          "walk": {
+            "invalid": 0,
+            "startTime": 0.55,
+            "endTime": 0.9500000000000001,
+            "meshes": [
+              {
+                "name": "feiyi_leg_0_l",
+                "maxDisplacement": 0.03356079772391271
+              },
+              {
+                "name": "feiyi_leg_0_r",
+                "maxDisplacement": 0.12371951264167541
+              },
+              {
+                "name": "feiyi_leg_1_l",
+                "maxDisplacement": 0.09004839924791089
+              },
+              {
+                "name": "feiyi_leg_1_r",
+                "maxDisplacement": 0.036731889401220276
+              },
+              {
+                "name": "feiyi_leg_2_l",
+                "maxDisplacement": 0.030593823043974473
+              },
+              {
+                "name": "feiyi_leg_2_r",
+                "maxDisplacement": 0.12088682652517566
+              },
+              {
+                "name": "feiyi_snake_body",
+                "maxDisplacement": 0.014145827948469717
+              },
+              {
+                "name": "feiyi_wing_0_l",
+                "maxDisplacement": 0.029397964648440415
+              },
+              {
+                "name": "feiyi_wing_0_r",
+                "maxDisplacement": 0.024287853048242696
+              },
+              {
+                "name": "feiyi_wing_1_l",
+                "maxDisplacement": 0.028700860848568703
+              },
+              {
+                "name": "feiyi_wing_1_r",
+                "maxDisplacement": 0.03361858440349797
+              }
+            ],
+            "freshSkeletons": true,
+            "freshBoneTextures": true
+          },
+          "special": {
+            "invalid": 0,
+            "startTime": 0.5500000000000002,
+            "endTime": 0.95,
+            "meshes": [
+              {
+                "name": "feiyi_leg_0_l",
+                "maxDisplacement": 0.004674060889263674
+              },
+              {
+                "name": "feiyi_leg_0_r",
+                "maxDisplacement": 0.004867850069956981
+              },
+              {
+                "name": "feiyi_leg_1_l",
+                "maxDisplacement": 0.006749361693468177
+              },
+              {
+                "name": "feiyi_leg_1_r",
+                "maxDisplacement": 0.008670247793209053
+              },
+              {
+                "name": "feiyi_leg_2_l",
+                "maxDisplacement": 0.008143986962734648
+              },
+              {
+                "name": "feiyi_leg_2_r",
+                "maxDisplacement": 0.0076740023449144695
+              },
+              {
+                "name": "feiyi_snake_body",
+                "maxDisplacement": 0.03611753021358253
+              },
+              {
+                "name": "feiyi_wing_0_l",
+                "maxDisplacement": 0.06546187273233915
+              },
+              {
+                "name": "feiyi_wing_0_r",
+                "maxDisplacement": 0.10074699406865484
+              },
+              {
+                "name": "feiyi_wing_1_l",
+                "maxDisplacement": 0.11994863427943324
+              },
+              {
+                "name": "feiyi_wing_1_r",
+                "maxDisplacement": 0.11775743662879987
+              }
+            ],
+            "freshSkeletons": true,
+            "freshBoneTextures": true
+          }
+        },
+        "unmountedDelayedCalls": 0
+      },
+      {
+        "current": {
+          "nodes": 88,
+          "invalid": 0,
+          "meshes": 11,
+          "outlines": 11,
+          "bones": 63,
+          "body": 1,
+          "legs": 6,
+          "wings": 4,
+          "spine": 24,
+          "feet": {
+            "feiyi_leg_0_l": -0.00003473434464368319,
+            "feiyi_leg_0_r": -0.000039609235863963255,
+            "feiyi_leg_1_l": -0.000028007230840065844,
+            "feiyi_leg_1_r": -0.00003636304025281256,
+            "feiyi_leg_2_l": -0.00004528623569297063,
+            "feiyi_leg_2_r": -0.00004843940552967663
+          }
+        },
+        "cleanup": {
+          "textures": 11,
+          "textureDisposals": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "skeletons": 11,
+          "live": 0,
+          "materials": 22,
+          "materialDisposals": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "animations": {
+          "idle": {
+            "invalid": 0,
+            "startTime": 0.6489000000953676,
+            "endTime": 1.0489000000953679,
+            "meshes": [
+              {
+                "name": "feiyi_leg_0_l",
+                "maxDisplacement": 0.002590969828984713
+              },
+              {
+                "name": "feiyi_leg_0_r",
+                "maxDisplacement": 0.002534734694518528
+              },
+              {
+                "name": "feiyi_leg_1_l",
+                "maxDisplacement": 0.0025799741353249917
+              },
+              {
+                "name": "feiyi_leg_1_r",
+                "maxDisplacement": 0.0033327165796922646
+              },
+              {
+                "name": "feiyi_leg_2_l",
+                "maxDisplacement": 0.0037392206750666494
+              },
+              {
+                "name": "feiyi_leg_2_r",
+                "maxDisplacement": 0.0038220424136027505
+              },
+              {
+                "name": "feiyi_snake_body",
+                "maxDisplacement": 0.0026263933557314468
+              },
+              {
+                "name": "feiyi_wing_0_l",
+                "maxDisplacement": 0.005461299158640192
+              },
+              {
+                "name": "feiyi_wing_0_r",
+                "maxDisplacement": 0.0073674145058700066
+              },
+              {
+                "name": "feiyi_wing_1_l",
+                "maxDisplacement": 0.010988545230270434
+              },
+              {
+                "name": "feiyi_wing_1_r",
+                "maxDisplacement": 0.00884120113339151
+              }
+            ],
+            "freshSkeletons": true,
+            "freshBoneTextures": true
+          },
+          "walk": {
+            "invalid": 0,
+            "startTime": 0.5492999999523163,
+            "endTime": 0.9499000000953676,
+            "meshes": [
+              {
+                "name": "feiyi_leg_0_l",
+                "maxDisplacement": 0.0335608249504924
+              },
+              {
+                "name": "feiyi_leg_0_r",
+                "maxDisplacement": 0.12370370378287035
+              },
+              {
+                "name": "feiyi_leg_1_l",
+                "maxDisplacement": 0.09003884363226188
+              },
+              {
+                "name": "feiyi_leg_1_r",
+                "maxDisplacement": 0.036731585446830244
+              },
+              {
+                "name": "feiyi_leg_2_l",
+                "maxDisplacement": 0.030593646870685276
+              },
+              {
+                "name": "feiyi_leg_2_r",
+                "maxDisplacement": 0.12087176088975536
+              },
+              {
+                "name": "feiyi_snake_body",
+                "maxDisplacement": 0.014147127736875145
+              },
+              {
+                "name": "feiyi_wing_0_l",
+                "maxDisplacement": 0.02939214525271414
+              },
+              {
+                "name": "feiyi_wing_0_r",
+                "maxDisplacement": 0.024285594188815894
+              },
+              {
+                "name": "feiyi_wing_1_l",
+                "maxDisplacement": 0.028705411723013996
+              },
+              {
+                "name": "feiyi_wing_1_r",
+                "maxDisplacement": 0.033620284284476575
+              }
+            ],
+            "freshSkeletons": true,
+            "freshBoneTextures": true
+          },
+          "special": {
+            "invalid": 0,
+            "startTime": 0.55,
+            "endTime": 0.9486999998092653,
+            "meshes": [
+              {
+                "name": "feiyi_leg_0_l",
+                "maxDisplacement": 0.004658231996715317
+              },
+              {
+                "name": "feiyi_leg_0_r",
+                "maxDisplacement": 0.00485037579558514
+              },
+              {
+                "name": "feiyi_leg_1_l",
+                "maxDisplacement": 0.006739113510377962
+              },
+              {
+                "name": "feiyi_leg_1_r",
+                "maxDisplacement": 0.00864984371780655
+              },
+              {
+                "name": "feiyi_leg_2_l",
+                "maxDisplacement": 0.008115763357188973
+              },
+              {
+                "name": "feiyi_leg_2_r",
+                "maxDisplacement": 0.007647402287999403
+              },
+              {
+                "name": "feiyi_snake_body",
+                "maxDisplacement": 0.03602025905154347
+              },
+              {
+                "name": "feiyi_wing_0_l",
+                "maxDisplacement": 0.06553418539679579
+              },
+              {
+                "name": "feiyi_wing_0_r",
+                "maxDisplacement": 0.10076750589053186
+              },
+              {
+                "name": "feiyi_wing_1_l",
+                "maxDisplacement": 0.11994020978163826
+              },
+              {
+                "name": "feiyi_wing_1_r",
+                "maxDisplacement": 0.11774278246986031
+              }
+            ],
+            "freshSkeletons": true,
+            "freshBoneTextures": true
+          }
+        },
+        "unmountedDelayedCalls": 0
+      }
+    ],
+    "audio": {
+      "src": "http://localhost:5215/audio/narration/feiyi_snake.mp3",
+      "duration": 98.821188,
+      "currentTime": 1.675068,
+      "error": null,
+      "context": "running",
+      "decodedSeconds": 98.82120833333333,
+      "sampleRate": 48000,
+      "channels": 1,
+      "invalid": 0,
+      "decodedRMS": 0.0996998511233764,
+      "sfx": {
+        "peakRMS": 0.006302142448272997,
+        "context": "running"
+      },
+      "interruptedWingCalls": 0,
+      "specialReturn": "idle",
+      "mp3Bytes": 1581230,
+      "mp3Sha256": "86474a70313b8f7869806d5c4a865acc1bacfff8e00f9c98fc908504f891b3bf",
+      "narrationStopValidated": true
+    },
+    "font": {
+      "loaded": "loaded",
+      "check": true,
+      "preservedOriginal": true,
+      "family": "\"Shanhai Rare Han\", \"Songti SC\", \"Noto Serif SC\", STSong, SimSun, serif",
+      "path": "public/fonts/rare-han/ShanhaiRareHan-Regular.ttf",
+      "bytes": 16872,
+      "sha256": "a53d4be6528de8e4220ab6711af94d0f786bc530b1aeab584314d038ff15e901",
+      "platformFonts": [
+        {
+          "width": 390,
+          "fonts": [
+            {
+              "familyName": "Shanhai Rare Han",
+              "postScriptName": "ShanhaiRareHan-Regular",
+              "isCustomFont": true,
+              "glyphCount": 1
+            },
+            {
+              "familyName": "Songti SC",
+              "postScriptName": "STSongti-SC-Regular",
+              "isCustomFont": false,
+              "glyphCount": 73
+            }
+          ],
+          "glyph": {
+            "text": "𧔥",
+            "x": 75.6875,
+            "y": 175.15625,
+            "width": 20,
+            "height": 19.25
+          }
+        },
+        {
+          "width": 1440,
+          "fonts": [
+            {
+              "familyName": "Shanhai Rare Han",
+              "postScriptName": "ShanhaiRareHan-Regular",
+              "isCustomFont": true,
+              "glyphCount": 1
+            },
+            {
+              "familyName": "Songti SC",
+              "postScriptName": "STSongti-SC-Regular",
+              "isCustomFont": false,
+              "glyphCount": 73
+            }
+          ],
+          "glyph": {
+            "text": "𧔥",
+            "x": 214.0625,
+            "y": 271.71875,
+            "width": 22,
+            "height": 22.5625
+          }
+        }
+      ],
+      "subsetReproduction": "pipeline/fonts/subset-rare-han.py",
+      "externalPackagesInstalled": false
+    },
+    "cards": {
+      "widths": [
+        {
+          "width": 390,
+          "bounds": {
+            "card": {
+              "left": 16,
+              "right": 201.15625,
+              "top": 16,
+              "bottom": 340,
+              "hit": true
+            },
+            "title": {
+              "left": 155.71875,
+              "right": 188.71875,
+              "top": 29,
+              "bottom": 87.5625,
+              "hit": true
+            },
+            "button": {
+              "left": 159.21875,
+              "right": 185.21875,
+              "top": 129.5625,
+              "bottom": 173.46875,
+              "hit": true
+            },
+            "viewport": 390,
+            "scroll": 390
+          },
+          "playing": {
+            "time": 0.208752,
+            "paused": false,
+            "narrating": true
+          },
+          "stopped": true
+        },
+        {
+          "width": 800,
+          "bounds": {
+            "card": {
+              "left": 32,
+              "right": 344.65625,
+              "top": 28,
+              "bottom": 663,
+              "hit": true
+            },
+            "title": {
+              "left": 282.65625,
+              "right": 327.65625,
+              "top": 49,
+              "bottom": 127.09375,
+              "hit": true
+            },
+            "button": {
+              "left": 292.15625,
+              "right": 318.15625,
+              "top": 169.09375,
+              "bottom": 213,
+              "hit": true
+            },
+            "viewport": 800,
+            "scroll": 800
+          },
+          "playing": {
+            "time": 0.215481,
+            "paused": false,
+            "narrating": true
+          },
+          "stopped": true
+        }
+      ],
+      "knownPresentationLimit": "Existing shared 800px layout covers much of the model. At 390px the settled view shows the beast below the card; the early camera easing can clip the tail at the left edge. Narration controls remain visible and clickable at both widths."
+    },
+    "visualReview": "Parent Read inspected corrected body concept four views, runtime idle/walk/special, eight consecutive movement/display closeups, five unobstructed opposing views, head/wing-root/leg-root/dorsal details, 390/800 playing cards, and actual 390/1440 source glyph crops. Single snake head, complete scaled body and tapered tail, six articulated legs and four feather wings are visible. Gray umber reticulation and dark eyes remain readable after the offline palette correction. Sampled frames show attached roots, no evident stretching strands or detached appendages. The exact source glyph 𧔥 is visibly rendered; Chrome platform font evidence confirms one glyph from Shanhai Rare Han and the remaining source glyphs from Songti SC. Counts and numerical QA do not substitute for this image review.",
+    "images": [
+      {
+        "path": "/tmp/shanhai-check/feiyi-parent-idle.png",
+        "bytes": 918354,
+        "sha256": "243f6792933be3b28f59fa4ef0e302c24431bf34076e51df0e913d7486a16817"
+      },
+      {
+        "path": "/tmp/shanhai-check/feiyi-parent-walk.png",
+        "bytes": 921526,
+        "sha256": "c1cdc334836dd9305e0c8cdb3343a5dc6aef9311eb0af55ab95f5743bfd2ed54"
+      },
+      {
+        "path": "/tmp/shanhai-check/feiyi-parent-special.png",
+        "bytes": 924182,
+        "sha256": "dcc2beaa7cd9a91cdbcc1e35de370e13f726bfc2c0e6e1c7f6e07d98da32d3e9"
+      },
+      {
+        "path": "/tmp/shanhai-check/feiyi-parent-w0.png",
+        "bytes": 501479,
+        "sha256": "d43b8e55d6a5b836c6885cadc7f73c0dd3e7dd1ccea2877ef411f4ff64013410"
+      },
+      {
+        "path": "/tmp/shanhai-check/feiyi-parent-s0.png",
+        "bytes": 502576,
+        "sha256": "9f4ec18801f729376a6395648f94ac3801a39b55b3b48bf998675d550b621bfc"
+      },
+      {
+        "path": "/tmp/shanhai-check/feiyi-parent-w1.png",
+        "bytes": 502210,
+        "sha256": "f918738eadf478fa82293711a5a08b34fb780e368e017ec67f018692b3e6aa10"
+      },
+      {
+        "path": "/tmp/shanhai-check/feiyi-parent-s1.png",
+        "bytes": 506326,
+        "sha256": "65aa90c46ed9672c83d0008052a44e08732c8882b6a929fa74492d7de545cfa5"
+      },
+      {
+        "path": "/tmp/shanhai-check/feiyi-parent-w2.png",
+        "bytes": 504039,
+        "sha256": "e22278d11ef4c1c2c068bf3c183b8a08714bd5bb7286d7151569e28ffe6e5df6"
+      },
+      {
+        "path": "/tmp/shanhai-check/feiyi-parent-s2.png",
+        "bytes": 504695,
+        "sha256": "760a4ade8b8e915984786c8cff4ed91ac251c24a8668a4ccc6002de6980aacff"
+      },
+      {
+        "path": "/tmp/shanhai-check/feiyi-parent-w3.png",
+        "bytes": 504468,
+        "sha256": "b05dcf95db26a763c7931e7160e6c007cb6e4d2b560bfd8aaf956d7f73b34aba"
+      },
+      {
+        "path": "/tmp/shanhai-check/feiyi-parent-s3.png",
+        "bytes": 503690,
+        "sha256": "f90523d27a23f7ed4d69d9013fa3afbc84b3ee9e3fe2ed997e1990e2f5c6cee1"
+      },
+      {
+        "path": "/tmp/feiyi-parent-final-qa/angle-front.png",
+        "bytes": 869209,
+        "sha256": "e8f2ae173e701614a23475f139cf386e6dba2fa8f573f276d0b668eeeec76b2a"
+      },
+      {
+        "path": "/tmp/feiyi-parent-final-qa/angle-back.png",
+        "bytes": 868593,
+        "sha256": "dd00a9616b9946f9ec40e62055f941ca36ab58893e5c554286a5f5e0d796ef84"
+      },
+      {
+        "path": "/tmp/feiyi-parent-final-qa/angle-left.png",
+        "bytes": 865203,
+        "sha256": "9066d4215f957fa07ec5ca24e02b6e957f8cbd3ddde335ffcc774f3555a5fa46"
+      },
+      {
+        "path": "/tmp/feiyi-parent-final-qa/angle-right.png",
+        "bytes": 853699,
+        "sha256": "3cd1ba846651a5d887776c001ad5263eb3cf2d56d9d8bb14793c20757e76c494"
+      },
+      {
+        "path": "/tmp/feiyi-parent-final-qa/angle-dorsal.png",
+        "bytes": 917546,
+        "sha256": "0d7ee7397a118839960ac93c5e3753fc868a2f2404f17e92632cac68b1748c65"
+      },
+      {
+        "path": "/tmp/feiyi-parent-details/head.png",
+        "bytes": 943533,
+        "sha256": "fe10f8174cea196b3992efb21e48cb5966c9d6e623f63c91b886e42507e8ad2f"
+      },
+      {
+        "path": "/tmp/feiyi-parent-details/wing-roots.png",
+        "bytes": 1067975,
+        "sha256": "15e4081258be4eedcce13bcea868ede4a76b20589f2eb1b06a299a8d52a0f896"
+      },
+      {
+        "path": "/tmp/feiyi-parent-details/leg-roots.png",
+        "bytes": 969499,
+        "sha256": "98d36d39d7fee147daa94f21ceecab08ad3a095fdc310c98cbed2fb5057b9956"
+      },
+      {
+        "path": "/tmp/feiyi-parent-details/dorsal.png",
+        "bytes": 997356,
+        "sha256": "1d099c23efd5c08700d3e43f23b7efb4894fc810daa7401a0316d476ea7a7a30"
+      },
+      {
+        "path": "/tmp/feiyi-parent-details/card-390.png",
+        "bytes": 278718,
+        "sha256": "0f9ab5c149aafc95e3851a143b8daeee394a3cf451d50c246d60b83d63eb5b2e"
+      },
+      {
+        "path": "/tmp/feiyi-parent-details/glyph-390.png",
+        "bytes": 1918,
+        "sha256": "d9e59789d57d849f9c31fd319a39bbc6bbe98aa2ead16a6646a4706690fc081a"
+      },
+      {
+        "path": "/tmp/feiyi-parent-details/card-1440.png",
+        "bytes": 916847,
+        "sha256": "6dc1530ec6bfa911871dd8a5125a262846925ef4c6bd85875da77d496c5bc3bd"
+      },
+      {
+        "path": "/tmp/feiyi-parent-details/glyph-1440.png",
+        "bytes": 1799,
+        "sha256": "a7ca9eaa4924e2b5ee99e2bb7b7dc1de679d94be24d03e03e724a1bf1ec9d193"
+      },
+      {
+        "path": "/tmp/feiyi-parent-card/390-playing.png",
+        "bytes": 278783,
+        "sha256": "4aa3fc9fa8e5061a19c27e937b7d314f000c41c1b82de24e4423a0a70ebe9e4b"
+      },
+      {
+        "path": "/tmp/feiyi-parent-card/800-playing.png",
+        "bytes": 481352,
+        "sha256": "821b7955df2930d660e370d8748b302fe197bec4972078486de06805103ea0e4"
+      }
+    ],
+    "errors": []
+  }
+}

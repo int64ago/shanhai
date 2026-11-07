@@ -1,0 +1,25 @@
+Shanhai Rare Han Regular
+
+This font is a modified subset of BabelStone Han, distributed under the
+Arphic Public License. The unaltered license is provided in ARPHICPL.TXT.
+Original copyright notices are retained in the font's name table.
+
+Modified on 2026-11-08 for Shanhai World:
+- Retained only U+27525 (𧔥), .notdef, and recursive component dependencies.
+- Rebuilt glyph indices, metrics, Unicode character mapping, offsets and checksums.
+- Renamed family and related names to Shanhai Rare Han / ShanhaiRareHan-Regular.
+- Removed unused layout tables. Original glyph outlines and hint programs remain.
+
+The complete modified font is freely available under the same Arphic Public
+License. No additional restrictions are imposed on copying or modification.
+
+Original source:
+https://www.babelstone.co.uk/Fonts/Download/BabelStoneHan.ttf
+Downloaded source: 51,971,284 bytes
+SHA256: d8bb747b3fdccd84a60bd0aa56bb90937270d0bd15f1101cd8f2a5a3709dd0a3
+
+Modified subset: 16,872 bytes
+SHA256: a53d4be6528de8e4220ab6711af94d0f786bc530b1aeab584314d038ff15e901
+
+Reproduction uses subset-rare-han.py with Python's standard library:
+python3 -I subset-rare-han.py ORIGINAL.ttf ARPHICPL.TXT ShanhaiRareHan-Regular.ttf --text 𧔥 --date 2026-11-08

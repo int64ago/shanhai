@@ -1,0 +1,20 @@
+{
+  "id": "feiyi_snake-wing-high",
+  "beast": "feiyi_snake",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "One single isolated complete feathered wing, preserve the same organic shoulder root, elbow, wrist, layered coverts and distinct tapered primary flight feathers in all four reference views. Retain warm grey brown coverts, pale stone feathers and dark umber tips. No torso, no second wing, no extra limbs, no pedestal. Fine quills and crisp overlapping feathers, natural muted finish.",
+  "images": [
+    "concept/feiyi_snake/wing/view_34.png",
+    "concept/feiyi_snake/wing/view_side.png",
+    "concept/feiyi_snake/wing/view_front.png",
+    "concept/feiyi_snake/wing/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack",
+    "seed": 48243
+  }
+}
