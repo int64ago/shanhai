@@ -796,6 +796,55 @@ class AudioEngine {
     }
   }
 
+  /** 《中山经》未记朏朏鸣声；轻柔呼噜与一声短咪是据「状如狸」「已忧」的听觉演绎。 */
+  feifeiCall(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const t = ctx.currentTime
+    const duration = 2.6
+    const out = this.panner(pan)
+    out.connect(this.sfx)
+
+    const purr = ctx.createOscillator()
+    purr.type = 'triangle'
+    purr.frequency.setValueAtTime(58, t)
+    purr.frequency.linearRampToValueAtTime(52, t + duration)
+    const filter = ctx.createBiquadFilter()
+    filter.type = 'lowpass'
+    filter.frequency.value = 420
+    const flutter = ctx.createGain()
+    flutter.gain.value = 0.5
+    const rate = ctx.createOscillator()
+    rate.frequency.value = 23
+    const depth = ctx.createGain()
+    depth.gain.value = 0.5
+    rate.connect(depth).connect(flutter.gain)
+    const envelope = ctx.createGain()
+    envelope.gain.setValueAtTime(0, t)
+    envelope.gain.linearRampToValueAtTime(0.3, t + 0.5)
+    envelope.gain.setValueAtTime(0.3, t + duration - 0.9)
+    envelope.gain.exponentialRampToValueAtTime(0.0005, t + duration)
+    purr.connect(filter).connect(flutter).connect(envelope).connect(out)
+    purr.start(t)
+    rate.start(t)
+    purr.stop(t + duration + 0.03)
+    rate.stop(t + duration + 0.03)
+
+    const mew = ctx.createOscillator()
+    mew.type = 'sine'
+    const start = t + 0.28
+    mew.frequency.setValueAtTime(620, start)
+    mew.frequency.exponentialRampToValueAtTime(860, start + 0.12)
+    mew.frequency.exponentialRampToValueAtTime(540, start + 0.46)
+    const gain = ctx.createGain()
+    gain.gain.setValueAtTime(0, start)
+    gain.gain.linearRampToValueAtTime(0.07, start + 0.06)
+    gain.gain.exponentialRampToValueAtTime(0.0005, start + 0.5)
+    mew.connect(gain).connect(out)
+    mew.start(start)
+    mew.stop(start + 0.53)
+  }
+
   /** 《海内北经》未记穷奇鸣声；低沉虎啸与气声为「状如虎」的交互艺术补足。 */
   qiongqiCall(pan = 0) {
     const ctx = this.ctx

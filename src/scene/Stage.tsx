@@ -17,6 +17,7 @@ import { Dijiang } from '../beasts/dijiang/Dijiang'
 import { Bo } from '../beasts/bo/Bo'
 import { Bifang } from '../beasts/bifang/Bifang'
 import { Lushu } from '../beasts/lushu/Lushu'
+import { Feifei } from '../beasts/feifei/Feifei'
 import { Fuzhu } from '../beasts/fuzhu/Fuzhu'
 import { Dangkang } from '../beasts/dangkang/Dangkang'
 import { Zheng } from '../beasts/zheng/Zheng'
@@ -71,6 +72,8 @@ export function Stage() {
           <Zheng />
         ) : selected === 'tiangou' ? (
           <Tiangou />
+        ) : selected === 'feifei' ? (
+          <Feifei />
         ) : selected === 'qiongqi' ? (
           <Qiongqi />
         ) : selected === 'taotie' ? (

@@ -53,3 +53,7 @@
 {"time":"2026-11-06T16:29:22.841Z","beast":"bibi","job":"bibi-body-max","hash":"f3831fc55f2218fe","tier":"Gen-2.5-Extreme-High","uuid":"e108c43e-ddb0-4590-8926-914f03499c55","consumed":1}
 {"time":"2026-11-06T16:23:14.676Z","beast":"lili","job":"lili-body-v1","hash":"44dc4fc0851ec6c5","tier":"Gen-2.5-Medium","uuid":"3ff2a8cb-6b9e-4f94-85ba-28de95c558ca","consumed":0.5}
 {"time":"2026-11-06T16:28:57.230Z","beast":"lili","job":"lili-body-max","hash":"316bbbba4299a2f3","tier":"Gen-2.5-Extreme-High","uuid":"50a86886-6239-477e-97d1-a5704447a60c","consumed":1}
+{"time":"2026-11-06T16:22:33.370Z","beast":"feifei","job":"feifei-body-v1","hash":"0969bbacabaacd5e","tier":"Gen-2.5-Medium","uuid":"e5ea8737-d629-4483-89e9-5b8864f9674a","consumed":0.5}
+{"time":"2026-11-06T16:27:46.066Z","beast":"feifei","job":"feifei-tail-v1","hash":"f40125483a6d7703","tier":"Gen-2.5-Medium","uuid":"771010aa-6f3d-4e0c-b07d-9db8755edf4a","consumed":0.5}
+{"time":"2026-11-06T16:33:53.526Z","beast":"feifei","job":"feifei-body-max","hash":"8a1ade6b729fa123","tier":"Gen-2.5-Extreme-High","uuid":"9ec4b42f-de50-46b2-b6c7-f04995c7cbee","consumed":1}
+{"time":"2026-11-06T16:34:14.741Z","beast":"feifei","job":"feifei-tail-max","hash":"2d906de37fd01c76","tier":"Gen-2.5-Extreme-High","uuid":"f2c43b13-9813-40ca-8877-fc0f807ba1ad","consumed":1}

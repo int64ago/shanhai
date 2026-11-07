@@ -1,0 +1,9 @@
+{
+  "id": "feifei-body-max",
+  "beast": "feifei",
+  "budget": 4,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Feifei mythical wildcat from Shan Hai Jing, preserve reference anatomy, one cat head with two upright ears, warm tawny ochre fur with faint dark spots, thick dark umber mane of tufted hair covering the back and sides of the neck from behind the ears to the shoulders and joining the throat ruff, four distinct straight standing legs with cat paws flat on ground, rounded rump with no tail, tail removed, neutral standing pose, no pedestal",
+  "images": ["concept/feifei/view_34.png", "concept/feifei/view_side.png", "concept/feifei/view_front.png", "concept/feifei/view_back.png"],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000 }
+}

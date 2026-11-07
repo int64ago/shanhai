@@ -1,0 +1,8 @@
+{
+  "id": "feifei-body-v1",
+  "beast": "feifei",
+  "budget": 4,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "Feifei mythical wildcat from Shan Hai Jing, realistic small adult wild cat, lean natural feline body like a leopard cat, one rounded cat head with two upright ears and dark eyes, warm tawny ochre short fur with faint dark spots, a distinct thick dark umber neck mane of long stiff tufted hair running along the back of the neck from behind the ears down to the shoulders, like a horse mane ridge, level back, standing tall on FOUR separate straight legs with four cat paws firmly on ground, neutral symmetric standing pose facing forward, ONE long pure white cat tail extending straight out behind the rump and clearly separated from the hind legs, clean full body, no pedestal, no decorations",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}
