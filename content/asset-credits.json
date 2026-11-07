@@ -32,6 +32,26 @@
       "license": "沿用项目百炼 CosyVoice 合成音频条款"
     },
     {
+      "path": "public/models/boyi/body.glb",
+      "source": "仅离线改制既有 HIGH 羊形母件：raw/taotie-body-max/base_basic_pbr.glb，50,000 三角面；原任务 taotie-body-max，Gen-2.5-Extreme-High，uuid 6105bc16-e06d-4419-a096-db4cccf5e44b，已载于 pipeline/rodin/credits.log（2026-11-06T14:40:47.361Z）。文件虽名 basic，已核对 HIGH 任务与几何；未使用 Medium，未提交新的生成事务。裁掉原生短尾、头颈截面突出部分及扁平畸形踝桩，清除裁切孤岛，保留 21,622 面的 HIGH 躯干与上肢，再与新胸部和四条下肢离线体素融合，连续羊躯为 357,428 面，投回原 HIGH 毛皮 UV。另雕刻无角且无面部眼睛的羊首、四耳、四足分蹄、恰好九尾及两只背目，绑定独立 98 骨与 idle/walk/special；最终 489,256 三角面，meshopt/WebP 压缩不减面。重建脚本：pipeline/blender/prepare_boyi.py、rig_boyi.py。",
+      "sourceSha256": "9bdd299ed4cac498e39f422c7850884e826c5de0fb87d29cb75502d7d8463c24",
+      "sourceReference": "https://zh.wikisource.org/wiki/山海經/南山經 · 南山經之首 · 基山。原文其狀如羊、九尾四耳、其目在背、佩之不畏；背目数量、无角、毛色、耳尾形状及羊鸣均在 inferred 中明确标出。佩之不畏不是主动攻击法术。",
+      "author": "项目自有 HIGH AI 生成羊躯与离线程序雕刻",
+      "license": "Hyper3D Rodin 生成输出（沿用项目既有源资产条款）；新增离线雕刻与绑定为项目自制"
+    },
+    {
+      "path": "concept/boyi/view_{34,side,front,back,left}.png",
+      "source": "由最终离线猼訑雕刻在 Blender 中独立渲染，非生成服务输出；正、背、双侧与三分之四视图核查四耳九尾、背目、无角羊首、原生尾清理及分蹄接地。",
+      "author": "项目自制",
+      "license": "沿用猼訑模型授权"
+    },
+    {
+      "path": "public/audio/narration/boyi.mp3",
+      "source": "pipeline/tts/narrate.ts，阿里云百炼 CosyVoice cosyvoice-v2 / longsanshu，按最终校订的 src/app/beasts.ts 猼訑解说词重新合成，MP3 单声道 22050 Hz，56.842437 秒。",
+      "author": "项目撰稿与 CosyVoice 合成",
+      "license": "沿用项目既有 CosyVoice 合成输出条款"
+    },
+    {
       "path": "public/models/ershu/body.glb",
       "source": "仅离线改制既有 HIGH 鹿形母件：raw/fuzhu-body-max/base_basic_pbr.glb，50,000 三角面；原任务 fuzhu-body-max，Gen-2.5-Extreme-High，uuid 7b95334a-3520-475f-8134-301186bc8405，已载于 pipeline/rodin/credits.log（2026-11-01）。文件虽名 basic，几何确为该 HIGH 任务输出；未使用 Medium，未提交新的 Rodin 事务。保留鹿躯与四足的 39,635 三角面，去除原鹿首、四角与短尾，离线雕刻兔首、双长耳、颊须和单条渐细环纹鼠形尾，独立绑定 32 骨及 idle/walk/special；最终 104,575 三角面，不减面压缩。重建脚本：pipeline/blender/prepare_ershu.py、rig_ershu.py。",
       "sourceSha256": "9285fa2aa47dd1e949f403a1a89b71c954cf24a337512fc40619742f4a243344",

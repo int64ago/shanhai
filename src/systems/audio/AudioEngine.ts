@@ -756,6 +756,42 @@ class AudioEngine {
     }
   }
 
+  /** 猼訑原文未记声音；据羊形补一声轻柔颤音羊鸣，非原文记载。 */
+  boyiCall(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const t = ctx.currentTime
+    const duration = 0.82
+    const voice = ctx.createOscillator()
+    voice.type = 'sawtooth'
+    voice.frequency.setValueAtTime(245, t)
+    voice.frequency.exponentialRampToValueAtTime(180, t + duration)
+    const vibrato = ctx.createOscillator()
+    vibrato.frequency.value = 13
+    const depth = ctx.createGain()
+    depth.gain.value = 16
+    vibrato.connect(depth).connect(voice.frequency)
+    const filter = ctx.createBiquadFilter()
+    filter.type = 'bandpass'
+    filter.frequency.setValueAtTime(1250, t)
+    filter.frequency.exponentialRampToValueAtTime(850, t + duration)
+    filter.Q.value = 1.3
+    const envelope = ctx.createGain()
+    envelope.gain.setValueAtTime(0, t)
+    envelope.gain.linearRampToValueAtTime(0.20, t + 0.07)
+    envelope.gain.exponentialRampToValueAtTime(0.001, t + duration)
+    const out = this.panner(pan)
+    voice.connect(filter).connect(envelope).connect(out).connect(this.sfx)
+    voice.start(t)
+    vibrato.start(t)
+    voice.stop(t + duration + 0.02)
+    vibrato.stop(t + duration + 0.02)
+    voice.onended = () => {
+      voice.disconnect(); vibrato.disconnect(); depth.disconnect()
+      filter.disconnect(); envelope.disconnect(); out.disconnect()
+    }
+  }
+
   /** 耳鼠「其音如獆犬」：两声短吠，音高与节奏为听觉演绎。 */
   ershuCall(pan = 0) {
     const ctx = this.ctx
