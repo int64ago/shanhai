@@ -1,0 +1,8 @@
+{
+  "id": "bibi-body-v1",
+  "beast": "bibi",
+  "budget": 6,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "Bibi mythical beast body from Shan Hai Jing, a realistic adult FOX, slender elegant build, warm muted russet ochre short dense fur, pale cream chest and throat, dark sepia lower legs, pointed upright ears, narrow fox muzzle, one fox head held forward, long level back, hind legs extended not crouching, FOUR separate straight standing legs with four paws on ground, only a very short tail stub, wings REMOVED smooth bare shoulders for modular wing attachment, NO WINGS, no long tail, no horns, no markings on forehead, no armor, no base, full body",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

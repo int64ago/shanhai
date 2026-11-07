@@ -26,6 +26,7 @@ import { Taotie } from '../beasts/taotie/Taotie'
 import { Luwu } from '../beasts/luwu/Luwu'
 import { Kaiming } from '../beasts/kaiming/Kaiming'
 import { Mengji } from '../beasts/mengji/Mengji'
+import { Bibi } from '../beasts/bibi/Bibi'
 import { CameraRig } from './CameraRig'
 
 export function Stage() {
@@ -79,6 +80,8 @@ export function Stage() {
           <Kaiming />
         ) : selected === 'mengji' ? (
           <Mengji />
+        ) : selected === 'bibi' ? (
+          <Bibi />
         ) : (
           <PlaceholderBeast />
         )}

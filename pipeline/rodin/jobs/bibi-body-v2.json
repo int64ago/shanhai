@@ -1,0 +1,8 @@
+{
+  "id": "bibi-body-v2",
+  "beast": "bibi",
+  "budget": 6,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "a single realistic adult red fox, one animal with exactly one head, standing tall and alert on four straight legs, slim narrow body, back level and horizontal, hind legs extended not crouching, chest lifted, head facing straight forward in line with the spine, russet ochre fur, pale cream chest and throat, dark sepia lower legs, only a very short tail stub, smooth shoulders, full body side view, photorealistic",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

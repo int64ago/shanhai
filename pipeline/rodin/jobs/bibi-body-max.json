@@ -1,0 +1,9 @@
+{
+  "id": "bibi-body-max",
+  "beast": "bibi",
+  "budget": 6,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "a single realistic adult red fox, preserve reference proportions, exactly one head facing straight forward, russet ochre fur, pale cream chest and throat, dark sepia lower legs, four separate standing legs with all four paws grounded, level back, one natural bushy fox tail hanging behind with a pale tip, smooth bare shoulders for modular wings, NO WINGS, no horns, no accessories, no base",
+  "images": ["concept/bibi/view_34.png", "concept/bibi/view_side.png", "concept/bibi/view_front.png", "concept/bibi/view_back.png"],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000 }
+}

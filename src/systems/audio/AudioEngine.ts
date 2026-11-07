@@ -902,6 +902,42 @@ class AudioEngine {
     }
   }
 
+  /** 獙獙「其音如鸿雁」：三声上扬的鼻音雁鸣；声数、音高与共振峰为听感推断，不使用真实录音。 */
+  bibiCall(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const out = this.panner(pan)
+    out.connect(this.sfx)
+    for (const [offset, duration, hz] of [[0, 0.34, 340], [0.46, 0.34, 390], [0.95, 0.6, 360]]) {
+      const t = ctx.currentTime + offset
+      const voice = ctx.createOscillator()
+      voice.type = 'sawtooth'
+      // 雁鸣的「嘎-昂」：起音陡升后略回落，尾音下滑。
+      voice.frequency.setValueAtTime(hz * 0.72, t)
+      voice.frequency.exponentialRampToValueAtTime(hz * 1.18, t + 0.07)
+      voice.frequency.linearRampToValueAtTime(hz, t + duration * 0.6)
+      voice.frequency.exponentialRampToValueAtTime(hz * 0.8, t + duration)
+      const envelope = ctx.createGain()
+      envelope.gain.setValueAtTime(0, t)
+      envelope.gain.linearRampToValueAtTime(0.26, t + 0.03)
+      envelope.gain.linearRampToValueAtTime(0.18, t + duration * 0.6)
+      envelope.gain.exponentialRampToValueAtTime(0.001, t + duration)
+      envelope.connect(out)
+      // 窄高共振峰带出禽类鸣管的鼻音，有别于走兽的胸腔低频。
+      for (const [frequency, level] of [[950, 1], [1900, 0.7], [3100, 0.25]]) {
+        const filter = ctx.createBiquadFilter()
+        filter.type = 'bandpass'
+        filter.frequency.value = frequency
+        filter.Q.value = 3.2
+        const gain = ctx.createGain()
+        gain.gain.value = level
+        voice.connect(filter).connect(gain).connect(envelope)
+      }
+      voice.start(t)
+      voice.stop(t + duration + 0.03)
+    }
+  }
+
   private noiseCache = new Map<number, AudioBuffer>()
 
   private noise(seconds: number) {
