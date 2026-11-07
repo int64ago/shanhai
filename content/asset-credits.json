@@ -114,6 +114,18 @@
       "license": "Hyper3D Rodin生成输出（沿用项目既有源资产条款）；新增牙鬃为项目原创"
     },
     {
+      "path": "public/models/jinwu/body.glb",
+      "source": "Offline corvid adaptation of verified jingwei-body-max, Gen-2.5-Extreme-High; UUID 3954a021-1bf6-4764-9355-00eaad9c4dd6, 50,000 raw / 49,902 cleaned triangles. Shortened thicker bill, forward breast, lower legs/neck, broader raised tail and charcoal repaint. Own 19-bone, two-foot contact-preserving rig. Hashes and inference in content/beasts/jinwu.json; zero new Rodin transactions/credits.",
+      "author": "项目自有 AI 高模离线改制、原创动作与设色",
+      "license": "沿用项目既有 Hyper3D Rodin 输出条款"
+    },
+    {
+      "path": "public/audio/narration/jinwu.mp3",
+      "source": "Original corrected narration distinguishes 大荒东经载日乌 and 大荒南经羲和生十日 as separate passages; pipeline/tts/narrate.ts, CosyVoice v2 / longsanshu, MP3 22050 Hz.",
+      "author": "项目原创解说词；百炼龙三叔合成",
+      "license": "沿用项目既有百炼语音输出条款"
+    },
+    {
       "path": "public/models/_placeholder/fox.glb",
       "source": "Hyper3D Rodin Gen-2.5 Extreme-Low（pipeline/rodin/jobs/m1-placeholder-fox.json）",
       "author": "AI 生成",

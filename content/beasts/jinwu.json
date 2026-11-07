@@ -1,0 +1,53 @@
+{
+  "id": "jinwu",
+  "name": "金乌",
+  "archetype": "avian",
+  "source": [
+    {"book": "山海经·大荒东经", "text": "湯谷上有扶木。一日方至，一日方出，皆載于烏。"},
+    {"book": "山海经·大荒南经", "text": "東南海之外，甘水之間，有羲和之國。有女子名曰羲和，方浴日於甘淵。羲和者，帝俊之妻，生十日。"}
+  ],
+  "inferred": [
+    {"item": "金乌为沿用通称", "basis": "目录沿用传统通称金乌；所引大荒东经此段只写乌，没有金乌专名、金色或三足。名称不能反推本段明记三足金色。"},
+    {"item": "双足乌形与具体鸟体比例", "basis": "据正文乌作乌鸟形；本段未记足数、趾数、喙形、胸颈和羽翼比例。双足、稍厚的短直喙、较低腿位、前倾胸颈和略宽的楔形尾羽均为设计选择，不把三足写入 source。"},
+    {"item": "墨黑青灰羽色、深灰喙足与黑褐眼", "basis": "本段没有细部配色或金色记录；墨黑羽面、青灰层次、喙足和眼色全部为艺术设色，未加日冕或火羽。"},
+    {"item": "地面缓步与双足支撑舒翼", "basis": "载日是正文描述，具体步态、呼吸、低头、尾羽摆动及双足着地的舒翼展示为交互演绎；不将这些动作或起落方式冒作原文。"},
+    {"item": "两声合成短鸣", "basis": "所引两段均未记乌的鸣声；短鸣的声色、频率、节奏和空间位置为艺术补足。"}
+  ],
+  "sourceVerification": {
+    "checked": "2026-11-07",
+    "eastUrl": "https://zh.wikisource.org/wiki/山海經/大荒東經",
+    "southUrl": "https://zh.wikisource.org/wiki/山海經/大荒南經",
+    "eastContextBefore": "大荒之中，有山名曰孽搖頵羝，上有扶木，柱三百里，其葉如芥。有谷曰溫源谷。",
+    "note": "逐字核对 action=raw 底本文字，去除注释。载日乌据大荒东经；羲和生十日另据大荒南经独立列引，不拼成连续段落，也不沿用旧目录误标的海外东经。站点大荒东经开头另置带袁珂移文校注的羲和段，本项不以该移文拼接载日段。三足及金色不见于所引正文。"
+  },
+  "parentAudit": {
+    "checked": "2026-11-07",
+    "source": "父独立复核大荒东经载乌与大荒南经羲和段，分条引用；三足与金色不移入正文。",
+    "lifecycle": "effect安装自有水墨材质与描边，cleanup移除并释放、恢复缓存scene原材质；3次切走切回恒23节点、1表面、1描边、1根，未累积。",
+    "support": "真实useFrame 60Hz推进；每足从实际蒙皮足底选三个非共线点，场景updateMatrixWorld后更新骨矩阵。idle/special各252帧、walk384帧，略过前20帧混合；maxXYZ分别0.171872/0.227756/0.068137毫米，最大yaw变化0.003381度。",
+    "playback": "实际按钮播放63.111813秒解说，currentTime推进、无媒体错误、停止成功；真实短鸣SFX RMS 0.016039，special返回idle，无console/pageerror。",
+    "visual": "父已检查四面concept、静/行/神通全景与行走及舒翼连续各三帧、收起解说截图；无移动硬件性能基准。",
+    "script": "scripts/qa-jinwu.mjs"
+  },
+  "production": {
+    "newRodinTransactions": 0,
+    "newRodinCredits": 0,
+    "master": {
+      "job": "jingwei-body-max",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "3954a021-1bf6-4764-9355-00eaad9c4dd6",
+      "raw": ".claude/worktrees/agent-a00529b201e8b3873/raw/jingwei-body-max/base_high_pbr.glb",
+      "rawSha256": "fefde14bf4e80074c368eb8bea4ce373b3f03db24890517ae7f83eaf54175319",
+      "rawTriangles": 50000,
+      "normalized": ".claude/worktrees/agent-a00529b201e8b3873/raw/_build/jingwei/body_norm.glb",
+      "normalizedSha256": "ab687f14f5eeaa30ee656338a9173df1fc2ad221e382f346952c22bafd32018b",
+      "normalizedTriangles": 49902,
+      "audit": "Reuse of the already audited master: credits.log Extreme-High UUID, raw SHA256 and actual 50,000 raw triangles; cleaned normalized master rechecked byte hash and 49,902 triangles. Read-only source. No new generation, Medium, remeshing or simplification."
+    },
+    "adaptation": "Original dense bird surfaces and feather UV detail retained. Thicker shortened corvid bill, fuller forward breast, shorter lower legs/neck, slightly narrower wing span and broader raised wedge tail distinguish the shape. Charcoal repaint removes inherited white bill/red feet/brow contrast. Positive transformations only; guarded numerical-Jacobian inverse-transpose corrects original corner normals, never computeVertexNormals. Native two legs/toes retained and individually leveled before binding. No new geometric parts are claimed HIGH.",
+    "rig": "Own 19-bone two-foot bird rig with independent sagittal foot-contact IK and counter-rotated rigid soles. Original idle 4s, walk 1.6s at 0.12 units/s / 0.70 stance duty, grounded alert 4.6s. Runtime travel is straight with no continuous support yaw; special maps to alert and returns idle. 120 Hz LINEAR samples are preserved with --resample false.",
+    "scripts": ["pipeline/blender/prepare_jinwu.py", "pipeline/blender/rig_jinwu.py"],
+    "compression": "gltf-transform optimize --simplify false --flatten false --join false --instance false --palette false --resample false --texture-compress webp --texture-size 2048 --compress meshopt",
+    "narration": {"pipeline": "pipeline/tts/narrate.ts", "model": "cosyvoice-v2", "voice": "longsanshu", "format": "mp3", "sampleRate": 22050}
+  }
+}

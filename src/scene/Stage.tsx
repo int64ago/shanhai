@@ -48,6 +48,7 @@ import { Tongtong } from '../beasts/tongtong/Tongtong'
 import { Fenghuang } from '../beasts/fenghuang/Fenghuang'
 import { Fengxi } from '../beasts/fengxi/Fengxi'
 import { ScreenPeng } from '../beasts/screen_peng/ScreenPeng'
+import { Jinwu } from '../beasts/jinwu/Jinwu'
 import { CameraRig } from './CameraRig'
 
 export function Stage() {
@@ -145,6 +146,8 @@ export function Stage() {
           <Fengxi />
         ) : selected === 'screen_peng' ? (
           <ScreenPeng />
+        ) : selected === 'jinwu' ? (
+          <Jinwu />
         ) : (
           <PlaceholderBeast />
         )}

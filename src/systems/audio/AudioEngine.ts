@@ -1100,6 +1100,35 @@ class AudioEngine {
     }
   }
 
+  /** 汤谷载日乌的两声短鸣；正文未记鸣声，具体声色为艺术演绎。 */
+  jinwuCall() {
+    const ctx = this.ctx
+    if (!ctx) return
+    for (const [i, pitch] of [255, 225].entries()) {
+      const t = ctx.currentTime + i * 0.48
+      const out = this.panner(i === 0 ? -0.12 : 0.12)
+      out.connect(this.sfx)
+      const voice = ctx.createOscillator()
+      voice.type = 'sawtooth'
+      voice.frequency.setValueAtTime(pitch * 1.12, t)
+      voice.frequency.exponentialRampToValueAtTime(pitch, t + 0.075)
+      voice.frequency.exponentialRampToValueAtTime(pitch * 0.78, t + 0.30)
+      const tone = ctx.createBiquadFilter()
+      tone.type = 'bandpass'
+      tone.frequency.setValueAtTime(1250, t)
+      tone.frequency.exponentialRampToValueAtTime(780, t + 0.30)
+      tone.Q.value = 1.5
+      const gain = ctx.createGain()
+      gain.gain.setValueAtTime(0, t)
+      gain.gain.linearRampToValueAtTime(0.22, t + 0.025)
+      gain.gain.exponentialRampToValueAtTime(0.0005, t + 0.34)
+      voice.connect(tone).connect(gain).connect(out)
+      voice.onended = () => { voice.disconnect(); tone.disconnect(); gain.disconnect(); out.disconnect() }
+      voice.start(t)
+      voice.stop(t + 0.36)
+    }
+  }
+
   /** 屏蓬左右首相应的低吟；本条没有记载鸣声。 */
   screenPengCall() {
     const ctx = this.ctx
