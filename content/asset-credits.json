@@ -352,7 +352,7 @@
     },
     {
       "path": "public/models/qique/body.glb",
-      "source": "Offline anatomical adaptation of verified jingwei-body-max/base_high_pbr.glb, Gen-2.5-Extreme-High, 49,902 source triangles. Shortened beak, fuller breast, raised fowl tail, white head; original avian bare lower legs and toes replaced by bespoke authored continuous narrow ankles, low rodent-like palms, ten digits and ten hooked feline claws; upper joins buried under feather cuffs. Source job/hash and modifications recorded in content/beasts/qique.json; no new Rodin transaction or credit.",
+      "source": "Offline adaptation of decoded existing public/models/fenghuang/body.glb, SHA-256 4279f9a307681d8ec82606bf779c801d0c45d15feb21af757ad703c315698856, 1,978,072 bytes, 149,816 decoded triangles (49,964 chicken body plus 99,852 paired wings). Native neck/breast/pelvis/tail and wing volume retained; white head, brown feather coat, reduced low comb and tapered oblique bill. Scaly shanks replaced by original continuous mouse-like ankle/instep/tendon skin, ten staggered slender digits and ten swept claws with matching distal sheaths. Actual cached runtime donor and counts audited; original HIGH masters unavailable, so no new original-HIGH verification is claimed. Sculpt and runtime provenance in content/beasts/qique.json. Zero new Rodin or TTS transactions.",
       "author": "项目自有 AI 高模离线改制与原创足爪建模",
       "license": "沿用项目既有 Hyper3D Rodin 输出条款；新增足爪为项目原创几何"
     },
