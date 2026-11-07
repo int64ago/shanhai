@@ -1,0 +1,8 @@
+{
+  "id": "xuangui-body-v1",
+  "beast": "xuangui",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "An anatomically convincing freshwater turtle body standing naturally on four widely splayed short scaly legs, feet flat on ground, symmetrical neutral pose. Detailed oval moderately domed carapace with distinct polygonal scutes and thin beveled marginal scutes, visible pale plastron and natural bridges connecting upper and lower shells at both sides. All four legs emerge naturally through shell openings, substantial textured skin in shoulder and hip folds. Head and neck removed, leave a single dark natural neck socket at front, tail removed leave a small rear tail opening. No head, no neck, no tail, no horns, no wings, no ornaments, no base. Broad low grounded silhouette, not a hemisphere. Restrained charcoal olive brown shell and warm grey skin, realistic sculpted reptile anatomy, separate visible toes, clean isolated 3D game character.",
+  "params": {"mesh_mode": "Quad", "geometry_file_format": "glb", "material": "PBR", "seed": 48122}
+}

@@ -1,0 +1,7 @@
+{
+  "id": "xuangui-tail-max", "beast": "xuangui", "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "One isolated long serpent tail, muscular thick root tapering continuously to fine pointed tip, preserve reference shape and graceful slender proportions. Small overlapping charcoal olive grey scales and lighter belly scales. No head, no body, no limbs, no pedestal, no spikes, no rattle.",
+  "images": ["concept/xuangui/tail/view_34.png", "concept/xuangui/tail/view_side.png", "concept/xuangui/tail/view_front.png", "concept/xuangui/tail/view_back.png"],
+  "params": {"mesh_mode": "Quad", "geometry_file_format": "glb", "material": "PBR", "addons": "HighPack", "seed": 48134}
+}

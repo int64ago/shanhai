@@ -1,0 +1,73 @@
+{
+  "id": "xuangui",
+  "name": "旋龟",
+  "archetype": "quadruped",
+  "source": [
+    {"book": "山海经·南山经·南山经之首", "text": "又東三百七十里，曰杻陽之山，其陽多赤金，其陰多白金。"},
+    {"book": "山海经·南山经·南山经之首", "text": "怪水出焉，而東流注於憲翼之水。其中多玄龜，其狀如龜而鳥首虺尾，其名曰旋龜，其音如判木，佩之不聾，可以為底。"}
+  ],
+  "inferred": [
+    {"item": "四足与横向出肢", "basis": "原文状如龟，未逐项记足数、趾数或步态；四足、横向出肢、宽趾和缓慢四拍步态均为龟形的设计补足。"},
+    {"item": "背甲、腹甲、甲桥与盾片", "basis": "龟形有原文依据，但甲拱高度、甲桥、盾片格局、边缘和颈足开口均未详，具体形态与比例为艺术设计。"},
+    {"item": "鸟首颈与渐细虺尾", "basis": "鸟首和虺尾为正文；具体鸟种、闭合浅赭喙、黑眼、短羽、颈长、颈根肌肉、尾长与鳞片均未记。采用自然曲颈和单条渐细蛇尾，不添加龙角或第二蛇首。"},
+    {"item": "赭褐甲面、灰青颈足与浅赭鸟喙", "basis": "正文称玄龟，未详各部位具体设色；深褐甲片、浅腹甲、灰青颈足、深色鸟羽、浅赭喙与灰褐蛇尾为工笔淡彩补足。"},
+    {"item": "缓步、昂首与裂木鸣声", "basis": "音如判木为正文比拟；待机呼吸、低幅四拍缓步、昂首展现，以及裂木声的频率、节奏、包络与空间位置均为艺术演绎。"},
+    {"item": "怪水涟漪", "basis": "正文记旋龟居怪水；展现时足边淡石青涟漪为环境意象，不视为原文记载的神通。"}
+  ],
+  "parts": [
+    {"id": "body", "count": 1, "description": "全新 HIGH 龟躯、背腹甲与四足，硬甲保持刚性，足掌独立世界支撑目标"},
+    {"id": "bird_head", "count": 1, "description": "全新 HIGH 鸟首颈母件，颈根埋入前甲口并渐变加宽，四段颈链"},
+    {"id": "serpent_tail", "count": 1, "description": "全新 HIGH 渐细蛇尾，尾根埋入后甲口，八段尾链"}
+  ],
+  "sourceVerification": {
+    "url": "https://zh.wikisource.org/wiki/山海經/南山經",
+    "rawUrl": "https://zh.wikisource.org/w/index.php?title=山海經/南山經&action=raw",
+    "checked": "2026-11-07",
+    "heading": "南山經之首",
+    "mountain": "杻陽之山",
+    "water": "怪水出焉，而東流注於憲翼之水。",
+    "rawBytes": 13299,
+    "rawSha256": "8aeb335a1ae37b7bb5f847c52d460b9b2725eabbae933c08a67bc10717ec56b8",
+    "note": "父会话独立读取南山經下载原始字节，仅剥离平衡的夹注模板，逐项确认两段为连续原文。山名句与旋龟句之间有鹿蜀条，故分作两个片段；保留可以為底，不扩写耳聪目明或后世龙龟寓意。"
+  },
+  "production": {
+    "status": "complete",
+    "ready": true,
+    "newRodinTransactions": 6,
+    "newRodinCredits": 4.5,
+    "budget": 12,
+    "modelProduced": true,
+    "ledger": "pipeline/rodin/credits.log",
+    "method": "三个全新 Medium 初版，各自按构型矫正并 Read 四视图后，以 34 首图提交 Extreme-High / HighPack。未使用 texture_mode extreme-high。保留真实生成甲面、腹甲、四肢、鸟首颈和蛇尾表面；不以半球或程序管子替代生成主体。足掌独立控制，并关闭 glTF resample 以保留支撑曲线精度。",
+    "transactions": [
+      {"job": "xuangui-body-v1", "tier": "Gen-2.5-Medium", "hash": "4e81009a866554a0", "uuid": "c93bb7e4-1249-4c0a-89e3-63ea080deca2", "consumed": 0.5},
+      {"job": "xuangui-head-v1", "tier": "Gen-2.5-Medium", "hash": "4577be1154451597", "uuid": "cd1b4a21-7321-437c-becb-bd779044570b", "consumed": 0.5},
+      {"job": "xuangui-tail-v1", "tier": "Gen-2.5-Medium", "hash": "86023e1e83c552a6", "uuid": "fff6c6dd-b145-4701-8bd5-c40d9b276c98", "consumed": 0.5},
+      {"job": "xuangui-head-max", "tier": "Gen-2.5-Extreme-High", "hash": "06ccc648ef259fee", "uuid": "781ad381-efe1-4874-ba48-a33040e7766f", "consumed": 1},
+      {"job": "xuangui-tail-max", "tier": "Gen-2.5-Extreme-High", "hash": "395d3d20845a31a8", "uuid": "6201df5f-8a5c-4965-8d6e-0c6cb21a76d4", "consumed": 1},
+      {"job": "xuangui-body-max", "tier": "Gen-2.5-Extreme-High", "hash": "abcf7f6c93d880e1", "uuid": "455876d0-eb15-4208-919b-db888e970766", "consumed": 1}
+    ],
+    "sources": [
+      {"path": "raw/xuangui-body-max/base_high_pbr.glb", "triangles": 33056, "sha256": "ced3c4528d81d75939accf4629941c71a47e20c0e67b4224df7ef348fc5946b9"},
+      {"path": "raw/xuangui-head-max/base_high_pbr.glb", "triangles": 34096, "sha256": "90087c63a1844168657fe4c9e31be887351538b8d786a2ccd6d42ed8e944cbd8"},
+      {"path": "raw/xuangui-tail-max/base_high_pbr.glb", "triangles": 33082, "sha256": "9c078b6d55f8219e018a4d21340c32ab33e207b07f04635ad20303e82fdbcfdd"}
+    ],
+    "topologyNote": "API 实际返回 Quad 高模三角化后分别为 33056 / 34096 / 33082 面；如实记录，未把 HIGH 档位冒称为每件五万面。",
+    "pendingVerification": [],
+    "colorTreatment": "对 HIGH 鸟首颈的原 UV 制作高度渐变遮罩，仅将颈鳞提亮为灰青色以避免水墨阈值压成纯黑；保留眼睛、鸟羽、喙与生成鳞片明暗，不改写为原文设色。",
+    "finalModel": {"path": "public/models/xuangui/body.glb", "bytes": 1434484, "triangles": 100234, "bones": 25, "sha256": "7e2fd4aed565b4fb99ce873eafbaa0ac8ce0cfd8bf2cd63ba4634c544a9c4d67"},
+    "qa": {
+      "script": "scripts/qa-xuangui.mjs",
+      "previewPort": 5215,
+      "worldSoleMaxDriftMeters": 0.0000011096548063861017,
+      "worldSoleMaxDirectionRadians": 2.200130084191774e-7,
+      "frames": 633,
+      "supportPhases": 17,
+      "parentGeometryCorrection": "父图审定位灰色颈根为鸟首母件的露出底缘。根部下移至前甲口内部，减小扩口并以前弧穿出甲口，颈骨链同步调整；重新绑定和 medium meshopt 压缩后独立复查正背面、三态及连续行走图。未增加付费生成。" ,
+      "tested": ["idle / walk / special 实际渲染、finite 蒙皮", "每足全部实际 sole 世界 XYZ 位移与跨平面方向，至少两次完整支撑", "四足、单鸟首、单渐细虺尾、零角零翼", "三次切换后各释放三张旧骨骼贴图，零残留", "special 回 idle，动作中断与恢复", "NormalBlending 涟漪实际 uniform 强度 0.742", "59.977125 秒 narration 实播与停止", "裂木鸣声实际 SFX 总线 RMS 峰值 0.0512", "三态 shot、四面与背甲图、三个运动 closeups 均 Read 检查"],
+      "consoleErrors": 0,
+      "evidence": ["/tmp/shanhai-check/xuangui-final-idle.png", "/tmp/shanhai-check/xuangui-final-walk.png", "/tmp/shanhai-check/xuangui-final-special.png", "/tmp/shanhai-check/xuangui-final-w0.png", "/tmp/shanhai-check/xuangui-final-w1.png", "/tmp/shanhai-check/xuangui-final-w2.png", "/tmp/xuangui-parent-final-qa/browser-qa.json", "/tmp/xuangui-parent-final-card/report.json"]
+    },
+    "narration": {"pipeline": "pipeline/tts/narrate.ts", "model": "cosyvoice-v2", "voice": "longsanshu", "format": "mp3", "sampleRate": 22050}
+  }
+}

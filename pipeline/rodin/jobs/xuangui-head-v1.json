@@ -1,0 +1,8 @@
+{
+  "id": "xuangui-head-v1",
+  "beast": "xuangui",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "Isolated single natural bird head and long curved neck for a mythical turtle, no body, no wings, no legs, no pedestal. A graceful dark waterbird head with one modest pointed horn colored beak and two dark alert eyes, fine layered short feathers on head blending smoothly into fine scaly grey neck. Neck makes a subtle S curve, thick muscular flared base at bottom, gradually thinner toward head. Total neck and head length about four times neck thickness. Head looks horizontally forwards, lower beak closed, dignified neutral expression. Clear continuous organic anatomy, softly tapered neck root suitable for sinking inside a turtle shell opening, no cut cylinder collar. Muted charcoal grey with warm ochre beak, refined realistic 3D sculpture, entire single appendage visible.",
+  "params": {"mesh_mode": "Quad", "geometry_file_format": "glb", "material": "PBR", "seed": 48123}
+}

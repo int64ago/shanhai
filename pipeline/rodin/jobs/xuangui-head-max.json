@@ -1,0 +1,7 @@
+{
+  "id": "xuangui-head-max", "beast": "xuangui", "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "One isolated bird head and organically curved muscular scaly neck, preserve reference silhouette, one closed ochre beak, two dark eyes, fine charcoal feathers, broad tapering neck root, no body or limbs. Natural waterbird anatomy, finely detailed scales and feathers.",
+  "images": ["concept/xuangui/head/view_34.png", "concept/xuangui/head/view_side.png", "concept/xuangui/head/view_front.png", "concept/xuangui/head/view_back.png"],
+  "params": {"mesh_mode": "Quad", "geometry_file_format": "glb", "material": "PBR", "addons": "HighPack", "seed": 48133}
+}

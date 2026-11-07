@@ -1,0 +1,7 @@
+{
+  "id": "xuangui-body-max", "beast": "xuangui", "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Anatomically convincing headless freshwater turtle body standing on exactly four splayed low reptile legs, all feet grounded. Preserve reference carapace, pale plastron, side bridges and natural skin folds around four limb openings. Refine continuous clean shell rim, polygonal scutes, natural small neck opening and small tail socket. Head and tail are removed for modular assembly: absolutely no head, no face, no tail, no floating scraps. Broad low moderately domed oval shell, textured scales, charcoal olive brown shell and grey skin, ivory grey plastron. Clean intact surface and detailed reptile anatomy.",
+  "images": ["concept/xuangui/body/view_34.png", "concept/xuangui/body/view_side.png", "concept/xuangui/body/view_front.png", "concept/xuangui/body/view_back.png"],
+  "params": {"mesh_mode": "Quad", "geometry_file_format": "glb", "material": "PBR", "addons": "HighPack", "seed": 48132}
+}

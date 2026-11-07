@@ -2,6 +2,29 @@
   "_note": "第三方素材授权登记；上线前统一核对。音频素材到位后同样登记在这里。",
   "assets": [
     {
+      "path": "public/models/xuangui/body.glb",
+      "source": "全新 Hyper3D Rodin 三部件两阶段生成。Medium 龟体/鸟首颈/蛇尾各 0.5，Read 矫正四视图后分别提交 Gen-2.5-Extreme-High / HighPack 各 1，共六笔实耗 4.5 积分；未传 texture_mode extreme-high。原始 HIGH 三角化实际面数为 33056 / 34096 / 33082，总 100234 面，未冒称每件五万面。龟体拥有背腹甲、甲桥及四个出肢口，鸟颈根加宽嵌入前甲口，单条渐细蛇尾接入后甲口；25 骨含独立足掌、四段颈链和八段尾链，idle/walk/special。meshopt/WebP，simplify/flatten/join/resample 均 false。所有任务 UUID、实耗、输入 hash 和 HIGH 文件 SHA256 见 content/beasts/xuangui.json 与 pipeline/rodin/credits.log。",
+      "sourceComponents": [
+        {"path": "raw/xuangui-body-max/base_high_pbr.glb", "job": "xuangui-body-max", "tier": "Gen-2.5-Extreme-High", "uuid": "455876d0-eb15-4208-919b-db888e970766", "sha256": "ced3c4528d81d75939accf4629941c71a47e20c0e67b4224df7ef348fc5946b9"},
+        {"path": "raw/xuangui-head-max/base_high_pbr.glb", "job": "xuangui-head-max", "tier": "Gen-2.5-Extreme-High", "uuid": "781ad381-efe1-4874-ba48-a33040e7766f", "sha256": "90087c63a1844168657fe4c9e31be887351538b8d786a2ccd6d42ed8e944cbd8"},
+        {"path": "raw/xuangui-tail-max/base_high_pbr.glb", "job": "xuangui-tail-max", "tier": "Gen-2.5-Extreme-High", "uuid": "6201df5f-8a5c-4965-8d6e-0c6cb21a76d4", "sha256": "9c078b6d55f8219e018a4d21340c32ab33e207b07f04635ad20303e82fdbcfdd"}
+      ],
+      "author": "Hyper3D Rodin AI 生成；项目离线姿态矫正、器官组装、绑定与工笔水墨渲染",
+      "license": "沿用项目既有 Hyper3D Rodin 输出条款"
+    },
+    {
+      "path": "concept/xuangui/{body,head,tail}/view_{34,side,front,back}.png",
+      "source": "新 Medium 母件在 Blender 中按构型矫正并逐面渲染；34 首图用于各自 HIGH 细化，不是原文配图。",
+      "author": "项目自制",
+      "license": "沿用旋龟模型授权"
+    },
+    {
+      "path": "public/audio/narration/xuangui.mp3",
+      "source": "沿用研究提交 794b3ebd8d30213070223e346e11e565900d5300 的原文核实解说。pipeline/tts/narrate.ts，CosyVoice v2 / longsanshu，MP3 22050 Hz；故事只采用南山經之首杻陽之山本条，原文与艺术补足分述。",
+      "author": "项目原创解说词；百炼龙三叔合成",
+      "license": "沿用项目既有百炼语音输出条款"
+    },
+    {
       "path": "public/models/yayu/body.glb",
       "source": "零新生成，仅只读复用三个经账本、SHA256 和实际面数核验的 Gen-2.5-Extreme-High 母件，各原始输入均为 50,000 三角面。诸怀 HIGH 牛躯去掉原牛首/兽耳、原分蹄足端和原尾，裁后含封口 31,270 面；新增渐细颈肩和四条系部，并与该牛躯离线体素融合为连续 425,680 面。该重塑与朱赭涂色为项目离线制作，未声称是新的 HIGH 生成输出。陆吾 HIGH 人首去衣领及颈底凸缘，含封口 41,192 面，保留五官与发须；面部赤褐色为新绘制。鹿蜀 HIGH 四个单蹄裁后分别含封口 770/748/715/736 面，未以牛分蹄替代马足；新涂墨褐色并平整蹄底。另补单牛尾。独立 21 骨，idle/walk/special，全模 472,401 三角面；meshopt/WebP，simplify/flatten/join 均 false。支撑相逆向烘焙真实圆周目标与整蹄 yaw，QA 测全部实际 sole 世界顶点位移及方向。脚本 pipeline/blender/prepare_yayu.py、rig_yayu.py。",
       "sourceComponents": [

@@ -106,6 +106,42 @@ class AudioEngine {
     cb?.()
   }
 
+  /** 旋龟「音如判木」：裂木瞬态与短促木腔共振，具体音色为设计推断。 */
+  woodSplit(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    for (const offset of [0, 0.085]) {
+      const t = ctx.currentTime + offset
+      const out = this.panner(pan)
+      const noise = ctx.createBufferSource()
+      noise.buffer = this.noise(0.09)
+      const filter = ctx.createBiquadFilter()
+      filter.type = 'bandpass'
+      filter.frequency.value = offset ? 2200 : 1450
+      filter.Q.value = 1.8
+      const envelope = ctx.createGain()
+      envelope.gain.setValueAtTime(0.001, t)
+      envelope.gain.linearRampToValueAtTime(0.34, t + 0.002)
+      envelope.gain.exponentialRampToValueAtTime(0.001, t + 0.09)
+      const wood = ctx.createOscillator()
+      wood.type = 'triangle'
+      wood.frequency.setValueAtTime(offset ? 630 : 780, t)
+      wood.frequency.exponentialRampToValueAtTime(210, t + 0.1)
+      const resonance = ctx.createGain()
+      resonance.gain.setValueAtTime(0.21, t)
+      resonance.gain.exponentialRampToValueAtTime(0.001, t + 0.16)
+      noise.connect(filter).connect(envelope).connect(out).connect(this.sfx)
+      wood.connect(resonance).connect(out)
+      noise.start(t)
+      wood.start(t)
+      wood.stop(t + 0.17)
+      wood.onended = () => {
+        noise.disconnect(); filter.disconnect(); envelope.disconnect()
+        wood.disconnect(); resonance.disconnect(); out.disconnect()
+      }
+    }
+  }
+
   /** 说书人开场醒木（惊堂木）：短促硬木叩击共振 + 堂音混响 */
   private xingmu() {
     const ctx = this.ctx

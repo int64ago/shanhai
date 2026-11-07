@@ -1,0 +1,8 @@
+{
+  "id": "xuangui-tail-v1",
+  "beast": "xuangui",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "Isolated single long serpent tail appendage, no snake head, no animal body, no legs, no pedestal. Realistic reptile tail with overlapping small smooth scales and subtle ventral belly scales. Muscular broad root tapering continuously to a very fine pointed tip, approximately eight times longer than maximum root thickness. Nearly straight horizontal resting shape with only a very gentle shallow S curve, not coiled, no loops. Thick root softly flares for natural attachment into a turtle body, distal half slender and flexible. Muted charcoal grey olive scales, subdued warm grey underside. Clean detailed 3D sculpt, whole appendage visible, no decorations, no spikes, no rattle, no second head.",
+  "params": {"mesh_mode": "Quad", "geometry_file_format": "glb", "material": "PBR", "seed": 48124}
+}
