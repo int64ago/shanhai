@@ -71,7 +71,7 @@ def fill_unweighted(arm):
         bpy.ops.object.mode_set(mode='OBJECT')
 
 
-def animate(arm):
+def animate(arm, pose_extra=None):
     arm.animation_data_clear()
     reset(arm)
     targets, constraints = {}, []
@@ -111,6 +111,8 @@ def animate(arm):
                 arm.pose.bones['head'].rotation_quaternion = world_rot(arm.pose.bones['head'], (1, 0, 0), 0.06)
             else:
                 arm.pose.bones['neck'].rotation_quaternion = world_rot(arm.pose.bones['neck'], (0, 0, 1), 0.045 * math.sin(t))
+            if pose_extra is not None:
+                pose_extra(arm, name, t)
             for leg, (target, ankle) in targets.items():
                 pos = ankle.copy()
                 if name == 'walk':

@@ -2,6 +2,12 @@
   "_note": "第三方素材授权登记；上线前统一核对。音频素材到位后同样登记在这里。",
   "assets": [
     {
+      "path": "public/models/bingfeng/body.glb",
+      "source": "项目既有 dangkang-body-max 高模经 body_norm.glb 归一版本离线改制；去尾、复制反向彘首、重绘黑毛并绑定双首四足。脚本 prepare_bingfeng.py 与 rig_bingfeng.py；未新增 Rodin 交易。",
+      "author": "项目自有 AI 高模与离线改制",
+      "license": "沿用既有 Hyper3D Rodin 源资产条款"
+    },
+    {
       "path": "public/models/_placeholder/fox.glb",
       "source": "Hyper3D Rodin Gen-2.5 Extreme-Low（pipeline/rodin/jobs/m1-placeholder-fox.json）",
       "author": "AI 生成",

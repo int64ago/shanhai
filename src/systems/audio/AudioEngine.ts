@@ -685,6 +685,32 @@ class AudioEngine {
     }
   }
 
+  /** 并封原文未记鸣声；前后两声错时低哼为交互艺术补足。 */
+  bingfengCall(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    for (const [delay, pitch, side] of [[0, 115, pan - 0.15], [0.58, 94, pan + 0.15]]) {
+      const out = this.panner(Math.max(-1, Math.min(1, side)))
+      out.connect(this.sfx)
+      const t = ctx.currentTime + delay
+      const voice = ctx.createOscillator()
+      voice.type = 'sawtooth'
+      voice.frequency.setValueAtTime(pitch, t)
+      voice.frequency.exponentialRampToValueAtTime(pitch * 0.67, t + 0.55)
+      const filter = ctx.createBiquadFilter()
+      filter.type = 'lowpass'
+      filter.frequency.value = 520
+      const envelope = ctx.createGain()
+      envelope.gain.setValueAtTime(0, t)
+      envelope.gain.linearRampToValueAtTime(0.26, t + 0.04)
+      envelope.gain.exponentialRampToValueAtTime(0.001, t + 0.55)
+      voice.connect(filter).connect(envelope).connect(out)
+      voice.start(t)
+      voice.stop(t + 0.57)
+      voice.onended = () => { voice.disconnect(); filter.disconnect(); envelope.disconnect(); out.disconnect() }
+    }
+  }
+
   /** 天马「其鸣自訆」：借今音的两个音节作犬声演绎，非古音复原。 */
   tianmaCall(pan = 0) {
     const ctx = this.ctx
