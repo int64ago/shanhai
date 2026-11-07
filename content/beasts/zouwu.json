@@ -1,0 +1,79 @@
+{
+  "id": "zouwu",
+  "name": "驺吾",
+  "archetype": "quadruped",
+  "source": [
+    {
+      "book": "山海经·海内北经",
+      "text": "林氏国有珍兽，大若虎，五采毕具，尾长于身，名曰驺吾，乘之日行千里。"
+    }
+  ],
+  "inferred": [
+    {
+      "item": "四足猫科外形与豹斑",
+      "basis": "原文「大若虎」只说明身量；画中借猫科头面、四足与豹斑补足未详形貌，不设额角。"
+    },
+    {
+      "item": "朱砂、赭黄、石绿、素白与焦墨五色毛皮",
+      "basis": "据「五采毕具」设五色；前朱后绿的色区、白腹、墨斑与尾部斑纹均为艺术推断。"
+    },
+    {
+      "item": "一条长尾，长度为鼻端至臀部的 2.4 倍",
+      "basis": "据「尾长于身」作单尾；原文没有尾长倍数，2.4 倍比例与舒展回摆的姿态为设计选择。"
+    },
+    {
+      "item": "缓步与蓄势轻跃，尾梢延后回摆",
+      "basis": "据「乘之日行千里」演绎轻捷；收肢、短跃与落地动作属交互补足，原文未记飞行。"
+    },
+    {
+      "item": "温和的猫科低吟",
+      "basis": "古经本条未记鸣声，交互低吟为合成的听觉演绎；不将后世仁兽、不食生灵之说并入本条。"
+    }
+  ],
+  "sourceVerification": {
+    "url": "https://zh.wikisource.org/wiki/山海經/海內北經",
+    "checked": "2026-11-07",
+    "note": "本页作「五采畢具，尾長于身，名曰騶吾」；引文以简体呈现，保留五采、于用字。正文未给出五倍或任何其他倍数。"
+  },
+  "production": {
+    "method": "Offline reuse of verified existing Extreme-High masters; no new generation transaction.",
+    "newRodinCredits": 0,
+    "body": {
+      "job": "zheng-body-max",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "9cb3d641-b308-4a68-98c9-2c6b23a210a3",
+      "rawFile": "raw/zheng-body-max/base_basic_pbr.glb",
+      "rawSha256": "f48ffea66bce62031803ca220022c8a7d1509e782d45f55bf1ca0127074e61e4",
+      "preparedInput": "raw/_build/zheng/body_high_fixed.glb",
+      "preparedSha256": "04543b1a7e75d27b8a2204034dd337256703b981e1e14a138f8662bedb3af5d7",
+      "triangles": 49751,
+      "changes": "Measured forehead horn flattened into skull; five-colour texture painted over original coat, original UV/fur detail retained; own three-clip paw-target rig. No new tail trim."
+    },
+    "tail": {
+      "job": "zheng-tail-max",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "5df9c54f-7b07-4a10-9fa9-1c9639bcd23a",
+      "rawFile": "raw/zheng-tail-max/base_basic_pbr.glb",
+      "rawSha256": "1b8ada26543347529cba616a5f0108e426993e6f985405993bd520936dea7b2b",
+      "preparedInput": "raw/_build/zheng/tail_high_norm.glb",
+      "preparedSha256": "a43f92f34e456b916c9f79c361d658970f905a7b002052cce00c9cae6a54f734",
+      "triangles": 49964,
+      "bodyLength": 0.9815559387207031,
+      "tailLength": 2.3557342529296874,
+      "ratio": 2.4,
+      "segments": 24,
+      "changes": "Offline longitudinal extension with inverse-transpose guarded authored normals; one continuous skinned chain, no runtime mesh stretching."
+    },
+    "scripts": [
+      "pipeline/blender/prepare_zouwu.py",
+      "pipeline/blender/rig_zouwu.py"
+    ],
+    "narration": {
+      "pipeline": "pipeline/tts/narrate.ts",
+      "model": "cosyvoice-v2",
+      "voice": "longsanshu",
+      "format": "mp3",
+      "sampleRate": 22050
+    }
+  }
+}

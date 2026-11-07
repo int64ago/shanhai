@@ -837,6 +837,28 @@ class AudioEngine {
     }
   }
 
+  /** 驺吾的温和猫科低吟，属于听觉补足；《海内北经》未记鸣声。 */
+  zouwuCall(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const out = this.panner(pan)
+    out.connect(this.sfx)
+    const t = ctx.currentTime
+    for (const [ratio, level] of [[1, 0.16], [2, 0.065], [3, 0.025]]) {
+      const tone = ctx.createOscillator()
+      tone.type = 'sine'
+      tone.frequency.setValueAtTime(125 * ratio, t)
+      tone.frequency.exponentialRampToValueAtTime(82 * ratio, t + 0.7)
+      const gain = ctx.createGain()
+      gain.gain.setValueAtTime(0, t)
+      gain.gain.linearRampToValueAtTime(level, t + 0.1)
+      gain.gain.exponentialRampToValueAtTime(0.0005, t + 0.85)
+      tone.connect(gain).connect(out)
+      tone.start(t)
+      tone.stop(t + 0.9)
+    }
+  }
+
   /** 狰「其音如击石」：石块短击与不成整数比的石磬余振，节奏为交互演绎。 */
   zhengCall(pan = 0) {
     const ctx = this.ctx

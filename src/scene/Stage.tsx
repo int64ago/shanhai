@@ -36,6 +36,7 @@ import { Chenghuang } from '../beasts/chenghuang/Chenghuang'
 import { Huan } from '../beasts/huan/Huan'
 import { Tianma } from '../beasts/tianma/Tianma'
 import { Bingfeng } from '../beasts/bingfeng/Bingfeng'
+import { Zouwu } from '../beasts/zouwu/Zouwu'
 import { CameraRig } from './CameraRig'
 
 export function Stage() {
@@ -109,6 +110,8 @@ export function Stage() {
           <Tianma />
         ) : selected === 'bingfeng' ? (
           <Bingfeng />
+        ) : selected === 'zouwu' ? (
+          <Zouwu />
         ) : (
           <PlaceholderBeast />
         )}

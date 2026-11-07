@@ -26,6 +26,18 @@
       "license": "待核实 Rodin 输出条款；仅作开发占位"
     },
     {
+      "path": "public/models/zouwu/",
+      "source": "Offline reuse of zheng-body-max and zheng-tail-max, both Gen-2.5-Extreme-High (49,751 / 49,964 triangles). Returned base_basic_pbr.glb masters verified against pipeline/rodin/credits.log; original hashes and exact preparations recorded in content/beasts/zouwu.json. Five-colour coat, horn removal, 2.4-body-length single tail and own paw-target animations by pipeline/blender/prepare_zouwu.py and rig_zouwu.py. Zero new Rodin transactions or credits.",
+      "author": "项目自有 AI 生成素材与离线改制",
+      "license": "Hyper3D Rodin 生成输出（沿用项目既有源资产条款）"
+    },
+    {
+      "path": "public/audio/narration/zouwu.mp3",
+      "source": "Original corrected story via existing pipeline/tts/narrate.ts, CosyVoice v2 / longsanshu, MP3 22050 Hz.",
+      "author": "项目原创解说词；百炼龙三叔合成",
+      "license": "沿用项目既有百炼语音输出条款"
+    },
+    {
       "path": "public/models/tianma/body.glb",
       "source": "既有 chenghuang-body-max/base_high_pbr.glb 高模离线复用；49,988 三角面犬科母件，按天马白犬参考调整面颊与犬吻、重绘黑头，再独立绑定飞行动作（pipeline/blender/adapt_tianma_high.py、rig_tianma.py）。未追加高模生成任务；尾部复用 public/models/zheng/tail.glb。",
       "author": "项目自有 AI 生成素材与离线改制",
