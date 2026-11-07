@@ -8,6 +8,18 @@
       "license": "沿用既有 Hyper3D Rodin 源资产条款"
     },
     {
+      "path": "public/models/jiufeng/{body,head}.glb",
+      "source": "只读复核两个既有Gen-2.5-Extreme-High母件：jingwei-body-max/base_high_pbr.glb（50,000面，SHA256 fefde14bf4e80074c368eb8bea4ce373b3f03db24890517ae7f83eaf54175319）与陆吾/开明共用luwu-head-max/base_basic_pbr.glb（实际HIGH任务，50,000面，SHA256 98341132b84ef9b8d3a3e1dee9ed1961a2c7fe61202064bd3e326d0c9c7f402e）。裁除人首肩部及禽身原生首，九条羽颈和覆肩为离线原创几何；九颗独立人首分层挂接。零新增生成交易；各件账本UUID与hash见content/beasts/jiufeng.json production。",
+      "author": "项目自有 AI HIGH 母件与离线原创羽颈覆肩、重塑绑定",
+      "license": "Hyper3D Rodin 既有输出条款；新增几何与动作归项目原创"
+    },
+    {
+      "path": "public/audio/narration/jiufeng.mp3",
+      "source": "大荒北经北极天柜九凤原创完整解说；现有CosyVoice cosyvoice-v2 / longsanshu工作流",
+      "author": "项目原创解说与合成配音",
+      "license": "沿用项目百炼CosyVoice合成音频条款"
+    },
+    {
       "path": "public/models/gudiao/body.glb",
       "source": "既有 jingwei-body-max/base_high_pbr.glb，Gen-2.5-Extreme-High 原始50,000面，清理后保留49,902面；SHA-256 fefde14bf4e80074c368eb8bea4ce373b3f03db24890517ae7f83eaf54175319，账本 UUID 3954a021-1bf6-4764-9355-00eaad9c4dd6。离线重塑雕形头喙、胸翼、双足并重绘羽色；一枚推断额角以宽根埋入额顶，随头骨蒙皮。零新增生成交易，详见 content/beasts/gudiao.json production。",
       "author": "项目自有 AI HIGH 素材与离线改制、程序化角形",

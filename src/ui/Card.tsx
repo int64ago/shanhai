@@ -95,10 +95,10 @@ export function Card() {
       </aside>
 
       {narrating && (
-        <div className="story-caption" style={{ '--story-left': `${captionLeft}px` } as CSSProperties} role="status" aria-live="polite">
-          <span className="story-badge">评书 · 龙三叔</span>
+        <details key={selected} className="story-caption" style={{ '--story-left': `${captionLeft}px` } as CSSProperties}>
+          <summary><span className="story-badge">评书 · 龙三叔</span>解说词</summary>
           <p>{beast.story}</p>
-        </div>
+        </details>
       )}
     </>
   )

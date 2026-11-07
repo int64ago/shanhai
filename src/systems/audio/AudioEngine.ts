@@ -549,6 +549,30 @@ class AudioEngine {
     this.foxFire(pan)
   }
 
+  /** 九凤原文未记鸣声；九个错落低音仅作九首展示的听觉推断。 */
+  jiufengCall() {
+    const ctx = this.ctx
+    if (!ctx) return
+    for (let i = 0; i < 9; i++) {
+      const t = ctx.currentTime + i * 0.13
+      const out = this.panner((i % 5 - 2) * 0.18)
+      out.connect(this.sfx)
+      const osc = ctx.createOscillator()
+      osc.type = 'sine'
+      const hz = [220, 247, 294, 330, 392, 262, 294, 330, 440][i]
+      osc.frequency.setValueAtTime(hz * 1.03, t)
+      osc.frequency.exponentialRampToValueAtTime(hz * 0.97, t + 0.4)
+      const gain = ctx.createGain()
+      gain.gain.setValueAtTime(0, t)
+      gain.gain.linearRampToValueAtTime(0.1, t + 0.06)
+      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.44)
+      osc.connect(gain).connect(out)
+      osc.start(t)
+      osc.stop(t + 0.46)
+      osc.onended = () => { osc.disconnect(); gain.disconnect(); out.disconnect() }
+    }
+  }
+
   /** 蛊雕「其音如婴儿之音」的拟声；具体声调和节奏为推断。 */
   gudiaoCry() {
     const ctx = this.ctx

@@ -1,0 +1,36 @@
+{
+  "id": "jiufeng",
+  "name": "九凤",
+  "archetype": "avian",
+  "source": [
+    { "book": "山海經·大荒北經", "text": "大荒之中，有山名曰北極天櫃，海水北注焉。有神，九首人面鳥身，名曰九鳳。" }
+  ],
+  "inferred": [
+    { "item": "恰九颗人面、鸟身；九颈分前五后四为排布推断", "basis": "正文明确「九首人面鸟身」，不保留额外鸟首，也不加人体肩胸。前五后四的层次、颈长曲度、人面尺寸、成人须发与具体五官均属造型补足，原文未规定性别、年龄或发式。" },
+    { "item": "双翼、双足和单束禽尾为鸟类解剖补足", "basis": "原文只记鸟身，未列翼、足、尾的数量与形态；据普通禽鸟补出双翼双足、一束普通尾羽及羽褶肩颈，不增称九尾或火羽。" },
+    { "item": "青灰羽、自然肤色和深发为艺术设色", "basis": "该条未记颜色、冠饰或纹样；统一青灰禽羽与暖肤深发、羽褶纹理均为推断，不借九婴、鬼车、九头虫或后世神职补史。" },
+    { "item": "九首错相轻转、短跃舒翼与九声低鸣为动作拟声", "basis": "经文未记九凤鸣声与动作，呼吸、双足短跃、九首独立轻转、舒翼及九个错落音符都只作展示演绎；不另赋火焰、水法、婚配或地域神职。" }
+  ],
+  "references": [
+    { "url": "https://www.gutenberg.org/cache/epub/25288/pg25288.txt", "note": "采用本底本「海水北注焉。有神，九首人面鳥身」的连续原文；山名为北極天櫃。" },
+    { "url": "https://zh.wikisource.org/wiki/山海經/大荒北經", "note": "独立交叉核对九首、人面、鸟身、九凤及山名；该页作「海外北注焉」，櫃附一作樻校注，异文不拼入所用底本引文。" }
+  ],
+  "production": {
+    "method": "two independently verified HIGH masters, offline shoulder removal and headless bird remodeling, original nine feather necks and shoulder ruff; zero new generation transactions",
+    "masters": [
+      { "part": "bird", "file": "jingwei-body-max/base_high_pbr.glb", "sha256": "fefde14bf4e80074c368eb8bea4ce373b3f03db24890517ae7f83eaf54175319", "triangles": 50000, "ledgerTier": "Gen-2.5-Extreme-High", "ledgerHash": "21e8f0401fa3431b", "ledgerUuid": "3954a021-1bf6-4764-9355-00eaad9c4dd6" },
+      { "part": "human head shared by Luwu/Kaiming", "file": "luwu-head-max/base_basic_pbr.glb", "sha256": "98341132b84ef9b8d3a3e1dee9ed1961a2c7fe61202064bd3e326d0c9c7f402e", "triangles": 50000, "ledgerTier": "Gen-2.5-Extreme-High", "ledgerHash": "f726eaf257c0373c", "ledgerUuid": "9e3f8c0b-64d5-44bb-bb6d-665ce47866aa", "note": "Returned filename says basic_pbr; actual job/ledger tier is Extreme-High and the file contains exactly 50,000 triangles. The unrelated 9,999,998-triangle model_export_raw.glb is not used." }
+    ],
+    "runtime": { "body": 1, "humanHeads": 9, "nativeBirdHeads": 0, "neckChains": 9, "wings": 2, "legs": 2, "tails": 1 },
+    "assets": {
+      "body": { "bytes": 503948, "triangles": 49474, "bones": 55, "clips": { "idle": 4.8, "walk": 1.4, "alert": 4.8 } },
+      "head": { "bytes": 298184, "triangles": 42004, "instances": 9 },
+      "assembledTriangles": 427510,
+      "totalGlbBytes": 802132
+    },
+    "changes": "preserve HIGH faces but remove generated human shoulders with prepare_guardian_head.py; broaden avian shoulders, remove native bird head, cap and cover removal plane with an original feather ruff; nine individually weighted curved feather necks meet short human neck stumps; human heads are effect-mounted cloned scenes with body-relative inverse rest rotation; positive scales only",
+    "scripts": ["pipeline/blender/prepare_jiufeng.py", "pipeline/blender/rig_jiufeng.py", "pipeline/blender/prepare_guardian_head.py"],
+    "parentAudit": {"script": "scripts/qa-jiufeng.mjs", "resources": "useMemo only clones owned scenes and creates mixers/holders; effect installs reversible ink materials/outlines and mounts nine heads with body-relative rest rotations. Cleanup removes/restores/disposes owned resources.", "method": "155 real rendered frames per action; CPU-skinned sole world XYZ displacement and sole direction, nine independently moving head mounts, six remount cycles with seven snapshots.", "maxSoleDriftMeters": {"idle": 0.000719462, "walk": 0.000075882, "special": 0.000350538}, "maxSoleDirectionRadians": 0.000930233, "checks": "Stable nine human heads, nine holders and necks, 55 bones, 20 surfaces and 20 outlines; head-root offset below 7e-16m. Actual 105.795875s narration advances without media error; nine cry oscillators, nonzero SFX RMS, narration stop and special return verified. No browser errors. Four concept views and final three poses/six motion closeups inspected.", "narrationLayout": "Shared transcript defaults to a 45px collapsed details panel, expandable by the viewer; full text remains readable and both stop controls work. Desktop/tablet/phone layout checks are browser emulation, not hardware performance benchmarks."},
+    "narration": { "workflow": "pipeline/tts/narrate.ts --force jiufeng", "model": "cosyvoice-v2", "voice": "longsanshu", "bytes": 1692825, "durationSeconds": 105.795875 }
+  }
+}

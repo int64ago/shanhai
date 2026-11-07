@@ -192,9 +192,6 @@ button {
   top: 26px;
   max-width: 680px;
   padding: 10px 18px;
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
   background: rgba(239, 230, 210, 0.9);
   border: 1px solid rgba(181, 50, 42, 0.45);
   box-shadow: 0 6px 24px rgba(31, 26, 20, 0.14);
@@ -202,8 +199,15 @@ button {
   z-index: 15;
 }
 
+.story-caption summary {
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--ink);
+}
+
 .story-badge {
-  flex: none;
+  display: inline-block;
+  margin-right: 12px;
   padding: 3px 7px;
   font-family: var(--kai);
   font-size: 12px;
@@ -214,7 +218,9 @@ button {
 }
 
 .story-caption p {
-  margin: 0;
+  margin: 10px 0 0;
+  max-height: 34vh;
+  overflow-y: auto;
   font-size: 14px;
   line-height: 1.65;
   letter-spacing: 0.06em;
