@@ -1,0 +1,176 @@
+{
+  "id": "yingzhao",
+  "name": "英招",
+  "archetype": "quadruped",
+  "source": [
+    {
+      "book": "山海經·西山經·西次三經",
+      "text": "實惟帝之平圃，神英招司之，其狀馬身而人面，虎文而鳥翼，狥于四海，其音如橊。"
+    }
+  ],
+  "inferred": [
+    {
+      "item": "一张人面、四足马躯与一条马尾",
+      "basis": "马身、人面据原文；人首的完整颅形、发须、肤色及颈部过渡为视觉补足。采用四足单蹄与一条马尾，尾的数量、长度与黑褐毛色未见原文规定；不另加角、冠冕或第二张兽面。"
+    },
+    {
+      "item": "双鸟翼、肩部独立翼根与深灰羽色",
+      "basis": "鸟翼据原文，双翼数量、肩侧位置、长羽层次、翼展与灰黑设色均为艺术推断。双翼各有独立骨链，稳立时舒翼，不把巡行直接等同于飞行。"
+    },
+    {
+      "item": "赭金马身上的墨黑虎纹",
+      "basis": "虎文据原文；虎纹的分布、具体条数、赭金底色、白色下肢及墨黑条纹是设色与图案推断。"
+    },
+    {
+      "item": "地面巡行、舒翼顾盼与短促颤鸣",
+      "basis": "狥于四海据原文，可理解为周行；以地面缓步与稳立舒翼表现巡行之意，未增补后世神职。原文其音如橊的具体声义不明确，不擅断为马嘶、虎啸或人语；短促颤鸣的音高、音色和节奏仅作听觉演绎。"
+    }
+  ],
+  "sourceAudit": {
+    "url": "https://zh.wikisource.org/w/index.php?title=山海經/西山經&action=raw",
+    "sha256": "001592c670f18397c5321e874b88321913482e1260eea1eabc96a792faf1bf96",
+    "bytes": 33142,
+    "line": 106,
+    "method": "父直接读取原始转录第106行，仅剔除夹注模板，source逐字等于正文连续子串。狥、橊按所用转录保留；未混用Gutenberg的徇、榴字形。"
+  },
+  "parentAudit": {
+    "source": "Direct raw transcription byte hash and continuous source substring verified; edition variants kept separate.",
+    "anatomy": {
+      "invalid": 0,
+      "nodes": 52,
+      "meshes": 8,
+      "outlines": 8,
+      "bones": 31,
+      "wings": 2,
+      "wingBones": 10,
+      "heads": 1,
+      "tails": 1,
+      "horns": 0,
+      "legs": 4,
+      "feet": {
+        "back_r_foot": 0.00001903358935295696,
+        "back_l_foot": 0.000019104077577436485,
+        "front_l_foot": 0.000018954601998355525,
+        "front_r_foot": 0.0000189587179360573
+      }
+    },
+    "worldContact": {
+      "frames": 391,
+      "solePoints": {
+        "back_r_foot": 87,
+        "back_l_foot": 81,
+        "front_l_foot": 90,
+        "front_r_foot": 108
+      },
+      "maxXYZMeters": 0.00018197704705673673,
+      "maxDirectionRadians": 0.00030489347056913155,
+      "plantedStances": 16
+    },
+    "lifecycle": {
+      "remounts": 3,
+      "skeletonCleanup": [
+        {
+          "textures": 8,
+          "disposed": 8,
+          "live": 0
+        },
+        {
+          "textures": 8,
+          "disposed": 8,
+          "live": 0
+        },
+        {
+          "textures": 8,
+          "disposed": 8,
+          "live": 0
+        }
+      ],
+      "note": "Effect-owned ink/outline removed and original materials restored; only cloned skeleton textures disposed, shared geometry/textures retained."
+    },
+    "narration": {
+      "src": "http://localhost:5215/audio/narration/yingzhao.mp3",
+      "duration": 59.402438,
+      "currentTime": 1.587951,
+      "error": null,
+      "context": "running"
+    },
+    "narrationStopped": true,
+    "sfx": {
+      "peakRMS": 0.04116715424595143,
+      "context": "running"
+    },
+    "specialReturn": "idle",
+    "responsive": [
+      {
+        "width": 390,
+        "bounds": {
+          "card": {
+            "left": 16,
+            "right": 200.296875,
+            "top": 16,
+            "bottom": 340,
+            "hit": true
+          },
+          "title": {
+            "left": 143.390625,
+            "right": 176.390625,
+            "top": 29,
+            "bottom": 87.5625,
+            "hit": true
+          },
+          "button": {
+            "left": 146.890625,
+            "right": 172.890625,
+            "top": 129.5625,
+            "bottom": 173.46875,
+            "hit": true
+          },
+          "viewport": 390,
+          "scroll": 390
+        },
+        "playing": {
+          "time": 0.212528,
+          "paused": false,
+          "narrating": true
+        },
+        "stopped": true
+      },
+      {
+        "width": 800,
+        "bounds": {
+          "card": {
+            "left": 32,
+            "right": 388.359375,
+            "top": 28,
+            "bottom": 663,
+            "hit": true
+          },
+          "title": {
+            "left": 319.453125,
+            "right": 364.453125,
+            "top": 49,
+            "bottom": 127.09375,
+            "hit": true
+          },
+          "button": {
+            "left": 328.953125,
+            "right": 354.953125,
+            "top": 169.09375,
+            "bottom": 213,
+            "hit": true
+          },
+          "viewport": 800,
+          "scroll": 800
+        },
+        "playing": {
+          "time": 0.219306,
+          "paused": false,
+          "narrating": true
+        },
+        "stopped": true
+      }
+    ],
+    "visual": "Parent Read final five concept views, idle/walk/special full scene and three consecutive walk/special frames; no detached neck or wing roots, extra appendages or surface artifacts observed. Phone/tablet playing screenshots inspected.",
+    "performanceLimit": "No mobile hardware benchmark claimed."
+  }
+}

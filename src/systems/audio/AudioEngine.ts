@@ -900,6 +900,38 @@ class AudioEngine {
     }
   }
 
+  /** 英招「其音如橊」声义未定；短颤鸣的音色和音高只是演绎。 */
+  yingzhaoCall(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const t = ctx.currentTime
+    const voice = ctx.createOscillator()
+    const vibrato = ctx.createOscillator()
+    const depth = ctx.createGain()
+    const envelope = ctx.createGain()
+    const filter = ctx.createBiquadFilter()
+    const out = this.panner(pan)
+    voice.type = 'triangle'
+    voice.frequency.setValueAtTime(410, t)
+    voice.frequency.exponentialRampToValueAtTime(280, t + 0.65)
+    vibrato.frequency.value = 19
+    depth.gain.value = 45
+    vibrato.connect(depth).connect(voice.frequency)
+    filter.type = 'bandpass'
+    filter.frequency.value = 1100
+    filter.Q.value = 0.8
+    envelope.gain.setValueAtTime(0, t)
+    envelope.gain.linearRampToValueAtTime(0.24, t + 0.06)
+    envelope.gain.exponentialRampToValueAtTime(0.001, t + 0.7)
+    voice.connect(filter).connect(envelope).connect(out).connect(this.sfx)
+    voice.start(t); vibrato.start(t)
+    voice.stop(t + 0.72); vibrato.stop(t + 0.72)
+    voice.onended = () => {
+      voice.disconnect(); vibrato.disconnect(); depth.disconnect()
+      envelope.disconnect(); filter.disconnect(); out.disconnect()
+    }
+  }
+
   /** 并封原文未记鸣声；前后两声错时低哼为交互艺术补足。 */
   bingfengCall(pan = 0) {
     const ctx = this.ctx

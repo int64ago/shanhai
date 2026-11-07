@@ -2,6 +2,48 @@
   "_note": "第三方素材授权登记；上线前统一核对。音频素材到位后同样登记在这里。",
   "assets": [
     {
+      "path": "public/models/yingzhao/body.glb",
+      "source": "只读复用三个既有、逐件核对的 Gen-2.5-Extreme-High 母件，均为原任务的 50,000 三角面输出，未使用 Medium、未提交新的生成事务。鹿蜀虎纹马躯去除整个原马首/双耳/鬃片与原短尾，保留 32,021 面原躯与四足单蹄；陆吾独立人首去掉白色衣领/底片，保留 42,306 面人脸、发须和短颈；穷奇独立鸟翼离线左右配对，反射坐标后重算法线，运行时无负缩放。新建渐细颈与圆肩只对新增体积融合，保留 HIGH 马腿原表面。颈根后移并向胸内下埋，消除原平底轮廓；颈部用单一连续 UV 贴图，在 z=0.68–0.78 m 淡出虎纹、z=0.695–0.800 m 渐变到实测 HIGH 人颈肤色（sRGB 0.8000/0.6314/0.5216，4728 个 UV 采样），移除按高度切换材质的围领硬边。贴图为确定性的离线绘制，未改变既有 HIGH 人首、马躯或蹄足。概念渲染保留各组件独立 UV，以不可见全体包围网格取景。尾根裁口圆滑修补后补单条马尾。独立 31 骨骨架含两翼各五骨和一尾骨，idle/walk/special；全模 250,025 三角面，meshopt/WebP 不减面压缩。圆周步态按真实 root 半径/速度反向烘焙足位与足掌 yaw，并降低行走躯干 18 mm 留足 IK 可达余量。重建脚本：pipeline/blender/prepare_yingzhao.py、rig_yingzhao.py。",
+      "sourceComponents": [
+        {
+          "path": "raw/lushu-body-max/base_basic_pbr.glb",
+          "job": "lushu-body-max",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "0a08ed3c-20a6-4e1e-bf55-5c3fe02da6db",
+          "sha256": "4674581c5c0cca6dff4bbb4c570004abb876be5bd1e2edf7bb9b98704dc61740"
+        },
+        {
+          "path": "raw/luwu-head-max/base_basic_pbr.glb",
+          "job": "luwu-head-max",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "9e3f8c0b-64d5-44bb-bb6d-665ce47866aa",
+          "sha256": "98341132b84ef9b8d3a3e1dee9ed1961a2c7fe61202064bd3e326d0c9c7f402e"
+        },
+        {
+          "path": "raw/qiongqi-wing-max/base_basic_pbr.glb",
+          "job": "qiongqi-wing-max",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "829232d5-860f-4a6e-a1b4-354988db6803",
+          "sha256": "5d265e451a46371fb53a22648c2cd51dbc0bed383bf6a9f41dc4345d7e76c71a"
+        }
+      ],
+      "sourceReference": "https://zh.wikisource.org/wiki/山海經/西山經 · 西次三經 · 槐江之山：實惟帝之平圃，神英招司之，其狀馬身而人面，虎文而鳥翼，狥于四海，其音如橊。未混入陆吾或后世神职；翼数、尾形、发须、设色、动作和具体声音另列 inferred。",
+      "author": "项目自有 HIGH AI 生成素材与离线雕刻、配对、绘制及绑定",
+      "license": "Hyper3D Rodin 生成输出（沿用项目既有源资产条款）；新增离线工作为项目自制"
+    },
+    {
+      "path": "concept/yingzhao/view_{34,side,front,back,left}.png",
+      "source": "最终离线英招雕刻在 Blender 中独立渲染，非生成服务输出；四面与三分之四视图核查人首与马颈、原马耳/头/尾清理、独立双翼根和四足单蹄。",
+      "author": "项目自制",
+      "license": "沿用英招模型授权"
+    },
+    {
+      "path": "public/audio/narration/yingzhao.mp3",
+      "source": "pipeline/tts/narrate.ts，阿里云百炼 CosyVoice cosyvoice-v2 / longsanshu，按最终校订的 src/app/beasts.ts 英招故事重录，MP3 单声道 22050 Hz，59.402438 秒。声如橊的具体音色未擅作定论。",
+      "author": "项目撰稿与 CosyVoice 合成",
+      "license": "沿用项目既有 CosyVoice 合成输出条款"
+    },
+    {
       "path": "public/models/bingfeng/body.glb",
       "source": "项目既有 dangkang-body-max 高模经 body_norm.glb 归一版本离线改制；去尾、复制反向彘首、重绘黑毛并绑定双首四足。脚本 prepare_bingfeng.py 与 rig_bingfeng.py；未新增 Rodin 交易。",
       "author": "项目自有 AI 高模与离线改制",
