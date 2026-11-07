@@ -1,3 +1,4 @@
+import { useLayoutEffect, useRef, useState, type CSSProperties } from 'react'
 import { ARCHETYPE_LABELS, BEASTS } from '../app/beasts'
 import { useApp } from '../app/store'
 
@@ -17,6 +18,22 @@ export function Card() {
   const selected = useApp((s) => s.selected)
   const narrating = useApp((s) => s.narrating)
   const toggleNarration = useApp((s) => s.toggleNarration)
+  const card = useRef<HTMLElement>(null)
+  const [captionLeft, setCaptionLeft] = useState(0)
+
+  useLayoutEffect(() => {
+    const element = card.current
+    if (!element) return
+    const measure = () => setCaptionLeft(element.getBoundingClientRect().right + 16)
+    measure()
+    const observer = new ResizeObserver(measure)
+    observer.observe(element)
+    window.addEventListener('resize', measure)
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('resize', measure)
+    }
+  }, [selected])
 
   const beast = BEASTS.find((b) => b.id === selected)
   if (!beast) return null
@@ -25,7 +42,7 @@ export function Card() {
 
   return (
     <>
-      <aside className="card">
+      <aside className="card" ref={card}>
         <div className="card-head">
           <h2 className="card-name">{beast.name}</h2>
           <span className="card-pinyin">{beast.pinyin}</span>
@@ -78,7 +95,7 @@ export function Card() {
       </aside>
 
       {narrating && (
-        <div className="story-caption" role="status" aria-live="polite">
+        <div className="story-caption" style={{ '--story-left': `${captionLeft}px` } as CSSProperties} role="status" aria-live="polite">
           <span className="story-badge">评书 · 龙三叔</span>
           <p>{beast.story}</p>
         </div>

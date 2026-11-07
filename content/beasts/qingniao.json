@@ -1,0 +1,35 @@
+{
+  "id": "qingniao",
+  "name": "青鸟",
+  "archetype": "avian",
+  "source": [
+    { "book": "山海經·大荒西經", "text": "有三青鳥，赤首黒目，一名曰大鵹，一名少鵹，一名曰青鳥。" },
+    { "book": "山海經·海內北經", "text": "其南有三青鳥，為西王母取食。" }
+  ],
+  "inferred": [
+    { "item": "三只赤首黑目青鸟；两篇分条合参", "basis": "《大荒西经》同一句明确记三青鸟、赤首黒目及三个名称，本页据此展示三只独立完整鸟体。《海内北经》另记三青鸟为西王母取食，单独引用以说明合参；不将两篇拼作一条原文。" },
+    { "item": "石青羽、灰喙、褐足与普通双翼双足为造型推断", "basis": "赤首、黑目及三鸟数量直接据经文；具体鸟种、蓝青色阶、喙足颜色、体量、普通禽鸟的双足双翼与一束尾羽均属艺术补足。原文未规定三条长尾，也未说明三鸟体型各异。" },
+    { "item": "结伴短跃、俯首寻食与舒翼为动作演绎", "basis": "以《海内北经》的取食记载设计俯首、略展双翼再收拢的展示；同向短跃、三角排布与动作错相为便于观赏的艺术安排，未复原食物种类或添加传递佳音等后世叙事。" },
+    { "item": "三声短鸣为拟声；两条原文均未记叫声", "basis": "三个先后响起的清短鸟鸣是听觉设计，音高、音色和节奏均为推断。" }
+  ],
+  "references": [
+    { "url": "https://zh.wikisource.org/wiki/山海經/大荒西經", "note": "采用同一明确条文的三青鳥、赤首黒目及大鵹、少鵹、青鳥；不拼接远处的王母之山等段落。" },
+    { "url": "https://zh.wikisource.org/wiki/山海經/海內北經", "note": "取食为独立篇目引文；避开戴胜杖等传本差异，截取共同的完整分句。" },
+    { "url": "https://www.gutenberg.org/cache/epub/25288/pg25288.txt", "note": "交叉核对两篇；电子本用部件描述表示鵹字。" }
+  ],
+  "production": {
+    "method": "offline reuse of verified HIGH avian geometry; zero new generation transactions",
+    "master": "jingwei-body-max/base_high_pbr.glb",
+    "masterSha256": "fefde14bf4e80074c368eb8bea4ce373b3f03db24890517ae7f83eaf54175319",
+    "ledgerTier": "Gen-2.5-Extreme-High",
+    "ledgerUuid": "3954a021-1bf6-4764-9355-00eaad9c4dd6",
+    "ledgerHash": "21e8f0401fa3431b",
+    "masterTriangles": 50000,
+    "finalTrianglesPerBird": 49902,
+    "runtimeBodies": 3,
+    "rigBonesPerBird": 19,
+    "changes": "slender avian body, moderately shortened natural tail, folded paired feather wings, anatomical red-head/black-eye/blue-body UV repaint, independent foot-contact idle/walk/alert rig; SkeletonUtils clone with separate skeletons and mixers for all three birds",
+    "scripts": ["pipeline/blender/prepare_qingniao.py", "pipeline/blender/rig_qingniao.py"],
+    "narration": { "workflow": "pipeline/tts/narrate.ts --force qingniao", "model": "cosyvoice-v2", "voice": "longsanshu" }
+  }
+}

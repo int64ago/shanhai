@@ -187,10 +187,10 @@ button {
 /* 评书人实时解说字幕条 */
 .story-caption {
   position: fixed;
-  left: 50%;
+  left: var(--story-left);
+  right: 120px;
   top: 26px;
-  transform: translateX(-50%);
-  max-width: min(680px, calc(100% - 340px));
+  max-width: 680px;
   padding: 10px 18px;
   display: flex;
   align-items: flex-start;
@@ -770,6 +770,17 @@ button {
 .card-act-btn.is-primary:hover {
   background: var(--cinnabar);
   border-color: var(--cinnabar);
+}
+
+@media (min-width: 641px) and (max-width: 1000px) {
+  .story-caption {
+    left: 32px;
+    right: 96px;
+    top: auto;
+    bottom: 236px;
+    max-height: 28vh;
+    overflow-y: auto;
+  }
 }
 
 @media (max-width: 640px) {

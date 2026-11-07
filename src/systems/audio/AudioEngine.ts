@@ -549,6 +549,29 @@ class AudioEngine {
     this.foxFire(pan)
   }
 
+  /** 三青鸟两篇原文均未记鸣声；三声错落鸟鸣为听觉推断。 */
+  qingniaoCall() {
+    const ctx = this.ctx
+    if (!ctx) return
+    for (const [i, hz] of [1680, 2020, 1840].entries()) {
+      const out = this.panner((i - 1) * 0.45)
+      out.connect(this.sfx)
+      const t = ctx.currentTime + i * 0.28
+      const osc = ctx.createOscillator()
+      osc.type = 'triangle'
+      osc.frequency.setValueAtTime(hz, t)
+      osc.frequency.exponentialRampToValueAtTime(hz * 1.3, t + 0.08)
+      osc.frequency.exponentialRampToValueAtTime(hz * 0.9, t + 0.21)
+      const gain = ctx.createGain()
+      gain.gain.setValueAtTime(0, t)
+      gain.gain.linearRampToValueAtTime(0.11, t + 0.02)
+      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.24)
+      osc.connect(gain).connect(out)
+      osc.start(t)
+      osc.stop(t + 0.27)
+    }
+  }
+
   /** 鴖原文未记鸣声；清短双哨仅为鸟类听觉推断。 */
   minBirdCall(pan = 0) {
     const ctx = this.ctx
