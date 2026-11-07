@@ -1,0 +1,8 @@
+{
+  "id": "lili-body-v1",
+  "beast": "lili",
+  "budget": 6,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "Lili mythical young pig from Shan Hai Jing, realistic compact stout piglet with one pig head, short broad pig snout, no tusks, small upright ears, earthy ochre brown short bristly hide with darker burnt umber bristle ridge along spine, natural animal anatomy, standing on FOUR distinct short sturdy straight legs with clearly separated slender lower legs and four separate cloven hooves firmly on ground, level back, neutral standing pose, short natural pig tail, full body, Chinese mythical beast, no saddle, no clothing, no jewelry, no pedestal, no plants",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

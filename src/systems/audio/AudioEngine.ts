@@ -863,6 +863,51 @@ class AudioEngine {
     this.qiongqiCall(pan)
   }
 
+  /** 狸力「其音如狗吠」：起音陡、音高速降的短吠；三声节奏与音高为交互演绎。 */
+  liliCall(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const out = this.panner(pan)
+    out.connect(this.sfx)
+
+    for (const [offset, duration, hz] of [[0, 0.15, 410], [0.24, 0.13, 450], [0.62, 0.2, 370]]) {
+      const t = ctx.currentTime + offset
+      const voice = ctx.createOscillator()
+      voice.type = 'sawtooth'
+      voice.frequency.setValueAtTime(hz, t)
+      voice.frequency.exponentialRampToValueAtTime(hz * 1.3, t + duration * 0.18)
+      voice.frequency.exponentialRampToValueAtTime(hz * 0.55, t + duration)
+      const envelope = ctx.createGain()
+      envelope.gain.setValueAtTime(0, t)
+      envelope.gain.linearRampToValueAtTime(0.34, t + 0.012)
+      envelope.gain.exponentialRampToValueAtTime(0.001, t + duration)
+
+      // 两道共振峰给出张口吠叫的「汪」，比豚鸣的鼻音明亮。
+      for (const [frequency, level] of [[1050, 1], [2500, 0.45]]) {
+        const filter = ctx.createBiquadFilter()
+        filter.type = 'bandpass'
+        filter.frequency.setValueAtTime(frequency * 1.2, t)
+        filter.frequency.exponentialRampToValueAtTime(frequency * 0.8, t + duration)
+        filter.Q.value = 3.2
+        const gain = ctx.createGain()
+        gain.gain.value = level
+        voice.connect(filter).connect(gain).connect(envelope)
+      }
+      const rasp = ctx.createBufferSource()
+      rasp.buffer = this.noise(duration)
+      const highpass = ctx.createBiquadFilter()
+      highpass.type = 'highpass'
+      highpass.frequency.value = 1400
+      const raspGain = ctx.createGain()
+      raspGain.gain.value = 0.12
+      rasp.connect(highpass).connect(raspGain).connect(envelope)
+      envelope.connect(out)
+      voice.start(t)
+      voice.stop(t + duration + 0.03)
+      rasp.start(t)
+    }
+  }
+
   /** 狍鸮「其音如婴儿」：滑音与双共振峰合成啼声，不使用真人录音。 */
   taotieCall(pan = 0) {
     const ctx = this.ctx

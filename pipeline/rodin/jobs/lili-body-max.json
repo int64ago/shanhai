@@ -1,0 +1,9 @@
+{
+  "id": "lili-body-max",
+  "beast": "lili",
+  "budget": 6,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Lili mythical young pig from Shan Hai Jing, preserve reference shape and color, one broad pig head with short snout and no tusks, compact stout ochre brown body with dark burnt umber bristle patches along the back, four short separate sturdy legs and cloven hooves, level back, one short curled pig tail, neutral standing pose, no pedestal or accessories",
+  "images": ["concept/lili/view_34.png", "concept/lili/view_side.png", "concept/lili/view_front.png", "concept/lili/view_back.png"],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000 }
+}
