@@ -84,6 +84,12 @@
       "license": "沿用项目既有 CosyVoice 合成输出条款"
     },
     {
+      "path": "public/models/fengxi/body.glb",
+      "source": "既有 lili-body-max/base_basic_pbr.glb HIGH 母件只读离线复用，原猪身保留49,940三角面；任务50a86886-6239-477e-97d1-a5704447a60c、缓存与原件SHA-256一致。Blender改为高肩长吻深褐野猪，原创双弯牙与细鬃，合计51,564三角面；独立绑定步态并保持世界坐标支撑。完整来源见pipeline/provenance/fengxi.json。零新增Rodin交易。",
+      "author": "项目自有AI生成母件与本地原创几何改制",
+      "license": "Hyper3D Rodin生成输出（沿用项目既有源资产条款）；新增牙鬃为项目原创"
+    },
+    {
       "path": "public/models/_placeholder/fox.glb",
       "source": "Hyper3D Rodin Gen-2.5 Extreme-Low（pipeline/rodin/jobs/m1-placeholder-fox.json）",
       "author": "AI 生成",

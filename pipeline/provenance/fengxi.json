@@ -1,0 +1,77 @@
+{
+  "beast": "fengxi",
+  "method": "offline adaptation of an existing verified Extreme-High pig master with locally authored tusks and fine bristles",
+  "newRodinTransactions": 0,
+  "source": {
+    "beast": "lili",
+    "job": "lili-body-max",
+    "tier": "Gen-2.5-Extreme-High",
+    "quality_override": 50000,
+    "cacheHash": "316bbbba4299a2f3",
+    "uuid": "50a86886-6239-477e-97d1-a5704447a60c",
+    "receipt": "pipeline/rodin/credits.log, entry dated 2026-11-06T16:28:57.230Z",
+    "jobSpec": "pipeline/rodin/jobs/lili-body-max.json",
+    "input": "raw/lili-body-max/base_basic_pbr.glb",
+    "readOnlyCheckout": ".claude/worktrees/agent-ac45d9ee538ad3335",
+    "sha256": "7950abe172233cb8577ca69eab22d4ae595e95f98475964e0a71b96b9124a244",
+    "verification": "Reverified input and cached file hashes match; cache status done, job tier Extreme-High, quality override 50000 and UUID match the existing tracked receipt. Provider returned base_basic_pbr.glb rather than base_high_pbr.glb: the matching job/cache/receipt and retained 49,940-triangle body establish HIGH provenance. No Medium geometry or new generation transaction was used."
+  },
+  "classicalSources": [
+    {
+      "url": "https://zh.wikisource.org/wiki/山海經/海內經",
+      "chapter": "山海經·海內經",
+      "text": "有羸民，鳥足，有封豕。",
+      "verification": "Independently fetched primary-text transcription. The catalog quotes this edition verbatim. Bird feet describe the preceding people, not the boar. The sentence supplies no coat color, tusks, body dimensions or Sanglin story."
+    },
+    {
+      "url": "https://www.gutenberg.org/cache/epub/25288/pg25288.txt",
+      "chapter": "山海經·海內經",
+      "text": "有嬴民，鳥足，有封豕。",
+      "verification": "Independent primary-text transcription confirms 封豕; prints 嬴 rather than 羸. The edition variation is recorded rather than silently mixed into the chosen quote."
+    },
+    {
+      "url": "https://shanhaijing.5000yan.com/18-19.html",
+      "text": "有嬴民，鸟足。有封豕。",
+      "verification": "Additional transcription with modern annotation glossing 封豕 as 大猪; annotation is not imported into source."
+    }
+  ],
+  "externalReferences": [
+    {
+      "url": "https://zh.wikisource.org/wiki/淮南子/本經訓",
+      "book": "淮南子·本經訓",
+      "text": "斷修蛇於洞庭，禽封豨于桑林，萬民皆喜。",
+      "role": "External story source only, explicitly distinguished in metadata and Longsanshu narration; never presented as 山海經 source. This edition prints 于 in 禽封豨于桑林."
+    },
+    {
+      "url": "https://www.hanyuguoxue.com/shuowen/zi-35925",
+      "book": "說文解字注·豕部，段玉裁注",
+      "text": "《左傳》。封豕長蛇。《淮南書》作封豨脩蛇。",
+      "role": "External lexical commentary connecting 封豕 and 封豨 spellings. It does not establish that the full Huainanzi story is stated in Hai Nei Jing."
+    }
+  ],
+  "adaptation": [
+    "Normalize verified HIGH master to 1.6m before baking a 1.20 scale, longer snout, high shoulders and leaner rump; final boar is approximately 2m long, visibly distinct from Tongtong's low round grey pig.",
+    "Repaint base-color texture to deep warm brown while retaining original bristle, eye, nostril and hoof detail. No pearl or jewel geometry, shader or sound is reused.",
+    "Locally author two curved tapered canines embedded at the mouth corners and fifteen clusters of three short irregular bristles. These features, color and size are labeled design inferences, not Hai Nei Jing anatomy claims.",
+    "Fresh 20-bone quadruped skin with heat/proxy/distance fallback support. Actual heat weighting fell back to voxel proxy transfer; surface transfer repairs all remaining zero-weight vertices and binds bristles to adjacent back skin. Rigid tusks bind to head. Rigid hoof capsules blend into lower legs. Coincident seam weights are synchronized before the single 30fps export.",
+    "Four-second breathing idle, two-second four-beat walk at 0.27m/s and 0.68 stance duty, and 4.8-second planted low-head display. Runtime world-space CCD holds stance ankles and sole orientation while the root follows its circular path.",
+    "Retain 49,940 source-body triangles; offline tusks add 904 and bristles add 720, total 51,564. Meshopt plus 2048px WebP without simplification, flattening or joining.",
+    "Actual cached useGLTF singleton uses effect attachment and cleanup for each primitive's ink material and outline. No runtime anatomical attachments or pearl wash. Synthetic low boar breath is explicitly artistic.",
+    "Corrected story regenerated via pipeline/tts/narrate.ts using cosyvoice-v2 / longsanshu, MP3 only."
+  ],
+  "parentRuntimeAudit": {
+    "script": "scripts/qa-fengxi.mjs",
+    "method": "600 actual useFrame updates at 60Hz; refresh scene.updateMatrixWorld(true), then skeleton matrices before CPU skinning. Sample all selected sole vertices in world coordinates through stance, normalize foot quaternions for orientation. Shared createGroundContacts solver replaces duplicated CCD; recompute circular center from current position and heading whenever walk begins.",
+    "soleVerticesByLeg": [111, 64, 79, 57],
+    "maxStanceDriftMetersByLeg": [0.0000059897, 0.0000038632, 0.0000062294, 0.0000055757],
+    "maxStanceRotationRadians": 0.00000588,
+    "checks": "Three remounts retain 30 nodes, 3 body primitives, 3 outlines, 20 bones, no pearl wash; all three actions have finite attributes and skinned vertices. Walk reentry preserves position and heading. Special returns to idle. Actual narration advances, duration 42.736313 seconds, decoded RMS 0.1022035, media error null, AudioContext running. No browser errors."
+  },
+  "rebuild": [
+    "Blender normalize.py <verified-high-input> raw/_build/fengxi/high_norm.glb --length 1.6 --max-texture 2048",
+    "Blender prepare_fengxi.py raw/_build/fengxi/high_norm.glb raw/_build/fengxi/body_corrected.glb concept/fengxi",
+    "Blender rig_fengxi.py raw/_build/fengxi/body_corrected.glb raw/_build/fengxi/body_rig.glb",
+    "gltf-transform optimize raw/_build/fengxi/body_rig.glb public/models/fengxi/body.glb --compress meshopt --texture-compress webp --texture-size 2048 --simplify false --flatten false --join false",
+    "pnpm tts --force fengxi"
+  ]
+}

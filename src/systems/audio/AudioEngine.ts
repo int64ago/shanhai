@@ -715,6 +715,44 @@ class AudioEngine {
     water.start(t)
   }
 
+  /** 封豨粗重鼻息：据野猪习性作艺术演绎，《海内经》未记其声。 */
+  fengxiCall(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const out = this.panner(pan)
+    out.connect(this.sfx)
+    const t = ctx.currentTime
+    const duration = 1.3
+    const voice = ctx.createOscillator()
+    voice.type = 'sawtooth'
+    voice.frequency.setValueAtTime(88, t)
+    voice.frequency.exponentialRampToValueAtTime(68, t + duration)
+    const throat = ctx.createBiquadFilter()
+    throat.type = 'bandpass'
+    throat.frequency.setValueAtTime(340, t)
+    throat.frequency.exponentialRampToValueAtTime(230, t + duration)
+    throat.Q.value = 2.4
+    const envelope = ctx.createGain()
+    envelope.gain.setValueAtTime(0, t)
+    envelope.gain.linearRampToValueAtTime(0.32, t + 0.08)
+    envelope.gain.linearRampToValueAtTime(0.18, t + 0.65)
+    envelope.gain.exponentialRampToValueAtTime(0.001, t + duration)
+    voice.connect(throat).connect(envelope)
+    const breath = ctx.createBufferSource()
+    breath.buffer = this.noise(duration)
+    const filter = ctx.createBiquadFilter()
+    filter.type = 'bandpass'
+    filter.frequency.value = 720
+    filter.Q.value = 0.7
+    const rasp = ctx.createGain()
+    rasp.gain.value = 0.18
+    breath.connect(filter).connect(rasp).connect(envelope)
+    envelope.connect(out)
+    voice.start(t)
+    voice.stop(t + duration + 0.03)
+    breath.start(t)
+  }
+
   /** 狪狪「其鸣自訆」：两拍圆润鼻音豚鸣，节律借今音，非古音复原。 */
   tongtongCall(pan = 0) {
     const ctx = this.ctx
