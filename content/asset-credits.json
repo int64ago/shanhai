@@ -20,6 +20,26 @@
       "license": "沿用项目百炼 CosyVoice 合成音频条款"
     },
     {
+      "path": "public/models/ershu/body.glb",
+      "source": "仅离线改制既有 HIGH 鹿形母件：raw/fuzhu-body-max/base_basic_pbr.glb，50,000 三角面；原任务 fuzhu-body-max，Gen-2.5-Extreme-High，uuid 7b95334a-3520-475f-8134-301186bc8405，已载于 pipeline/rodin/credits.log（2026-11-01）。文件虽名 basic，几何确为该 HIGH 任务输出；未使用 Medium，未提交新的 Rodin 事务。保留鹿躯与四足的 39,635 三角面，去除原鹿首、四角与短尾，离线雕刻兔首、双长耳、颊须和单条渐细环纹鼠形尾，独立绑定 32 骨及 idle/walk/special；最终 104,575 三角面，不减面压缩。重建脚本：pipeline/blender/prepare_ershu.py、rig_ershu.py。",
+      "sourceSha256": "9285fa2aa47dd1e949f403a1a89b71c954cf24a337512fc40619742f4a243344",
+      "sourceReference": "https://zh.wikisource.org/wiki/山海經/北山經 · 北山經之首 · 丹熏之山。原文菟首麋身、以其尾飛；鼠首兔身且以背飛者是北次三經的飛鼠。尾形与飞行机制只列于 inferred。",
+      "author": "项目自有 HIGH AI 生成鹿躯与离线程序雕刻",
+      "license": "Hyper3D Rodin 生成输出（沿用项目既有源资产条款）；新增离线雕刻与绑定为项目自制"
+    },
+    {
+      "path": "concept/ershu/view_{34,side,front,back,left}.png",
+      "source": "由最终离线耳鼠雕刻在 Blender 中独立渲染，非生成服务输出；正、背与双侧用于核查鹿首和短尾裁切后的解剖完整性。",
+      "author": "项目自制",
+      "license": "沿用耳鼠模型授权"
+    },
+    {
+      "path": "public/audio/narration/ershu.mp3",
+      "source": "pipeline/tts/narrate.ts，阿里云百炼 CosyVoice cosyvoice-v2 / longsanshu，按最终校订的 src/app/beasts.ts 耳鼠解说词重新合成，MP3 22050 Hz。",
+      "author": "项目撰稿与 CosyVoice 合成",
+      "license": "沿用项目既有 CosyVoice 合成输出条款"
+    },
+    {
       "path": "public/models/_placeholder/fox.glb",
       "source": "Hyper3D Rodin Gen-2.5 Extreme-Low（pipeline/rodin/jobs/m1-placeholder-fox.json）",
       "author": "AI 生成",

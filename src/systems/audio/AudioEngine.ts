@@ -733,6 +733,40 @@ class AudioEngine {
     }
   }
 
+  /** 耳鼠「其音如獆犬」：两声短吠，音高与节奏为听觉演绎。 */
+  ershuCall(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const out = this.panner(pan)
+    out.connect(this.sfx)
+    for (const [index, offset] of [0, 0.28].entries()) {
+      const t = ctx.currentTime + offset
+      const duration = 0.20 + index * 0.035
+      const voice = ctx.createOscillator()
+      voice.type = 'sawtooth'
+      voice.frequency.setValueAtTime(330 - index * 35, t)
+      voice.frequency.exponentialRampToValueAtTime(150, t + duration)
+      const filter = ctx.createBiquadFilter()
+      filter.type = 'bandpass'
+      filter.frequency.setValueAtTime(1100, t)
+      filter.frequency.exponentialRampToValueAtTime(560, t + duration)
+      filter.Q.value = 1.5
+      const envelope = ctx.createGain()
+      envelope.gain.setValueAtTime(0, t)
+      envelope.gain.linearRampToValueAtTime(0.24, t + 0.012)
+      envelope.gain.exponentialRampToValueAtTime(0.001, t + duration)
+      voice.connect(filter).connect(envelope).connect(out)
+      voice.start(t)
+      voice.stop(t + duration + 0.02)
+      voice.onended = () => {
+        voice.disconnect()
+        filter.disconnect()
+        envelope.disconnect()
+        if (index === 1) out.disconnect()
+      }
+    }
+  }
+
   /** 天马「其鸣自訆」：借今音的两个音节作犬声演绎，非古音复原。 */
   tianmaCall(pan = 0) {
     const ctx = this.ctx
