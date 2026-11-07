@@ -43,6 +43,7 @@ import { Ershu } from '../beasts/ershu/Ershu'
 import { Qique } from '../beasts/qique/Qique'
 import { Boyi } from '../beasts/boyi/Boyi'
 import { Tongtong } from '../beasts/tongtong/Tongtong'
+import { Fenghuang } from '../beasts/fenghuang/Fenghuang'
 import { CameraRig } from './CameraRig'
 
 export function Stage() {
@@ -130,6 +131,8 @@ export function Stage() {
           <Boyi />
         ) : selected === 'tongtong' ? (
           <Tongtong />
+        ) : selected === 'fenghuang' ? (
+          <Fenghuang />
         ) : (
           <PlaceholderBeast />
         )}

@@ -1,0 +1,21 @@
+{
+  "id": "fenghuang",
+  "name": "凤凰",
+  "archetype": "avian",
+  "source": [{"book": "山海经·南山经·南次三经", "text": "有鳥焉，其狀如雞，五采而文，名曰鳳皇，首文曰德，翼文曰義，背文曰禮，膺文曰仁，腹文曰信。是鳥也，飲食自然，自歌自舞，見則天下安寧。"}],
+  "inferred": [
+    {"item": "短喙丰胸的双足鸡形，低羽冠与短扇尾", "basis": "鸡形直接据「其狀如雞」；具体喙长、胸腹比例、双足数与足趾、低羽冠、七片短扇翎和五片冠羽为设计补足，原文未记长尾或高冠。"},
+    {"item": "朱红、青绿、赭金、米白、墨黑五采", "basis": "五采而文直接见于正文；这五种颜料色、羽区位置、羽缘分色与眼喙足色均为艺术设色，原文未逐一指定五色。"},
+    {"item": "首德、翼义、背礼、膺仁、腹信的羽面字纹", "basis": "五处位置与对应的德、义、礼、仁、信均直接据经文；将「文曰」解释成可辨的德、義、禮、仁、信书写字纹，是视觉推断，不主张复原古文字。纹样随羽面起伏，胸前仁纹与腹部信纹分开，双翼各配义纹。"},
+    {"item": "静立、交替缓步与展翼踏舞", "basis": "自歌自舞见于原文；静立呼吸、每步的支撑节律、展翼幅度、左右先后踏步及具体清亮和鸣均为交互演绎，非古经所记步法或音高。"}
+  ],
+  "sourceVerification": {"url": "https://zh.wikisource.org/wiki/山海經/南山經", "checked": "2026-11-07", "note": "南次三经丹穴之山条；正文作鳳皇，逐项核实鸡形、五采而文、首德/翼義/背禮/膺仁/腹信、自歌自舞及见则天下安宁。仅引完整鸟条，未将隔开的山名拼成连续引文；不补写不啄凡粟、雌雄区分、火焰或后世长尾。"},
+  "production": {
+    "newRodinTransactions": 0,
+    "newRodinCredits": 0,
+    "bodySource": {"job": "jingwei-body-max", "tier": "Gen-2.5-Extreme-High", "uuid": "3954a021-1bf6-4764-9355-00eaad9c4dd6", "raw": "raw/jingwei-body-max/base_high_pbr.glb", "sha256": "fefde14bf4e80074c368eb8bea4ce373b3f03db24890517ae7f83eaf54175319", "normalized": "raw/_build/jingwei/body_norm.glb", "normalizedSha256": "ab687f14f5eeaa30ee656338a9173df1fc2ad221e382f346952c22bafd32018b", "sourceTriangles": 49902},
+    "adaptation": "Offline anatomy adaptation of verified Extreme-High geometry: compact bill, widened breast, shorter legs and wings, smoothly raised short native tail; original authored short fan and low crown feathers with shafts and barbs. Five virtue glyphs are rasterized from Arial Unicode into existing feather UVs at the specified anatomical regions, with no floating label or extruded text. New feather geometry is manual authorship, not claimed AI HIGH generation. Dense source retained without simplification; finite inverse-transpose Jacobian transforms authored normals, without computeVertexNormals.",
+    "scripts": ["pipeline/blender/prepare_fenghuang.py", "pipeline/blender/rig_fenghuang.py"],
+    "narration": {"pipeline": "pipeline/tts/narrate.ts", "model": "cosyvoice-v2", "voice": "longsanshu", "format": "mp3", "sampleRate": 22050}
+  }
+}

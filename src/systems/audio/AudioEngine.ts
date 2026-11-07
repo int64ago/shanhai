@@ -1000,6 +1000,29 @@ class AudioEngine {
     }
   }
 
+  /** 凤凰「自歌自舞」的和鸣；具体音阶与音色为艺术补足。 */
+  fenghuangCall(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const out = this.panner(pan)
+    out.connect(this.sfx)
+    for (const [i, pitch] of [659.25, 783.99, 987.77, 783.99].entries()) {
+      const t = ctx.currentTime + i * 0.19
+      const tone = ctx.createOscillator()
+      tone.type = 'triangle'
+      tone.frequency.setValueAtTime(pitch * 0.93, t)
+      tone.frequency.exponentialRampToValueAtTime(pitch, t + 0.055)
+      tone.frequency.exponentialRampToValueAtTime(pitch * 0.98, t + 0.30)
+      const gain = ctx.createGain()
+      gain.gain.setValueAtTime(0, t)
+      gain.gain.linearRampToValueAtTime(0.085, t + 0.025)
+      gain.gain.exponentialRampToValueAtTime(0.0005, t + 0.31)
+      tone.connect(gain).connect(out)
+      tone.start(t)
+      tone.stop(t + 0.33)
+    }
+  }
+
   /** 鬿雀的短促粗鸣为听觉补足；本条古经没有记载鸣声。 */
   qiqueCall(pan = 0) {
     const ctx = this.ctx
