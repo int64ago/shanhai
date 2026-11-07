@@ -1,0 +1,51 @@
+{
+  "beast": "tongtong",
+  "method": "offline adaptation of an existing verified Extreme-High pig master",
+  "newRodinTransactions": 0,
+  "source": {
+    "beast": "lili",
+    "job": "lili-body-max",
+    "tier": "Gen-2.5-Extreme-High",
+    "quality_override": 50000,
+    "cacheHash": "316bbbba4299a2f3",
+    "uuid": "50a86886-6239-477e-97d1-a5704447a60c",
+    "receipt": "pipeline/rodin/credits.log, entry dated 2026-11-06T16:28:57.230Z",
+    "jobSpec": "pipeline/rodin/jobs/lili-body-max.json",
+    "input": "raw/lili-body-max/base_basic_pbr.glb",
+    "readOnlyCheckout": ".claude/worktrees/agent-ac45d9ee538ad3335",
+    "sha256": "7950abe172233cb8577ca69eab22d4ae595e95f98475964e0a71b96b9124a244",
+    "verification": "Input matches the cached file byte-for-byte; cache metadata status done, tier Extreme-High, quality override 50000, UUID matches tracked credit receipt. The provider returned base_basic_pbr.glb, not base_high_pbr.glb; quality is established by the matching job/cache/receipt and 49,940-triangle geometry, not the filename. No Medium mesh was used."
+  },
+  "classicalSources": [
+    {
+      "url": "https://www.kanripo.org/ed/KR5d0054/SBCK/004",
+      "chapter": "山海經·東山經·東山經之首",
+      "text": "又南三百里，曰泰山，其上多玉，其下多金。有獸焉，其狀如豚而有珠，名曰狪狪，其鳴自訆。環水出焉，東流注於江，其中多水玉。"
+    },
+    {
+      "url": "https://www.arteducation.com.tw/guwen/bookv_46653FD803893E4F5BEE801AE7C631E7.html",
+      "verification": "Independent primary-text transcription, opening 東山經 circuit, 泰山 paragraph. Uses 自詨 rather than 自訆. Translation places the pearl inside the body, while the primary sentence only says 有珠."
+    },
+    {
+      "url": "https://www.guoxuemi.com/a/2829ijrh/130433w.html",
+      "verification": "Independent primary text confirms 東山經之首, 泰山 between 犲山 and 竹山, 如豚而有珠; uses simplified characters and 自詨."
+    }
+  ],
+  "adaptation": [
+    "Normalize the existing HIGH input to 1.6m horizontal length and 2048px textures.",
+    "Broaden the torso and snout, shorten the muzzle, lower the back and ear tips; preserve four cloven hooves, two ears and one native curled tail. No spur, tusk, forehead pearl or external jewel is added.",
+    "Repaint only base-color texture to muted stone grey while preserving dark eyes, nostrils, bristles and hoof detail.",
+    "Fresh quadruped skin with heat/proxy/distance fallback support; rigid split-hoof capsules blended into the lower legs; average coincident seam weights before export at 30fps.",
+    "Analytic two-bone hoof targets: four-beat 1.6s walk at 0.3m/s, level stance feet; breathing idle and planted 4.6s calling display. Runtime shared createGroundContacts CCD locks stance ankles and sole orientation in world space while following a circle anchored to the current position and heading on each walk entry. Parent integrated QA measured every selected sole vertex across 600 actual runtime frames: maximum displacement 0.018mm and orientation drift below 0.000006rad in stable support intervals, excluding transition boundaries. Paused-render measurements refresh SkinnedMesh.updateMatrixWorld to update attached bindMatrixInverse.",
+    "Meshopt and 2048px WebP compression without simplification, flattening or joining. Final geometry retains 49,940 triangles.",
+    "Runtime uses actual useGLTF singleton with effect attachment/cleanup; standard alpha watercolor pearl wash and paired synthetic pig call. Internal pearl location, colors, wash and call are labeled artistic interpretations.",
+    "Corrected narration regenerated through pipeline/tts/narrate.ts using cosyvoice-v2 / longsanshu, MP3 only."
+  ],
+  "rebuild": [
+    "Blender normalize.py <verified-high-input> raw/_build/tongtong/high_norm.glb --length 1.6 --max-texture 2048",
+    "Blender prepare_tongtong.py raw/_build/tongtong/high_norm.glb raw/_build/tongtong/body_corrected.glb concept/tongtong",
+    "Blender rig_tongtong.py raw/_build/tongtong/body_corrected.glb raw/_build/tongtong/body_rig.glb",
+    "gltf-transform optimize raw/_build/tongtong/body_rig.glb public/models/tongtong/body.glb --compress meshopt --texture-compress webp --texture-size 2048 --simplify false --flatten false --join false",
+    "pnpm tts --force tongtong"
+  ]
+}

@@ -96,6 +96,12 @@
       "license": "Hyper3D Rodin 生成输出（沿用项目既有源资产条款）"
     },
     {
+      "path": "public/models/tongtong/body.glb",
+      "source": "既有 lili-body-max/base_basic_pbr.glb 高模离线复用；Gen-2.5-Extreme-High 任务 50a86886-6239-477e-97d1-a5704447a60c，49,940 三角面，缓存与原件 SHA-256 一致。经 Blender 调整猪身比例、重绘石灰青皮毛、独立绑定接地步态；完整来源见 pipeline/provenance/tongtong.json。未追加 Rodin 生成交易。",
+      "author": "项目自有 AI 生成素材与离线改制",
+      "license": "Hyper3D Rodin 生成输出（沿用项目既有源资产条款）"
+    },
+    {
       "path": "public/audio/narration/zouwu.mp3",
       "source": "Original corrected story via existing pipeline/tts/narrate.ts, CosyVoice v2 / longsanshu, MP3 22050 Hz.",
       "author": "项目原创解说词；百炼龙三叔合成",

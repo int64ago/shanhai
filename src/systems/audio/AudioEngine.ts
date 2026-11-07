@@ -686,6 +686,47 @@ class AudioEngine {
     water.start(t)
   }
 
+  /** 狪狪「其鸣自訆」：两拍圆润鼻音豚鸣，节律借今音，非古音复原。 */
+  tongtongCall(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const out = this.panner(pan)
+    out.connect(this.sfx)
+    for (const [offset, hz, duration] of [[0, 135, 0.32], [0.43, 142, 0.44]]) {
+      const t = ctx.currentTime + offset
+      const voice = ctx.createOscillator()
+      voice.type = 'sawtooth'
+      voice.frequency.setValueAtTime(hz * 0.88, t)
+      voice.frequency.exponentialRampToValueAtTime(hz, t + 0.06)
+      voice.frequency.exponentialRampToValueAtTime(hz * 0.78, t + duration)
+      const envelope = ctx.createGain()
+      envelope.gain.setValueAtTime(0, t)
+      envelope.gain.linearRampToValueAtTime(0.22, t + 0.035)
+      envelope.gain.exponentialRampToValueAtTime(0.001, t + duration)
+      for (const [frequency, level] of [[420, 1], [1120, 0.22]]) {
+        const filter = ctx.createBiquadFilter()
+        filter.type = 'bandpass'
+        filter.frequency.value = frequency
+        filter.Q.value = 3.8
+        const gain = ctx.createGain()
+        gain.gain.value = level
+        voice.connect(filter).connect(gain).connect(envelope)
+      }
+      const breath = ctx.createBufferSource()
+      breath.buffer = this.noise(duration)
+      const lowpass = ctx.createBiquadFilter()
+      lowpass.type = 'lowpass'
+      lowpass.frequency.value = 650
+      const gain = ctx.createGain()
+      gain.gain.value = 0.1
+      breath.connect(lowpass).connect(gain).connect(envelope)
+      envelope.connect(out)
+      voice.start(t)
+      voice.stop(t + duration + 0.02)
+      breath.start(t)
+    }
+  }
+
   /** 当康「其鸣自叫」：两音节鼻腔豚鸣，具体音色为艺术演绎。 */
   dangkangCall(pan = 0) {
     const ctx = this.ctx
