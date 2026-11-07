@@ -931,6 +931,45 @@ class AudioEngine {
     }
   }
 
+  /** 讙「其音如夺百声」：错落重叠的短鸣与啸声，具体音色为听觉演绎。 */
+  huanCall(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const out = this.panner(pan)
+    out.connect(this.sfx)
+    const voices: [number, number, number, number, OscillatorType][] = [
+      [0, 0.82, 260, 470, 'sawtooth'],
+      [0.12, 0.34, 1250, 760, 'sine'],
+      [0.35, 0.62, 540, 310, 'triangle'],
+      [0.65, 0.44, 830, 1430, 'sine'],
+    ]
+    for (const [offset, duration, from, to, type] of voices) {
+      const t = ctx.currentTime + offset
+      const tone = ctx.createOscillator()
+      tone.type = type
+      tone.frequency.setValueAtTime(from, t)
+      tone.frequency.exponentialRampToValueAtTime(to, t + duration)
+      const filter = ctx.createBiquadFilter()
+      filter.type = 'bandpass'
+      filter.frequency.value = type === 'sawtooth' ? 1150 : 2300
+      filter.Q.value = 1.5
+      const gain = ctx.createGain()
+      gain.gain.setValueAtTime(0, t)
+      gain.gain.linearRampToValueAtTime(0.22, t + 0.025)
+      gain.gain.exponentialRampToValueAtTime(0.001, t + duration)
+      const vibrato = ctx.createOscillator()
+      vibrato.frequency.value = 12 + offset * 9
+      const depth = ctx.createGain()
+      depth.gain.value = from * 0.045
+      vibrato.connect(depth).connect(tone.frequency)
+      tone.connect(filter).connect(gain).connect(out)
+      tone.start(t)
+      vibrato.start(t)
+      tone.stop(t + duration + 0.03)
+      vibrato.stop(t + duration + 0.03)
+    }
+  }
+
   /** 《海内北经》未记穷奇鸣声；低沉虎啸与气声为「状如虎」的交互艺术补足。 */
   qiongqiCall(pan = 0) {
     const ctx = this.ctx
