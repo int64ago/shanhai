@@ -58,8 +58,14 @@ elif [[ "$ARCHETYPE" == "avian" ]]; then
   BODY_LEN=1.22
 fi
 
+RIG_SCRIPT="rig_${ARCHETYPE}.py"
+if [[ "$BEAST" == "jingwei" ]]; then
+  BODY_LEN=1.5
+  RIG_SCRIPT=rig_jingwei.py
+fi
+
 blender normalize.py "$(pick_glb "$BODY_JOB")" "$WORK/body_norm.glb" --length "$BODY_LEN" ${TRIM_FLAG[@]+"${TRIM_FLAG[@]}"}
-blender "rig_${ARCHETYPE}.py" "$WORK/body_norm.glb" "$WORK/body_rig.glb" --preview "$WORK/rig.png"
+blender "$RIG_SCRIPT" "$WORK/body_norm.glb" "$WORK/body_rig.glb" --preview "$WORK/rig.png"
 optimize "$WORK/body_rig.glb" "$OUT/body.glb" 2048
 
 for spec in ${PARTS[@]+"${PARTS[@]}"}; do

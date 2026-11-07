@@ -1,0 +1,18 @@
+{
+  "id": "jingwei-body-max",
+  "beast": "jingwei",
+  "budget": 6,
+  "tier": "Gen-2.5-Extreme-High",
+  "images": [
+    "concept/jingwei/view_34.png",
+    "concept/jingwei/view_side.png",
+    "concept/jingwei/view_front.png",
+    "concept/jingwei/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

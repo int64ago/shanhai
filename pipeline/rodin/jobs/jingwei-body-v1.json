@@ -1,0 +1,12 @@
+{
+  "id": "jingwei-body-v1",
+  "beast": "jingwei",
+  "budget": 6,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "A single crow-like bird Jingwei from Shan Hai Jing, anatomically natural small raven standing upright on exactly TWO short red bird legs with red toes firmly planted on ground, one compact crow torso, one smooth rounded crow head with delicate rust-gold patterned forehead feather markings, NO crest NO horns NO crown NO ornamental head feathers, one ivory white short sturdy crow beak, dark charcoal indigo black plumage, natural single tapered crow tail, exactly TWO feathered wings extended horizontally in symmetric relaxed T-pose, wings attached at shoulders, clear separated primary feathers, no extra limbs no objects no pedestal, realistic coherent bird anatomy, full body 3D game asset with detailed matte feather texture",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

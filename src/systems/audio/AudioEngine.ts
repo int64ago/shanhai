@@ -549,6 +549,32 @@ class AudioEngine {
     this.foxFire(pan)
   }
 
+  /** 精卫「其鸣自詨」：近似自呼「精—卫」的双声鸦鸣，音色与节奏为艺术推断。 */
+  jingweiCall(pan = 0) {
+    const ctx = this.ctx
+    if (!ctx) return
+    const out = this.panner(pan)
+    out.connect(this.sfx)
+    for (const [offset, duration, start, end] of [[0, 0.25, 920, 1140], [0.34, 0.48, 1080, 680]]) {
+      const t = ctx.currentTime + offset
+      const osc = ctx.createOscillator()
+      osc.type = 'sawtooth'
+      osc.frequency.setValueAtTime(start, t)
+      osc.frequency.exponentialRampToValueAtTime(end, t + duration)
+      const filter = ctx.createBiquadFilter()
+      filter.type = 'bandpass'
+      filter.frequency.value = 1650
+      filter.Q.value = 2.4
+      const gain = ctx.createGain()
+      gain.gain.setValueAtTime(0, t)
+      gain.gain.linearRampToValueAtTime(0.22, t + 0.025)
+      gain.gain.exponentialRampToValueAtTime(0.001, t + duration)
+      osc.connect(filter).connect(gain).connect(out)
+      osc.start(t)
+      osc.stop(t + duration + 0.03)
+    }
+  }
+
   /** 鹿蜀「其音如谣」：五声短句与柔和的声带泛音。 */
   lushuSong(pan = 0) {
     const ctx = this.ctx

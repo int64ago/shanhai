@@ -380,4 +380,5 @@ def main():
     print('EXPORTED', args.output, 'bones', len(arm.data.bones))
 
 
-main()
+if __name__ == '__main__':
+    main()
