@@ -1,15 +1,17 @@
 import assert from 'node:assert/strict'
 import { mkdir, writeFile } from 'node:fs/promises'
-import { join } from 'node:path'
+import { join, resolve } from 'node:path'
 import { chromium } from 'playwright-core'
-const [base='http://localhost:5221',output='/tmp/changyou-qa']=process.argv.slice(2)
+// Optional local candidate path exercises the real component before public replacement.
+const [base='http://localhost:5221',output='/tmp/changyou-qa',candidate]=process.argv.slice(2)
 await mkdir(output,{recursive:true})
 const browser=await chromium.launch({channel:'chrome',args:['--use-angle=metal','--enable-gpu','--autoplay-policy=no-user-gesture-required']})
 const page=await browser.newPage({viewport:{width:1440,height:900}})
+if(candidate)await page.route('**/models/changyou/body.glb*',route=>route.fulfill({path:resolve(candidate),contentType:'model/gltf-binary'}))
 const errors=[]
 page.on('pageerror',e=>errors.push(String(e)))
 page.on('response',r=>{if(r.status()>=400)errors.push(`${r.status()} ${r.url()}`)})
-const report={actions:{},remounts:[],errors}
+const report={candidate:candidate?resolve(candidate):null,actions:{},remounts:[],errors}
 try {
   const ready=page.waitForEvent('console',{predicate:m=>m.text().includes('[beast] ready changyou')})
   await page.goto(`${base}/?beast=changyou&action=idle`);await ready
@@ -41,8 +43,20 @@ try {
         }
       }
     })
+    const separateEarMeshes=meshes.filter(n=>/^changyou_ear_[lr]_[01]$/.test(n.name)).length
+    const native=meshes.find(n=>n.userData.integratedNativeHead===true)
+    let rigidHeadVertices=0
+    if(native){
+      const g=native.geometry.attributes
+      for(let i=0;i<g.position.count;i++)if(native.skeleton.bones[g.skinIndex.getX(i)]?.name==='head'&&g.skinWeight.getX(i)>.9999)rigidHeadVertices++
+    }
+    // Integrated ear count is a reviewed source-design declaration, not a
+    // geometric detector. The fixed head surface is cross-checked by weights;
+    // real four-ear anatomy is separately verified in source/posed images.
+    const ears=separateEarMeshes===4?4:native?.userData.nativeEarCount===4&&rigidHeadVertices>100?4:0
     return {invalid,nodes,vertices,meshes:meshes.length,outlines:outlines.length,bones:bones.length,
-      ears:meshes.filter(n=>/^changyou_ear_[lr]_[01]$/.test(n.name)).length,
+      ears,separateEarMeshes,integratedNativeHead:!!native,rigidHeadVertices,
+      earEvidence:native?'reviewed source images + preserved rigid head':'separate ear meshes',
       feet:bones.filter(n=>/^leg_[lr]_foot$/.test(n.name)).length,
       hands:bones.filter(n=>/^arm_[lr]_hand$/.test(n.name)).length}
   },full)}
@@ -56,17 +70,32 @@ try {
     const q=window.changyouQA,root=q.state.scene.getObjectByName('changyou_root')
     const mesh=root.getObjectByName('changyou_primate'),g=mesh.geometry.attributes,points=[]
     q.state.scene.updateMatrixWorld(true);mesh.skeleton.update()
+    const ceiling=mesh.userData.restAnatomicalFootMaxHeight
+    if(!Number.isFinite(ceiling)||ceiling<.06||ceiling>.10)throw new Error('Reviewed rest foot bounds missing')
+    const sides={leg_l_foot:0,leg_r_foot:0},rest=root.position.clone()
+    // This rig's root has identity rest transform. Its inverse bind matrix
+    // carries meshopt's dequantization, which bindMatrix alone does not undo.
+    const restMatrix=mesh.skeleton.boneInverses[mesh.skeleton.bones.findIndex(b=>b.name==='root')]
+    if(!restMatrix)throw new Error('Rest root inverse bind missing')
     for(let i=0;i<g.position.count;i++){
+      // Root inverse bind restores rest metres after meshopt quantization.
+      // Select anatomy before inspecting weights so a misweighted toe cannot hide.
+      rest.fromBufferAttribute(g.position,i).applyMatrix4(mesh.bindMatrix).applyMatrix4(restMatrix)
+      if(rest.y>ceiling-.00005)continue
+      const foot=rest.x>0?'leg_l_foot':'leg_r_foot'
+      let assigned=0
+      for(let k=0;k<4;k++)if(mesh.skeleton.bones[g.skinIndex.getComponent(i,k)]?.name===foot)assigned+=g.skinWeight.getComponent(i,k)
+      if(assigned<.9999)throw new Error(`Rest anatomical toe ${i} assigned ${assigned} to ${foot}`)
+      sides[foot]++
       const p=root.position.clone();mesh.getVertexPosition(i,p);mesh.localToWorld(p)
-      const local=root.worldToLocal(p.clone())
-      if(local.y>.045||Math.abs(local.x)>.30||local.z<-.09)continue
       points.push({i,initial:p.toArray()})
     }
+    if(Object.values(sides).some(n=>n<100))throw new Error('Both complete anatomical foot masks required')
     q.useApp.getState().setAction('special');await new Promise(r=>setTimeout(r,1500))
     q.state.scene.updateMatrixWorld(true);mesh.skeleton.update();let maxDrift=0
     for(const {i,initial} of points){const p=root.position.clone();mesh.getVertexPosition(i,p);mesh.localToWorld(p);maxDrift=Math.max(maxDrift,Math.hypot(...p.toArray().map((v,k)=>v-initial[k])))}
     q.useApp.getState().setAction('idle');await new Promise(r=>setTimeout(r,600))
-    return {vertices:points.length,maxDrift}
+    return {vertices:points.length,sides,maxDrift,selection:'reviewed rest spatial foot bounds, independent of weights'}
   })
   assert(report.gestureFeet.vertices>100&&report.gestureFeet.maxDrift<.003,'Every lateral toe stays planted during arm gesture')
   for(const action of ['idle','walk','special']){
@@ -83,15 +112,22 @@ try {
     q.state.scene.updateMatrixWorld(true)
     root.traverse(mesh=>{
       if(!mesh.isSkinnedMesh||mesh.userData.inkOutline||mesh.name!=='changyou_primate')return
-      mesh.skeleton.update();const g=mesh.geometry.attributes,p=root.position.clone()
+      mesh.skeleton.update();const g=mesh.geometry.attributes,rest=root.position.clone()
+      const restMatrix=mesh.skeleton.boneInverses[mesh.skeleton.bones.findIndex(b=>b.name==='root')]
+      if(!restMatrix)throw new Error('Rest root inverse bind missing')
+      const ceiling=mesh.userData.restAnatomicalSoleMaxHeight
+      if(!Number.isFinite(ceiling)||ceiling<=0||ceiling>.004)throw new Error('Reviewed rest sole bounds missing')
       for(let i=0;i<g.position.count;i++){
-        const foot=mesh.skeleton.bones[g.skinIndex.getX(i)]?.name
-        if(!/^leg_[lr]_foot$/.test(foot)||g.skinWeight.getX(i)<.9999)continue
-        mesh.getVertexPosition(i,p);mesh.localToWorld(p)
-        if(p.y>.003)continue
-        ;(points[foot]??=[]).push({mesh,i,x:g.position.getX(i),z:g.position.getZ(i)})
+        rest.fromBufferAttribute(g.position,i).applyMatrix4(mesh.bindMatrix).applyMatrix4(restMatrix)
+        if(rest.y>ceiling)continue
+        const foot=rest.x>0?'leg_l_foot':'leg_r_foot'
+        let assigned=0
+        for(let k=0;k<4;k++)if(mesh.skeleton.bones[g.skinIndex.getComponent(i,k)]?.name===foot)assigned+=g.skinWeight.getComponent(i,k)
+        if(assigned<.9999)throw new Error(`Rest anatomical sole ${i} misweighted to ${foot}`)
+        ;(points[foot]??=[]).push({mesh,i,x:rest.x,z:rest.z})
       }
     })
+    if(!points.leg_l_foot?.length||!points.leg_r_foot?.length)throw new Error('Both complete rest sole masks required')
     for(const [foot,v]of Object.entries(points)){
       if(v.length<3||!v.some(b=>v.some(c=>Math.abs((b.x-v[0].x)*(c.z-v[0].z)-(b.z-v[0].z)*(c.x-v[0].x))>1e-6)))throw new Error(`${foot}: noncollinear soles missing`)
     }

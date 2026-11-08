@@ -1,0 +1,17 @@
+{
+  "source": "/Users/int64ago/workspace/shanhai/.claude/worktrees/beast-bingfeng/raw/_build/authorized-six-sol/changyou-native-candidate-v3/rigged.glb",
+  "sourceSha256": "739681a138379c960368d0056f7e526c26715c31a93876c93daac593688b510b",
+  "output": null,
+  "renderOnly": true,
+  "vertices": 34665,
+  "faces": 50000,
+  "cleanupApplied": false,
+  "anatomyEditsApplied": false,
+  "normalRecomputationApplied": false,
+  "images": {
+    "view_front.png": "04f6493d87d6f62f01db074afacb4e36a960e64ceb6e54fcc0affc3f0c8b796e",
+    "view_back.png": "5f1237788eccd8981be3e3d091e797a7702713831a427a7649a51813d261f651",
+    "view_34.png": "b1594532becb6330c672b7bd6df1c7a38e8386d587991604913018d283e61e1d",
+    "view_side.png": "52736e4238093110ae6a9a73150f0a7bc1bd6708fab787bedf1051a247cc1e8e"
+  }
+}

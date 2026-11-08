@@ -60,27 +60,21 @@
     },
     {
       "path": "public/models/changyou/body.glb",
-      "source": "全新 Hyper3D Rodin 两阶段生成：无耳灵长主体与独立单耳母件，Medium→矫正四面Read→Gen-2.5-Extreme-High HighPack，34图首张，不加texture_mode附加项。主体初版因人形肌肉比例弃用，重试长臂窄毛躯；实际主体和耳HIGH原件各50000三角面。清理原生耳形与UV耳纹，四耳分别向外张开、内缘软组织深入颞部；专用26骨灵长骨架、双足逆圆周足底XYZ及朝向补偿。离线蒙皮/组织根部修整不冒称生成服务原输出。最终249930面，meshopt/WebP，不减面、不flatten、不join。详细收据及QA见pipeline/provenance/changyou.json。",
+      "source": "Hyper3D Rodin原生四耳猿体重做：实际Medium四面逐图Read后提交Gen-2.5-Extreme-High HighPack，34图首张，无texture_mode极高附加。四耳、五指手与五趾足均由新HIGH完整重建；早期拼耳、移植足和踝桥仅作重建参考，未混入交付网格。保留完整50000三角面，均匀归一不焊点、不重算法线、不删岛；离线将较高足整足下移4.505毫米并平滑过渡。专用23骨、解剖分区蒙皮、真实足底逆圆周XYZ与朝向补偿，meshopt/WebP2048，不减面、不合并、不扁平。新增4次成功调用消耗2.5积分，旧版3.5积分单列保存。收据、实际HIGH、手足耳根及三态验收见pipeline/provenance/changyou.json。",
       "sourceComponents": [
         {
-          "job": "changyou-body-max",
+          "job": "changyou-regen-20261108-sol-native-four-ear-high",
           "tier": "Gen-2.5-Extreme-High",
-          "uuid": "90da19a9-02f9-47cc-8713-7def30b586f1",
-          "sha256": "8813c68ea730228db820fbb21f96de51463f3b810e4e0fbb692233582853cd09"
-        },
-        {
-          "job": "changyou-ear-max",
-          "tier": "Gen-2.5-Extreme-High",
-          "uuid": "2a1d0e99-42a3-4892-9e44-ee6d258022dc",
-          "sha256": "5b430d13565e25c03c0741f1bcf449c2e0578613d2ff1e3b8838b65b492b821c"
+          "uuid": "63c13540-d366-4258-9e57-30087d5ffd0c",
+          "sha256": "6564718ecac9cd77374514dda2a4fdbacb1655b66174ddb84f2ff60381b5f3bb"
         }
       ],
-      "author": "Hyper3D Rodin与项目离线修整、组装和绑定",
+      "author": "Hyper3D Rodin与项目离线归一、足底修整和绑定",
       "license": "沿用项目既有Hyper3D Rodin输出条款"
     },
     {
-      "path": "concept/changyou*/view_{34,side,front,back}.png",
-      "source": "新Medium参考及最终HIGH四耳猿体的Blender正交四面，逐图Read核查；生成参考34图首张。",
+      "path": "concept/changyou*/**/*.png",
+      "source": "原生四耳重做的实际Medium参考、实际HIGH及最终绑定四面，与真实水墨页面三态、连续步态图，均经逐图Read核查。生成参考34图首张。旧版长右图保留作历史记录，现行验收路径与SHA见pipeline/provenance/changyou.json。",
       "author": "项目自制",
       "license": "沿用长右模型授权"
     },

@@ -9,7 +9,7 @@ import { createInkMaterial } from '../../systems/ink/inkMaterial'
 import { createOutline } from '../../systems/ink/inkify'
 
 const URL = '/models/changyou/body.glb'
-// Match rig_changyou.py's inverse circular stance, including whole-foot yaw.
+// Match rig_changyou_native.py's inverse circular stance, including whole-foot yaw.
 const RADIUS = 1
 const SPEED = 0.08
 
