@@ -1,0 +1,676 @@
+{
+  "date": "2026-11-08",
+  "rareGlyphFont": {
+    "sourceBytes": 51971284,
+    "sourceSha256": "d8bb747b3fdccd84a60bd0aa56bb90937270d0bd15f1101cd8f2a5a3709dd0a3",
+    "outputBytes": 17364,
+    "outputSha256": "5ea5fc225e7b6298360c421044ca6d3c9e6f85a099530d94b9751455e4d1cd8e",
+    "family": "Shanhai Rare Han",
+    "characters": "𧔥𧈫",
+    "glyphsIncludingComponents": 3,
+    "modified": "2026-11-08",
+    "license": "Arphic Public License",
+    "checksumsVerified": true,
+    "path": "public/fonts/rare-han/ShanhaiRareHan-Regular.ttf",
+    "codePoints": [
+      "U+2722B",
+      "U+27525"
+    ],
+    "cssUnicodeRange": "U+2722B, U+27525",
+    "sourceHashIndependentlyVerified": true,
+    "licenseAndModificationNotice": "public/fonts/rare-han/NOTICE.txt",
+    "note": "Adds Tianwu source character 𧈫 while preserving existing 𧔥 coverage. Browser font load asserted and 390px source card visually reviewed separately."
+  },
+  "status": "source-text-and-narration-verified-models-unready",
+  "scope": "Twelve source/inference corrections and matching narration replacements; no new 3D beast readiness.",
+  "sourceVerification": "Each content file records the selected classical passage and source URL or edition notes. Source and inferred descriptions remain separate. Historical research commits/specifications document source comparisons and anatomical plans.",
+  "generation": {
+    "command": "node --import tsx pipeline/tts/narrate.ts --force jimeng jiaochong kuafu qiangliang tianwu longzhi xixiyu xingtian yinglong zhulong leishen xiangliu",
+    "provider": "Alibaba Bailian",
+    "model": "cosyvoice-v2",
+    "voice": "longsanshu",
+    "format": "mp3",
+    "sampleRate": 22050,
+    "completed": 12,
+    "originalAudioPreservedLocallyBeforeOverwrite": true
+  },
+  "browserQA": {
+    "command": "node --import tsx scripts/qa-source-narration.mjs http://localhost:5215 /tmp/shanhai-check/source-narration-qa-20261108 jimeng jiaochong kuafu qiangliang tianwu longzhi xixiyu xingtian yinglong zhulong leishen xiangliu",
+    "passed": true,
+    "errors": [],
+    "checks": [
+      "Every rendered source paragraph matches content JSON",
+      "Actual story caption matches synthesized story text",
+      "Served MP3 bytes match local audio",
+      "Real browser decode with audible RMS and 22050Hz sample rate",
+      "Actual UI play and stop for each entry",
+      "390px and 800px controls remain reachable with no horizontal overflow"
+    ],
+    "evidenceDirectory": "/tmp/shanhai-check/source-narration-qa-20261108"
+  },
+  "entries": [
+    {
+      "id": "jimeng",
+      "content": {
+        "path": "content/beasts/jimeng.json",
+        "sha256": "50c6d9e753db16308d07339efdbfb512b6ffa8df6dc0bedb94b8887e3f4d4ba6",
+        "source": [
+          {
+            "book": "山海经·中山经·中次八经",
+            "text": "又東百三十里，曰光山，其上多碧，其下多木。神計蒙處之，其狀人身而龍首，恒遊于漳淵，出入必有飄風暴雨。"
+          }
+        ]
+      },
+      "storySha256": "caa6546a4162b909126b2cc14feb24a85b51d22b8f1a18a3fd246258e6b347f0",
+      "audio": {
+        "path": "public/audio/narration/jimeng.mp3",
+        "bytes": 677184,
+        "sha256": "68e2c297a5fd0bb3dbe90276306b8a154c3a724f94b20508aced89d02142fb51",
+        "seconds": 42.318354166666666,
+        "decodedSampleRate": 48000,
+        "contextSampleRate": 48000,
+        "channels": 1,
+        "rms": 0.1016356712246362,
+        "playing": true,
+        "encodedSampleRate": 22050
+      },
+      "previousAudioSha256": "425ad8b968ab0269d6b9dbf9735c7a2629e79a79fa563eb3d0d567ae1d373dbf",
+      "cardSourceParagraphs": 1,
+      "actualStopped": true,
+      "layouts": [
+        {
+          "width": 390,
+          "button": {
+            "x": 141.09375,
+            "y": 129.5625,
+            "width": 26,
+            "height": 43.90625
+          }
+        },
+        {
+          "width": 800,
+          "button": {
+            "x": 360.15625,
+            "y": 169.09375,
+            "width": 26,
+            "height": 43.90625
+          }
+        }
+      ],
+      "modelReady": false
+    },
+    {
+      "id": "jiaochong",
+      "content": {
+        "path": "content/beasts/jiaochong.json",
+        "sha256": "f3ece089e92a5288dc2b0fda1f70dd3f337dd3d98a06d38d85f21ca99928563f",
+        "source": [
+          {
+            "book": "山海經·中山經·中次六經",
+            "text": "縞羝山之首，曰平逢之山，南望伊洛，東望穀城之山，無草木，無水，多沙石。有神焉，其狀如人而二首，名曰驕蟲，是為螫蟲，實惟蜂蜜之廬，其祠之：用一雄雞，穰而勿殺。"
+          }
+        ]
+      },
+      "storySha256": "43d70a3cf85644809d05e50dc1847961472fc6d22d176be6f38807b691bf6b82",
+      "audio": {
+        "path": "public/audio/narration/jiaochong.mp3",
+        "bytes": 561828,
+        "sha256": "32cdb730eabd98c5a4ef79bd15d57dfa2667a003f11262d299dc295930bd44c1",
+        "seconds": 35.1085625,
+        "decodedSampleRate": 48000,
+        "contextSampleRate": 48000,
+        "channels": 1,
+        "rms": 0.10386466657281798,
+        "playing": true,
+        "encodedSampleRate": 22050
+      },
+      "previousAudioSha256": "d7934fe966a5d82aebb8e722b327726dd76fd2ec63f608f3ff00e2cb640ff5b4",
+      "cardSourceParagraphs": 1,
+      "actualStopped": true,
+      "layouts": [
+        {
+          "width": 390,
+          "button": {
+            "x": 196.421875,
+            "y": 129.5625,
+            "width": 26,
+            "height": 43.90625
+          }
+        },
+        {
+          "width": 800,
+          "button": {
+            "x": 367.59375,
+            "y": 169.09375,
+            "width": 26,
+            "height": 43.90625
+          }
+        }
+      ],
+      "modelReady": false
+    },
+    {
+      "id": "kuafu",
+      "content": {
+        "path": "content/beasts/kuafu.json",
+        "sha256": "3971bbafc47d4b34e4c2479b38a01f1e0db151a11cbe24bfcd018939c696b331",
+        "source": [
+          {
+            "book": "山海經·大荒北經",
+            "text": "大荒之中，有山名曰成都載天。有人珥兩黄蛇，把兩黄蛇，名曰夸父。"
+          }
+        ]
+      },
+      "storySha256": "71ab128f066c24c1d0ce25f8150e040f48d84e382fa4f9c165e2d7a0b2688ce6",
+      "audio": {
+        "path": "public/audio/narration/kuafu.mp3",
+        "bytes": 669243,
+        "sha256": "dee7b5163ccfb50767f298dd7825943e9b67ba23b994fc0781fa32c0feef9f29",
+        "seconds": 41.82202083333333,
+        "decodedSampleRate": 48000,
+        "contextSampleRate": 48000,
+        "channels": 1,
+        "rms": 0.09993342937200231,
+        "playing": true,
+        "encodedSampleRate": 22050
+      },
+      "previousAudioSha256": "16d54a798f57f050964579d67efc05d8c128cf846f44387ebdaf5fce6104a3a9",
+      "cardSourceParagraphs": 1,
+      "actualStopped": true,
+      "layouts": [
+        {
+          "width": 390,
+          "button": {
+            "x": 115.234375,
+            "y": 129.5625,
+            "width": 26,
+            "height": 43.90625
+          }
+        },
+        {
+          "width": 800,
+          "button": {
+            "x": 388.9375,
+            "y": 169.09375,
+            "width": 26,
+            "height": 43.90625
+          }
+        }
+      ],
+      "modelReady": false
+    },
+    {
+      "id": "qiangliang",
+      "content": {
+        "path": "content/beasts/qiangliang.json",
+        "sha256": "3ea570458b75da368b584cda786755217043d83738fb5d9b6fd85d30bbd253de",
+        "source": [
+          {
+            "book": "山海經·大荒北經",
+            "text": "又有神衘蛇操蛇，其狀虎首人身，四蹏長肘，名曰彊良。"
+          }
+        ]
+      },
+      "storySha256": "dd0d09eb39b96a097fb19cfeb04abb99dd325a50786434dd6cf463d839daffbf",
+      "audio": {
+        "path": "public/audio/narration/qiangliang.mp3",
+        "bytes": 674677,
+        "sha256": "4f4ad9c71ccfd6f57cc4b89685f70d5f5833d6d14b2721f94f3c2b153a84d8b4",
+        "seconds": 42.161625,
+        "decodedSampleRate": 48000,
+        "contextSampleRate": 48000,
+        "channels": 1,
+        "rms": 0.09602351966993432,
+        "playing": true,
+        "encodedSampleRate": 22050
+      },
+      "previousAudioSha256": "c9e6012761a50f4ed8a816d2ac7a0a890c7e96b4b0c2b6e15aeedc2e3cca648a",
+      "cardSourceParagraphs": 1,
+      "actualStopped": true,
+      "layouts": [
+        {
+          "width": 390,
+          "button": {
+            "x": 127.40625,
+            "y": 129.5625,
+            "width": 26,
+            "height": 43.90625
+          }
+        },
+        {
+          "width": 800,
+          "button": {
+            "x": 340.671875,
+            "y": 169.09375,
+            "width": 26,
+            "height": 43.90625
+          }
+        }
+      ],
+      "modelReady": false
+    },
+    {
+      "id": "tianwu",
+      "content": {
+        "path": "content/beasts/tianwu.json",
+        "sha256": "56b54025d54c85e46ef0cb01c5b6ac53e237f2e31b479e6f4753c4cf78caefff",
+        "source": [
+          {
+            "book": "山海经·海外东经",
+            "text": "朝陽之谷，神曰天吳，是為水伯。在𧈫𧈫北兩水間。其為獸也，八首人面，八足八尾，背青黃。"
+          }
+        ]
+      },
+      "storySha256": "738aa1e1c6b911f2b1f242f1a32492eca2bfacccb33b2d580ec99fef37266e9b",
+      "audio": {
+        "path": "public/audio/narration/tianwu.mp3",
+        "bytes": 576874,
+        "sha256": "b0729a63ace7d52e9d44fb20e96a5afae2d18525750c7df0fc565a54954f1a8f",
+        "seconds": 36.04897916666667,
+        "decodedSampleRate": 48000,
+        "contextSampleRate": 48000,
+        "channels": 1,
+        "rms": 0.11634702801601314,
+        "playing": true,
+        "encodedSampleRate": 22050
+      },
+      "previousAudioSha256": "b1db4b22e6cc6fd256c5841c4f0317d0e029cf05b2d9c943a56b3324164bd00f",
+      "cardSourceParagraphs": 1,
+      "actualStopped": true,
+      "layouts": [
+        {
+          "width": 390,
+          "button": {
+            "x": 141.84375,
+            "y": 129.5625,
+            "width": 26,
+            "height": 43.90625
+          }
+        },
+        {
+          "width": 800,
+          "button": {
+            "x": 360.90625,
+            "y": 169.09375,
+            "width": 26,
+            "height": 43.90625
+          }
+        }
+      ],
+      "modelReady": false
+    },
+    {
+      "id": "longzhi",
+      "content": {
+        "path": "content/beasts/longzhi.json",
+        "sha256": "55099bcd27e9ded9b304676ccba7b30b769e4adf56b4bd6adfdac09d7416c9a2",
+        "source": [
+          {
+            "book": "山海經·東山經·東次二經",
+            "text": "又南五百里，曰鳧麗之山，其上多金玉，其下多箴石，有獸焉，其狀如狐，而九尾、九首、虎爪，名曰蠪姪，其音如嬰兒，是食人。"
+          }
+        ]
+      },
+      "storySha256": "357d2546bcf235791ac512d48e51f6e66035af7948dd7d4fa94d6327cc226ba1",
+      "audio": {
+        "path": "public/audio/narration/longzhi.mp3",
+        "bytes": 533406,
+        "sha256": "df9d32cc5db635bd7d5621430ebae6260619972abcb003cf36f5a870e87a26dc",
+        "seconds": 33.332229166666664,
+        "decodedSampleRate": 48000,
+        "contextSampleRate": 48000,
+        "channels": 1,
+        "rms": 0.10889901355163138,
+        "playing": true,
+        "encodedSampleRate": 22050
+      },
+      "previousAudioSha256": "f07b52e96649d59b5b9565dbb70f2ab7918f4dae447273fb2b68cfbd4dd5ecf7",
+      "cardSourceParagraphs": 1,
+      "actualStopped": true,
+      "layouts": [
+        {
+          "width": 390,
+          "button": {
+            "x": 166.75,
+            "y": 129.5625,
+            "width": 26,
+            "height": 43.90625
+          }
+        },
+        {
+          "width": 800,
+          "button": {
+            "x": 362.015625,
+            "y": 169.09375,
+            "width": 26,
+            "height": 43.90625
+          }
+        }
+      ],
+      "modelReady": false
+    },
+    {
+      "id": "xixiyu",
+      "content": {
+        "path": "content/beasts/xixiyu.json",
+        "sha256": "de82b82e82cdd67fb1eab755f75048f0bfc7431fb326608e197f6ecab6ee166c",
+        "source": [
+          {
+            "book": "山海经·北山经·北山经之首",
+            "text": "又北三百五十里，曰涿光之山。嚻水出焉，而西流注于河。其中多鰼鰼之魚，其狀如鵲而十翼，鱗皆在羽端，其音如鵲，可以禦火，食之不癉。其上多松柏，其下多椶枏，其獸多麢羊，其鳥多蕃。"
+          }
+        ]
+      },
+      "storySha256": "b9f429c817c42c1579d0045fbf76a5db266deb5adb22872df04c067f473faf66",
+      "audio": {
+        "path": "public/audio/narration/xixiyu.mp3",
+        "bytes": 539676,
+        "sha256": "8f8a7e28fd859204caaa400f59cee75f9cbc16b36725f073e526871bf22cf4c6",
+        "seconds": 33.7240625,
+        "decodedSampleRate": 48000,
+        "contextSampleRate": 48000,
+        "channels": 1,
+        "rms": 0.1058302796941649,
+        "playing": true,
+        "encodedSampleRate": 22050
+      },
+      "previousAudioSha256": "916daa8a15791de61bde8101bc83e50d75ef6945494b134577661314745e526c",
+      "cardSourceParagraphs": 1,
+      "actualStopped": true,
+      "layouts": [
+        {
+          "width": 390,
+          "button": {
+            "x": 212.109375,
+            "y": 158.84375,
+            "width": 26,
+            "height": 43.90625
+          }
+        },
+        {
+          "width": 800,
+          "button": {
+            "x": 389.375,
+            "y": 208.125,
+            "width": 26,
+            "height": 43.90625
+          }
+        }
+      ],
+      "modelReady": false
+    },
+    {
+      "id": "xingtian",
+      "content": {
+        "path": "content/beasts/xingtian.json",
+        "sha256": "5d41aaf1ab8118dddc7e31e9717ab951e999650c30c0402448c131014078fd95",
+        "source": [
+          {
+            "book": "山海经·海外西经",
+            "text": "形天與帝至此爭神，帝斷其首，葬之常羊之山。乃以乳為目，以臍為口，操幹戚以舞。"
+          }
+        ]
+      },
+      "storySha256": "cf44a58f39523232a89579ed456832c9c3f7067c6337d07736d830d1d9f10274",
+      "audio": {
+        "path": "public/audio/narration/xingtian.mp3",
+        "bytes": 637478,
+        "sha256": "de68426f9cd0585bae0f23559d261c2491bb507a0bf202bb4d37fb074d05a1ae",
+        "seconds": 39.836729166666665,
+        "decodedSampleRate": 48000,
+        "contextSampleRate": 48000,
+        "channels": 1,
+        "rms": 0.09502530873068658,
+        "playing": true,
+        "encodedSampleRate": 22050
+      },
+      "previousAudioSha256": "18b76e93b1ea681e4c5f1af70ac689720db9522ac208073868b4cbd53608adbd",
+      "cardSourceParagraphs": 1,
+      "actualStopped": true,
+      "layouts": [
+        {
+          "width": 390,
+          "button": {
+            "x": 145.046875,
+            "y": 129.5625,
+            "width": 26,
+            "height": 43.90625
+          }
+        },
+        {
+          "width": 800,
+          "button": {
+            "x": 364.109375,
+            "y": 169.09375,
+            "width": 26,
+            "height": 43.90625
+          }
+        }
+      ],
+      "modelReady": false
+    },
+    {
+      "id": "yinglong",
+      "content": {
+        "path": "content/beasts/yinglong.json",
+        "sha256": "609026deec4ed1f12d8aedd064b1d5c3366b996d7dc24435391ba9a1bf174f62",
+        "source": [
+          {
+            "book": "山海經·大荒東經",
+            "text": "大荒東北隅中，有山名曰凶犁土丘。應龍處南極，殺蚩尤與夸父，不得復上，故下數旱。旱而為應龍之狀，乃得大雨。"
+          },
+          {
+            "book": "山海經·大荒北經",
+            "text": "應龍已殺蚩尤，又殺夸父，乃去南方處之，故南方多雨。"
+          },
+          {
+            "book": "山海經·大荒北經",
+            "text": "黄帝乃令應龍攻之冀州之野。應龍畜水。"
+          }
+        ]
+      },
+      "storySha256": "37e98cdad1f71eb6e42043461b2d544c1dd47451db204650e3b646f1f04d26d3",
+      "audio": {
+        "path": "public/audio/narration/yinglong.mp3",
+        "bytes": 586905,
+        "sha256": "83494b7c036750dcdbff7dc888e05d317e07bdda8e6ef7ea3a3243f40b096422",
+        "seconds": 36.675916666666666,
+        "decodedSampleRate": 48000,
+        "contextSampleRate": 48000,
+        "channels": 1,
+        "rms": 0.09781985079792105,
+        "playing": true,
+        "encodedSampleRate": 22050
+      },
+      "previousAudioSha256": "654a9ac956d4d46f2b46cc1600d3c4ccc6ef9ed09fbc19e83c374135bbc881a4",
+      "cardSourceParagraphs": 3,
+      "actualStopped": true,
+      "layouts": [
+        {
+          "width": 390,
+          "button": {
+            "x": 328.921875,
+            "y": 129.5625,
+            "width": 26,
+            "height": 43.90625
+          }
+        },
+        {
+          "width": 800,
+          "button": {
+            "x": 500.09375,
+            "y": 169.09375,
+            "width": 26,
+            "height": 43.90625
+          }
+        }
+      ],
+      "modelReady": false
+    },
+    {
+      "id": "zhulong",
+      "content": {
+        "path": "content/beasts/zhulong.json",
+        "sha256": "dc84c981b3db72ae6485ba9978c661ca02ec2c7373b56f63a294bbb8cace3e77",
+        "source": [
+          {
+            "book": "山海经·大荒北经",
+            "text": "西北海外，赤水之北，有章尾山。有神，人面蛇身而赤，直目正乘，其暝乃晦，其視乃明，不食不寢不息，風雨是謁。是燭九陰，是謂燭龍。"
+          },
+          {
+            "book": "山海经·海外北经",
+            "text": "鍾山之神名曰燭陰，視為晝，瞑為夜，吹為冬，呼為夏，不飲，不食，不息，息為風，身長千里。在無啓之東。其為物，人面，蛇身，赤色，居鍾山下。"
+          }
+        ]
+      },
+      "storySha256": "d1fcb22d15e80517ae2455c03c97c079f6cf4f8741758cfef21ca16de4a7cf8a",
+      "audio": {
+        "path": "public/audio/narration/zhulong.mp3",
+        "bytes": 640404,
+        "sha256": "2f79d6cb0cbb3ba72c7b6184bcc60d92202c05d05cab88df46bfcd34be7575ee",
+        "seconds": 40.01958333333334,
+        "decodedSampleRate": 48000,
+        "contextSampleRate": 48000,
+        "channels": 1,
+        "rms": 0.10017081834534643,
+        "playing": true,
+        "encodedSampleRate": 22050
+      },
+      "previousAudioSha256": "07217c2581165f56b04c3b842bb658804d8c19effeb6eee7cfd14384caaa8831",
+      "cardSourceParagraphs": 2,
+      "actualStopped": true,
+      "layouts": [
+        {
+          "width": 390,
+          "button": {
+            "x": 295.625,
+            "y": 129.5625,
+            "width": 26,
+            "height": 43.90625
+          }
+        },
+        {
+          "width": 800,
+          "button": {
+            "x": 520.03125,
+            "y": 169.09375,
+            "width": 26,
+            "height": 43.90625
+          }
+        }
+      ],
+      "modelReady": false
+    },
+    {
+      "id": "leishen",
+      "content": {
+        "path": "content/beasts/leishen.json",
+        "sha256": "4c6fd7a393cdb30a2c1d79ea18a5f69ffdac2f604a84476e809a4fee9c767eea",
+        "source": [
+          {
+            "book": "山海经·海内东经",
+            "text": "雷澤中有雷神，龍身而人頭，鼓其腹。在吳西。"
+          }
+        ]
+      },
+      "storySha256": "f9baae1f576bb6b4d324a141148f42a6c9286c91570ca7fc2b734ac26df3c8ac",
+      "audio": {
+        "path": "public/audio/narration/leishen.mp3",
+        "bytes": 497462,
+        "sha256": "bee9c133efb21212196aee7bbea7272480c04e6c4a1cf352292dfb4af61562b8",
+        "seconds": 31.085708333333333,
+        "decodedSampleRate": 48000,
+        "contextSampleRate": 48000,
+        "channels": 1,
+        "rms": 0.10399331205838239,
+        "playing": true,
+        "encodedSampleRate": 22050
+      },
+      "previousAudioSha256": "578798f598c7c21f5f489326d41ef9b5f51b634cc3b2964a9ce7f20f244e00fa",
+      "cardSourceParagraphs": 1,
+      "actualStopped": true,
+      "layouts": [
+        {
+          "width": 390,
+          "button": {
+            "x": 118.421875,
+            "y": 129.5625,
+            "width": 26,
+            "height": 43.90625
+          }
+        },
+        {
+          "width": 800,
+          "button": {
+            "x": 331.6875,
+            "y": 169.09375,
+            "width": 26,
+            "height": 43.90625
+          }
+        }
+      ],
+      "modelReady": false
+    },
+    {
+      "id": "xiangliu",
+      "content": {
+        "path": "content/beasts/xiangliu.json",
+        "sha256": "637f6ef6bb35fecec09cd2dca742180fa6eb7b426b8cceccf7ced593b7314353",
+        "source": [
+          {
+            "book": "海外北經",
+            "text": "相柳者，九首人面，蛇身而青。"
+          },
+          {
+            "book": "大荒北經",
+            "text": "共工臣名曰相繇，九首蛇身，自環，食于九土。"
+          }
+        ]
+      },
+      "storySha256": "31056545a2b08ec4adf921da5fb31f4f86a3d521f34560cfde547e02fbf01090",
+      "audio": {
+        "path": "public/audio/narration/xiangliu.mp3",
+        "bytes": 623686,
+        "sha256": "05335e8c0134af4881a14c140794257a02286dbfdf0ab54490000481884da52e",
+        "seconds": 38.9746875,
+        "decodedSampleRate": 48000,
+        "contextSampleRate": 48000,
+        "channels": 1,
+        "rms": 0.0976291722029026,
+        "playing": true,
+        "encodedSampleRate": 22050
+      },
+      "previousAudioSha256": "2e0ca360a10f3201a64f7c00a1c79862385b8fd9cab4fdd491ef0cf2f13ce00d",
+      "cardSourceParagraphs": 2,
+      "actualStopped": true,
+      "layouts": [
+        {
+          "width": 390,
+          "button": {
+            "x": 177.015625,
+            "y": 129.5625,
+            "width": 26,
+            "height": 43.90625
+          }
+        },
+        {
+          "width": 800,
+          "button": {
+            "x": 402.03125,
+            "y": 169.09375,
+            "width": 26,
+            "height": 43.90625
+          }
+        }
+      ],
+      "modelReady": false
+    }
+  ],
+  "readyCount": 43,
+  "totalCatalog": 62,
+  "release": {
+    "target": "GitHub main -> GitHub Actions -> shanhaiworld.org",
+    "noNewModelsInThisChange": true,
+    "deploymentVerificationRequiredAfterPush": true
+  }
+}

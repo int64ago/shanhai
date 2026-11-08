@@ -1,0 +1,126 @@
+{
+  "id": "longzhi",
+  "name": "蠪侄",
+  "archetype": "quadruped",
+  "source": [
+    {
+      "book": "山海經·東山經·東次二經",
+      "text": "又南五百里，曰鳧麗之山，其上多金玉，其下多箴石，有獸焉，其狀如狐，而九尾、九首、虎爪，名曰蠪姪，其音如嬰兒，是食人。"
+    }
+  ],
+  "inferred": [
+    {
+      "item": "九张狐面与四足狐躯（设计参考）",
+      "basis": "狐形、九首、九尾、虎爪据原文。每首取狐面、四足数量、每掌趾爪数、体长与颈长均为视觉补足。"
+    },
+    {
+      "item": "九首与九尾的空间排列（设计参考）",
+      "basis": "原文未规定九首或九尾的位置。头颈前后高低错层、尾根分布、尾的蓬松形态与肌肉衔接均为设计推断。"
+    },
+    {
+      "item": "赤褐、乳白与墨黑设色（设计参考）",
+      "basis": "原文没有指定毛色、眼色、纹样或爪色。赤褐毛、乳白颊胸、深色眼、白尾梢和墨黑虎掌均属艺术设色。"
+    },
+    {
+      "item": "缓行、顾盼与婴声（设计参考）",
+      "basis": "其音如婴儿、食人据原文。具体音高、节奏与音色是听觉演绎；缓步、九首各自顾盼与九尾错相摆动均为动画推断。"
+    }
+  ],
+  "productionAudit": {
+    "status": "blocked",
+    "gate": "anatomical-structure-before-rigging",
+    "checkedOn": "2026-11-07",
+    "sourceReference": "https://zh.wikisource.org/wiki/山海經/東山經",
+    "sourceNotes": "独立核对東次二經鳧麗之山全段。原典作蠪姪，目录显示名沿用简体蠪侄。没有采用旧目录中的首尾最多、青铜爪或赤目作为正文依据。",
+    "sourceComponents": [
+      {
+        "role": "fox torso and skull master",
+        "path": "raw/jiuweihu-body-i2m/base_high_pbr.glb",
+        "job": "jiuweihu-body-i2m",
+        "tier": "Gen-2.5-Extreme-High",
+        "uuid": "92ff437a-3c91-418e-9686-1fb91a0f65e8",
+        "sha256": "985324dea8f8a66ad3ecd98c8ba3e5d28a9f119c733b531e07fc8d92e6982b27",
+        "originalTriangles": 50000,
+        "geometryReview": "已检查归一后的正面、侧面实物；提供完整狐首与狐躯，但原生尾毛和屈曲后躯区域不宜仅靠平面裁切分离。"
+      },
+      {
+        "role": "single fox tail master",
+        "path": "raw/jiuweihu-tail-max/base_high_pbr.glb",
+        "job": "jiuweihu-tail-max",
+        "tier": "Gen-2.5-Extreme-High",
+        "uuid": "985378ae-535e-4f19-9dab-c5cc5ce9acda",
+        "sha256": "50b7ca3082620e66ecd9cd20d405d3a7c5952f28624255aadf4ab9a84c072ffc",
+        "originalTriangles": 20000,
+        "geometryReview": "实际为 20,000 面 HIGH 长尾，非按文件名推定 50,000 面；归一后主轴 X，根在负 X、白梢在正 X，横截面偏扁。九份弯曲试作仍有片状聚叠，尾根与尾间间隙未通过视觉验收。"
+      },
+      {
+        "role": "four tiger paws",
+        "path": "raw/luwu-body-max/base_basic_pbr.glb",
+        "job": "luwu-body-max",
+        "tier": "Gen-2.5-Extreme-High",
+        "uuid": "ea4008ef-025b-4aaf-b89e-0998b4b9cf8d",
+        "sha256": "d1f8a2bf08980fb84db718ad21a29b0124bbeb05acbbe48276183b484ace0771",
+        "originalTriangles": 50000,
+        "geometryReview": "basic 文件已逐件核对 HIGH 账本和实际 50,000 面。四掌保留可辨的趾爪；缩配并渐细踝根后，与狐下肢仍有明显接缝，不能以四掌语义计数代替可靠四足支撑验收。"
+      },
+      {
+        "role": "alternative fox torso inspected but not adopted",
+        "path": "raw/jiuweihu-body-max-v2/base_high_pbr.glb",
+        "job": "jiuweihu-body-max-v2",
+        "tier": "Gen-2.5-Extreme-High",
+        "uuid": "d7e61370-74c4-43fd-ae4e-d6ae095384ef",
+        "sha256": "46de69f4179c1b578402605c648b71b1345503309bf6effef4650972384725ae",
+        "originalTriangles": 50000,
+        "geometryReview": "已检查归一侧面；实际屈曲后肢与短尾形态不因提示词写有四腿伸直而改变，未作为更可靠的替代躯干。"
+      }
+    ],
+    "ledger": "pipeline/rodin/credits.log",
+    "offlineTrials": [
+      "修正过高狐首裁口，保留口鼻、下颌和耳；继续斜裁后颅以去除混入的原背部薄片，但后颅仍露出明显截面。",
+      "降低三层首位并错开前后、左右间距，九条新颈与新肩部离线体素融合；仅融合新增体积，未将原 HIGH 躯干冒称为新 HIGH。形体连续性与毛皮过渡仍不足。",
+      "移除原生尾毛并清理孤岛；加大裁切会破坏后肢轮廓，保留后肢又留下需重新雕刻的裁口与材质补片。",
+      "按实际尾根—白梢轴向重排九条 HIGH 尾，调整横向展开和高低错层；背、侧图仍显示片状聚叠及生硬尾根。",
+      "四只 HIGH 虎掌独立裁出、压平足底并收窄踝根；接缝尚未达到完整骨骼支撑可验收的形体标准。"
+    ],
+    "draftGeometry": {
+      "publishable": false,
+      "uncompressedBytes": 37178784,
+      "triangles": 496154,
+      "semanticHeadMeshes": 9,
+      "semanticTailMeshes": 9,
+      "invalidNumericAccessors": 0,
+      "animations": 0,
+      "sha256": "32db5111a2f14ca893953d8e2535d27e7d5733310690f7d5244f907038699e7a",
+      "note": "仅为被拒绝的未压缩试作。九首九尾语义节点计数和有限数值通过，不代表已清净原生器官、无穿插或连接可信。未提交为运行时资产。"
+    },
+    "evidence": {
+      "reviewedViews": ["/tmp/longzhi-blocked/view_34.png", "/tmp/longzhi-blocked/view_front.png", "/tmp/longzhi-blocked/view_back.png", "/tmp/longzhi-blocked/view_side.png", "/tmp/longzhi-blocked/view_left.png"],
+      "geometryAudit": "/tmp/longzhi-blocked/geometry-audit.json",
+      "prepareLog": "/tmp/longzhi-blocked/prepare.log",
+      "ignoredDraftDirectory": "raw/_build/longzhi/blocked-drafts",
+      "ignoredAssembly": "raw/_build/longzhi/assembled.glb",
+      "retention": "本地临时证据，未发布、未加入运行时资源或正式 concept 资产。"
+    },
+    "downstreamVerification": {
+      "riggingAndAnimations": "not run: anatomical gate failed",
+      "worldSoleXYZAndDirection": "not run: no accepted rig",
+      "strictModeRemountAndAnimatedFinite": "not run: no runtime integration",
+      "actualLongsanshuPlaybackStopAndBeastCall": "not run: no new narration or runtime acceptance; any pre-existing longzhi audio is not recertified",
+      "specialReturnAndThreeStateScreenshots": "not run: no accepted animations"
+    },
+    "repositoryChecks": {
+      "typecheck": "passed",
+      "validate": "passed; unready beast remains excluded from runtime-model acceptance",
+      "build": "passed",
+      "gitDiffCheck": "passed",
+      "gitLfsFsck": "passed",
+      "newLfsAssets": 0,
+      "log": "/tmp/longzhi-blocked/mandatory.log"
+    },
+    "resumeRequirement": "在既有 HIGH 加离线雕刻范围内先手工重建后颅至九颈肩、去尾后的后躯与踝根，修正九尾截面和根部间隙；四面轮廓与接缝验收通过后再绑定、录音和执行全部运行时 QA。",
+    "newRodinTransactions": 0,
+    "mediumFinalAssets": 0,
+    "runtimeIntegration": false,
+    "ready": false
+  }
+}

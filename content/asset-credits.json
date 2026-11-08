@@ -2,8 +2,14 @@
   "_note": "第三方素材授权登记；上线前统一核对。音频素材到位后同样登记在这里。",
   "assets": [
     {
+      "path": "public/audio/narration/{jimeng,jiaochong,kuafu,qiangliang,tianwu,longzhi,xixiyu,xingtian,yinglong,zhulong,leishen,xiangliu}.mp3",
+      "source": "2026-11-08 按核源修正后的 src/app/beasts.ts 故事重新生成；pipeline/tts/narrate.ts，CosyVoice v2 / longsanshu，MP3 22050 Hz。逐条原文与推断分别保存在 content/beasts/<id>.json；文本及音频哈希、浏览器实际解码播放与停止证据见 pipeline/provenance/source-narration-20261108.json。语音修订不表示对应三维模型已完成。",
+      "author": "项目原创考据解说词；百炼龙三叔合成",
+      "license": "沿用项目既有百炼 CosyVoice 合成输出条款"
+    },
+    {
       "path": "public/fonts/rare-han/ShanhaiRareHan-Regular.ttf",
-      "source": "BabelStone Han TrueType，https://www.babelstone.co.uk/Fonts/Download/BabelStoneHan.ttf；源文件 51,971,284 bytes，SHA256 d8bb747b3fdccd84a60bd0aa56bb90937270d0bd15f1101cd8f2a5a3709dd0a3。2026-11-08 以 pipeline/fonts/subset-rare-han.py（纯 Python 标准库）仅保留 .notdef 与 U+27525 𧔥，重建字形编号、cmap 与名称表，修改字体改名 Shanhai Rare Han；保留原版权、hinting 与 Arphic Public License。子集 16,872 bytes，SHA256 a53d4be6528de8e4220ab6711af94d0f786bc530b1aeab584314d038ff15e901；CSS unicode-range 仅作用于 U+27525。",
+      "source": "BabelStone Han TrueType，https://www.babelstone.co.uk/Fonts/Download/BabelStoneHan.ttf；源文件 51,971,284 bytes，SHA256 d8bb747b3fdccd84a60bd0aa56bb90937270d0bd15f1101cd8f2a5a3709dd0a3。2026-11-08 以 pipeline/fonts/subset-rare-han.py（纯 Python 标准库）仅保留 .notdef、U+2722B 𧈫 与 U+27525 𧔥，重建字形编号、cmap 与名称表，修改字体改名 Shanhai Rare Han；保留原版权、hinting 与 Arphic Public License。子集 17,364 bytes，SHA256 5ea5fc225e7b6298360c421044ca6d3c9e6f85a099530d94b9751455e4d1cd8e；CSS unicode-range 仅作用于这两个罕字。",
       "author": "BabelStone Han 原字体作者及 Arphic Technology；项目制作并改名子集",
       "license": "Arphic Public License；原文 public/fonts/rare-han/ARPHICPL.TXT；修改说明 public/fonts/rare-han/NOTICE.txt"
     },

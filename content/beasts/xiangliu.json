@@ -1,0 +1,29 @@
+{
+  "id": "xiangliu",
+  "name": "相柳",
+  "archetype": "serpentine",
+  "source": [
+    { "book": "海外北經", "text": "相柳者，九首人面，蛇身而青。" },
+    { "book": "大荒北經", "text": "共工臣名曰相繇，九首蛇身，自環，食于九土。" }
+  ],
+  "inferred": [
+    { "item": "选择海外北经九首人面、蛇身而青版本", "basis": "人面与青出自海外北经的相柳者句。大荒北经另称相繇，记九首蛇身、自环与九土，未写人面或青；两篇分别引用。食于九山是在九山取食，不是吞食九座山。" },
+    { "item": "九条长颈与完整人首", "basis": "九首人面有据，完整颅形、耳发、九条长颈的分生位置与宽厚共根体积均属造型补足。无足是本设计的选择，正文未给出足数。" },
+    { "item": "伸展浅S姿态", "basis": "伸展浅S、首尾分离是本设计的姿态选择。自环属于大荒北经相繇条，所选海外北经相柳条未规定这一姿态。" },
+    { "item": "青色色阶、面部设色与声效", "basis": "青限定蛇身，具体蓝绿深浅、腹鳞、人面肤色与发式均属设计补足；共工台角蛇的虎色不属于相柳。毒雾、喷毒、发光与九声合唱也非所选形态句所定。" }
+  ],
+  "sourceVerification": {
+    "researchCommit": "ca7b3a486d2bdcd76f117c5f4b20c9f886ac7a83",
+    "checked": "2026-11-08",
+    "urls": ["https://zh.wikisource.org/wiki/山海經/海外北經", "https://zh.wikisource.org/wiki/山海經/大荒北經"],
+    "note": "本次重新读取两篇相关段落，确认两段source均为各自连续形态句；海外篇开头为相柳氏，形态句为相柳者，不互换称谓。完整上下文由指定研究提交pipeline/provenance/xiangliu.json留存；本文件不跨段删接原文。"
+  },
+  "production": {
+    "status": "blocked",
+    "ready": false,
+    "modelReady": false,
+    "modelProduced": false,
+    "specification": "pipeline/rodin/specs/xiangliu-production-20261108.json",
+    "reason": "尚无本任务已验收的连续蛇躯、九颈自然接根及九首组合模型。旧研究与人首候选不等于九首蛇成品；Medium主体和单首颈规格仅为准备材料，不宣称模型、动作或运行时交付。"
+  }
+}
