@@ -1,0 +1,12 @@
+{
+  "id": "yingzhao-regen-20261108-sol-body-medium",
+  "beast": "yingzhao",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One Chinese mythical Yingzhao: horse body with ONE human face and black tiger stripes. Generate head, neck, shoulders and body as ONE continuous organic animal. Proportionate guardian head, human facial features, natural eyes, calm closed mouth; no horse muzzle or second face. Muscular equine neck widens into paired pectorals, sloping shoulders and withers. Continuous short fur and anatomical relief through neck, chest and barrel; no smooth bib, collar seam, twisted fold or human bust. Long horizontal horse torso, level back, raised hips, FOUR separated weight-bearing horse legs with clear joints and FOUR single solid hooves flat on ground. One attached long horse tail. Ochre coat, dark mane and tail. Relaxed standing pose, all feet visible and clear of tail, whole animal in frame. NO wings or wing stumps: bird wings are separate parts. No horns, clothes, saddle, ornaments or base.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 18000
+  }
+}

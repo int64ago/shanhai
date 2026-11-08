@@ -1,0 +1,8 @@
+{
+  "id": "shuhu-production-20261108-human-equine-headneck-medium",
+  "beast": "shuhu",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE isolated HUMAN-FACED head with a COMPLETE NATURAL HORSE NECK, one continuous organic anatomical part. Adult human forehead, two dark eyes, human nose, cheeks, closed lips and chin; short dark hair. Human facial planes blend around jaw and rear skull into a chestnut equine throat and full muscular horse neck, no equine muzzle. Neck extends down and backward, about twice head height, with rounded oval cross-sections, a natural arched crest and short dark mane. Thick neck muscles and throat run uninterrupted into a broad rounded basal root shaped to overlap deeply inside horse withers and chest. Preserve volume on BOTH sides all the way to base; no flat triangular sheet, squeezed neck or abrupt skin-to-fur band. Skin transitions gradually to fine short coat around jaw and nape. Head upright looking forward. Entire neck and root visible. No human shoulders, bust, torso, horse body, legs, wings, tail, clothes, collar, disc, ring, plinth or props; never a bare human portrait head.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "yayu-regen-20261108-sol-body-retry2",
+  "beast": "yayu",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE HUMAN FACE is essential: two human eyes, human nose, closed human lips and chin, natural adult human facial planes and human ears. Reconstruct the corrected reference animal with that human face joined organically through a SHORT thick animal neck to a horizontal ox-shaped quadruped body. Preserve four separated animal legs, FOUR SOLID SINGLE HORSE HOOVES and one ordinary bovine tail. Each horse hoof has one uninterrupted curved horn wall and one sole, never a split or cloven toe. Continuous shoulder, nape and throat volumes, no attached human bust or collar. Warm russet-red short-haired body and natural russet facial skin, dark brown hoof horn. Calm neutral stance, all four soles level. No cow face, cattle muzzle, horns, beak, human torso, human arms, wings, clothing, wounds or pedestal. Follow the actual human head and hoof silhouettes in all four reference views.",
+  "images": [
+    "concept/yayu-regen-20261108-sol-body-retry2/view_34.png",
+    "concept/yayu-regen-20261108-sol-body-retry2/view_side.png",
+    "concept/yayu-regen-20261108-sol-body-retry2/view_front.png",
+    "concept/yayu-regen-20261108-sol-body-retry2/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

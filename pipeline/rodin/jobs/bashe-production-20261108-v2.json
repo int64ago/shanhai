@@ -1,0 +1,13 @@
+{
+  "id": "bashe-production-20261108-v2",
+  "beast": "bashe",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One entire LONG STRAIGHT SNAKE stretched out end to end like a scientific museum specimen. Single head at the LEFT END, fine pointed tail at the RIGHT END, maximum possible separation between head and tail. Horizontal length twenty times its thickest diameter. Completely UNCOILED, no curved pose, no U bend, no circle, no ring, no self overlap, no contact between head and tail. Natural closed-jaw snake head, dark eyes, muted blue-green head scales. Narrow neck gradually widens into a muscular charcoal-black cylindrical trunk; the rear half progressively narrows into a very slender complete pointed tail. Real volumetric snake anatomy, small overlapping scales, broad belly scutes. Straight continuous spine suitable for rigging. No limbs, horns, wings, hood, prey or base. Full isolated animal fully visible, detailed realistic natural history sculpt.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000,
+    "seed": 11083
+  }
+}

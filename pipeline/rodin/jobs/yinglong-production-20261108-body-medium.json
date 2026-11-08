@@ -1,0 +1,8 @@
+{
+  "id": "yinglong-production-20261108-body-medium",
+  "beast": "yinglong",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE complete elongated Chinese dragon body, continuous dragon head, muscular neck, ribcage, belly and long pointed tail. Dragon face has a long scaled muzzle, strong brows, small eyes and short whiskers, not a human face. Slender circular body about 10 times its maximum thickness; rounded belly, fine overlapping muted blue-green scales, pale underside. Fully extended horizontal shallow S pose, raised head at one end, complete steadily tapering pointed tail at the opposite end. Wide visible space between head and tail; no ring, coil, loop, ouroboros or self-contact. Head, belly and entire tail visible and separated in silhouette. Two broad rounded shoulder sides reserved for separate wings, covered by continuous organic skin, no holes or sockets. No native wings, limbs, horns, branching antlers, tail fins, pedestal, rocks or props. Natural volumetric anatomy, no hollow tube or flat ribbon. Neutral isolated full body.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "jiufeng-regen-20261108-sol-body-v2-high",
+  "beast": "jiufeng",
+  "budget": 20,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Reconstruct the same complete headless bird body shown in the four approved reference views. Preserve the natural rounded avian breast, feathered upper back and muscular shoulders, two complete native half-spread feather wings, two separated bird legs with planted clawed feet, and one ordinary feather tail. Short overlapping scapular feathers flow continuously into the thick wing roots and layered flight feathers. Keep the closed curved feathered upper torso and the actual animal proportions in the references. Slate blue-gray plumage, gray scaled lower legs and dark claws, with fine natural feather detail over the breast, mantle and back. Maintain the complete isolated headless, neckless body and its balanced pose. Single cohesive zoological game asset.",
+  "images": [
+    "concept/jiufeng-regen-20261108-sol-body-v2/view_34.png",
+    "concept/jiufeng-regen-20261108-sol-body-v2/view_side.png",
+    "concept/jiufeng-regen-20261108-sol-body-v2/view_front.png",
+    "concept/jiufeng-regen-20261108-sol-body-v2/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

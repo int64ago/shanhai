@@ -1,0 +1,8 @@
+{
+  "id": "qiangliang-production-20261108-body-medium",
+  "beast": "qiangliang",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "QIANGLIANG, one upright HUMAN-bodied deity with one natural TIGER head, FOUR HOOF extremities and LONG ELBOWS. Human shoulder girdle, rib cage, waist and pelvis; exactly two long arms and two legs. Each arm ends directly in one compact cloven hoof, NO human hand or fingers. Each leg ends in one broad cloven hoof flat on ground: exactly four hooves total. Elbow joints have pronounced long rearward bony points and elongated forearms; no added limbs. Arms held 30 degrees away from ribs, elbows slightly bent, forearms clear and accessible. Tiger neck blends into human trapezius. Tiger muzzle slightly open for a separate held snake, dark eyes, rounded ears, muted ochre fur with dark stripes; warm grey human torso, plain short opaque dark hip wrap. Balanced biped stance, knees nearly straight, full silhouette visible. Continuous organic joints. No snakes, tiger paws, human hands or feet, horizontal animal torso, tail, wings, armor, pedestal or scenery.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "kaiming-regen-20261108-sol-body-high",
+  "beast": "kaiming",
+  "budget": 20,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Preserve the exact anatomically approved four-view HEADLESS tiger body: broad horizontal tiger torso, four separate weight-bearing feline legs, four complete tiger paws flat on the ground, level back, one ordinary tiger tail clear of limbs. Maintain the low broad rounded shoulder-and-neck attachment region and its continuous organic flow into chest and withers. No tall crest or wall, collar, ring, pedestal, rectangular chest patch, protruding neck tubes or stump buds. Continuous natural ochre fur, dark tiger stripes and pale belly. No head, face, eyes, additional limbs, wings, horns, armor, clothing, props or base.",
+  "images": ["concept/kaiming-regen-20261108-sol-body/view_34.png", "concept/kaiming-regen-20261108-sol-body/view_side.png", "concept/kaiming-regen-20261108-sol-body/view_front.png", "concept/kaiming-regen-20261108-sol-body/view_back.png"],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000, "addons": "HighPack" }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "yayu-regen-20261108-sol-headneck-v3-medium",
+  "beast": "yayu",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One isolated mythical animal head WITH its complete short thick bovine neck, a single continuous anatomical part. ONE clear adult human face: human forehead, eyebrows, eyes, projecting human nose bridge, closed human lips and chin. A human cranium flows through a broad curved nape into the powerful short neck muscles of an ox. The neck is shorter than the head height, broadens gently toward its lower attachment and ends in a closed blunt rounded oval mass, wider than the skull. Thick natural throat and nape volumes, soft rounded contours all around. Russet red-ochre short fur grows continuously from the animal neck into the hairline and facial margins; warm red-brown human facial skin. Calm expression, short dark head hair. Whole head and neck visible, neutral pose, isolated zoological sculpt. No cattle muzzle, bovine nose, horns, extra face, human chest, human shoulders, arms, bust, pointed collar, flat bib, plate, clothing, pedestal or display base.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 18000
+  }
+}

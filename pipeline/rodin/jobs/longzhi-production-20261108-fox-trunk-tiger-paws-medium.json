@@ -1,0 +1,12 @@
+{
+  "id": "longzhi-production-20261108-fox-trunk-tiger-paws-medium",
+  "beast": "longzhi",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE headless tailless FOX body with FOUR complete native weight-bearing legs ending naturally in TIGER-LIKE PAWS. Slender elongated fox ribcage, narrow waist, full supported haunches, level spine and natural shoulder muscles; red-brown short fur, cream underside. Broad short rounded cervical root at front and smoothly furred rounded rump at rear, no face, skull, ears or native tail. Four separated legs extend comfortably to the same ground plane, rear hocks raised naturally. Each lower leg blends continuously into a broad feline paw with four rounded front toes and short dark curved claws; natural pads and flat sole contact. Paws are part of whole legs, no pasted caps or ankle seams. Entire single body and all four paws visible. No crouching rump, human hands, hooves, wings, armor, bronze claws, extra legs, multiple heads, tails, pedestals or scenery. Quiet neutral standing anatomy study.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

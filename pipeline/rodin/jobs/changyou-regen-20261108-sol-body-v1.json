@@ -1,0 +1,8 @@
+{
+  "id": "changyou-regen-20261108-sol-body-v1",
+  "beast": "changyou",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE complete natural monkey-ape in relaxed semi-upright stance. Small macaque head, projecting muzzle, dark eyes; sloping shoulders, narrow furry torso, modest hips. Very long arms reach above ankle level, elbows relaxed; shorter bent hind legs. TWO full hands with five distinct fingers each including opposed thumbs; hands clear of knees, feet, tail and ground. TWO broad primate feet with five readable toes each including grasping big toes, both soles flat on one ground plane. All limbs separated from torso and one another, natural joint transitions. Dense charcoal grey-brown fur, darker muzzle, palms and soles. EARLESS short-furred temples, no ear flaps or circular ear marks: four separate primate ears will be attached later. ONE slim monkey tail behind, clear of hands and feet. Entire animal, fingers and toes in frame. No human bodybuilder muscles, clothing, objects, pedestal or base.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

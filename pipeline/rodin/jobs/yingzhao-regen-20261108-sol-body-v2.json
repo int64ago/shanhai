@@ -1,0 +1,12 @@
+{
+  "id": "yingzhao-regen-20261108-sol-body-v2",
+  "beast": "yingzhao",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "An adult HUMAN FACE on one coherent four-legged mythical animal. Broad human forehead, human eyebrows and eyes, projecting human nose bridge, human lips and chin, calm closed mouth. A proportionate human skull flows through a muscular animal neck into an athletic horse body, with continuous skin and short fur across neck, shoulders and chest. Long horizontal barrel, level back, raised hips, four separated horse legs with clear joints and four single solid hooves planted flat. One long attached horse tail. Ochre coat with bold black tiger stripes, dark mane and tail. Wingless relaxed standing pose, whole creature and all four hooves visible.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 18000
+  }
+}

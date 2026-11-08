@@ -1,0 +1,8 @@
+{
+  "id": "xiangliu-production-20261108-headneck-medium",
+  "beast": "xiangliu",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE isolated complete human-faced head on ONE long muscular serpent neck, no trunk and no other heads. Human nose bridge, lips, chin, full rounded cranium, two ordinary eyes, two human ears, short plain hair; no snake snout, horns, fangs or crown. Human facial margins transition seamlessly into blue-green scales around nape and throat. Neck is about 5 times longer than its average thickness, gently curved in a shallow open S; circular cross-section, broad lighter belly scutes and fine muted teal dorsal scales. Narrower just below the head, widening gradually toward a broad rounded fleshy basal root for organic overlap into a separate serpent trunk. Root closed and blunt, with real volume on every side, no collar, ring, peg, triangular bib, human shoulders, bust or flat mounting plate. Entire cranium, neck and base visible, head and root separated with no loop or self-contact. No props or pedestal.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

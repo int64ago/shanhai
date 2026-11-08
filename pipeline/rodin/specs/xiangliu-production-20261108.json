@@ -1,0 +1,39 @@
+{
+  "beast": "xiangliu",
+  "name": "相柳",
+  "date": "2026-11-08",
+  "scope": "Medium generation specifications only; parent submits API calls and independently reviews body and headneck outputs. No runtime or readiness change.",
+  "researchCommit": "ca7b3a486d2bdcd76f117c5f4b20c9f886ac7a83",
+  "archetype": "serpentine",
+  "source": [
+    { "book": "海外北經", "text": "相柳者，九首人面，蛇身而青。" },
+    { "book": "大荒北經", "text": "共工臣名曰相繇，九首蛇身，自環，食于九土。" }
+  ],
+  "sourceVerification": {
+    "basis": "Research commit content and full provenance passages; 2026-11-08 fresh WebFetch of both chapters independently confirms the two continuous excerpts.",
+    "urls": ["https://zh.wikisource.org/wiki/山海經/海外北經", "https://zh.wikisource.org/wiki/山海經/大荒北經"],
+    "selectedVisualBasis": "海外北經 explicitly supplies 九首人面 and 蛇身而青. The human-faced option is selected on this passage, not assumed from catalog/index anatomy.",
+    "boundaries": ["大荒北經 names 相繇 and gives 九首蛇身、自環、九土; it does not itself specify human faces or blue-green color.", "海外北經 says 相柳者 in the shape clause; do not replace it with 相柳氏 from the opening sentence.", "食于九山 means feeding in the nine mountains, not swallowing nine mountains.", "虎色 refers to snakes at the corners of 共工之臺, not Xiangliu's markings.", "Do not merge the two chapters into one quotation or claim 自環 is the 海外北經 pose."]
+  },
+  "inferred": [
+    { "item": "Nine complete human-faced heads on independent long serpent necks", "basis": "Nine heads and human faces follow the selected 海外北經 passage. Complete crania, ears, hair, long necks, nine attachment positions and shared anterior root anatomy are artistic structural completion. Generate exactly one headneck mother and replicate nine times after review." },
+    { "item": "Headless continuous serpent body with broad rounded front tissue", "basis": "The common snake body is explicit; a broad root mass, zero native heads, no legs, belly scutes, body proportions and fully pointed tail are production design. Do not ask the body generation for nine branching sockets or baked heads." },
+    { "item": "Extended open shallow S rather than a closed circle", "basis": "A generation and rigging pose chosen to prevent text-to-3D ouroboros welding. 自環 belongs to the separate 大荒北經 version; it does not require a closed-ring rest mesh for this 海外北經 design. Any later coiling must keep head, tail and necks distinct." },
+    { "item": "Muted teal body, lighter belly, natural human faces", "basis": "青 explicitly applies to snake body. Exact blue-green tones, face color, scale layout and hair are inferred. No tiger stripes, poison cloud, glowing eyes or nine-voice sound is specified by the chosen form quote." }
+  ],
+  "jobs": [
+    { "id": "xiangliu-production-20261108-body-medium", "path": "pipeline/rodin/jobs/xiangliu-production-20261108-body-medium.json", "role": "Headless continuous serpent trunk, broad rounded root tissue, complete belly and pointed tail", "instances": 1 },
+    { "id": "xiangliu-production-20261108-headneck-medium", "path": "pipeline/rodin/jobs/xiangliu-production-20261108-headneck-medium.json", "role": "One complete human-faced head and long serpent neck with a broad closed fleshy root", "instances": 9 }
+  ],
+  "generation": { "status": "prepared-not-submitted", "budgetPerBeast": 20, "tier": "Gen-2.5-Medium", "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }, "promptCharacterLimit": 1000, "jobCount": 2, "estimatedInitialCredits": 1, "automaticVariants": false, "highEligible": false },
+  "currentModel": { "qualifiedModelEstablished": false, "newModelProduced": false, "evidence": "Research commit/provenance records no accepted complete serpent-body master. Old human-head candidates are not a nine-head serpent model; isolated animal tails cannot stand for a whole snake. No new output or fresh inventory audit is claimed." },
+  "acceptance": [
+    "Review actual four orthographic views of body and headneck separately using Read; a passing component is not a passing assembled beast.",
+    "Body has rounded continuous anterior tissue, scaled trunk, belly and full sharp tail; no native head, branch stubs, nine socket holes, collar, cut disc, flattened slab or ornamental base.",
+    "No closed ring, ouroboros, welded ends, crossings or tail-tip loss. Front and tail must be spatially distinct in the actual mesh, not just hidden by camera angle.",
+    "Mother has exactly one complete human face and cranium, no snake muzzle; circular long serpent neck and broad volumetric closed root, no human bust, mounting plate, peg or triangular bib.",
+    "Assemble exactly nine complete heads, stagger their neck heights and directions, overlap roots deeply inside broad anterior tissue. Inspect front/rear/sides and motion for all nine faces, gaps, collars, severe intersections or floating heads.",
+    "Later production needs independent neck motion and finite skinning, actual belly support/clearance measurements, idle/walk/special plus continuous Read captures, StrictMode lifecycle, explicit inferred audio/effects and special return. None is currently certified."
+  ],
+  "workerActions": { "paidAPICalls": 0, "installs": 0, "ttsCalls": 0, "runtimeChanges": false, "readyChanges": false, "commits": false, "pnpmRun": false }
+}

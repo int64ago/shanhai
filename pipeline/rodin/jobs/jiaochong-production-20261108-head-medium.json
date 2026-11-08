@@ -1,0 +1,8 @@
+{
+  "id": "jiaochong-production-20261108-head-medium",
+  "beast": "jiaochong",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One isolated natural adult HUMAN head with one short cylindrical neck, for a Chinese mountain deity. Exactly one face, two dark eyes, one nose, one mouth and two normal ears. Calm expression, closed lips, warm ochre skin, dark hair pulled into a compact simple knot above the skull. Real cheekbones, jaw, ear cartilage and subtle skin detail. Neck is about one third of head height, tapering gently to a plain unadorned lower end. Front-facing neutral orientation, whole head and neck fully visible, no tilt. No shoulders, chest, arms, hands, second face, second head, helmet, crown, horns, jewelry, mechanical socket, base or scenery.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

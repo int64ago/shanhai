@@ -1,0 +1,12 @@
+{
+  "id": "luwu-regen-20261108-sol-body-v2",
+  "beast": "luwu",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "An adult HUMAN FACE on one coherent four-legged mythical animal. Broad human forehead, human eyebrows and eyes, projecting human nose bridge, human lips and chin, calm closed mouth. A proportionate human skull flows through a strong feline neck into a powerful tiger body, with continuous short fur across neck, shoulders and chest. Long horizontal barrel, level back, raised hips, four separated feline legs with clear joints and four broad tiger paws planted flat, visible claws. Smooth completely tailless rump with rounded pelvic muscles and uninterrupted striped fur. Ochre coat, black tiger stripes, pale belly. Relaxed standing pose, whole creature and all four paws visible.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 18000
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "id": "leishen-production-20261108-body-medium",
+  "beast": "leishen",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE complete elongated dragon body with ONE integrated human head. Full human cranium, human nose, lips, chin and ordinary eyes, short plain hair; broad neck blends continuously into the scaled dragon trunk, no human torso or bust. Clearly visible full rounded muscular upper abdomen, smoothly continuous with a long circular tapered rear trunk; muted blue-green overlapping dragon scales and broad pale belly scutes. Body about 9 times its maximum thickness, extended horizontal shallow S, human head raised at one end, complete steadily tapering pointed tail at the opposite end. Head and tail widely separated, no ring, coil, loop, ouroboros, self-contact or crossing. Entire head, abdomen and tail visible. No arms, hands, legs, claws, horns, wings, dragon snout, bird beak, drum, mallet, armor, ornaments, lightning, props or base. Rounded organic abdomen, no separate ball, human chest, collar, cut plane, hollow pipe or flat ribbon.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

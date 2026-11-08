@@ -1,0 +1,12 @@
+{
+  "id": "luwu-regen-20261108-sol-body-medium",
+  "beast": "luwu",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One Chinese mythical Luwu: powerful tiger body with ONE human face and FOUR clawed tiger paws. Generate head, neck and torso as ONE continuous organic quadruped. Proportionate guardian skull, human facial features, natural eyes, closed mouth and short cheek fur; no tiger muzzle, second face or human bust. Strong feline neck flows into shoulders and chest with continuous short fur, no collar seam, blank panel or socket. Long horizontal tiger barrel, athletic shoulders and hips, level back, FOUR separated weight-bearing feline legs with clear joints and FOUR broad paws flat on ground. Ochre fur, black tiger stripes, pale belly. Completely TAILLESS rump with natural rounded pelvic muscles and continuous striped fur; no stub, discs, flared pads or root sockets. Nine slender tails are separate parts. Relaxed standing pose, all paws visible, whole animal in frame. No wings, horns, hooves, human hands, armor or base.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 18000
+  }
+}

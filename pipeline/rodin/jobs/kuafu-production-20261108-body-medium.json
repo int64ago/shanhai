@@ -1,0 +1,8 @@
+{
+  "id": "kuafu-production-20261108-body-medium",
+  "beast": "kuafu",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "KUAFU, one complete tall HUMAN figure, athletic adult male with a natural human head, single chest, waist and pelvis. Exactly two arms with five-finger hands and two legs with bare five-toed feet. Broad shoulders, long thighs, believable knees and ankles, subtle tendons, not a bodybuilder. Neutral balanced A-pose, arms 30 degrees from ribs, elbows gently bent, both soles flat hip-width apart. Hands held clear of body, fingers loosely curled with visible gaps, able to hold a separate slender object. Both ears and earlobes fully exposed, short dark hair swept away from ears. Warm earthy ochre skin, plain opaque short brown hip wrap leaving all limb joints visible. Continuous organic anatomy from head to soles. Full standing figure, no crop. No snakes, staff, weapons, giant ornaments, long robes, armor, extra limbs, tail, base, sun disc or scenery.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

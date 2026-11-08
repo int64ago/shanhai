@@ -1,0 +1,19 @@
+{
+  "id": "luwu-regen-20261108-sol-tail-high",
+  "beast": "luwu",
+  "budget": 20,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Refine the ONE isolated slender tiger-tail master in the approved four views. Preserve its long gentle shallow-S curve, near-straight first quarter, natural round root, circular section and gradual taper to a fine rounded dark tip. Short golden ochre fur and coherent black tiger rings around all sides, consistent with an ochre striped tiger body. Root is narrow and organic, no flared pad, plate, collar, sphere or socket. No extra tail or branch, body, rump, limb, detached fur, ornament or base. Keep the approved length-to-thickness ratio.",
+  "images": [
+    "concept/luwu-regen-20261108-sol-tail/view_34.png",
+    "concept/luwu-regen-20261108-sol-tail/view_side.png",
+    "concept/luwu-regen-20261108-sol-tail/view_front.png",
+    "concept/luwu-regen-20261108-sol-tail/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "yingzhao-regen-20261108-sol-wing-high",
+  "beast": "yingzhao",
+  "budget": 20,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Refine the ONE isolated bird-wing master shown in the approved four views. Preserve the long shallow-arched silhouette, tapered muscular root, clear elbow and wrist, compact coverts, layered secondary feathers and long separated pointed primaries. Continuous natural feather layering on both sides, charcoal gray with soft warm-gray edges. Root remains compact and tapered with no mounting plate, collar, sphere or socket. No additional wing, body, head, legs, human hand, loose feathers, ornament or base. Keep root-to-tip proportions exactly as references.",
+  "images": [
+    "concept/yingzhao-regen-20261108-sol-wing/view_34.png",
+    "concept/yingzhao-regen-20261108-sol-wing/view_side.png",
+    "concept/yingzhao-regen-20261108-sol-wing/view_front.png",
+    "concept/yingzhao-regen-20261108-sol-wing/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

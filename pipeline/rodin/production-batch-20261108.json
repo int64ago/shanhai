@@ -1,0 +1,1231 @@
+{
+  "date": "2026-11-08",
+  "scope": "Generation attempts and preparation only; actual shape acceptance and runtime release are separate gates.",
+  "successfulSubmissions": 26,
+  "consumedCredits": 15,
+  "sourceJobs": 75,
+  "automaticApprovalRejected": [
+    "xingxing-production-20261108-v1",
+    "lingyu-production-20261108-v1",
+    "yayu-regen-20261108-sol-headneck-v3-medium",
+    "shuhu-production-20261108-winged-horse-trunk-medium",
+    "zhuyan-production-20261108-v1-high",
+    "bashe-production-20261108-v2-high",
+    "luwu-regen-20261108-sol-standing-androsphinx-medium",
+    "yinglong-production-20261108-body-medium"
+  ],
+  "providerRejected": [
+    "kaiming-regen-20261108-sol-body-v1",
+    "lu_fish-production-20261108-native-body-medium"
+  ],
+  "denialHandling": "Rejected calls were not routed through alternative tools or workers. Prepared job files are not permission to submit blocked transactions.",
+  "visualCheckpoint": {
+    "changyou": "Actual reconstructed High static four-ear primate and hand/foot anatomy passed parent review. Grounded rig candidate and actual runtime QA still pending at this checkpoint.",
+    "jiufeng": "Only the High bird body passed. Both new nine-neck assemblies failed visible root/collar/feather transition checks; no replacement model accepted.",
+    "luwu": "High tapering tail passed worker part review. Unified human-face tiger body unresolved; standing-androsphinx generation blocked. Tail review scale is not runtime scale.",
+    "yingzhao": "Body and donor-neck routes retain equine muzzle or human bust/hard neck planes; rejected.",
+    "yayu": "Body-v4 extra pointed appendage and accessory hoof blocks rejected.",
+    "kui": "Four-legged horned Medium and single-leg reconstruction rejected.",
+    "bashe": "Actual v2 Medium four views accepted as High reference; High generation blocked.",
+    "zhuyan": "Hand-color-corrected Medium accepted as High reference; High generation blocked.",
+    "shuhu": "Existing neck/rump/tail geometry rejected; new trunk generation blocked.",
+    "lu_fish": "Existing rump/tail/wing-root geometry rejected; new request rejected by provider."
+  },
+  "noNewCompleteBeastAcceptedAtCheckpoint": true,
+  "readyCountAtCheckpoint": 43,
+  "totalCatalog": 62,
+  "specificationsDoNotEstablishModelReadiness": true,
+  "records": [
+    {
+      "id": "bashe-production-20261108-v1",
+      "beast": "bashe",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/bashe-production-20261108-v1.json",
+      "sha256": "875c6b34d6f2bf3b974132c9986020287aab446fc018216e7f76d80ae981bb9c",
+      "promptCharacters": 906,
+      "status": "submitted-download-preserved",
+      "missingReferenceImages": [],
+      "receipts": [
+        {
+          "uuid": "2a2a15be-6f37-47c0-94f5-5b5901b6e7ed",
+          "hash": "17511261834fe607",
+          "consumed": 0.5,
+          "time": "2026-11-08T12:42:30.075Z"
+        }
+      ],
+      "source": {
+        "path": "raw/bashe-production-20261108-v1/base_basic_pbr.glb",
+        "bytes": 2449484,
+        "sha256": "a77dac6865e648da9e068dde329b2fe743a0259d38cf8f703ab67260eea4f75b"
+      }
+    },
+    {
+      "id": "bashe-production-20261108-v2-high",
+      "beast": "bashe",
+      "tier": "Gen-2.5-Extreme-High",
+      "path": "pipeline/rodin/jobs/bashe-production-20261108-v2-high.json",
+      "sha256": "31f37fde5203e530fd506a4a98fc2176da1c0756e2fffcd06227c745c95c6f8e",
+      "promptCharacters": 760,
+      "status": "automatic-approval-rejected-no-submission",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "bashe-production-20261108-v2",
+      "beast": "bashe",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/bashe-production-20261108-v2.json",
+      "sha256": "ae2374ed1e6f1dba4b24e9602bd35d2cb1dedea1f8f96d21428b136d2abb143f",
+      "promptCharacters": 857,
+      "status": "submitted-download-preserved",
+      "missingReferenceImages": [],
+      "receipts": [
+        {
+          "uuid": "c7c2e67f-b140-47ba-bb1f-737411b91601",
+          "hash": "1c267711fa8ab522",
+          "consumed": 0.5,
+          "time": "2026-11-08T12:55:25.234Z"
+        }
+      ],
+      "source": {
+        "path": "raw/bashe-production-20261108-v2/base_basic_pbr.glb",
+        "bytes": 1608596,
+        "sha256": "87771463fc120aaac0296505be5f3e5d9b1a359a46baf2a46a23ce2e3cb22518"
+      }
+    },
+    {
+      "id": "changyou-regen-20261108-sol-body-high",
+      "beast": "changyou",
+      "tier": "Gen-2.5-Extreme-High",
+      "path": "pipeline/rodin/jobs/changyou-regen-20261108-sol-body-high.json",
+      "sha256": "01794c9147decc107151cd1d82f9f9b06561e08c64930d1761512dd53f54966a",
+      "promptCharacters": 916,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "changyou-regen-20261108-sol-body-v1",
+      "beast": "changyou",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/changyou-regen-20261108-sol-body-v1.json",
+      "sha256": "3342ff3a5c5f19f4cfd8672fbf0bbc2e7914458d83283f7a6fde252168550dba",
+      "promptCharacters": 899,
+      "status": "submitted-download-preserved",
+      "missingReferenceImages": [],
+      "receipts": [
+        {
+          "uuid": "f8ca74e4-3a7f-4be3-a191-714b751ca505",
+          "hash": "380faeafa86a68bd",
+          "consumed": 0.5,
+          "time": "2026-11-08T10:52:13.531Z"
+        }
+      ],
+      "source": {
+        "path": "raw/changyou-regen-20261108-sol-body-v1/base_basic_pbr.glb",
+        "bytes": 2739912,
+        "sha256": "b218ee1fda6d5bcea398c612997d242923f1fbe420a8d651713506041c6b07d7"
+      }
+    },
+    {
+      "id": "changyou-regen-20261108-sol-ear-high",
+      "beast": "changyou",
+      "tier": "Gen-2.5-Extreme-High",
+      "path": "pipeline/rodin/jobs/changyou-regen-20261108-sol-ear-high.json",
+      "sha256": "b55567d2fa057ab74cffce3c81f624b7b28b0dcb6c1f55ef07d2369c7674a251",
+      "promptCharacters": 579,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "changyou-regen-20261108-sol-ear-v1",
+      "beast": "changyou",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/changyou-regen-20261108-sol-ear-v1.json",
+      "sha256": "348cb9a869f2fc6e2510ceadeac0d721a6f17b847dfa63d003cae52fb71d724b",
+      "promptCharacters": 838,
+      "status": "submitted-download-preserved",
+      "missingReferenceImages": [],
+      "receipts": [
+        {
+          "uuid": "145f38b9-0e48-400c-9e56-81a9605fe73e",
+          "hash": "4bd48772b1a8421d",
+          "consumed": 0.5,
+          "time": "2026-11-08T10:52:36.086Z"
+        }
+      ],
+      "source": {
+        "path": "raw/changyou-regen-20261108-sol-ear-v1/base_basic_pbr.glb",
+        "bytes": 3744992,
+        "sha256": "89a55ce161da8d216aeaa959a3a75cee17a1606e363c9cc094a00c09da690eb9"
+      }
+    },
+    {
+      "id": "changyou-regen-20261108-sol-native-four-ear-high",
+      "beast": "changyou",
+      "tier": "Gen-2.5-Extreme-High",
+      "path": "pipeline/rodin/jobs/changyou-regen-20261108-sol-native-four-ear-high.json",
+      "sha256": "4b5a7eb24f60c0fee214a53f5f1aa9201e3b44270b72386658f2f04b4f6d0bb0",
+      "promptCharacters": 974,
+      "status": "submitted-download-preserved",
+      "missingReferenceImages": [],
+      "receipts": [
+        {
+          "uuid": "63c13540-d366-4258-9e57-30087d5ffd0c",
+          "hash": "8bb02913672c2395",
+          "consumed": 1,
+          "time": "2026-11-08T13:01:14.692Z"
+        }
+      ],
+      "source": {
+        "path": "raw/changyou-regen-20261108-sol-native-four-ear-high/base_high_pbr.glb",
+        "bytes": 30613584,
+        "sha256": "6564718ecac9cd77374514dda2a4fdbacb1655b66174ddb84f2ff60381b5f3bb"
+      }
+    },
+    {
+      "id": "changyou-regen-20261108-sol-native-four-ear-medium",
+      "beast": "changyou",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/changyou-regen-20261108-sol-native-four-ear-medium.json",
+      "sha256": "ef7bfd51c16fdf47ef4974979586528ceb7a17095a016e339cb946e1cb605809",
+      "promptCharacters": 994,
+      "status": "submitted-download-preserved",
+      "missingReferenceImages": [],
+      "receipts": [
+        {
+          "uuid": "bdd73b68-9878-4d67-87f1-5b4c34de8f34",
+          "hash": "3de5d3ff73fe7c7c",
+          "consumed": 0.5,
+          "time": "2026-11-08T12:20:59.283Z"
+        }
+      ],
+      "source": {
+        "path": "raw/changyou-regen-20261108-sol-native-four-ear-medium/base_basic_pbr.glb",
+        "bytes": 1797336,
+        "sha256": "d7840d49f14ceb823b7c2a5ac277296733332655e4452a4bb995b1f42c0c9afd"
+      }
+    },
+    {
+      "id": "jiaochong-production-20261108-body-medium",
+      "beast": "jiaochong",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/jiaochong-production-20261108-body-medium.json",
+      "sha256": "ef632c1e7b179e5f6fbb88749dfa1331ef3b006a7d8254e1811c663dc13ee654",
+      "promptCharacters": 912,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "jiaochong-production-20261108-head-medium",
+      "beast": "jiaochong",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/jiaochong-production-20261108-head-medium.json",
+      "sha256": "19f0644dffeac087529978ac4cf6b29cdc11a3934b07da98f0c229c42cd5740a",
+      "promptCharacters": 635,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "jimeng-production-20261108-body-medium",
+      "beast": "jimeng",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/jimeng-production-20261108-body-medium.json",
+      "sha256": "42a37ec382b3a372a9bc4bf4770e9cc3436e2f26873fce70e9a02a8b3760aa42",
+      "promptCharacters": 906,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "jiufeng-regen-20261108-sol-body-high",
+      "beast": "jiufeng",
+      "tier": "Gen-2.5-Extreme-High",
+      "path": "pipeline/rodin/jobs/jiufeng-regen-20261108-sol-body-high.json",
+      "sha256": "34c4876bcf4aaf0bcfbfeaf42ba8536394451a47fa0ffdf067fc1d4e2014e747",
+      "promptCharacters": 747,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "jiufeng-regen-20261108-sol-body-retry2",
+      "beast": "jiufeng",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/jiufeng-regen-20261108-sol-body-retry2.json",
+      "sha256": "90139a864e5ef58d2e8fcaba671a88e7b72830389fc43fd74340879e70be4f43",
+      "promptCharacters": 821,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "jiufeng-regen-20261108-sol-body-v1",
+      "beast": "jiufeng",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/jiufeng-regen-20261108-sol-body-v1.json",
+      "sha256": "13e54f143dc15a66922380dd89453a1a08971063490e4cdfdd92417ed58a99f8",
+      "promptCharacters": 853,
+      "status": "submitted-download-preserved",
+      "missingReferenceImages": [],
+      "receipts": [
+        {
+          "uuid": "fea51339-5cf4-45fa-8a2c-3c90c27a5370",
+          "hash": "554ba89fba4a2a11",
+          "consumed": 0.5,
+          "time": "2026-11-08T10:44:46.041Z"
+        }
+      ],
+      "source": {
+        "path": "raw/jiufeng-regen-20261108-sol-body-v1/base_basic_pbr.glb",
+        "bytes": 2510276,
+        "sha256": "ae9e45e71741c9163ffdd0eb12fa2db8aba2a54be2150fa27a83bf70f730c957"
+      }
+    },
+    {
+      "id": "jiufeng-regen-20261108-sol-body-v2-high",
+      "beast": "jiufeng",
+      "tier": "Gen-2.5-Extreme-High",
+      "path": "pipeline/rodin/jobs/jiufeng-regen-20261108-sol-body-v2-high.json",
+      "sha256": "41570a4d141aed2a26bb2cb25060ece7b71ed456c303a8754a5d60958805049f",
+      "promptCharacters": 763,
+      "status": "submitted-download-preserved",
+      "missingReferenceImages": [],
+      "receipts": [
+        {
+          "uuid": "3e6aad3f-dcd7-4fb4-911a-fa8f476b387b",
+          "hash": "d8b22e8817f61e99",
+          "consumed": 1,
+          "time": "2026-11-08T11:45:24.925Z"
+        }
+      ],
+      "source": {
+        "path": "raw/jiufeng-regen-20261108-sol-body-v2-high/base_high_pbr.glb",
+        "bytes": 36240600,
+        "sha256": "42ef0136a3495b06fe1467617741962019eaa50cd3cbadad428b0faa6f58ad6f"
+      }
+    },
+    {
+      "id": "jiufeng-regen-20261108-sol-body-v2",
+      "beast": "jiufeng",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/jiufeng-regen-20261108-sol-body-v2.json",
+      "sha256": "85bd9982d899fcd78d3cbb8adb9fad9a5eeef6855a369ce56be7c227dab5458f",
+      "promptCharacters": 824,
+      "status": "submitted-download-preserved",
+      "missingReferenceImages": [],
+      "receipts": [
+        {
+          "uuid": "58aa33fe-cc04-4f84-bb24-a8ebf844129a",
+          "hash": "18bcfc1cfba2800a",
+          "consumed": 0.5,
+          "time": "2026-11-08T11:29:37.419Z"
+        }
+      ],
+      "source": {
+        "path": "raw/jiufeng-regen-20261108-sol-body-v2/base_basic_pbr.glb",
+        "bytes": 2917116,
+        "sha256": "432bd0fb7aa661a8f03b1bec85d1d0857cb42a122b5ee9457fe75081bee8bd3b"
+      }
+    },
+    {
+      "id": "jiufeng-regen-20261108-sol-headneck-high",
+      "beast": "jiufeng",
+      "tier": "Gen-2.5-Extreme-High",
+      "path": "pipeline/rodin/jobs/jiufeng-regen-20261108-sol-headneck-high.json",
+      "sha256": "6e46e8eebb725f274c420274ce34d995fd34408e36025ddd32f097717024a98d",
+      "promptCharacters": 671,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "jiufeng-regen-20261108-sol-headneck-v1",
+      "beast": "jiufeng",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/jiufeng-regen-20261108-sol-headneck-v1.json",
+      "sha256": "23652af5fd82fcbdb64247593291a9b650c013a5a71b6a34deb0231d2c144429",
+      "promptCharacters": 887,
+      "status": "submitted-download-preserved",
+      "missingReferenceImages": [],
+      "receipts": [
+        {
+          "uuid": "f840f2c8-e779-4764-bfed-8678c6a05b3f",
+          "hash": "35315cf9cb6ac516",
+          "consumed": 0.5,
+          "time": "2026-11-08T10:47:20.523Z"
+        }
+      ],
+      "source": {
+        "path": "raw/jiufeng-regen-20261108-sol-headneck-v1/base_basic_pbr.glb",
+        "bytes": 2195892,
+        "sha256": "7a19ea0fdf88a1777219d3d6b05b33f6cd55a950b7040f46878cb8e2c043b6f9"
+      }
+    },
+    {
+      "id": "jiufeng-regen-20261108-sol-headneck-v2-high",
+      "beast": "jiufeng",
+      "tier": "Gen-2.5-Extreme-High",
+      "path": "pipeline/rodin/jobs/jiufeng-regen-20261108-sol-headneck-v2-high.json",
+      "sha256": "415ff627f1d7870be2d5321edf8a3481893b8e8f4d7dcb65e699f150bbb72ec5",
+      "promptCharacters": 866,
+      "status": "submitted-download-preserved",
+      "missingReferenceImages": [],
+      "receipts": [
+        {
+          "uuid": "029b0686-15f6-4ec1-b722-7aa79b792250",
+          "hash": "ac5dfd4c44be1f92",
+          "consumed": 1,
+          "time": "2026-11-08T12:39:02.657Z"
+        }
+      ],
+      "source": {
+        "path": "raw/jiufeng-regen-20261108-sol-headneck-v2-high/base_high_pbr.glb",
+        "bytes": 26332632,
+        "sha256": "2d89012cd669def8c4c97b1ee28e8bb5cfd1ac2d9dca8e0ee210fec5d877b54f"
+      }
+    },
+    {
+      "id": "jiufeng-regen-20261108-sol-headneck-v2",
+      "beast": "jiufeng",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/jiufeng-regen-20261108-sol-headneck-v2.json",
+      "sha256": "7edd4a4a19add46eeb53ce36cd5aa6126c030f92373b1b47ec7896f24ede46c7",
+      "promptCharacters": 963,
+      "status": "submitted-download-preserved",
+      "missingReferenceImages": [],
+      "receipts": [
+        {
+          "uuid": "3eb3ac1b-9c04-4e91-b4e2-41f7311f0ccb",
+          "hash": "1fd05bf1eb299da9",
+          "consumed": 0.5,
+          "time": "2026-11-08T12:22:52.204Z"
+        }
+      ],
+      "source": {
+        "path": "raw/jiufeng-regen-20261108-sol-headneck-v2/base_basic_pbr.glb",
+        "bytes": 2852184,
+        "sha256": "380dd3d5dfd850cc47d25d56de6ce19ab6bc855dbd650f280320c8f61603d9f6"
+      }
+    },
+    {
+      "id": "kaiming-regen-20261108-sol-body-high",
+      "beast": "kaiming",
+      "tier": "Gen-2.5-Extreme-High",
+      "path": "pipeline/rodin/jobs/kaiming-regen-20261108-sol-body-high.json",
+      "sha256": "fdb3c8579d6863e87a7d41f988e7d7813d0ccb28dddf34ab5575baafb67398ad",
+      "promptCharacters": 622,
+      "status": "planned-only-missing-reference-images",
+      "missingReferenceImages": [
+        "concept/kaiming-regen-20261108-sol-body/view_34.png",
+        "concept/kaiming-regen-20261108-sol-body/view_side.png",
+        "concept/kaiming-regen-20261108-sol-body/view_front.png",
+        "concept/kaiming-regen-20261108-sol-body/view_back.png"
+      ],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "kaiming-regen-20261108-sol-body-v1",
+      "beast": "kaiming",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/kaiming-regen-20261108-sol-body-v1.json",
+      "sha256": "ee9a88c1fe7b7dab13d5de69baef1493888828da7ed7eaf5642664db3ea168fe",
+      "promptCharacters": 781,
+      "status": "provider-rejected-no-successful-submission",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "kaiming-regen-20261108-sol-headneck-high",
+      "beast": "kaiming",
+      "tier": "Gen-2.5-Extreme-High",
+      "path": "pipeline/rodin/jobs/kaiming-regen-20261108-sol-headneck-high.json",
+      "sha256": "0741fabf36c4738dcb88620381a1da2f0368bc3abc4d8ca2616c26fffbff4393",
+      "promptCharacters": 705,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "kaiming-regen-20261108-sol-headneck-v1",
+      "beast": "kaiming",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/kaiming-regen-20261108-sol-headneck-v1.json",
+      "sha256": "a2da63a10edddcca27ec46be588f33b6089bbe03c63929c080dfb1a00947bc3f",
+      "promptCharacters": 878,
+      "status": "submitted-download-preserved",
+      "missingReferenceImages": [],
+      "receipts": [
+        {
+          "uuid": "2db972ae-4892-417e-bcd9-db473e24c99c",
+          "hash": "a5a4766d506a6db9",
+          "consumed": 0.5,
+          "time": "2026-11-08T10:51:13.060Z"
+        }
+      ],
+      "source": {
+        "path": "raw/kaiming-regen-20261108-sol-headneck-v1/base_basic_pbr.glb",
+        "bytes": 2524032,
+        "sha256": "9ee574f0c29f60fba0ea608347f83434d121541c493c1598eec8b91d4dab0932"
+      }
+    },
+    {
+      "id": "kuafu-production-20261108-body-medium",
+      "beast": "kuafu",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/kuafu-production-20261108-body-medium.json",
+      "sha256": "d139aa8ff97a400f606992b37cae15376efc721edbc5c2980ee5206d45c56249",
+      "promptCharacters": 857,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "kuafu-production-20261108-snake-medium",
+      "beast": "kuafu",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/kuafu-production-20261108-snake-medium.json",
+      "sha256": "4fa698d8ebc0ad7cced9eaa1e7ecd642e5c92a4a28141be422b33ead17168140",
+      "promptCharacters": 639,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "kui-production-20261108-native-body-medium",
+      "beast": "kui",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/kui-production-20261108-native-body-medium.json",
+      "sha256": "71978aa660e88ec94c3b24df990c8bd62842293858c84c07c15a865e5ec94dec",
+      "promptCharacters": 949,
+      "status": "submitted-download-preserved",
+      "missingReferenceImages": [],
+      "receipts": [
+        {
+          "uuid": "661cfada-5ab4-4d25-946b-2be4f2f68c8c",
+          "hash": "0f8704d34f821027",
+          "consumed": 0.5,
+          "time": "2026-11-08T12:39:31.135Z"
+        }
+      ],
+      "source": {
+        "path": "raw/kui-production-20261108-native-body-medium/base_basic_pbr.glb",
+        "bytes": 1729756,
+        "sha256": "cb83614d91be278b29e540d767aac681ba88a4770de200801e69bacfbcce4744"
+      }
+    },
+    {
+      "id": "leishen-production-20261108-body-medium",
+      "beast": "leishen",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/leishen-production-20261108-body-medium.json",
+      "sha256": "498c953c9162f40bdd50bf09968cf6ac6226216772def373d06d44b285aaa67e",
+      "promptCharacters": 939,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "lingyu-production-20261108-v1",
+      "beast": "lingyu",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/lingyu-production-20261108-v1.json",
+      "sha256": "fc013f813f08a92770c7958f64c8ae88dad47d919e0236b148cd5d2fe9b86864",
+      "promptCharacters": 985,
+      "status": "automatic-approval-rejected-no-submission",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "longzhi-production-20261108-fox-headneck-medium",
+      "beast": "longzhi",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/longzhi-production-20261108-fox-headneck-medium.json",
+      "sha256": "daa554d97e224fa63e764a760feff3d820b7cf3fbabc31193a03f11435e55335",
+      "promptCharacters": 868,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "longzhi-production-20261108-fox-tail-medium",
+      "beast": "longzhi",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/longzhi-production-20261108-fox-tail-medium.json",
+      "sha256": "7f73ef506b07445a13d08985296bdccda2aebbd664d69b82937e48204387edab",
+      "promptCharacters": 767,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "longzhi-production-20261108-fox-trunk-tiger-paws-medium",
+      "beast": "longzhi",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/longzhi-production-20261108-fox-trunk-tiger-paws-medium.json",
+      "sha256": "697b404da5987128bc39b332de02f88c50c1c4df7750df1a58bacbe1487db384",
+      "promptCharacters": 901,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "lu_fish-production-20261108-native-body-medium",
+      "beast": "lu_fish",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/lu_fish-production-20261108-native-body-medium.json",
+      "sha256": "6b6a01acd7ac34845cfac17d9ebaf6d137535d062d2f55ad5fafdc8b8f7dce4f",
+      "promptCharacters": 1000,
+      "status": "provider-rejected-no-successful-submission",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "luwu-regen-20261108-sol-body-high",
+      "beast": "luwu",
+      "tier": "Gen-2.5-Extreme-High",
+      "path": "pipeline/rodin/jobs/luwu-regen-20261108-sol-body-high.json",
+      "sha256": "c8aeecffb7bd5faa8f8c31d80d5b34c903f8f2bda318ff80de6a45d8c563ea99",
+      "promptCharacters": 750,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "luwu-regen-20261108-sol-body-medium",
+      "beast": "luwu",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/luwu-regen-20261108-sol-body-medium.json",
+      "sha256": "7d752f481993324f78dcf288e77521f35dd855ad0c82d7e39d428a4506dea4f7",
+      "promptCharacters": 923,
+      "status": "submitted-download-preserved",
+      "missingReferenceImages": [],
+      "receipts": [
+        {
+          "uuid": "47686f25-0dec-4ea1-984d-17d6382c2b52",
+          "hash": "aaa96e2a7a07bf67",
+          "consumed": 0.5,
+          "time": "2026-11-08T10:49:59.827Z"
+        }
+      ],
+      "source": {
+        "path": "raw/luwu-regen-20261108-sol-body-medium/base_basic_pbr.glb",
+        "bytes": 2593672,
+        "sha256": "62ec615d72fc5cf5a2af48cc519a91865162b2d7d660670cca0bb0365e2901a8"
+      }
+    },
+    {
+      "id": "luwu-regen-20261108-sol-body-v2",
+      "beast": "luwu",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/luwu-regen-20261108-sol-body-v2.json",
+      "sha256": "c06c746bf25391ca9116a9df8a12586e023d8ae66a5b7e6c43de722a8ec413bc",
+      "promptCharacters": 682,
+      "status": "submitted-download-preserved",
+      "missingReferenceImages": [],
+      "receipts": [
+        {
+          "uuid": "13fc181d-f39b-4798-ac81-44527c366689",
+          "hash": "8fe735f35a5c87d7",
+          "consumed": 0.5,
+          "time": "2026-11-08T11:55:24.289Z"
+        }
+      ],
+      "source": {
+        "path": "raw/luwu-regen-20261108-sol-body-v2/base_basic_pbr.glb",
+        "bytes": 2339776,
+        "sha256": "4cf62597d29ebb0521a6ee07612aa209f7c7245d60143719dc767eef88cbfe91"
+      }
+    },
+    {
+      "id": "luwu-regen-20261108-sol-standing-androsphinx-medium",
+      "beast": "luwu",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/luwu-regen-20261108-sol-standing-androsphinx-medium.json",
+      "sha256": "5da1d959103774bd4af93d5d1c1084ee2639cf3e1ceec456d9530f71a45ad090",
+      "promptCharacters": 865,
+      "status": "automatic-approval-rejected-no-submission",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "luwu-regen-20261108-sol-tail-high",
+      "beast": "luwu",
+      "tier": "Gen-2.5-Extreme-High",
+      "path": "pipeline/rodin/jobs/luwu-regen-20261108-sol-tail-high.json",
+      "sha256": "ad2e973b84afd23e010fab5e04a3c29f077feafa192056e0da54f476e34b9042",
+      "promptCharacters": 544,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "luwu-regen-20261108-sol-tail-medium",
+      "beast": "luwu",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/luwu-regen-20261108-sol-tail-medium.json",
+      "sha256": "ef42f94ad2e4f4cb7fe39e763c2010b67dba02ee688219dfc8424b006d593c10",
+      "promptCharacters": 799,
+      "status": "submitted-download-preserved",
+      "missingReferenceImages": [],
+      "receipts": [
+        {
+          "uuid": "c50e28bc-612b-4092-9f7d-77ce94635c9f",
+          "hash": "5d4dcf8a8921b3af",
+          "consumed": 0.5,
+          "time": "2026-11-08T10:50:19.591Z"
+        }
+      ],
+      "source": {
+        "path": "raw/luwu-regen-20261108-sol-tail-medium/base_basic_pbr.glb",
+        "bytes": 1382048,
+        "sha256": "2a337c5f21869a82c6bf2f78c42028026795bc55685df92693cc14c264bd89bf"
+      }
+    },
+    {
+      "id": "luwu-regen-20261108-sol-tail-v2-taper-high",
+      "beast": "luwu",
+      "tier": "Gen-2.5-Extreme-High",
+      "path": "pipeline/rodin/jobs/luwu-regen-20261108-sol-tail-v2-taper-high.json",
+      "sha256": "89929e83f1acba34bf36407ac723f388e51b7ec390ff1e893950bd833b29a6f8",
+      "promptCharacters": 613,
+      "status": "submitted-download-preserved",
+      "missingReferenceImages": [],
+      "receipts": [
+        {
+          "uuid": "bdf3f562-de6a-4e5f-905a-1c851a544822",
+          "hash": "3a58b6cc0824a41d",
+          "consumed": 1,
+          "time": "2026-11-08T12:55:06.189Z"
+        }
+      ],
+      "source": {
+        "path": "raw/luwu-regen-20261108-sol-tail-v2-taper-high/base_high_pbr.glb",
+        "bytes": 18252868,
+        "sha256": "bff3738e23988e245fac09317cba2701948f65c5e79864df65357a6795a1745d"
+      }
+    },
+    {
+      "id": "luwu-regen-20261108-sol-tail-v2",
+      "beast": "luwu",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/luwu-regen-20261108-sol-tail-v2.json",
+      "sha256": "4ecc1d1044523a35f1f17c6a76beec82ee55574a084a1bfbb6cf746c62bd0419",
+      "promptCharacters": 611,
+      "status": "submitted-download-preserved",
+      "missingReferenceImages": [],
+      "receipts": [
+        {
+          "uuid": "0bffca95-5150-4ea8-b14a-8284fce76018",
+          "hash": "95f03fff5278bd41",
+          "consumed": 0.5,
+          "time": "2026-11-08T12:21:20.409Z"
+        }
+      ],
+      "source": {
+        "path": "raw/luwu-regen-20261108-sol-tail-v2/base_basic_pbr.glb",
+        "bytes": 1248048,
+        "sha256": "94ad496cbaac5bb5ec3d1b98a4a2b1be0e002352c57c247e49d21169105d5ea1"
+      }
+    },
+    {
+      "id": "qiangliang-production-20261108-body-medium",
+      "beast": "qiangliang",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/qiangliang-production-20261108-body-medium.json",
+      "sha256": "5771f45c4877e1e92990944668fc4560c5d30979d4a96adec185878824b50266",
+      "promptCharacters": 960,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "qiangliang-production-20261108-snake-medium",
+      "beast": "qiangliang",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/qiangliang-production-20261108-snake-medium.json",
+      "sha256": "9bfd79c64071086c19e45d5c3b63c195ed3549a99e8d99af71de44919e6abb4a",
+      "promptCharacters": 629,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "shuhu-production-20261108-human-equine-headneck-medium",
+      "beast": "shuhu",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/shuhu-production-20261108-human-equine-headneck-medium.json",
+      "sha256": "7bc8def74ad9213d1ed6f3485625ec162d48b483c352e15bb589104e5ee8304b",
+      "promptCharacters": 993,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "shuhu-production-20261108-winged-horse-trunk-medium",
+      "beast": "shuhu",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/shuhu-production-20261108-winged-horse-trunk-medium.json",
+      "sha256": "e29375659ef3696ff2d08686ab65c3c8b04ca832bc71921d144fec2c75424c94",
+      "promptCharacters": 992,
+      "status": "automatic-approval-rejected-no-submission",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "tianwu-production-20261108-human-headneck-medium",
+      "beast": "tianwu",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/tianwu-production-20261108-human-headneck-medium.json",
+      "sha256": "6caa8c64d1596501caafaeaa88a160a710c620b808d1341d95b5edaa50c1cc40",
+      "promptCharacters": 890,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "tianwu-production-20261108-leg-medium",
+      "beast": "tianwu",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/tianwu-production-20261108-leg-medium.json",
+      "sha256": "554dc669a45b8c180d79fe304fc8590852fa91d22d1229d5e76f955f7a22612c",
+      "promptCharacters": 898,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "tianwu-production-20261108-tail-medium",
+      "beast": "tianwu",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/tianwu-production-20261108-tail-medium.json",
+      "sha256": "244ee68897680994739249029243ffc4eda0e5c45239ce872c9578cc1392d3fd",
+      "promptCharacters": 737,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "tianwu-production-20261108-trunk-medium",
+      "beast": "tianwu",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/tianwu-production-20261108-trunk-medium.json",
+      "sha256": "e06c56505e4204efca85a28d45ec977c043e375b0f5b6722113c4a29a6fbb6ac",
+      "promptCharacters": 927,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "xiangliu-production-20261108-body-medium",
+      "beast": "xiangliu",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/xiangliu-production-20261108-body-medium.json",
+      "sha256": "601bd31253d7753394690851a4caece333492dde224309507edbc18ae3815e30",
+      "promptCharacters": 931,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "xiangliu-production-20261108-headneck-medium",
+      "beast": "xiangliu",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/xiangliu-production-20261108-headneck-medium.json",
+      "sha256": "d30d79d24678769e5ca6cdda08c2b74d3259fa719def415a896896fa30ae9da6",
+      "promptCharacters": 910,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "xingtian-production-20261108-axe-medium",
+      "beast": "xingtian",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/xingtian-production-20261108-axe-medium.json",
+      "sha256": "6b5efa17c5acc59e77d28566492da02fb64e55db92bcab6509f4804b34841ac4",
+      "promptCharacters": 729,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "xingtian-production-20261108-headless-body-medium",
+      "beast": "xingtian",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/xingtian-production-20261108-headless-body-medium.json",
+      "sha256": "18ec0b8878a243725019ecd1859830fee583b8ebc3fdaea2a23c7fb060286ad4",
+      "promptCharacters": 962,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "xingtian-production-20261108-shield-medium",
+      "beast": "xingtian",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/xingtian-production-20261108-shield-medium.json",
+      "sha256": "787cb3ecab7eb971a7fe92d67bc054e46681bfd4420ad90c713a88fe2aa7df6e",
+      "promptCharacters": 634,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "xingxing-production-20261108-v1",
+      "beast": "xingxing",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/xingxing-production-20261108-v1.json",
+      "sha256": "cddce74b519356ae1249aa56e08069ea973923e147f5fa57e09dd39e5c6b50f7",
+      "promptCharacters": 936,
+      "status": "automatic-approval-rejected-no-submission",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "xixiyu-production-20261108-aquatic-magpie-body-medium",
+      "beast": "xixiyu",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/xixiyu-production-20261108-aquatic-magpie-body-medium.json",
+      "sha256": "36d16bf24e95fa8782b17dc03c6519751d8147b1194060aa03e0d4efce013227",
+      "promptCharacters": 936,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "xixiyu-production-20261108-scaled-feather-wing-medium",
+      "beast": "xixiyu",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/xixiyu-production-20261108-scaled-feather-wing-medium.json",
+      "sha256": "31c6e1ea6909b91162f5825eb6b40fff79f664299a9b7a1ad6ba64f9bc6bbcad",
+      "promptCharacters": 871,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "yayu-regen-20261108-sol-body-high",
+      "beast": "yayu",
+      "tier": "Gen-2.5-Extreme-High",
+      "path": "pipeline/rodin/jobs/yayu-regen-20261108-sol-body-high.json",
+      "sha256": "fac2a9c16738a17f998deb7a8af215ea7fa97f3b997058ffd53ad7a6b754c688",
+      "promptCharacters": 808,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "yayu-regen-20261108-sol-body-retry2",
+      "beast": "yayu",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/yayu-regen-20261108-sol-body-retry2.json",
+      "sha256": "0839c8165e33411f148166838af61459a9ae8b4090098d09902eaf84b29566c8",
+      "promptCharacters": 882,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "yayu-regen-20261108-sol-body-v1",
+      "beast": "yayu",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/yayu-regen-20261108-sol-body-v1.json",
+      "sha256": "6bac9d54f08a1d396940812eefb5d6d0d9ce197291eab16e784e5d0f7d759f05",
+      "promptCharacters": 957,
+      "status": "submitted-download-preserved",
+      "missingReferenceImages": [],
+      "receipts": [
+        {
+          "uuid": "31130bb1-d860-4f6b-b4cf-aa24713ab52b",
+          "hash": "4887596be375715c",
+          "consumed": 0.5,
+          "time": "2026-11-08T10:45:31.339Z"
+        }
+      ],
+      "source": {
+        "path": "raw/yayu-regen-20261108-sol-body-v1/base_basic_pbr.glb",
+        "bytes": 1823836,
+        "sha256": "3531a276e9f791dec7421911271c5edb5d5cd860aac69e5b4bfec6f58c58ba76"
+      }
+    },
+    {
+      "id": "yayu-regen-20261108-sol-body-v4-medium",
+      "beast": "yayu",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/yayu-regen-20261108-sol-body-v4-medium.json",
+      "sha256": "a4ed787a8b0078d11199a80f9fc3302a93cffa108098012daf6b9b91cf9e2b37",
+      "promptCharacters": 969,
+      "status": "submitted-download-preserved",
+      "missingReferenceImages": [],
+      "receipts": [
+        {
+          "uuid": "8bddf37c-3e4a-4f6f-a92a-be66dc852ba5",
+          "hash": "43a3c4bba354eac9",
+          "consumed": 0.5,
+          "time": "2026-11-08T12:43:38.901Z"
+        }
+      ],
+      "source": {
+        "path": "raw/yayu-regen-20261108-sol-body-v4-medium/base_basic_pbr.glb",
+        "bytes": 1706704,
+        "sha256": "ccaa3b490b6b83f79780e07e558e497b3b8c8a33e0947d268ab2cead017f7ea4"
+      }
+    },
+    {
+      "id": "yayu-regen-20261108-sol-headneck-v3-medium",
+      "beast": "yayu",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/yayu-regen-20261108-sol-headneck-v3-medium.json",
+      "sha256": "2db274449c6305cd24da196f0db6c4fac0033e38ef43ffc1402b6f67270d2902",
+      "promptCharacters": 965,
+      "status": "automatic-approval-rejected-no-submission",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "yinglong-production-20261108-body-medium",
+      "beast": "yinglong",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/yinglong-production-20261108-body-medium.json",
+      "sha256": "385a8138d6d066c9c2f248fe90589620d7dd09b4313f978027323d4a14cff579",
+      "promptCharacters": 929,
+      "status": "automatic-approval-rejected-no-submission",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "yinglong-production-20261108-wing-medium",
+      "beast": "yinglong",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/yinglong-production-20261108-wing-medium.json",
+      "sha256": "40e9ec11ceaaf799c2a9fba991f8f61eebe52250145c935db6301ae7a5fe5409",
+      "promptCharacters": 896,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "yingzhao-regen-20261108-sol-body-high",
+      "beast": "yingzhao",
+      "tier": "Gen-2.5-Extreme-High",
+      "path": "pipeline/rodin/jobs/yingzhao-regen-20261108-sol-body-high.json",
+      "sha256": "094e9473fe93696f880b8b1db72c8a740d7f8611328a7b97e32a423b1f930917",
+      "promptCharacters": 733,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "yingzhao-regen-20261108-sol-body-medium",
+      "beast": "yingzhao",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/yingzhao-regen-20261108-sol-body-medium.json",
+      "sha256": "5f88abe49685bb00b4a7e57c338c5650d9b6297b98d8dd0946b933ffe12fd67e",
+      "promptCharacters": 894,
+      "status": "submitted-download-preserved",
+      "missingReferenceImages": [],
+      "receipts": [
+        {
+          "uuid": "39f4fe75-f60e-406f-9920-c34fe55dc750",
+          "hash": "ad8ee31998f28cc4",
+          "consumed": 0.5,
+          "time": "2026-11-08T10:49:11.525Z"
+        }
+      ],
+      "source": {
+        "path": "raw/yingzhao-regen-20261108-sol-body-medium/base_basic_pbr.glb",
+        "bytes": 1509248,
+        "sha256": "597897a6bb01420ad088d8af2126fa954b2526d1555534fd21dd7b4f995f7fdf"
+      }
+    },
+    {
+      "id": "yingzhao-regen-20261108-sol-body-v2",
+      "beast": "yingzhao",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/yingzhao-regen-20261108-sol-body-v2.json",
+      "sha256": "59551daa68ec2fb0b67ba4dd47e19ca653333a11664aa8e2c113eef6dd0f27ea",
+      "promptCharacters": 648,
+      "status": "submitted-download-preserved",
+      "missingReferenceImages": [],
+      "receipts": [
+        {
+          "uuid": "2d40222b-471b-4541-9b9b-6cb524f30354",
+          "hash": "597ed33f7ae45806",
+          "consumed": 0.5,
+          "time": "2026-11-08T11:54:54.105Z"
+        }
+      ],
+      "source": {
+        "path": "raw/yingzhao-regen-20261108-sol-body-v2/base_basic_pbr.glb",
+        "bytes": 2179312,
+        "sha256": "08f87c456f532c45b06958714f6d70f69dc6257761d415a9a15c600f99a99ec3"
+      }
+    },
+    {
+      "id": "yingzhao-regen-20261108-sol-human-equine-neck-medium",
+      "beast": "yingzhao",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/yingzhao-regen-20261108-sol-human-equine-neck-medium.json",
+      "sha256": "69920a849ca60a42aa37d67a947a0fa04fc6f262ccecb0cd028c32c0212c77d9",
+      "promptCharacters": 805,
+      "status": "submitted-download-preserved",
+      "missingReferenceImages": [],
+      "receipts": [
+        {
+          "uuid": "27c34075-c655-4471-8118-c631956a95f4",
+          "hash": "feb1418707a2e167",
+          "consumed": 0.5,
+          "time": "2026-11-08T12:28:53.671Z"
+        }
+      ],
+      "source": {
+        "path": "raw/yingzhao-regen-20261108-sol-human-equine-neck-medium/base_basic_pbr.glb",
+        "bytes": 1680068,
+        "sha256": "0fb8285b9a0e08de32f4f9eb14aaa449f9531c337fbf734af937d4e9cce85870"
+      }
+    },
+    {
+      "id": "yingzhao-regen-20261108-sol-human-head-medium",
+      "beast": "yingzhao",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/yingzhao-regen-20261108-sol-human-head-medium.json",
+      "sha256": "84aa56cef7177fdce9d252b4da1d5fc3bc65e22398a5c246b521e5def7aa4d0a",
+      "promptCharacters": 590,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "yingzhao-regen-20261108-sol-wing-high",
+      "beast": "yingzhao",
+      "tier": "Gen-2.5-Extreme-High",
+      "path": "pipeline/rodin/jobs/yingzhao-regen-20261108-sol-wing-high.json",
+      "sha256": "393cea96aaccd2fb7b6939c97116ec4ff9183e9951935a93e4e4c0207e6e047a",
+      "promptCharacters": 558,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "yingzhao-regen-20261108-sol-wing-medium",
+      "beast": "yingzhao",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/yingzhao-regen-20261108-sol-wing-medium.json",
+      "sha256": "bf3bb5526c4550e1f1a610d4bee2fae18f21b03e8abb9fb16ca64aa262776e3c",
+      "promptCharacters": 920,
+      "status": "submitted-download-preserved",
+      "missingReferenceImages": [],
+      "receipts": [
+        {
+          "uuid": "0e02de12-3117-4d7b-92f8-6b3146d01cdc",
+          "hash": "9648dda0d2dc32af",
+          "consumed": 0.5,
+          "time": "2026-11-08T10:49:32.674Z"
+        }
+      ],
+      "source": {
+        "path": "raw/yingzhao-regen-20261108-sol-wing-medium/base_basic_pbr.glb",
+        "bytes": 1687088,
+        "sha256": "8afdb77e634f7e4e6d6c9a4e6e81c16a576fa317e1bcde265091ff16fd574d66"
+      }
+    },
+    {
+      "id": "zhulong-production-20261108-body-medium",
+      "beast": "zhulong",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/zhulong-production-20261108-body-medium.json",
+      "sha256": "be3a929e05eb61ac8e170ecc3e9621e6eda832cfb4ec8a7ed13a2f0d22e591e6",
+      "promptCharacters": 951,
+      "status": "prepared-not-submitted",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "zhuyan-production-20261108-v1-high",
+      "beast": "zhuyan",
+      "tier": "Gen-2.5-Extreme-High",
+      "path": "pipeline/rodin/jobs/zhuyan-production-20261108-v1-high.json",
+      "sha256": "7c00a36caa75c428f6803f8e0b8e2dc672d696bdf247aac908ddbc07f819bc5e",
+      "promptCharacters": 984,
+      "status": "automatic-approval-rejected-no-submission",
+      "missingReferenceImages": [],
+      "receipts": [],
+      "source": null
+    },
+    {
+      "id": "zhuyan-production-20261108-v1",
+      "beast": "zhuyan",
+      "tier": "Gen-2.5-Medium",
+      "path": "pipeline/rodin/jobs/zhuyan-production-20261108-v1.json",
+      "sha256": "fac8c563f801ebce4639ce4c845aeaa20963ec12198a665da2cce4a26fc2261c",
+      "promptCharacters": 972,
+      "status": "submitted-download-preserved",
+      "missingReferenceImages": [],
+      "receipts": [
+        {
+          "uuid": "5d91ca91-be72-42fa-baad-9a4c1d021fbe",
+          "hash": "60dc7ed8aa60b381",
+          "consumed": 0.5,
+          "time": "2026-11-08T12:32:00.317Z"
+        }
+      ],
+      "source": {
+        "path": "raw/zhuyan-production-20261108-v1/base_basic_pbr.glb",
+        "bytes": 1629316,
+        "sha256": "c9aca1a18f148c119578fd413746ef6fdc443e6cd760461c35abdc1b0b6167a0"
+      }
+    }
+  ]
+}

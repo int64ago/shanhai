@@ -1,0 +1,8 @@
+{
+  "id": "kaiming-regen-20261108-sol-body-v1",
+  "beast": "kaiming",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One complete HEADLESS tiger body for a modular Chinese guardian. Broad powerful horizontal torso, level back, raised hips; FOUR separate straight weight-bearing feline legs and FOUR broad complete tiger paws flat on one ground plane. Natural ochre fur, dark stripes and pale belly, continuous fur across chest, shoulders and back. Low broad rounded front shoulder-neck region flows organically into chest and withers for separately assembled short necks. Keep front chest readable. No tall crest, wall, rectangular chest patch, collar, ring, neck tubes or stump buds. Exactly ONE ordinary long tiger tail behind, clear of all limbs. Neutral standing stance, legs separated, all paws visible, whole animal in frame. No head, face, eyes, wings, horns, armor, clothing, props or base.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

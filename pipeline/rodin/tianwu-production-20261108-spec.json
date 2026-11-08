@@ -1,0 +1,97 @@
+{
+  "beast": "tianwu",
+  "date": "2026-11-08",
+  "scope": "Source and minimal new Medium planning only; parent submits API and accepts actual output. No generated component or whole-beast acceptance claimed.",
+  "historicalAuditCommit": "808b40b92fe1e9e74e0594b3045ccfb94051954f",
+  "source": [
+    {
+      "book": "山海经·海外东经",
+      "text": "朝陽之谷，神曰天吳，是為水伯。在𧈫𧈫北兩水間。其為獸也，八首人面，八足八尾，背青黃。"
+    }
+  ],
+  "sourceEvidence": {
+    "url": "https://zh.wikisource.org/wiki/山海經/海外東經",
+    "download": "raw/_production-review/source-planning-20261108/haiwai-dong.html",
+    "sha256": "701f9fae79ffa80dd47f8cdac46ecb5722396f5426d8e2c7ced6a49b6f7c2472",
+    "historicalContent": "raw/_production-review/source-planning-20261108/tianwu-historical-content.json",
+    "independentTranscription": "raw/_production-review/source-planning-20261108/pg25288.txt"
+  },
+  "catalogCorrections": [
+    "现目录 quote 的皆青黄色、蜪蜪不属所选底本；采用背青黃、𧈫𧈫。八首人面、八足八尾是明文，青黄在本底本只限定背部。",
+    "另一篇大荒东经作有神人，八首人面，虎身十尾，名曰天吳；虎形只能列作跨篇造型参考，不将十尾或虎身混入八尾条目正文。",
+    "水伯有据；统管大海、万丈潮汐、斑纹与具体肢爪均为推断。"
+  ],
+  "inferred": [
+    "横向猫科参考躯干、兽颈连接人面、兽足爪形及每足趾数",
+    "八颈前肩错层、八足沿左右各四排布、八尾在骶部错层；经文只给数量，没有规定排列",
+    "背部石青藤黄具体色相、腹色、毛长、行走相位与水势表演"
+  ],
+  "minimalNewGenerationReasons": [
+    "历史虎身需要切掉四腿，造成腹部平切，不能继续以切体和套筒补足八足。",
+    "历史人头含胸像、颈像直杆；需要完整短厚自然兽颈的人面母件。",
+    "历史帝江足是鳞覆三爪且直筒，旧尾实际扁片；均不是本次自然连续器官的合格输入。"
+  ],
+  "assemblyCounts": {
+    "trunk": 1,
+    "human-headneck": 8,
+    "leg": 8,
+    "tail": 8
+  },
+  "jobs": [
+    {
+      "part": "trunk",
+      "job": "pipeline/rodin/jobs/tianwu-production-20261108-trunk-medium.json",
+      "copies": 1,
+      "promptCharacters": 927,
+      "images": [],
+      "status": "prepared-not-submitted",
+      "estimatedCredits": 0.5
+    },
+    {
+      "part": "human-headneck",
+      "job": "pipeline/rodin/jobs/tianwu-production-20261108-human-headneck-medium.json",
+      "copies": 8,
+      "promptCharacters": 890,
+      "images": [],
+      "status": "prepared-not-submitted",
+      "estimatedCredits": 0.5
+    },
+    {
+      "part": "leg",
+      "job": "pipeline/rodin/jobs/tianwu-production-20261108-leg-medium.json",
+      "copies": 8,
+      "promptCharacters": 898,
+      "images": [],
+      "status": "prepared-not-submitted",
+      "estimatedCredits": 0.5
+    },
+    {
+      "part": "tail",
+      "job": "pipeline/rodin/jobs/tianwu-production-20261108-tail-medium.json",
+      "copies": 8,
+      "promptCharacters": 737,
+      "images": [],
+      "status": "prepared-not-submitted",
+      "estimatedCredits": 0.5
+    }
+  ],
+  "estimatedCredits": 2.0,
+  "budgetMeaning": "20 credits cap PER beast in existing client ledger; estimate counts only these new Medium jobs, not previous spending or later work.",
+  "reviewBeforeAssembly": [
+    "主体无原生首足尾，腹背闭合且有完整肩/腰/骶体积；不预生成八个孔或八个器官。",
+    "八张人面、八个完整足掌、八条尾必须在前侧后视及动作中分别可数，不能用语义节点数替代实物验收。",
+    "颈根、足根、尾根埋入主体2–3%，随体动且无圆环、板片、平切腹或外露根；左右镜像禁止运行时负缩放。",
+    "八足交错支撑，逐帧检查足底接触与支撑相，腹体不悬吊；八尾保持圆/椭圆截面且根间有可见空间。"
+  ],
+  "stageBoundary": "Text-only new Medium outputs must undergo actual four-view and root inspection. No failed historical images are eligible. If subsequent quality is needed, parent decides only after corrected actual geometry is reviewed; no preemptive variants or High specs.",
+  "workerActions": {
+    "apiCalls": 0,
+    "installs": 0,
+    "tts": false,
+    "runtimeChanges": false,
+    "readyChanges": false,
+    "commit": false,
+    "push": false,
+    "projectChecks": "not run; planning-only worker explicitly prohibited whole-repo pnpm; parent runs mandatory checks after integration"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "changyou-regen-20261108-sol-ear-high",
+  "beast": "changyou",
+  "budget": 20,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Preserve the approved four-view single natural macaque external ear: rounded oval pinna, clear thick helix and antihelix, shallow recessed concha and small tragus, closed soft back surface. Warm grey-brown skin, sparse short grey-brown fur around the rim. The medial side flows into one short broad tapered soft-tissue root to blend into monkey temple fur. Coherent organic volume, no separate ring, sharp cut disc, plaque or rolled pad. Exactly one complete ear with its root, no head, face, eyes, neck, body, second ear, pointed elf tip, leaf, jewelry, props, pedestal or base.",
+  "images": ["concept/changyou-regen-20261108-sol-ear/view_34.png", "concept/changyou-regen-20261108-sol-ear/view_side.png", "concept/changyou-regen-20261108-sol-ear/view_front.png", "concept/changyou-regen-20261108-sol-ear/view_back.png"],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000, "addons": "HighPack" }
+}

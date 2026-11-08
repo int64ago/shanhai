@@ -1,0 +1,12 @@
+{
+  "id": "longzhi-production-20261108-fox-headneck-medium",
+  "beast": "longzhi",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE isolated complete FOX HEAD with its full natural furred NECK, one continuous organic part. Slender pointed fox muzzle, small black nose, two dark eyes, two upright triangular ears, full jaw and rear skull. Red-brown fur, cream cheeks and throat; no tiger face or human features. Short strong curved neck about 1.5 head lengths, thick oval cross-section with broad nape and throat, gradually widening toward a full rounded basal root. Neck fur follows muscle contours, complete volume on both sides. Root designed to overlap deeply inside a fox shoulder mass, no visible cut plane. Entire head, neck and root visible. No torso, human shoulders, bust, legs, wings, tail, second head, horns, collar, disc, ring, pedestal or props. Avoid bare severed portrait heads, thin straight neck poles, triangular sheets and hard skin-to-fur bands. Natural animal anatomy study.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

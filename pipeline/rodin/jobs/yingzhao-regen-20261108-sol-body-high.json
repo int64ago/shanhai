@@ -1,0 +1,19 @@
+{
+  "id": "yingzhao-regen-20261108-sol-body-high",
+  "beast": "yingzhao",
+  "budget": 20,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Preserve the approved four-view Yingzhao anatomy exactly: ONE human-faced guardian head integrated organically into a muscular equine neck, continuous paired pectorals, sloping horse shoulders and withers, coherent tiger-striped horse body, FOUR separate weight-bearing legs, FOUR single hooves flat on ground and one attached horse tail. Refine natural short fur and anatomical relief continuously through head, neck, chest and barrel. No smooth bib, collar seam, twisted neck fold, shoulder ledge or human bust. Ochre coat, black tiger stripes, dark mane and tail. WINGS ABSENT for separate assembly. No additional heads, faces, limbs, horns, wing roots, accessories, pedestal or base. Keep all approved proportions and clearances.",
+  "images": [
+    "concept/yingzhao-regen-20261108-sol-body/view_34.png",
+    "concept/yingzhao-regen-20261108-sol-body/view_side.png",
+    "concept/yingzhao-regen-20261108-sol-body/view_front.png",
+    "concept/yingzhao-regen-20261108-sol-body/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "bashe-production-20261108-v2-high",
+  "beast": "bashe",
+  "budget": 20,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "One complete natural snake matching all four reference views. Preserve its full elongated UNCOILED body, distinct closed-jaw snake head, dark eyes, small nostrils, flexible narrow neck, muscular rounded trunk and progressively tapering rear body ending in one fine pointed tail. Head and tail remain far apart, with only the very shallow existing body curve. Charcoal-black overlapping body scales, muted blue-green head and pale blue-green ventral scutes as referenced. Improve crisp scale detail and natural volumetric anatomy without changing silhouette, proportions or pose. No rings, coils, head-tail contact, self overlap, extra heads, limbs, wings, horns, hood, rattles, prey, pedestal or scenery. Entire isolated animal visible, natural history sculpt.",
+  "images": [
+    "concept/bashe/production-20261108-v2/view_34.png",
+    "concept/bashe/production-20261108-v2/view_side.png",
+    "concept/bashe/production-20261108-v2/view_front.png",
+    "concept/bashe/production-20261108-v2/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack",
+    "seed": 11083
+  }
+}

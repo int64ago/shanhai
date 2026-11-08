@@ -1,0 +1,12 @@
+{
+  "id": "luwu-regen-20261108-sol-tail-medium",
+  "beast": "luwu",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE isolated long slender tiger tail for a Chinese mythical Luwu guardian, no body. Tail length about 12 times its largest diameter, gently curved in a single broad shallow S, nearly straight first quarter, smoothly tapering from a modest round cylindrical root to a fine rounded tip. True organic feline tail with a circular cross-section, subtle short-fur surface and coherent golden ochre fur with dark transverse black tiger rings around all sides, dark tip. Root is only the natural thickness of the tail, no flare, flat pad, mounting disc, collar, sphere, socket or pelvis. The tail will be used as a master repeated nine times; generate ONLY ONE tail. Entire root and tip in frame. No body, rump, head, paws, limbs, extra branches, feathers, separate hairs, armor, ornament, pedestal or base.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 12000
+  }
+}

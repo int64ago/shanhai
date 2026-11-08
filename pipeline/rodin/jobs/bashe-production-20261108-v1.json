@@ -1,0 +1,13 @@
+{
+  "id": "bashe-production-20261108-v1",
+  "beast": "bashe",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One complete anatomically realistic large snake, head and entire tail visible. Horizontal uncoiled body, nearly straight with a shallow gentle curve, total length about fifteen times maximum body diameter. One low broad natural snake head with closed jaws, two dark eyes and small nostrils; a narrower flexible neck blends into a muscular cylindrical trunk. Rear third gradually tapers into one fine pointed tail. Continuous organic skin with small overlapping scales and broad ventral belly scutes. Charcoal black body and muted blue-green head, restrained natural matte colors. Head aligned with body, easy to rig along one continuous spine. No limbs, wings, horns, ears, whiskers, mane, dragon crest, cobra hood, rattles or accessories. No coils, self-overlap, detached parts, prey, pedestal, terrain or water. Isolated full animal, natural history museum specimen, detailed sculpt with readable volume.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000,
+    "seed": 11081
+  }
+}

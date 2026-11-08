@@ -1,0 +1,37 @@
+{
+  "beast": "leishen",
+  "name": "雷神",
+  "date": "2026-11-08",
+  "scope": "Medium generation specification only; parent submits API calls and separately reviews actual output. No runtime or readiness change.",
+  "researchCommit": "dff3702aff98f9955275e6a10f58ab64e74ffe65",
+  "archetype": "serpentine",
+  "source": [
+    { "book": "山海经·海内东经", "text": "雷澤中有雷神，龍身而人頭，鼓其腹。在吳西。" }
+  ],
+  "sourceVerification": {
+    "basis": "Research commit content and provenance; 2026-11-08 fresh WebFetch of 海內東經 confirms the complete short entry and absence of specified arms/tools.",
+    "urls": ["https://zh.wikisource.org/wiki/山海經/海內東經", "https://zh.wikisource.org/wiki/山海經_(四庫全書本)/卷13"],
+    "editionNote": "Research commit separately records Gutenberg 龍首而人頭 as a transcription difference. Selected Wikisource/Siku reading is 龍身而人頭; do not silently combine into two heads.",
+    "boundaries": ["龍身而人頭 must not become a human body with a dragon head.", "鼓其腹 is explicit; paired arms, hands striking, belly-pulse mechanics and a separate thunder-result clause are not specified.", "No drum, mallets, bird beak, wings, horns, four claws, spring season or purple lightning is established by the selected text.", "在吳西 ends the short entry; subsequent 都州 and annotation references are separate."]
+  },
+  "inferred": [
+    { "item": "One human head on an elongated scaled dragon body with a full upper abdomen", "basis": "Head/body identity and 鼓其腹 are explicit. Complete cranium, neck integration, scales, rounded belly volume, long circular trunk and tapered tail are artistic anatomy choices." },
+    { "item": "No arms or other limbs, no horns or wings", "basis": "Minimal production choice; no limb count is supplied by the source. Do not add hands merely to force the old catalog's paired-arm action." },
+    { "item": "Abdominal rhythmic expansion for a possible later 鼓腹 interpretation", "basis": "This is an explicit inferred motion option, not a literal claim that 鼓其腹 specifies inflation or excludes striking. Body geometry leaves the belly visible and deformable. Thunder timing and sound remain future artistic design." },
+    { "item": "Blue-green scales, pale scutes and open shallow-S pose", "basis": "Color, proportions and pose are not stated by the source. No baked lightning or clouds in the model." }
+  ],
+  "jobs": [
+    { "id": "leishen-production-20261108-body-medium", "path": "pipeline/rodin/jobs/leishen-production-20261108-body-medium.json", "role": "One complete continuous human-headed dragon including a clearly visible organic abdomen and pointed tail", "instances": 1 }
+  ],
+  "generation": { "status": "prepared-not-submitted", "budgetPerBeast": 20, "tier": "Gen-2.5-Medium", "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }, "promptCharacterLimit": 1000, "jobCount": 1, "estimatedInitialCredits": 0.5, "automaticVariants": false, "highEligible": false },
+  "currentModel": { "qualifiedModelEstablished": false, "newModelProduced": false, "evidence": "Research commit and provenance are source/blocker work. Existing isolated human-head/tail evidence does not establish a complete dragon-body master or accepted Leishen; no new model or fresh inventory audit is claimed." },
+  "acceptance": [
+    "Read four actual orthographic views and human neck/abdomen/tail closeups independently before any High decision.",
+    "Human head with complete cranium and natural throat integration, unmistakable long scaled dragon body; no dragon head, human torso, bird beak, floating bust or pasted collar.",
+    "Rounded abdomen is part of the continuous trunk, not a separate ball, external drum or inflated isolated tail; belly must remain visible and suited to conservative deformation.",
+    "Complete extended shallow S with head and pointed tail separated, no ring, coil, ouroboros, crossings, self-welding or missing tip.",
+    "No native arms, tools, horns or wings in this selected design; no base or baked effects concealing roots.",
+    "Later production must verify belly deformation and finite skinning, full-body clearance or actual belly contacts, three-state and continuous Read captures, StrictMode lifecycle, audio inference and special return. No current model QA pass is claimed."
+  ],
+  "workerActions": { "paidAPICalls": 0, "installs": 0, "ttsCalls": 0, "runtimeChanges": false, "readyChanges": false, "commits": false, "pnpmRun": false }
+}

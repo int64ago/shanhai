@@ -1,0 +1,8 @@
+{
+  "id": "zhulong-production-20261108-body-medium",
+  "beast": "zhulong",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE complete red serpent with ONE human face integrated naturally into its raised anterior head. Complete rounded human cranium, human nose bridge, lips, chin and two ordinary lidded eyes facing forward; short plain hair. Neck transitions continuously from human facial margins into thick red snake neck, without human torso, shoulders or bust. Full muscular circular serpent trunk about 10 times its greatest thickness, crimson overlapping scales, muted vermilion belly scutes. Fully extended horizontal shallow S, head raised at one end, complete steadily tapering pointed tail at the opposite end, wide visible gap between them. No coil, ring, loop, ouroboros, self-contact or crossed body. Entire head, belly and tail visible. No horns, antlers, crown, dragon muzzle, fangs, whiskers, slit pupils, extra eyes, arms, legs, wings, flames, glow, pedestal or props. Rounded natural body volume and seamless throat, no collar, flat cut, pipe or ribbon.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

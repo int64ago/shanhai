@@ -1,0 +1,19 @@
+{
+  "id": "luwu-regen-20261108-sol-body-high",
+  "beast": "luwu",
+  "budget": 20,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Preserve the approved four-view Luwu anatomy: ONE human-faced guardian head, neck, feline shoulders and striped tiger torso form one continuous organic animal; FOUR separated weight-bearing tiger legs and FOUR broad clawed paws resting flat. Refine fur continuously across head-neck-chest junction with no collar seam or human bust. Warm ochre fur, dark tiger stripes and pale underside. Completely TAILLESS natural rump has continuous striped fur, rounded pelvic muscles and no protruding tail stub, discs, flared pads, holes or root sockets. Nine slender tails will be separate parts. Keep approved zoological proportions, level back and raised hips. No added heads, faces, tails, horns, wings, human hands, clothing, accessories, pedestal or base.",
+  "images": [
+    "concept/luwu-regen-20261108-sol-body/view_34.png",
+    "concept/luwu-regen-20261108-sol-body/view_side.png",
+    "concept/luwu-regen-20261108-sol-body/view_front.png",
+    "concept/luwu-regen-20261108-sol-body/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

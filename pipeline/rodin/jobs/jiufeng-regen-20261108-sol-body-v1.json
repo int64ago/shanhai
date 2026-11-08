@@ -1,0 +1,12 @@
+{
+  "id": "jiufeng-regen-20261108-sol-body-v1",
+  "beast": "jiufeng",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One complete naturalistic HEADLESS bird body, upright on exactly two strong bird legs and two clearly separated planted clawed feet. Broad rounded breast and gently domed feathered shoulder mantle, with deep organic volume across the upper back for later attachment of nine separate small necks. Unbroken CLOSED feather surface on top, no opening, socket, flat plate, rim or collar. Two COMPLETE native feathered wings grow continuously from the same torso, half spread with clear air beneath each outer wing. Thick scapular feathers flow over each muscular wing root without gaps. One ordinary compact feather tail. Slate blue-gray layered plumage, warm gray bare legs, dark claws. True bird anatomy, no human torso or shoulders, no head, no beak, no neck stalks, no extra legs, no armor, no pedestal. Entire isolated animal in neutral balanced stance.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

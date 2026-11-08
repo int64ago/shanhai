@@ -1,0 +1,19 @@
+{
+  "id": "jiufeng-regen-20261108-sol-headneck-v2-high",
+  "beast": "jiufeng",
+  "budget": 20,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Reconstruct the same single human-faced bird head and short feather neck shown in the four reference views. Preserve exactly one calm human face with two human eyes, a human nose, closed human lips and a chin. Keep the small overlapping pale slate blue-gray crown feathers framing the forehead and temples, and the fine nape plumage flowing continuously into the neck. Preserve the natural warm facial skin, clear human features, feather detail and gently curved thick neck. The compact rounded oval lower root has solid volume and is intended to be embedded inside a bird torso. Maintain the isolated part and its actual proportions; no torso, shoulders, extra face, beak or modern styled human hair. Keep the root compact without a broad bib, disk, collar or thin pointed wedge. One cohesive naturalistic anatomical component with room around the whole silhouette.",
+  "images": [
+    "concept/jiufeng-regen-20261108-sol-headneck-v2/view_34.png",
+    "concept/jiufeng-regen-20261108-sol-headneck-v2/view_side.png",
+    "concept/jiufeng-regen-20261108-sol-headneck-v2/view_front.png",
+    "concept/jiufeng-regen-20261108-sol-headneck-v2/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

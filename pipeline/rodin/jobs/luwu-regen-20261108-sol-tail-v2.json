@@ -1,0 +1,12 @@
+{
+  "id": "luwu-regen-20261108-sol-tail-v2",
+  "beast": "luwu",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One isolated slender feline tail, stretched almost straight from root to tip. Its length is fifteen times the root diameter. A modest cylindrical root narrows steadily along the entire length to a small softly pointed tip; the final quarter is visibly thinner than the root. A gentle single sweeping bend, with the tip continuing forward along the length. Round cross-section, close short fur, golden ochre coat and narrow black transverse tiger rings. One continuous tail only, fully visible against a plain background. Natural small root, without a mounting pad. No body, branching, loop, hook or bulbous tip.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 12000
+  }
+}

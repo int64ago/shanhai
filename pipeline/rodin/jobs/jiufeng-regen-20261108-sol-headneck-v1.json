@@ -1,0 +1,12 @@
+{
+  "id": "jiufeng-regen-20261108-sol-headneck-v1",
+  "beast": "jiufeng",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One isolated naturalistic HUMAN-FACED bird head and short curved feather neck, designed as one connected anatomical part. Exactly ONE calm adult human face with two human eyes, human nose, closed human lips, chin and two small human ears; short dark hair and natural warm skin. No beak and no second face. The human jaw and nape merge gradually into small slate blue-gray feathers along a thick gently curved neck. Neck length below the jaw is about one head-height; its lower root tapers into an elongated feathered wedge for embedding in a bird shoulder mantle. Continuous feather flow, narrow upper neck, solid rounded tissue. No broad circular flange, skirt, collar, ring, plate or pedestal at the root. No shoulders, chest, torso, arms, body or additional heads. Entire isolated single head-neck component with room around its outline, zoological sculpture rather than a human bust.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "zhuyan-production-20261108-v1-high",
+  "beast": "zhuyan",
+  "budget": 20,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Reconstruct ONE complete natural ape-like Zhuyan from the four color-corrected reference views. Preserve WHITE FUR across crown, cheeks and chin, charcoal-grey body fur, dark muzzle and dark grey HANDS. Only the TWO FEET are CINNABAR RED from ankles to toes and soles. Preserve EXACTLY TWO native rounded ears with organic roots, one per side. Keep the complete long arms, bent elbows, natural wrists, pelvis, bent hind legs and planted feet. TWO complete hands with EXACTLY FIVE separate fingers EACH including opposed thumbs. TWO complete primate feet with EXACTLY FIVE separate toes EACH including grasping big toes. Hands, feet, limbs and digits remain separate and fully visible. Natural soft furry ape contours, continuous joints, subtle fur-to-skin wrist transitions without bands. Both soles on one ground plane. Tailless rump. Whole animal in frame. No red hands, extra ears, digits or limbs, human bodybuilder definition, clothing, armor, weapons, objects, pedestal or base.",
+  "images": [
+    "concept/zhuyan-production-20261108-v1/corrected/view_34.png",
+    "concept/zhuyan-production-20261108-v1/corrected/view_side.png",
+    "concept/zhuyan-production-20261108-v1/corrected/view_front.png",
+    "concept/zhuyan-production-20261108-v1/corrected/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

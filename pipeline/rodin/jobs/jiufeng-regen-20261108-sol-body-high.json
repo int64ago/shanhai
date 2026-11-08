@@ -1,0 +1,19 @@
+{
+  "id": "jiufeng-regen-20261108-sol-body-high",
+  "beast": "jiufeng",
+  "budget": 20,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Follow the four personally reviewed reference views of ONE headless bird body exactly. Preserve its broad rounded breast, gently domed CLOSED feathered mantle, two planted bird legs and exactly two complete native wings continuously joined to the torso. Preserve thick muscular shoulder roots and flowing scapular feathers without black gaps, detached wing modules or flat back plates. Slate blue-gray plumage with natural layered feather volume, dark claws, one compact ordinary feather tail. No head, beak, neck stalk, collar, opening, rim, human shoulders, extra leg, armor or pedestal. Preserve the approved proportions and neutral balanced pose. Produce one connected naturalistic body suitable for nine separately attached human-faced necks.",
+  "images": [
+    "concept/jiufeng-regen-20261108-sol-body/view_34.png",
+    "concept/jiufeng-regen-20261108-sol-body/view_side.png",
+    "concept/jiufeng-regen-20261108-sol-body/view_front.png",
+    "concept/jiufeng-regen-20261108-sol-body/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

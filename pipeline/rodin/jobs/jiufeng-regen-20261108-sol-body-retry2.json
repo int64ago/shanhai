@@ -1,0 +1,18 @@
+{
+  "id": "jiufeng-regen-20261108-sol-body-retry2",
+  "beast": "jiufeng",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "Reconstruct this ONE complete HEADLESS bird body from the four corrected reference views. Preserve the continuous broad rounded breast and low domed feathered mantle, two complete native wings growing naturally from muscular shoulders, two separated bird legs and planted clawed feet, and one ordinary feather tail. The upper torso is a continuous curved surface with small overlapping feather relief, not a circular plate or shield. Slate blue-gray plumage, dark claws, balanced upright stance. Keep the native wing-root volume and recognizable avian shoulder anatomy. No head, beak, neck, stalk, rod, antenna, peg, socket, opening, rim, ring, collar, human torso, extra limb, pedestal or armor. Do not add any component above the shoulder mantle. Follow the four corrected silhouettes rather than inventing attachments.",
+  "images": [
+    "concept/jiufeng-regen-20261108-sol-body-retry2/view_34.png",
+    "concept/jiufeng-regen-20261108-sol-body-retry2/view_side.png",
+    "concept/jiufeng-regen-20261108-sol-body-retry2/view_front.png",
+    "concept/jiufeng-regen-20261108-sol-body-retry2/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

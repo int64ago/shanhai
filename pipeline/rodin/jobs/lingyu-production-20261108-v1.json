@@ -1,0 +1,13 @@
+{
+  "id": "lingyu-production-20261108-v1",
+  "beast": "lingyu",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One complete mythical marine fish with a human face, two hands AND two feet. Horizontal fusiform scaly FISH trunk, about four times its height, tapering into a short caudal peduncle and one forked tail fin. One calm adult human face with eyes, nose and closed lips integrated into the anterior fish head, no human torso or neck. Exactly two short arms emerge bilaterally behind the head, each ending in an open five-fingered human hand. Exactly two short hind legs emerge bilaterally from the rear belly before the tail, each ending in a distinct five-toed human foot. All four limbs angle gently away from the trunk with visible gaps; hands and feet never replaced by fins. One small dorsal fin. Muted pale blue-grey fish scales, light warm ochre face, hands and feet. Organic continuous anatomical joints, neutral swimming pose, entire animal visible. No breasts, hair, clothes, jewelry, wings, extra limbs, mermaid torso, pedestal, scenery or water. Detailed natural history sculpt.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000,
+    "seed": 11082
+  }
+}

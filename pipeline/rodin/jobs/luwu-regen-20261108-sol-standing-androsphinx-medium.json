@@ -1,0 +1,12 @@
+{
+  "id": "luwu-regen-20261108-sol-standing-androsphinx-medium",
+  "beast": "luwu",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "A standing wingless ANDROSPHINX: one adult HUMAN HEAD on a powerful TIGER BODY. Natural human nose, lips, cheeks and chin, human forehead and ears, short dark hair. Human facial anatomy, no feline muzzle. The human head connects through a short thick furred animal neck directly into the tiger shoulders, as one living animal. Exactly four feline legs with broad tiger paws, standing with all four soles flat. Long horizontal striped torso, full chest, level spine and rounded muscular haunches. Completely tailless rounded rump. Ochre short fur with black tiger stripes, pale underside, natural warm human facial skin blending into short fur at jaw and nape. A calm zoological mythical creature, entire animal visible in three-quarter standing pose. No wings, human upper body, seated pose, headdress, crown, costume, stone surface, pedestal or background scenery.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

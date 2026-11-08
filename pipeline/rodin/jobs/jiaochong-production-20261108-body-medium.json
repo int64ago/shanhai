@@ -1,0 +1,8 @@
+{
+  "id": "jiaochong-production-20261108-body-medium",
+  "beast": "jiaochong",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One headless HUMAN body for a two-headed deity, not two people. Exactly one broad shoulder girdle, one continuous rib cage, one waist, one pelvis, two arms and two legs. At the top of the SAME chest grow two short natural neck roots side by side, spaced about one head-width apart with a shallow saddle between; no central third neck. Each root blends into the shared trapezius and clavicles. No skulls, faces or heads. Anatomical upper arms, elbows, five-finger hands, thighs, knees, calves and bare five-toed feet. Relaxed A-pose with arms 25 degrees from ribs, open hands clear of thighs, legs hip-width apart, both soles flat. Warm ochre skin and plain short opaque dark ochre hip wrap, all joints visible. Organic shoulders and muscles with no mechanical joints, collars or bands. Whole body from neck roots to soles. No second torso, extra arms or legs, insect abdomen, wings, tail, armor, base or scenery.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

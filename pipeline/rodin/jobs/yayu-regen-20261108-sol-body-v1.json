@@ -1,0 +1,12 @@
+{
+  "id": "yayu-regen-20261108-sol-body-v1",
+  "beast": "yayu",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One complete peaceful Chinese mythological animal: an ox-shaped quadruped with a russet-red short-haired body, ONE human face and FOUR horse feet. Broad horizontal bovine ribcage, natural ox withers and haunches, a short thick animal neck. The human facial features belong organically to the animal head: two eyes, human nose, closed human lips and chin, calm adult expression. Fine red-brown hair flows from the face through the nape into the shoulders with continuous natural tissue, no joined bust or collar. Exactly four separated weight-bearing legs end in solid SINGLE horse hooves with curved horn walls and short natural pasterns; no cloven cattle hooves. All four hoof soles rest level. One slender bovine tail with a small dark tuft. Warm red-ochre coat, dark brown hooves, subtle natural facial coloring. No horns, wings, human torso, arms, saddle, clothing, armor, wounds or pedestal. Entire isolated animal, side-readable neutral standing pose.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

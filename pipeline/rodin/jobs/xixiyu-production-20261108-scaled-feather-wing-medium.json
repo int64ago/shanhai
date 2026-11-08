@@ -1,0 +1,12 @@
+{
+  "id": "xixiyu-production-20261108-scaled-feather-wing-medium",
+  "beast": "xixiyu",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE isolated FEATHERED WING with small overlapping FISH SCALES confined to the DISTAL TIPS OF ITS FEATHERS. One complete gently swept magpie-like wing, about 4 times longer than its broad fleshy root; narrow rounded root expands into an articulated upper wing and a long tapered fan of individually readable flight feathers. Dark blue-black and cream feathers, restrained silver-gray scales embedded naturally around the last tenth of individual feather tips. Feather shafts and vanes remain visible before the scaled ends; no whole-wing scale armor. Full rounded root and all feather tips visible, shallow relaxed spread suitable for independent bending. One connected organic wing only. No body, head, feet, second wing, butterfly membrane, bat fingers, fish fin, metal blade, jewelry, mounting ring, pedestal or scenery. Natural surface study; no fused multiple wings.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

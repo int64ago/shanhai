@@ -1,0 +1,87 @@
+{
+  "beast": "xingtian",
+  "date": "2026-11-08",
+  "scope": "Source and minimal new Medium planning only; parent submits API and accepts actual output. No generated component or whole-beast acceptance claimed.",
+  "historicalAuditCommit": "3e533cf46eb77415016172daf714a54b6fc7f162",
+  "source": [
+    {
+      "book": "山海经·海外西经",
+      "text": "形天與帝至此爭神，帝斷其首，葬之常羊之山。乃以乳為目，以臍為口，操幹戚以舞。"
+    }
+  ],
+  "sourceEvidence": {
+    "url": "https://www.gutenberg.org/cache/epub/25288/pg25288.txt",
+    "download": "raw/_production-review/source-planning-20261108/pg25288.txt",
+    "sha256": "66288b2e25543bfb1b46f2823599725656db1df8d8f3f8cd490103734f3142ad",
+    "historicalContent": "raw/_production-review/source-planning-20261108/xingtian-historical-content.json",
+    "independentTranscription": "raw/_production-review/source-planning-20261108/pg25288.txt"
+  },
+  "catalogCorrections": [
+    "逐字保留下载文件第1288行的形天、至此爭神、幹戚及常羊之山后的句号。目录名刑天与所选原文字形分开。",
+    "断首、以乳为目、以脐为口、操干戚以舞为明文；帝未具名，无战神职衔、永世挥舞与左盾右斧的规定。"
+  ],
+  "inferred": [
+    "成年无首人形双臂双足比例、闭合颈断端、自然融合胸目与腹口大小",
+    "干戚按盾斧解释；器形、木/金属材料、大小、握持手别及舞法均为设计",
+    "肤色、朴素腰布、肌肉强弱与呼吸支撑动作；避免游戏角色铠甲、战纹和过度武器化"
+  ],
+  "minimalNewGenerationReasons": [
+    "历史库存没有完整无首人体母件；孤立人头、人掌与四足兽体均不能拼出可信肩髋和胸腹。",
+    "胸目与脐口是主体的自然组织，必须随主体一体生成，不能以贴眼球/口罩蒙混。",
+    "盾与斧各自独立生成便于自然抓握、负重和控制，不将人物与武器一次生成粘连。"
+  ],
+  "assemblyCounts": {
+    "headless-body": 1,
+    "shield": 1,
+    "axe": 1
+  },
+  "jobs": [
+    {
+      "part": "headless-body",
+      "job": "pipeline/rodin/jobs/xingtian-production-20261108-headless-body-medium.json",
+      "copies": 1,
+      "promptCharacters": 962,
+      "images": [],
+      "status": "prepared-not-submitted",
+      "estimatedCredits": 0.5
+    },
+    {
+      "part": "shield",
+      "job": "pipeline/rodin/jobs/xingtian-production-20261108-shield-medium.json",
+      "copies": 1,
+      "promptCharacters": 634,
+      "images": [],
+      "status": "prepared-not-submitted",
+      "estimatedCredits": 0.5
+    },
+    {
+      "part": "axe",
+      "job": "pipeline/rodin/jobs/xingtian-production-20261108-axe-medium.json",
+      "copies": 1,
+      "promptCharacters": 729,
+      "images": [],
+      "status": "prepared-not-submitted",
+      "estimatedCredits": 0.5
+    }
+  ],
+  "estimatedCredits": 1.5,
+  "budgetMeaning": "20 credits cap PER beast in existing client ledger; estimate counts only these new Medium jobs, not previous spending or later work.",
+  "reviewBeforeAssembly": [
+    "闭合短颈无头无多余脸；双目精确占双乳位置而非乳上/腋下；脐口占脐位，原脐不得重复保留。",
+    "胸目有皮肉衔接眼睑，腹口有自然唇缘，不是胸甲贴眼、腹部人脸或饰件；安静状态也能辨识。",
+    "主体成人肩肘腕髋膝踝连续、每手五指、双裸足完整接地；开放抓握空间能容纳独立器柄。",
+    "盾柄与斧柄分别由真实手指围握，舞动检验腕向、重心、力矩与足底；左盾右斧仅设计选项，不能写入source。",
+    "三态保持无首及乳目脐口，干戚可控而非浮空或粘手成团；不添加战斗游戏UI、铠甲或巨型武器。"
+  ],
+  "stageBoundary": "Text-only new Medium outputs must undergo actual four-view and root inspection. No failed historical images are eligible. If subsequent quality is needed, parent decides only after corrected actual geometry is reviewed; no preemptive variants or High specs.",
+  "workerActions": {
+    "apiCalls": 0,
+    "installs": 0,
+    "tts": false,
+    "runtimeChanges": false,
+    "readyChanges": false,
+    "commit": false,
+    "push": false,
+    "projectChecks": "not run; planning-only worker explicitly prohibited whole-repo pnpm; parent runs mandatory checks after integration"
+  }
+}

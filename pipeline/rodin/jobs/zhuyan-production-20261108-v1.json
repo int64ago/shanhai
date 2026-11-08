@@ -1,0 +1,12 @@
+{
+  "id": "zhuyan-production-20261108-v1",
+  "beast": "zhuyan",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE complete natural ape-like beast, Zhuyan from Shanhaijing. WHITE FUR covers the entire head, cheeks and chin; charcoal-grey fur covers neck, torso, arms and legs. EXACTLY TWO native rounded ears, one on each side, organically rooted in the head. Dark grey muzzle and HANDS; only the TWO FEET are CINNABAR RED from ankles through toes and soles. Natural stocky primate chest and pelvis, sloping shoulders, long arms, bent elbows and shorter bent hind legs. Relaxed semi-upright stance. TWO complete hands with EXACTLY FIVE separate fingers each including opposed thumbs. TWO broad feet with EXACTLY FIVE separate toes each including grasping big toes. Both soles flat on one ground plane; hands clear of legs and ground. Continuous organic wrists and ankles. Limbs and digits separated, fully visible. Tailless rump. Whole animal in frame. No extra ears, limbs or digits, red hands, human bodybuilder muscles, armor, clothes, weapons, jewelry, pedestal, base or scenery.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

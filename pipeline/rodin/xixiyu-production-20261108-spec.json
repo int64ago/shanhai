@@ -1,0 +1,75 @@
+{
+  "beast": "xixiyu",
+  "date": "2026-11-08",
+  "scope": "Source and minimal new Medium planning only; parent submits API and accepts actual output. No generated component or whole-beast acceptance claimed.",
+  "historicalAuditCommit": "67705f8678bc28a5dc8f4552b53b65298a8af700",
+  "source": [
+    {
+      "book": "山海经·北山经·北山经之首",
+      "text": "又北三百五十里，曰涿光之山。嚻水出焉，而西流注于河。其中多鰼鰼之魚，其狀如鵲而十翼，鱗皆在羽端，其音如鵲，可以禦火，食之不癉。其上多松柏，其下多椶枏，其獸多麢羊，其鳥多蕃。"
+    }
+  ],
+  "sourceEvidence": {
+    "url": "https://zh.wikisource.org/wiki/山海經/北山經",
+    "download": "raw/_production-review/source-planning-20261108/beishan.html",
+    "sha256": "3a2e57c6cf3f8edab1655ce98263e029845af10b8904eda9363dae6b1fe668cd",
+    "historicalContent": "raw/_production-review/source-planning-20261108/xixiyu-historical-content.json",
+    "independentTranscription": "raw/_production-review/source-planning-20261108/pg25288.txt"
+  },
+  "catalogCorrections": [
+    "所在是北山经之首而非北次三经；所选全段含食之不癉。",
+    "经称鱼、状如鹊、十翼、鳞皆在羽端、音如鹊、可以御火；不可把鸡体直接当鱼身，也不可宣称现代鱼类的鳍鳃细节是明文。"
+  ],
+  "inferred": [
+    "横向流线鱼体与鹊形头喙、细长尾形、无足无鳍游弋选择；经文未规定足鳍鳃数量",
+    "左右各五翼、错层翼根、弧度与错相运动；十翼总数有据，排布无据",
+    "青墨素白体色与银灰末端鳞形、材质、鹊鸣节奏及御火呈现"
+  ],
+  "minimalNewGenerationReasons": [
+    "历史精卫鸟体有双翼双足，十翼组装不成可信鱼鸟体且母翼无羽端鳞。",
+    "重新生成零翼零足鱼鹊主体，避免原生双翼加十翼成为十二翼；单羽翼生成鳞仅在羽端。"
+  ],
+  "assemblyCounts": {
+    "aquatic-magpie-body": 1,
+    "scaled-feather-wing": 10
+  },
+  "jobs": [
+    {
+      "part": "aquatic-magpie-body",
+      "job": "pipeline/rodin/jobs/xixiyu-production-20261108-aquatic-magpie-body-medium.json",
+      "copies": 1,
+      "promptCharacters": 936,
+      "images": [],
+      "status": "prepared-not-submitted",
+      "estimatedCredits": 0.5
+    },
+    {
+      "part": "scaled-feather-wing",
+      "job": "pipeline/rodin/jobs/xixiyu-production-20261108-scaled-feather-wing-medium.json",
+      "copies": 10,
+      "promptCharacters": 871,
+      "images": [],
+      "status": "prepared-not-submitted",
+      "estimatedCredits": 0.5
+    }
+  ],
+  "estimatedCredits": 1.0,
+  "budgetMeaning": "20 credits cap PER beast in existing client ledger; estimate counts only these new Medium jobs, not previous spending or later work.",
+  "reviewBeforeAssembly": [
+    "主体侧面是长流线水生躯体，同时头喙尾保留鹊的可辨特征；不是鸡胸、鸡冠或站立鸟体，也不是随意现代鱼换鸟头。",
+    "主体零翼，单翼母件复制十份后总计恰十翼；各翼具有完整根/肘/羽扇，不把鳍或装饰计入翼数。",
+    "鳞真正位于每片羽毛的末端而非只有整翼最外缘一点，羽轴羽片仍清晰，不以全身鳞甲替代羽端鳞。",
+    "翼根必须随流线躯干有机过渡且不穿入邻翼；游弋动作自然、无不必要地面步态，御火不演成喷火战斗。"
+  ],
+  "stageBoundary": "Text-only new Medium outputs must undergo actual four-view and root inspection. No failed historical images are eligible. If subsequent quality is needed, parent decides only after corrected actual geometry is reviewed; no preemptive variants or High specs.",
+  "workerActions": {
+    "apiCalls": 0,
+    "installs": 0,
+    "tts": false,
+    "runtimeChanges": false,
+    "readyChanges": false,
+    "commit": false,
+    "push": false,
+    "projectChecks": "not run; planning-only worker explicitly prohibited whole-repo pnpm; parent runs mandatory checks after integration"
+  }
+}

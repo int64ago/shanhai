@@ -1,0 +1,19 @@
+{
+  "id": "luwu-regen-20261108-sol-tail-v2-taper-high",
+  "beast": "luwu",
+  "budget": 20,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Refine the ONE isolated slender tiger tail shown in these four corrected views. Preserve the long shallow curved centerline, natural narrow round root and continuous steady taper from root to a fine smoothly pointed tip. The last tenth becomes visibly finer, without a blunt or swollen end. Keep the round cross-section and close short fur, ochre coat and coherent black transverse tiger rings around all sides. Preserve the full length and proportions. Root remains natural shaft thickness, without a flared pad, mounting plate or collar. One unbranched tail only, no body, pelvis, limbs, hook, loop or pedestal.",
+  "images": [
+    "concept/luwu-regen-20261108-sol-tail-v2-taper/view_34.png",
+    "concept/luwu-regen-20261108-sol-tail-v2-taper/view_side.png",
+    "concept/luwu-regen-20261108-sol-tail-v2-taper/view_front.png",
+    "concept/luwu-regen-20261108-sol-tail-v2-taper/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

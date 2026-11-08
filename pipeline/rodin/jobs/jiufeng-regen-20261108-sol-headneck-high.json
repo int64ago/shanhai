@@ -1,0 +1,19 @@
+{
+  "id": "jiufeng-regen-20261108-sol-headneck-high",
+  "beast": "jiufeng",
+  "budget": 20,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Follow the four personally reviewed views of ONE human-faced bird head and its short curved feather neck. Preserve exactly one calm adult HUMAN face, two human eyes, human nose, closed human lips and chin, human ears, short dark hair and natural warm skin. No beak, duplicate face or bird face. Preserve the continuous jaw and nape transition into small slate blue-gray neck feathers, solid curved neck volume and elongated tapered feather root for embedding in a mantle. No flared skirt, ring, collar, broad root disc, shoulders, chest, torso, arms or pedestal. Keep the approved head-to-neck proportions and complete single-component silhouette; do not add extra heads.",
+  "images": [
+    "concept/jiufeng-regen-20261108-sol-headneck/view_34.png",
+    "concept/jiufeng-regen-20261108-sol-headneck/view_side.png",
+    "concept/jiufeng-regen-20261108-sol-headneck/view_front.png",
+    "concept/jiufeng-regen-20261108-sol-headneck/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

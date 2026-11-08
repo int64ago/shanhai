@@ -1,0 +1,8 @@
+{
+  "id": "yinglong-production-20261108-wing-medium",
+  "beast": "yinglong",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE isolated complete feathered wing for a Chinese dragon, exactly one wing, no body or second wing. Elongated wing about 4 times longer than its root thickness, partly spread with a gentle elbow bend; long distinct overlapping primary feathers taper to a slender rounded tip. Strong fleshy rounded shoulder root, thickest near the base, smoothly narrowing through upper arm and forearm into the feather fan. Short dense blue-green scale coverts at the root gradually transition into muted ivory feather coverts and long ink-gray edged flight feathers. Root has real rounded volume on every side for deep organic overlap into a separate shoulder; no collar, plate, stalk, peg or mounting ring. Open readable feather silhouette, no folded ball or fused feather slab, no talons, claws, legs, horns, ornaments or pedestal. Entire root and complete feather tips visible. Neutral isolated single part.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

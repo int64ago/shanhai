@@ -1,0 +1,8 @@
+{
+  "id": "xiangliu-production-20261108-body-medium",
+  "beast": "xiangliu",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE headless complete muscular serpent trunk for separately attached head-and-neck parts. Broad rounded anterior shoulder-like neck-root mass, covered in continuous blue-green scaled skin, smoothly flowing into a long thick snake trunk, belly and complete pointed tail. No native heads or neck stalks; no holes, sockets, branching nubs or cut planes. Anterior mass has full curved volume on front, sides and underside for deeply overlapped neck roots. Circular serpent body about 10 times its greatest thickness, fine muted teal scales, lighter broad belly scutes. Extended horizontal shallow S pose, thick front at one end and steadily tapering sharp tail at opposite end; wide gap between ends. No ring, coil, loop, ouroboros, self-contact or body crossing. Entire anterior mass, belly and tail visible. No human torso, arms, legs, wings, horns, fins, collar, pedestal or props. Natural anatomy, not a flat ribbon or hollow pipe.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

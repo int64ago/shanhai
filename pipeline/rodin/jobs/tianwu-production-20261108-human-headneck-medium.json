@@ -1,0 +1,12 @@
+{
+  "id": "tianwu-production-20261108-human-headneck-medium",
+  "beast": "tianwu",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE isolated HUMAN-FACED head continuously joined to a complete short thick mammalian NECK. Adult human forehead, two dark eyes, human nose bridge, cheeks, closed lips and chin; short dark hair and ordinary human ears. Human jaw and nape blend organically into blue-green and ochre short fur on a curved muscular animal neck. Neck about 1.5 times head height, broad throughout with rounded oval cross-sections, curved throat and full nape; wide rounded basal root for deep overlap inside a shoulder mass. Human face remains clearly human, no feline muzzle. Whole head, neck and root visible. Skin-to-fur transition gradual. No separate pieces, human shoulders, bust, torso, legs, tails, horns, crown, jewelry, collar, ring, plinth or props. Never a bare portrait head, straight thin pole, triangular bib or flat neck sheet. Natural anatomy study, subtle surface texture, closed intact root.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

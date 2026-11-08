@@ -1,0 +1,8 @@
+{
+  "id": "kaiming-regen-20261108-sol-headneck-v1",
+  "beast": "kaiming",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE isolated HUMAN-FACED head with one strong animal neck for a modular nine-headed tiger guardian. Piece about twice face height. Human forehead, two dark forward eyes, human nose, cheeks, closed lips and chin; no feline muzzle or beak. Calm alert adult face, warm skin, short dark hair and sparse beard. Ochre tiger fur frames back of skull and continues down neck, subtle stripes only on fur. Thick organic neck narrows behind jaw then widens gradually into a broad soft flared root. Head, throat and neck form one continuous anatomical volume with natural muscle and fur flow. Rounded root overlaps a separate tiger shoulder; no collar, ring, rim, disc, pad, sphere, bib or human shoulders. Head upright, looking forward; neck extends down and slightly back. Entire piece in frame. No torso, chest, bust, limbs, extra heads, horns, ornaments, armor, clothing, props or base.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

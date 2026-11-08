@@ -1,0 +1,66 @@
+{
+  "beast": "yayu",
+  "date": "2026-11-08",
+  "scope": "Generation planning only; parent submits paid API calls and reviews actual output",
+  "oldV3Reference": {
+    "status": "rejected and stopped",
+    "reason": "Initial suspended human head and diagonal neck cut; the only correction formed a large pointed collar and retained irregular hoof overlaps.",
+    "retryImagesEligible": false,
+    "review": "/tmp/shanhai-check/yayu-reference-v3-review.json"
+  },
+  "headNeck": {
+    "job": "pipeline/rodin/jobs/yayu-regen-20261108-sol-headneck-v3-medium.json",
+    "promptCharacters": 965,
+    "submissionStatus": "prepared, not submitted by worker",
+    "anatomy": "One complete human face and cranium continuously joined to a short broad muscular bovine neck, with a blunt closed oval lower attachment. Animal neck rather than a bare human head or human bust.",
+    "reviewGate": [
+      "Human nose bridge, lips and chin; no bovine muzzle or horns",
+      "Complete thick curved throat and nape, neck shorter than head height",
+      "Lower root rounded in front, side and back, with no pointed collar, flat bib or pedestal",
+      "Russet short fur transitions into human facial margins and hairline",
+      "Four actual orthographic views and root closeups personally inspected before High eligibility"
+    ]
+  },
+  "bodyInputAudit": {
+    "bestExistingBovineTorsoReference": {
+      "raw": "raw/yayu-regen-20261108-sol-body-v1/base_basic_pbr.glb",
+      "rawSHA256": "3531a276e9f791dec7421911271c5edb5d5cd860aac69e5b4bfec6f58c58ba76",
+      "normalized": "raw/_build/yayu-regen-20261108-sol-body/normalized.glb",
+      "normalizedSHA256": "06e11a2be1b432a9a06b3652c15a5ab14be430446099700cd3d4e7217035b1aa",
+      "use": "Bovine chest, ribcage, haunch and limb proportions only; not a compliant complete input",
+      "limitations": "Cow head and horns remain; feet are cloven, and foot replacement reference attempts failed. Do not continue old cap or hoof-patch repairs."
+    },
+    "existingRuntime": {
+      "path": "public/models/yayu/body.glb",
+      "sha256": "770a51aa491cae186c2c683f60003af85834d5d80ef6d2115d2e9298b82f5a98",
+      "evidenceViewed": "/tmp/shanhai-check/yayu-final-idle.png",
+      "verdict": "Not selected as a new reconstruction input: visible elongated triangular front neck/bib and pasted hoof transitions. Runtime screenshot is historical evidence, not a fresh motion audit."
+    },
+    "compliantWholeExistingBodyLocated": false,
+    "selection": "New independent headless bovine body with complete native single horse hooves. Preserve the bovine torso proportions as a design reference only."
+  },
+  "body": {
+    "job": "pipeline/rodin/jobs/yayu-regen-20261108-sol-body-v4-medium.json",
+    "promptCharacters": 969,
+    "submissionStatus": "optional independent body job prepared; parent chooses and submits",
+    "anatomy": "Headless bovine ribcage, natural shoulders/chest and full haunches; very short rounded cervical root; four complete separated weight-bearing legs ending in four native indivisible horse hooves; one attached thin tufted cattle tail.",
+    "reviewGate": [
+      "Four complete legs with four single uncut hoof walls and soles, no cloven grooves",
+      "Naturally continuous pasterns, no rings or pasted foot caps",
+      "Broad curved bovine chest and shoulders; no diagonal flat front or pointed collar",
+      "Very short closed neck root only, leaving full short neck to the headneck mother part",
+      "Level back, supported hindquarters and all four sole contact planes measured after static review",
+      "One body and one tail, no face, horns, wings, stray parts or support slab"
+    ]
+  },
+  "assemblyBoundary": "Do not repeat the failed bare-head-to-cut-chest composition. Inspect the generated complete headneck and naturally continuous whole body independently, then choose attachment entirely within the broad shoulder cervical tissue. A compliant component is not whole-beast acceptance.",
+  "workerActions": {
+    "paidAPICalls": 0,
+    "installs": 0,
+    "runtimeChanges": false,
+    "metadataChanges": false,
+    "readyChanges": false,
+    "commits": false,
+    "tests": "Job schema, character counts and existing input SHA256 verified with Node. pnpm was prohibited in worker scope; parent must perform required project checks."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "id": "shuhu-production-20261108-winged-horse-trunk-medium",
+  "beast": "shuhu",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE headless NECKLESS horse trunk with two native bird wings and one native snake tail, for a separately generated complete head-and-horse-neck part. Natural chestnut horse anatomy, raised withers, rounded muscular shoulders and full deep chest, level spine, long rib cage, tucked abdomen, smoothly rounded croup, no raised rump step. Four straight natural horse legs, four planted hooves. Front shoulders retain a thick rounded volume to overlap a broad neck root; no neck stalk, head, face or thin connecting sheet. Exactly two feathered bird wings emerge organically from shoulder SIDES, feather coverts grade into chestnut fur, slightly spread clear of legs. One long circular snake tail emerges continuously from sacrum: broad muscular base blends smoothly into croup, gradually tapered length, muted green scales fading at root, gently curved slender tip. No horse tail, snake head, cut rump cap, collar, ring or pipe-like insertion. Entire body visible, neutral pose, no props or base.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

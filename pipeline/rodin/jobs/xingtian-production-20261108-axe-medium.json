@@ -1,0 +1,12 @@
+{
+  "id": "xingtian-production-20261108-axe-medium",
+  "beast": "xingtian",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE isolated plain ancient AXE with a single short broad practical blade firmly fitted near the top of ONE straight wooden shaft. Entire tool roughly four times longer than blade height; smooth rounded cylindrical handle leaves a clear lower grip area for a human hand. Muted aged metal blade and natural brown wood, modest weight, simple construction with no exact historical attribution. One continuous usable tool, blade and shaft fully visible. No person, hand, arm, shield, second axe, double blade, sword, skull ornament, spikes, rune, glowing effects, game inventory styling, stand, pedestal or scenery. Restrained ancient ritual-dance implement, natural physical materials, suitable for independent controlled attachment.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

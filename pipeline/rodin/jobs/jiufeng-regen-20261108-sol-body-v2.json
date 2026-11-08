@@ -1,0 +1,12 @@
+{
+  "id": "jiufeng-regen-20261108-sol-body-v2",
+  "beast": "jiufeng",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One anatomically natural headless bird body, a complete game animal asset in a balanced standing pose. A rounded avian breast, substantial muscular shoulders and a gently sloping back form a closed upper torso covered continuously in dense short overlapping feathers. Two complete native feather wings extend halfway from the shoulder blades; layered scapular feathers flow naturally into the thick wing roots, with tapered flight feathers at the outer tips. Exactly two bird legs and two clearly separated clawed feet stand flat on the ground. One compact ordinary feather tail. Slate blue-gray plumage has fine feather layering across breast, mantle and back; dark claws and gray bare lower legs. The body has no head or neck. Entire isolated bird body with room around both wings and feet, natural zoological proportions.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "tianwu-production-20261108-tail-medium",
+  "beast": "tianwu",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE isolated long flexible mammalian TAIL, round in cross-section throughout, about 8 times longer than its maximum thickness. Thick muscular rounded basal root gradually narrows along a gentle shallow S curve to a fine blunt furred tip; root remains clear and fully visible. Short dense tawny fur with muted blue-green and ochre shading, no prescribed tiger stripes. Cylindrical volume visible from all sides, smooth continuous taper, no flattened ribbon, blade, broad feather sheet, stacked strips or sudden bulges. One connected organic tail only. No body, head, legs, second tail, horns, fins, wings, socket, mounting ring, tufted pedestal, props or background scene. Natural anatomical study, entire tail and both ends within frame.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

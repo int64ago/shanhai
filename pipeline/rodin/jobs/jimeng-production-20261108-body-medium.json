@@ -1,0 +1,8 @@
+{
+  "id": "jimeng-production-20261108-body-medium",
+  "beast": "jimeng",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "JIMENG, one complete upright human-bodied deity with one Chinese dragon head. Single human rib cage, shoulders, waist, pelvis, exactly two arms and two legs. Dragon head has a long scaled muzzle, dark eyes, small swept-back paired horns and a short mane; neck grows continuously into human trapezius and clavicles. Human upper arms, elbows, forearms and five-finger hands; human thighs, knees, calves, ankles and bare five-toed feet. Both soles flat, knees nearly straight, feet hip-width apart. Relaxed A-pose, arms 25 degrees away from ribs, hands open and clear of thighs. Warm grey human skin, muted blue-grey dragon scales, plain short opaque ochre hip wrap leaving knees and legs visible. Natural anatomy, subtle muscles and continuous skin transitions. Full body visible from crown to soles. No bird talons, wings, tail, extra limbs, armor, long robe, pedestal, scenery, weapons or floating effects.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

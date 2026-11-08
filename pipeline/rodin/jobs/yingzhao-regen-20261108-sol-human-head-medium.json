@@ -1,0 +1,12 @@
+{
+  "id": "yingzhao-regen-20261108-sol-human-head-medium",
+  "beast": "yingzhao",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One isolated adult human guardian head with a short narrow cervical neck. Anatomically human forehead, brows, eyes, projecting nose bridge, nostrils, closed lips, cheeks and chin; two natural human ears. Calm alert expression, realistic balanced facial proportions, short swept-back dark hair and a subtle close beard. The back of the skull flows into a natural short neck, ending just below the jaw and throat. Warm natural skin, restrained hair detail. Complete head and neck visible in frame. Head-only sculpture, without chest, shoulders, clothing, pedestal, mounting disc or ornaments.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 14000
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "beast": "longzhi",
+  "date": "2026-11-08",
+  "scope": "Source and minimal new Medium planning only; parent submits API and accepts actual output. No generated component or whole-beast acceptance claimed.",
+  "historicalAuditCommit": "088005ec715e5354b3a70b0a6950cf0a0d4a3c92",
+  "source": [
+    {
+      "book": "山海經·東山經·東次二經",
+      "text": "又南五百里，曰鳧麗之山，其上多金玉，其下多箴石，有獸焉，其狀如狐，而九尾、九首、虎爪，名曰蠪姪，其音如嬰兒，是食人。"
+    }
+  ],
+  "sourceEvidence": {
+    "url": "https://zh.wikisource.org/wiki/山海經/東山經",
+    "download": "raw/_production-review/source-planning-20261108/dongshan.html",
+    "sha256": "411d3eccb4f857e58ac7ad6bfcc80358345c86cdbbc581c842d024cdd4e28f52",
+    "historicalContent": "raw/_production-review/source-planning-20261108/longzhi-historical-content.json",
+    "independentTranscription": "raw/_production-review/source-planning-20261108/pg25288.txt"
+  },
+  "catalogCorrections": [
+    "保留鳧麗之山全段，原典字形为蠪姪，显示名蠪侄可保留。",
+    "狐状、九首九尾、虎爪、音如婴儿与食人为明文；首尾最多、青铜爪和赤目均无据。"
+  ],
+  "inferred": [
+    "四足狐躯与每掌四趾、每首均为狐首、九颈肩与九尾根位置",
+    "赤褐乳白毛色、白尾梢、暗爪眼色、身高比例、缓行与错相动作"
+  ],
+  "minimalNewGenerationReasons": [
+    "历史借用九尾狐主体后切头切尾，后颅、臀部与后肢裁口无法连续。",
+    "独立虎掌拼到狐踝有接缝，本次虎掌必须由四条完整原生肢体自然长出。",
+    "历史尾母件截面偏扁且九份堆片，本次需要新圆厚单狐尾；不用旧失败拼装图作为输入。"
+  ],
+  "assemblyCounts": {
+    "fox-trunk-tiger-paws": 1,
+    "fox-headneck": 9,
+    "fox-tail": 9
+  },
+  "jobs": [
+    {
+      "part": "fox-trunk-tiger-paws",
+      "job": "pipeline/rodin/jobs/longzhi-production-20261108-fox-trunk-tiger-paws-medium.json",
+      "copies": 1,
+      "promptCharacters": 901,
+      "images": [],
+      "status": "prepared-not-submitted",
+      "estimatedCredits": 0.5
+    },
+    {
+      "part": "fox-headneck",
+      "job": "pipeline/rodin/jobs/longzhi-production-20261108-fox-headneck-medium.json",
+      "copies": 9,
+      "promptCharacters": 868,
+      "images": [],
+      "status": "prepared-not-submitted",
+      "estimatedCredits": 0.5
+    },
+    {
+      "part": "fox-tail",
+      "job": "pipeline/rodin/jobs/longzhi-production-20261108-fox-tail-medium.json",
+      "copies": 9,
+      "promptCharacters": 767,
+      "images": [],
+      "status": "prepared-not-submitted",
+      "estimatedCredits": 0.5
+    }
+  ],
+  "estimatedCredits": 1.5,
+  "budgetMeaning": "20 credits cap PER beast in existing client ledger; estimate counts only these new Medium jobs, not previous spending or later work.",
+  "reviewBeforeAssembly": [
+    "狐形体量而非虎身；主体完整四条腿、四只虎形掌，头尾均不残留；后躯支撑而非蹲伏。",
+    "单首母件包括完整后颅和粗短弧颈，九份根部应在肩体内有空间过渡，无九根等长直杆。",
+    "九首、九尾均实物可数；尾根错层而非同平面扇片，白梢不能混成实体大团。",
+    "掌趾原生连续无脚套，三态与连续帧核查四足落地、掌底方向、转身接缝。"
+  ],
+  "stageBoundary": "Text-only new Medium outputs must undergo actual four-view and root inspection. No failed historical images are eligible. If subsequent quality is needed, parent decides only after corrected actual geometry is reviewed; no preemptive variants or High specs.",
+  "workerActions": {
+    "apiCalls": 0,
+    "installs": 0,
+    "tts": false,
+    "runtimeChanges": false,
+    "readyChanges": false,
+    "commit": false,
+    "push": false,
+    "projectChecks": "not run; planning-only worker explicitly prohibited whole-repo pnpm; parent runs mandatory checks after integration"
+  }
+}

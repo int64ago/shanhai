@@ -1,0 +1,12 @@
+{
+  "id": "xixiyu-production-20261108-aquatic-magpie-body-medium",
+  "beast": "xixiyu",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE wingless aquatic fish-bird BODY with recognizable MAGPIE likeness, long streamlined fish-shaped trunk carried horizontally in a swimming posture. Small magpie-like head flows into the narrow front body, dark eyes and slim pointed closed beak; no chicken comb, wattles or bulky chicken breast. Rounded elongated aquatic torso tapers smoothly toward a long narrow flowing tail with subtle paired feather-like vanes, preserving a magpie silhouette. Fine dark blue-black and cream surface texture; body is not covered in armor scales. Smooth continuous flanks provide later wing attachments. ZERO wings, legs, feet, fins or detached parts. No chicken body, perched songbird pose, bird claws, props, water, pedestal or scene. One complete continuous organic swimming animal, natural neck transition, full belly and tail root, no flat cut planes. Magpie-like fish anatomy is an artistic interpretation, not a literal modern fish specimen.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "xingtian-production-20261108-headless-body-medium",
+  "beast": "xingtian",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE complete HEADLESS ADULT HUMAN BODY, natural muscular anatomy, upright relaxed A-pose with two separated arms and two straight supporting legs. NO head or face above shoulders; short rounded closed neck stump, no wound. TWO living eyes are naturally integrated precisely at the two nipple locations: eyelids, tear corners and shallow sockets blend into pectoral tissue, not ornaments or pasted eyeballs. ONE small natural mouth replaces the NAVEL, with subtle lips continuous with abdominal skin; no ordinary navel, extra chest face or belly mask. Warm earth skin, restrained musculature, small plain cloth waist wrap, no armor or tattoos. Two adult hands with gently curved distinct fingers and open palms for later independent prop attachment. Two complete bare feet on one ground plane. Whole body visible. No weapons, shield, axe, helmet, game costume, extra limbs, severed parts, pedestal or scene. Quiet anatomical study, natural chest eyes gently open.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

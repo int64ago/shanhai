@@ -1,0 +1,39 @@
+{
+  "beast": "yinglong",
+  "name": "应龙",
+  "date": "2026-11-08",
+  "scope": "Medium generation specifications only; parent submits API calls and separately reviews downloaded models. No runtime or readiness change.",
+  "researchCommit": "c15b904ae10c7b1bb1a070cdd67efb4911fa639d",
+  "archetype": "serpentine",
+  "source": [
+    { "book": "山海經·大荒東經", "text": "大荒東北隅中，有山名曰凶犁土丘。應龍處南極，殺蚩尤與夸父，不得復上，故下數旱。旱而為應龍之狀，乃得大雨。" },
+    { "book": "山海經·大荒北經", "text": "應龍已殺蚩尤，又殺夸父，乃去南方處之，故南方多雨。" },
+    { "book": "山海經·大荒北經", "text": "黄帝乃令應龍攻之冀州之野。應龍畜水。" }
+  ],
+  "sourceVerification": {
+    "basis": "Research commit sourceVerification; 2026-11-08 fresh WebFetch of Siku volume 14 and Dahuang North confirms relevant clauses. Modern punctuation follows research commit; chapters remain separate.",
+    "urls": ["https://zh.wikisource.org/wiki/山海經_(四庫全書本)/卷14", "https://zh.wikisource.org/wiki/山海經/大荒北經"],
+    "annotation": { "author": "郭璞", "book": "山海經（四庫全書本）卷十四", "text": "龍有翼者也", "status": "Commentary, not main text; freshly confirmed as an inline annotation. It supports wings but gives no wing count or feather/membrane type." },
+    "boundaries": ["Do not join East and North entries into one quote.", "Do not attribute Yuba's rain stopping to Yinglong or add Yu tail-channeling lore as quoted source.", "The main text does not enumerate legs, claws, horns, scales, wing count or body length."]
+  },
+  "inferred": [
+    { "item": "Elongated dragon with complete dragon head and tail, no native limbs or horns", "basis": "A restrained serpentine design choice, not an explicit limb count; scaled muzzle, brows, short whiskers, proportions and tapered tail are artistic completion." },
+    { "item": "Two feathered wings", "basis": "有翼 derives from Guo commentary only. Two shoulder attachments, feathers, scale-to-covert transition and wing size are design choices. One wing mother is replicated twice by proper rotations, never negative scale." },
+    { "item": "Blue-green, pale belly, ivory wings and open shallow-S pose", "basis": "Palette and pose are inferred. Open pose is a generation/rigging choice; wind, rain and wave motion need later design and verification." }
+  ],
+  "jobs": [
+    { "id": "yinglong-production-20261108-body-medium", "path": "pipeline/rodin/jobs/yinglong-production-20261108-body-medium.json", "role": "Complete continuous head-neck-trunk-belly-tail body without native wings", "instances": 1 },
+    { "id": "yinglong-production-20261108-wing-medium", "path": "pipeline/rodin/jobs/yinglong-production-20261108-wing-medium.json", "role": "One complete wing mother with muscular root", "instances": 2 }
+  ],
+  "generation": { "status": "prepared-not-submitted", "budgetPerBeast": 20, "tier": "Gen-2.5-Medium", "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }, "promptCharacterLimit": 1000, "jobCount": 2, "estimatedInitialCredits": 1, "automaticVariants": false, "highEligible": false },
+  "currentModel": { "qualifiedModelEstablished": false, "newModelProduced": false, "evidence": "Research commit is source/blocker work, not a dragon asset. Previously reviewed isolated HIGH feather wing/tail do not establish a complete dragon. No fresh model exists in this specification task; old inventory is not re-audited here." },
+  "acceptance": [
+    "Review body and wing independently with actual four orthographic views using Read before any assembly or High decision.",
+    "Complete credible dragon head, neck, rounded trunk, continuous belly and entire tapered pointed tail; no ouroboros, welded end, loop, missing tip or flattened tail slab.",
+    "Body shoulder volume must support two deep organic wing-root overlaps; no native wing remnants, socket holes, pegs or visible collars.",
+    "Wing root, elbow and separate feather silhouette must be volumetric on both sides; no stump, folded ball, flat mounting plate or torn tips.",
+    "Assembled beast has exactly two inferred wings and one body/head/tail; inspect root coverage through full wing range before acceptance.",
+    "Later production requires finite skinned geometry, full-body clearance or actual belly contacts, idle/walk/special continuous captures, source/inferred card checks, StrictMode lifecycle and special return. Prepared tasks imply none of those passes."
+  ],
+  "workerActions": { "paidAPICalls": 0, "installs": 0, "ttsCalls": 0, "runtimeChanges": false, "readyChanges": false, "commits": false, "pnpmRun": false }
+}

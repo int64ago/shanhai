@@ -1,0 +1,12 @@
+{
+  "id": "yingzhao-regen-20261108-sol-wing-medium",
+  "beast": "yingzhao",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE isolated right bird wing for a Chinese mythical horse guardian, no body. Elegant anatomically organized feathered wing, fully extended in a relaxed shallow arch, root-to-tip length about 5 times the thickness of the inner wing. A small tapered muscular shoulder root flows directly into short layered coverts, a clear elbow and wrist, layered broad secondaries and a fan of long separated primary feathers with pointed tips. Natural continuous feather growth and coherent bird-wing anatomy. Root is compact and tapered for insertion into a body, no circular mounting plate, collar, socket or sphere. Dark charcoal gray feathers with subtle pale edges and warm gray coverts, both upper and underside feather layers modeled. Entire single wing visible including root and tip. NO second wing, bird body, horse body, head, feet, human arm, hand, claws, bat membrane, metal, ornament, detached feathers, pedestal or base.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 14000
+  }
+}

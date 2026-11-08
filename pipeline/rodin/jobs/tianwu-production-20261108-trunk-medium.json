@@ -1,0 +1,12 @@
+{
+  "id": "tianwu-production-20261108-trunk-medium",
+  "beast": "tianwu",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE organic headless limbless tailless mammalian water-beast TRUNK, horizontal feline-inspired ribcage with powerful shoulders and full rounded pelvis. Long level back, broad oval chest, continuous rounded belly and muscular flanks; natural skin and short fur cover every surface. Short rounded cervical root at front, rounded sacral attachment area at rear. Broad shoulder, flank and hip tissue allows later deep organic neck, limb and tail attachments. NO heads, faces, eyes, mouths, legs, feet, tails, wings or fins. No repeated sockets, holes, tubes or external mounting hardware. Back colored muted blue-green and warm yellow, lower flanks subdued tawny; all colors and feline proportions are design choices. Entire single trunk visible, front and back remain voluminous, no sliced belly or flat cut planes, no pedestal, props, water or scene. Natural anatomy study, restrained fine fur, not a toy or armored game monster.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

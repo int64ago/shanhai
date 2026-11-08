@@ -1,0 +1,36 @@
+{
+  "beast": "zhulong",
+  "name": "烛龙",
+  "date": "2026-11-08",
+  "scope": "Medium generation specification only; parent submits API calls and separately reviews actual output. No runtime or readiness change.",
+  "researchCommit": "59711c3f6e56cda25b3560e0c008260458e077cd",
+  "archetype": "serpentine",
+  "source": [
+    { "book": "山海经·大荒北经", "text": "西北海外，赤水之北，有章尾山。有神，人面蛇身而赤，直目正乘，其暝乃晦，其視乃明，不食不寢不息，風雨是謁。是燭九陰，是謂燭龍。" },
+    { "book": "山海经·海外北经", "text": "鍾山之神名曰燭陰，視為晝，瞑為夜，吹為冬，呼為夏，不飲，不食，不息，息為風，身長千里。在無啓之東。其為物，人面，蛇身，赤色，居鍾山下。" }
+  ],
+  "sourceVerification": {
+    "basis": "Research commit content and provenance; 2026-11-08 fresh WebFetch of both chapters confirms human face, red serpent body, 直目正乘, and distinct 烛龙/烛阴 paragraphs.",
+    "urls": ["https://zh.wikisource.org/wiki/山海經/大荒北經", "https://zh.wikisource.org/wiki/山海經/海外北經"],
+    "boundaries": ["章尾山/燭龍 and 鍾山/燭陰 remain separately quoted; do not silently equate the mountains.", "千里 and winter/summer clauses occur in 海外北經; they are not inserted into 大荒北經.", "直目正乘 is preserved verbatim; it does not establish vertical slit pupils. 九陰 is not an eye or head count.", "No crown, horns, wings, limbs or creator title is explicit in these passages."]
+  },
+  "inferred": [
+    { "item": "One complete human head and face continuously integrated with a red serpent", "basis": "人面蛇身而赤 is explicit. Full cranium, short hair, ordinary paired lidded eyes, head-to-neck transition, slenderness and pointed tail complete unspecified anatomy. Eyes face forward without presenting this choice as a translation of 直目." },
+    { "item": "No horns, wings, arms or legs; no crown", "basis": "Minimal design choice avoiding unsupported dragon additions. It is not a textual statement that the source explicitly forbids appendages." },
+    { "item": "Vermilion scales, lighter belly and extended shallow S", "basis": "Red color is explicit, exact tones, scale structure, thousand-li viewing scale and open production pose are inferred. Eye closing and day/night changes belong to later animation and effect design." }
+  ],
+  "jobs": [
+    { "id": "zhulong-production-20261108-body-medium", "path": "pipeline/rodin/jobs/zhulong-production-20261108-body-medium.json", "role": "One continuous human-faced red serpent, complete head to pointed tail", "instances": 1 }
+  ],
+  "generation": { "status": "prepared-not-submitted", "budgetPerBeast": 20, "tier": "Gen-2.5-Medium", "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }, "promptCharacterLimit": 1000, "jobCount": 1, "estimatedInitialCredits": 0.5, "automaticVariants": false, "highEligible": false },
+  "currentModel": { "qualifiedModelEstablished": false, "newModelProduced": false, "evidence": "Research commit and provenance record no credible complete human-faced serpent. An old isolated human bust and tail are candidates for their original roles, not an accepted Zhulong. No new output is claimed; no fresh inventory audit was performed." },
+  "acceptance": [
+    "Read actual front, rear, left and right orthographic images before any High decision; inspect face-throat and tail-tip closeups.",
+    "One unmistakable human face and complete cranium, no dragon muzzle, crown, horns, antlers, extra eyes or forced slit pupils.",
+    "Continuous rounded throat-to-neck transition without bust, human chest, floating face, collar, triangular bib or pasted cap.",
+    "Whole volumetric red serpent including belly and fully tapered tail; no ring, ouroboros, body crossing, welded ends or clipped tail tip.",
+    "Eyes and lids must remain readable for later opening/closing; no baked fire or light that conceals anatomy.",
+    "Later full production still needs finite skinning, belly contact or full-body clearance, idle/walk/special continuous Read captures, StrictMode cleanup, special return and separated source/inferred UI. This task provides no such pass."
+  ],
+  "workerActions": { "paidAPICalls": 0, "installs": 0, "ttsCalls": 0, "runtimeChanges": false, "readyChanges": false, "commits": false, "pnpmRun": false }
+}

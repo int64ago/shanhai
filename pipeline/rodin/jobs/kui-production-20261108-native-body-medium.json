@@ -1,0 +1,8 @@
+{
+  "id": "kui-production-20261108-native-body-medium",
+  "beast": "kui",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "KUI, a hornless ox-like mythical animal with exactly ONE native leg and ONE hoof. Full animal, horizontal bovine spine, natural hornless ox head and neck, small lateral ears, dark eyes, broad muzzle. Real bovine scapulae, raised withers, deep chest, rib cage, tucked flanks, loin and rounded muscular haunches; blue-grey short coat. Smooth continuous underside bears one stout bovine leg growing broadly from the belly center beneath the center of mass. Root muscles flow gradually from belly into thigh, then one knee, tapered lower leg, one ankle and one cloven hoof flat on ground. Two hoof digits share the SAME ankle. No other limbs, sockets, cut stumps or four-leg root bulges anywhere. Single slender hanging ox tail grows naturally from rump. Unified organic anatomy and coat across head, trunk and leg; no seams, bands, collars or caps. Balanced neutral pose, whole silhouette visible. No horns, wings, clothing, armor, pedestal or scenery.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

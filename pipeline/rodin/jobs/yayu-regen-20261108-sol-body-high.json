@@ -1,0 +1,19 @@
+{
+  "id": "yayu-regen-20261108-sol-body-high",
+  "beast": "yayu",
+  "budget": 20,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Follow the four personally reviewed views of this ONE complete Chinese mythological quadruped. Preserve the broad horizontal ox-shaped russet-red short-haired body, one organically integrated HUMAN face, short thick animal neck, and exactly FOUR horse feet. Human facial features have two eyes, human nose, closed lips and chin, with continuous natural tissue and hair from the face through the nape into the bovine shoulders. No attached human bust, long human neck or collar. All four legs end in solid SINGLE horse hooves with curved horn walls and short natural pasterns; no cloven hooves or paws. Preserve four level planted soles, one slender ordinary bovine tail and the approved neutral calm pose. Warm red-ochre coat and dark brown hooves, no horns, wings, human torso, clothing, wounds or pedestal.",
+  "images": [
+    "concept/yayu-regen-20261108-sol-body/view_34.png",
+    "concept/yayu-regen-20261108-sol-body/view_side.png",
+    "concept/yayu-regen-20261108-sol-body/view_front.png",
+    "concept/yayu-regen-20261108-sol-body/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

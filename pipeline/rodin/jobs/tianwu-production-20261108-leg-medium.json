@@ -1,0 +1,12 @@
+{
+  "id": "tianwu-production-20261108-leg-medium",
+  "beast": "tianwu",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE isolated complete furred mammalian weight-bearing LEG, from thick rounded proximal muscle root through articulated upper limb, bent middle joint and tapered lower limb into ONE broad feline paw. Limb about 4 times its maximum root width, gentle natural flexion in side view; root widest then gradually narrows toward ankle. Paw has four rounded forward toes with short curved dark claws, a convincing heel pad and one flat support plane beneath all pads. No bird scales, hooves or human hand. Muted tawny and blue-green short fur, dark toe creases. Continuous organic muscle, fur and skin through all joints, no pasted foot or ankle ring. Entire single leg and full rounded root visible, no body, head, tails, wings, second limb, socket, exposed bone, support slab, pedestal or scene. Stable grounded posture suitable for later independent rigging; not a straight tube or detached claw cluster.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

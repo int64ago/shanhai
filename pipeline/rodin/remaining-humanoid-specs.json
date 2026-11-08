@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "batch": "remaining-humanoid-production-20261108",
+  "status": "specifications-only-awaiting-parent-generation-and-visual-review",
+  "scope": ["jimeng", "jiaochong", "kuafu", "qiangliang"],
+  "generation": {
+    "owner": "parent-agent",
+    "tier": "Gen-2.5-Medium",
+    "budgetPerBeast": 20,
+    "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 },
+    "maxPromptCharacters": 1000,
+    "jobs": 7,
+    "estimatedCreditsPerJob": 0.5,
+    "estimatedInitialBatchCredits": 3.5,
+    "billingNote": "估算沿用 generate.ts；不是调用或收费凭证。实际提交、预算累计与重试由父任务集中处理。此规格不要求 High 阶段。"
+  },
+  "evidence": {
+    "directory": "raw/remaining-humanoid-specs-20261108",
+    "manifest": "raw/remaining-humanoid-specs-20261108/manifest.json",
+    "retention": "仓库已有 raw/ 忽略规则覆盖的持久本地证据；不依赖 /tmp 保存原始文本。",
+    "sources": [
+      {
+        "key": "zhongshan",
+        "url": "https://zh.wikisource.org/wiki/山海經/中山經",
+        "rawPath": "raw/remaining-humanoid-specs-20261108/zhongshan.html",
+        "bytes": 103572,
+        "sha256": "ed32407103ccf4c3b1fb94f5f8de3fca558f28b40be3cb3c5f9390a5d1f23fd1",
+        "completeHttpBody": true,
+        "verified": "中次六經平逢之山骄虫段与中次八經光山计蒙段，保留上下文区分邻山神。"
+      },
+      {
+        "key": "dahuangbei",
+        "url": "https://zh.wikisource.org/wiki/山海經/大荒北經",
+        "rawPath": "raw/remaining-humanoid-specs-20261108/dahuangbei.html",
+        "bytes": 72017,
+        "sha256": "a966511ec704a3c0a1b3a2dc7a59f64f0c9850fd12a21fee64a0779d7b16840f",
+        "completeHttpBody": true,
+        "verified": "又有神衘蛇操蛇至名曰彊良，以及成都載天至夸父死亡与应龙段，分别核字。"
+      },
+      {
+        "key": "gutenberg",
+        "url": "https://www.gutenberg.org/cache/epub/25288/pg25288.txt",
+        "rawPath": "raw/remaining-humanoid-specs-20261108/gutenberg.txt",
+        "bytes": 137980,
+        "sha256": "2e6c74c301d19d910fcec594a5c8f9de4098b77fcc37981d6a2748c42a6abce9",
+        "completeHttpBody": false,
+        "verified": "HTTP 传输中断，保存实际收到的前缀；四兽相关完整段落均在已收到范围内并实读，仅用于对照，不声称整书完整。计蒙同为人身而龍首；骄虫同为如人而二首；强良作銜蛇銜操蛇、四蹄長肘、強良；夸父作兩黃蛇、誇父。异文不拼入所选正文。"
+      }
+    ]
+  },
+  "beasts": {
+    "jimeng": {
+      "name": "计蒙",
+      "researchCommit": "eb0824997ca361f115621a2195ae7d2259bb5c0b",
+      "archetype": "biped",
+      "source": [
+        {
+          "book": "山海经·中山经·中次八经",
+          "text": "又東百三十里，曰光山，其上多碧，其下多木。神計蒙處之，其狀人身而龍首，恒遊于漳淵，出入必有飄風暴雨。"
+        }
+      ],
+      "sourceEvidence": ["zhongshan", "gutenberg"],
+      "sourceBoundary": "所核光山条没有鳥爪、足数或足形。羊角虎爪属附近骄山神，方面三足属岐山涉𧕛，不得移给计蒙。这里也未明确雨师职称、挥臂施雨或雷电。",
+      "inferred": [
+        "直立双臂双腿、人手人足、成人比例是对人身的保守制作补足，不当作经文规定。此版不采用鸟爪。",
+        "龙首的双短角、吻形、鬃毛、鳞片与人颈过渡为设计，非龙首一词限定的器官数。",
+        "暖灰肌肤、灰蓝鳞、短赭色遮蔽腰衣、性别外观与动作均为设计。风雨只作出入伴随意象，不伪称雷法或主动召雨。"
+      ],
+      "parts": [
+        { "part": "body", "job": "pipeline/rodin/jobs/jimeng-production-20261108-body-medium.json", "instances": 1, "purpose": "单件完整龙首人身，保留自然肩颈及完整双臂双腿；不预先拆头与四肢。" }
+      ],
+      "reviewGates": [
+        "四视图必须是一具人形肩胸、腰盆、双臂双腿的完整主体，非竖起的四足龙；龙首颈根不穿肩、不悬浮。",
+        "恰两人手两人足，手指脚趾有基本自然结构；拒收鸟爪、四足躯、翅、尾、多余残肢与遮盖关节的长袍。",
+        "下颌与角不相粘，脚掌能平着地，腋下及两腿间有分离空间，腰衣不把大腿焊成一块。"
+      ]
+    },
+    "jiaochong": {
+      "name": "骄虫",
+      "researchCommit": "250049eefdd624b0170d93c3b41064665fff9fc2",
+      "archetype": "biped",
+      "source": [
+        {
+          "book": "山海經·中山經·中次六經",
+          "text": "縞羝山之首，曰平逢之山，南望伊洛，東望穀城之山，無草木，無水，多沙石。有神焉，其狀如人而二首，名曰驕蟲，是為螫蟲，實惟蜂蜜之廬，其祠之：用一雄雞，穰而勿殺。"
+        }
+      ],
+      "sourceEvidence": ["zhongshan", "gutenberg"],
+      "sourceBoundary": "如人而二首为明文，不是两个人、蜂身或双副躯干。经文不定双首排列、性别年龄、发须、服饰，也不等同统领天下蜂群。",
+      "inferred": [
+        "一具人形躯干、两臂两腿、左右并列双颈根为制作布局；肩带连成一副，不增加胸、骨盆或肢体。",
+        "一件头母件实例化两份；面貌、成人外观、发髻、暖赭肤色与短腰衣均为设计。",
+        "两首适度错角可读，但不添第三中央首；蜂群、流蜜及其他特效不属于必要部件规格。"
+      ],
+      "parts": [
+        { "part": "body", "job": "pipeline/rodin/jobs/jiaochong-production-20261108-body-medium.json", "instances": 1, "purpose": "完整双臂双腿人身，共用肩胸上原生两个短颈根；头部省去以避免双首粘连。" },
+        { "part": "head", "job": "pipeline/rodin/jobs/jiaochong-production-20261108-head-medium.json", "instances": 2, "purpose": "单人首短颈母件两份，共用body，不生成第二副身体。" }
+      ],
+      "assembly": "两头颈轴分别对齐共用肩带的左右颈根。头颈交界预留约2–3%软组织重叠并检查所有方向，必要时修短重复颈段，不能出现双层长颈、领圈或断口。以旋转区分朝向，不用负缩放镜像。",
+      "reviewGates": [
+        "body四视图确认恰一胸一腰一盆、二臂二腿、两个分离颈根；拒收中央第三颈、两副肩胸粘合或缺失/重复肢体。",
+        "head母件必须完整单首、单面及自然短颈，不夹带胸肩、另一个面或明显头盔；颈根直径可与body匹配。",
+        "组装后任一视角可数恰两完整颅，双首不互相穿眼耳、发髻不相焊，肩根和两段颈不出现台阶或悬空。"
+      ]
+    },
+    "kuafu": {
+      "name": "夸父",
+      "researchCommit": "6d9c299466efe8cefff9afb18d15e74d9cb8162d",
+      "archetype": "biped",
+      "source": [
+        {
+          "book": "山海經·大荒北經",
+          "text": "大荒之中，有山名曰成都載天。有人珥兩黄蛇，把兩黄蛇，名曰夸父。"
+        }
+      ],
+      "sourceEvidence": ["dahuangbei", "gutenberg"],
+      "sourceBoundary": "本次只选择大荒北经同一条形貌：两条珥蛇加两条所把之蛇，共四条黄蛇。不是每手两条，也不是耳蛇共两条加杖。该条未写杖；海外北经弃杖化邓林与中山经桃林不移入本形貌规格。",
+      "inferred": [
+        "高大成年男性、运动比例、人类手足、赤赭肤色与短腰衣为设计；本句没有身高数值、肌肉或服饰。",
+        "两耳各一条、两手各把一条是明确标为设计的左右分配。蛇的黄金偏赭细鳞、粗细、大小、耳垂绕挂方式与手握姿势均为补足，黄色本身有原文依据。",
+        "采用同一单蛇母件四份，耳蛇与手蛇可均匀缩放成不同尺寸；不额外生成耳饰蛇组、手握蛇组或杖。"
+      ],
+      "parts": [
+        { "part": "body", "job": "pipeline/rodin/jobs/kuafu-production-20261108-body-medium.json", "instances": 1, "purpose": "完整自然人形；两耳耳垂外露、双手离开髋部，原生蛇和杖均省去。" },
+        { "part": "snake", "job": "pipeline/rodin/jobs/kuafu-production-20261108-snake-medium.json", "instances": 4, "purpose": "单黄蛇母件，分别用于两耳与两手，不把四条蛇粘连着生成。" }
+      ],
+      "assembly": "耳蛇以曲线骨链绕耳垂短弯挂接，手蛇由手掌实际闭合环抱其中段；均需可见单头单尾，不用浮在拳外的蛇代替把。若握持空间不够，先调整手指/姿态或局部修形，再审查，不加独立第三只手。",
+      "reviewGates": [
+        "body必须有连贯的人形肩胸腰盆、双臂双腿及可接触蛇的自然手部；两耳不被头发/装饰覆盖，手指不全熔成实心拳球。",
+        "snake四视图确认单头单尾无腿，细长近直线便于蒙皮；拒收团块、闭环粘连、多首多尾和模型内自带支架。",
+        "组装后可追溯恰四条独立黄蛇：耳侧两条，手中两条；不混杖、桃花或夸父之山景物。耳环接触稳定、手把真实接触，蛇不得从掌心无故穿出。"
+      ]
+    },
+    "qiangliang": {
+      "name": "强良",
+      "researchCommit": "852fc8ee67ff552e570a040af456529829d808c3",
+      "archetype": "biped",
+      "source": [
+        {
+          "book": "山海經·大荒北經",
+          "text": "又有神衘蛇操蛇，其狀虎首人身，四蹏長肘，名曰彊良。"
+        }
+      ],
+      "sourceEvidence": ["dahuangbei", "gutenberg"],
+      "sourceBoundary": "虎首人身、四蹏長肘、衘蛇操蛇为明文；不定蛇数与色，不写双手各一蛇，不称雷神。前一句九首人面鸟身属于九凤，前后其他神的有数有色蛇不移入本条。",
+      "inferred": [
+        "直立双腿支撑，四肢各以一蹄终止：两足蹄和两上肢末端蹄，恰四蹄；四肢分配、分瓣蹄形及姿态都是本次可审查的布局，不称经文明定。禁止另添人手来规避四蹄。",
+        "长肘具较明显向后的肘尖并加长前臂，具体比例属设计，不把长肘误作四只胳膊。人形肩胸腰盆必须保留。",
+        "本次选择两条蛇：一条由口衔其中段，一条绕托于弯曲前臂及末端蹄的交界以操持；数量、持法与灰绿蛇色均为设计，不是原文两条。",
+        "虎纹、虎首赭色、人身灰暖肤色、短腰衣与一切动作均为补足；不新增雷电法器与咆哮经文。"
+      ],
+      "parts": [
+        { "part": "body", "job": "pipeline/rodin/jobs/qiangliang-production-20261108-body-medium.json", "instances": 1, "purpose": "原生一虎首、完整人形肩腰盆及双长臂双腿；四末端蹄同时生成，避免外拼四副多余肢体；蛇省去。" },
+        { "part": "snake", "job": "pipeline/rodin/jobs/qiangliang-production-20261108-snake-medium.json", "instances": 2, "purpose": "单蛇母件两份，口衔与前臂操持；数量明确作为推断。" }
+      ],
+      "assembly": "口蛇中段落在上下颌实际夹持处，两侧垂下且单头单尾完整。另一蛇沿前臂作开放卷曲，以弯肘和终端蹄边托压形成可见接触；必要时调整前臂骨，不新增手掌、手指或第五蹄。若现有姿态无法形成可信操持，此门不得通过。",
+      "reviewGates": [
+        "四视图必须一虎首、人形肩胸腰盆、二长臂二腿；恰四个末端蹄，其中下两蹄平着地。拒收虎身竖起、四腿加两手、普通手脚、虎爪替蹄或肘间多余肢体。",
+        "肘尖与前臂长度清楚可见，虎颈和人肩过渡自然，臂蹄与腿蹄应是生物组织连续而非机械扣件。",
+        "mouth留有可夹蛇空间；两条蛇各单头单尾，口衔和前臂操持都要有真实接触，不能悬挂空中。蛇数与颜色在未来元数据中必须保留为推断。"
+      ]
+    }
+  },
+  "commonAcceptanceGates": [
+    "父任务生成后先保留原始GLB、job及积分凭证，渲染正/侧/背/四分之三四视图并Read实审；结构不合格则拒收/修形/重试，不用后续绑骨掩盖粘连。当前没有生成结果或图审通过声明。",
+    "每件结构连续、体积和比例自然，无漂浮碎块、残肢、支架、底座及关节熔合；复杂器官只实例化所列母件，不生成整组粘连副躯。",
+    "后续绑骨后检查idle/walk/special所有实际CPU蒙皮顶点及属性有限；双足支撑相检查完整world XYZ足底接触与朝向、无滑步翘蹄；大动作可回到待机，无肢体/蛇与身体穿插。",
+    "所有挂接根在体内小幅重叠且运动时无悬空/重复残影；StrictMode挂载与清理对称，源GLTF不被useMemo污染；不以负缩放镜像带描边几何。",
+    "父任务统一完成三态全景和连续帧closeups截图并Read；统一执行pnpm typecheck、pnpm validate、pnpm build及LFS核验。此规格阶段不运行全仓命令。",
+    "父任务在最终内容/讲述中同步所选单条形貌及推断边界。当前catalog仍有计蒙预设双角召雨、骄虫蜂群、夸父耳蛇加桃木杖、强良双手各蛇等旧设计，不得直接沿用为明文。此任务不修改content、runtime、ready或音频。"
+  ],
+  "verification": {
+    "stage": "static-job-and-source-check-only",
+    "script": "/tmp/shanhai-check/validate-humanoid-specs-20261108.py",
+    "checks": ["all-seven-job-json-and-index-parse", "id-filename-and-beast-match", "Medium-budget20-Raw-glb-20000", "prompt-at-most1000", "exact-selected-quotes-present-in-saved-source", "evidence-bytes-sha256-and-ignore-rule", "exact-part-and-instance-counts"],
+    "generationPerformed": false,
+    "visualReviewPerformed": false
+  }
+}

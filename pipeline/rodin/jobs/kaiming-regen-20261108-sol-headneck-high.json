@@ -1,0 +1,9 @@
+{
+  "id": "kaiming-regen-20261108-sol-headneck-high",
+  "beast": "kaiming",
+  "budget": 20,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Preserve the exact approved four-view single human-faced head with one continuous strong animal neck. Human forehead, eyes, nose, cheeks, closed lips and chin; calm alert adult expression, natural warm skin, short dark hair and sparse beard. Natural ochre tiger fur frames the back of the skull and continues down the neck. Keep one coherent anatomical volume from jaw and throat into a broad gently flared soft-tissue root, with readable muscle and fur flow. No visible collar, ring, rolled rim, flat disc, separate pad, sphere, bib, human shoulders, pedestal or base. Exactly one complete head, neck and root, no extra head, feline muzzle, beak, torso, limbs, horns, ornaments, armor, clothing or props.",
+  "images": ["concept/kaiming-regen-20261108-sol-headneck/view_34.png", "concept/kaiming-regen-20261108-sol-headneck/view_side.png", "concept/kaiming-regen-20261108-sol-headneck/view_front.png", "concept/kaiming-regen-20261108-sol-headneck/view_back.png"],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000, "addons": "HighPack" }
+}

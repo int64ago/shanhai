@@ -1,0 +1,19 @@
+{
+  "id": "changyou-regen-20261108-sol-native-four-ear-high",
+  "beast": "changyou",
+  "budget": 20,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Preserve the complete long-armed monkey anatomy in these four actual Medium views. EXACTLY FOUR primate ears TOTAL, one upper and one lower on EACH side, distinct and organically rooted in intact furry temples. Do not add ears. Keep the macaque face, projecting muzzle, dark eyes, long relaxed arms, bent hind legs and single slim tail. TWO complete hands with five distinct fingers each. TWO broad primate feet with EXACTLY FIVE TOES EACH, TEN FOOT TOES TOTAL, including separated grasping big toes. Preserve all digits fully in frame and separated. Both feet rest flat on one ground plane. Refine natural continuous ear roots, ankle joints and fur without seams, holes, detached scraps or connector bands. Natural furry primate torso and sloping shoulders, no exaggerated human muscle definition. Charcoal grey-brown fur, natural pink-brown ears, dark palms and soles. Entire animal in frame. No extra ears, limbs, digits, clothing, accessories, objects, pedestal or base.",
+  "images": [
+    "concept/changyou-regen-20261108-sol-native-four-ear-medium-actual/view_34.png",
+    "concept/changyou-regen-20261108-sol-native-four-ear-medium-actual/view_side.png",
+    "concept/changyou-regen-20261108-sol-native-four-ear-medium-actual/view_front.png",
+    "concept/changyou-regen-20261108-sol-native-four-ear-medium-actual/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

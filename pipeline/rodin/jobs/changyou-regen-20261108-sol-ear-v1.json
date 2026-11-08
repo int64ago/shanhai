@@ -1,0 +1,8 @@
+{
+  "id": "changyou-regen-20261108-sol-ear-v1",
+  "beast": "changyou",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One isolated natural macaque primate external ear, a single small rounded oval pinna. Anatomically clear thick helix rim, antihelix, shallow recessed concha and a small softly folded tragus; a coherent three dimensional organ with a closed soft back surface. Warm grey-brown skin, sparse short grey-brown fur along the outer edge, subdued dark inner recess. Ear roughly twice as tall as its front-to-back thickness. The inner medial edge flows into a short broad tapered soft-tissue attachment root for sinking into fur-covered monkey temples. Natural curved organic skin transition, not a sharp cut disc, not a rolled ring. Exactly one ear, complete in frame, front surface and attachment root both readable. No head, face, eyes, skull, neck, body, second ear, pointed elf tip, leaf shape, decorative ornament, jewelry, pedestal or base.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

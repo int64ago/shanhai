@@ -1,0 +1,12 @@
+{
+  "id": "yayu-regen-20261108-sol-body-v4-medium",
+  "beast": "yayu",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One complete HEADLESS ox-shaped quadruped body, with four complete legs ending in four SINGLE SOLID HORSE HOOVES. Broad deep bovine ribcage, muscular ox shoulders, rounded natural chest and withers, level horizontal back and full bovine haunches. The upper front chest ends in a very short thick rounded cervical root, a closed curved anatomical muscle mass flowing into the shoulders. No head and no long neck. Four separated weight-bearing legs have natural joints and short pasterns. Each foot is one indivisible curved horse hoof wall and one flat sole: NO cleft, split, two toes or cattle hooves. All four soles planted on one level surface in a balanced standing pose, hindquarters raised naturally. One slender attached cattle tail with a small dark tuft. Russet red-ochre short fur, dark brown hoof horn. Entire isolated body and all four feet visible. No horns, face, human torso, wings, extra legs, bib, pointed collar, armor, saddle, ground slab or pedestal.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 18000
+  }
+}

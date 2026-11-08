@@ -1,0 +1,9 @@
+{
+  "id": "changyou-regen-20261108-sol-body-high",
+  "beast": "changyou",
+  "budget": 20,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Preserve the exact anatomically approved four-view complete long-armed monkey body. Natural semi-upright primate with macaque-like head and projecting muzzle, narrow furry torso, sloping shoulders, long relaxed arms reaching above ankle height, shorter bent hind legs, both feet flat on the same ground plane. Keep both full hands and both full feet: five distinct fingers with opposed thumbs and five readable toes with grasping big toes. Hands and feet stay separated from one another, limbs, tail and torso. Dense charcoal grey-brown fur and dark muzzle, palms and soles. EARLESS head with smooth short-furred temples, no external ears or circular ear-colored marks: four independent primate ears are assembled later. Single slim monkey tail clear of hands and feet. Preserve organic joint transitions. No missing limbs, cropped fingers or toes, human bodybuilder proportions, clothing, objects, pedestal or base.",
+  "images": ["concept/changyou-regen-20261108-sol-body/view_34.png", "concept/changyou-regen-20261108-sol-body/view_side.png", "concept/changyou-regen-20261108-sol-body/view_front.png", "concept/changyou-regen-20261108-sol-body/view_back.png"],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000, "addons": "HighPack" }
+}

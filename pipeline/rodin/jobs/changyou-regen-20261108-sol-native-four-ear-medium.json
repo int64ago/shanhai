@@ -1,0 +1,18 @@
+{
+  "id": "changyou-regen-20261108-sol-native-four-ear-medium",
+  "beast": "changyou",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "Rebuild ONE complete natural long-armed monkey from the four reference views. EXACTLY FOUR primate ears TOTAL: two on each side, one upper and one lower, separated and clearly readable. The reference already has all four ears; add none. Reconstruct continuous organic ear roots into intact furry temples, without cut edges, flat tissue scraps, holes or floating pieces. Preserve macaque face and muzzle, sloping shoulders, long arms, bent hind legs and one slim tail. Keep primate anatomy with a soft narrow furry torso, not human bodybuilder muscles. TWO complete hands with five fingers each. TWO broad feet with EXACTLY FIVE TOES EACH, TEN FOOT TOES TOTAL, including grasping big toes. Both soles rest on one ground plane. Rebuild smooth natural ankle joints; remove the reference's ankle connector bands and seams. Keep limbs, digits and tail separate, fully in frame. Charcoal grey-brown fur, dark eyes, natural skin ears. No extra ears, digits, limbs, clothing, objects, pedestal or base.",
+  "images": [
+    "concept/changyou-regen-20261108-sol-native-four-ear-medium/view_34.png",
+    "concept/changyou-regen-20261108-sol-native-four-ear-medium/view_side.png",
+    "concept/changyou-regen-20261108-sol-native-four-ear-medium/view_front.png",
+    "concept/changyou-regen-20261108-sol-native-four-ear-medium/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

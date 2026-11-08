@@ -1,0 +1,12 @@
+{
+  "id": "longzhi-production-20261108-fox-tail-medium",
+  "beast": "longzhi",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE isolated FOX TAIL, elongated and full in three dimensions, about 6 times longer than its maximum fur width. Narrow rounded muscular basal root expands gradually into a fluffy but volumetric spindle and tapers smoothly to a fine cream-white tip. Red-brown and warm cream fur, fine directional strands follow the long axis. Gentle shallow curve, no coil. Round to oval cross-sections with substantial thickness visible from front, side and rear; no flattened feather, ribbon, leaf, slab or split branches. Entire tail with clear root and tip visible. One continuous organic part only, no torso, head, legs, second tail, wings, mounting collar, ring, pedestal or props. Fur silhouette should stay readable when several independently animated copies are spaced apart.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "xingtian-production-20261108-shield-medium",
+  "beast": "xingtian",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE isolated plain ancient HAND SHIELD, modest oval convex wooden board about 1.5 times taller than wide, sturdy rounded edge and worn warm brown wood surface. Back has ONE simple solid handgrip with a clear finger-sized opening, firmly joined to the board; grip is practical and visible from an oblique rear view. Entire shield and handle visible. Restrained plausible craft, no asserted exact historical date. No person, arm, hand, axe, sword, spikes, fantasy crest, rune, glowing effect, armor set, stand, pedestal or scene. One connected prop only, suitable for later controlled hand attachment; no decorative game weapon styling.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

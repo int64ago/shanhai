@@ -1,0 +1,8 @@
+{
+  "id": "kuafu-production-20261108-snake-medium",
+  "beast": "kuafu",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One isolated complete slender YELLOW SNAKE, exactly one head, one continuous body and one tapering tail tip. Total length about 18 times maximum body diameter. Almost straight relaxed body with a very shallow open S curve; no loops, crossings or self-contact. Small natural snake head slightly wider than neck, two dark eyes, closed mouth, no exposed tongue or fangs. Fine muted golden-yellow scales, lighter belly, smooth continuous skin and gradual taper over the last third. Whole snake from snout to tail tip fully visible. No limbs, feet, horns, wings, multiple heads, second snake, human body, jewelry, stand, ground slab or scenery.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

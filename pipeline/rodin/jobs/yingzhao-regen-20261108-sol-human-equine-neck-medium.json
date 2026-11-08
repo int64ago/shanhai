@@ -1,0 +1,12 @@
+{
+  "id": "yingzhao-regen-20261108-sol-human-equine-neck-medium",
+  "beast": "yingzhao",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE adult HUMAN FACE and an entire curved muscular EQUINE NECK as one continuous organic part. Human forehead, eyes, projecting human nose bridge, closed human lips, cheeks and chin, two human ears, short swept-back hair. A proportionate human skull joins directly into a long strong horse neck: an arched rear crest, rounded side muscles and a convex throat, widening smoothly down to a broad oval lower neck. Neck length about two head heights; lower neck about one and a half head widths. Continuous rounded muscle volume from nape and jaw to neck root, with natural skin blending into short ochre fur and black tiger stripes. A restrained dark mane follows the rear crest. Entire head and neck visible. No animal muzzle, second head, human chest, shoulders, bust, clothing, mounting plate or pedestal.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 18000
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "xingxing-production-20261108-v1",
+  "beast": "xingxing",
+  "budget": 20,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE complete natural monkey-like beast, Xingxing from Shanhaijing. Slender grey-brown furry body, small projecting primate muzzle, dark eyes, sloping shoulders and natural pelvis. EXACTLY TWO native rounded WHITE FURRY EARS, one on each side of the head, organically rooted in the temples. Relaxed semi-upright stance, long arms with bent elbows, shorter bent hind legs. TWO complete hands, EXACTLY FIVE separate fingers each including an opposed thumb. TWO broad primate feet, EXACTLY FIVE separate toes each including a grasping big toe. Both soles flat on one ground plane; hands hang clear of legs and ground. Natural continuous shoulders, elbows, wrists, hips, knees and ankles. Arms, hands, feet and all digits separated and fully visible. Dark grey face, palms and soles. Tailless rump. Whole animal in frame. No extra ears, limbs or digits, human bodybuilder muscles, armor, clothes, weapons, jewelry, pedestal, base or scenery.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}
