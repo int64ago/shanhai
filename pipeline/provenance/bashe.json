@@ -1,0 +1,169 @@
+{
+  "beast": "bashe",
+  "date": "2026-11-13",
+  "status": "parent-reviewed-native-high-runtime",
+  "source": [
+    {
+      "book": "山海经·海内南经",
+      "text": "巴蛇食象，三歲而出其骨，君子服之，無心腹之疾。其為蛇青黃赤黑。一曰黑蛇青首，在犀牛西。"
+    }
+  ],
+  "inferences": [
+    {
+      "item": "本作选一曰黑蛇青首的另一说；青黄赤黑另记于正文，四种颜色不混作本作配色。",
+      "basis": "同一条先记青黃赤黑，又以一曰引出黑蛇青首。本作选后一说，并保留两种记述及其区别。"
+    },
+    {
+      "item": "长蛇体形、低宽头部、渐细颈部与细尖尾，以及头身长短比例，均为造型推断。",
+      "basis": "经文说蛇而能食象，未明记巨蟒种类、长度、头颈比例或鳞片细节；据普通蛇形补足无肢长躯。"
+    },
+    {
+      "item": "炭黑体鳞、灰青头鳞与浅青腹鳞的具体色阶、鳞纹和分区为艺术设色。",
+      "basis": "黑身青首有另一说明文依据；灰青色调、浅色腹部与鳞片结构是本作补出的细节。"
+    },
+    {
+      "item": "缓缓蜿行与微微昂首为动作演绎；食象、三年出骨及服之的说法保留为古籍记述。",
+      "basis": "本条未记吞食的步骤或蜿行姿态，也未建立人心不足蛇吞象这一俗语的历史源流。"
+    }
+  ],
+  "transactions": [
+    {
+      "time": "2026-11-08T12:42:30.075Z",
+      "beast": "bashe",
+      "job": "bashe-production-20261108-v1",
+      "hash": "17511261834fe607",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "2a2a15be-6f37-47c0-94f5-5b5901b6e7ed",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-08T12:55:25.234Z",
+      "beast": "bashe",
+      "job": "bashe-production-20261108-v2",
+      "hash": "1c267711fa8ab522",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "c7c2e67f-b140-47ba-bb1f-737411b91601",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-13T12:40:38.221Z",
+      "beast": "bashe",
+      "job": "bashe-production-20261108-v2-high",
+      "hash": "1d2e53fba6572a1e",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "7ca14d0b-c355-4670-8843-36cad3316dbd",
+      "consumed": 1
+    }
+  ],
+  "totalConsumed": 2,
+  "highSource": {
+    "path": "raw/bashe-production-20261108-v2-high/base_high_pbr.glb",
+    "bytes": 21990676,
+    "sha256": "a34b5e9dd91ba14e12693bb948d6b00d9f2e654a0e9a49473bcbeb995f0263d4",
+    "originalTriangles": 50000,
+    "originalVertices": 31541,
+    "uuid": "7ca14d0b-c355-4670-8843-36cad3316dbd",
+    "textureModeAddon": false,
+    "immutable": true
+  },
+  "highRequest": {
+    "path": "pipeline/rodin/jobs/bashe-production-20261108-v2-high.json",
+    "tier": "Gen-2.5-Extreme-High",
+    "images": [
+      {
+        "path": "concept/bashe/production-20261108-v2/view_34.png",
+        "bytes": 1273410,
+        "sha256": "2cc0e3857460972cc6c5da5e8e175d87e39becc7c6b112b7fe343bd3f62d5dfb"
+      },
+      {
+        "path": "concept/bashe/production-20261108-v2/view_side.png",
+        "bytes": 1180187,
+        "sha256": "15ad9bf6c25ba370d7aa2ea5e01ad66d84acdba5461f4e1d255a9c7a0b89b268"
+      },
+      {
+        "path": "concept/bashe/production-20261108-v2/view_front.png",
+        "bytes": 1912387,
+        "sha256": "3553a7edca9999f26f246c5b6d897f91d6459853a1d5812e78a9ffe59e33d3f4"
+      },
+      {
+        "path": "concept/bashe/production-20261108-v2/view_back.png",
+        "bytes": 1942707,
+        "sha256": "5a7e23b2f73aacb4819df9c657bef838b968c9858967c01b166d78ddd543e6c9"
+      }
+    ]
+  },
+  "runtime": {
+    "path": "public/models/bashe/body.glb",
+    "bytes": 1066380,
+    "sha256": "557cecf91419287504e685debfa9ea966a776c361a2d69101e7d06fbd4040d10",
+    "triangles": 50000,
+    "clips": [
+      "idle",
+      "walk",
+      "special"
+    ],
+    "bones": 25,
+    "geometry": "Native High anatomy preserved; no digits, limbs or donor parts added",
+    "compression": "Meshopt medium +2048 WebP, resample false; animation floats retained to preserve loop endpoints; simplify/flatten/join/instance/palette false"
+  },
+  "changes": [
+    "Positive uniform orientation: source head is minimum BlenderY, unlike Medium reference orientation",
+    "Measured axial centerline;24 deforming axial bones+root; ground fit through bone poses only",
+    "Head-only UV pigment correction fades7.5–15% of length; native dark eye/nostril details, UVs, normals and body texture retained",
+    "Idle4.8s/walk3.2s/special4.8s; in-place horizontal wave and restrained anterior rise"
+  ],
+  "framing": {
+    "rootYawDegrees": 50,
+    "rootScale": [1, 1, 1],
+    "rootPosition": [0, 0, 0],
+    "cameraTargetY": 0.2,
+    "baseFov": 40,
+    "portraitFovCap": 75,
+    "filmOffset": "width>=600: aspect>1.3 ? -9 : -3.5; phone:0",
+    "reviewedDefaultViewports": [[1440, 900], [800, 1000], [390, 844]],
+    "otherBeastCameraRestoration": "raw/_build/continuation-20261113/bashe-camera-reset.json; passed"
+  },
+  "actualAppQA": {
+    "path": "raw/_build/bashe-app-review-20261113-public-camera-b/app-qa.json",
+    "bytes": 61078,
+    "sha256": "b0f686596db86e65b0a73f9c41972e26f456ed3d76fb25b0ba43834fbbfc15e2"
+  },
+  "scripts": [
+    {
+      "path": "pipeline/blender/rig_bashe_native.py",
+      "bytes": 22667,
+      "sha256": "034f9892402a6b28be09c168acd070c03c47ff2259b07a9fc7911bce24a5e0c0"
+    },
+    {
+      "path": "scripts/qa-bashe.mjs",
+      "bytes": 12341,
+      "sha256": "6bee0b0b78237c9df6884838c4cb1d24945c67d83b3036dcc76abc2eeeb6c8e7"
+    },
+    {
+      "path": "scripts/qa-bashe-app.mjs",
+      "bytes": 14417,
+      "sha256": "d78d4bc83a8fdbb6f71c6094dd6eac09536725112a96ce5c2e122ee0a8a45b82"
+    },
+    {
+      "path": "src/beasts/bashe/Bashe.tsx",
+      "bytes": 3815,
+      "sha256": "14667e6d60fd28b3cca28d36ac230b3fa5c26a4b28f762ecf3cfedafd6ce1d2f"
+    },
+    {
+      "path": "src/scene/CameraRig.tsx",
+      "bytes": 1283,
+      "sha256": "8ab67682790a9aa2ee039d2b7f6c3b04eda1d208cf66fe8b9f4e53f97c299b8a"
+    }
+  ],
+  "narration": {
+    "provenance": "pipeline/provenance/source-narration-20261113.json",
+    "changedByThisModelRelease": false
+  },
+  "acceptance": "Parent reviewed source anatomy, actual ink poses, real Stage images and app QA; readiness is independent of download or numerical success.",
+  "limitations": [
+    "In-place slither has no world translation or physical friction model",
+    "A few millimetres of surface clearance and small belly gaps remain; no physical contact simulation",
+    "Existing ink ramp suppresses some dark scale detail"
+  ],
+  "deployment": "Pending separate main push, exact-SHA CI/deploy and production verification; not claimed by local acceptance."
+}

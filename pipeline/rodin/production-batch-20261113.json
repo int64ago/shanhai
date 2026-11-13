@@ -34,9 +34,9 @@
         "bytes": 21990676,
         "sha256": "a34b5e9dd91ba14e12693bb948d6b00d9f2e654a0e9a49473bcbeb995f0263d4"
       },
-      "disposition": "candidate-under-actual-app-review",
-      "reason": "Offline High rig reviewed; actual Stage/lifecycle/transition evidence and final parent acceptance pending.",
-      "evidence": "raw/_build/bashe-high-candidate-20261113-d/rig-review.json"
+      "disposition": "parent-accepted-after-actual-app-review",
+      "reason": "Native High anatomy, compressed axial animation and actual Stage poses reviewed; transitions, complete remount/disposal checks and unobstructed desktop/tablet/phone framing passed. Separate release/deployment verification follows.",
+      "evidence": "pipeline/provenance/bashe.json"
     },
     {
       "time": "2026-11-13T12:44:33.782Z",
@@ -165,5 +165,14 @@
     "consumed": 0,
     "reason": "Explicit authorization required for this additional paid request; do not retry through another route."
   },
-  "limits": "Generation/download and numeric checks do not establish anatomy or production readiness. Seven Mediums rejected. Zhuyan accepted after actual app and parent image review; Bashe remains pending final framing review. Separate release/deployment verification is required for each accepted model. Raw original downloads retained unchanged."
+  "additionalNonTransactions": [
+    {
+      "job": "kuafu-production-20261108-body-medium",
+      "status": "automatic-approval-denied-before-execution",
+      "submitted": false,
+      "consumed": 0,
+      "reason": "Automatic approval requires explicit authorization for this additional paid Kuafu request. Do not retry without fresh authorization."
+    }
+  ],
+  "limits": "Generation/download and numeric checks do not establish anatomy or production readiness. Seven Mediums rejected. Zhuyan and Bashe accepted after actual app and parent image review, including final Bashe desktop/tablet/phone framing. Separate release/deployment verification is required for each accepted model. Raw original downloads retained unchanged."
 }

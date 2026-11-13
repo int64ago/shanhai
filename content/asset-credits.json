@@ -2,6 +2,15 @@
   "_note": "第三方素材授权登记；上线前统一核对。音频素材到位后同样登记在这里。",
   "assets": [
     {
+      "path": "public/models/bashe/body.glb",
+      "source": "Hyper3D Rodin两阶段制作：Medium初版及重试各0.5积分，矫正四视图后Gen-2.5-Extreme-High/HighPack 1积分，共2积分，未加extreme-high贴图。原始High完整50000三角面，蛇首、长躯与渐细单尾均为原生；24段轴骨加root共25骨，离线按纵向腹面包络贴地，idle/walk/special。头部UV局部青色校正保留眼鼻深色、明度与纹理，身体不重涂。Meshopt medium/WebP2048，resample/simplify/flatten/join/instance/palette均false，保留动画浮点循环端点。实际SHA256、任务UUID、三态变形、资源释放和响应式构图验收见pipeline/provenance/bashe.json。",
+      "sourceComponents": [
+        {"path": "raw/bashe-production-20261108-v2-high/base_high_pbr.glb", "job": "bashe-production-20261108-v2-high", "tier": "Gen-2.5-Extreme-High", "uuid": "7ca14d0b-c355-4670-8843-36cad3316dbd", "sha256": "a34b5e9dd91ba14e12693bb948d6b00d9f2e654a0e9a49473bcbeb995f0263d4"}
+      ],
+      "author": "Hyper3D Rodin AI生成；项目离线轴骨绑定、动画与局部设色",
+      "license": "沿用项目既有Hyper3D Rodin输出条款"
+    },
+    {
       "path": "public/models/zhuyan/body.glb",
       "source": "Hyper3D Rodin 两阶段生成；Medium 0.5积分，矫正四视图后 Gen-2.5-Extreme-High / HighPack 1积分，共1.5积分，未加 extreme-high 贴图。原始High 50000三角面完整保留，双耳、双手双足及各五指趾均为原生解剖；正比例归一与左整足约1.35mm接地修正，17骨 idle/walk/special，完整手部与头颏刚性保护，圆周支撑足逆向烘焙。Meshopt/WebP2048，不自动减面、扁平化、合并或实例化。原始SHA256、任务UUID、实际主场景落足/切换/资源释放与视觉证据见 pipeline/provenance/zhuyan.json。",
       "sourceComponents": [

@@ -27,9 +27,10 @@
     }
   ],
   "production": {
-    "status": "in-progress",
-    "modelReady": false,
-    "reason": "已核对古籍原文与设计推断，并生成对应评书；三维造型、绑定与视觉验收尚未完成。",
+    "status": "ready",
+    "modelReady": true,
+    "reason": "已核对原文与设计推断；原生High蛇体保留50000三角面，25骨静、行、昂首三态，主场景变形、循环、资源释放及桌面/平板/手机完整构图经视觉验收。蜿行为原地行波，未模拟世界位移或摩擦。",
+    "modelProvenance": "pipeline/provenance/bashe.json",
     "narrationProvenance": "pipeline/provenance/source-narration-20261113.json"
   },
   "editionNotes": [
