@@ -2,6 +2,12 @@
   "_note": "第三方素材授权登记；上线前统一核对。音频素材到位后同样登记在这里。",
   "assets": [
     {
+      "path": "public/audio/narration/{xingxing,lu_fish,zhuyan,shuhu,bashe,lingyu,kui}.mp3",
+      "source": "2026-11-13 按核源修正后的 src/app/beasts.ts 故事重新生成；pipeline/tts/narrate.ts，CosyVoice v2 / longsanshu，MP3 编码 22050 Hz。逐条原文与设计推断保存在 content/beasts/<id>.json；文本、音频哈希与浏览器实际解码播放停止证据见 pipeline/provenance/source-narration-20261113.json。语音修订不表示三维模型已完成。",
+      "author": "项目原创考据解说词；百炼龙三叔合成",
+      "license": "沿用项目既有百炼 CosyVoice 合成输出条款"
+    },
+    {
       "path": "public/audio/narration/{jimeng,jiaochong,kuafu,qiangliang,tianwu,longzhi,xixiyu,xingtian,yinglong,zhulong,leishen,xiangliu}.mp3",
       "source": "2026-11-08 按核源修正后的 src/app/beasts.ts 故事重新生成；pipeline/tts/narrate.ts，CosyVoice v2 / longsanshu，MP3 22050 Hz。逐条原文与推断分别保存在 content/beasts/<id>.json；文本及音频哈希、浏览器实际解码播放与停止证据见 pipeline/provenance/source-narration-20261108.json。语音修订不表示对应三维模型已完成。",
       "author": "项目原创考据解说词；百炼龙三叔合成",
@@ -80,7 +86,7 @@
     },
     {
       "path": "public/audio/narration/changyou.mp3",
-      "source": "48bb77de研究稿的cosyvoice-v2 / longsanshu评书，采用南山经南次二经原文与设计分栏，不含听觉极灵、司水等无据神职。真实浏览器解码44.617125秒、22050Hz单声道并验证播放。",
+      "source": "48bb77de研究稿的cosyvoice-v2 / longsanshu评书，采用南山经南次二经原文与设计分栏，不含听觉极灵、司水等无据神职。真实浏览器解码时长44.617125秒，MP3编码22050Hz单声道；解码采样率随AudioContext输出设备，并验证实际播放。",
       "author": "项目撰稿与CosyVoice合成",
       "license": "沿用项目既有CosyVoice合成输出条款"
     },

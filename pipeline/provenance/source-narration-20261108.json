@@ -42,7 +42,7 @@
       "Every rendered source paragraph matches content JSON",
       "Actual story caption matches synthesized story text",
       "Served MP3 bytes match local audio",
-      "Real browser decode with audible RMS and 22050Hz sample rate",
+      "Real browser decode and audible RMS; encoded MP3 is 22050Hz, decoded buffer matches the AudioContext output rate",
       "Actual UI play and stop for each entry",
       "390px and 800px controls remain reachable with no horizontal overflow"
     ],

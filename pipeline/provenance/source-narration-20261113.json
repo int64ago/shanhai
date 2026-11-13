@@ -1,0 +1,549 @@
+{
+  "date": "2026-11-13",
+  "status": "source-text-and-matching-narration-verified-models-unready",
+  "scope": "Seven audited classical-source passages, separated design inference and matching replacement narration. No new model or readiness change.",
+  "sourceVerification": "Selected continuous classical quotes and chapter attribution are recorded in each content file with edition URLs. Counts, colors, proportions and movement added for the design remain in inferred. Commentary and alternative accounts are identified separately.",
+  "corrections": {
+    "xingxing": "First Nanshan sequence; white ears and 伏行人走 retained, tail choice inferred; 食之善走 does not measure animal speed.",
+    "lu_fish": "First Nanshan sequence, not South Third; short-haired bovine design distinguished from scaled snake tail; winter dormancy is commentary, no summer-thunder revival claim.",
+    "zhuyan": "Continuous quote; white head and red feet; hands remain dark grey, not red.",
+    "shuhu": "好舉人 is base text and 喜抱舉人 commentary; no certain temperament claim.",
+    "bashe": "Full 青黃赤黑 and 一曰黑蛇青首 accounts retained; design explicitly selects latter; no asserted idiom origin.",
+    "lingyu": "Human face, hands AND feet, fish body; exact counts and limb placements inferred; no asserted mermaid ancestry.",
+    "kui": "Complete drum context retained; five-hundred-li range belongs to the hide drum, not the live beast call."
+  },
+  "generation": {
+    "command": "node --import tsx pipeline/tts/narrate.ts --force xingxing lu_fish zhuyan shuhu bashe lingyu kui",
+    "provider": "Alibaba Bailian",
+    "model": "cosyvoice-v2",
+    "voice": "longsanshu",
+    "format": "mp3",
+    "encodedSampleRate": 22050,
+    "volume": 65,
+    "rate": 0.94,
+    "pitch": 0.96,
+    "completed": 7,
+    "previousAudioPreservedBeforeOverwrite": true,
+    "previousAudioRecovery": "Earlier /tmp backup was cleaned after the date advanced. All seven original byte identities were independently recovered and verified from the local Git LFS objects referenced by commit3190a34; new copies retained at /tmp/shanhai-check/remaining-seven-original-audio-recovered-20261113."
+  },
+  "browserQA": {
+    "command": "node --import tsx scripts/qa-source-narration.mjs http://localhost:5215 /tmp/shanhai-check/remaining-seven-source-audio-20261113 xingxing lu_fish zhuyan shuhu bashe lingyu kui",
+    "passed": true,
+    "errors": [],
+    "evidenceDirectory": "/tmp/shanhai-check/remaining-seven-source-audio-20261113",
+    "checks": [
+      "Actual source paragraphs and story captions match current content",
+      "Served audio bytes equal local MP3",
+      "Browser decode, nonzero audible RMS, actual play and stop",
+      "Encoded rate 22050Hz; decoded buffer matches AudioContext device output rate",
+      "390px and 800px controls reachable without horizontal page overflow"
+    ],
+    "glyphEvidence": [
+      {
+        "glyph": "鯥",
+        "fonts": [
+          {
+            "familyName": "Songti SC",
+            "postScriptName": "STSongti-SC-Regular",
+            "isCustomFont": false,
+            "glyphCount": 1
+          }
+        ]
+      },
+      {
+        "glyph": "魼",
+        "fonts": [
+          {
+            "familyName": "Songti SC",
+            "postScriptName": "STSongti-SC-Regular",
+            "isCustomFont": false,
+            "glyphCount": 1
+          }
+        ]
+      }
+    ],
+    "limits": [
+      "No human pronunciation/listening acceptance is claimed from RMS alone.",
+      "Existing 390px CSS hides design notes; source remains visible. At 800px the card partly overlaps the existing fallback preview.",
+      "All seven beasts remain unready and show the existing fallback; these screenshots do not establish accepted 3D models."
+    ]
+  },
+  "modelReadiness": {
+    "ready": 43,
+    "catalog": 62,
+    "changedByThisRelease": false
+  },
+  "releaseStateAtCommit": "Local verification complete. Exact-SHA CI, deployment and production verification follow push.",
+  "entries": [
+    {
+      "id": "xingxing",
+      "name": "狌狌",
+      "content": {
+        "path": "content/beasts/xingxing.json",
+        "sha256": "eefdf5f840f5cbf92df5915bdc2751b6a26649b638714218713030c600b380e5",
+        "source": [
+          {
+            "book": "山海经·南山经·南山经之首",
+            "text": "有獸焉，其狀如禺而白耳，伏行人走，其名曰狌狌，食之善走。"
+          }
+        ],
+        "editionNotes": [
+          {
+            "url": "https://zh.wikisource.org/wiki/山海經/南山經",
+            "note": "招摇山条属南山經之首。所引从有獸焉起取连续正文，移除旧卡将招摇山名与兽句直接拼接的写法；页面夹注不并入source。"
+          },
+          {
+            "url": "https://zh.wikisource.org/wiki/淮南子/氾論訓",
+            "note": "猩猩知往而不知來属于外部典籍，不能充作本条南山经明文。本作解说删去未归属来源的通晓往事。"
+          }
+        ]
+      },
+      "storySha256": "9c661affb3a6a6a47eaec156e0e4f58ab316cbba42cca199da6ed3307a171cef",
+      "audio": {
+        "path": "public/audio/narration/xingxing.mp3",
+        "bytes": 955963,
+        "sha256": "4a8b6ae858aa7881c540656e41f0a63e6f0ca3f3e67e928d7f2b1eca035b4e1f",
+        "seconds": 59.742020833333335,
+        "decodedSampleRate": 48000,
+        "contextSampleRate": 48000,
+        "channels": 1,
+        "rms": 0.10466084258210154,
+        "playing": true,
+        "encodedSampleRate": 22050
+      },
+      "previousAudio": {
+        "id": "xingxing",
+        "bytes": 302693,
+        "sha256": "a5bc653d4b627be9b629f0e05ac7095219d0f0a683d0130b0baafd1ab0e12080"
+      },
+      "actualStopped": true,
+      "layouts": [
+        {
+          "width": 390,
+          "button": {
+            "x": 121.953125,
+            "y": 129.5625,
+            "width": 26,
+            "height": 43.90625
+          }
+        },
+        {
+          "width": 800,
+          "button": {
+            "x": 335.21875,
+            "y": 169.09375,
+            "width": 26,
+            "height": 43.90625
+          }
+        }
+      ],
+      "parentVisualReview": {
+        "sourceAndDesignCards": true,
+        "screenshot": "/tmp/shanhai-check/remaining-seven-source-audio-20261113/xingxing-390.png",
+        "screenshotSha256": "273f751b36b986ea579b1dcbaace319ad34992d7db3ff8db79e9b0f50d87800e",
+        "modelAcceptance": false
+      },
+      "modelReady": false
+    },
+    {
+      "id": "lu_fish",
+      "name": "鯥",
+      "content": {
+        "path": "content/beasts/lu_fish.json",
+        "sha256": "5779729b34765d9c0ba744088402c92df8d299a9dbf409e5f77aa065f9fcd6ea",
+        "source": [
+          {
+            "book": "山海经·南山经·南山经之首",
+            "text": "有魚焉，其狀如牛，陵居，蛇尾有翼，其羽在魼下，其音如留牛，其名曰鯥，冬死而夏生，食之無腫疾。"
+          }
+        ],
+        "editionNotes": [
+          {
+            "url": "https://zh.wikisource.org/wiki/山海經/南山經",
+            "note": "柢山条位于南山經之首，不属南次三经。source取连续鱼句，旧注与正文分开。魼字页面注亦作胁；保留所选正文魼，不把注释或释义拼入引文。"
+          },
+          {
+            "url": "https://zh.wikisource.org/zh-hans/山海經/南山經",
+            "note": "简体页面可见冬死而夏生旁的此亦蛰类也说明；冬蛰夏苏是注释解释，遇夏雷复活则没有此条依据。"
+          }
+        ]
+      },
+      "storySha256": "6441d0a1a3cee8f19de8c02417bd3ea9c8aa57b49991caa906027d58b83223b9",
+      "audio": {
+        "path": "public/audio/narration/lu_fish.mp3",
+        "bytes": 1045406,
+        "sha256": "cefe7da020526c68ea7ee42555b6516c5835955606cdf407887f64572a00edbd",
+        "seconds": 65.33222916666666,
+        "decodedSampleRate": 48000,
+        "contextSampleRate": 48000,
+        "channels": 1,
+        "rms": 0.09988449289612701,
+        "playing": true,
+        "encodedSampleRate": 22050
+      },
+      "previousAudio": {
+        "id": "lu_fish",
+        "bytes": 259643,
+        "sha256": "bc30f03d638397b7588e1c7c06784abea71a90981815d348a5d272dd00d76c22"
+      },
+      "actualStopped": true,
+      "layouts": [
+        {
+          "width": 390,
+          "button": {
+            "x": 133.984375,
+            "y": 100.28125,
+            "width": 26,
+            "height": 43.90625
+          }
+        },
+        {
+          "width": 800,
+          "button": {
+            "x": 359.046875,
+            "y": 130.046875,
+            "width": 26,
+            "height": 43.90625
+          }
+        }
+      ],
+      "parentVisualReview": {
+        "sourceAndDesignCards": true,
+        "screenshot": "/tmp/shanhai-check/remaining-seven-source-audio-20261113/lu_fish-390.png",
+        "screenshotSha256": "f47126dea24c238680fc2b4376758b87c1090df274a8cfc953325cacf6b8342a",
+        "modelAcceptance": false
+      },
+      "modelReady": false
+    },
+    {
+      "id": "zhuyan",
+      "name": "朱厌",
+      "content": {
+        "path": "content/beasts/zhuyan.json",
+        "sha256": "475e454016d188295c29507782ad27b38cdc1ce3bd92699047b20fc964ca6e4d",
+        "source": [
+          {
+            "book": "山海经·西山经·西次二经",
+            "text": "有獸焉，其狀如猿，而白首赤足，名曰朱厭，見則大兵。"
+          }
+        ],
+        "editionNotes": [
+          {
+            "url": "https://zh.wikisource.org/wiki/山海經/西山經",
+            "note": "小次山在西次二經。source选连续有獸焉句，不把山名跨越白玉赤铜文字拼到兽句。页面见则大兵旁列见则有兵起焉、见则为兵等异文，保留所选正文而不拼写异文。"
+          }
+        ]
+      },
+      "storySha256": "3cc152b4e079a5a88e9e0bc9a7f513df0240720b7f0798154e6d1365df3b49af",
+      "audio": {
+        "path": "public/audio/narration/zhuyan.mp3",
+        "bytes": 974771,
+        "sha256": "6178673883cc92c2e404a5880462fe73d41efb9fdbd824e422bb4a702071b4e1",
+        "seconds": 60.917541666666665,
+        "decodedSampleRate": 48000,
+        "contextSampleRate": 48000,
+        "channels": 1,
+        "rms": 0.10104970475444305,
+        "playing": true,
+        "encodedSampleRate": 22050
+      },
+      "previousAudio": {
+        "id": "zhuyan",
+        "bytes": 261733,
+        "sha256": "e213a9b466463d1c1249cc59a38a491c4bcc4ddfbd66b3935a397273f51b8d9c"
+      },
+      "actualStopped": true,
+      "layouts": [
+        {
+          "width": 390,
+          "button": {
+            "x": 118.734375,
+            "y": 129.5625,
+            "width": 26,
+            "height": 43.90625
+          }
+        },
+        {
+          "width": 800,
+          "button": {
+            "x": 354.75,
+            "y": 169.09375,
+            "width": 26,
+            "height": 43.90625
+          }
+        }
+      ],
+      "parentVisualReview": {
+        "sourceAndDesignCards": true,
+        "screenshot": "/tmp/shanhai-check/remaining-seven-source-audio-20261113/zhuyan-390.png",
+        "screenshotSha256": "4e4f1268df01308f9649b1298273e3a2c7de4cb3af0a8b0ad81746134180f119",
+        "modelAcceptance": false
+      },
+      "modelReady": false
+    },
+    {
+      "id": "shuhu",
+      "name": "孰湖",
+      "content": {
+        "path": "content/beasts/shuhu.json",
+        "sha256": "6626f30432e66a0a37598d6e548b80cb20fb1537dcde78f3701dec5652fec55b",
+        "source": [
+          {
+            "book": "山海经·西山经·西次四经",
+            "text": "有獸焉，其狀馬身而鳥翼，人面蛇尾，是好舉人，名曰孰湖。"
+          }
+        ],
+        "editionNotes": [
+          {
+            "url": "https://zh.wikisource.org/wiki/山海經/西山經",
+            "note": "崦嵫山条在西次四經。source仅取有獸焉起的连续正文，喜抱舉人是旁注，不并入引文；山名与兽句之间另有内容，不能直接拼接成原文。"
+          }
+        ]
+      },
+      "storySha256": "dd95257f65e52b68281b402f283fceea700a7dae021f061d8df9936f0ae3075a",
+      "audio": {
+        "path": "public/audio/narration/shuhu.mp3",
+        "bytes": 1052930,
+        "sha256": "1ec5c423223e49a4bf7a398e1c0f31a7cfbb7c955e0d1038d7ba919c5340c0a4",
+        "seconds": 65.8024375,
+        "decodedSampleRate": 48000,
+        "contextSampleRate": 48000,
+        "channels": 1,
+        "rms": 0.1010871386630992,
+        "playing": true,
+        "encodedSampleRate": 22050
+      },
+      "previousAudio": {
+        "id": "shuhu",
+        "bytes": 270092,
+        "sha256": "41e951c0e5d305c345899847c1d6320b6bd11ed07358522bcd610c4b6b7f4243"
+      },
+      "actualStopped": true,
+      "layouts": [
+        {
+          "width": 390,
+          "button": {
+            "x": 115.9375,
+            "y": 129.5625,
+            "width": 26,
+            "height": 43.90625
+          }
+        },
+        {
+          "width": 800,
+          "button": {
+            "x": 352.203125,
+            "y": 169.09375,
+            "width": 26,
+            "height": 43.90625
+          }
+        }
+      ],
+      "parentVisualReview": {
+        "sourceAndDesignCards": true,
+        "screenshot": "/tmp/shanhai-check/remaining-seven-source-audio-20261113/shuhu-390.png",
+        "screenshotSha256": "79abe217b8817a164999f29aaef3399b27bb59e6836922b07582e0a80cd122ac",
+        "modelAcceptance": false
+      },
+      "modelReady": false
+    },
+    {
+      "id": "bashe",
+      "name": "巴蛇",
+      "content": {
+        "path": "content/beasts/bashe.json",
+        "sha256": "38ceb21e80250192d55346ba3f135a6169bfb6f1a60b19f5b7d024a6d8747627",
+        "source": [
+          {
+            "book": "山海经·海内南经",
+            "text": "巴蛇食象，三歲而出其骨，君子服之，無心腹之疾。其為蛇青黃赤黑。一曰黑蛇青首，在犀牛西。"
+          }
+        ],
+        "editionNotes": [
+          {
+            "url": "https://zh.wikisource.org/wiki/山海經/海內南經",
+            "note": "完整保留青黃赤黑与一曰黑蛇青首两种形貌记述。此处一曰是正文引出的另一说，不省略其提示语而拼成混色描述；本作采用黑身青首。俗语起源的确定断言已移除。"
+          }
+        ]
+      },
+      "storySha256": "df8ce4eddee0b317d5e41fe1aa801a28112e5acbb51e97929b974daa867bd378",
+      "audio": {
+        "path": "public/audio/narration/bashe.mp3",
+        "bytes": 942588,
+        "sha256": "71dfed40aa20520f06075efe0f0cb504bdfbed1a2cee5ca542cd07502dccf060",
+        "seconds": 58.906104166666665,
+        "decodedSampleRate": 48000,
+        "contextSampleRate": 48000,
+        "channels": 1,
+        "rms": 0.09733111182914206,
+        "playing": true,
+        "encodedSampleRate": 22050
+      },
+      "previousAudio": {
+        "id": "bashe",
+        "bytes": 258389,
+        "sha256": "7aa2742a79154848347f4d4d4a1e3dafd8216ea60d6739c7b5fffbbd676df8d2"
+      },
+      "actualStopped": true,
+      "layouts": [
+        {
+          "width": 390,
+          "button": {
+            "x": 139.09375,
+            "y": 129.5625,
+            "width": 26,
+            "height": 43.90625
+          }
+        },
+        {
+          "width": 800,
+          "button": {
+            "x": 359.046875,
+            "y": 169.09375,
+            "width": 26,
+            "height": 43.90625
+          }
+        }
+      ],
+      "parentVisualReview": {
+        "sourceAndDesignCards": true,
+        "screenshot": "/tmp/shanhai-check/remaining-seven-source-audio-20261113/bashe-390.png",
+        "screenshotSha256": "332b4f8195ce638d6fd283d48d0c2da15ad8aee3a0dcef2131bf55288fbb570a",
+        "modelAcceptance": false
+      },
+      "modelReady": false
+    },
+    {
+      "id": "lingyu",
+      "name": "陵鱼",
+      "content": {
+        "path": "content/beasts/lingyu.json",
+        "sha256": "17c135e0a5d335ea72b929754474c53104fea7ce498c20e107d630a018293e6b",
+        "source": [
+          {
+            "book": "山海经·海内北经",
+            "text": "陵魚人面，手足，魚身，在海中。"
+          }
+        ],
+        "editionNotes": [
+          {
+            "url": "https://zh.wikisource.org/wiki/山海經/海內北經",
+            "note": "本作严格取陵魚人面、手足、魚身、在海中这一句。双手双足及其附着方式均列为推断；移除旧解说中未有本条依据的鲛人原型断言。"
+          }
+        ]
+      },
+      "storySha256": "1c1a5ce17104d9ace9c76174ae978554a778e4f9b6f17b02af22560a83cb5225",
+      "audio": {
+        "path": "public/audio/narration/lingyu.mp3",
+        "bytes": 958471,
+        "sha256": "619fc9dcaafba938c49d99418615abd3f52afbdca65d1b54cbccd2377b0ef10b",
+        "seconds": 59.89877083333333,
+        "decodedSampleRate": 48000,
+        "contextSampleRate": 48000,
+        "channels": 1,
+        "rms": 0.1031913149439159,
+        "playing": true,
+        "encodedSampleRate": 22050
+      },
+      "previousAudio": {
+        "id": "lingyu",
+        "bytes": 209488,
+        "sha256": "8998c784cb25d6ba25906b71d99fca060814548d6bbb7c33360014a2bc8db6f8"
+      },
+      "actualStopped": true,
+      "layouts": [
+        {
+          "width": 390,
+          "button": {
+            "x": 92.234375,
+            "y": 129.5625,
+            "width": 26,
+            "height": 43.90625
+          }
+        },
+        {
+          "width": 800,
+          "button": {
+            "x": 329.453125,
+            "y": 169.09375,
+            "width": 26,
+            "height": 43.90625
+          }
+        }
+      ],
+      "parentVisualReview": {
+        "sourceAndDesignCards": true,
+        "screenshot": "/tmp/shanhai-check/remaining-seven-source-audio-20261113/lingyu-390.png",
+        "screenshotSha256": "704ea2c0eabd96a36e720ea65900367819c51614ccc3ed00655353ab55c8bd43",
+        "modelAcceptance": false
+      },
+      "modelReady": false
+    },
+    {
+      "id": "kui",
+      "name": "夔",
+      "content": {
+        "path": "content/beasts/kui.json",
+        "sha256": "0123c97a9928163e09e99dbecbe76aab95480326933310baeb19b3b857ddf79f",
+        "source": [
+          {
+            "book": "山海经·大荒东经",
+            "text": "東海中有流波山，入海七千里。其上有獸，狀如牛，蒼身而無角，一足，出入水則必風雨，其光如日月，其聲如雷，其名曰夔。黃帝得之，以其皮為鼓，橛以雷獸之骨，聲聞五百里，以威天下。"
+          }
+        ],
+        "editionNotes": [
+          {
+            "url": "https://zh.wikisource.org/wiki/山海經/大荒東經",
+            "note": "连引流波山、夔的形貌与黄帝鼓事，保留以威天下句尾，避免割去上下文而将聲聞五百里错归活兽。雷獸之骨不改写成夔自身的骨。"
+          }
+        ]
+      },
+      "storySha256": "21c10fe816b3dc35790b1a6b8611a654a44916b89c468af537487cd0debc87de",
+      "audio": {
+        "path": "public/audio/narration/kui.mp3",
+        "bytes": 1045406,
+        "sha256": "293016c40dfa2e1163863ac5154b83c5eed50e5b7d3caa4478baf5d7acfdf0a4",
+        "seconds": 65.33222916666666,
+        "decodedSampleRate": 48000,
+        "contextSampleRate": 48000,
+        "channels": 1,
+        "rms": 0.09742000733566351,
+        "playing": true,
+        "encodedSampleRate": 22050
+      },
+      "previousAudio": {
+        "id": "kui",
+        "bytes": 335294,
+        "sha256": "6cfac30fb2c044ea5a54ed1601a9ab908af007c5e22e19f1942c454338d664ca"
+      },
+      "actualStopped": true,
+      "layouts": [
+        {
+          "width": 390,
+          "button": {
+            "x": 181.578125,
+            "y": 100.28125,
+            "width": 26,
+            "height": 43.90625
+          }
+        },
+        {
+          "width": 800,
+          "button": {
+            "x": 388.640625,
+            "y": 130.046875,
+            "width": 26,
+            "height": 43.90625
+          }
+        }
+      ],
+      "parentVisualReview": {
+        "sourceAndDesignCards": true,
+        "screenshot": "/tmp/shanhai-check/remaining-seven-source-audio-20261113/kui-390.png",
+        "screenshotSha256": "45f95168a2b728323ec0f8caa557604a8a182f9ab7f7fc993f29fad47ffd5968",
+        "modelAcceptance": false
+      },
+      "modelReady": false
+    }
+  ]
+}

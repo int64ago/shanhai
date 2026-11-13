@@ -82,7 +82,7 @@ try {
       assert(bounds && bounds.x >= 0 && bounds.y >= 0 && bounds.x + bounds.width <= width && bounds.y + bounds.height <= 900, `${entry.id}: reachable audio button at ${width}`)
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `${entry.id}: horizontal overflow at ${width}`)
       layouts.push({ width, button: bounds })
-      if (['xixiyu', 'kuafu', 'zhulong', 'tianwu'].includes(entry.id) && width === 390) await page.screenshot({ path: join(output, `${entry.id}-390.png`) })
+      if (width === 390) await page.screenshot({ path: join(output, `${entry.id}-390.png`) })
     }
     await page.setViewportSize({ width: 1440, height: 900 })
     report.entries.push({ id: entry.id, storySha256: createHash('sha256').update(entry.story).digest('hex'), sourceParagraphs: sourceText.length, audio, stopped, layouts })
