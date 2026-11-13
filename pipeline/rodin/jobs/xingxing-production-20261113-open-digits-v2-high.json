@@ -1,0 +1,20 @@
+{
+  "id": "xingxing-production-20261113-open-digits-v2-high",
+  "beast": "xingxing",
+  "budget": 12.5,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "One complete tailless monkey-like Xingxing matching the four reviewed reference views. Preserve the two native rounded WHITE FURRY EARS, short primate muzzle, dark eyes, grey-brown fur, lean body, sloping shoulders, long arms held clear of legs, open palms and balanced bent-knee stance. Preserve exactly FIVE clearly separated native fingers per hand including opposed thumb, natural knuckles and rounded fingertips. Preserve exactly FIVE toes per broad primate foot including large opposed big toe, natural toenails and clear small-toe gaps. Both complete soles rest flat on the same ground plane. Improve realistic fine fur, skin and organic joint detail without changing body proportions, pose or silhouette. Continuous natural shoulders, elbows, wrists, hips, knees and ankles. Entire animal visible, no tail, extra ears, extra limbs or digits, fused/webbed digits, armor, clothes, jewelry, weapons, pedestal or background.",
+  "images": [
+    "concept/xingxing/production-20261113-open-digits-v2/view_34.png",
+    "concept/xingxing/production-20261113-open-digits-v2/view_side.png",
+    "concept/xingxing/production-20261113-open-digits-v2/view_front.png",
+    "concept/xingxing/production-20261113-open-digits-v2/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack",
+    "seed": 11132
+  }
+}

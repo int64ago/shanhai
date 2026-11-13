@@ -1,0 +1,663 @@
+{
+  "beast": "xingxing",
+  "date": "2026-11-14",
+  "status": "parent-reviewed-native-high-runtime",
+  "source": [
+    {
+      "book": "山海经·南山经·南山经之首",
+      "text": "有獸焉，其狀如禺而白耳，伏行人走，其名曰狌狌，食之善走。"
+    }
+  ],
+  "inferences": [
+    {
+      "item": "禺形白耳有据；无尾、长臂屈膝与半直立姿势为造型推断。",
+      "basis": "原文没有明确尾的有无或长短。本作选择无尾猴猿体态，尾的取舍属于造型推断。"
+    },
+    {
+      "item": "两只圆耳、双手双足与各五指趾，以及掌趾和关节的形状，均为设计补足。",
+      "basis": "白耳为明文，耳数、耳形与指趾数量未逐一列明；这些细节据猴猿解剖补出。"
+    },
+    {
+      "item": "白耳据文；灰褐毛发、深灰面庞与掌底足底，以及毛色深浅，均为艺术设色。",
+      "basis": "本条仅明记白耳，未规定其余部位颜色。"
+    },
+    {
+      "item": "俯身再起与缓步为对伏行人走的动作演绎；食之善走保留为古籍记述。",
+      "basis": "原文未给姿态转换的步骤和速度；食之善走的对象是食用者，不是狌狌的速度测量。"
+    }
+  ],
+  "transactions": [
+    {
+      "time": "2026-11-13T12:44:33.782Z",
+      "beast": "xingxing",
+      "job": "xingxing-production-20261108-v1",
+      "hash": "f922f67b47dc4c29",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "2260c183-8ce6-4d85-92b0-57d6ceeecf09",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-13T14:58:05.836Z",
+      "beast": "xingxing",
+      "job": "xingxing-production-20261113-open-digits-v2-medium",
+      "hash": "cf3afe42f10045bc",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "6ecbafed-b9a7-4554-bf4a-dbbce5e9f3f4",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-13T15:04:06.450Z",
+      "beast": "xingxing",
+      "job": "xingxing-production-20261113-open-digits-v2-high",
+      "hash": "94209ab8925212f2",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "bbc9d8c5-792a-428c-b2f3-993db047b8a6",
+      "consumed": 1
+    }
+  ],
+  "totalConsumed": 2.0,
+  "highSource": {
+    "path": "raw/xingxing-production-20261113-open-digits-v2-high/base_high_pbr.glb",
+    "bytes": 26693616,
+    "sha256": "af138ac179b91c5217977cb59fe0f13bd8bedcb522429ac1c7a42c00ee5adeca",
+    "originalTriangles": 50000,
+    "originalVertices": 37284,
+    "uuid": "bbc9d8c5-792a-428c-b2f3-993db047b8a6",
+    "immutable": true
+  },
+  "highRequest": {
+    "path": "pipeline/rodin/jobs/xingxing-production-20261113-open-digits-v2-high.json",
+    "tier": "Gen-2.5-Extreme-High",
+    "images": [
+      {
+        "path": "concept/xingxing/production-20261113-open-digits-v2/view_34.png",
+        "bytes": 777525,
+        "sha256": "da07d2838a4c5f8d7e292d1a7dba060865ef20477e96af04d8642d5e18184343"
+      },
+      {
+        "path": "concept/xingxing/production-20261113-open-digits-v2/view_side.png",
+        "bytes": 713588,
+        "sha256": "870684aa62ede337afdb412da621a4438f6fd2cdd5ae378eea7020a6e76f2405"
+      },
+      {
+        "path": "concept/xingxing/production-20261113-open-digits-v2/view_front.png",
+        "bytes": 769922,
+        "sha256": "f2dcb3c3bf1841afd774bb8c0a7de0d2a694a2ca83264a5856e7ae8e97dc4bc2"
+      },
+      {
+        "path": "concept/xingxing/production-20261113-open-digits-v2/view_back.png",
+        "bytes": 742705,
+        "sha256": "02f78536be6c7e3b76f9df8133d657f829ba7e56cb58a4f364b2c1be94ad5ec2"
+      }
+    ]
+  },
+  "runtime": {
+    "path": "public/models/xingxing/body.glb",
+    "bytes": 925324,
+    "sha256": "1a78ad7440c1436f1988619eb8471c32b8884af6300aca05239d353d025375bc",
+    "triangles": 50000,
+    "bones": 17,
+    "clips": {
+      "idle": 4,
+      "walk": 2.4000000953674316,
+      "special": 4
+    },
+    "compression": "Meshopt MEDIUM; WebP2048; resample/simplify/flatten/join/weld false",
+    "outerScale": 1
+  },
+  "runtimeContract": {
+    "radius": 1,
+    "speed": 0.06,
+    "walkSeconds": 2.4,
+    "specialDuration": 4,
+    "idleDuration": 4,
+    "stanceDuty": 0.66,
+    "forward": "glTF +Z; Blender -Y",
+    "scale": 1,
+    "restHeight": 1.35,
+    "cameraTargetY": 0.65,
+    "worldAngle": "angle = PI/2 - 0.06 * elapsedWalkSeconds",
+    "worldPosition": "[cos(angle), 0, sin(angle)]",
+    "worldYaw": "rotationY = PI - angle",
+    "startPosition": [
+      0,
+      0,
+      1
+    ],
+    "startYaw": 1.5707963267948966,
+    "animation": "walk.timeScale=1; elapsedWalkSeconds advances exactly with mixer walk time; no extra root translation/scale; continuous circular phase across clip repeats",
+    "stance": "inverse circular ankle position plus inverse circular sole yaw; full foot rigid; stance phase in [0,.66); opposite foot phase +.5",
+    "transitions": "Runtime resets the clip phase on a fresh walk start and retains its accumulated circular heading. The resulting fixed heading offset rotates the same baked stance solution; fades lie outside the strict no-slip guarantee. Actual Stage contact was checked after mixed transitions."
+  },
+  "sourceToRig": {
+    "reviewWidth1Height": 0.9425160884857178,
+    "reviewToFinalUniformScale": 1.4323362021279349,
+    "originalToFinalUniformScale": 0.7554501949319805,
+    "finalBounds": [
+      [
+        -0.7161681056022644,
+        -0.21389177441596985,
+        0
+      ],
+      [
+        0.7161681056022644,
+        0.21389177441596985,
+        1.350000023841858
+      ]
+    ],
+    "finalHeight": 1.35,
+    "runtimeScale": 1,
+    "soleOffsetCorrectionFinalUnits": {
+      "l": 0,
+      "r": 0.00035513850157101005
+    }
+  },
+  "sourceAnatomicalMaskDefinitions": {
+    "space": "final glTF rest model coordinates (X/Y/Z); restore inverse-bind meshopt dequantization before selection",
+    "adjacency": "triangle edges plus virtual coincident seams (5 decimal digits); no vertex/geometry edits",
+    "completeFeet": {
+      "restYMaxExclusive": 0.14175000000000001,
+      "side": "X>0=l, X<0=r",
+      "allVerticesRigid": true
+    },
+    "solePatches": {
+      "restYMaxExclusive": 0.004297008606383805,
+      "geometryNote": "native subtly curved sole; rigid horizontal rest orientation; actual mesh unchanged apart from uniform scale and recorded sub-mm sole alignment"
+    },
+    "hands": {
+      "l": {
+        "sign": 1,
+        "wrist": [
+          0.4737125337123871,
+          0.6549428701400757,
+          0.017202388495206833
+        ],
+        "elbow": [
+          0.34549903869628906,
+          0.7860977053642273,
+          -0.09310039132833481
+        ],
+        "distalAxis": [
+          0.5990565419197083,
+          -0.6127994656562805,
+          0.5153716206550598
+        ],
+        "seedSignedXMin": 0.5729344808511739,
+        "allowedSignedXMin": 0.4082158176064614,
+        "allowedDistalProjectionMin": -0.011458689617023479
+      },
+      "r": {
+        "sign": -1,
+        "wrist": [
+          -0.4760405123233795,
+          0.6903149485588074,
+          0.031036503612995148
+        ],
+        "elbow": [
+          -0.34298741817474365,
+          0.7863027453422546,
+          -0.07059350609779358
+        ],
+        "distalAxis": [
+          -0.6894272565841675,
+          -0.4973698854446411,
+          0.5266055464744568
+        ],
+        "seedSignedXMin": 0.5729344808511739,
+        "allowedSignedXMin": 0.4082158176064614,
+        "allowedDistalProjectionMin": -0.011458689617023479
+      }
+    },
+    "handAlgorithm": "seed all signedX>seedSignedXMin; flood adjacency only where signedX>allowedSignedXMin and dot(restPoint-wrist,distalAxis)>allowedDistalProjectionMin",
+    "lowerBody": {
+      "seedRestYMax": 0.2025,
+      "floodRestYMax": 0.6210000000000001
+    },
+    "protectedChest": {
+      "absXMax": 0.16471866324471252,
+      "minY": 0.6210000000000001,
+      "maxY": 0.9315
+    },
+    "head": "restY/h > .802 - .062*(1-smoothstep(-.025,.065,-restZ/reviewToFinalUniformScale))"
+  },
+  "changes": [
+    "Native five fingers/toes, white ears and tailless anatomy preserved; no replacement digits or donor body parts",
+    "Uniform height1.35m; recorded submillimetre whole-sole alignment fading above ankles",
+    "17-bone idle4s/walk2.4s/special4s; circular inverse stance, quintic swing recovery and sin^4 lift",
+    "Owned materials/outlines/skeletons disposed across StrictMode remounts; cached geometry/textures preserved"
+  ],
+  "actualAppQA": {
+    "path": "raw/_build/xingxing-native-high-app-20261114-v6-final/report.json",
+    "bytes": 57091,
+    "sha256": "f7097cb8575b52b294581a225fe0205b687f9509efd712605d62050b87db8782"
+  },
+  "candidateBrowserQA": {
+    "path": "raw/_build/xingxing-native-high-candidate-20261113-v6/browser-qa-gated/report.json",
+    "bytes": 10045,
+    "sha256": "4a14979fa47492de393c56039f1a308947a1434b440f465cb6721ea34e5302b4"
+  },
+  "textureOnlyInvariants": {
+    "path": "raw/_build/xingxing-native-high-candidate-20261113-v6/texture-only-invariants.json",
+    "bytes": 768,
+    "sha256": "6e70dbcab18e5eefb36fa670c3c5b4de2262690092a5c19386b8c4d8a1cdc1e3"
+  },
+  "textureCorrection": {
+    "path": "raw/_build/xingxing-native-high-candidate-20261113-v6/texture-correction.json",
+    "bytes": 3925,
+    "sha256": "cec44a7488c03813c5ee95e0bfb5a0cde47823cf58ea29198b374c44348a0a5b"
+  },
+  "actualAppMeasurements": {
+    "contact": {
+      "cycles": 3,
+      "frames": 432,
+      "maxDrift": 1.8810148244416411e-06,
+      "maxShapeDrift": 2.6066286962173986e-08,
+      "maxDirection": 1.123235258164629e-06,
+      "maxPlaneNormal": 1.3284617118849938e-06
+    },
+    "special": {
+      "expectedDuration": 4,
+      "finalAction": "idle",
+      "events": [
+        {
+          "clipTime": 3.9997000002861056,
+          "wallTime": 10618.5
+        }
+      ],
+      "maxWholeFootDrift": 6.45570327572898e-06,
+      "maxRigidShapeDrift": 1.1195247678896791e-07,
+      "wallMs": 3998.5999999046326,
+      "samples": 240
+    },
+    "masks": {
+      "selectionSource": "Native High rest-space anatomy, selected before skin-weight inspection",
+      "height": 1.35,
+      "soleRestMaxHeight": 0.004447008606383805,
+      "head": 6425,
+      "hands": {
+        "l": 2070,
+        "r": 2052
+      },
+      "feet": {
+        "l": 2107,
+        "r": 2073
+      },
+      "soles": {
+        "l": 9,
+        "r": 11
+      },
+      "protectedChest": 6538,
+      "issues": [],
+      "selection": "Full spatial native head mask, connected native hands, spatial complete feet/soles; root inverse bind dequantization; masks selected before weights"
+    },
+    "remounts": [
+      {
+        "cycle": 0,
+        "state": {
+          "nodes": 22,
+          "bones": 17,
+          "meshes": 1,
+          "outlines": 1,
+          "invalid": 0,
+          "vertices": 37319,
+          "animationTime": 0.5405000000000001,
+          "action": "idle"
+        },
+        "ownership": {
+          "boneTextures": 1,
+          "disposedBoneTextures": 1,
+          "materials": 2,
+          "disposedMaterials": 2,
+          "disposedGeometry": 0,
+          "disposedSharedTextures": 0,
+          "liveOldSkeletonTextures": 0,
+          "sharedGeometryReused": true,
+          "sharedTextures": 1,
+          "sharedTexturesReused": true,
+          "materialsAreNew": true,
+          "skeletonsAreNew": true
+        }
+      },
+      {
+        "cycle": 1,
+        "state": {
+          "nodes": 22,
+          "bones": 17,
+          "meshes": 1,
+          "outlines": 1,
+          "invalid": 0,
+          "vertices": 37319,
+          "animationTime": 0.5447000002861024,
+          "action": "idle"
+        },
+        "ownership": {
+          "boneTextures": 1,
+          "disposedBoneTextures": 1,
+          "materials": 2,
+          "disposedMaterials": 2,
+          "disposedGeometry": 0,
+          "disposedSharedTextures": 0,
+          "liveOldSkeletonTextures": 0,
+          "sharedGeometryReused": true,
+          "sharedTextures": 1,
+          "sharedTexturesReused": true,
+          "materialsAreNew": true,
+          "skeletonsAreNew": true
+        }
+      },
+      {
+        "cycle": 2,
+        "state": {
+          "nodes": 22,
+          "bones": 17,
+          "meshes": 1,
+          "outlines": 1,
+          "invalid": 0,
+          "vertices": 37319,
+          "animationTime": 0.5439999999999999,
+          "action": "idle"
+        },
+        "ownership": {
+          "boneTextures": 1,
+          "disposedBoneTextures": 1,
+          "materials": 2,
+          "disposedMaterials": 2,
+          "disposedGeometry": 0,
+          "disposedSharedTextures": 0,
+          "liveOldSkeletonTextures": 0,
+          "sharedGeometryReused": true,
+          "sharedTextures": 1,
+          "sharedTexturesReused": true,
+          "materialsAreNew": true,
+          "skeletonsAreNew": true
+        }
+      }
+    ],
+    "errors": []
+  },
+  "scripts": [
+    {
+      "path": "pipeline/blender/rig_xingxing_native.py",
+      "bytes": 27009,
+      "sha256": "3dd784ac2ae2dd09a8ed1e75ddcf81b3093ad52abdb0b4ca9acde6ca08c98ff2"
+    },
+    {
+      "path": "scripts/qa-xingxing.mjs",
+      "bytes": 18410,
+      "sha256": "e59072f7411e586c2eb90534d3f8553ebdea31d8767074de9db9c31fa3f1aad6"
+    },
+    {
+      "path": "scripts/qa-xingxing-app.mjs",
+      "bytes": 30599,
+      "sha256": "b6d3776e065170a881b33d891a188c6caa3c9fe6a3ca71de99a1635ea96ced4b"
+    },
+    {
+      "path": "src/beasts/xingxing/Xingxing.tsx",
+      "bytes": 4621,
+      "sha256": "56f396f42dd6621c6e82524ae91daeb8a1c6463c341f629f3cc222f3e0bd7d09"
+    },
+    {
+      "path": "src/scene/CameraRig.tsx",
+      "bytes": 1620,
+      "sha256": "f59d6060b977a3b69130d3b32344d55a78f71c0532b268791fdf41907674a3e1"
+    },
+    {
+      "path": "scripts/xingxing-correct-palette.mjs",
+      "bytes": 9806,
+      "sha256": "aacf1b990dd689598cfedda918be219e55d03807c54cdb9581a9573e44f3dcc3"
+    },
+    {
+      "path": "scripts/xingxing-pad-uv-gutters.mjs",
+      "bytes": 5924,
+      "sha256": "9cc39acc04f86b5e5ddfecac46c93e44c794fa3ca7e30e242e1582fb350dc950"
+    }
+  ],
+  "responsiveCamera": {
+    "tabletFilmOffset": -5.5,
+    "narrowTabletBaseFov": 36,
+    "cameraResetVerified": true,
+    "evidence": [
+      {
+        "width": 641,
+        "fov": 57.39670203852892,
+        "filmOffset": -5.5,
+        "noOverflow": true,
+        "image": "raw/_build/xingxing-native-high-app-20261114-v6-final/responsive-641.png"
+      },
+      {
+        "width": 640,
+        "fov": 51.64308616406644,
+        "filmOffset": 0,
+        "noOverflow": true,
+        "image": "raw/_build/xingxing-native-high-app-20261114-v6-final/responsive-640.png"
+      },
+      {
+        "width": 800,
+        "fov": 42.32346604430682,
+        "filmOffset": -5.5,
+        "noOverflow": true,
+        "image": "raw/_build/xingxing-native-high-app-20261114-v6-final/responsive-800.png"
+      },
+      {
+        "width": 390,
+        "fov": 70,
+        "filmOffset": 0,
+        "noOverflow": true,
+        "image": "raw/_build/xingxing-native-high-app-20261114-v6-final/responsive-390.png"
+      }
+    ]
+  },
+  "paletteRecipe": {
+    "commands": [
+      "node scripts/xingxing-correct-palette.mjs V5_INPUT_DIRECTORY NEW_OUTPUT_DIRECTORY",
+      "node scripts/xingxing-pad-uv-gutters.mjs NEW_OUTPUT_DIRECTORY"
+    ],
+    "portableReplayRiggedSha256": "ed666181aa4130883df211d9a1ac23cf624d2f5c56d38fdbd8c861969e5f7629",
+    "portableReplayExact": true
+  },
+  "localScreenshots": [
+    {
+      "path": "raw/_build/xingxing-final-shots-20261114/idle-390.png",
+      "bytes": 279797,
+      "sha256": "58bba337ebc3b3eab269be4eb776f92e63290bb2ab02149db3ac974c0483f788"
+    },
+    {
+      "path": "raw/_build/xingxing-final-shots-20261114/idle-641.png",
+      "bytes": 421677,
+      "sha256": "addd12908bd6aeaf8c6a5948cc84dec391b342427261bb79a277829534d1ae83"
+    },
+    {
+      "path": "raw/_build/xingxing-final-shots-20261114/idle-800.png",
+      "bytes": 520370,
+      "sha256": "9e8fc2b69097ebfd4d556ec488f97383472faa8817a2bc153701f05fa45b7e62"
+    },
+    {
+      "path": "raw/_build/xingxing-final-shots-20261114/idle.png",
+      "bytes": 916036,
+      "sha256": "aaa88b573d16e708ba2028a477efb224ea8ee69ed8f554fececdc29e0684dc72"
+    },
+    {
+      "path": "raw/_build/xingxing-final-shots-20261114/special.png",
+      "bytes": 916145,
+      "sha256": "bd067b0d50131fb9daae4455bd6e529e04f3e460bc663b895916b93889e36dd4"
+    },
+    {
+      "path": "raw/_build/xingxing-final-shots-20261114/walk-close-0.png",
+      "bytes": 480766,
+      "sha256": "4b1613f0c68c79c152dcb16ba6f212e244a060c39f3262824eca3be8f48eaa7a"
+    },
+    {
+      "path": "raw/_build/xingxing-final-shots-20261114/walk-close-1.png",
+      "bytes": 481104,
+      "sha256": "8d6d4c5cecf42e966662458b5c51a5396150d6f3eb3ec62f1a97e7f6508844b5"
+    },
+    {
+      "path": "raw/_build/xingxing-final-shots-20261114/walk-close-2.png",
+      "bytes": 479386,
+      "sha256": "3373632df5dbd79bec2044c74ae8e362182e18033cfabe9b7a6d6f8ba7e1a244"
+    },
+    {
+      "path": "raw/_build/xingxing-final-shots-20261114/walk.png",
+      "bytes": 915685,
+      "sha256": "37069994e5feff56507ed799391dd4bcf3679976881920a18937abb181be32e1"
+    }
+  ],
+  "parentVisualReview": {
+    "candidate": "1a78ad7440c1436f1988619eb8471c32b8884af6300aca05239d353d025375bc",
+    "actualStageReport": "raw/_build/xingxing-native-high-app-20261114-v6-final/report.json",
+    "review": "Parent Read actual Stage anatomy, native hands/feet, idle/walk/special and default desktop/tablet/phone framing; acceptance requires actual visuals as well as measurements."
+  },
+  "narration": {
+    "provenance": "pipeline/provenance/source-narration-20261113.json",
+    "changedByThisModelRelease": false
+  },
+  "limitations": [
+    "Native open palms and fixed finger pose; no individual digit animation",
+    "Slight native sole curvature and oblique toe overlap retained; complete source foot selected independently of weights",
+    "Circular foot contact is baked animation, not a physics simulation"
+  ],
+  "deployment": "Pending separate main push, exact-SHA CI/deploy and production verification; local acceptance alone does not claim deployment.",
+  "localizedTextureAudit": {
+    "paletteCorrection": {
+      "input": "/Users/int64ago/workspace/shanhai/.claude/worktrees/beast-bingfeng/raw/_build/xingxing-native-high-candidate-20261113-v5/rigged.glb",
+      "inputSha256": "53baa2412e907954004e5931f7f30f762c713490a1d1f2d673abd825b910f1a7",
+      "fallbackV5Sha256": "ac6d4b37cc359c72ced1ce207d4fa435ac8dac2c1ff23949ccb909d31f870eda",
+      "rawSourceSha256": "af138ac179b91c5217977cb59fe0f13bd8bedcb522429ac1c7a42c00ee5adeca",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "definitions": {
+        "face": {
+          "absXMax": 0.15039530122343317,
+          "minY": 0.9922500000000001,
+          "minForwardZ": 0.05013176707447772
+        },
+        "hands": {
+          "l": {
+            "sign": 1,
+            "wrist": [
+              0.4737125337123871,
+              0.6549428701400757,
+              0.017202388495206833
+            ],
+            "elbow": [
+              0.34549903869628906,
+              0.7860977053642273,
+              -0.09310039132833481
+            ],
+            "distalAxis": [
+              0.5990565419197083,
+              -0.6127994656562805,
+              0.5153716206550598
+            ],
+            "seedSignedXMin": 0.5729344808511739,
+            "allowedSignedXMin": 0.4082158176064614,
+            "allowedDistalProjectionMin": -0.011458689617023479
+          },
+          "r": {
+            "sign": -1,
+            "wrist": [
+              -0.4760405123233795,
+              0.6903149485588074,
+              0.031036503612995148
+            ],
+            "elbow": [
+              -0.34298741817474365,
+              0.7863027453422546,
+              -0.07059350609779358
+            ],
+            "distalAxis": [
+              -0.6894272565841675,
+              -0.4973698854446411,
+              0.5266055464744568
+            ],
+            "seedSignedXMin": 0.5729344808511739,
+            "allowedSignedXMin": 0.4082158176064614,
+            "allowedDistalProjectionMin": -0.011458689617023479
+          }
+        },
+        "feet": {
+          "maxY": 0.14175000000000001
+        },
+        "ears": {
+          "minAbsX": 0.15039530122343317,
+          "minY": 1.08
+        },
+        "colorGate": "R-B>6, R-G>2, G>=B, source luminance>55/255; smooth full strength at R-B>=12,R-G>=5,L>=85/255",
+        "target": "neutral sRGB charcoal = 28 + .32*original_luminance_byte; mix by skin chroma/luminance gate; preserve dark eye/nose pixels and all original luminance variation",
+        "scope": "only spatial face/hand/foot UV texels passing warm bare-skin chroma and luminance; protected native ear texels override any overlap"
+      },
+      "rasterTriangles": 17049,
+      "maskedPixels": 3591275,
+      "changedPixels": 2459293,
+      "protectedEarPixels": 417132,
+      "protectedEarChangedPixels": 0,
+      "outsideSpatialMaskChangedPixels": 0,
+      "stats": {
+        "face": {
+          "pixels": 548230,
+          "changed": 155780,
+          "meanChangedBeforeLum": 135.9099268213356,
+          "meanChangedAfterLum": 83.75370783931048
+        },
+        "hands": {
+          "pixels": 1499449,
+          "changed": 1215589,
+          "meanChangedBeforeLum": 99.22185785922352,
+          "meanChangedAfterLum": 61.220712355592774
+        },
+        "feet": {
+          "pixels": 1543596,
+          "changed": 1087924,
+          "meanChangedBeforeLum": 93.39969699503212,
+          "meanChangedAfterLum": 59.57185639589877
+        }
+      },
+      "diffuseBeforeSha256": "0d7a5e8958b696ece23fe9622dbde65b0abb5d0174c3e30ae049f972189bf326",
+      "diffuseAfterSha256": "a6ee11e3490b4754ecf723399fdce07cb2f9c73fe2e40de4035332b7e7a5e6a1",
+      "geometryUVSkinAnimationUnchanged": true,
+      "otherMaterialImagesUnchanged": true,
+      "allOriginalBinBytesUnchanged": true,
+      "outputRiggedSha256": "ed666181aa4130883df211d9a1ac23cf624d2f5c56d38fdbd8c861969e5f7629",
+      "attempts": 1,
+      "productionAccepted": false,
+      "uvGutterPadding": {
+        "maxSourcePixels": 8,
+        "changedUnusedTexels": 337099,
+        "mappedTexelChanges": 0,
+        "protectedEarTexelChanges": 0,
+        "method": "propagate edited boundary colors only into unmapped atlas gutters; reject texels closer to unedited fur/white/ear UV surfaces; original mapped palette pass unchanged"
+      },
+      "unpaddedRiggedSha256": "23d5c687bcd40a6201ac96e05cce60b853c5fd028452793af406dc0e458ec3cd"
+    },
+    "textureOnlyInvariants": {
+      "v5Sha256": "ac6d4b37cc359c72ced1ce207d4fa435ac8dac2c1ff23949ccb909d31f870eda",
+      "v6Sha256": "1a78ad7440c1436f1988619eb8471c32b8884af6300aca05239d353d025375bc",
+      "v6Bytes": 925324,
+      "identicalJSONFields": [
+        "accessors",
+        "animations",
+        "meshes",
+        "nodes",
+        "skins",
+        "samplers",
+        "scenes",
+        "materials",
+        "textures"
+      ],
+      "identicalCompressedAccessorBufferViews": 10,
+      "otherMaterialImagesUnchanged": [
+        {
+          "name": "texture_normal",
+          "sha256": "26dc7398ac7a688e36f38a09228b2ada7340b773d114450cdbc9386b1d2c1a30"
+        },
+        {
+          "name": "texture_metallic-texture_roughness",
+          "sha256": "829dd6d39a8350c760ad8d24e8e2a0a3e9fe219813ad7c4353fd5a7387b47546"
+        }
+      ],
+      "geometryUVRigSkinAnimationUnchanged": true
+    }
+  }
+}

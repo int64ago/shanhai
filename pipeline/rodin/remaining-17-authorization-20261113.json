@@ -1,0 +1,72 @@
+{
+  "date": "2026-11-13",
+  "authorization": "Direct human selection: 授权完成剩余 17 只 (Recommended)",
+  "originalDecisionEvidence": {
+    "transcript": "/Users/int64ago/.claude/projects/-Users-int64ago-workspace-shanhai/5b582efe-c505-4f41-837e-575ec21cb11e.jsonl",
+    "line": 43591,
+    "toolUseId": "call_3ea324f4c9514aceb036c58525ed07ba__rk16__zVxT5gGDA8krYfaB",
+    "role": "user",
+    "selectedAnswer": "授权完成剩余 17 只 (Recommended)",
+    "originalQuestionScope": "17 listed beasts including Kuafu and Kui; subsequent Medium, reviewed High and necessary quality retries; 12 new credits per beast, 204 aggregate",
+    "directlyReadAfterCompaction": true
+  },
+  "scope": "Initial Medium, reviewed High and necessary quality retries for the17 listed beasts; separate accepted releases to main/Actions/production. This resolves the prior Jiaochong,Kuafu,Xingtian paid-call denials.",
+  "beasts": [
+    "xingxing",
+    "lu_fish",
+    "shuhu",
+    "xixiyu",
+    "longzhi",
+    "jimeng",
+    "jiaochong",
+    "xingtian",
+    "xiangliu",
+    "tianwu",
+    "kuafu",
+    "leishen",
+    "lingyu",
+    "yinglong",
+    "zhulong",
+    "kui",
+    "qiangliang"
+  ],
+  "reconfirmation": {
+    "date": "2026-11-13",
+    "directHumanSelection": "确认原17只授权",
+    "scope": "Explicitly includes current Kuafu open-hands v2 Medium (0.5), Kui monopod v2 Medium (0.5), reviewed Jiaochong head High (1), and subsequent necessary Medium, reviewed High and quality retries for original17",
+    "priorNewCreditsAtConfirmation": 4.5,
+    "baselineReset": false,
+    "note": "This fresh direct human response resolves the post-compaction automatic denials. Original caps and ledger baseline remain unchanged."
+  },
+  "perBeastNewCreditCap": 12,
+  "totalNewCreditCap": 204,
+  "baseline": {
+    "ledgerLines": 143,
+    "ledgerSha256": "fe456f658ff1c014b53a4b9c9cecd1dd244f684c18dc117fe50ca1bf7d5af792",
+    "perBeastConsumed": {
+      "xingxing": 0.5,
+      "lu_fish": 0,
+      "shuhu": 0.5,
+      "xixiyu": 0,
+      "longzhi": 0,
+      "jimeng": 0.5,
+      "jiaochong": 0,
+      "xingtian": 0,
+      "xiangliu": 0,
+      "tianwu": 0,
+      "kuafu": 0,
+      "leishen": 0,
+      "lingyu": 0.5,
+      "yinglong": 0.5,
+      "zhulong": 0,
+      "kui": 0.5,
+      "qiangliang": 0
+    }
+  },
+  "qualityGates": [
+    "No High request before actual corrected four-view anatomy review",
+    "No readiness from generation/download or numerical counts",
+    "Individual commit,exact-SHA CI/deploy success and production verification before next release"
+  ],
+  "excluded": "No new scope for unrelated beasts or dependency/provider/permission configuration changes"
+}

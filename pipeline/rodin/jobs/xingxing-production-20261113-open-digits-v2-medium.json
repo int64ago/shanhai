@@ -1,0 +1,8 @@
+{
+  "id": "xingxing-production-20261113-open-digits-v2-medium",
+  "beast": "xingxing",
+  "budget": 12.5,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "A complete tailless monkey-like creature with grey brown fur and two rounded WHITE FURRY EARS. Slender natural primate anatomy, short muzzle, dark eyes. Semi-upright balanced stance, bent knees, both feet on ground. Both arms spread outward clear of legs with the PALMS FACING FORWARD. Each open hand has FIVE LONG SPLAYED FINGERS including one opposed thumb, with broad visible air gaps between every digit. Both feet have FIVE CLEARLY SEPARATED TOES including a large opposed big toe, toes spread in a fan with visible gaps. Rounded knuckles and fingertips, natural palms and wrists. Hands and feet are anatomically clear and fully visible. Sloping shoulders, lean torso and natural hips. Whole creature visible from ears to toe tips. Grey face and palms. No tail, clothes, armor, props, pedestal or background. No clenched fists, fused fingers, mitten hands or webbing.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

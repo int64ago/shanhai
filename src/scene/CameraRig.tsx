@@ -17,7 +17,8 @@ export function CameraRig() {
     if (!(camera instanceof PerspectiveCamera)) return
     // The long, low snake needs room above the selector and beside the text card.
     const bashe = selected === 'bashe'
-    const fov = bashe ? 40 : BASE_FOV
+    const xingxingTablet = selected === 'xingxing' && width > 640 && aspect <= 1.3
+    const fov = bashe ? 40 : xingxingTablet && width < 760 ? 36 : BASE_FOV
     const minAspect = 1.2
     if (aspect >= minAspect) {
       camera.fov = fov
@@ -26,7 +27,10 @@ export function CameraRig() {
       camera.fov = Math.min(bashe ? 75 : 70, (Math.atan(halfH) * 360) / Math.PI)
     }
     const snakeOffset = width >= 600 ? (aspect > 1.3 ? -9 : -3.5) : 0
-    camera.filmOffset = bashe ? snakeOffset : aspect > 1.3 ? -6 : 0
+    // The full source/design card remains visible above 640px; keep Xingxing
+    // beside it on portrait tablets as well as on wide desktop screens.
+    const xingxingOffset = xingxingTablet ? -5.5 : aspect > 1.3 ? -6 : 0
+    camera.filmOffset = bashe ? snakeOffset : xingxingOffset
     camera.updateProjectionMatrix()
   }, [camera, aspect, width, selected])
 

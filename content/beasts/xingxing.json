@@ -27,9 +27,10 @@
     }
   ],
   "production": {
-    "status": "in-progress",
-    "modelReady": false,
-    "reason": "已核对古籍原文与设计推断，并生成对应评书；三维造型、绑定与视觉验收尚未完成。",
+    "status": "ready",
+    "modelReady": true,
+    "reason": "原生白耳猴猿高模保留双手双足及各五指趾，局部灰肤色与既有解说对齐；17骨静、行、俯身再起三态通过主场景接地、切换、资源释放和视觉验收。",
+    "provenance": "pipeline/provenance/xingxing.json",
     "narrationProvenance": "pipeline/provenance/source-narration-20261113.json"
   },
   "editionNotes": [

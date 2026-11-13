@@ -2,6 +2,15 @@
   "_note": "第三方素材授权登记；上线前统一核对。音频素材到位后同样登记在这里。",
   "assets": [
     {
+      "path": "public/models/xingxing/body.glb",
+      "source": "Hyper3D Rodin两阶段制作：早期Medium不合格保留，原生张指v2 Medium 0.5积分，Read四视图与指趾特写后Gen-2.5-Extreme-High/HighPack 1积分；含早期Medium总计2积分，未加extreme-high贴图。原始High完整50000三角面，白耳、无尾、各五指趾均为原生；正比例归一到1.35米，右整足约0.355毫米接地修正，17骨idle/walk/special，圆周支撑逆向烘焙与五次多项式摆腿衔接。UV局部灰肤色校正保留白耳、眉颊颏白纹、眼鼻与明度细节；仅为同次校色填充未映射贴图边缘。Meshopt medium/WebP2048，resample/simplify/flatten/join/weld均false。原始SHA256、任务UUID、贴图修改与主场景验收见pipeline/provenance/xingxing.json。",
+      "sourceComponents": [
+        {"path":"raw/xingxing-production-20261113-open-digits-v2-high/base_high_pbr.glb","job":"xingxing-production-20261113-open-digits-v2-high","tier":"Gen-2.5-Extreme-High","uuid":"bbc9d8c5-792a-428c-b2f3-993db047b8a6","sha256":"af138ac179b91c5217977cb59fe0f13bd8bedcb522429ac1c7a42c00ee5adeca"}
+      ],
+      "author": "Hyper3D Rodin AI生成；项目离线绑定、动作与局部设色",
+      "license": "沿用项目既有Hyper3D Rodin输出条款"
+    },
+    {
       "path": "public/models/bashe/body.glb",
       "source": "Hyper3D Rodin两阶段制作：Medium初版及重试各0.5积分，矫正四视图后Gen-2.5-Extreme-High/HighPack 1积分，共2积分，未加extreme-high贴图。原始High完整50000三角面，蛇首、长躯与渐细单尾均为原生；24段轴骨加root共25骨，离线按纵向腹面包络贴地，idle/walk/special。头部UV局部青色校正保留眼鼻深色、明度与纹理，身体不重涂。Meshopt medium/WebP2048，resample/simplify/flatten/join/instance/palette均false，保留动画浮点循环端点。实际SHA256、任务UUID、三态变形、资源释放和响应式构图验收见pipeline/provenance/bashe.json。",
       "sourceComponents": [
