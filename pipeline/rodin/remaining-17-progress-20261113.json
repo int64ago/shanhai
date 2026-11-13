@@ -18,46 +18,218 @@
     "shuhu": 0.5
   },
   "cachedRecoveriesWithoutNewCharges": [
-    {"job":"qiangliang-production-20261108-body-medium","hash":"493ac25c57521498","uuid":"7039e86d-f80c-47b7-9320-5e28a8dca86a","result":"done, source downloaded"},
-    {"job":"shuhu-production-20261108-human-equine-headneck-medium","hash":"7932bc92f3b1a167","uuid":"2db066e0-4c95-4a25-8359-15134f1d8ba4","result":"done, source downloaded"}
+    {
+      "job": "qiangliang-production-20261108-body-medium",
+      "hash": "493ac25c57521498",
+      "uuid": "7039e86d-f80c-47b7-9320-5e28a8dca86a",
+      "result": "done, source downloaded"
+    },
+    {
+      "job": "shuhu-production-20261108-human-equine-headneck-medium",
+      "hash": "7932bc92f3b1a167",
+      "uuid": "2db066e0-4c95-4a25-8359-15134f1d8ba4",
+      "result": "done, source downloaded"
+    }
   ],
   "providerRejectedNonTransactions": [
-    {"job":"xingtian-production-20261108-headless-body-medium","error":"IMAGE_CONTENT_VIOLATION","submittedUuid":null,"consumed":0},
-    {"job":"tianwu-production-20261108-trunk-medium","error":"IMAGE_CONTENT_VIOLATION","submittedUuid":null,"consumed":0}
+    {
+      "job": "xingtian-production-20261108-headless-body-medium",
+      "error": "IMAGE_CONTENT_VIOLATION",
+      "submittedUuid": null,
+      "consumed": 0
+    },
+    {
+      "job": "tianwu-production-20261108-trunk-medium",
+      "error": "IMAGE_CONTENT_VIOLATION",
+      "submittedUuid": null,
+      "consumed": 0
+    },
+    {
+      "job": "jimeng-production-20261114-native-human-v2-medium",
+      "submittedUuid": null,
+      "consumed": 0,
+      "error": "HTTP400 prompt must be shorter than or equal to1024characters",
+      "correctedPromptCharacters": 986,
+      "subsequentOutcome": "automatic-approval-denied-before-execution"
+    }
   ],
   "parentVisualDecisions": [
-    {"beast":"jiaochong","part":"head","sourceJob":"jiaochong-production-20261108-head-medium","sourceSha256":"bb453543104389850bc024f908927797fa28e8766d0eba9b1e11b36ffc2f6b70","decision":"accepted-as-isolated-head-High-reference-only","reviewedViews":["34","side","front","back"],"referenceDirectory":"concept/jiaochong/production-20261113-head","highJob":"pipeline/rodin/jobs/jiaochong-production-20261113-head-high.json","highGenerated":true},
-    {"beast":"jiaochong","part":"body","decision":"rejected","reason":"One central hollow-looking neck stump and thin lateral prongs; two broad organic neck roots absent. Hands crowded and pose lacks clearance."},
-    {"beast":"kuafu","part":"original-body","decision":"rejected","reason":"Crowded flattened fingers and insufficient arm clearance. Offline hand replacement and correction rejected for wrist/UV defects and verified accidental foot deletion. Independent native v2 Medium/High accepted as source only; four-snake contact assembly in progress."},
-    {"beast":"leishen","decision":"rejected-unmodified-reference","reason":"Exposed skull-like face instead of normal human facial tissue. Offline human-head reconstruction and one correction both rejected after neck closeups: fluted collar, visible rim and longitudinal color streaks."},
-    {"beast":"zhulong","decision":"rejected-unmodified-reference","reason":"Snake face instead of human face; long upright neck and returning body."},
-    {"beast":"xixiyu","decision":"needs-correction","reason":"Native fish fins and forked fish tail violate the selected finless aquatic magpie body and long feather-like tail."},
-    {"beast":"xiangliu","decision":"needs-correction","reason":"Unwanted complete native snake head/neck; anterior volume not qualified for nine neck roots."},
-    {"beast":"qiangliang","decision":"rejected-unmodified-reference","reason":"Human hands and tiger paws instead of required hoof extremities; long elbow processes absent; unwanted native mouth snake."},
-    {"beast":"shuhu","part":"headneck","decision":"rejected","reason":"Horse muzzle and truncated human shoulder bust instead of human face and complete equine neck."},
-    {"beast":"xingxing","part":"offline-repair-c","decision":"rejected","reason":"Straight finger slots, fused/slab silhouettes, thin toe slivers and debris remain after whole-body voxel smoothing and UV projection. Not a generated High."},
-    {"beast":"longzhi","part":"offline-neck-v5","decision":"rejected","reason":"Skull backs improved, but tube-like necks, abrupt collars, stretched/blocky fur and remaining tail/rump/ankle defects prevent acceptance. Not a new High."}
+    {
+      "beast": "jiaochong",
+      "part": "head",
+      "sourceJob": "jiaochong-production-20261108-head-medium",
+      "sourceSha256": "bb453543104389850bc024f908927797fa28e8766d0eba9b1e11b36ffc2f6b70",
+      "decision": "accepted-as-isolated-head-High-reference-only",
+      "reviewedViews": [
+        "34",
+        "side",
+        "front",
+        "back"
+      ],
+      "referenceDirectory": "concept/jiaochong/production-20261113-head",
+      "highJob": "pipeline/rodin/jobs/jiaochong-production-20261113-head-high.json",
+      "highGenerated": true
+    },
+    {
+      "beast": "jiaochong",
+      "part": "body",
+      "decision": "rejected",
+      "reason": "One central hollow-looking neck stump and thin lateral prongs; two broad organic neck roots absent. Hands crowded and pose lacks clearance."
+    },
+    {
+      "beast": "kuafu",
+      "part": "original-body",
+      "decision": "rejected",
+      "reason": "Crowded flattened fingers and insufficient arm clearance. Offline hand replacement and correction rejected for wrist/UV defects and verified accidental foot deletion. Independent native v2 Medium/High accepted as source only; bounded four-snake A/B/C contact assembly completed and rejected; no rig/runtime promotion."
+    },
+    {
+      "beast": "leishen",
+      "decision": "rejected-unmodified-reference",
+      "reason": "Exposed skull-like face instead of normal human facial tissue. Offline human-head reconstruction and one correction both rejected after neck closeups: fluted collar, visible rim and longitudinal color streaks."
+    },
+    {
+      "beast": "zhulong",
+      "decision": "rejected-unmodified-reference",
+      "reason": "Snake face instead of human face; long upright neck and returning body."
+    },
+    {
+      "beast": "xixiyu",
+      "decision": "needs-correction",
+      "reason": "Native fish fins and forked fish tail violate the selected finless aquatic magpie body and long feather-like tail."
+    },
+    {
+      "beast": "xiangliu",
+      "decision": "needs-correction",
+      "reason": "Unwanted complete native snake head/neck; anterior volume not qualified for nine neck roots."
+    },
+    {
+      "beast": "qiangliang",
+      "decision": "rejected-unmodified-reference",
+      "reason": "Human hands and tiger paws instead of required hoof extremities; long elbow processes absent; unwanted native mouth snake."
+    },
+    {
+      "beast": "shuhu",
+      "part": "headneck",
+      "decision": "rejected",
+      "reason": "Horse muzzle and truncated human shoulder bust instead of human face and complete equine neck."
+    },
+    {
+      "beast": "xingxing",
+      "part": "offline-repair-c",
+      "decision": "rejected",
+      "reason": "Straight finger slots, fused/slab silhouettes, thin toe slivers and debris remain after whole-body voxel smoothing and UV projection. Not a generated High."
+    },
+    {
+      "beast": "longzhi",
+      "part": "offline-neck-v5",
+      "decision": "rejected",
+      "reason": "Skull backs improved, but tube-like necks, abrupt collars, stretched/blocky fur and remaining tail/rump/ankle defects prevent acceptance. Not a new High."
+    }
   ],
   "automaticApprovalDeniedNonTransactions": [
-    {"job":"kuafu-production-20261113-open-hands-v2-medium","expectedCost":0.5,"submitted":false,"consumed":0},
-    {"job":"kui-production-20261113-monopod-v2-medium","expectedCost":0.5,"submitted":false,"consumed":0},
-    {"job":"jiaochong-production-20261113-head-high","expectedCost":1,"submitted":false,"consumed":0}
+    {
+      "job": "kuafu-production-20261113-open-hands-v2-medium",
+      "expectedCost": 0.5,
+      "submitted": false,
+      "consumed": 0
+    },
+    {
+      "job": "kui-production-20261113-monopod-v2-medium",
+      "expectedCost": 0.5,
+      "submitted": false,
+      "consumed": 0
+    },
+    {
+      "job": "jiaochong-production-20261113-head-high",
+      "expectedCost": 1,
+      "submitted": false,
+      "consumed": 0
+    }
   ],
   "denialStatus": "RESOLVED by fresh direct human AskUserQuestion answer: 确认原17只授权, explicitly including the three named calls and future necessary production for original17 under unchanged baseline/caps. All three subsequently launched through the same client normally; no alternate tools/workers/job names bypassed denial. Entries above describe historical pre-reconfirmation attempts only; subsequent charges are included in current totals.",
   "postReconfirmation": {
     "baselineReset": false,
-    "newHighHeads": [{"beast":"jiaochong","job":"jiaochong-production-20261113-head-high","uuid":"62b2e822-3d1e-43fc-9e23-5d9d0a47e18f","sourceSha256":"d64e301c854269e0b0f70f1f5a104e5a42d6932392b93584c7d3436f836a602b","decision":"parent-accepted-part-after-4-actual-views; body not ready"}],
-    "xingxingV2": "Medium and High personally Read in all4 full views and isolated hand/foot closeups; native High source accepted for rigging. High hash94209ab8925212f2 uuidbbc9d8c5-792a-428c-b2f3-993db047b8a6 sourceSha256 af138ac179b91c5217977cb59fe0f13bd8bedcb522429ac1c7a42c00ee5adeca. Final v6 candidate 1a78ad7440c1436f1988619eb8471c32b8884af6300aca05239d353d025375bc accepted after parent Read actual Stage anatomy, grey skin/white ears, three actions, motion closeups and desktop/390/641/800 screenshots. All Stage masks, transitions, planted special, three circular cycles, three ownership remounts, responsive camera/reset and runtime error checks pass. Palette-only correction preserves original geometry/UV/rig/animations and white ears; portable recipe reproduced rigged bytes exactly. Local readiness true; separate main/CI/production release pending.",
+    "newHighHeads": [
+      {
+        "beast": "jiaochong",
+        "job": "jiaochong-production-20261113-head-high",
+        "uuid": "62b2e822-3d1e-43fc-9e23-5d9d0a47e18f",
+        "sourceSha256": "d64e301c854269e0b0f70f1f5a104e5a42d6932392b93584c7d3436f836a602b",
+        "decision": "parent-accepted-part-after-4-actual-views; body not ready"
+      }
+    ],
+    "xingxingV2": "Medium and High personally Read in all4 full views and isolated hand/foot closeups; native High source accepted for rigging. High hash94209ab8925212f2 uuidbbc9d8c5-792a-428c-b2f3-993db047b8a6 sourceSha256 af138ac179b91c5217977cb59fe0f13bd8bedcb522429ac1c7a42c00ee5adeca. Final v6 candidate 1a78ad7440c1436f1988619eb8471c32b8884af6300aca05239d353d025375bc accepted after parent Read actual Stage anatomy, grey skin/white ears, three actions, motion closeups and desktop/390/641/800 screenshots. All Stage masks, transitions, planted special, three circular cycles, three ownership remounts, responsive camera/reset and runtime error checks pass. Palette-only correction preserves original geometry/UV/rig/animations and white ears; portable recipe reproduced rigged bytes exactly. Main release df2e439e19ccbb7ea2794f2dda0b2166676bc63e has successful exact-SHA CI/deploy and passed production verification including parent Read all5 images.",
     "kuafuV2": "Native Medium and High body and yellow snake personally Read in all4 views; body hand/foot/ear closeups also reviewed. High body source5897b4bd7fa06e9122028c115e5981e6251cdd75a09bf60e01d172a13827e097 and High snake source5d0878e6d57bfc47447423406ba3e47bbdcece78e22e00df9b4902c95d81b1ee accepted as immutable source parts only. Bounded static assembly A/B/C completed and rejected by worker and parent actual closeups. Thumbs do not oppose the snake; fingers support an open loop without true grip, and local hand/wrist facets and face-normal opposition remain. Sources and full feet preserved. Final C SHA25604e494966b050889c8ad484fc018a0a7dc33a48127528c321784333c73523c73. No rig/runtime promotion.",
     "kuiV2": "Parent Read all4 views: hornless but still3legs. Rejected unmodified. Offline central-leg/belly reconstruction and one correction both rejected after root closeups: narrow graft-like upper leg, torso UV bands and creases. No High reference accepted.",
     "kuafuV1OfflineHands": "Rejected after one candidate and one correction. Worker found foot geometry accidentally removed by an unbounded hand-deletion predicate, plus palm UV seams and wrist collars. Neither derivative is reusable or accepted. Native v2 remains immutable and independent."
   },
-  "latestAutomaticApprovalBlock": {"job":"lu_fish-production-20261108-native-body-medium","submitted":false,"consumed":0,"reason":"Automatic approval requires explicit paid lu_fish coverage despite directly read original17 authorization and reconfirmation naming lu_fish. No retry or alternate execution attempted. Independent existing candidates continue."},
+  "latestAutomaticApprovalBlock": {
+    "job": "jimeng-production-20261114-native-human-v2-medium",
+    "submitted": false,
+    "consumed": 0,
+    "expectedCost": 0.5,
+    "reason": "Corrected986-character prompt request denied by automatic Real-World Transactions approval; requires explicit paid Jimeng coverage despite existing original17 authorization/reconfirmation. No further retry or alternate execution."
+  },
   "runtimeAssetsChanged": true,
-  "runtimeAssetStatus": "Xingxing v6 locally accepted with final app/default-shot review and ready flags true; main push/CI/production verification pending.",
-  "newBeastsMarkedReady": ["xingxing"],
+  "runtimeAssetStatus": "Xingxing v6 accepted, committed and pushed main; exact-SHA CI/deploy successful; production files/UI/narration/responsive verification passed and all5 images parent-reviewed.",
+  "newBeastsMarkedReady": [
+    "xingxing"
+  ],
   "readyCount": "46/62",
-  "latestVerifiedRelease": "a98e63ebb92eda0df8c5283da92a08874160ff2b",
+  "latestVerifiedRelease": "df2e439e19ccbb7ea2794f2dda0b2166676bc63e",
   "goalComplete": false,
-  "limits": "Generation, downloads, topology and numerical checks do not establish final acceptance. Jiaochong isolated head, Xingxing native body, Kuafu native body and single yellow snake High sources are accepted for further production only. Xingxing alone is locally accepted and ready; no new production release is claimed until its separate exact-SHA CI/deploy and production verification succeed. Raw evidence paths are local ignored diagnostic material."
+  "limits": "Generation, downloads, topology and numerical checks do not establish final acceptance. Xingxing alone is newly released and production-verified. Other accepted High parts are incomplete, rejected offline derivatives stay rejected, and 16 beasts plus previously rejected remakes remain unfinished. Raw evidence paths are local ignored diagnostic material.",
+  "productionVerification": {
+    "beast": "xingxing",
+    "sha": "df2e439e19ccbb7ea2794f2dda0b2166676bc63e",
+    "ci": "https://github.com/int64ago/shanhai/actions/runs/43464937076",
+    "deploy": "https://github.com/int64ago/shanhai/actions/runs/43464937166",
+    "exactShaWorkflowResults": "completed/success",
+    "productionReport": "raw/_build/continuation-20261113/xingxing-production-20261114/report.json",
+    "productionReportSha256": "6e6238df5c8f505ea61849a7be82547d17dcc4ef510d3d3b433e4e847c201167",
+    "productionVerification": "passed;9 files,3 UI actions,special return,narration play/stop,390/800 controls; parent Read all5 production images; full silhouette and white ears/grey skin clear",
+    "localChecks": "pnpm typecheck && pnpm validate && pnpm build; git diff --check; git lfs status; all passed",
+    "retainedDistEntry": "assets/index-DYbO9m0m.js"
+  },
+  "latestAutomaticApprovalBlockStatus": "Historical three entries resolved by actual human reconfirmation; current lu_fish and jimeng blocks remain unresolved.",
+  "currentAutomaticApprovalBlocks": [
+    {
+      "job": "lu_fish-production-20261108-native-body-medium",
+      "submitted": false,
+      "consumed": 0,
+      "reason": "Unresolved automatic approval denial recorded before Xingxing release"
+    },
+    {
+      "job": "jimeng-production-20261114-native-human-v2-medium",
+      "submitted": false,
+      "consumed": 0,
+      "expectedCost": 0.5,
+      "reason": "Corrected986-character prompt request denied by automatic Real-World Transactions approval; requires explicit paid Jimeng coverage despite existing original17 authorization/reconfirmation. No further retry or alternate execution."
+    }
+  ],
+  "offlineReviews20261114": [
+    {
+      "beast": "xixiyu",
+      "status": "rejected-as-offline-reference; no geometry correction attempted",
+      "report": "raw/_build/xixiyu-offline-review-20261114/visual-decision.json",
+      "reason": "Integrated native pectoral/belly fish fins and forked caudal membrane lack the selected long magpie feather-tail anatomy.",
+      "parentReviewed": [
+        "source_34.png",
+        "tail_root_side.png",
+        "pectoral_root_left.png"
+      ]
+    },
+    {
+      "beast": "yinglong",
+      "status": "one native-geometry trial rejected; no High request",
+      "report": "raw/_build/yinglong-offline-reference-20261114/review.json",
+      "candidateSha256": "1d18db336fa300467a125f6864eeec5d2e47635cda242fe14628395c77e3cab6",
+      "reason": "Shoulder lobes/groove and puckered scales remain; cranial spikes beside flattened scalp and dragged texture. Tail unfolds but thickness/texture density uneven.",
+      "parentReviewed": [
+        "view_34.png",
+        "close_shoulder_front.png",
+        "close_head_side.png"
+      ]
+    }
+  ]
 }

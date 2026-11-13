@@ -1,7 +1,7 @@
 {
   "id": "lu_fish-production-20261108-native-body-medium",
   "beast": "lu_fish",
-  "budget": 20,
+  "budget": 12,
   "tier": "Gen-2.5-Medium",
   "prompt": "LU, an ox-like mythical land animal with two LOW FLANK feathered wings and one snake tail. One complete organic animal: hornless ox head, natural bovine neck, withers, deep chest, rib cage, tucked flanks and round muscular rump; warm grey-brown short coat. Four distinct straight bovine legs, four cloven hooves planted, level back. Exactly two bird wings grow from the lower SIDE rib cage below the mid-flank, never from the spine. Each root is a broad muscular taper flowing directly out of the ribs, short dense coverts grading into layered flight feathers; wings spread slightly downward and outward, clear of legs, roots visible. One long round snake tail grows smoothly from sacrum, broad oval base tapering continuously to a slender curved tip, muted grey-green scales fading into coat. No ox tail, snake head or fins. Continuous rump and wing-root anatomy and color, no flat rear cap, pipe insertion, collar, pale pouch or detached pieces. Neutral pose, entire body visible; no props or base.",
   "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }

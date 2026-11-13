@@ -1,0 +1,8 @@
+{
+  "id": "jimeng-production-20261114-native-human-v2-medium",
+  "beast": "jimeng",
+  "budget": 12.5,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "JIMENG, complete standing adult HUMAN BODY with one Chinese DRAGON HEAD. Below the jaw: ordinary human anatomy, smooth warm grey skin, broad shoulders, softly rounded pectoral muscles and abdomen under unbroken skin. Blue-grey dragon scales only on head and upper neck; long dragon muzzle, dark eyes, two short backward horns, short mane. Fleshy neck blends into human shoulders. Exactly two arms, two legs, human hands and bare human feet. Straight relaxed knees, both soles flat at equal height, feet shoulder-width apart. Arms outward 35 degrees, hands clear of hips, palms forward. Each hand has exactly FIVE separate relaxed straight digits: four fingers fanned apart and one opposing thumb, open air between fingers down to roots. Each foot has FIVE distinct rounded toes. Plain human nails. Full crown, hands and feet visible. Short opaque ochre hip wrap. No external ribs, chest lattice, armor, body scales, claws, fists, fused digits, wings, tail, weapons, pedestal or scenery.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}
