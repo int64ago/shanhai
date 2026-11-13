@@ -1,0 +1,143 @@
+{
+  "beast": "zhuyan",
+  "date": "2026-11-13",
+  "status": "parent-reviewed-native-high-runtime",
+  "source": [
+    {
+      "book": "山海经·西山经·西次二经",
+      "text": "有獸焉，其狀如猿，而白首赤足，名曰朱厭，見則大兵。"
+    }
+  ],
+  "inferences": [
+    {
+      "item": "猿形与白首赤足据文；无尾、长臂屈膝、半直立姿势与体型比例为造型推断。",
+      "basis": "小次山条未规定尾巴、猿的具体种类、体量或站姿；本作选择无尾的猴猿形体。"
+    },
+    {
+      "item": "双手双足、各五指趾及手足轮廓均为设计补足；本作双手深灰，只有双足染红。",
+      "basis": "原文写赤足，本作采用深灰双手、踝至足趾朱红双足。肢体细节与指趾数量是据猴猿解剖补出的细节。"
+    },
+    {
+      "item": "白毛覆盖头顶、颊颏，身毛炭灰、面手深灰、双足朱红；色区边界与具体色阶为艺术推断。",
+      "basis": "白首与赤足是明文，其余配色、白毛覆盖方式及深浅未在本条写定。"
+    },
+    {
+      "item": "缓缓落足、抬首凝望为动作演绎；见则大兵保留为古籍中的战事征兆。",
+      "basis": "经文将现身与战事相联，未写操兵能力、战神职称或刚猛性情，动作节奏也未说明。"
+    }
+  ],
+  "transactions": [
+    {
+      "time": "2026-11-08T12:32:00.317Z",
+      "beast": "zhuyan",
+      "job": "zhuyan-production-20261108-v1",
+      "hash": "60dc7ed8aa60b381",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "5d91ca91-be72-42fa-baad-9a4c1d021fbe",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-13T12:40:37.887Z",
+      "beast": "zhuyan",
+      "job": "zhuyan-production-20261108-v1-high",
+      "hash": "a1bb7774cc9e1334",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "46ad1232-a5e7-407f-9946-10034479208f",
+      "consumed": 1
+    }
+  ],
+  "totalConsumed": 1.5,
+  "highSource": {
+    "path": "raw/zhuyan-production-20261108-v1-high/base_high_pbr.glb",
+    "bytes": 21383472,
+    "sha256": "83f7ef1fb4038f74538447b20df30dbcffba5ddc7614bd741a59b05a4afdcc6a",
+    "originalTriangles": 50000,
+    "originalVertices": 40726,
+    "uuid": "46ad1232-a5e7-407f-9946-10034479208f",
+    "textureModeAddon": false,
+    "immutable": true
+  },
+  "highRequest": {
+    "path": "pipeline/rodin/jobs/zhuyan-production-20261108-v1-high.json",
+    "tier": "Gen-2.5-Extreme-High",
+    "images": [
+      {
+        "path": "concept/zhuyan-production-20261108-v1/corrected/view_34.png",
+        "bytes": 1488388,
+        "sha256": "e0837dade1d6f3d6d7e844eed8e811bc4f0b7c56c75426c9b79fb118bce4e22e"
+      },
+      {
+        "path": "concept/zhuyan-production-20261108-v1/corrected/view_side.png",
+        "bytes": 1320797,
+        "sha256": "198240b7c762a8ab1492c9a15b9c0bdb18f85a243a5f86dbe49e907281d5158d"
+      },
+      {
+        "path": "concept/zhuyan-production-20261108-v1/corrected/view_front.png",
+        "bytes": 1516287,
+        "sha256": "61bc248b08f877c1272c55cd86f4c401b1f51131daaa1a403ecc6205b3b29c5e"
+      },
+      {
+        "path": "concept/zhuyan-production-20261108-v1/corrected/view_back.png",
+        "bytes": 1450094,
+        "sha256": "05fd1a600fd7c04cd0fffee33718b1afd6b7d10cdb703a4e18a15122d66553e5"
+      }
+    ]
+  },
+  "runtime": {
+    "path": "public/models/zhuyan/body.glb",
+    "bytes": 714268,
+    "sha256": "2df672b98b0d74762bc82040df5126c8581185ed87cf16eff3a250d8a747de6d",
+    "triangles": 50000,
+    "clips": [
+      "idle",
+      "walk",
+      "special"
+    ],
+    "bones": 17,
+    "geometry": "Native High anatomy preserved; no digits, limbs or donor parts added",
+    "compression": "Meshopt high +2048 WebP; simplify/flatten/join/instance/palette false"
+  },
+  "changes": [
+    "Positive uniform normalization, whole left sole lowered1.34983mm with shin taper",
+    "Spatial and connected topology masks independent of skin weights protect complete hands, head and soles",
+    "17 bones; idle4s/walk2.4s/special4s; runtime radius1m speed.08m/s circular root matching baked inverse stance"
+  ],
+  "actualAppQA": {
+    "path": "raw/_build/zhuyan-native-high-app-20261113-v2/report.json",
+    "bytes": 85555,
+    "sha256": "68d9854c00bd08ee80a43e68437872d8c4bd008288897fb0a794cc2b3d644aa1"
+  },
+  "scripts": [
+    {
+      "path": "pipeline/blender/rig_zhuyan_native.py",
+      "bytes": 26458,
+      "sha256": "c1b1951e4c3ee22c4fe171c153425bafdde02fa7460bd32b2cabd333648dbdbd"
+    },
+    {
+      "path": "scripts/qa-zhuyan.mjs",
+      "bytes": 13774,
+      "sha256": "41bac7f9abfdf0e538735a0712f91bd0a1fe5de98377be4856992e13c8033aab"
+    },
+    {
+      "path": "scripts/qa-zhuyan-app.mjs",
+      "bytes": 26115,
+      "sha256": "d4834c152a674cf137a0e65f60677a8f4d4b369c52b42d7cb553f40de6ddad27"
+    },
+    {
+      "path": "src/beasts/zhuyan/Zhuyan.tsx",
+      "bytes": 4617,
+      "sha256": "a006fde734d021026ff578f531b83de0bb85891a1f08f2bbff2d18da82a86347"
+    }
+  ],
+  "narration": {
+    "provenance": "pipeline/provenance/source-narration-20261113.json",
+    "changedByThisModelRelease": false
+  },
+  "acceptance": "Parent reviewed source anatomy, actual ink poses, real Stage images and app QA; readiness is independent of download or numerical success.",
+  "limitations": [
+    "Native ape retains broad chest/shoulder muscles and abrupt wrist fur boundaries; accepted as the selected gorilla-like stylization after visual review",
+    "Fingers preserve native curl rigidly; no individual digit animation",
+    "Compressed contact error is submillimetre; no physics simulation"
+  ],
+  "deployment": "Pending separate main push, exact-SHA CI/deploy and production verification; not claimed by local acceptance."
+}

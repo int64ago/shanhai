@@ -2,6 +2,15 @@
   "_note": "第三方素材授权登记；上线前统一核对。音频素材到位后同样登记在这里。",
   "assets": [
     {
+      "path": "public/models/zhuyan/body.glb",
+      "source": "Hyper3D Rodin 两阶段生成；Medium 0.5积分，矫正四视图后 Gen-2.5-Extreme-High / HighPack 1积分，共1.5积分，未加 extreme-high 贴图。原始High 50000三角面完整保留，双耳、双手双足及各五指趾均为原生解剖；正比例归一与左整足约1.35mm接地修正，17骨 idle/walk/special，完整手部与头颏刚性保护，圆周支撑足逆向烘焙。Meshopt/WebP2048，不自动减面、扁平化、合并或实例化。原始SHA256、任务UUID、实际主场景落足/切换/资源释放与视觉证据见 pipeline/provenance/zhuyan.json。",
+      "sourceComponents": [
+        {"path": "raw/zhuyan-production-20261108-v1-high/base_high_pbr.glb", "job": "zhuyan-production-20261108-v1-high", "tier": "Gen-2.5-Extreme-High", "uuid": "46ad1232-a5e7-407f-9946-10034479208f", "sha256": "83f7ef1fb4038f74538447b20df30dbcffba5ddc7614bd741a59b05a4afdcc6a"}
+      ],
+      "author": "Hyper3D Rodin AI生成；项目离线绑定动画与工笔水墨渲染",
+      "license": "沿用项目既有Hyper3D Rodin输出条款"
+    },
+    {
       "path": "public/audio/narration/{xingxing,lu_fish,zhuyan,shuhu,bashe,lingyu,kui}.mp3",
       "source": "2026-11-13 按核源修正后的 src/app/beasts.ts 故事重新生成；pipeline/tts/narrate.ts，CosyVoice v2 / longsanshu，MP3 编码 22050 Hz。逐条原文与设计推断保存在 content/beasts/<id>.json；文本、音频哈希与浏览器实际解码播放停止证据见 pipeline/provenance/source-narration-20261113.json。语音修订不表示三维模型已完成。",
       "author": "项目原创考据解说词；百炼龙三叔合成",

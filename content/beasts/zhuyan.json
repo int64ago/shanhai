@@ -27,9 +27,10 @@
     }
   ],
   "production": {
-    "status": "in-progress",
-    "modelReady": false,
-    "reason": "已核对古籍原文与设计推断，并生成对应评书；三维造型、绑定与视觉验收尚未完成。",
+    "status": "verified-native-high",
+    "modelReady": true,
+    "reason": "原生双耳、双手双足各五指趾与白首赤足已逐面核查；17骨绑定、完整手颏保护、三轮实际落足及主场景动作切换和重复挂载已验收。",
+    "modelProvenance": "pipeline/provenance/zhuyan.json",
     "narrationProvenance": "pipeline/provenance/source-narration-20261113.json"
   },
   "editionNotes": [

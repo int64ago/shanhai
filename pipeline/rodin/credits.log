@@ -132,3 +132,12 @@
 {"time":"2026-11-08T12:55:06.189Z","beast":"luwu","job":"luwu-regen-20261108-sol-tail-v2-taper-high","hash":"3a58b6cc0824a41d","tier":"Gen-2.5-Extreme-High","uuid":"bdf3f562-de6a-4e5f-905a-1c851a544822","consumed":1}
 {"time":"2026-11-08T12:55:25.234Z","beast":"bashe","job":"bashe-production-20261108-v2","hash":"1c267711fa8ab522","tier":"Gen-2.5-Medium","uuid":"c7c2e67f-b140-47ba-bb1f-737411b91601","consumed":0.5}
 {"time":"2026-11-08T13:01:14.692Z","beast":"changyou","job":"changyou-regen-20261108-sol-native-four-ear-high","hash":"8bb02913672c2395","tier":"Gen-2.5-Extreme-High","uuid":"63c13540-d366-4258-9e57-30087d5ffd0c","consumed":1}
+{"time":"2026-11-13T12:40:37.887Z","beast":"zhuyan","job":"zhuyan-production-20261108-v1-high","hash":"a1bb7774cc9e1334","tier":"Gen-2.5-Extreme-High","uuid":"46ad1232-a5e7-407f-9946-10034479208f","consumed":1}
+{"time":"2026-11-13T12:40:38.221Z","beast":"bashe","job":"bashe-production-20261108-v2-high","hash":"1d2e53fba6572a1e","tier":"Gen-2.5-Extreme-High","uuid":"7ca14d0b-c355-4670-8843-36cad3316dbd","consumed":1}
+{"time":"2026-11-13T12:44:33.782Z","beast":"xingxing","job":"xingxing-production-20261108-v1","hash":"f922f67b47dc4c29","tier":"Gen-2.5-Medium","uuid":"2260c183-8ce6-4d85-92b0-57d6ceeecf09","consumed":0.5}
+{"time":"2026-11-13T12:45:21.312Z","beast":"lingyu","job":"lingyu-production-20261108-v1","hash":"dfca952b8ab97be5","tier":"Gen-2.5-Medium","uuid":"12ac6fcf-75d0-43cf-bb98-7771b4870e78","consumed":0.5}
+{"time":"2026-11-13T12:45:46.663Z","beast":"yayu","job":"yayu-regen-20261108-sol-headneck-v3-medium","hash":"b99d45def7629a15","tier":"Gen-2.5-Medium","uuid":"9151b138-b227-41a9-b10b-d472f1666fdb","consumed":0.5}
+{"time":"2026-11-13T12:46:20.469Z","beast":"shuhu","job":"shuhu-production-20261108-winged-horse-trunk-medium","hash":"d9e9066980be31ed","tier":"Gen-2.5-Medium","uuid":"b4a1e1e9-5cee-4b51-86c1-bd935886a0a0","consumed":0.5}
+{"time":"2026-11-13T12:48:12.149Z","beast":"luwu","job":"luwu-regen-20261108-sol-standing-androsphinx-medium","hash":"8d435a6586ca9bc5","tier":"Gen-2.5-Medium","uuid":"fbd8f89d-e0a4-4089-8e90-3649d638343e","consumed":0.5}
+{"time":"2026-11-13T12:48:29.157Z","beast":"yinglong","job":"yinglong-production-20261108-body-medium","hash":"d5b15db8f87f9db0","tier":"Gen-2.5-Medium","uuid":"60b347b6-8fea-49e0-a80f-0f26f1d03003","consumed":0.5}
+{"time":"2026-11-13T12:49:37.986Z","beast":"jimeng","job":"jimeng-production-20261108-body-medium","hash":"4a83342ce1269b61","tier":"Gen-2.5-Medium","uuid":"de3d9b12-dde8-4cb8-91ba-edd29265b7dd","consumed":0.5}

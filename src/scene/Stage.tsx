@@ -54,6 +54,7 @@ import { Yayu } from '../beasts/yayu/Yayu'
 import { Xuangui } from '../beasts/xuangui/Xuangui'
 import { Zhubieyu } from '../beasts/zhubieyu/Zhubieyu'
 import { Changyou } from '../beasts/changyou/Changyou'
+import { Zhuyan } from '../beasts/zhuyan/Zhuyan'
 import { FeiyiSnake } from '../beasts/feiyi_snake/FeiyiSnake'
 import { CameraRig } from './CameraRig'
 
@@ -162,6 +163,8 @@ export function Stage() {
           <Xuangui />
         ) : selected === 'zhubieyu' ? (
           <Zhubieyu />
+        ) : selected === 'zhuyan' ? (
+          <Zhuyan />
         ) : selected === 'changyou' ? (
           <Changyou />
         ) : selected === 'feiyi_snake' ? (

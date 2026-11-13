@@ -1,0 +1,169 @@
+{
+  "date": "2026-11-13",
+  "scope": "Exactly nine completed Rodin requests authorized with seven narration replacements by direct human selection; no unlisted retries implied.",
+  "successfulTransactions": 9,
+  "actualConsumed": 5.5,
+  "entries": [
+    {
+      "time": "2026-11-13T12:40:37.887Z",
+      "beast": "zhuyan",
+      "job": "zhuyan-production-20261108-v1-high",
+      "hash": "a1bb7774cc9e1334",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "46ad1232-a5e7-407f-9946-10034479208f",
+      "consumed": 1,
+      "source": {
+        "path": "raw/zhuyan-production-20261108-v1-high/base_high_pbr.glb",
+        "bytes": 21383472,
+        "sha256": "83f7ef1fb4038f74538447b20df30dbcffba5ddc7614bd741a59b05a4afdcc6a"
+      },
+      "disposition": "parent-accepted-after-actual-app-review",
+      "reason": "Native anatomy and actual Stage poses reviewed; three circular gait cycles, complete hand/head/foot rigidity, special duration and three remount/disposal checks passed. Separate release/deployment verification follows.",
+      "evidence": "pipeline/provenance/zhuyan.json"
+    },
+    {
+      "time": "2026-11-13T12:40:38.221Z",
+      "beast": "bashe",
+      "job": "bashe-production-20261108-v2-high",
+      "hash": "1d2e53fba6572a1e",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "7ca14d0b-c355-4670-8843-36cad3316dbd",
+      "consumed": 1,
+      "source": {
+        "path": "raw/bashe-production-20261108-v2-high/base_high_pbr.glb",
+        "bytes": 21990676,
+        "sha256": "a34b5e9dd91ba14e12693bb948d6b00d9f2e654a0e9a49473bcbeb995f0263d4"
+      },
+      "disposition": "candidate-under-actual-app-review",
+      "reason": "Offline High rig reviewed; actual Stage/lifecycle/transition evidence and final parent acceptance pending.",
+      "evidence": "raw/_build/bashe-high-candidate-20261113-d/rig-review.json"
+    },
+    {
+      "time": "2026-11-13T12:44:33.782Z",
+      "beast": "xingxing",
+      "job": "xingxing-production-20261108-v1",
+      "hash": "f922f67b47dc4c29",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "2260c183-8ce6-4d85-92b0-57d6ceeecf09",
+      "consumed": 0.5,
+      "source": {
+        "path": "raw/xingxing-production-20261108-v1/base_basic_pbr.glb",
+        "bytes": 2311268,
+        "sha256": "e4a04f50237e93eeac17e69d9d6f0be25c6d0457ab9903d4d8b72cbffc70da82"
+      },
+      "disposition": "rejected-after-rendered-anatomy-review",
+      "reason": "Joined finger slabs and webbed/merged middle toes in actual closeups.",
+      "evidence": "raw/_build/approved-medium-review-20261113/review.json"
+    },
+    {
+      "time": "2026-11-13T12:45:21.312Z",
+      "beast": "lingyu",
+      "job": "lingyu-production-20261108-v1",
+      "hash": "dfca952b8ab97be5",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "12ac6fcf-75d0-43cf-bb98-7771b4870e78",
+      "consumed": 0.5,
+      "source": {
+        "path": "raw/lingyu-production-20261108-v1/base_basic_pbr.glb",
+        "bytes": 2500196,
+        "sha256": "d96eaa037b44577e65bc91b4f3d1dc21071e2e743d0f623f4924c5677d8294d7"
+      },
+      "disposition": "rejected-after-rendered-anatomy-review",
+      "reason": "Upright humanoid fish, four prominent digits and tail membrane around legs; selected horizontal fusiform anatomy absent.",
+      "evidence": "raw/_build/approved-medium-review-20261113/review.json"
+    },
+    {
+      "time": "2026-11-13T12:45:46.663Z",
+      "beast": "yayu",
+      "job": "yayu-regen-20261108-sol-headneck-v3-medium",
+      "hash": "b99d45def7629a15",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "9151b138-b227-41a9-b10b-d472f1666fdb",
+      "consumed": 0.5,
+      "source": {
+        "path": "raw/yayu-regen-20261108-sol-headneck-v3-medium/base_basic_pbr.glb",
+        "bytes": 1807892,
+        "sha256": "1f9e1aad2005ce6c0cf5fb062f79482d63b75760c9d34092ff8c29b413564297"
+      },
+      "disposition": "rejected-after-rendered-anatomy-review",
+      "reason": "Planar cut cap, pale rim and pointed throat bib instead of rounded short thick bovine neck.",
+      "evidence": "raw/_build/approved-medium-review-20261113/review.json"
+    },
+    {
+      "time": "2026-11-13T12:46:20.469Z",
+      "beast": "shuhu",
+      "job": "shuhu-production-20261108-winged-horse-trunk-medium",
+      "hash": "d9e9066980be31ed",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "b4a1e1e9-5cee-4b51-86c1-bd935886a0a0",
+      "consumed": 0.5,
+      "source": {
+        "path": "raw/shuhu-production-20261108-winged-horse-trunk-medium/base_basic_pbr.glb",
+        "bytes": 2902244,
+        "sha256": "ac786fbbabb98cf1787a72036aebefb7f8bb2804ef7d79ed20ab955ba82f5aa6"
+      },
+      "disposition": "rejected-after-rendered-anatomy-review",
+      "reason": "Open-looking circular neck top, branching tail tip, pale tail-root band and angular hoof/pastern slivers.",
+      "evidence": "raw/_build/approved-medium-review-20261113/review.json"
+    },
+    {
+      "time": "2026-11-13T12:48:12.149Z",
+      "beast": "luwu",
+      "job": "luwu-regen-20261108-sol-standing-androsphinx-medium",
+      "hash": "8d435a6586ca9bc5",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "fbd8f89d-e0a4-4089-8e90-3649d638343e",
+      "consumed": 0.5,
+      "source": {
+        "path": "raw/luwu-regen-20261108-sol-standing-androsphinx-medium/base_basic_pbr.glb",
+        "bytes": 2404308,
+        "sha256": "c9a0d637db56c100cadbdfee6ca5b6f181bff29cf045fad6d01befcfc74d6533"
+      },
+      "disposition": "rejected-after-rendered-anatomy-review",
+      "reason": "Tiger face, gold crown and native tail conflict with human-head tailless mother-part brief.",
+      "evidence": "raw/_build/approved-medium-review-20261113/review.json"
+    },
+    {
+      "time": "2026-11-13T12:48:29.157Z",
+      "beast": "yinglong",
+      "job": "yinglong-production-20261108-body-medium",
+      "hash": "d5b15db8f87f9db0",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "60b347b6-8fea-49e0-a80f-0f26f1d03003",
+      "consumed": 0.5,
+      "source": {
+        "path": "raw/yinglong-production-20261108-body-medium/base_basic_pbr.glb",
+        "bytes": 3812404,
+        "sha256": "745c237106860236eaacfd1d43ad32b9ca2fb7d3e74d945c093ce96ae4899cc7"
+      },
+      "disposition": "rejected-after-rendered-anatomy-review",
+      "reason": "Limb buds, head horn/spike projections and strongly returning tail bend conflict with wingless limbless trunk brief.",
+      "evidence": "raw/_build/approved-medium-review-20261113/review.json"
+    },
+    {
+      "time": "2026-11-13T12:49:37.986Z",
+      "beast": "jimeng",
+      "job": "jimeng-production-20261108-body-medium",
+      "hash": "4a83342ce1269b61",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "de3d9b12-dde8-4cb8-91ba-edd29265b7dd",
+      "consumed": 0.5,
+      "source": {
+        "path": "raw/jimeng-production-20261108-body-medium/base_basic_pbr.glb",
+        "bytes": 2305012,
+        "sha256": "32a9a4a595f5aa925376249029a5df882d2769204b2b9f8dd63536994b03ca80"
+      },
+      "disposition": "rejected-after-rendered-anatomy-review",
+      "reason": "External chest lattice, overlapping fingers and strongly scaled limbs conflict with skin-covered human torso and five clear fingers.",
+      "evidence": "raw/_build/approved-medium-review-20261113/review.json"
+    }
+  ],
+  "nonTransaction": {
+    "job": "jiaochong-production-20261108-body-medium",
+    "status": "automatic-approval-denied-before-execution",
+    "submitted": false,
+    "consumed": 0,
+    "reason": "Explicit authorization required for this additional paid request; do not retry through another route."
+  },
+  "limits": "Generation/download and numeric checks do not establish anatomy or production readiness. Seven Mediums rejected. Zhuyan accepted after actual app and parent image review; Bashe remains pending final framing review. Separate release/deployment verification is required for each accepted model. Raw original downloads retained unchanged."
+}
