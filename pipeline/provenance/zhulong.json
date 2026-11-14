@@ -825,8 +825,23 @@
     }
   ],
   "deployment": {
-    "verified": false,
-    "reason": "Accepted runtime committed first; exact-SHA Actions and actual production verification follow push."
+    "verified": true,
+    "beast": "zhulong",
+    "sha": "f6a603dba218d028a6acfb7d706bb854fabbfc2e",
+    "ci": {
+      "id": 43602384848,
+      "status": "completed",
+      "conclusion": "success"
+    },
+    "deploy": {
+      "id": 43602384837,
+      "status": "completed",
+      "conclusion": "success"
+    },
+    "productionReport": "raw/_build/zhulong-production-release-20261114/report.json",
+    "productionReportSha256": "ecc562bbba19334b30aa605e392da87bd582f7eaf651b35ccfb34ef4a160ca27",
+    "passed": true,
+    "parentPersonallyReadFiveProductionScreenshots": true
   },
   "publicStageQA": {
     "path": "raw/_build/zhulong-stage-qa-20261114-public-v1/report.json",

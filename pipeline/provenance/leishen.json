@@ -1211,11 +1211,59 @@
     "Native151 zero/near-zero facets retained; no topology/manifold repair.",
     "Native exact attribute preservation applies to uncompressed rig only; runtime Meshopt/WebP2048 is lossy. Compressed independent rest max0.2044mm, normal max0.09495degrees, UV component max0.0001363.",
     "120Hz motion extrema are sampled, not analytical proof. Actual Stage edge audit excludes sub5mm compression-noise-dominated edges; independent offline compressed QA provides finer source-edge audit.",
-    "Candidate QA used explicit GLB/new audio routes and local readiness override. Formal public QA subsequently passed with actual served model/audio, true committed-intent readiness and no routes/override. Exact-SHA deployed production verification pending."
+    "Candidate QA used explicit GLB/new audio routes and local readiness override. Formal public QA subsequently passed without routes/override, followed by exact-SHA deployed HTTP/UI verification and parent Read of all five production screenshots."
   ],
   "deployment": {
-    "verified": false,
-    "status": "pending independent commit, push main, exact-SHA workflows and actual production verification"
+    "verified": true,
+    "beast": "leishen",
+    "sha": "3566af907bbfd2bc68385ffc285c6c04788d4c7f",
+    "ci": {
+      "id": 43614924374,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/int64ago/shanhai/actions/runs/43614924374"
+    },
+    "deploy": {
+      "id": 43614924285,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/int64ago/shanhai/actions/runs/43614924285"
+    },
+    "productionReport": "raw/_build/leishen-production-release-20261115/report.json",
+    "productionReportSha256": "20040c05134b04719fcfa29a43843427d714711f5041ef0775a3d5f6ee75baba",
+    "passed": true,
+    "parentPersonallyReadFiveProductionScreenshots": true,
+    "status": "exact-SHA main/CI/Deploy and actual production verified",
+    "httpMatchedFiles": 9,
+    "productionImages": [
+      {
+        "path": "raw/_build/leishen-production-release-20261115/leishen-idle.png",
+        "bytes": 946544,
+        "sha256": "1cc9131194348bba484b26ae5048fb74db8610326a6d1b63901af153a9ee8d02"
+      },
+      {
+        "path": "raw/_build/leishen-production-release-20261115/leishen-walk.png",
+        "bytes": 946543,
+        "sha256": "c5f80c3a6d1ead502f0b3af8667b16b17d91d4d9c3f45cf06a98e382dfbe32bb"
+      },
+      {
+        "path": "raw/_build/leishen-production-release-20261115/leishen-special.png",
+        "bytes": 946176,
+        "sha256": "5986baa44517a830c6e459f4fe31b1d9f9f4508d0efa9b67cd3256cdfebe5589"
+      },
+      {
+        "path": "raw/_build/leishen-production-release-20261115/leishen-390.png",
+        "bytes": 280919,
+        "sha256": "facfa271637af86fc19ee01f1e1d1d626cd5d1f9cf4b514c248e04582e82b357"
+      },
+      {
+        "path": "raw/_build/leishen-production-release-20261115/leishen-800.png",
+        "bytes": 551017,
+        "sha256": "1c2940fd1f6c7f51c0e2c92e2154a334dae27986ef09ec2084d32b53b1088162"
+      }
+    ],
+    "specialReturnedToIdle": true,
+    "narrationPlayedAndStopped": true
   },
   "standardPublicScreenshots": {
     "parentPersonallyRead": true,
