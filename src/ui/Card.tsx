@@ -42,7 +42,7 @@ export function Card() {
 
   return (
     <>
-      <aside className="card" ref={card}>
+      <aside className="card" data-beast={selected} ref={card}>
         <div className="card-head">
           <h2 className="card-name">{beast.name}</h2>
           <span className="card-pinyin">{beast.pinyin}</span>

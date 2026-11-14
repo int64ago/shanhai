@@ -1,0 +1,8 @@
+{
+  "id": "yinglong-production-20261114-single-tail-horizontal-v4-medium",
+  "beast": "yinglong",
+  "budget": 12.5,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "A single long winged snake flying HORIZONTALLY. One dragon-like head at the front, ONE continuous sky-blue scaled snake body, ONE pointed tail at the back. The body is seven head lengths, stretched horizontally in a gentle S. Two large ivory eagle wings grow from the back just behind the head, spread left and right. Broad living wing shoulders blend into the snake skin, short coverts transition into layered flight feathers. Rounded scaly trunk and pale belly. The lower body is one unbranched snake, NEVER divided into legs or multiple tails. No legs, feet, arms, horns, fins, forked body, coils or pedestal. Complete head, both wings and single tail visible. Neutral three-quarter view, natural animal anatomy.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

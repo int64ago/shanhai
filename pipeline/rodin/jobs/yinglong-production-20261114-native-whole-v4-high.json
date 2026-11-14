@@ -1,0 +1,14 @@
+{
+  "id": "yinglong-production-20261114-native-whole-v4-high",
+  "beast": "yinglong",
+  "budget": 12.5,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "One complete winged serpentine dragon matching all four reference views. Preserve one long horizontal sky-blue scaled trunk, one dragon-like head, one unbranched tapering pointed tail and exactly two ivory feather wings. Keep the slender continuous shallow-S body and symmetrical spread wings. Broad native wing shoulders blend organically into the upper lateral trunk; short fine scale-like coverts transition into overlapping ivory feather coverts and long layered flight feathers, no abrupt cap or plate edge. Rounded head and muzzle with dark living eyes, pale belly scutes. Complete organic animal with flowing neck, smooth wing-root tissue and clean intact feather tips. No legs, feet, arms, horns, extra tails, split trunk, extra wings, pedestal or props. Maintain reference proportions and complete head-to-tail and both-wing silhouettes.",
+  "images": [
+    "concept/yinglong/production-20261114-native-whole-v4/view_34.png",
+    "concept/yinglong/production-20261114-native-whole-v4/view_side.png",
+    "concept/yinglong/production-20261114-native-whole-v4/view_front.png",
+    "concept/yinglong/production-20261114-native-whole-v4/view_back.png"
+  ],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000, "addons": "HighPack" }
+}

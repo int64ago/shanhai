@@ -1,0 +1,14 @@
+{
+  "id": "yinglong-production-20261114-smooth-body-v2-high",
+  "beast": "yinglong",
+  "budget": 12.5,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "One complete Chinese dragon BODY matching the four reviewed views, for later TWO feather wings. Preserve native dragon head, dark eyes, rounded muzzle, low flat brow/crown scale plates, long continuously rounded torso, pale belly scutes, blue-green fine overlapping scales and ONE complete tapered pointed tail. Preserve the elongated open shallow S silhouette with head and tip widely separated. The only two small lateral shoulder-root volumes are rounded internal cores for the future two wing roots, never feet or exposed additional appendages. Improve natural scale detail and smooth organic neck/belly/rump transitions while preserving proportions and silhouette. No native feather wings, new arms, hands, legs, feet, claws, side fins, extra shoulder lobes, long horns, antlers, additional heads or tails, loop, coil, self-contact, flat ribbon body, props or pedestal. Entire head-to-tip body visible.",
+  "images": [
+    "concept/yinglong/production-20261114-smooth-body-v2/view_34.png",
+    "concept/yinglong/production-20261114-smooth-body-v2/view_side.png",
+    "concept/yinglong/production-20261114-smooth-body-v2/view_front.png",
+    "concept/yinglong/production-20261114-smooth-body-v2/view_back.png"
+  ],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000, "addons": "HighPack" }
+}

@@ -1,0 +1,8 @@
+{
+  "id": "yinglong-production-20261114-smooth-body-v2-medium",
+  "beast": "yinglong",
+  "budget": 12.5,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE continuous wingless limbless Chinese dragon, a smooth elongated eel-like rounded BODY with a DRAGON HEAD and a steadily tapered pointed tail. Fully extended horizontal shallow S shape, length about10 times body thickness, complete head at left and complete thin tail tip far to right with wide clear separation. Muted blue-green fine overlapping scales, pale belly. Dragon face with long scaled muzzle, dark eyes, strong brows, short whiskers, smooth rounded crown and cheeks. Unbroken rounded body sides flow evenly from neck through belly and rump, subtle broad smooth shoulder skin for later attached wings. Body cross sections stay round with steady thickness changes. No legs, feet, limb buds, side lobes, shoulder knobs, wings, fins, horns, cranial spikes, antlers, sockets, holes, collars, ring, loop, coil, folded-back tail, self-contact, ribbon body, base or scenery. Natural volumetric organic dragon skin. Entire isolated body clearly visible.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

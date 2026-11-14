@@ -1,0 +1,721 @@
+{
+  "beast": "yinglong",
+  "date": "2026-11-14",
+  "status": "parent-reviewed-native-high-runtime",
+  "source": [
+    {
+      "book": "山海經·大荒東經",
+      "text": "大荒東北隅中，有山名曰凶犁土丘。應龍處南極，殺蚩尤與夸父，不得復上，故下數旱。旱而為應龍之狀，乃得大雨。"
+    },
+    {
+      "book": "山海經·大荒北經",
+      "text": "應龍已殺蚩尤，又殺夸父，乃去南方處之，故南方多雨。"
+    },
+    {
+      "book": "山海經·大荒北經",
+      "text": "黄帝乃令應龍攻之冀州之野。應龍畜水。"
+    }
+  ],
+  "inferences": [
+    {
+      "item": "有翼参考郭注，双羽翼为设计选择",
+      "basis": "四库本卷十四郭璞注有龍有翼者也，属于注释，与正文分列。双翼、羽翼形制、肩侧布局、翼展与拍动均属设计补足，郭注未规定这些细节。"
+    },
+    {
+      "item": "细长龙躯、龙首与肢角配置",
+      "basis": "正文未逐项写头形、角须、足数、趾数、鳞片、尾形或躯干比例。完整龙首、颈腹长躯、渐细尖尾、无足无角及伸展浅S姿态均属设计选择；原文没有明确无足无角。"
+    },
+    {
+      "item": "苍青、浅腹与素白羽翼",
+      "basis": "所引正文未记配色，具体蓝绿色阶、浅色腹鳞、素白翼与鳞羽过渡均属艺术设色。"
+    },
+    {
+      "item": "行波、展翼与风雨演绎",
+      "basis": "畜水、旱雨为叙事依据；行波、展翼、鸣声与云雨表现属于艺术演绎。女魃止雨在原文中另有主体，禹尾画地导水与展翼即生风雨雷电均不见于这些所引正文。"
+    }
+  ],
+  "transactions": [
+    {
+      "time": "2026-11-13T12:48:29.157Z",
+      "beast": "yinglong",
+      "job": "yinglong-production-20261108-body-medium",
+      "hash": "d5b15db8f87f9db0",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "60b347b6-8fea-49e0-a80f-0f26f1d03003",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-14T02:07:49.064Z",
+      "beast": "yinglong",
+      "job": "yinglong-production-20261114-smooth-body-v2-medium",
+      "hash": "711284382cfa28cb",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "f4c2e5b1-1767-4f4c-90c1-e8668d87e8c2",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-14T02:28:29.630Z",
+      "beast": "yinglong",
+      "job": "yinglong-production-20261114-smooth-body-v2-high",
+      "hash": "acae54c6f07f27d6",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "b390fde4-38b0-4262-a501-dbaa8b2ce5a2",
+      "consumed": 1
+    },
+    {
+      "time": "2026-11-14T02:28:48.281Z",
+      "beast": "yinglong",
+      "job": "yinglong-production-20261108-wing-medium",
+      "hash": "198f095d02e982af",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "b4894fa0-8caa-4246-b992-6745e07ce6bc",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-14T05:37:36.599Z",
+      "beast": "yinglong",
+      "job": "yinglong-production-20261114-native-winged-serpent-v3-medium",
+      "hash": "4329faefae39aabc",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "1bc4f38c-bbc1-4b0b-ba12-b95d9890b675",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-14T05:45:43.175Z",
+      "beast": "yinglong",
+      "job": "yinglong-production-20261114-single-tail-horizontal-v4-medium",
+      "hash": "894ade9be7f5422d",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "dd34d54c-9926-489b-a83a-c7d5869a880b",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-14T09:51:18.541Z",
+      "beast": "yinglong",
+      "job": "yinglong-production-20261114-native-whole-v4-high",
+      "hash": "881a11fed6f12435",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "8a57e6ea-97b7-4f2f-8b64-345aa1ff7ae0",
+      "consumed": 1
+    }
+  ],
+  "lifetimeConsumed": 4.5,
+  "newCreditsAgainstFixed143LineBaseline": 4.0,
+  "highSource": {
+    "path": "raw/yinglong-production-20261114-native-whole-v4-high/base_high_pbr.glb",
+    "bytes": 27097416,
+    "sha256": "ac09ad235ef121212c695c54d8593234212df4d5a93818df113ff8002ab9eb00",
+    "uuid": "8a57e6ea-97b7-4f2f-8b64-345aa1ff7ae0",
+    "originalVertices": 47452,
+    "originalTriangles": 50000,
+    "immutable": true,
+    "textureModeAddon": false
+  },
+  "highRequest": {
+    "path": "pipeline/rodin/jobs/yinglong-production-20261114-native-whole-v4-high.json",
+    "bytes": 1430,
+    "sha256": "c47ee46b04f2e72a266ab1e9ec3a2227a3deef8a8874cb18be830115a3524120",
+    "images": [
+      {
+        "path": "concept/yinglong/production-20261114-native-whole-v4/view_34.png",
+        "bytes": 508805,
+        "sha256": "d59dca6886698371ff7436cba38007930120e0b950160be8a05d4f29404569a9"
+      },
+      {
+        "path": "concept/yinglong/production-20261114-native-whole-v4/view_side.png",
+        "bytes": 511546,
+        "sha256": "432976e926b50a2a127d1c6bd0549e575f24fa46a06be101b940e5eefbed8443"
+      },
+      {
+        "path": "concept/yinglong/production-20261114-native-whole-v4/view_front.png",
+        "bytes": 512638,
+        "sha256": "1966e4e6036e6aee27d1de6d7db82ff5f299319e1f56e538eee390393ca1caf4"
+      },
+      {
+        "path": "concept/yinglong/production-20261114-native-whole-v4/view_back.png",
+        "bytes": 500063,
+        "sha256": "d65da766b186c5c87cded2a336409aa5f773b82ff8e2a7e72beff23b79b88b65"
+      }
+    ]
+  },
+  "calibration": {
+    "path": "pipeline/provenance/yinglong-calibration.json",
+    "bytes": 7589,
+    "sha256": "3c924b8c9fc311ea85066d97aef768530f448147e262206ff6fc3e27cd12a2d3"
+  },
+  "rigRecipe": {
+    "path": "pipeline/blender/rig_yinglong_native.py",
+    "bytes": 61626,
+    "sha256": "fac74a81862fe113dca4c4fc47a44d1ba41a2b1718b9db0c623e859d688d16a9"
+  },
+  "riggedCandidate": {
+    "path": "raw/_build/yinglong-native-rig-20261114/rigged.glb",
+    "bytes": 36308136,
+    "sha256": "c4cda60cbf83e01484767d2d765559d2e18cb25204e3a72d84baa1c685c6f18a"
+  },
+  "runtime": {
+    "path": "public/models/yinglong/body.glb",
+    "bytes": 4647704,
+    "sha256": "eef27f7b0802fde4b71d46e17ace869fad05fc21749b470b4244a217ffc34abd",
+    "triangles": 50000,
+    "bones": 34,
+    "clips": [
+      "idle",
+      "walk",
+      "special"
+    ],
+    "compression": "Meshopt MEDIUM + WebP2048; simplify/flatten/join/weld/resample/palette/instance false"
+  },
+  "runtimeContract": {
+    "scale": 1.0,
+    "outerTranslation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "outerLocomotionRequired": false,
+    "forward": "glTF +Z / Blender -Y",
+    "restWingspan": 3.2,
+    "permanentElevation": 0.65,
+    "permanentElevationMethod": "Baked into native vertex coordinates and matching bone rests; no node scale or animated baseline offset",
+    "animatedRootTranslation": "Small periodic vertical bob only, centered at zero; never subtract permanent elevation",
+    "idleDuration": 6.0,
+    "walkDuration": 4.0,
+    "specialDuration": 6.0,
+    "walkMeaning": "Stationary airborne serpentine undulation and restrained wing flaps; no ground gait",
+    "specialReturn": "Endpoints, velocities and accelerations match idle at t=0/6; auto-return to idle phase0",
+    "interpolation": "60Hz source keys, periodic C2 cubic splines in actual GLB; quaternion cubics normalized by glTF runtime",
+    "crossfade": ".3 seconds acceptable for same native rest rig; full blended Stage review remains parent responsibility",
+    "stageYaw": 0,
+    "cameraTargetY": {
+      "desktop": 1.0,
+      "phone": 1.2
+    },
+    "initialCamera": "Native +Z forward, outer yaw0 preserves a three-quarter head/body/tail view; per-beast FOV and film offset fit wings without card overlap"
+  },
+  "sourcePreservation": {
+    "geometryEdits": false,
+    "positiveUniformScale": 1.6775984013673997,
+    "permanentElevation": 0.65,
+    "nativeRawNormalUVIndexBytesPreservedExactlyInRiggedCandidate": true,
+    "riggedRestMaximumErrorM": 8.43463624278229e-07,
+    "nativePBR": [
+      {
+        "doubleSided": true,
+        "name": "model",
+        "normalTexture": {
+          "index": "c45441ebfb3c1dc9a30bcae769be188fffe5eefc1bed413f1978ddeecb3c5a42",
+          "sampler": {
+            "magFilter": 9729,
+            "minFilter": 9987
+          }
+        },
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": "42be9b57f3d24eb8a9cd80b7d8ad2afad6d55ac4abae81cced991e7046e1ae61",
+            "sampler": {
+              "magFilter": 9729,
+              "minFilter": 9987
+            }
+          },
+          "metallicRoughnessTexture": {
+            "index": "4ccae552cd99a6a5578cd338cd07736045dc9a5bb92fb5ad21a1098ec5c00141",
+            "sampler": {
+              "magFilter": 9729,
+              "minFilter": 9987
+            }
+          }
+        }
+      }
+    ],
+    "nativeDegenerateTriangles": 95,
+    "nativeWingTipFragmentShellsRetained": 3,
+    "disclosure": "Stored native positions/indices and all 95 source zero/nearly-zero facets retained exactly. Float32 inverse-bind skin evaluation can move a nearly-zero facet across the arbitrary 1e-14 m2 reporting threshold; this is numerical rest roundoff, not topology repair or geometry editing.",
+    "runtimeCompression": "Meshopt quantization and WebP are lossy; raw bit preservation claim applies to rigged source payload before runtime compression."
+  },
+  "offlineQA": {
+    "report": {
+      "path": "raw/_build/yinglong-native-rig-20261114/numerical-qa.json",
+      "bytes": 6018,
+      "sha256": "abc67c66f2d60aeba5d513b35d28fc20c145155efdb7b022812cf82ea71b8e46"
+    },
+    "fullNativeRestReport": {
+      "path": "raw/_build/yinglong-native-rig-20261114/native-rest-qa.json",
+      "bytes": 2854,
+      "sha256": "4f095bed456f2f53c50bd95f0e8968c9cb21a71a48dbcb3efd7cee2e30e379ad"
+    },
+    "samplingHz": 120,
+    "clips": {
+      "idle": {
+        "samples": 721,
+        "samplingHz": 120,
+        "boundsBlender": [
+          [
+            -1.609442299107458,
+            -1.5678295856998794,
+            0.6070328607967139
+          ],
+          [
+            1.616431533030494,
+            1.5830011585008104,
+            2.280641637773223
+          ]
+        ],
+        "minimumGroundClearanceM": 0.6070328607967139,
+        "maximumSampledVertexSpeedMps": 0.0587020504979441,
+        "protectedShapeDistanceErrorM": {
+          "head": 2.4660911829288423e-07,
+          "wing_tip_l": 1.6505448141579393e-07,
+          "wing_tip_r": 2.3270127952335073e-07
+        },
+        "maximumFeatherPatchDistanceErrorM": 0.005360325526150844,
+        "nativeFeatherPatchCount": 7,
+        "maximumNativeEdgeLengthRelativeChange": {
+          "wing_l": 0.044111538715645326,
+          "wing_r": 0.055119846305593745,
+          "wing_root_l": 0.044111538715645326,
+          "wing_root_r": 0.055119846305593745
+        },
+        "p99NativeEdgeLengthRelativeChange": {
+          "wing_l": 0.016207121491053633,
+          "wing_r": 0.02194817101152614,
+          "wing_root_l": 0.024812533199712244,
+          "wing_root_r": 0.03441467235415359
+        },
+        "robustTriangleAreaRatioRange": [
+          0.8781485940314281,
+          1.1214699032529332
+        ],
+        "allVertexLoopPositionErrorM": 0.0,
+        "allVertexWrapVelocityDifferenceMps": 4.751723445709363e-05,
+        "allVertexWrapAccelerationDifferenceMps2": 0.0010792999394185388,
+        "oneSidedDifferenceDt": 0.001,
+        "actualCubicBufferContinuity": {
+          "maxValueSeam": 0.0,
+          "maxTangentSeam": 0.0,
+          "maxSecondDerivativeSeam": 4.5820260451190364e-05
+        },
+        "maximumTrunkVertexSweepM": 0.1305169710322985,
+        "maximumWingVertexSweepM": 0.10909618836602533
+      },
+      "walk": {
+        "samples": 481,
+        "samplingHz": 120,
+        "boundsBlender": [
+          [
+            -1.6182810136281098,
+            -1.567685313265493,
+            0.5559412629270974
+          ],
+          [
+            1.6284121308249744,
+            1.600331457775956,
+            2.3202847351506195
+          ]
+        ],
+        "minimumGroundClearanceM": 0.5559412629270974,
+        "maximumSampledVertexSpeedMps": 0.20908001570105353,
+        "protectedShapeDistanceErrorM": {
+          "head": 1.8017169212125594e-07,
+          "wing_tip_l": 1.8704601545405097e-07,
+          "wing_tip_r": 2.3253807263090565e-07
+        },
+        "maximumFeatherPatchDistanceErrorM": 0.010042785728145875,
+        "nativeFeatherPatchCount": 7,
+        "maximumNativeEdgeLengthRelativeChange": {
+          "wing_l": 0.08208739422615141,
+          "wing_r": 0.10296835440236896,
+          "wing_root_l": 0.08208739422615141,
+          "wing_root_r": 0.10296835440236896
+        },
+        "p99NativeEdgeLengthRelativeChange": {
+          "wing_l": 0.030493256626804646,
+          "wing_r": 0.041076068484297484,
+          "wing_root_l": 0.04608404308799005,
+          "wing_root_r": 0.06417999280616087
+        },
+        "robustTriangleAreaRatioRange": [
+          0.7722430686965901,
+          1.2263847991012156
+        ],
+        "allVertexLoopPositionErrorM": 0.0,
+        "allVertexWrapVelocityDifferenceMps": 0.00032819843077722496,
+        "allVertexWrapAccelerationDifferenceMps2": 0.0012947136225048314,
+        "oneSidedDifferenceDt": 0.001,
+        "actualCubicBufferContinuity": {
+          "maxValueSeam": 0.0,
+          "maxTangentSeam": 0.0,
+          "maxSecondDerivativeSeam": 9.353318395355359e-06
+        },
+        "maximumTrunkVertexSweepM": 0.307110624389947,
+        "maximumWingVertexSweepM": 0.19876651989994218
+      },
+      "special": {
+        "samples": 721,
+        "samplingHz": 120,
+        "boundsBlender": [
+          [
+            -1.6168173897059024,
+            -1.5677728445576866,
+            0.6037919675995104
+          ],
+          [
+            1.6230738314550333,
+            1.595955445558571,
+            2.305416228550261
+          ]
+        ],
+        "minimumGroundClearanceM": 0.6037919675995104,
+        "maximumSampledVertexSpeedMps": 0.12537495144762456,
+        "protectedShapeDistanceErrorM": {
+          "head": 2.3131392024033914e-07,
+          "wing_tip_l": 1.7731222257122425e-07,
+          "wing_tip_r": 2.3000673404771632e-07
+        },
+        "maximumFeatherPatchDistanceErrorM": 0.009812405097873178,
+        "nativeFeatherPatchCount": 7,
+        "maximumNativeEdgeLengthRelativeChange": {
+          "wing_l": 0.07604234925098297,
+          "wing_r": 0.10104849710825214,
+          "wing_root_l": 0.07604234925098297,
+          "wing_root_r": 0.10104849710825214
+        },
+        "p99NativeEdgeLengthRelativeChange": {
+          "wing_l": 0.02935124124906343,
+          "wing_r": 0.039540225628585376,
+          "wing_root_l": 0.04335151987533228,
+          "wing_root_r": 0.062288897432826396
+        },
+        "robustTriangleAreaRatioRange": [
+          0.7752758275869788,
+          1.1768222626012592
+        ],
+        "allVertexLoopPositionErrorM": 0.0,
+        "allVertexWrapVelocityDifferenceMps": 4.7633255954362674e-05,
+        "allVertexWrapAccelerationDifferenceMps2": 0.0010642298039491383,
+        "oneSidedDifferenceDt": 0.001,
+        "actualCubicBufferContinuity": {
+          "maxValueSeam": 0.0,
+          "maxTangentSeam": 0.0,
+          "maxSecondDerivativeSeam": 4.5820260451190364e-05
+        },
+        "maximumTrunkVertexSweepM": 0.20069114883024736,
+        "maximumWingVertexSweepM": 0.15864117873089725
+      }
+    },
+    "specialIdleSafeEndpointMatch": {
+      "positionM": 0.0,
+      "velocityMps": 3.995333085000641e-06,
+      "accelerationMps2": 0.0005391995167485773
+    },
+    "sweptBoundsGltfSampled": [
+      [
+        -1.6182810136281098,
+        0.5559412629270974,
+        -1.600331457775956
+      ],
+      [
+        1.6284121308249744,
+        2.3202847351506195,
+        1.5678295856998794
+      ]
+    ]
+  },
+  "actualStageQA": {
+    "report": {
+      "path": "raw/_build/yinglong-stage-qa-20261114-public-v1/report.json",
+      "bytes": 6678326,
+      "sha256": "5db7ac7633aaf2cac29d7dc4655d04f840e91b89cb70bc71977b7bff5f8082c5"
+    },
+    "passed": true,
+    "previewReadyOverride": false,
+    "sections": {
+      "native-reference": {
+        "passed": true
+      },
+      "native-stage": {
+        "passed": true
+      },
+      "motion-idle": {
+        "passed": true
+      },
+      "motion-walk": {
+        "passed": true
+      },
+      "motion-special": {
+        "passed": true
+      },
+      "transitions": {
+        "passed": true
+      },
+      "responsive-1440": {
+        "passed": true
+      },
+      "responsive-800": {
+        "passed": true
+      },
+      "responsive-641": {
+        "passed": true
+      },
+      "responsive-390": {
+        "passed": true
+      },
+      "remount-ownership": {
+        "passed": true
+      },
+      "controls-narration": {
+        "passed": true
+      },
+      "runtime-errors": {
+        "passed": true
+      }
+    },
+    "independentNativeReference": {
+      "sourceSha256": "ac09ad235ef121212c695c54d8593234212df4d5a93818df113ff8002ab9eb00",
+      "matchedCompressedVertices": 47452,
+      "maximumRestError": 0.00019418176945293483,
+      "maskCounts": {
+        "wing_l": 13218,
+        "wing_r": 13488,
+        "head": 3346,
+        "trunk": 20746,
+        "body": 17400,
+        "wing_root_l": 2880,
+        "wing_tip_l": 1529,
+        "feather_l_00": 5576,
+        "feather_l_01": 533,
+        "feather_l_02": 136,
+        "wing_root_r": 3405,
+        "wing_tip_r": 1756,
+        "feather_r_00": 5922,
+        "feather_r_01": 394,
+        "feather_r_02": 50,
+        "feather_r_03": 42
+      },
+      "protectedPairCounts": {
+        "head": 276,
+        "wing_tip_l": 276,
+        "wing_tip_r": 276,
+        "feather_l_00": 276,
+        "feather_l_01": 276,
+        "feather_l_02": 276,
+        "feather_r_00": 276,
+        "feather_r_01": 276,
+        "feather_r_02": 276,
+        "feather_r_03": 276
+      },
+      "rootEdgeCounts": {
+        "wing_root_l": 300,
+        "wing_root_r": 300
+      }
+    },
+    "nativeReferenceFile": {
+      "path": "raw/_build/yinglong-native-rig-20261114/rest-reference.json",
+      "bytes": 2362149,
+      "sha256": "492be8496db29bc751fb92e8fcd28858dcfb536cf328dda52d06923c52b8709c"
+    },
+    "responsive": [
+      {
+        "width": 1440,
+        "screenLow": [
+          642.5602783850164,
+          117.5410346715779
+        ],
+        "screenHigh": [
+          1318.3170118675137,
+          494.0432275192577
+        ],
+        "coveredVertices": 0
+      },
+      {
+        "width": 800,
+        "screenLow": [
+          339.9398031836864,
+          278.3604673856405
+        ],
+        "screenHigh": [
+          687.7990373563865,
+          470.34942630341527
+        ],
+        "coveredVertices": 0
+      },
+      {
+        "width": 641,
+        "screenLow": [
+          286.6433381131021,
+          310.2739495173992
+        ],
+        "screenHigh": [
+          586.4534430391828,
+          470.45457830005876
+        ],
+        "coveredVertices": 0
+      },
+      {
+        "width": 390,
+        "screenLow": [
+          59.31504447266367,
+          334.4620185725165
+        ],
+        "screenHigh": [
+          363.048871287147,
+          487.99560440609247
+        ],
+        "coveredVertices": 0
+      }
+    ],
+    "motionSummary": {
+      "idle": {
+        "samples": 34,
+        "maximumActualVertexDisplacementM": 0.10578827820029874,
+        "maximumRigidMaskDistanceDriftM": 0.006121568047844472,
+        "maximumSampledRootEdgeStrain": 0.03825259757452004
+      },
+      "walk": {
+        "samples": 110,
+        "maximumActualVertexDisplacementM": 0.1879024123233529,
+        "maximumRigidMaskDistanceDriftM": 0.01180622463350689,
+        "maximumSampledRootEdgeStrain": 0.0719994506988515
+      },
+      "special": {
+        "samples": 35,
+        "maximumActualVertexDisplacementM": 0.14197547380260353,
+        "maximumRigidMaskDistanceDriftM": 0.012171256499496463,
+        "maximumSampledRootEdgeStrain": 0.06873183986327225
+      }
+    },
+    "remounts": [
+      {
+        "disposedSkeletons": 1,
+        "skeletons": 1,
+        "disposedMaterials": 2,
+        "materials": 2,
+        "liveOldTextures": 0,
+        "geometryReused": true,
+        "cacheUnchanged": true,
+        "sharedDisposals": 0
+      },
+      {
+        "disposedSkeletons": 1,
+        "skeletons": 1,
+        "disposedMaterials": 2,
+        "materials": 2,
+        "liveOldTextures": 0,
+        "geometryReused": true,
+        "cacheUnchanged": true,
+        "sharedDisposals": 0
+      },
+      {
+        "disposedSkeletons": 1,
+        "skeletons": 1,
+        "disposedMaterials": 2,
+        "materials": 2,
+        "liveOldTextures": 0,
+        "geometryReused": true,
+        "cacheUnchanged": true,
+        "sharedDisposals": 0
+      }
+    ],
+    "specialReturnedToIdle": true,
+    "narrationPlayedAndStopped": true,
+    "errors": []
+  },
+  "parentVisualReview": {
+    "acceptedSourceViews": [
+      {
+        "path": "raw/_build/yinglong-native-whole-v4-high-review-20261114/contact_four_views.png",
+        "bytes": 1013569,
+        "sha256": "2785edbcf4cac88ab0a7d2718b8261d312ced9879efa55b263805715aafc7d6c"
+      },
+      {
+        "path": "raw/_build/yinglong-native-whole-v4-high-review-20261114/front_roots.png",
+        "bytes": 267266,
+        "sha256": "3316f10b7872921a9d24041dbab44b1f6fd7823a3269db872957bf51307ef2e3"
+      },
+      {
+        "path": "raw/_build/yinglong-native-whole-v4-high-review-20261114/back_roots.png",
+        "bytes": 267349,
+        "sha256": "adc4557d4369613861dd4401bcbebdffe8369d452df8d21c9b77c07be951b2d1"
+      },
+      {
+        "path": "raw/_build/yinglong-native-whole-v4-high-review-20261114/xplus_root.png",
+        "bytes": 308101,
+        "sha256": "e9376fe7cf6414b2d934f293b82639494166f269c7a328d394a831846e097f7e"
+      },
+      {
+        "path": "raw/_build/yinglong-native-whole-v4-high-review-20261114/xminus_root.png",
+        "bytes": 295206,
+        "sha256": "151c13b95c80f6e3da5078df6f5b96e1f837477773697c8e679925beea09e439"
+      },
+      {
+        "path": "raw/_build/yinglong-native-whole-v4-high-review-20261114/head.png",
+        "bytes": 243059,
+        "sha256": "6bbb01baaabfc4c0bb82bbc908e7a268e048582f150cfd3aec8b73d49b097c95"
+      },
+      {
+        "path": "raw/_build/yinglong-native-whole-v4-high-review-20261114/tail.png",
+        "bytes": 238910,
+        "sha256": "48f537d9d4ae61b111eca5ec6cc0e633630757ee389bcbc18da7373a0e808380"
+      }
+    ],
+    "requiredShotAndCloseupImages": [
+      {
+        "path": "raw/_build/yinglong-required-shots-20261114/idle.png",
+        "bytes": 883734,
+        "sha256": "580cb9999b1ff1d508839d69c018721c0172635608630b05c45b00f2e4090788"
+      },
+      {
+        "path": "raw/_build/yinglong-required-shots-20261114/special.png",
+        "bytes": 885168,
+        "sha256": "90b9ab87dc9b7ba0dbf9f64d34926935dc65ee3e7436879331c215c51000418d"
+      },
+      {
+        "path": "raw/_build/yinglong-required-shots-20261114/walk-close-0.png",
+        "bytes": 279572,
+        "sha256": "5816c5dd6489e963f619e25ffcd0a53c882104dd81c7afe64f2c07f3bad8d8d6"
+      },
+      {
+        "path": "raw/_build/yinglong-required-shots-20261114/walk-close-1.png",
+        "bytes": 279611,
+        "sha256": "9905f83b48ff7e2b0e6d959f5c8664cac9e522b0ac515918d89d1f56854bf99f"
+      },
+      {
+        "path": "raw/_build/yinglong-required-shots-20261114/walk-close-2.png",
+        "bytes": 278614,
+        "sha256": "12245ad876db0f93efe20427f47c87be072325577555191a793d895a632f0b81"
+      },
+      {
+        "path": "raw/_build/yinglong-required-shots-20261114/walk.png",
+        "bytes": 882886,
+        "sha256": "26426ef84788f6079612faf3869818fb29050e822a71788dc93c50630ab953aa"
+      }
+    ],
+    "observed": "Native complete head, tapering single tail and two feather wings; broad roots stay joined, no visible skull/vane collapse in reviewed motion frames. Natural asymmetric feather patterns retained. Restrained airborne undulation and flaps, no ground gait or footsteps. Three source passages and the separate design box remain accessible via a bounded scrolling card on narrow screens."
+  },
+  "narration": {
+    "asset": {
+      "path": "public/audio/narration/yinglong.mp3",
+      "bytes": 907062,
+      "sha256": "67a3cf11825d53a1d771ead6e61e613e23fbe34996ae9661380f79c73b126163"
+    },
+    "storySha256": "17115c5a105a90ea7dd67fdb8ceb18cca8b69f59c24e17acfdae9d15e5bd83b2",
+    "provider": "CosyVoice v2",
+    "voice": "longsanshu",
+    "format": "MP3 22050Hz",
+    "oldAsset": {
+      "path": "raw/_build/yinglong-narration-before-20261114/yinglong.mp3",
+      "bytes": 586905,
+      "sha256": "83494b7c036750dcdbff7dc888e05d317e07bdda8e6ef7ea3a3243f40b096422"
+    },
+    "oldAssetLocalArchiveOnly": true,
+    "actualBrowserPlayAndStop": true
+  },
+  "failedAttemptsRetained": {
+    "note": "Earlier welded/assembled wing-root candidates were not promoted. Native v4 Medium and High replaced them; their ledger transactions and job specifications remain preserved. Source success and offline QA alone were not treated as runtime acceptance.",
+    "localAudit": "pipeline/rodin/remaining-17-progress-20261113.json"
+  },
+  "deployment": {
+    "verified": false,
+    "reason": "Exact-SHA Actions and live production checks are recorded after pushing this model commit."
+  }
+}

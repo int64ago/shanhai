@@ -1,0 +1,348 @@
+{
+  "schemaVersion": 1,
+  "beast": "yinglong",
+  "sourceSha256": "ac09ad235ef121212c695c54d8593234212df4d5a93818df113ff8002ab9eb00",
+  "acceptedForRiggingOnly": true,
+  "anatomyMasksReviewed": true,
+  "coordinates": "Blender X/right Y/back Z/up; wingspan3.2m; native minimumZ baked to0.65m",
+  "evidence": "raw/_build/yinglong-native-whole-v4-high-review-20261114/{contact_four_views,front_roots,back_roots,xplus_root,xminus_root,head,tail}.png; personally read before masks",
+  "cuts": {
+    "wing_l": {
+      "planes": [
+        {
+          "normal": [
+            -1,
+            0,
+            0
+          ],
+          "offset": -0.18
+        },
+        {
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "offset": 0.44
+        },
+        {
+          "normal": [
+            0,
+            0,
+            -1
+          ],
+          "offset": -1.285
+        }
+      ],
+      "seeds": [
+        16981,
+        19254,
+        23900
+      ],
+      "count": 13218,
+      "indicesSha256": "94ef7307d9ea889d1f487db58b35a21eea703fe30258c5e8a60623de2dd4d286"
+    },
+    "wing_r": {
+      "planes": [
+        {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "offset": -0.18
+        },
+        {
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "offset": 0.44
+        },
+        {
+          "normal": [
+            0,
+            0,
+            -1
+          ],
+          "offset": -1.285
+        }
+      ],
+      "seeds": [
+        0,
+        13072,
+        47416,
+        47428,
+        47440,
+        14192,
+        15369,
+        15883,
+        13067,
+        15346
+      ],
+      "count": 13488,
+      "indicesSha256": "1f9e427f0d40a156b00df77e94348036c50fc94e6dba7789491f6a2c11145b3e"
+    },
+    "head": {
+      "planes": [
+        {
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "offset": -1.04
+        }
+      ],
+      "seeds": [
+        27981
+      ],
+      "count": 3346,
+      "indicesSha256": "4a42da84d504aa4defe65565b0a3ebeac02082135cfb377df1b1ec7936df8a55"
+    }
+  },
+  "landmarks": {
+    "core": [
+      -8.468661636400681e-05,
+      -0.25,
+      1.3860825898741873
+    ],
+    "frontSpine": [
+      [
+        -8.468661636400681e-05,
+        -0.25,
+        1.3860825898741873
+      ],
+      [
+        0.00018760222876044685,
+        -0.3629762058168269,
+        1.3911699752490068
+      ],
+      [
+        0.001600805473791723,
+        -0.47561747445957275,
+        1.4003608306507342
+      ],
+      [
+        0.006005100504059952,
+        -0.5884689731064862,
+        1.4040376524765634
+      ],
+      [
+        0.005932567061027191,
+        -0.7013904332321983,
+        1.4096596480252754
+      ],
+      [
+        0.00614567355818965,
+        -0.8145100732331273,
+        1.4095907521264754
+      ],
+      [
+        0.006209568322902169,
+        -0.9275735527484532,
+        1.4123911093421726
+      ],
+      [
+        0.007141124457120895,
+        -1.04,
+        1.424806296825409
+      ]
+    ],
+    "backSpine": [
+      [
+        -8.468661636400681e-05,
+        -0.25,
+        1.3860825898741873
+      ],
+      [
+        8.237188623333227e-05,
+        -0.13216545414925035,
+        1.3797733289435337
+      ],
+      [
+        0.001549696043850031,
+        -0.015921199647507413,
+        1.3607567302636308
+      ],
+      [
+        0.006568625550721905,
+        0.09089138375442803,
+        1.3114986758010272
+      ],
+      [
+        0.007926365991789409,
+        0.20042007367324682,
+        1.27388102016135
+      ],
+      [
+        0.0016858331622465442,
+        0.30962609880951636,
+        1.2302879024793831
+      ],
+      [
+        0.00629370716915673,
+        0.4137474695393377,
+        1.1754248264219072
+      ],
+      [
+        0.0010583367215983436,
+        0.5056961604953526,
+        1.1017205221729276
+      ],
+      [
+        0.0002602511257559428,
+        0.5920097612662654,
+        1.0211386956751631
+      ],
+      [
+        0.005768951001136247,
+        0.6797117711815086,
+        0.9424741547195569
+      ],
+      [
+        0.016756569323878076,
+        0.7799634057302876,
+        0.8814245889275782
+      ],
+      [
+        0.033182306045147734,
+        0.8892931051686883,
+        0.8403179944311118
+      ],
+      [
+        0.05764563020368506,
+        1.0015816404913223,
+        0.8138403246888263
+      ],
+      [
+        0.08260676197424521,
+        1.1166422930219246,
+        0.8054460067068615
+      ],
+      [
+        0.10427553392092528,
+        1.2324083640155912,
+        0.7972889412307674
+      ],
+      [
+        0.11687939739828682,
+        1.347514752849626,
+        0.7747414105367619
+      ],
+      [
+        0.12347614211748167,
+        1.4564335069778,
+        0.7305769246850788
+      ],
+      [
+        0.12735377743840218,
+        1.56,
+        0.6740385520458221
+      ]
+    ],
+    "headTip": [
+      0.006402629427611828,
+      -1.5675840377807617,
+      1.374074935913086
+    ],
+    "wings": {
+      "l": [
+        [
+          0.18,
+          -0.25694674253463745,
+          1.5637858235836029
+        ],
+        [
+          0.38,
+          -0.08424105867743492,
+          1.7671935844421387
+        ],
+        [
+          0.8,
+          -0.04981714114546776,
+          1.9975336742401122
+        ],
+        [
+          1.26,
+          0.09366492182016373,
+          2.128997325897217
+        ],
+        [
+          1.59,
+          0.18057923018932343,
+          2.163720631599426
+        ]
+      ],
+      "r": [
+        [
+          -0.18,
+          -0.14576469361782074,
+          1.5981968641281128
+        ],
+        [
+          -0.38,
+          -0.046960651874542236,
+          1.775790240764618
+        ],
+        [
+          -0.8,
+          -0.021032854914665222,
+          1.9847339391708374
+        ],
+        [
+          -1.26,
+          0.09578896313905716,
+          2.1174903440475465
+        ],
+        [
+          -1.59,
+          0.11652874201536179,
+          2.1483045339584352
+        ]
+      ]
+    }
+  },
+  "calibrationMethod": "Native trunk cross-section 2/98 percentile envelope at 161 stations, smoothing only bones, arc-length resampled 7 anterior +17 posterior segments. Native leading-spar upper envelope measured separately on both sides. No source geometry moved.",
+  "rootWeightBlendSpan": [
+    0.18,
+    0.38
+  ],
+  "wingArticulationX": [
+    0.25,
+    0.8,
+    1.26
+  ],
+  "wingFeatherProtection": "Trailing native connectivity patches below leading spar; final tips beyond x1.26 rigid to distal wing. Full wing roots blend over 0.20m into the core.",
+  "maskReview": "Personally Read top/side/front-root/back-root diagnostics before weighting. The small cut-in flank strips at x0.18..0.24 are transition collars: quintic blend starts at zero and is below 0.105 there; x>=0.38 wing vertices receive exclusively ipsilateral wing weights. Full head protected through y=-1.04. Native tiny wing-tip fragments retained.",
+  "weightingCalibration": {
+    "bodyFullCoreY": [
+      -0.5,
+      0.16
+    ],
+    "anteriorSpineEaseM": 0.22,
+    "posteriorSpineEaseM": 0.24,
+    "wingRootQuinticX": [
+      0.18,
+      0.38
+    ],
+    "wingRootQuinticY": [
+      -0.44,
+      -0.34
+    ],
+    "wingRootQuinticZ": [
+      1.285,
+      1.37
+    ],
+    "wingRootZGateOverrideX": [
+      0.24,
+      0.28
+    ],
+    "breathFadeOutAbsX": [
+      0.1,
+      0.18
+    ],
+    "reason": "Preserve native broad shoulder volume and fade every actual geometry cut continuously. Root weights never jump from independently moving spine to wings."
+  }
+}

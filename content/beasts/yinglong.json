@@ -20,11 +20,13 @@
     "note": "沿用研究提交的三段分列原文；本次重新读取卷十四正文及郭注、北经应龙相关句。卷十四注龍有翼者也单列说明，不混入source；北经杀夸父与黄帝女魃战事仍为不同段落。"
   },
   "production": {
-    "status": "blocked",
-    "ready": false,
-    "modelReady": false,
-    "modelProduced": false,
-    "specification": "pipeline/rodin/specs/yinglong-production-20261108.json",
-    "reason": "尚无已验收的完整龙形主体；旧研究提交与翼尾候选不等于生产模型。Medium规格仅为准备材料，本内容修订任务未调用生成服务。没有完成的模型、动作或运行时交付。"
+    "status": "ready",
+    "ready": true,
+    "modelReady": true,
+    "modelProduced": true,
+    "specification": "pipeline/rodin/jobs/yinglong-production-20261114-native-whole-v4-high.json",
+    "sourceSha256": "ac09ad235ef121212c695c54d8593234212df4d5a93818df113ff8002ab9eb00",
+    "provenance": "pipeline/provenance/yinglong.json",
+    "reason": "完整原生单首、连续长躯单尾与双羽翼通过源四视图、头尾及双侧翼根主审；34骨三态、压缩后独立原生mask匹配、实际Stage形变、水墨效果、响应式构图、资源释放与解说播放停止已验收。永久离地0.65米烘焙入rest，行为空中行波；上线结果按独立发布核验记录。"
   }
 }
