@@ -428,5 +428,16 @@
     "Native right sole starts 1.6mm higher; original sole geometry preserved. Actual full-foot planted drift remains below1mm.",
     "No physics simulation; camera uses a compact full-body portrait framing."
   ],
-  "deployment": "Pending separate main push, exact-SHA CI/deploy and actual production verification."
+  "deployment": {
+    "beast": "jiaochong",
+    "sha": "7ae0994cd1d78bda02e2ee780842c61b19139271",
+    "ci": "https://github.com/int64ago/shanhai/actions/runs/43561243161",
+    "deploy": "https://github.com/int64ago/shanhai/actions/runs/43561243195",
+    "exactShaWorkflowResults": "completed/success",
+    "productionReport": "raw/_build/jiaochong-production-20261114/report.json",
+    "productionReportSha256": "54fc4b23875b9e797cd4ecfe5176ee6c03ca600e7105752a698b1774067224db",
+    "productionVerification": "passed; 9 HTTP files matched, 3 UI actions, special return, narration play/stop, 390/800 layouts; parent personally Read all 5 production images",
+    "localChecks": "pnpm typecheck && pnpm validate && pnpm build; git diff --check; git lfs status; all passed",
+    "retainedDistEntry": "assets/index-gNH69M5M.js"
+  }
 }

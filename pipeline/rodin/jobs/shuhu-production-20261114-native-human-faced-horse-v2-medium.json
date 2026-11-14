@@ -1,0 +1,8 @@
+{
+  "id": "shuhu-production-20261114-native-human-faced-horse-v2-medium",
+  "beast": "shuhu",
+  "budget": 12.5,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE complete mythical HUMAN-FACED HORSE, a single continuous animal. A natural chestnut horse torso, horizontal back, deep chest and four straight equine legs standing on four complete unsplit horse hooves. Its ONLY head has an adult HUMAN FACE: human forehead, two eyes, short human nose, cheeks, closed human lips and rounded human chin, with NO elongated horse muzzle. This human face belongs directly to the animal head, not a rider, bust, mask or second head. Rear skull and jaw blend naturally into one complete arched muscular horse neck with short dark mane. Neck joins the chest and withers continuously. Fine short chestnut coat transitions gradually into warm facial skin at cheeks and throat. Calm neutral standing pose, legs apart with all four hooves planted, full anatomy visible. Smooth rounded rump with NO tail. Wingless torso with NO wing buds, pegs or sockets; wings and snake tail will be separate later. No human arms, human torso, horns, tack, saddle, pedestal or props.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

@@ -179,3 +179,5 @@
 {"time":"2026-11-14T04:21:08.312Z","beast":"lu_fish","job":"lu_fish-production-20261114-rounded-tail-high","hash":"326868c53af033ee","tier":"Gen-2.5-Extreme-High","uuid":"5e8ce3c8-a510-4f81-8269-e4e3344afad7","consumed":1}
 {"time":"2026-11-14T04:21:42.980Z","beast":"jiaochong","job":"jiaochong-production-20261114-two-human-heads-v3-high","hash":"17ec6685040f1860","tier":"Gen-2.5-Extreme-High","uuid":"bf50e54c-1c0c-4f6b-9163-e6c650ba98e8","consumed":1}
 {"time":"2026-11-14T04:52:18.221Z","beast":"kui","job":"kui-production-20261114-single-central-leg-v3-medium","hash":"335b52e67d9ed274","tier":"Gen-2.5-Medium","uuid":"6374a0d6-5767-4b18-b47b-52d58741ccb5","consumed":0.5}
+{"time":"2026-11-14T05:24:51.618Z","beast":"shuhu","job":"shuhu-production-20261114-native-human-faced-horse-v2-medium","hash":"4f67b0a2dcd73bc7","tier":"Gen-2.5-Medium","uuid":"dfdfaeee-4957-49a2-851f-3fd68cac33ad","consumed":0.5}
+{"time":"2026-11-14T05:24:52.472Z","beast":"qiangliang","job":"qiangliang-production-20261114-four-hooves-long-elbows-v2-medium","hash":"b84d202ad1987c53","tier":"Gen-2.5-Medium","uuid":"e0958047-123a-43ab-b0fc-6bf6de879f26","consumed":0.5}

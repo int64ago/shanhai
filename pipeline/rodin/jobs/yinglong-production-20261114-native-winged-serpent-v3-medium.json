@@ -1,0 +1,8 @@
+{
+  "id": "yinglong-production-20261114-native-winged-serpent-v3-medium",
+  "beast": "yinglong",
+  "budget": 12.5,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE complete Yinglong winged serpent, one Chinese dragon head, a very long slender horizontal serpentine trunk and one gradually tapering pointed tail in a shallow extended S. Exactly TWO large ivory feather wings grow directly from the lateral anterior trunk, one per side, spread symmetrically. Native broad organic wing shoulders transition smoothly from small pale scales into overlapping short coverts and long layered flight feathers. Entire creature is one coherent living animal; wing roots blend continuously into trunk without attachment caps, plates, sockets, collars or ledges. Blue green scales, pale belly, dark living eyes, smooth low dragon brows and rounded muzzle. Body excluding wings about six times longer than deep. NO legs, feet, arms, claws, horns, antlers, extra wings, fins, coiled loops, pedestal, scenery or props. Keep all of both feather wings and the complete head to tail tip visible, clear isolated neutral three-quarter pose.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

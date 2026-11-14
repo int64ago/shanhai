@@ -1,0 +1,8 @@
+{
+  "id": "zhulong-production-20261114-native-human-face-v2-medium",
+  "beast": "zhulong",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE complete red HUMAN-FACED SERPENT with a long horizontal limbless body, one head and one tapering tail. The only anterior head has a clearly HUMAN forehead, two ordinary human eyes with eyelids, eyebrows, short human nose, full human cheeks, closed human lips and human chin. Smooth warm terracotta facial skin, short dark hair swept behind the skull. Human facial proportions, not a snake snout, dragon muzzle or skull. Rounded rear skull and human jaw blend directly into a short thick serpent neck, then one uninterrupted cinnabar scaled snake trunk. NO human chest or shoulders. Head held only slightly above the body, looking forward. Body about seven head lengths, stretched in one shallow open horizontal S with no returning coil or upright cobra hood, and one pointed closed tail tip. Rounded volumetric scales and pale red belly scutes, smooth organic face-neck joins. Entire creature visible. No arms, legs, horns, wings, whiskers, fins, secondary heads, fangs, ornaments, pedestal or scenery.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

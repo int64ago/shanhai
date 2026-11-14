@@ -1,0 +1,8 @@
+{
+  "id": "jimeng-production-20261114-open-palms-v5-medium",
+  "beast": "jimeng",
+  "budget": 12.5,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One complete Jimeng, a Chinese dragon head organically joined to an ordinary adult human body. Upright relaxed standing pose, two bare human feet planted level, five rounded toes per foot. Both arms extend diagonally OUT from shoulders, elbows gently bent, wrists at waist height, BOTH OPEN PALMS facing directly forward toward viewer. Show broad flat palms, FOUR long separated human fingers fanned upward and ONE shorter opposed thumb spread sideways on EACH hand, five digits total per hand. Clear daylight gaps between all fingers. Hands large enough to read clearly. Normal human torso and limbs with warm grey skin, modest muscles, plain short ochre waist garment. Dragon face with long muzzle, dark eyes, two short horns and short mane; smooth broad neck entering human shoulders. Full body crown to soles visible. No claws, mittens, fists, hanging edge-on hands, sixth finger, exposed ribs, extra limbs, wings, tail, props or base.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

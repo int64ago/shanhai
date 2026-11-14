@@ -3,8 +3,8 @@
   "updatedAt": "2026-11-14",
   "authorization": "pipeline/rodin/remaining-17-authorization-20261113.json",
   "ledgerBaselineLines": 143,
-  "newSubmittedTransactions": 38,
-  "newCreditsConsumed": 23.0,
+  "newSubmittedTransactions": 40,
+  "newCreditsConsumed": 24.0,
   "newCreditsPerBeast": {
     "jiaochong": 4.0,
     "kuafu": 3.5,
@@ -12,8 +12,8 @@
     "zhulong": 0.5,
     "xixiyu": 1.5,
     "xiangliu": 0.5,
-    "qiangliang": 0.5,
-    "shuhu": 0.5,
+    "qiangliang": 1.0,
+    "shuhu": 1.0,
     "kui": 1.0,
     "xingxing": 1.5,
     "lu_fish": 4.5,
@@ -168,35 +168,35 @@
     "kuafuV1OfflineHands": "Rejected after one candidate and one correction. Worker found foot geometry accidentally removed by an unbounded hand-deletion predicate, plus palm UV seams and wrist collars. Neither derivative is reusable or accepted. Native v2 remains immutable and independent."
   },
   "latestAutomaticApprovalBlock": {
-    "job": "jimeng-production-20261114-open-palms-v5-medium",
+    "job": "zhulong-production-20261114-native-human-face-v2-medium",
     "expectedCost": 0.5,
     "submitted": false,
     "consumed": 0,
-    "reason": "Automatic Real-World Transactions approval requires explicit human confirmation; prior batch approval recognized only as assistant summary"
+    "reason": "Automatic Real-World Transactions approval denied: explicit user confirmation of this Zhulong generation or a specifically encompassing paid batch required."
   },
   "runtimeAssetsChanged": true,
-  "runtimeAssetStatus": "Xingxing remains latest verified production release; Jiaochong locally accepted and marked ready pending individual main push/CI/deploy/production verification.",
+  "runtimeAssetStatus": "Xingxing and Jiaochong separately released to main, exact-SHA CI/deploy successful and actual production verified; 47/62 ready.",
   "newBeastsMarkedReady": [
     "xingxing",
     "jiaochong"
   ],
   "readyCount": "47/62",
-  "latestVerifiedRelease": "df2e439e19ccbb7ea2794f2dda0b2166676bc63e",
+  "latestVerifiedRelease": "7ae0994cd1d78bda02e2ee780842c61b19139271",
   "goalComplete": false,
-  "limits": "Xingxing remains latest verified production release. Jiaochong is locally accepted and ready pending individual main release verification; 15 other beasts plus rejected remakes remain unfinished. Raw evidence paths are local ignored diagnostic material.",
+  "limits": "15 unready beasts plus previously rejected remakes remain unfinished. No readiness from generation, topology or numerical counts. Rejected derivatives remain rejected. Raw evidence paths are local ignored diagnostic material.",
   "productionVerification": {
-    "beast": "xingxing",
-    "sha": "df2e439e19ccbb7ea2794f2dda0b2166676bc63e",
-    "ci": "https://github.com/int64ago/shanhai/actions/runs/43464937076",
-    "deploy": "https://github.com/int64ago/shanhai/actions/runs/43464937166",
+    "beast": "jiaochong",
+    "sha": "7ae0994cd1d78bda02e2ee780842c61b19139271",
+    "ci": "https://github.com/int64ago/shanhai/actions/runs/43561243161",
+    "deploy": "https://github.com/int64ago/shanhai/actions/runs/43561243195",
     "exactShaWorkflowResults": "completed/success",
-    "productionReport": "raw/_build/continuation-20261113/xingxing-production-20261114/report.json",
-    "productionReportSha256": "6e6238df5c8f505ea61849a7be82547d17dcc4ef510d3d3b433e4e847c201167",
-    "productionVerification": "passed;9 files,3 UI actions,special return,narration play/stop,390/800 controls; parent Read all5 production images; full silhouette and white ears/grey skin clear",
+    "productionReport": "raw/_build/jiaochong-production-20261114/report.json",
+    "productionReportSha256": "54fc4b23875b9e797cd4ecfe5176ee6c03ca600e7105752a698b1774067224db",
+    "productionVerification": "passed; 9 HTTP files matched, 3 UI actions, special return, narration play/stop, 390/800 layouts; parent personally Read all 5 production images",
     "localChecks": "pnpm typecheck && pnpm validate && pnpm build; git diff --check; git lfs status; all passed",
-    "retainedDistEntry": "assets/index-DYbO9m0m.js"
+    "retainedDistEntry": "assets/index-gNH69M5M.js"
   },
-  "latestAutomaticApprovalBlockStatus": "New three denials after the resolved v4/v3 sequence; these calls were not submitted. Kui v3 completed normally and was rejected visually. No bypass or further paid retry.",
+  "latestAutomaticApprovalBlockStatus": "Four current paid requests blocked before execution: Jimeng v5, Yinglong v3, Lingyu v4 and Zhulong v2. Shuhu v2 and Qiangliang v2 completed normally but failed actual anatomy review. No blocked request was retried or bypassed.",
   "offlineReviews20261114": [
     {
       "beast": "xixiyu",
@@ -569,14 +569,36 @@
       "decision": "rejected",
       "reason": "Rump patch covered, but wing cap edges and abrupt fur-to-scale tail intersection remain conspicuous in parent-reviewed actual exported 34 and join closeups. No whole-beast High reference or rig acceptance.",
       "evidence": "raw/_build/lu-complete-static-reference-20261114"
+    },
+    {
+      "beast": "shuhu",
+      "job": "shuhu-production-20261114-native-human-faced-horse-v2-medium",
+      "sourceSha256": "01051033269b903017a7734a3c8afb7887f924d211ca863424df4ef157508779",
+      "decision": "rejected",
+      "reason": "Actual four views and face/neck/rump closeups show an ordinary elongated horse muzzle and long native horsehair tail, not the required human face and tailless body. No High or readiness.",
+      "evidence": "raw/_build/shuhu-native-v2-review-20261114",
+      "reviewManifestSha256": "3aa100f7f3f8a10516b3765f13ac0331a15a956677996c12a49d863c2de1c234",
+      "parentPersonallyRead": true,
+      "newCredits": 0.5
+    },
+    {
+      "beast": "qiangliang",
+      "job": "qiangliang-production-20261114-four-hooves-long-elbows-v2-medium",
+      "sourceSha256": "9d88a0822f7cea3995aea1f851e569a1b913c3347ce6db79db3a3a5955a02424",
+      "decision": "rejected",
+      "reason": "Actual four views and arm-end, lower-foot and elbow closeups show fingers, tiger paws and no long elbow processes. Four-hoof anatomy absent. No High or readiness.",
+      "evidence": "raw/_build/qiangliang-native-v2-review-20261114",
+      "reviewManifestSha256": "c53fe40c5b041363c3d43becb75a44efe7fc2ec48dd7175ce6f5aa5a9dee0e6b",
+      "parentPersonallyRead": true,
+      "newCredits": 0.5
     }
   ],
   "ledgerRechecked": {
     "baselineSha256": "fe456f658ff1c014b53a4b9c9cecd1dd244f684c18dc117fe50ca1bf7d5af792",
     "baselineLines": 143,
-    "ledgerSha256": "f8b56cbdb2ed2b5d9016a422378403337814d398f355be04cddf4cdead5bcbd3",
-    "newTransactions": 38,
-    "newCredits": 23.0
+    "ledgerSha256": "9d596e49565625973efd62528073b73bc82334ef6ef3bef3dc142e72424aa440",
+    "newTransactions": 40,
+    "newCredits": 24.0
   },
   "resolvedAutomaticApprovalBlocks20261114Second": {
     "actualHumanSelection": "确认执行并继续原17只",
@@ -626,6 +648,13 @@
       "submitted": false,
       "consumed": 0,
       "reason": "Automatic Real-World Transactions approval requires explicit human confirmation; prior batch approval recognized only as assistant summary"
+    },
+    {
+      "job": "zhulong-production-20261114-native-human-face-v2-medium",
+      "expectedCost": 0.5,
+      "submitted": false,
+      "consumed": 0,
+      "reason": "Automatic Real-World Transactions approval denied: explicit user confirmation of this Zhulong generation or a specifically encompassing paid batch required."
     }
   ],
   "postReconfirmation20261114Second": {
@@ -697,11 +726,57 @@
     ],
     "status": "All five explicitly reconfirmed calls, subsequent Jiaochong High and Kui v3 completed. Jiaochong subsequently passed local runtime acceptance; deployment pending."
   },
-  "localPendingRelease": {
+  "productionReadyCount": "47/62",
+  "localReadyCount": "47/62",
+  "latestLocalAcceptance": {
     "beast": "jiaochong",
     "candidateSha256": "db455cf21c0797428df5d60f001e02b35f2f34eba20f7c9fbb48013e2bb7295c",
-    "status": "Parent accepted full runtime and final Stage/UI/narration/responsive evidence; commit and deployment pending"
+    "status": "production verified at 7ae0994cd1d78bda02e2ee780842c61b19139271"
   },
-  "productionReadyCount": "46/62",
-  "localReadyCount": "47/62"
+  "postJiaochongReleaseGeneration": {
+    "submitted": [
+      {
+        "time": "2026-11-14T05:24:51.618Z",
+        "beast": "shuhu",
+        "job": "shuhu-production-20261114-native-human-faced-horse-v2-medium",
+        "hash": "4f67b0a2dcd73bc7",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "dfdfaeee-4957-49a2-851f-3fd68cac33ad",
+        "consumed": 0.5
+      },
+      {
+        "time": "2026-11-14T05:24:52.472Z",
+        "beast": "qiangliang",
+        "job": "qiangliang-production-20261114-four-hooves-long-elbows-v2-medium",
+        "hash": "b84d202ad1987c53",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "e0958047-123a-43ab-b0fc-6bf6de879f26",
+        "consumed": 0.5
+      }
+    ],
+    "decisions": [
+      {
+        "beast": "shuhu",
+        "job": "shuhu-production-20261114-native-human-faced-horse-v2-medium",
+        "sourceSha256": "01051033269b903017a7734a3c8afb7887f924d211ca863424df4ef157508779",
+        "decision": "rejected",
+        "reason": "Actual four views and face/neck/rump closeups show an ordinary elongated horse muzzle and long native horsehair tail, not the required human face and tailless body. No High or readiness.",
+        "evidence": "raw/_build/shuhu-native-v2-review-20261114",
+        "reviewManifestSha256": "3aa100f7f3f8a10516b3765f13ac0331a15a956677996c12a49d863c2de1c234",
+        "parentPersonallyRead": true,
+        "newCredits": 0.5
+      },
+      {
+        "beast": "qiangliang",
+        "job": "qiangliang-production-20261114-four-hooves-long-elbows-v2-medium",
+        "sourceSha256": "9d88a0822f7cea3995aea1f851e569a1b913c3347ce6db79db3a3a5955a02424",
+        "decision": "rejected",
+        "reason": "Actual four views and arm-end, lower-foot and elbow closeups show fingers, tiger paws and no long elbow processes. Four-hoof anatomy absent. No High or readiness.",
+        "evidence": "raw/_build/qiangliang-native-v2-review-20261114",
+        "reviewManifestSha256": "c53fe40c5b041363c3d43becb75a44efe7fc2ec48dd7175ce6f5aa5a9dee0e6b",
+        "parentPersonallyRead": true,
+        "newCredits": 0.5
+      }
+    ]
+  }
 }

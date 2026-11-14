@@ -1,0 +1,8 @@
+{
+  "id": "qiangliang-production-20261114-four-hooves-long-elbows-v2-medium",
+  "beast": "qiangliang",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE complete upright tiger-headed mythical humanoid, exactly two arms and two legs. A single natural tiger head with closed mouth, rounded ears and short orange striped fur joins a human-shaped muscular neck, shoulders, chest, waist and pelvis continuously. Warm grey body skin and plain dark short trousers. ALL FOUR extremities are CLOVEN HOOVES: each arm ends in one compact two-part hoof instead of a hand; each leg ends in one larger two-part hoof instead of a foot or paw. Exactly four hoof ends, no fingers, toes, claws or tiger paws. Both elbows have long smooth backward-pointing elbow processes continuous with the forearm; no separate spikes. Arms held away from torso, elbows slightly bent, four hoof ends fully visible. Balanced neutral standing pose with both lower hooves flat on ground, complete heels and broad soles. Broad organic neck and limb joins, no collars or plates. No snakes, extra heads, extra limbs, tail, weapons, jewelry, plinth or scenery.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

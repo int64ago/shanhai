@@ -1,0 +1,8 @@
+{
+  "id": "lingyu-production-20261114-human-feet-v4-medium",
+  "beast": "lingyu",
+  "budget": 12.5,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One complete Lingyu, a horizontal spindle-shaped FISH BODY with one calm HUMAN FACE naturally forming its anterior head. Fish trunk, forked fish tail, small dorsal fin, fine pale blue grey scales. Exactly TWO short human ARMS at the anterior flanks, each ending in an open HUMAN HAND with four long fingers and one thumb. Exactly TWO short human LEGS under the posterior belly, visibly bent knees, ankles and complete HUMAN FEET. Each rear FOOT has a broad heel, long sole, top instep and FIVE SHORT rounded TOES in a row, big toe on inner edge; feet point forward and slightly down. Rear feet must clearly differ from front hands: no thumbs on feet, no long fingers at rear. Warm ochre face, hands and feet blend gradually into fish skin. No separate human neck, head above back, extra fish face, humanoid chest, pectoral fins beside arms, extra limbs, claws or props. All four limbs and complete head to tail visible in a clear neutral three-quarter view.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}
