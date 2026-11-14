@@ -1,0 +1,1247 @@
+{
+  "beast": "jimeng",
+  "date": "2026-11-14",
+  "status": "parent-reviewed-native-high-runtime",
+  "source": [
+    {
+      "book": "山海经·中山经·中次八经",
+      "text": "又東百三十里，曰光山，其上多碧，其下多木。神計蒙處之，其狀人身而龍首，恒遊于漳淵，出入必有飄風暴雨。"
+    }
+  ],
+  "inferences": [
+    {
+      "item": "人身与龙首（设计参考）",
+      "basis": "人身而龍首为明文。直立姿势、双臂双腿、人手人足、体型与肩颈衔接是对人身的设计补足。光山条没有写鸟爪；附近骄山神的羊角虎爪、岐山神的方面三足各属别神。"
+    },
+    {
+      "item": "角须、衣饰与配色（设计参考）",
+      "basis": "经文没有规定龙首的角数、须髯、鳞片、衣饰或颜色。双短角、短鬃、浅灰青体表、浅色角鬃、暖粉掌趾与浅赭黄短裤均为艺术补足。"
+    },
+    {
+      "item": "漳渊与风雨（设计参考）",
+      "basis": "恒遊于漳淵、出入必有飄風暴雨是明文。具体游姿、是否腾空与墨雨旋风的表现属于艺术演绎；原文记风雨伴随出入，没有写挥臂召雨或雷电法器。"
+    },
+    {
+      "item": "神职与鸣声（考据说明）",
+      "basis": "本条称神計蒙，未明写司雨、雨师或东方木神职称，也未记鸣声。"
+    }
+  ],
+  "transactions": [
+    {
+      "time": "2026-11-13T12:49:37.986Z",
+      "beast": "jimeng",
+      "job": "jimeng-production-20261108-body-medium",
+      "hash": "4a83342ce1269b61",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "de3d9b12-dde8-4cb8-91ba-edd29265b7dd",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-14T02:05:01.846Z",
+      "beast": "jimeng",
+      "job": "jimeng-production-20261114-native-human-v2-medium",
+      "hash": "eb51c5c9d76cd3a5",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "40e973dc-84fa-4a38-8269-e677ded0fad4",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-14T02:17:03.132Z",
+      "beast": "jimeng",
+      "job": "jimeng-production-20261114-splayed-hands-v3-medium",
+      "hash": "4bad833a54cb57cf",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "9e041d75-8959-4716-9b23-d8c84fbe7ade",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-14T04:15:47.607Z",
+      "beast": "jimeng",
+      "job": "jimeng-production-20261114-four-fingers-thumb-v4-medium",
+      "hash": "9b27967812a0d7d6",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "99235047-3f20-4df2-bbd4-0d27ddcecea9",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-14T05:37:39.393Z",
+      "beast": "jimeng",
+      "job": "jimeng-production-20261114-open-palms-v5-medium",
+      "hash": "06a5cb4fd25499ce",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "c4e0fae8-3cc9-41bc-9a19-63985d61eeca",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-14T10:01:10.617Z",
+      "beast": "jimeng",
+      "job": "jimeng-production-20261114-planar-five-digits-v6-medium",
+      "hash": "e4d24c62a836ce30",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "faeb4e3f-ef9b-4644-8e0a-65e9a60da7a3",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-14T10:08:11.288Z",
+      "beast": "jimeng",
+      "job": "jimeng-production-20261114-native-whole-v6-high",
+      "hash": "22304ca3e66799d3",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "317aeb38-270d-4217-9b24-111fa92f822a",
+      "consumed": 1
+    }
+  ],
+  "lifetimeConsumed": 4.0,
+  "newCreditsAgainstFixed143LineBaseline": 3.5,
+  "highSource": {
+    "path": "raw/jimeng-production-20261114-native-whole-v6-high/base_high_pbr.glb",
+    "bytes": 28909868,
+    "sha256": "ffac63d46490bf6c1177c9ecc8f8744491a4f089d2110e12a50f7a0342765556",
+    "uuid": "317aeb38-270d-4217-9b24-111fa92f822a",
+    "originalVertices": 34510,
+    "originalTriangles": 50000,
+    "immutable": true,
+    "textureModeAddon": false
+  },
+  "highRequest": {
+    "path": "pipeline/rodin/jobs/jimeng-production-20261114-native-whole-v6-high.json",
+    "bytes": 1379,
+    "sha256": "2dedc3b05435f8a38b897170fd52e8e9bc7c2e0de7bd0af5e3ed0461d7257c2f",
+    "images": [
+      {
+        "path": "concept/jimeng/production-20261114-native-whole-v6/view_34.png",
+        "bytes": 543616,
+        "sha256": "fba917e542adee7f744d8cda3db68c3d8682480ef29f45ade891c38c68914cba"
+      },
+      {
+        "path": "concept/jimeng/production-20261114-native-whole-v6/view_side.png",
+        "bytes": 517906,
+        "sha256": "f2628d194780fb795a95bd5a5b0cdab2c5086ea33f3b018a302d71b84f4eee63"
+      },
+      {
+        "path": "concept/jimeng/production-20261114-native-whole-v6/view_front.png",
+        "bytes": 560920,
+        "sha256": "2f7e711a0e6e101a5b3fc4687a11a5c247d107801672e337a023f1ddd7bbb858"
+      },
+      {
+        "path": "concept/jimeng/production-20261114-native-whole-v6/view_back.png",
+        "bytes": 545175,
+        "sha256": "63fa516c961011dd1bb1350e75af1bdd55352b94c85f40cddca905f0d532a2b1"
+      }
+    ]
+  },
+  "rigRecipe": {
+    "path": "pipeline/blender/rig_jimeng_native.py",
+    "bytes": 60169,
+    "sha256": "a152d1b37c5ab6b664d3eff7894ea37f05ee9ece5ae22bfe4e23e09a32e1dc48"
+  },
+  "helperSha256": {
+    "rig_quadruped.py": "8e7a29db4562dc642104fbe904c3c89a4689d5ceab9184529a7b0e091cd3be1b",
+    "rig_jingwei.py": "d449a91251a4feb2d7623ba5f24f08bd4f48e66279707d8a7e6469d4ab40f77c",
+    "rig_zhuyan_native.py": "c1b1951e4c3ee22c4fe171c153425bafdde02fa7460bd32b2cabd333648dbdbd",
+    "turnaround.py": "e7011a02a386ec4f0cbc87f016536c43e2c5626cf709f06ff4da20b5a3b38bc0"
+  },
+  "calibration": {
+    "path": "pipeline/provenance/jimeng-calibration.json",
+    "bytes": 12544,
+    "sha256": "b3c51422bf7a1459dfae71eeb8a86e6f80f39ae481df78930b14628c8e44b0bb"
+  },
+  "riggedCandidate": {
+    "path": "raw/_build/jimeng-native-rig-20261114/export-v6/rigged.glb",
+    "bytes": 29695616,
+    "sha256": "6f445c3fd3d97936d68f52948c8e4971a41003e814486ca1a895bea7b3ca02d1"
+  },
+  "independentRestReference": {
+    "path": "raw/_build/jimeng-native-rig-20261114/export-v6/rest-reference.json",
+    "bytes": 1542632,
+    "sha256": "0a8c8c0c038af9e92b18af955786fed0dd466c7e309ae6b41a6327814ff1ad64"
+  },
+  "offlineAudit": {
+    "path": "raw/_build/jimeng-native-rig-20261114/export-v6/audit.json",
+    "bytes": 46794,
+    "sha256": "fdad5f8e7d11393dffdfcd316c6441cc7ead365604fe8e27edede8af84c141bd"
+  },
+  "runtimeContract": {
+    "restHeight": 1.8,
+    "radius": 1.0,
+    "speed": 0.08,
+    "scale": 1.0,
+    "idleDuration": 4.0,
+    "walkSeconds": 2.4,
+    "specialDuration": 4.0,
+    "stanceDuty": 0.66,
+    "oppositeLegPhase": 0.5,
+    "forward": "glTF +Z / Blender -Y",
+    "worldAngle": "PI/2 - (0.08/1.0)*elapsedWalkSeconds",
+    "worldPosition": "[radius*cos(angle), 0, radius*sin(angle)]",
+    "worldYaw": "PI-angle",
+    "startPosition": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "startYaw": 1.5707963267948966,
+    "animation": "walk.timeScale=1; elapsedWalkSeconds matches mixer walk time continuously across repeats; root scale=1; accumulated world walk time MUST NOT reset on clip/action restart",
+    "stance": "inverse circular position AND sole yaw; full foot protected; duty .66; right phase +.5",
+    "swing": "quintic C2 recovery; sin^4 clearance",
+    "transitions": "no-slip guarantee applies to full-weight clips; fades need separate review"
+  },
+  "nativePreservation": {
+    "uniformScale": 0.9451150437559103,
+    "decodedOrigin": [
+      -0.001164078712463379,
+      0.0008008629083633423,
+      -0.9490221738815308
+    ],
+    "decodedPositionsSha256": "8d221e67a8cf68792a9ec2ba11a0998cc85e378972a2b292b1d0e0adcd7c2c50",
+    "normalizedPositionsSha256": "8c7c8b7011d4d7bf8521fd2d84303c6c47f2ce5550a86e09fb3d598d6a2e4fb9",
+    "decodedNativeFingerprint": {
+      "vertices": 34510,
+      "faces": 50000,
+      "edgesSha256": "970f484c74f420e9d92b864320dd8cba0ba0f8a8a592c05cb47548d05aa68904",
+      "loopsSha256": "d77d0d00dd1ec72537ad21d76925eeb55fa2345071d2d33ca15b5dff4fab30e3",
+      "polygonSizesSha256": "5fb35b9d69168912af61263b6af80bb5662a253edce9efb70d74c1dd41e80823",
+      "polygonMaterialsSha256": "4cbbd9be0cba685835755f827758705db5a413c5494c34262cd25946a73e7582",
+      "uvSha256": {
+        "UVMap": "8d2269ee5e1985068be98561f730870fa3c323befb9ba01504872accd95ca432"
+      },
+      "cornerNormalsSha256": "368a677f9ed31444bad1c6f04d1b8b7ead82e4e847dd5ebe240357bfe7e67574",
+      "pbrSha256": "3e3cf35506f0882e5eb0d9ae1395027ca1c88bdad0147affff9f12a38492313b",
+      "embeddedImageSha256": {
+        "texture_diffuse": "12e0ae1909843be61c10e7d42e93cb8e394529377e47e177311b05ff95a82ecf",
+        "texture_metallic-texture_roughness": "8db03d3bea5eb993d6094e8c2f3f5366c858df09b403dff0278f90c2e8d08794",
+        "texture_normal": "134181fa03c7b14905b7c6855b58c2f6fc1c847ed08c1055973a79545e06f5de"
+      }
+    },
+    "nativeFingerprint": {
+      "vertices": 34510,
+      "faces": 50000,
+      "edgesSha256": "970f484c74f420e9d92b864320dd8cba0ba0f8a8a592c05cb47548d05aa68904",
+      "loopsSha256": "d77d0d00dd1ec72537ad21d76925eeb55fa2345071d2d33ca15b5dff4fab30e3",
+      "polygonSizesSha256": "5fb35b9d69168912af61263b6af80bb5662a253edce9efb70d74c1dd41e80823",
+      "polygonMaterialsSha256": "4cbbd9be0cba685835755f827758705db5a413c5494c34262cd25946a73e7582",
+      "uvSha256": {
+        "UVMap": "8d2269ee5e1985068be98561f730870fa3c323befb9ba01504872accd95ca432"
+      },
+      "cornerNormalsSha256": "ba826d4023eb042b527492630ecbe2cb2c57b7b3c2940193e7b5515a5a48f5d6",
+      "pbrSha256": "3e3cf35506f0882e5eb0d9ae1395027ca1c88bdad0147affff9f12a38492313b",
+      "embeddedImageSha256": {
+        "texture_diffuse": "12e0ae1909843be61c10e7d42e93cb8e394529377e47e177311b05ff95a82ecf",
+        "texture_metallic-texture_roughness": "8db03d3bea5eb993d6094e8c2f3f5366c858df09b403dff0278f90c2e8d08794",
+        "texture_normal": "134181fa03c7b14905b7c6855b58c2f6fc1c847ed08c1055973a79545e06f5de"
+      }
+    },
+    "maxNormalizationNormalRoundoff": 0.0009428802877664566,
+    "geometryEdits": false,
+    "normalization": "positive uniform scale plus translation only; source faces Blender -Y already",
+    "reimport": {
+      "maxRestCoordinateError": 4.2471056076465175e-06,
+      "vertices": 34576,
+      "faces": 50000,
+      "maxRestUVError": 0.0,
+      "maxRestNormalComponentError": 0.0017268270122023713,
+      "nativeEncodedPbrImagesPreserved": true,
+      "attributeWeightAudit": {
+        "finitePositionsNormalsUV": true,
+        "maxNormalLengthError": 4.1073733259011647e-07,
+        "unweighted": 0,
+        "maxInfluences": 4,
+        "maxWeightSumError": 1.4243414625525475e-07,
+        "maxProtectedWeightError": 0.0,
+        "protectedBoneMapping": {
+          "head": "head",
+          "hand_l": "arm_l_hand",
+          "foot_l": "leg_l_foot",
+          "sole_l": "leg_l_foot",
+          "hand_r": "arm_r_hand",
+          "foot_r": "leg_r_foot",
+          "sole_r": "leg_r_foot"
+        }
+      }
+    },
+    "limitation": "Native NORMAL/UV/index/PBR payload is not claimed bit-exact after Blender export or runtime compression. Positive uniform normalization only; native geometry and PBR images retained. Normal codec roundoff disclosed; native sole relief and 56 near-zero-area triangles retained, not repaired."
+  },
+  "offlineQA": {
+    "passed": true,
+    "weights": {
+      "unweighted": 0,
+      "maxInfluences": 4,
+      "completeHeadRigid": true,
+      "completeHandsRigid": true,
+      "completeFeetRigid": true,
+      "singleNeck": true,
+      "crossLimbContamination": false
+    },
+    "nativeSoles": {
+      "l": {
+        "minHeight": 0.000995635986328125,
+        "maxUndersideHeight": 0.026895999908447266,
+        "ankle": [
+          0.186,
+          0.092,
+          0.12
+        ]
+      },
+      "r": {
+        "minHeight": 0.0,
+        "maxUndersideHeight": 0.02694404125213623,
+        "ankle": [
+          -0.142,
+          0.09,
+          0.12
+        ]
+      }
+    },
+    "reimportNumericalQA": {
+      "idle": {
+        "samples": 481,
+        "samplingHz": 120,
+        "minSoleHeight": -2.273487552884035e-06,
+        "minAllVertexHeight": -2.273487552884035e-06,
+        "maxSoleHeight": 0.026941832154989243,
+        "maxFullFootWorldStanceDrift": 0.0,
+        "maxFullFootOrientationDrift": 0.0,
+        "maxProtectedShapeDrift": 4.657118950368577e-06,
+        "allVertexLoopSeam": 0.0,
+        "maxAllVertexWrapVelocityJump": 0.0001805932212775125,
+        "wrapVelocityDt": 0.0033333333333333335,
+        "plantIntervals": 2,
+        "minNondegenerateTriangleAreaRatio": 0.805056717740036,
+        "sourceNearDegenerateTrianglesExcluded": 56,
+        "maxBoneSegmentLengthError": 1.498364308355482e-05,
+        "boneSegmentLengthTolerance": 3e-05,
+        "minSubstantialTriangleAreaRatio": 0.805056717740036,
+        "worstTriangle": {
+          "time": 3.0,
+          "triangle": 38972,
+          "vertices": [
+            7833,
+            7829,
+            7331
+          ],
+          "restArea": 2.5720192277892895e-06,
+          "deformedArea": 2.0706213574883073e-06,
+          "restPoints": [
+            [
+              -0.13364234566688538,
+              0.028567995876073837,
+              0.9306278824806213
+            ],
+            [
+              -0.13651253283023834,
+              0.031767766922712326,
+              0.9349262714385986
+            ],
+            [
+              -0.14019295573234558,
+              0.03460362181067467,
+              0.9394787549972534
+            ]
+          ],
+          "posedPoints": [
+            [
+              -0.13364234566688538,
+              0.028567994013428688,
+              0.9306278824806213
+            ],
+            [
+              -0.13651253283023834,
+              0.031487204134464264,
+              0.9350168704986572
+            ],
+            [
+              -0.14019295573234558,
+              0.03431852161884308,
+              0.9395673871040344
+            ]
+          ],
+          "memberships": [
+            [
+              "pelvis"
+            ],
+            [],
+            []
+          ]
+        },
+        "selection": "reviewed connected rest anatomy before weights; evaluated native mesh"
+      },
+      "walk": {
+        "samples": 577,
+        "samplingHz": 120,
+        "minSoleHeight": -1.837354284361936e-05,
+        "minAllVertexHeight": -1.837354284361936e-05,
+        "maxSoleHeight": 0.026941880583763123,
+        "maxFullFootWorldStanceDrift": 1.639495245389403e-05,
+        "maxFullFootOrientationDrift": 2.4517733481999543e-06,
+        "maxProtectedShapeDrift": 4.773693846327198e-06,
+        "allVertexLoopSeam": 0.0,
+        "maxAllVertexWrapVelocityJump": 0.006095228595148171,
+        "wrapVelocityDt": 0.0033333333333333335,
+        "plantIntervals": 6,
+        "minNondegenerateTriangleAreaRatio": 0.15922197149842168,
+        "sourceNearDegenerateTrianglesExcluded": 56,
+        "maxBoneSegmentLengthError": 1.5239122935828409e-05,
+        "boneSegmentLengthTolerance": 3e-05,
+        "minSubstantialTriangleAreaRatio": 0.15922197149842168,
+        "worstTriangle": {
+          "time": 2.033333333333333,
+          "triangle": 21925,
+          "vertices": [
+            19938,
+            19937,
+            19795
+          ],
+          "restArea": 4.65680326171986e-05,
+          "deformedArea": 7.414653962113166e-06,
+          "restPoints": [
+            [
+              0.0730665847659111,
+              -0.03401251882314682,
+              0.7402340769767761
+            ],
+            [
+              0.07698042690753937,
+              -0.04153135046362877,
+              0.7437909841537476
+            ],
+            [
+              0.06343954801559448,
+              -0.03000285103917122,
+              0.7451299428939819
+            ]
+          ],
+          "posedPoints": [
+            [
+              0.06714395433664322,
+              -0.044662486761808395,
+              0.7409237027168274
+            ],
+            [
+              0.07164401561021805,
+              -0.051046766340732574,
+              0.7435708045959473
+            ],
+            [
+              0.06108283996582031,
+              -0.034203462302684784,
+              0.7383676171302795
+            ]
+          ],
+          "memberships": [
+            [
+              "leg_l"
+            ],
+            [
+              "leg_l"
+            ],
+            [
+              "leg_l"
+            ]
+          ]
+        },
+        "selection": "reviewed connected rest anatomy before weights; evaluated native mesh"
+      },
+      "special": {
+        "samples": 481,
+        "samplingHz": 120,
+        "minSoleHeight": -2.683987077034544e-06,
+        "minAllVertexHeight": -2.683987077034544e-06,
+        "maxSoleHeight": 0.02694200724363327,
+        "maxFullFootWorldStanceDrift": 7.227640731955251e-07,
+        "maxFullFootOrientationDrift": 1.7332093407022154e-07,
+        "maxProtectedShapeDrift": 4.680274981794241e-06,
+        "allVertexLoopSeam": 0.0,
+        "maxAllVertexWrapVelocityJump": 0.00018754163649740545,
+        "wrapVelocityDt": 0.0033333333333333335,
+        "plantIntervals": 2,
+        "minNondegenerateTriangleAreaRatio": 0.20314528620819386,
+        "sourceNearDegenerateTrianglesExcluded": 56,
+        "maxBoneSegmentLengthError": 1.5050057147636409e-05,
+        "boneSegmentLengthTolerance": 3e-05,
+        "minSubstantialTriangleAreaRatio": 0.20314528620819386,
+        "worstTriangle": {
+          "time": 2.533333333333333,
+          "triangle": 44507,
+          "vertices": [
+            3424,
+            3423,
+            3337
+          ],
+          "restArea": 4.1127644104392314e-05,
+          "deformedArea": 8.354887032655514e-06,
+          "restPoints": [
+            [
+              -0.20995637774467468,
+              0.12484978139400482,
+              1.3789681196212769
+            ],
+            [
+              -0.21082153916358948,
+              0.13309644162654877,
+              1.3746764659881592
+            ],
+            [
+              -0.21729665994644165,
+              0.1299721896648407,
+              1.3695814609527588
+            ]
+          ],
+          "posedPoints": [
+            [
+              -0.20791365206241608,
+              0.1409250795841217,
+              1.3739509582519531
+            ],
+            [
+              -0.2099844068288803,
+              0.13995972275733948,
+              1.3696705102920532
+            ],
+            [
+              -0.21599625051021576,
+              0.1371529996395111,
+              1.3645539283752441
+            ]
+          ],
+          "memberships": [
+            [
+              "neck"
+            ],
+            [
+              "arm_r"
+            ],
+            [
+              "arm_r"
+            ]
+          ]
+        },
+        "selection": "reviewed connected rest anatomy before weights; evaluated native mesh"
+      }
+    }
+  },
+  "runtimeModel": {
+    "path": "public/models/jimeng/body.glb",
+    "bytes": 820880,
+    "sha256": "7450c852752da2ecddf15db94c22280443a36539af08adf1b039ba438e4461e7",
+    "compression": {
+      "codec": "meshopt",
+      "level": "medium",
+      "texture": "webp",
+      "textureSize": 2048,
+      "simplify": false,
+      "flatten": false,
+      "join": false,
+      "weld": false,
+      "resample": false,
+      "palette": false,
+      "instance": false
+    }
+  },
+  "actualStageQA": {
+    "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/report.json",
+    "bytes": 57349,
+    "sha256": "8ee7a06627d708f02ab78b35eda0a2f131c13b983cb9c7b16bda001cefe267a1",
+    "passed": true,
+    "productionAcceptedByScript": false,
+    "sections": {
+      "native-anatomy": {
+        "passed": true
+      },
+      "initial-framing": {
+        "passed": true
+      },
+      "motion-idle": {
+        "passed": true
+      },
+      "motion-walk": {
+        "passed": true
+      },
+      "motion-special": {
+        "passed": true
+      },
+      "world-clock-across-action-restarts": {
+        "passed": true
+      },
+      "full-orbit-framing": {
+        "passed": true
+      },
+      "actual-stage-images": {
+        "passed": true
+      },
+      "responsive-and-remount": {
+        "passed": true
+      },
+      "controls-and-narration": {
+        "passed": true
+      },
+      "runtime-errors": {
+        "passed": true
+      }
+    },
+    "anatomy": {
+      "previewReadyOverride": false,
+      "unmatched": 0,
+      "maxPositionError": 0.00011662856752853592,
+      "maxWeightError": 0,
+      "maxWeightSumError": 2.220446049250313e-16,
+      "invalidAttributes": 0,
+      "masks": {
+        "head": 9167,
+        "neck": 835,
+        "chest": 1004,
+        "pelvis": 2855,
+        "arm_l": 3268,
+        "hand_l": 1990,
+        "leg_l": 4342,
+        "foot_l": 1325,
+        "sole_l": 576,
+        "arm_r": 3411,
+        "hand_r": 1966,
+        "leg_r": 4794,
+        "foot_r": 1259,
+        "sole_r": 554
+      },
+      "triangles": 50000,
+      "bones": 17,
+      "meshes": 1,
+      "outlines": 1,
+      "invalid": 0
+    },
+    "idle": {
+      "maxFullFootStanceDrift": 0,
+      "maxFullSoleStanceDrift": 0,
+      "maxSoleOrientationRadians": 1.4901161193847656e-08,
+      "maxRigidError": 2.930798823241876e-06,
+      "minFootHeight": -2.125802566310675e-06,
+      "minSoleHeight": -2.125802566310675e-06,
+      "samples": 36,
+      "intervals": [
+        "l/0",
+        "r/0"
+      ]
+    },
+    "walk": {
+      "maxFullFootStanceDrift": 1.7124218649894062e-05,
+      "maxFullSoleStanceDrift": 1.7124218649894062e-05,
+      "maxSoleOrientationRadians": 6.746359822161577e-06,
+      "maxRigidError": 2.7379184564524373e-06,
+      "minFootHeight": -1.878726204951331e-05,
+      "minSoleHeight": -1.878726204951331e-05,
+      "samples": 150,
+      "intervals": [
+        "l/0",
+        "r/1",
+        "l/1",
+        "r/2",
+        "l/2",
+        "r/3",
+        "l/3",
+        "r/4",
+        "l/4",
+        "r/5",
+        "l/5",
+        "r/6",
+        "l/6",
+        "r/7",
+        "l/7",
+        "r/8"
+      ]
+    },
+    "special": {
+      "maxFullFootStanceDrift": 4.902544055014547e-07,
+      "maxFullSoleStanceDrift": 4.902544055014547e-07,
+      "maxSoleOrientationRadians": 4.94215606205975e-07,
+      "maxRigidError": 2.8668427112799044e-06,
+      "minFootHeight": -2.4417091647466194e-06,
+      "minSoleHeight": -2.4417091647466194e-06,
+      "samples": 30,
+      "intervals": [
+        "l/0",
+        "r/0"
+      ]
+    },
+    "worldClockAcrossRestarts": {
+      "first": {
+        "bones": 17,
+        "meshes": 1,
+        "outlines": 1,
+        "invalid": 0,
+        "action": "walk",
+        "time": 0.9167000002861027,
+        "weight": 1,
+        "elapsedWalkSeconds": 19.097800000190755,
+        "worldAngle": 0.04297232677963603,
+        "position": [
+          0.9990768316405196,
+          0,
+          0.04295910240147995
+        ],
+        "yaw": 3.098620326810157,
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "paused": {
+        "bones": 17,
+        "meshes": 1,
+        "outlines": 1,
+        "invalid": 0,
+        "action": "idle",
+        "time": 0.6500000000000001,
+        "weight": 1,
+        "elapsedWalkSeconds": 19.097800000190755,
+        "worldAngle": 0.04297232677963603,
+        "position": [
+          0.9990768316405196,
+          0,
+          0.04295910240147995
+        ],
+        "yaw": 3.098620326810157,
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "still": {
+        "bones": 17,
+        "meshes": 1,
+        "outlines": 1,
+        "invalid": 0,
+        "action": "idle",
+        "time": 1.1499000000953674,
+        "weight": 1,
+        "elapsedWalkSeconds": 19.097800000190755,
+        "worldAngle": 0.04297232677963603,
+        "position": [
+          0.9990768316405196,
+          0,
+          0.04295910240147995
+        ],
+        "yaw": 3.098620326810157,
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "special": {
+        "bones": 17,
+        "meshes": 1,
+        "outlines": 1,
+        "invalid": 0,
+        "action": "special",
+        "time": 0.7166999998092652,
+        "weight": 1,
+        "elapsedWalkSeconds": 19.097800000190755,
+        "worldAngle": 0.04297232677963603,
+        "position": [
+          0.9990768316405196,
+          0,
+          0.04295910240147995
+        ],
+        "yaw": 3.098620326810157,
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "resumed": {
+        "bones": 17,
+        "meshes": 1,
+        "outlines": 1,
+        "invalid": 0,
+        "action": "walk",
+        "time": 0.7000000000000001,
+        "weight": 1,
+        "elapsedWalkSeconds": 19.79780000019076,
+        "worldAngle": -0.013027673220364466,
+        "position": [
+          0.999915141065432,
+          0,
+          -0.013027304713456568
+        ],
+        "yaw": 3.1546203268101576,
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "completeOrbits": [
+      {
+        "width": 1440,
+        "samples": 74,
+        "secondsBetweenFirstLastSample": 77.52850000047543,
+        "minimumScreenMarginPixels": 198.81023145737447,
+        "maximumCoveredVertices": 0
+      },
+      {
+        "width": 390,
+        "samples": 76,
+        "secondsBetweenFirstLastSample": 78.3407999992401,
+        "minimumScreenMarginPixels": 93.85583205391796,
+        "maximumCoveredVertices": 0
+      }
+    ],
+    "responsive": [
+      {
+        "low": [
+          360.13218185484595,
+          354.8317324378745
+        ],
+        "high": [
+          538.362076713426,
+          569.2846101948941
+        ],
+        "coveredVertices": 0,
+        "width": 641,
+        "height": 900
+      },
+      {
+        "low": [
+          418.64516554531866,
+          339.1495208586642
+        ],
+        "high": [
+          626.5212926107803,
+          589.159696086475
+        ],
+        "coveredVertices": 0,
+        "width": 800,
+        "height": 900
+      },
+      {
+        "low": [
+          116.87428947365642,
+          366.127448671316
+        ],
+        "high": [
+          294.86041074114877,
+          579.5452539954579
+        ],
+        "coveredVertices": 0,
+        "width": 390,
+        "height": 900
+      }
+    ],
+    "cards": [
+      {
+        "width": 641,
+        "source": "原文又東百三十里，曰光山，其上多碧，其下多木。神計蒙處之，其狀人身而龍首，恒遊于漳淵，出入必有飄風暴雨。——《山海经·中山经·中次八经》",
+        "design": "设计人身与龙首（设计参考）角须、衣饰与配色（设计参考）漳渊与风雨（设计参考）神职与鸣声（考据说明）",
+        "scrollWidth": 278,
+        "clientWidth": 278,
+        "designVisible": true
+      },
+      {
+        "width": 800,
+        "source": "原文又東百三十里，曰光山，其上多碧，其下多木。神計蒙處之，其狀人身而龍首，恒遊于漳淵，出入必有飄風暴雨。——《山海经·中山经·中次八经》",
+        "design": "设计人身与龙首（设计参考）角须、衣饰与配色（设计参考）漳渊与风雨（设计参考）神职与鸣声（考据说明）",
+        "scrollWidth": 278,
+        "clientWidth": 278,
+        "designVisible": true
+      },
+      {
+        "width": 390,
+        "source": "原文又東百三十里，曰光山，其上多碧，其下多木。神計蒙處之，其狀人身而龍首，恒遊于漳淵，出入必有飄風暴雨。——《山海经·中山经·中次八经》",
+        "design": "设计人身与龙首（设计参考）角须、衣饰与配色（设计参考）漳渊与风雨（设计参考）神职与鸣声（考据说明）",
+        "scrollWidth": 278,
+        "clientWidth": 278,
+        "designVisible": true
+      }
+    ],
+    "remounts": [
+      {
+        "bones": 17,
+        "meshes": 1,
+        "outlines": 1,
+        "invalid": 0,
+        "disposedSkeletons": 1,
+        "skeletons": 1,
+        "disposedMaterials": 2,
+        "materials": 2,
+        "disposedGeometry": 0,
+        "disposedTextures": 0,
+        "liveOldBoneTextures": 0,
+        "geometryReused": true,
+        "skeletonIsNew": true,
+        "materialIsNew": true,
+        "sourceTexturesReused": true,
+        "frame": {
+          "low": [
+            98.23915365303256,
+            365.2364094714263
+          ],
+          "high": [
+            240.91449093257532,
+            586.1729603970681
+          ],
+          "coveredVertices": 0,
+          "width": 390,
+          "height": 900
+        }
+      },
+      {
+        "bones": 17,
+        "meshes": 1,
+        "outlines": 1,
+        "invalid": 0,
+        "disposedSkeletons": 1,
+        "skeletons": 1,
+        "disposedMaterials": 2,
+        "materials": 2,
+        "disposedGeometry": 0,
+        "disposedTextures": 0,
+        "liveOldBoneTextures": 0,
+        "geometryReused": true,
+        "skeletonIsNew": true,
+        "materialIsNew": true,
+        "sourceTexturesReused": true,
+        "frame": {
+          "low": [
+            131.67231232614418,
+            365.3293201523634
+          ],
+          "high": [
+            266.1575385068224,
+            583.5330792449536
+          ],
+          "coveredVertices": 0,
+          "width": 390,
+          "height": 900
+        }
+      },
+      {
+        "bones": 17,
+        "meshes": 1,
+        "outlines": 1,
+        "invalid": 0,
+        "disposedSkeletons": 1,
+        "skeletons": 1,
+        "disposedMaterials": 2,
+        "materials": 2,
+        "disposedGeometry": 0,
+        "disposedTextures": 0,
+        "liveOldBoneTextures": 0,
+        "geometryReused": true,
+        "skeletonIsNew": true,
+        "materialIsNew": true,
+        "sourceTexturesReused": true,
+        "frame": {
+          "low": [
+            136.82519983231307,
+            365.51509056227286
+          ],
+          "high": [
+            270.123442582245,
+            583.1808654999953
+          ],
+          "coveredVertices": 0,
+          "width": 390,
+          "height": 900
+        }
+      }
+    ],
+    "narrationPlayedAndStopped": true,
+    "errors": [],
+    "images": [
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/initial-desktop-idle.png",
+        "bytes": 861640,
+        "sha256": "6da5a4cac5e45c4795106da71857eb7aaaaf8d5307d1557f1a243a45b4e5b9be"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/orbit-1440-quarter-0.png",
+        "bytes": 862073,
+        "sha256": "893eefea35ec610485b6b4037848fb90e3c203946a5d31df7699f82e70f0c53d"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/orbit-1440-quarter-1.png",
+        "bytes": 852954,
+        "sha256": "aabcd3de753a7bfe342ffd5e3f91d9675a6c9980655937bed579eb34700bb9ae"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/orbit-1440-quarter-2.png",
+        "bytes": 869402,
+        "sha256": "eb8bcd53ed5522b30f4c2024a0eb730b312bc2bdb1ab357c1577558e89d957f2"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/orbit-1440-quarter-3.png",
+        "bytes": 873444,
+        "sha256": "bddbdfdd7b7892250e7e513edd8b5b742402e9e96b244e9a79067dc3d0718370"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/orbit-390-quarter-0.png",
+        "bytes": 271161,
+        "sha256": "5f23680b11074a040ed0d7cb52aea1f55436e340ab38e64f7d1fccd1f3a439ae"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/orbit-390-quarter-1.png",
+        "bytes": 270740,
+        "sha256": "044d52032f7a64ed1fb7e038a1fa751d63a586c394b0f13b1dfdc21e2c73931e"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/orbit-390-quarter-2.png",
+        "bytes": 272251,
+        "sha256": "45ebfccb4525212dfc4dfb0daa7cfcdd7fa16cb8321ef4a16ba86bd53174056e"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/orbit-390-quarter-3.png",
+        "bytes": 268156,
+        "sha256": "dac59751750b09012a18304f9021bea6c5752f74507cfbc96c273a7af1d50496"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/desktop-idle.png",
+        "bytes": 867549,
+        "sha256": "00887b7ceceb329cce3ea78ba0fdfbd211e11d707a69725ef3d93ff99524baca"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/anatomy-front.png",
+        "bytes": 919876,
+        "sha256": "c4c39c920e2d8468ef65b29dd2d9a3b1f752bfdb6f19cf42d46920943511359c"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/anatomy-back.png",
+        "bytes": 919982,
+        "sha256": "53499921ed4705170d87a61a8b6ee756b87d29b59e733517ebb3f13d44cae075"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/anatomy-34.png",
+        "bytes": 925202,
+        "sha256": "15f53b8c9be29544d0f11fb49d98a5b6f28c9f6ee4cafb6deab5290ae1b9ef46"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/anatomy-head-neck.png",
+        "bytes": 965134,
+        "sha256": "22527f28898b44fbed89cd9eaddde7f56c2797e9283b9a5b419da58d1d503b1d"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/anatomy-hand-l.png",
+        "bytes": 928588,
+        "sha256": "1321893167852c907ad7f08631aa0473d7857574e879531f19c40016f8ec59ab"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/anatomy-hand-l-back.png",
+        "bytes": 875592,
+        "sha256": "f453fd29b91b83c94c4db7b93077f89831912286b8ad1b4083a7a8af55e14d86"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/anatomy-hand-r.png",
+        "bytes": 927915,
+        "sha256": "74d3067b721a29debed2ea7e7c3ad187d65ead31b69b18d1017fdc48430e342b"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/anatomy-hand-r-back.png",
+        "bytes": 904801,
+        "sha256": "768ed025bb48e5f46fb85eff7e879bc92c9f7ebc8b38c8ba095483ab057084e6"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/anatomy-feet.png",
+        "bytes": 864316,
+        "sha256": "4cce01eb64d114df74e2a828b21229d3b440894ea6e8c838ab9c48c4905b3344"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/walk-0.png",
+        "bytes": 924628,
+        "sha256": "772f31cdd4f821d080b1e9df1e09da3038679df3249004eedfa1b9a3a34a25c7"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/walk-1.png",
+        "bytes": 924099,
+        "sha256": "c544c76e24cc7563bee08c645627038338154586fbbc648f8fb4e261cddc6866"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/walk-2.png",
+        "bytes": 923980,
+        "sha256": "34843342f06c397dd235aca1c3b1514487f05d18c94d60463b974878cd7d6ea6"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/walk-feet.png",
+        "bytes": 871814,
+        "sha256": "21332f1e15f205b8bc9773a5afbaf91ccd02d0f632ac5aeed8f4bab9612d67d2"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/walk-hand-l.png",
+        "bytes": 945838,
+        "sha256": "d38937be0ba0310437721706ac120cccca92295a34cfd7c173a9e4d9d141ca2e"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/walk-hand-r.png",
+        "bytes": 895931,
+        "sha256": "7d2876642cd1601e8b02aa685a07dc89ac148f250720f4c2617f67d47599c408"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/special-0.png",
+        "bytes": 927876,
+        "sha256": "9270b5d02c24ce9ae79041c296e4481c2c74de207b7a91285cb5353edb1a0dcf"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/special-1.png",
+        "bytes": 926613,
+        "sha256": "08c699ccc53ec36f41685c07add4ae10180a6530869ae26b6c74fdf53fbf8bdc"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/special-2.png",
+        "bytes": 928962,
+        "sha256": "225240262426b5d76f9784baf59362adef9e9d97c8d514e3ca134a89af7f8cd3"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/special-feet.png",
+        "bytes": 872200,
+        "sha256": "6ad77c56212c2fd973915521dab574cd72b5635b63fc3d63f45181231fbf0885"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/special-hand-l.png",
+        "bytes": 933989,
+        "sha256": "f7de1b444f913093d7fa4543c88b37b27009cddd9a574094b91df11fbb1cef9c"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/special-hand-r.png",
+        "bytes": 900883,
+        "sha256": "dffc3dfb866e3455d7da06d9c326c0b1040f5a6280ba99c93ef509610a8a6126"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/responsive-641.png",
+        "bytes": 434601,
+        "sha256": "32fc6864a7408806f46d34943640bb921b306cfe78ae3b1d6d1c2009bff1b1ba"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/responsive-800.png",
+        "bytes": 534097,
+        "sha256": "35d755a195d592ae1fbc3fbc741a7d4f0448682f89af5376f9e390a7b5687661"
+      },
+      {
+        "path": "raw/_build/jimeng-stage-qa-20261114-public-v1/responsive-390.png",
+        "bytes": 271627,
+        "sha256": "5e29962ba726ccf1253f467775e7e4435be768afc3b27c342d76572f8f2ed2ad"
+      }
+    ]
+  },
+  "parentVisualAcceptance": {
+    "accepted": true,
+    "basis": "Personally Read actual native/reimport and ink Stage head/neck, both five-digit hands, five-toe feet, three action views and responsive images. Required shots/closeups and public full-orbit quarter views personally inspected before commit. Stylized source muscle/tendon planes retained; no anatomy claim inferred from numeric counts."
+  },
+  "requiredShots": [
+    {
+      "path": "raw/_build/jimeng-required-shots-20261114/idle.png",
+      "bytes": 862224,
+      "sha256": "7411faecd73fb23234b105e10ae93dfd3507891d3dd4ad5cf9e8aab7b3ee20d3"
+    },
+    {
+      "path": "raw/_build/jimeng-required-shots-20261114/special.png",
+      "bytes": 863849,
+      "sha256": "fdca77d1abfe8b7e99726d2d52045e44577c160f9c28300dfae4d35d42e6f217"
+    },
+    {
+      "path": "raw/_build/jimeng-required-shots-20261114/walk-close-0.png",
+      "bytes": 161223,
+      "sha256": "0836d3208dd75b602571c9257a40fa5dbbadd4c8c58d220a13a32ceb13122853"
+    },
+    {
+      "path": "raw/_build/jimeng-required-shots-20261114/walk-close-1.png",
+      "bytes": 161796,
+      "sha256": "6e461ad11abfa51bbdfa1c2bc57c235608945f3dec7920b59d3296326da9ca64"
+    },
+    {
+      "path": "raw/_build/jimeng-required-shots-20261114/walk-close-2.png",
+      "bytes": 160640,
+      "sha256": "117a47a5ebefa72354cbaec2d4569ac8a80257eb7f4428bbe9ee12fdd2fee03d"
+    },
+    {
+      "path": "raw/_build/jimeng-required-shots-20261114/walk.png",
+      "bytes": 860660,
+      "sha256": "9e175fa589c15aaaac25ea3a9ea579de9a20a9b6f5cb909c934adb5cd132b768"
+    }
+  ],
+  "narration": {
+    "path": "public/audio/narration/jimeng.mp3",
+    "bytes": 843950,
+    "sha256": "3f76c13301d624f4bcc6590fe2ab6d5e4825c216a455ad0c442a252d97d91162",
+    "model": "cosyvoice-v2",
+    "voice": "longsanshu",
+    "sampleRate": 22050,
+    "durationSeconds": 52.741188,
+    "story": "《中山经·中次八经》记载，光山有神计蒙，其状人身而龙首，常游漳渊，出入必有飘风暴雨。人身、龙首和相伴的风雨，是这一条经文留下的形貌与行迹。本次采用直立双臂双腿、人手人足，双手各有五指，双足各有五趾，龙首具双短角和短鬃。浅灰青体表、浅色角鬃、暖粉掌趾和浅赭黄短裤，连同具体比例与器官细节，都是设计补足。画面以双足慢步与展臂表现其活动，不把具体动作当作经文记述。光山条未写鸟爪，也未称司雨之神或记挥臂召雨。",
+    "storySha256": "f7052bd282166e8c822a71629363d5f3edb99de5e7eadef86c8f274f88e35e60",
+    "oldAudio": {
+      "path": "raw/_build/jimeng-narration-before-20261114/jimeng.mp3",
+      "bytes": 677184,
+      "sha256": "68e2c297a5fd0bb3dbe90276306b8a154c3a724f94b20508aced89d02142fb51"
+    }
+  },
+  "sourceDecisions": [
+    {
+      "job": "jimeng-production-20261114-native-human-v2-medium",
+      "sourceSha256": "d139940c166ade5bb95ab8d5e88db83b3c124e900c934556dbf6022c3bfbb4e8",
+      "decision": "rejected",
+      "reason": "Human body/chest improved, but native hands retain missing or merged/crowded digit silhouettes in both palm/back closeups; no qualified five-digit reference.",
+      "parentReviewed": "Actual four full views (separate files or four-view contact sheet); decisive anatomical closeups where applicable",
+      "evidence": "raw/_build/native-mediums-review-20261114/jimeng-production-20261114-native-human-v2-medium"
+    },
+    {
+      "job": "jimeng-v3-corrected-reference-20261114",
+      "decision": "rejected",
+      "reason": "Extra finger removed but reconstructed palm edge is jagged with dark triangular underside slivers.",
+      "parentReviewed": "Actual exported/reimported full views and decisive closeups personally opened with Read",
+      "evidence": "raw/_build/jimeng-v3-five-digit-reference-20261114/attempt-2/reimport-review"
+    },
+    {
+      "job": "jimeng-production-20261114-four-fingers-thumb-v4-medium",
+      "decision": "rejected",
+      "reason": "Actual hand-side views show merged or missing long fingers; no High reference.",
+      "evidence": "raw/_build/jimeng-v4-review-20261114",
+      "sourceSha256": "b79ae8d38fa63fb35bf5fad970a45e7ccfab1fbe3ba438161a756bf06c82e9fe"
+    },
+    {
+      "beast": "jimeng",
+      "job": "jimeng-production-20261114-open-palms-v5-medium",
+      "sourceSha256": "3f132800cc524d297840eac05a235ecc809563f8b1e6286237e4cd12db264f18",
+      "decision": "rejected",
+      "reason": "Independent native back/oblique views personally Read: Blender x-positive hand has five long fingers plus thumb (six total); x-negative has four plus thumb. Bounded local correction rejected for angular ulnar notch and faceted underside cap.",
+      "evidence": "raw/_build/jimeng-native-v5-review-20261114",
+      "parentPersonallyRead": true,
+      "additionalEvidence": "raw/_build/jimeng-v5-one-local-candidate-20261114/reimport-review"
+    },
+    {
+      "beast": "jimeng",
+      "job": "jimeng-production-20261114-planar-five-digits-v6-medium",
+      "sourceSha256": "5ca2e54e4b1ed454edd26d8bd0e196760cafd0198d9fe8298cd70b6348107e8c",
+      "decision": "accepted-whole-body-High-reference-only",
+      "reason": "Parent Read four views, both palm/back and feet/soles: exactly four long fingers plus thumb per hand, five short toes per foot. Native dorsal tendons angular; High must soften and be independently reviewed.",
+      "evidence": "raw/_build/jimeng-native-v6-detail-review-20261114",
+      "parentPersonallyRead": true
+    },
+    {
+      "beast": "jimeng",
+      "job": "jimeng-production-20261114-native-whole-v6-high",
+      "sourceSha256": "ffac63d46490bf6c1177c9ecc8f8744491a4f089d2110e12a50f7a0342765556",
+      "decision": "accepted-native-source-for-rigging-only",
+      "reason": "Parent Read actual fourviews, both palms/backs, bothfeet/soles. Single dragonhead, humanbody, 5digits eachhand/foot preserved, continuous wrists. Native stylized tendon/muscle planes retained; rig/actualinkapplication not accepted yet.",
+      "evidence": "raw/_build/jimeng-native-v6-high-review-20261114",
+      "parentPersonallyRead": true
+    },
+    {
+      "beast": "jimeng",
+      "decision": "rejected-local-cap",
+      "evidence": "raw/_build/jimeng-v5-one-local-candidate-20261114/reimport-review",
+      "reason": "Parent Read closure palm/back/edge confirms notch and fan-shaped faceted underside; correct digit count alone insufficient."
+    }
+  ],
+  "failedStageAttempts": [
+    {
+      "report": "raw/_build/jimeng-stage-qa-20261114-v1/report.json",
+      "numericPassed": true,
+      "parentVisualAccepted": false,
+      "reason": "Model moved to frame edge after circular walking; desktop/phone cropped hand and tablet source card obscured anatomy. Fixed camera following, FOV and bounded source/design card; added vertex projection, UI occlusion and full-orbit assertions."
+    }
+  ],
+  "deployment": {
+    "verified": false,
+    "reason": "Release commit, exact-SHA CI/Deploy and actual production validation follow the reviewed model commit."
+  }
+}

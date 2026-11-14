@@ -15,7 +15,7 @@
     },
     {
       "item": "角须、衣饰与配色（设计参考）",
-      "basis": "经文没有规定龙首的角数、须髯、鳞片、衣饰或颜色。双短角、短鬃、灰蓝鳞、暖灰肌肤与短赭色腰衣均为艺术补足。"
+      "basis": "经文没有规定龙首的角数、须髯、鳞片、衣饰或颜色。双短角、短鬃、浅灰青体表、浅色角鬃、暖粉掌趾与浅赭黄短裤均为艺术补足。"
     },
     {
       "item": "漳渊与风雨（设计参考）",
@@ -41,9 +41,13 @@
     }
   ],
   "production": {
-    "status": "blocked",
-    "reason": "完整龙首人身Medium规格已准备，主体结构、绑骨动作与视觉验收尚未完成；规格不是模型完成或审核通过的凭据。",
-    "modelReady": false,
-    "provenance": "pipeline/rodin/remaining-humanoid-specs.json"
+    "status": "ready",
+    "ready": true,
+    "modelProduced": true,
+    "modelReady": true,
+    "reason": "完整原生龙首人身High保留双手各五指、双足各五趾；17骨三态、完整脚掌位置与朝向支撑逆向烘焙、独立源几何匹配和真实水墨Stage构图、遮挡、切换及资源释放验收通过。正式资产及新解说检查、上线核验记录在provenance。",
+    "specification": "pipeline/rodin/jobs/jimeng-production-20261114-native-whole-v6-high.json",
+    "sourceSha256": "ffac63d46490bf6c1177c9ecc8f8744491a4f089d2110e12a50f7a0342765556",
+    "provenance": "pipeline/provenance/jimeng.json"
   }
 }

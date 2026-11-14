@@ -1,0 +1,14 @@
+{
+  "id": "jimeng-production-20261114-native-whole-v6-high",
+  "beast": "jimeng",
+  "budget": 12.5,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "One complete Jimeng matching all four reference views: dragon head and short broad organic neck on a grey adult human body, ochre shorts, two arms extended away from torso, two planted bare human feet. Preserve the exact five digits of EACH reference hand: four separated long human fingers and one opposed thumb. Both palms remain broad and open, fingers uncrossed. Smooth natural wrists and hand backs with subtle rounded tendons, no raised angular ridges or edge facets. Five short rounded toes and complete heel/sole per foot. Preserve face, dark eyes, short horns, little mane and normal human shoulders, muscles, knees and ankles. Continuous living skin, gentle grey-to-warm palm color transitions. Complete anatomy from crown to soles. No extra finger, extra limbs, tail, wings, claws, props or base.",
+  "images": [
+    "concept/jimeng/production-20261114-native-whole-v6/view_34.png",
+    "concept/jimeng/production-20261114-native-whole-v6/view_side.png",
+    "concept/jimeng/production-20261114-native-whole-v6/view_front.png",
+    "concept/jimeng/production-20261114-native-whole-v6/view_back.png"
+  ],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000, "addons": "HighPack" }
+}

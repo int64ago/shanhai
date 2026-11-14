@@ -1,0 +1,588 @@
+{
+  "schemaVersion": 1,
+  "beast": "jimeng",
+  "sourceSha256": "ffac63d46490bf6c1177c9ecc8f8744491a4f089d2110e12a50f7a0342765556",
+  "sourceAnatomyAccepted": true,
+  "anatomyMasksReviewed": true,
+  "coordinates": "normalized Blender X/right Y/back Z/up, height=1.8m",
+  "sourceAcceptance": "Parent personally reviewed native High four views, both palm/back and five-toed feet/soles; accepted for rigging only.",
+  "sideConvention": "l is anatomical left, Blender +X (viewer right from front); source is asymmetric and landmarks are independent.",
+  "landmarks": {
+    "body": {
+      "pelvis": [
+        0.02,
+        0.07,
+        0.865
+      ],
+      "spine": [
+        0.02,
+        0.07,
+        1.055
+      ],
+      "chest": [
+        0.02,
+        0.092,
+        1.325
+      ]
+    },
+    "head": {
+      "neckRoot": [
+        0.02,
+        0.115,
+        1.35
+      ],
+      "headRoot": [
+        0.02,
+        0.104,
+        1.46
+      ],
+      "headTip": [
+        0.02,
+        0.06,
+        1.69
+      ]
+    },
+    "limbs": {
+      "l": {
+        "hip": [
+          0.126,
+          0.078,
+          0.868
+        ],
+        "knee": [
+          0.14,
+          0.051,
+          0.555
+        ],
+        "ankle": [
+          0.186,
+          0.092,
+          0.12
+        ],
+        "footTip": [
+          0.244,
+          -0.126,
+          0.035
+        ],
+        "shoulder": [
+          0.235,
+          0.11,
+          1.285
+        ],
+        "elbow": [
+          0.374,
+          0.071,
+          1.143
+        ],
+        "wrist": [
+          0.515,
+          -0.033,
+          1.165
+        ],
+        "handTip": [
+          0.696,
+          -0.122,
+          1.222
+        ]
+      },
+      "r": {
+        "hip": [
+          -0.087,
+          0.079,
+          0.865
+        ],
+        "knee": [
+          -0.094,
+          0.048,
+          0.55
+        ],
+        "ankle": [
+          -0.142,
+          0.09,
+          0.12
+        ],
+        "footTip": [
+          -0.198,
+          -0.128,
+          0.034
+        ],
+        "shoulder": [
+          -0.205,
+          0.108,
+          1.282
+        ],
+        "elbow": [
+          -0.347,
+          0.062,
+          1.145
+        ],
+        "wrist": [
+          -0.515,
+          -0.05,
+          1.187
+        ],
+        "handTip": [
+          -0.697,
+          -0.123,
+          1.246
+        ]
+      }
+    }
+  },
+  "masks": {
+    "head": {
+      "planes": [
+        {
+          "normal": [
+            0,
+            0,
+            -1
+          ],
+          "offset": -1.43
+        }
+      ],
+      "seeds": [
+        4191
+      ],
+      "draftComponents": [
+        9135
+      ],
+      "count": 9135,
+      "indicesSha256": "099ac29a5f75be1a0c2fdc11a7350f709f4f6d5fcac34564c2a42857b90a5547"
+    },
+    "neck": {
+      "planes": [
+        {
+          "normal": [
+            0,
+            0,
+            -1
+          ],
+          "offset": -1.35
+        },
+        {
+          "normal": [
+            0,
+            0,
+            1
+          ],
+          "offset": 1.42999
+        },
+        {
+          "normal": [
+            1,
+            0,
+            -0.22
+          ],
+          "offset": -0.06201
+        },
+        {
+          "normal": [
+            -1,
+            0,
+            -0.22
+          ],
+          "offset": -0.09201
+        }
+      ],
+      "seeds": [
+        3258
+      ],
+      "draftComponents": [
+        835
+      ],
+      "count": 835,
+      "indicesSha256": "07d1323965e6c392e6eb386acaf402f8a00af4f57335fdee2c223d893b8c0f09"
+    },
+    "chest": {
+      "planes": [
+        {
+          "normal": [
+            0,
+            0,
+            -1
+          ],
+          "offset": -1.1
+        },
+        {
+          "normal": [
+            0,
+            0,
+            1
+          ],
+          "offset": 1.3
+        },
+        {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "offset": 0.155
+        },
+        {
+          "normal": [
+            -1,
+            0,
+            0
+          ],
+          "offset": 0.12
+        }
+      ],
+      "seeds": [
+        3643,
+        3688
+      ],
+      "draftComponents": [
+        320,
+        684
+      ],
+      "count": 1004,
+      "indicesSha256": "a4d2eb67b093086527895b5cdc69c3031747ac9ba521cc63baf8cee134b971c0"
+    },
+    "pelvis": {
+      "planes": [
+        {
+          "normal": [
+            0,
+            0,
+            -1
+          ],
+          "offset": -0.835
+        },
+        {
+          "normal": [
+            0,
+            0,
+            1
+          ],
+          "offset": 0.96
+        },
+        {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "offset": 0.175
+        },
+        {
+          "normal": [
+            -1,
+            0,
+            0
+          ],
+          "offset": 0.135
+        }
+      ],
+      "seeds": [
+        6844,
+        6896,
+        7811,
+        19145
+      ],
+      "draftComponents": [
+        1903,
+        803,
+        42,
+        96
+      ],
+      "count": 2844,
+      "indicesSha256": "c482dea10b7c2b79124f030f3106afbf586d34aaf01b3c462e29f5685e224e83"
+    },
+    "arm_l": {
+      "planes": [
+        {
+          "normal": [
+            -1,
+            0,
+            0.22
+          ],
+          "offset": 0.062
+        },
+        {
+          "normal": [
+            0,
+            0,
+            -1
+          ],
+          "offset": -1.035
+        }
+      ],
+      "seeds": [
+        11695,
+        12188,
+        12272
+      ],
+      "draftComponents": [
+        3229,
+        27,
+        4
+      ],
+      "count": 3260,
+      "indicesSha256": "b06be0ddb37cb243848688015cb8f02893d0f59049f22c2255ed2648d269d2d5"
+    },
+    "hand_l": {
+      "planes": [
+        {
+          "normal": [
+            -1,
+            0,
+            0
+          ],
+          "offset": -0.515
+        }
+      ],
+      "seeds": [
+        13922
+      ],
+      "draftComponents": [
+        1982
+      ],
+      "count": 1982,
+      "indicesSha256": "df6f555db7967c00da1caae552f054871411786a6b20d6b3fc29e9819a69bef7"
+    },
+    "leg_l": {
+      "planes": [
+        {
+          "normal": [
+            -1,
+            0,
+            0
+          ],
+          "offset": -0.02
+        },
+        {
+          "normal": [
+            0,
+            0,
+            1
+          ],
+          "offset": 0.82
+        }
+      ],
+      "seeds": [
+        17368
+      ],
+      "draftComponents": [
+        4338
+      ],
+      "count": 4338,
+      "indicesSha256": "a51960946ba1ae1e85078923ae83d28b3eecc417a6302d62fb2d7f84f02e02fa"
+    },
+    "foot_l": {
+      "planes": [
+        {
+          "normal": [
+            -1,
+            0,
+            0
+          ],
+          "offset": -0.02
+        },
+        {
+          "normal": [
+            0,
+            0,
+            1
+          ],
+          "offset": 0.125
+        }
+      ],
+      "seeds": [
+        22590
+      ],
+      "draftComponents": [
+        1322
+      ],
+      "count": 1322,
+      "indicesSha256": "6f07c809dbfbc0181a812dbd7d5ed48c5a8ad57845b837fbc53736ae7ce0a05e"
+    },
+    "sole_l": {
+      "planes": [
+        {
+          "normal": [
+            -1,
+            0,
+            0
+          ],
+          "offset": -0.02
+        },
+        {
+          "normal": [
+            0,
+            0,
+            1
+          ],
+          "offset": 0.027
+        }
+      ],
+      "seeds": [
+        22907
+      ],
+      "draftComponents": [
+        575
+      ],
+      "count": 575,
+      "indicesSha256": "cadffc5e371333f6509c7063aa37655d9057a6b4fc206efc21bc41a9aa553b51"
+    },
+    "arm_r": {
+      "planes": [
+        {
+          "normal": [
+            1,
+            0,
+            0.22
+          ],
+          "offset": 0.092
+        },
+        {
+          "normal": [
+            0,
+            0,
+            -1
+          ],
+          "offset": -1.035
+        }
+      ],
+      "seeds": [
+        0,
+        3300
+      ],
+      "draftComponents": [
+        3380,
+        23
+      ],
+      "count": 3403,
+      "indicesSha256": "ae39feb18dc10d4ea57c4012332db9ab6f05b145ccc74a67078056f0cb971ade"
+    },
+    "hand_r": {
+      "planes": [
+        {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "offset": -0.515
+        }
+      ],
+      "seeds": [
+        0
+      ],
+      "draftComponents": [
+        1959
+      ],
+      "count": 1959,
+      "indicesSha256": "aa728023bcb44efed4019e5838621acd0447c961b0711820a2db2a37e03677e5"
+    },
+    "leg_r": {
+      "planes": [
+        {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "offset": 0.02
+        },
+        {
+          "normal": [
+            0,
+            0,
+            1
+          ],
+          "offset": 0.82
+        }
+      ],
+      "seeds": [
+        12053
+      ],
+      "draftComponents": [
+        4791
+      ],
+      "count": 4791,
+      "indicesSha256": "379e93fea333acf5f3200f070b0c638a4e7d3d72b53beb1c7a00848a338ef253"
+    },
+    "foot_r": {
+      "planes": [
+        {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "offset": 0.02
+        },
+        {
+          "normal": [
+            0,
+            0,
+            1
+          ],
+          "offset": 0.125
+        }
+      ],
+      "seeds": [
+        26151
+      ],
+      "draftComponents": [
+        1256
+      ],
+      "count": 1256,
+      "indicesSha256": "a49db33711c1bb5e0d6eff2139c2df22fad471b7ca22c5a1cd937da71b4a9362"
+    },
+    "sole_r": {
+      "planes": [
+        {
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "offset": 0.02
+        },
+        {
+          "normal": [
+            0,
+            0,
+            1
+          ],
+          "offset": 0.027
+        }
+      ],
+      "seeds": [
+        26538
+      ],
+      "draftComponents": [
+        553
+      ],
+      "count": 553,
+      "indicesSha256": "2eac196f9f2874dd3e8e5d571c8aedc8bebbd85cf7a32328a5a343819cd617f7"
+    }
+  },
+  "nativeSolePolicy": "Complete feet/undersides retain native unequal height, relief and outward toe splay. No foot-specific geometry alignment.",
+  "reviewEvidence": {
+    "reviewer": "rigging agent; parent retains final acceptance",
+    "status": "source-derived complete masks and revised hip landmarks inspected with Read before animation/export",
+    "images": {
+      "calibration-preview-v2/masks/regions-front.png": "c39749d66cee9ea954ce58b48142fe92368198bebf98c5764f7abdac31f5e7d7",
+      "calibration-preview-v2/masks/regions-back.png": "23d94e02cc380230d6a44b1ef4b806ed5d7001cd559307e11c2b81eab5f17cf3",
+      "calibration-preview-v2/masks/hand_l-front.png": "093cfee1563496caa487366964fe1ba961ec18c47d4226a279ead173a6db760c",
+      "calibration-preview-v2/masks/hand_l-back.png": "fe26e8206f036b8beb3494e45bc980fb568a27e7e76b1c14dd20bc283b7b6dbf",
+      "calibration-preview-v2/masks/hand_r-front.png": "a93690c55ca499e0ea8681aead5320a894172bd87bc8bdfe548da5d2ad142f74",
+      "calibration-preview-v2/masks/hand_r-back.png": "5f5b2830d7efd88c1aa202b45f3e3843c32c2bcf1c1f70c698b6de6f7463da4c",
+      "calibration-preview-v2/masks/foot_l-underside.png": "7949e8164946c6f9984e73284bc7798e4333c1a78edcf3c4ea05c1eea4e6a6c7",
+      "calibration-preview-v2/masks/foot_r-underside.png": "c5ffda51c3b08b096285c16fd4c7ed5157fc772aa28d0e646520080584235534",
+      "calibration-preview-v2/masks/head-side.png": "d6f61f7f913374f755f4e76a2b02b2857bc1699e6f30ef6bff2abf27a9c710c0",
+      "calibration-preview-v2/landmarks/landmarks-front.png": "a1b8656277e0b5da15cc7f1f16acf481bbed44c337393885d9f9ea1adff3f269",
+      "calibration-preview-v2/landmarks/landmarks-side.png": "d3bceae49eeb3cc876af872fa77e47854f1080147db4f9dac9565a4514cb003a",
+      "calibration-preview-v3/masks/neck-side.png": "ae3c29e80beb18da785f9993135ee2c08a6bb2085bfe598d47933af99e685371",
+      "calibration-preview-v3/masks/regions-back.png": "50449686047893daf8560c92d7e88c1dc8db1228c39d19ac0f8251d8939c0880",
+      "calibration-preview-v3/landmarks/landmarks-front.png": "37e8435b9c580e3ee7bbe8afb122ff1f164099fe10c436717f58a6f42595de65",
+      "calibration-preview-v3/landmarks/landmarks-side.png": "d3788e7aa1eddaf82960f2966957fbaaaa4f6dbec0fa3796e52ff1cd67f02b73"
+    },
+    "retainedMasks": "All masks except neck have identical reviewed membership hashes; all landmarks identical to revised hip calibration.",
+    "neckRevision": "Broadened the neck/nape mask to the actual shoulder boundaries and personally inspected its side/back masks before export; complete head unchanged."
+  }
+}

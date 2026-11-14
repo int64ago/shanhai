@@ -22,13 +22,15 @@ export function CameraRig() {
     const jiaochongTablet = jiaochong && width > 640 && aspect <= 1.3
     const yinglong = selected === 'yinglong'
     const yinglongTablet = yinglong && width > 640 && aspect <= 1.3
-    const fov = yinglong ? (yinglongTablet ? 60 : 44) : bashe ? 40 : jiaochongTablet ? 50 : jiaochong ? 42 : xingxingTablet && width < 760 ? 36 : BASE_FOV
+    const jimeng = selected === 'jimeng'
+    const jimengTablet = jimeng && width > 640 && aspect <= 1.3
+    const fov = jimeng ? (jimengTablet ? 52 : 42) : yinglong ? (yinglongTablet ? 60 : 44) : bashe ? 40 : jiaochongTablet ? 50 : jiaochong ? 42 : xingxingTablet && width < 760 ? 36 : BASE_FOV
     const minAspect = 1.2
     if (aspect >= minAspect) {
       camera.fov = fov
     } else {
       const halfH = Math.tan((fov * Math.PI) / 360) * (minAspect / aspect)
-      camera.fov = Math.min(yinglong ? 85 : bashe || jiaochong ? 75 : 70, (Math.atan(halfH) * 360) / Math.PI)
+      camera.fov = Math.min(yinglong ? 85 : bashe || jiaochong || jimeng ? 75 : 70, (Math.atan(halfH) * 360) / Math.PI)
     }
     const snakeOffset = width >= 600 ? (aspect > 1.3 ? -9 : -3.5) : 0
     // The full source/design card remains visible above 640px; keep Xingxing
@@ -37,7 +39,8 @@ export function CameraRig() {
     // Fit both heads and outstretched hands beside the portrait source card.
     const jiaochongOffset = jiaochongTablet ? (width < 760 ? -8 : -6.5) : aspect > 1.3 ? -6 : 0
     const yinglongOffset = yinglongTablet ? -5 : aspect > 1.3 ? -7 : 0
-    camera.filmOffset = yinglong ? yinglongOffset : bashe ? snakeOffset : jiaochong ? jiaochongOffset : xingxingOffset
+    const jimengOffset = jimengTablet ? -5 : aspect > 1.3 ? -6 : 0
+    camera.filmOffset = jimeng ? jimengOffset : yinglong ? yinglongOffset : bashe ? snakeOffset : jiaochong ? jiaochongOffset : xingxingOffset
     camera.updateProjectionMatrix()
   }, [camera, aspect, width, selected])
 

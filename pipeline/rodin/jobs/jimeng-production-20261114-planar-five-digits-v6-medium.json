@@ -1,0 +1,8 @@
+{
+  "id": "jimeng-production-20261114-planar-five-digits-v6-medium",
+  "beast": "jimeng",
+  "budget": 12.5,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "Jimeng: one dragon head on one complete adult human body, standing with two bare human feet flat and apart. A short broad dragon neck merges into human shoulders. Grey skin, plain ochre shorts, dark eyes, short horns and small mane. Both arms held away from torso with straight wrists. Two large relaxed OPEN HUMAN HANDS, palms nearly planar facing front. EACH hand has exactly FIVE digits TOTAL: one thumb, one index, one middle, one ring, one little finger. Four long fingers extend in a clear separated fan; one short thumb points sideways. Smooth rounded outside palm edge. No sixth digit or second little finger root, no claws, curling fingers, overlapping fingers or fists. Each foot has a heel and five short rounded toes. Full head, both hands and both feet visible; healthy natural muscles and organic skin. No tail, wings, additional limbs, props or pedestal.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}
