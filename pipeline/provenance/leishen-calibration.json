@@ -1,0 +1,308 @@
+{
+  "schemaVersion": 1,
+  "beast": "leishen",
+  "sourceSha256": "454cee9efe4a0f60324ccb3d6cfb69c2bf217e34c44d2df6f2835c21ae429c9e",
+  "acceptedForRiggingOnly": true,
+  "anatomyMasksReviewed": true,
+  "coordinates": "Blender X/right Y/back Z/up; native lengthY3.2m; minimumZ baked to0.22m",
+  "sourceAxes": "Native face +X, human head at long-body -Y end, tail +Y; preserve original upright curved neck and off-center tail; no rotation",
+  "cuts": {
+    "head": {
+      "planes": [
+        {
+          "normal": [
+            0,
+            0,
+            -1
+          ],
+          "offset": -1.52
+        }
+      ],
+      "seeds": [
+        33703
+      ],
+      "count": 13662,
+      "indicesSha256": "77c845bff0e8a0105dce9ba63dc2e841937429e71561f773295e3aa66cfc22b9"
+    },
+    "neck": {
+      "planes": [
+        {
+          "normal": [
+            0,
+            0,
+            -1
+          ],
+          "offset": -0.78
+        },
+        {
+          "normal": [
+            0,
+            0,
+            1
+          ],
+          "offset": 1.51999
+        }
+      ],
+      "seeds": [
+        3523
+      ],
+      "count": 12883,
+      "indicesSha256": "5c64698bc6217adf896fe41a4d6c097c760b23627a2b7df71471d549721d181f"
+    }
+  },
+  "headBlendZ": [
+    1.28,
+    1.52
+  ],
+  "tailMaskStartY": 0.35,
+  "landmarks": {
+    "humanHeadCenter": [
+      0.018,
+      -1.106,
+      1.98
+    ],
+    "centerline": [
+      [
+        -0.168,
+        -1.137,
+        1.5
+      ],
+      [
+        -0.1292106228285812,
+        -1.185845882364009,
+        1.3563356401058564
+      ],
+      [
+        -0.09098808063784027,
+        -1.2471885188306262,
+        1.2178145737065724
+      ],
+      [
+        -0.054736548835201335,
+        -1.3069360961269314,
+        1.0780689534800056
+      ],
+      [
+        -0.034659084381378116,
+        -1.3080756313733104,
+        0.9329542190689059
+      ],
+      [
+        -0.036228907808625824,
+        -1.228857945994063,
+        0.8015663828706127
+      ],
+      [
+        -0.044916691956656964,
+        -1.1186964320504844,
+        0.6907605618499613
+      ],
+      [
+        -0.06530399247256248,
+        -0.99846363413617,
+        0.5924833183373911
+      ],
+      [
+        -0.08016973645624015,
+        -0.8718420993267714,
+        0.5091842099326771
+      ],
+      [
+        -0.07006104743954272,
+        -0.7163238067621955,
+        0.49363238067621956
+      ],
+      [
+        -0.05298651476929104,
+        -0.5607523023416612,
+        0.4899112845351249
+      ],
+      [
+        -0.03839508741837465,
+        -0.40493859272968313,
+        0.4847222366728357
+      ],
+      [
+        -0.03858754022562441,
+        -0.249485057496327,
+        0.47966323371664216
+      ],
+      [
+        -0.0648358651367077,
+        -0.0950831462546606,
+        0.47863388764169773
+      ],
+      [
+        -0.08914480550551934,
+        0.0595961378452635,
+        0.4764107696574596
+      ],
+      [
+        -0.11034507049787566,
+        0.21472002803323653,
+        0.4722741325857803
+      ],
+      [
+        -0.12900811188892028,
+        0.3700811188892028,
+        0.46649594405553985
+      ],
+      [
+        -0.14457318336212646,
+        0.5257318336212646,
+        0.45871340831893676
+      ],
+      [
+        -0.16282135883310492,
+        0.6811601912482869,
+        0.4536473301458619
+      ],
+      [
+        -0.18351808400116154,
+        0.8363856300087116,
+        0.4510602394998548
+      ],
+      [
+        -0.20381840251693328,
+        0.9909107885917945,
+        0.4618184025169333
+      ],
+      [
+        -0.2238434577944929,
+        1.144949675342253,
+        0.4818434577944929
+      ],
+      [
+        -0.2329569982687851,
+        1.2978499134392545,
+        0.5124839792254211
+      ],
+      [
+        -0.2333159406797606,
+        1.4505217796071819,
+        0.5471043559214364
+      ],
+      [
+        -0.227,
+        1.6,
+        0.59
+      ]
+    ],
+    "measuredSectionKnots": [
+      [
+        -0.168,
+        -1.137,
+        1.5
+      ],
+      [
+        -0.114,
+        -1.205,
+        1.3
+      ],
+      [
+        -0.072,
+        -1.282,
+        1.15
+      ],
+      [
+        -0.036,
+        -1.334,
+        1.0
+      ],
+      [
+        -0.033,
+        -1.276,
+        0.85
+      ],
+      [
+        -0.043,
+        -1.13,
+        0.7
+      ],
+      [
+        -0.082,
+        -0.9,
+        0.512
+      ],
+      [
+        -0.069,
+        -0.7,
+        0.492
+      ],
+      [
+        -0.046,
+        -0.5,
+        0.489
+      ],
+      [
+        -0.03,
+        -0.3,
+        0.48
+      ],
+      [
+        -0.081,
+        0,
+        0.478
+      ],
+      [
+        -0.122,
+        0.3,
+        0.47
+      ],
+      [
+        -0.152,
+        0.6,
+        0.455
+      ],
+      [
+        -0.192,
+        0.9,
+        0.45
+      ],
+      [
+        -0.231,
+        1.2,
+        0.489
+      ],
+      [
+        -0.235,
+        1.4,
+        0.537
+      ],
+      [
+        -0.23,
+        1.55,
+        0.567
+      ],
+      [
+        -0.227,
+        1.6,
+        0.59
+      ]
+    ],
+    "method": "Section bounding-box midpoints from accepted native geometry: neck Z slices, low-body Y slices; manually calibrated elbow region; 25 arc-length resampled points, not a Y-straightened source."
+  },
+  "headMaskRationale": "Z>=1.52 conservatively includes complete human face +X, chin, ears, hair and posterior skull plus a short lower-nape collar. Native human chin begins around Z1.55, so no face/ear/hair is allowed into deforming neck. Mask must be visually reviewed before rigging.",
+  "weightMethod": "Nearest3D centerline arc length, seam-consistent native surface graph regularization, quadratic B-spline partition across three adjacent axial bones; independent complete head mask and quintic Z head blend preserved.",
+  "agentVisualReview": {
+    "imagesPersonallyRead": [
+      "human-head-neck-face-plus-x.png",
+      "human-head-neck-skull-minus-x.png",
+      "human-head-neck-ear-minus-y.png",
+      "human-head-neck-ear-plus-y.png",
+      "regions-plus-x.png"
+    ],
+    "judgment": "Complete human eyes, ears, nose, closed lips, chin, hair and posterior skull lie in the rigid green head mask; cut stays below human features in native nape collar. Upright native neck remains deforming, continuous with belly."
+  },
+  "weightArcGraphRegularization": {
+    "iterations": 64,
+    "strength": 0.5,
+    "method": "Scalar-only unique native-position graph diffusion; coincident UV seam copies share identical coordinates; upper neck Z>=1.28 pinned; no geometry changes"
+  },
+  "specialMethod": "Two abdominal pulses through broad coherent native abdomen lift: lower-neck initiating bend distributed5..8, orientation cancellation distributed thin distal tail16..23; maximum accumulated bend.036rad. No scales or source edits.",
+  "thinFacetWeightCoupling": {
+    "maximumArea2OverLongestEdgeSquared": 0.02,
+    "maximumEdgeM": 0.08,
+    "method": "Contract only scalar weight graph of native needle facets; all source positions/normals/UV/index/PBR remain unchanged; coincident seam copies share graph coordinates; any head-touching group stays rigid with protected complete head."
+  }
+}

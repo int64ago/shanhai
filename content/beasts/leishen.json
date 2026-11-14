@@ -8,8 +8,8 @@
   "inferred": [
     { "item": "人头龙身与腹部形体", "basis": "选定正文明确龍身而人頭。细长龙躯、完整人颅、接颈、鳞片、腹部体积、长短比例与尖尾均属结构设计补足。" },
     { "item": "肢爪、角翼配置", "basis": "正文未列手臂、腿爪、角翼或尾的数量。无臂、无足、无角与无翼是本设计的选择；后世雷公的双臂、鸟翼、鸟喙或法器形象不属于本条明文。" },
-    { "item": "鼓腹动作的具体演绎", "basis": "鼓其腹是原文，但没有明确手臂或实施方式。用手拍腹与腹部节律胀缩都属于具体演绎选项，胀缩不是唯一或确定释义。正文没有外置鼓、鼓槌、则雷结果句、春雷季节或固定节奏。" },
-    { "item": "苍青与云雷视听设计", "basis": "正文未记人首龙身颜色、紫电金光、云气或鸣声。蓝绿鳞片、浅色腹鳞及云雷视听均属于艺术设计；吴西保留为古文方位。" }
+    { "item": "鼓腹动作的具体演绎", "basis": "鼓其腹是原文，但没有明确手臂或实施方式。本作以腹段两次缓慢抬动演绎，并以原地三维行波表现游弋；节律起伏不是唯一或确定释义。正文没有外置鼓、鼓槌、则雷结果句、春雷季节或固定节奏。" },
+    { "item": "苍青鳞片与肤发设色", "basis": "正文未记人首龙身颜色、发式、紫电金光、云气或鸣声。苍青鳞片、浅灰腹鳞、暖肤和短黑发均属于艺术设色；吴西保留为古文方位。" }
   ],
   "sourceVerification": {
     "researchCommit": "dff3702aff98f9955275e6a10f58ab64e74ffe65",
@@ -18,11 +18,12 @@
     "note": "采用研究提交已核的龍身而人頭；本次重新读取海内东经完整短条，确认无手臂、工具或则雷句。研究提交记录Gutenberg作龍首而人頭的转录差异，不据此拼出双首；在吴西后都州为另条，华胥伏羲等为注释。"
   },
   "production": {
-    "status": "blocked",
-    "ready": false,
-    "modelReady": false,
-    "modelProduced": false,
-    "specification": "pipeline/rodin/specs/leishen-production-20261108.json",
-    "reason": "尚无本任务已验收的完整人头龙身及连续腹部主体。旧研究与孤立人首、尾候选均不能当成生产模型；Medium规格不表示生成、动作或运行时交付完成。"
+    "status": "parent-accepted-native-high-runtime",
+    "ready": true,
+    "modelReady": true,
+    "modelProduced": true,
+    "specification": "pipeline/rodin/jobs/leishen-production-20261114-native-whole-v2-high.json",
+    "provenance": "pipeline/provenance/leishen.json",
+    "reason": "原生完整人头、连续鳞颈长躯与单尖尾已通过独立源图审、实际导出GLB回读及父线程水墨场景验收；26骨静候、原地游弋和腹段两次节律抬动，Meshopt medium/16bit权重与WebP2048，保留50000三角面。正式public资源与发布核验见provenance。"
   }
 }

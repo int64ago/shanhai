@@ -26,13 +26,15 @@ export function CameraRig() {
     const jimengTablet = jimeng && width > 640 && aspect <= 1.3
     const zhulong = selected === 'zhulong'
     const zhulongTablet = zhulong && width > 640 && aspect <= 1.3
-    const fov = zhulong ? (zhulongTablet ? 54 : 42) : jimeng ? (jimengTablet ? 52 : 42) : yinglong ? (yinglongTablet ? 60 : 44) : bashe ? 40 : jiaochongTablet ? 50 : jiaochong ? 42 : xingxingTablet && width < 760 ? 36 : BASE_FOV
+    const leishen = selected === 'leishen'
+    const leishenTablet = leishen && width > 640 && aspect <= 1.3
+    const fov = leishen ? 54 : zhulong ? (zhulongTablet ? 54 : 42) : jimeng ? (jimengTablet ? 52 : 42) : yinglong ? (yinglongTablet ? 60 : 44) : bashe ? 40 : jiaochongTablet ? 50 : jiaochong ? 42 : xingxingTablet && width < 760 ? 36 : BASE_FOV
     const minAspect = 1.2
     if (aspect >= minAspect) {
       camera.fov = fov
     } else {
       const halfH = Math.tan((fov * Math.PI) / 360) * (minAspect / aspect)
-      camera.fov = Math.min(yinglong ? 85 : zhulong ? 80 : bashe || jiaochong || jimeng ? 75 : 70, (Math.atan(halfH) * 360) / Math.PI)
+      camera.fov = Math.min(yinglong ? 85 : zhulong || leishen ? 80 : bashe || jiaochong || jimeng ? 75 : 70, (Math.atan(halfH) * 360) / Math.PI)
     }
     const snakeOffset = width >= 600 ? (aspect > 1.3 ? -9 : -3.5) : 0
     // The full source/design card remains visible above 640px; keep Xingxing
@@ -43,7 +45,8 @@ export function CameraRig() {
     const yinglongOffset = yinglongTablet ? -5 : aspect > 1.3 ? -7 : 0
     const jimengOffset = jimengTablet ? -5 : aspect > 1.3 ? -6 : 0
     const zhulongOffset = zhulongTablet ? -5 : aspect > 1.3 ? -7 : 0
-    camera.filmOffset = zhulong ? zhulongOffset : jimeng ? jimengOffset : yinglong ? yinglongOffset : bashe ? snakeOffset : jiaochong ? jiaochongOffset : xingxingOffset
+    const leishenOffset = leishenTablet ? (width < 760 ? -8 : -6) : aspect > 1.3 ? -7 : 0
+    camera.filmOffset = leishen ? leishenOffset : zhulong ? zhulongOffset : jimeng ? jimengOffset : yinglong ? yinglongOffset : bashe ? snakeOffset : jiaochong ? jiaochongOffset : xingxingOffset
     camera.updateProjectionMatrix()
   }, [camera, aspect, width, selected])
 

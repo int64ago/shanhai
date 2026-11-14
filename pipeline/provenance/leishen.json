@@ -1,0 +1,1353 @@
+{
+  "beast": "leishen",
+  "date": "2026-11-15",
+  "status": "parent-accepted-public-native-high-runtime",
+  "source": [
+    {
+      "book": "山海经·海内东经",
+      "text": "雷澤中有雷神，龍身而人頭，鼓其腹。在吳西。"
+    }
+  ],
+  "inferences": [
+    {
+      "item": "人头龙身与腹部形体",
+      "basis": "选定正文明确龍身而人頭。细长龙躯、完整人颅、接颈、鳞片、腹部体积、长短比例与尖尾均属结构设计补足。"
+    },
+    {
+      "item": "肢爪、角翼配置",
+      "basis": "正文未列手臂、腿爪、角翼或尾的数量。无臂、无足、无角与无翼是本设计的选择；后世雷公的双臂、鸟翼、鸟喙或法器形象不属于本条明文。"
+    },
+    {
+      "item": "鼓腹动作的具体演绎",
+      "basis": "鼓其腹是原文，但没有明确手臂或实施方式。本作以腹段两次缓慢抬动演绎，并以原地三维行波表现游弋；节律起伏不是唯一或确定释义。正文没有外置鼓、鼓槌、则雷结果句、春雷季节或固定节奏。"
+    },
+    {
+      "item": "苍青鳞片与肤发设色",
+      "basis": "正文未记人首龙身颜色、发式、紫电金光、云气或鸣声。苍青鳞片、浅灰腹鳞、暖肤和短黑发均属于艺术设色；吴西保留为古文方位。"
+    }
+  ],
+  "anatomy": "Native complete healthy human head, intact eyes/ears/closed lips/chin/hair/posterior cranium, continuous upright scaled neck into extended long body and one tapering pointed tail. No arms/feet/horns/wings is an artistic selection, not an explicit classical count.",
+  "transactions": [
+    {
+      "time": "2026-11-13T14:24:54.390Z",
+      "beast": "leishen",
+      "job": "leishen-production-20261108-body-medium",
+      "hash": "4f544159f8b07700",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "d4092e10-1437-438d-b2cd-a45f12ccdefa",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-14T11:42:35.887Z",
+      "beast": "leishen",
+      "job": "leishen-production-20261114-living-human-face-v2-medium",
+      "hash": "e704dd6def2d6199",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "fcafde6c-2918-4e81-a0a4-759c08a8aeb7",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-14T13:15:50.998Z",
+      "beast": "leishen",
+      "job": "leishen-production-20261114-native-whole-v2-high",
+      "hash": "c30d2d784ae1a394",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "654c721b-5d05-45e9-975f-c9a6b05a9031",
+      "consumed": 1
+    }
+  ],
+  "lifetimeConsumed": 2.0,
+  "newCreditsAgainstFixed143LineBaseline": 2.0,
+  "fixedBaselineSha256": "fe456f658ff1c014b53a4b9c9cecd1dd244f684c18dc117fe50ca1bf7d5af792",
+  "highSource": {
+    "path": "raw/leishen-production-20261114-native-whole-v2-high/base_high_pbr.glb",
+    "bytes": 33609128,
+    "sha256": "454cee9efe4a0f60324ccb3d6cfb69c2bf217e34c44d2df6f2835c21ae429c9e"
+  },
+  "highRequest": {
+    "path": "pipeline/rodin/jobs/leishen-production-20261114-native-whole-v2-high.json",
+    "bytes": 1394,
+    "sha256": "ba1ea02082177cb997db052a54170262457b55e63eb0cfa9abbc1dae184837d7",
+    "images": [
+      {
+        "path": "concept/leishen/production-20261114-native-whole-v2/view_34.png",
+        "bytes": 1012011,
+        "sha256": "0291102e45c5617c0ba7d2997ecac59df5f4fe038b457ca9a3962ef366edb372"
+      },
+      {
+        "path": "concept/leishen/production-20261114-native-whole-v2/view_side.png",
+        "bytes": 1007846,
+        "sha256": "ddf84bde8a8007361e90857ebc9459d72d23717ccbeef840f01f147ab9e991ea"
+      },
+      {
+        "path": "concept/leishen/production-20261114-native-whole-v2/view_front.png",
+        "bytes": 1032700,
+        "sha256": "c75b9e4db578514d28b8e04413fcd2d5440fbd0a31e6f9c2182a458cfa36669a"
+      },
+      {
+        "path": "concept/leishen/production-20261114-native-whole-v2/view_back.png",
+        "bytes": 1018681,
+        "sha256": "e2db17d38cce9a58cbf3b9b55410eb73cb908489246334bb834e5f55756a595b"
+      }
+    ]
+  },
+  "mediumSource": {
+    "path": "raw/leishen-production-20261114-living-human-face-v2-medium/base_basic_pbr.glb",
+    "bytes": 3125096,
+    "sha256": "9d45340027d64531bec2ee4647aa059fab008acb07ddd611b083f2c99ee77a8e"
+  },
+  "highReferenceRecipe": {
+    "path": "pipeline/blender/prepare_leishen_v2_native_high_views_20261114.py",
+    "bytes": 8124,
+    "sha256": "9898173777be529067daa011eaf19651b72ca08ff9dd3f8cd3d7bc97dfddbab2"
+  },
+  "highReferenceEvidence": {
+    "path": "raw/_build/leishen-v2-native-high-reference-20261114-1958/reference-manifest.json",
+    "bytes": 6942,
+    "sha256": "d0cc0a3c5f5927481086df6b394a7be0ff894197205332bec4a35e37de08ea09"
+  },
+  "nativeSourceReview": {
+    "path": "raw/_build/leishen-native-v2-high-independent-review-20261114-2141/source-manifest.json",
+    "bytes": 13634,
+    "sha256": "693f512ff9eeb83f9d8c51187039bc31463a971bc010577498d92b335f01da77",
+    "parentPreviouslyReadNineNativeAnatomyImages": true,
+    "acceptedForRiggingOnly": true
+  },
+  "rigRecipe": {
+    "path": "pipeline/blender/rig_leishen_native.py",
+    "bytes": 42508,
+    "sha256": "8099f1d53b29810dd5e343739643c79b1c0cc242b4fedaefafa09771869c6489"
+  },
+  "helperSha256": {
+    "rig_yinglong_native.py": "fac74a81862fe113dca4c4fc47a44d1ba41a2b1718b9db0c623e859d688d16a9",
+    "rig_jiaochong_native.py": "c6be051351ba63b04cd055d8b630439064e9b8ff8e2d6ce1ebc100382cea1ce6",
+    "rig_quadruped.py": "8e7a29db4562dc642104fbe904c3c89a4689d5ceab9184529a7b0e091cd3be1b",
+    "rig_zhuyan_native.py": "c1b1951e4c3ee22c4fe171c153425bafdde02fa7460bd32b2cabd333648dbdbd",
+    "turnaround.py": "e7011a02a386ec4f0cbc87f016536c43e2c5626cf709f06ff4da20b5a3b38bc0"
+  },
+  "calibration": {
+    "path": "pipeline/provenance/leishen-calibration.json",
+    "bytes": 7121,
+    "sha256": "0f073789e07db3c0cc3cc01fa315c1dd40326278f372e0f98b5df191e7411e30"
+  },
+  "riggedCandidate": {
+    "path": "raw/_build/leishen-native-rig-20261114/export-v6/rigged.glb",
+    "bytes": 75331160,
+    "sha256": "6d2d54cc0c380be4a5bd4d249dc668487e5859318afa2ae37908296fd15925b7"
+  },
+  "independentRestReference": {
+    "path": "raw/_build/leishen-native-rig-20261114/export-v6/rest-reference.json",
+    "bytes": 2687690,
+    "sha256": "68ef0857cd01a73e1a41bb466eeb032a38c40cb240b24af45b3f84486a104f9a"
+  },
+  "maskCounts": {
+    "head": 13662,
+    "neck": 12883,
+    "body": 37321,
+    "tail": 4360,
+    "all_native": 50983
+  },
+  "maskSemantics": "Independent native geometry half-planes/seeds before weights. Complete head13662; neck12883; body37321 includes every non-head point including neck and tail; tail4360. Runtime matches bidirectional native world rest positions, never raw source indices into reordered compressed arrays or weight-derived masks.",
+  "runtimeContract": {
+    "scale": 1.0,
+    "sourceFaceForward": "Blender +X / glTF +X; body long axis Blender Y / glTF -Z; native relative orientation retained",
+    "restLengthY": 3.2,
+    "permanentMinimumZ": 0.22,
+    "permanentElevationMethod": "Baked translation in native mesh coordinates and matching skeleton rests; no normalization node scale",
+    "outerLocomotionRequired": false,
+    "animatedRootTranslation": "Small periodic vertical bob centered at zero; no X/Z runtime locomotion",
+    "idleDuration": 6.0,
+    "walkDuration": 4.0,
+    "specialDuration": 6.0,
+    "walkMeaning": "Stationary slow 3D axial traveling wave",
+    "specialReturn": "Matches idle phase0 pose, velocity and acceleration at both endpoints",
+    "interpolation": "60fps source keys; actual periodic C2 glTF CUBICSPLINE; Float32 residuals disclosed in QA",
+    "boneScale": "Every bone scale is exactly one in all clips; no longitudinal stretching",
+    "productionAccepted": true
+  },
+  "nativePreservation": {
+    "preservation": {
+      "sourceBoundsBlender": [
+        [
+          -0.3318733870983124,
+          -0.9490506649017334,
+          -0.6436924338340759
+        ],
+        [
+          0.33221980929374695,
+          0.9529616832733154,
+          0.6429700255393982
+        ]
+      ],
+      "positiveUniformScale": 1.6824286146566558,
+      "decodedOrigin": [
+        0.00017321109771728516,
+        0.0019555091857910156,
+        -0.6436924338340759
+      ],
+      "permanentElevationBakedM": 0.22,
+      "meshObjectScale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sourceFingerprint": {
+        "vertices": 50983,
+        "faces": 50000,
+        "edgesSha256": "59522f06daa2b659b261f2bd950a8a36c43cea9d9a12bc3070ae896ce67562b6",
+        "loopsSha256": "44f2e22d784aa4bb82aad2697d532c4f9449ec6c5931b4b87dbb62a9f744a13a",
+        "polygonSizesSha256": "5fb35b9d69168912af61263b6af80bb5662a253edce9efb70d74c1dd41e80823",
+        "polygonMaterialsSha256": "4cbbd9be0cba685835755f827758705db5a413c5494c34262cd25946a73e7582",
+        "uvSha256": {
+          "UVMap": "310e0adee8aaeffeb6422fc2716e4d0bca2f323389e163204ddc07e112d18789"
+        },
+        "cornerNormalsSha256": "df3021ffb08b723f43124160057657a34325b8c2b6d25e0eb2f59c2b8dec743f",
+        "pbrSha256": "3e3cf35506f0882e5eb0d9ae1395027ca1c88bdad0147affff9f12a38492313b",
+        "embeddedImageSha256": {
+          "texture_diffuse": "09e02a406bcaa95592e35efbff10245e65c0c6b62c85bcd77b6ea5cf85d35b9b",
+          "texture_metallic-texture_roughness": "8c99265dd70a32dfe42259aa72238937961769088c015f1828e27dc4616b8d36",
+          "texture_normal": "0897d2839f1a3585aa4df57d8028e402874e1ede3f53d31068db84799b3a1d20"
+        }
+      },
+      "normalizedFingerprint": {
+        "vertices": 50983,
+        "faces": 50000,
+        "edgesSha256": "59522f06daa2b659b261f2bd950a8a36c43cea9d9a12bc3070ae896ce67562b6",
+        "loopsSha256": "44f2e22d784aa4bb82aad2697d532c4f9449ec6c5931b4b87dbb62a9f744a13a",
+        "polygonSizesSha256": "5fb35b9d69168912af61263b6af80bb5662a253edce9efb70d74c1dd41e80823",
+        "polygonMaterialsSha256": "4cbbd9be0cba685835755f827758705db5a413c5494c34262cd25946a73e7582",
+        "uvSha256": {
+          "UVMap": "310e0adee8aaeffeb6422fc2716e4d0bca2f323389e163204ddc07e112d18789"
+        },
+        "cornerNormalsSha256": "6c60e25e919f0356f7ccae853aec944348f2cc2b83d5c92d89651c1c3d20d86a",
+        "pbrSha256": "3e3cf35506f0882e5eb0d9ae1395027ca1c88bdad0147affff9f12a38492313b",
+        "embeddedImageSha256": {
+          "texture_diffuse": "09e02a406bcaa95592e35efbff10245e65c0c6b62c85bcd77b6ea5cf85d35b9b",
+          "texture_metallic-texture_roughness": "8c99265dd70a32dfe42259aa72238937961769088c015f1828e27dc4616b8d36",
+          "texture_normal": "0897d2839f1a3585aa4df57d8028e402874e1ede3f53d31068db84799b3a1d20"
+        }
+      },
+      "maximumNormalizationPositionErrorM": 1.902009376664182e-07,
+      "decodedCornerNormalCodecError": 0.0004118382930755615,
+      "geometryReconstruction": false,
+      "recoloring": false,
+      "normalRecomputation": false,
+      "restPositionsSha256": "8cc394a0f413cd2d428890b60773a0e1c04ac67e2b72e6dabb1d7528712031f5"
+    },
+    "nativeAttributePassthrough": {
+      "nativeVertices": 50983,
+      "nativeTriangles": 50000,
+      "nativeNormalSha256": "ff446af425be020a999d891de8ef5187b139679c0fc1471f2aa125a695a2320c",
+      "nativeUVSha256": "ae3b0cc3734e363264b02d6867a49d5eaa4dc1a9cfc32ac83cd26930dbb12e15",
+      "nativeIndexSha256": "66d3dbb3a6b1678cbcd62607983566e164efa7bea0953e3ebbea155ee455bdce",
+      "nativeNormalUVIndexBytesPreservedExactly": true,
+      "geometryChange": "Positive uniform source normalization and permanent translation only",
+      "recoloring": false,
+      "blenderNormalCodecBypassedInActualGltf": true,
+      "sourcePbrMaterialTextureSamplerDocumentsCopied": true,
+      "encodedSourceImagesCopiedWithoutReencoding": true
+    },
+    "nativeRestQA": {
+      "maxRestPositionErrorM": 1.6924465739975858e-07,
+      "maxUVComponentError": 0.0,
+      "maxNormalComponentError": 0.0,
+      "vertices": 50983,
+      "triangles": 50000,
+      "triangleIncidenceAndWindingPreservedAtNative1e-5CoordinateKeys": true,
+      "nativeDegenerateTrianglesAreaBelow1e-14": 151,
+      "storedNativeDegenerateTrianglesAreaBelow1e-14": 151,
+      "skinnedRestDegenerateTrianglesAreaBelow1e-14": 151,
+      "degenerateDisclosure": "All stored native zero/nearly-zero facets are retained exactly; the evaluated rest count can cross the1e-14m2 threshold due to Float32 inverse-bind roundoff. No geometric or manifold repair.",
+      "nativeAreaRange": [
+        0.0,
+        0.0035624148637369377
+      ],
+      "candidateAreaRange": [
+        0.0,
+        0.0035624146128114837
+      ],
+      "nativePBR": [
+        {
+          "doubleSided": true,
+          "name": "model",
+          "normalTexture": {
+            "index": "0897d2839f1a3585aa4df57d8028e402874e1ede3f53d31068db84799b3a1d20",
+            "sampler": {
+              "magFilter": 9729,
+              "minFilter": 9987
+            }
+          },
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "index": "09e02a406bcaa95592e35efbff10245e65c0c6b62c85bcd77b6ea5cf85d35b9b",
+              "sampler": {
+                "magFilter": 9729,
+                "minFilter": 9987
+              }
+            },
+            "metallicRoughnessTexture": {
+              "index": "8c99265dd70a32dfe42259aa72238937961769088c015f1828e27dc4616b8d36",
+              "sampler": {
+                "magFilter": 9729,
+                "minFilter": 9987
+              }
+            }
+          }
+        }
+      ],
+      "candidatePBR": [
+        {
+          "doubleSided": true,
+          "name": "model",
+          "normalTexture": {
+            "index": "0897d2839f1a3585aa4df57d8028e402874e1ede3f53d31068db84799b3a1d20",
+            "sampler": {
+              "magFilter": 9729,
+              "minFilter": 9987
+            }
+          },
+          "pbrMetallicRoughness": {
+            "baseColorTexture": {
+              "index": "09e02a406bcaa95592e35efbff10245e65c0c6b62c85bcd77b6ea5cf85d35b9b",
+              "sampler": {
+                "magFilter": 9729,
+                "minFilter": 9987
+              }
+            },
+            "metallicRoughnessTexture": {
+              "index": "8c99265dd70a32dfe42259aa72238937961769088c015f1828e27dc4616b8d36",
+              "sampler": {
+                "magFilter": 9729,
+                "minFilter": 9987
+              }
+            }
+          }
+        }
+      ],
+      "rawNativeNormalUVIndexBytesPreservedExactly": true,
+      "tolerances": {
+        "restPositionM": 2e-06,
+        "decodedBlenderUVComponent": 3e-07,
+        "rawNormalUVIndexBytes": "exact SHA256 and index equality; no codec tolerance required",
+        "reason": "Rest positions use float32 normalization and float32 inverse-bind matrices. Source NORMAL/UV/index payload passes through unchanged; Blender decoded corner-normal codec is bypassed in actual GLB"
+      }
+    },
+    "rigidExportRoundoffCleanup": {
+      "maximumDiscardedScaleDecompositionNoise": 1.0728836059570312e-06,
+      "maximumDiscardedNonRootLocalTranslationNoiseM": 6.420616784907907e-07,
+      "boneScaleExactlyOne": true,
+      "nonRootLocalTranslationsConstant": true,
+      "inverseBindsDerivedFromActualEmittedRestTRS": true,
+      "nativeMeshAttributesUntouched": true
+    }
+  },
+  "weightCorrection": {
+    "reason": "Nearest3D centerline branch switching at axial07/08 caused walk local edge strain8.52%.",
+    "method": "Scalar native-position graph arc-coordinate diffusion, coincident UV-seam copies sharing graph node, quadratic B-spline partition over three adjacent axial bones; needle facets have coherent weights. Native geometry/UV/NORMAL/index/PBR unchanged; motion base amplitude not reduced.",
+    "thinFacetCoupling": {
+      "maximumArea2OverLongestEdgeSquared": 0.02,
+      "maximumEdgeM": 0.08,
+      "method": "Contract only scalar weight graph of native needle facets; all source positions/normals/UV/index/PBR remain unchanged; coincident seam copies share graph coordinates; any head-touching group stays rigid with protected complete head."
+    },
+    "graphRegularization": {
+      "iterations": 64,
+      "strength": 0.5,
+      "method": "Scalar-only unique native-position graph diffusion; coincident UV seam copies share identical coordinates; upper neck Z>=1.28 pinned; no geometry changes"
+    }
+  },
+  "compression": {
+    "meshoptLevel": "medium",
+    "weightPrecisionBits": 16,
+    "sourceRig": "/Users/int64ago/workspace/shanhai/.claude/worktrees/beast-bingfeng/raw/_build/leishen-native-rig-20261114/export-v6/rigged.glb",
+    "sourceRigSha256": "6d2d54cc0c380be4a5bd4d249dc668487e5859318afa2ae37908296fd15925b7",
+    "candidate": "/Users/int64ago/workspace/shanhai/.claude/worktrees/beast-bingfeng/raw/_build/leishen-runtime-20261114-v2/body.glb",
+    "candidateSha256": "6cd008e423c0163d5792a4e87158d07b1e8e2a2904a522960edbf842debb41d9",
+    "candidateBytes": 2943208,
+    "decoded": "/Users/int64ago/workspace/shanhai/.claude/worktrees/beast-bingfeng/raw/_build/leishen-runtime-20261114-v2/decoded-for-qa.glb",
+    "decodedSha256": "5c66ee2ff19b832ea74f2e2ef802093d636c95cc508e4785435a88d7548c3902",
+    "scriptSha256": "e7bd5b16bd3d594165fea9873c1056494a51a1ca39be02702b108db31f8827ba",
+    "animationsPreservedExactly": true,
+    "structurePreserved": true,
+    "materialParametersSlotsAndSamplersPreserved": true,
+    "textures": [
+      {
+        "name": "texture_normal",
+        "mime": "image/webp",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 269112,
+        "sha256": "8b6dec20adbaaf01edfc838dce22acb739829fed560ad9268e424a7d16139465"
+      },
+      {
+        "name": "texture_diffuse",
+        "mime": "image/webp",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 119872,
+        "sha256": "782f6743c711a6352bd1a7ccd190790421e3f9f246ecbb2bb2c65dbd60bbc2e0"
+      },
+      {
+        "name": "texture_metallic-texture_roughness",
+        "mime": "image/webp",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 46338,
+        "sha256": "966f63fa33359e0223cc61dfcb3125ae7256760a5c5dfe0ac6ed5ad159471c82"
+      }
+    ],
+    "candidateOnly": true,
+    "decodedDerivativeOnly": true,
+    "command": {
+      "executable": "/Users/int64ago/.nvs/node/24.19.0/arm64/bin/node",
+      "args": [
+        "/Users/int64ago/workspace/shanhai/.claude/worktrees/beast-bingfeng/scripts/compress-leishen-native.mjs",
+        "/Users/int64ago/workspace/shanhai/.claude/worktrees/beast-bingfeng/raw/_build/leishen-native-rig-20261114/export-v6/rigged.glb",
+        "/Users/int64ago/workspace/shanhai/.claude/worktrees/beast-bingfeng/raw/_build/leishen-runtime-20261114-v2",
+        "--weight16"
+      ],
+      "cwd": "/Users/int64ago/workspace/shanhai/.claude/worktrees/beast-bingfeng/",
+      "settings": {
+        "level": "medium",
+        "quantizeWeight": 16,
+        "textureFormat": "webp",
+        "textureSize": 2048,
+        "simplify": false,
+        "flatten": false,
+        "join": false,
+        "weld": false,
+        "resample": false,
+        "palette": false,
+        "instance": false
+      },
+      "transforms": [
+        "dedup",
+        "prune",
+        "textureCompress(webp2048)",
+        "meshopt(medium,quantizeWeight16)"
+      ]
+    },
+    "recipe": {
+      "path": "scripts/compress-leishen-native.mjs",
+      "bytes": 6780,
+      "sha256": "e7bd5b16bd3d594165fea9873c1056494a51a1ca39be02702b108db31f8827ba"
+    }
+  },
+  "compressedNumericalQA": {
+    "path": "raw/_build/leishen-runtime-qa-20261114-v3/numerical-qa.json",
+    "bytes": 7678,
+    "sha256": "f00f93a40f4654085c4b8176842e659154e8975c69266f5751bb5e24e231c018",
+    "results": {
+      "candidateOnly": true,
+      "scriptSha256": "44f27bf4d3d2136e282df7dac9d1007ab381e421c85fb78a0607cd59bf26f08d",
+      "decodedCandidateSha256": "5c66ee2ff19b832ea74f2e2ef802093d636c95cc508e4785435a88d7548c3902",
+      "sourceRigSha256": "6d2d54cc0c380be4a5bd4d249dc668487e5859318afa2ae37908296fd15925b7",
+      "referenceSha256": "68ef0857cd01a73e1a41bb466eeb032a38c40cb240b24af45b3f84486a104f9a",
+      "restMapping": {
+        "method": "Bidirectional nearest independent native rest WORLD positions, no weight or vertex-order selection",
+        "maximumForwardErrorM": 0.00020435611077118665,
+        "maximumReverseErrorM": 0.00020435611077118665,
+        "toleranceM": 0.00025
+      },
+      "attributeCorrespondence": {
+        "uvMaximumComponentError": 0.0001362636685371399,
+        "worldNormalMaximumAngleDegrees": 0.09494878116226424,
+        "maximumMatchedRestPositionErrorM": 0.00020436564204158496
+      },
+      "skeleton": {
+        "bones": 26,
+        "hierarchyPreserved": true,
+        "maximumBoneRestMatrixError": 4.994497670995912e-08,
+        "unitBoneScales": true
+      },
+      "motionQA": {
+        "idle": {
+          "samples": 721,
+          "samplingHz": 120,
+          "boundsBlender": [
+            [
+              -0.5601042208882048,
+              -1.6002146647430293,
+              0.2146470547149282
+            ],
+            [
+              0.5601203120110447,
+              1.6028733593221072,
+              2.388214370344358
+            ]
+          ],
+          "minimumGroundClearanceM": 0.2146470547149282,
+          "maximumSampledVertexSpeedMps": 0.022247184345638084,
+          "completeHumanHeadShapeDistanceErrorM": 1.887379141862766e-15,
+          "maximumNativeEdgeLengthRelativeChange": {
+            "neck": 0.008791069473404134,
+            "body": 0.009563463071801337,
+            "tail": 0.004125588964754456
+          },
+          "p99NativeEdgeLengthRelativeChange": {
+            "neck": 0.0058855082859166075,
+            "body": 0.004092676647679427,
+            "tail": 0.002104742065249021
+          },
+          "robustTriangleAreaRatioRange": [
+            0.9750433479388114,
+            1.025044489383765
+          ],
+          "allVertexLoopPositionErrorM": 0.0,
+          "allVertexWrapVelocityDifferenceMps": 2.81679249992642e-05,
+          "allVertexWrapAccelerationDifferenceMps2": 0.00036903305349376075,
+          "oneSidedDifferenceDt": 0.001,
+          "actualCubicBufferContinuity": {
+            "maxValueSeam": 0.0,
+            "maxTangentSeam": 0.0,
+            "maxSecondDerivativeSeam": 2.014073205258704e-05
+          },
+          "maximumBodyVertexSweepM": 0.04678015506832067,
+          "maximumHumanHeadVertexSweepM": 0.00999117726553841,
+          "maximumRegionVertexSweepM": {
+            "head": 0.00999117726553841,
+            "neck": 0.009875234414937728,
+            "body": 0.04678015506832067,
+            "tail": 0.04678015506832067
+          },
+          "maximumFirst48EvenlySampledRegionVertexSweepM": {
+            "head": 0.009938426586073456,
+            "neck": 0.00964763794642382,
+            "body": 0.03699705724681666,
+            "tail": 0.04663678822478654
+          }
+        },
+        "walk": {
+          "samples": 481,
+          "samplingHz": 120,
+          "boundsBlender": [
+            [
+              -0.5615401523307195,
+              -1.600428701180842,
+              0.21129413703205438
+            ],
+            [
+              0.5601528637688814,
+              1.6055353971600546,
+              2.390208772388372
+            ]
+          ],
+          "minimumGroundClearanceM": 0.21129413703205438,
+          "maximumSampledVertexSpeedMps": 0.06679277132514128,
+          "completeHumanHeadShapeDistanceErrorM": 1.7763568394002505e-15,
+          "maximumNativeEdgeLengthRelativeChange": {
+            "neck": 0.010577619914269754,
+            "body": 0.019126916424335283,
+            "tail": 0.008260201195298578
+          },
+          "p99NativeEdgeLengthRelativeChange": {
+            "neck": 0.005859794716547816,
+            "body": 0.005462293449478605,
+            "tail": 0.004208296882482032
+          },
+          "robustTriangleAreaRatioRange": [
+            0.9501783271186716,
+            1.050172999382062
+          ],
+          "allVertexLoopPositionErrorM": 0.0,
+          "allVertexWrapVelocityDifferenceMps": 9.243600155462024e-05,
+          "allVertexWrapAccelerationDifferenceMps2": 0.0004852087899392216,
+          "oneSidedDifferenceDt": 0.001,
+          "actualCubicBufferContinuity": {
+            "maxValueSeam": 0.0,
+            "maxTangentSeam": 0.0,
+            "maxSecondDerivativeSeam": 3.4076890278456062e-06
+          },
+          "maximumBodyVertexSweepM": 0.09236949257689346,
+          "maximumHumanHeadVertexSweepM": 0.013770854318176911,
+          "maximumRegionVertexSweepM": {
+            "head": 0.013770854318176911,
+            "neck": 0.014575544466540092,
+            "body": 0.09236949257689346,
+            "tail": 0.09236949257689346
+          },
+          "maximumFirst48EvenlySampledRegionVertexSweepM": {
+            "head": 0.013614516650793503,
+            "neck": 0.01444183183165663,
+            "body": 0.07230627165304943,
+            "tail": 0.09207825655136588
+          }
+        },
+        "special": {
+          "samples": 721,
+          "samplingHz": 120,
+          "boundsBlender": [
+            [
+              -0.5613002989331869,
+              -1.6003703184435627,
+              0.21663789277721687
+            ],
+            [
+              0.5603279743450731,
+              1.6061417597349898,
+              2.3882146259592227
+            ]
+          ],
+          "minimumGroundClearanceM": 0.21663789277721687,
+          "maximumSampledVertexSpeedMps": 0.11907680981762281,
+          "completeHumanHeadShapeDistanceErrorM": 1.887379141862766e-15,
+          "maximumNativeEdgeLengthRelativeChange": {
+            "neck": 0.03681234904075936,
+            "body": 0.07789548065449203,
+            "tail": 0.014676391486431295
+          },
+          "p99NativeEdgeLengthRelativeChange": {
+            "neck": 0.010713334325817675,
+            "body": 0.013949154605468446,
+            "tail": 0.0065669661877485516
+          },
+          "robustTriangleAreaRatioRange": [
+            0.8984593323713272,
+            1.1522999034151002
+          ],
+          "allVertexLoopPositionErrorM": 0.0,
+          "allVertexWrapVelocityDifferenceMps": 2.8094898301427207e-05,
+          "allVertexWrapAccelerationDifferenceMps2": 0.0003678344948885856,
+          "oneSidedDifferenceDt": 0.001,
+          "actualCubicBufferContinuity": {
+            "maxValueSeam": 0.0,
+            "maxTangentSeam": 0.0,
+            "maxSecondDerivativeSeam": 2.014073205258704e-05
+          },
+          "maximumBodyVertexSweepM": 0.11351337827562935,
+          "maximumHumanHeadVertexSweepM": 0.012627443400009269,
+          "maximumRegionVertexSweepM": {
+            "head": 0.012627443400009269,
+            "neck": 0.012184902499763488,
+            "body": 0.11351337827562935,
+            "tail": 0.11351337827562935
+          },
+          "maximumFirst48EvenlySampledRegionVertexSweepM": {
+            "head": 0.011456568459926857,
+            "neck": 0.011534785050246682,
+            "body": 0.10176321317076924,
+            "tail": 0.11335670602157603
+          }
+        },
+        "specialIdleSafeEndpointMatch": {
+          "positionM": 0.0,
+          "velocityMps": 1.2272529063167318e-07,
+          "accelerationMps2": 6.503823430516924e-05
+        },
+        "maximumSweptBoundsBlenderSampled": [
+          [
+            -0.5615401523307195,
+            -1.600428701180842,
+            0.21129413703205438
+          ],
+          [
+            0.5603279743450731,
+            1.6061417597349898,
+            2.390208772388372
+          ]
+        ],
+        "maximumSweptBoundsGltfSampled": [
+          [
+            -0.5615401523307195,
+            0.21129413703205438,
+            -1.6061417597349898
+          ],
+          [
+            0.5603279743450731,
+            2.390208772388372,
+            1.600428701180842
+          ]
+        ],
+        "sweptBoundsGltfAdvisory1cmPadding": [
+          [
+            -0.5715401523307195,
+            0.20129413703205437,
+            -1.6161417597349899
+          ],
+          [
+            0.5703279743450731,
+            2.4002087723883716,
+            1.610428701180842
+          ]
+        ]
+      },
+      "maximumAnimatedVertexDifferenceVsUncompressedM": {
+        "idle": 0.00020436615509165088,
+        "walk": 0.00020436660746336833,
+        "special": 0.0002043662637259252
+      }
+    }
+  },
+  "compressedExportReimportQA": {
+    "path": "raw/_build/leishen-runtime-qa-20261114-v3/audit.json",
+    "bytes": 12645,
+    "sha256": "a8ca8706929882eb2746dd689fb65729ec26a88b1c7dfdcf957739738413b248",
+    "reimport": {
+      "boneCount": 26,
+      "clipDurations": {
+        "idle": 6.0,
+        "walk": 4.0,
+        "special": 6.0
+      },
+      "maximumAllVertexVsExactGltfEvaluatorErrorM": 2.7889010802004568e-05,
+      "actualReimportRendered": true,
+      "humanHeadAndNeckViewsPerClip": 12
+    },
+    "bellyMotion": {
+      "anatomySelection": "Independent native-world low abdomen: -.95<Y<.35, Z<.85; no weights used",
+      "vertices": 15989,
+      "maximumAbdominalVerticalDifferenceFromSynchronizedIdleM": 0.05309120961563707,
+      "peakTimeSeconds": 2.0083333333333333,
+      "series": [
+        {
+          "t": 0.0,
+          "maximumVerticalDifferenceFromSynchronizedIdleM": 0.0,
+          "maximumAllAxisDifferenceM": 0.0
+        },
+        {
+          "t": 0.25,
+          "maximumVerticalDifferenceFromSynchronizedIdleM": 2.7853905469887863e-06,
+          "maximumAllAxisDifferenceM": 4.694722731564833e-06
+        },
+        {
+          "t": 0.5,
+          "maximumVerticalDifferenceFromSynchronizedIdleM": 0.00013583869576655472,
+          "maximumAllAxisDifferenceM": 0.00014589068443115834
+        },
+        {
+          "t": 0.75,
+          "maximumVerticalDifferenceFromSynchronizedIdleM": 0.0013150967295086913,
+          "maximumAllAxisDifferenceM": 0.0013620152376701976
+        },
+        {
+          "t": 1.0,
+          "maximumVerticalDifferenceFromSynchronizedIdleM": 0.005770333660980842,
+          "maximumAllAxisDifferenceM": 0.0059283177606591405
+        },
+        {
+          "t": 1.25,
+          "maximumVerticalDifferenceFromSynchronizedIdleM": 0.01582112631795346,
+          "maximumAllAxisDifferenceM": 0.016197681549837355
+        },
+        {
+          "t": 1.5,
+          "maximumVerticalDifferenceFromSynchronizedIdleM": 0.030991548947790104,
+          "maximumAllAxisDifferenceM": 0.0317056146585999
+        },
+        {
+          "t": 1.75,
+          "maximumVerticalDifferenceFromSynchronizedIdleM": 0.04608406013732741,
+          "maximumAllAxisDifferenceM": 0.04714461259911604
+        },
+        {
+          "t": 2.0,
+          "maximumVerticalDifferenceFromSynchronizedIdleM": 0.053077680399491234,
+          "maximumAllAxisDifferenceM": 0.054397421377104495
+        },
+        {
+          "t": 2.25,
+          "maximumVerticalDifferenceFromSynchronizedIdleM": 0.0466299342559659,
+          "maximumAllAxisDifferenceM": 0.048110062849949585
+        },
+        {
+          "t": 2.5,
+          "maximumVerticalDifferenceFromSynchronizedIdleM": 0.02910557756730625,
+          "maximumAllAxisDifferenceM": 0.030934940579917584
+        },
+        {
+          "t": 2.75,
+          "maximumVerticalDifferenceFromSynchronizedIdleM": 0.010386785888785499,
+          "maximumAllAxisDifferenceM": 0.014326681329240355
+        },
+        {
+          "t": 3.0,
+          "maximumVerticalDifferenceFromSynchronizedIdleM": 0.0018621773045934265,
+          "maximumAllAxisDifferenceM": 0.010188204798013425
+        },
+        {
+          "t": 3.25,
+          "maximumVerticalDifferenceFromSynchronizedIdleM": 0.008646662540018668,
+          "maximumAllAxisDifferenceM": 0.012430676594409938
+        },
+        {
+          "t": 3.5,
+          "maximumVerticalDifferenceFromSynchronizedIdleM": 0.026067385666267373,
+          "maximumAllAxisDifferenceM": 0.02751771773726847
+        },
+        {
+          "t": 3.75,
+          "maximumVerticalDifferenceFromSynchronizedIdleM": 0.043024001797013656,
+          "maximumAllAxisDifferenceM": 0.04424186154603393
+        },
+        {
+          "t": 4.0,
+          "maximumVerticalDifferenceFromSynchronizedIdleM": 0.049631512978292824,
+          "maximumAllAxisDifferenceM": 0.05083139501623151
+        },
+        {
+          "t": 4.25,
+          "maximumVerticalDifferenceFromSynchronizedIdleM": 0.043342211469362846,
+          "maximumAllAxisDifferenceM": 0.044385549352414407
+        },
+        {
+          "t": 4.5,
+          "maximumVerticalDifferenceFromSynchronizedIdleM": 0.0291836835176853,
+          "maximumAllAxisDifferenceM": 0.029921865876883454
+        },
+        {
+          "t": 4.75,
+          "maximumVerticalDifferenceFromSynchronizedIdleM": 0.014859035335889614,
+          "maximumAllAxisDifferenceM": 0.015260564134756025
+        },
+        {
+          "t": 5.0,
+          "maximumVerticalDifferenceFromSynchronizedIdleM": 0.005380609336373299,
+          "maximumAllAxisDifferenceM": 0.005536165546188953
+        },
+        {
+          "t": 5.25,
+          "maximumVerticalDifferenceFromSynchronizedIdleM": 0.0012069397949940885,
+          "maximumAllAxisDifferenceM": 0.0012501076980247577
+        },
+        {
+          "t": 5.5,
+          "maximumVerticalDifferenceFromSynchronizedIdleM": 0.00011990854042742694,
+          "maximumAllAxisDifferenceM": 0.0001312781362470626
+        },
+        {
+          "t": 5.75,
+          "maximumVerticalDifferenceFromSynchronizedIdleM": 2.015868086346906e-06,
+          "maximumAllAxisDifferenceM": 3.719062756640215e-06
+        },
+        {
+          "t": 6.0,
+          "maximumVerticalDifferenceFromSynchronizedIdleM": 0.0,
+          "maximumAllAxisDifferenceM": 0.0
+        }
+      ],
+      "pulseTargetsSeconds": [
+        2.0,
+        4.0
+      ],
+      "boneScaleOrGeometryChanges": false
+    },
+    "parentReadSevenActualReimportAndStrainImages": true
+  },
+  "candidateStageQA": {
+    "path": "raw/_build/leishen-stage-qa-20261114-v1/report.json",
+    "bytes": 6293113,
+    "sha256": "99e32dc14c3e40ae92232e58b6d816ed5d29f728b3e8fa18f6cfab3a38972f88",
+    "script": {
+      "path": "scripts/qa-leishen-app.mjs",
+      "bytes": 34403,
+      "sha256": "9375e294a99574e3d8fb7db16e89d0c812491474aab56ccff301211add0a31ef"
+    },
+    "passed": true,
+    "sections": {
+      "native-reference": {
+        "passed": true
+      },
+      "native-stage": {
+        "passed": true
+      },
+      "clip-boundaries": {
+        "passed": true
+      },
+      "motion-idle": {
+        "passed": true
+      },
+      "motion-walk": {
+        "passed": true
+      },
+      "motion-special": {
+        "passed": true
+      },
+      "transitions": {
+        "passed": true
+      },
+      "native-ink-closeups": {
+        "passed": true
+      },
+      "responsive-1440x900": {
+        "passed": true
+      },
+      "responsive-1024x768": {
+        "passed": true
+      },
+      "responsive-800x900": {
+        "passed": true
+      },
+      "responsive-641x900": {
+        "passed": true
+      },
+      "responsive-390x900": {
+        "passed": true
+      },
+      "responsive-390x844": {
+        "passed": true
+      },
+      "remount-ownership": {
+        "passed": true
+      },
+      "controls-narration": {
+        "passed": true
+      },
+      "runtime-errors": {
+        "passed": true
+      }
+    },
+    "errors": [],
+    "failures": [],
+    "publicAsset": false,
+    "previewReadyOverride": true,
+    "nativeReference": {
+      "sourceSha256": "454cee9efe4a0f60324ccb3d6cfb69c2bf217e34c44d2df6f2835c21ae429c9e",
+      "nativeVertices": 50983,
+      "matchedCompressedVertices": 50983,
+      "maximumRestError": 0.00020429732208362248,
+      "maximumReverseRestError": 0.00020429732208362248,
+      "matchingToleranceM": 0.00025,
+      "maskMethod": "Bidirectional rest-position geometry matching; no compressed-index or weight-derived masks",
+      "maskCounts": {
+        "head": 13662,
+        "neck": 12883,
+        "body": 37321,
+        "tail": 4360,
+        "all_native": 50983
+      },
+      "completeHeadAnchorCount": 3,
+      "edgeCounts": {
+        "neck": 22766,
+        "body": 68592,
+        "tail": 8869
+      },
+      "minimumEdgeLengthM": 0.005
+    },
+    "clipBoundaries": {
+      "idle": {
+        "positionSeamM": 3.650723609237466e-07,
+        "wrapVelocityDifferenceMps": 0.00024217017378291335,
+        "wrapAccelerationDifferenceMps2": 0.005978193753283631,
+        "dt": 0.01,
+        "sampledVertices": 50983
+      },
+      "walk": {
+        "positionSeamM": 2.217478549593427e-07,
+        "wrapVelocityDifferenceMps": 0.0009258462348441461,
+        "wrapAccelerationDifferenceMps2": 0.006142181376039051,
+        "dt": 0.01,
+        "sampledVertices": 50983
+      },
+      "special": {
+        "positionSeamM": 3.650723609237466e-07,
+        "wrapVelocityDifferenceMps": 0.00024185985637279104,
+        "wrapAccelerationDifferenceMps2": 0.005979729371328073,
+        "dt": 0.01,
+        "sampledVertices": 50983
+      },
+      "specialIdleEndpoint": {
+        "position": 0,
+        "velocity": 1.3269790497488395e-07,
+        "acceleration": 5.1019659530945943e-05
+      }
+    },
+    "responsive": [
+      {
+        "width": 1440,
+        "height": 900,
+        "poses": 9,
+        "readability": {
+          "sourceCount": 1,
+          "sourceResults": [
+            {
+              "exactQuote": true,
+              "readable": true
+            }
+          ],
+          "designItemCount": 4,
+          "designs": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "horizontalOverflow": false
+        }
+      },
+      {
+        "width": 1024,
+        "height": 768,
+        "poses": 9,
+        "readability": {
+          "sourceCount": 1,
+          "sourceResults": [
+            {
+              "exactQuote": true,
+              "readable": true
+            }
+          ],
+          "designItemCount": 4,
+          "designs": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "horizontalOverflow": false
+        }
+      },
+      {
+        "width": 800,
+        "height": 900,
+        "poses": 9,
+        "readability": {
+          "sourceCount": 1,
+          "sourceResults": [
+            {
+              "exactQuote": true,
+              "readable": true
+            }
+          ],
+          "designItemCount": 4,
+          "designs": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "horizontalOverflow": false
+        }
+      },
+      {
+        "width": 641,
+        "height": 900,
+        "poses": 9,
+        "readability": {
+          "sourceCount": 1,
+          "sourceResults": [
+            {
+              "exactQuote": true,
+              "readable": true
+            }
+          ],
+          "designItemCount": 4,
+          "designs": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "horizontalOverflow": false
+        }
+      },
+      {
+        "width": 390,
+        "height": 900,
+        "poses": 9,
+        "readability": {
+          "sourceCount": 1,
+          "sourceResults": [
+            {
+              "exactQuote": true,
+              "readable": true
+            }
+          ],
+          "designItemCount": 4,
+          "designs": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "horizontalOverflow": false
+        }
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "poses": 9,
+        "readability": {
+          "sourceCount": 1,
+          "sourceResults": [
+            {
+              "exactQuote": true,
+              "readable": true
+            }
+          ],
+          "designItemCount": 4,
+          "designs": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "horizontalOverflow": false
+        }
+      }
+    ],
+    "narration": {
+      "mode": "offline-candidate",
+      "path": "/Users/int64ago/workspace/shanhai/.claude/worktrees/beast-bingfeng/raw/_build/leishen-narration-candidate-20261114-2300/leishen.mp3",
+      "sha256": "477d112bdab697a3d5cce1f694555684819043e5b4e891b29409c8d34d0774b2",
+      "sizeBytes": 1062961,
+      "intercepted": true,
+      "interceptionCount": 1
+    },
+    "narrationPlayedAndStopped": true
+  },
+  "parentVisualAcceptance": {
+    "accepted": true,
+    "personallyRead": [
+      {
+        "path": "raw/_build/leishen-stage-qa-20261114-v1/desktop-idle.png",
+        "bytes": 946148,
+        "sha256": "8228c9889aef057dcb83ca0f5ccff63526b3cef9a390bb00d0ea6298f5be432f"
+      },
+      {
+        "path": "raw/_build/leishen-stage-qa-20261114-v1/desktop-walk.png",
+        "bytes": 944817,
+        "sha256": "27f520f3494493e3e9db5ebe4ab18321053325f119370fd807f798cad20d4ef1"
+      },
+      {
+        "path": "raw/_build/leishen-stage-qa-20261114-v1/desktop-special.png",
+        "bytes": 944950,
+        "sha256": "f3be37de29d8019d3dbdc197031c5e582df30e89e77cfed71fce0940d4764031"
+      },
+      {
+        "path": "raw/_build/leishen-stage-qa-20261114-v1/walk-head-front-plus-x.png",
+        "bytes": 1025532,
+        "sha256": "b434ae500dc0200f8da021b68671eaae8dd9b47b65b877caf8de462a4dc4ac88"
+      },
+      {
+        "path": "raw/_build/leishen-stage-qa-20261114-v1/walk-head-skull-minus-x.png",
+        "bytes": 1007269,
+        "sha256": "c669467d3965a2426a9059d2d56c1d7af74c156bc71e2462f818144b641dd9f7"
+      },
+      {
+        "path": "raw/_build/leishen-stage-qa-20261114-v1/walk-neck-ear-minus-z.png",
+        "bytes": 1092317,
+        "sha256": "c57787ce447de940a4d55fb1998c2dcb23e7c17b084946fc1232c146871c7b4c"
+      },
+      {
+        "path": "raw/_build/leishen-stage-qa-20261114-v1/special-neck-ear-plus-z.png",
+        "bytes": 1022037,
+        "sha256": "deb679ee2789010c7a60bee876e33fc3e1140fc02d76ac056087a918d87cf937"
+      },
+      {
+        "path": "raw/_build/leishen-stage-qa-20261114-v1/responsive-390x844-special.png",
+        "bytes": 262606,
+        "sha256": "64f98dd1dce6cfaa0048f8cc28c930dbc810c4f43788f956c29de4750da4ade2"
+      },
+      {
+        "path": "raw/_build/leishen-stage-qa-20261114-v1/responsive-641x900-walk.png",
+        "bytes": 445309,
+        "sha256": "31c66f125dbee43fac8e381520e2a75b5b84b19b32716ecc2b7c281a11a1b786"
+      },
+      {
+        "path": "raw/_build/leishen-stage-qa-20261114-v1/responsive-800x900.png",
+        "bytes": 552020,
+        "sha256": "c89e04d8a33a39a4d2bf4570ba65551a04cc97af0e192772d179c8fd5d0f4ee4"
+      },
+      {
+        "path": "raw/_build/leishen-stage-qa-20261114-v1/responsive-1024x768.png",
+        "bytes": 595994,
+        "sha256": "8ab4e54b5b824dd09a532bfa7f9d02e68945310210498a6196f49dd7fdb8e73d"
+      }
+    ],
+    "judgment": "Complete human head and dark healthy eyes readable in ink; intact posterior skull/ears and continuous scaled neck, no new tear/collar; whole native body and pointed tail clear of cards and controls at desktop/tablet/mobile. Offline exported-GLB belly series confirms two abdominal pulses. Actual Stage numeric continuity/ownership/narration sections all passed."
+  },
+  "failedAttempts": [
+    {
+      "candidate": "initial Medium and local human-head reconstruction",
+      "decision": "rejected",
+      "reason": "Skull-like source face; reconstructed collar/longitudinal tone seams remained. Not used in native final High."
+    },
+    {
+      "candidate": "native export-v2",
+      "decision": "rejected",
+      "reason": "Walk8.52% strain from centerline branch-weight discontinuity. Source untouched; fixed through weight graph."
+    },
+    {
+      "candidate": "runtime-v1 8bit skin weights",
+      "decision": "rejected",
+      "reason": "Compressed special8.17% strain above unchanged8% gate. Final16bit weights restore7.7895% with retained authored animation samples."
+    }
+  ],
+  "runtimeAsset": {
+    "path": "public/models/leishen/body.glb",
+    "bytes": 2943208,
+    "sha256": "6cd008e423c0163d5792a4e87158d07b1e8e2a2904a522960edbf842debb41d9"
+  },
+  "previousModel": {
+    "exists": false
+  },
+  "narration": {
+    "path": "public/audio/narration/leishen.mp3",
+    "bytes": 1062961,
+    "sha256": "477d112bdab697a3d5cce1f694555684819043e5b4e891b29409c8d34d0774b2",
+    "generated": "2026-11-14",
+    "beast": "leishen",
+    "story": "列位看官，《海内东经》在吴西的雷泽写下一位神：雷泽中有雷神，龙身而人头，鼓其腹。人头与龙身，是经文明确的形貌；鼓其腹，也照原文保留。短短一条没有细说龙躯的长短、鳞纹、角翼或肢爪，也没有列出鼓槌和外置的鼓。眼前的形象，取完整人头，经厚实鳞颈连入一条渐细长躯与尖尾，配苍青体鳞、浅灰腹鳞、暖肤和短黑发。这些比例、色彩，以及无臂无足无角无翼，都是本作的设计选择。静候、游弋与腹段的节律起伏，也属于动画演绎；不能把一种具体动作说成鼓其腹的唯一释义。本条没有写春雷、紫电或后世雷公的鸟翼法器，咱们便依这一篇的人头龙身，观看古经留下的雷泽之神。",
+    "model": "cosyvoice-v2",
+    "voice": "longsanshu",
+    "format": "mp3",
+    "sampleRate": 22050,
+    "productionAccepted": true,
+    "durationSeconds": 66.429375,
+    "channels": 1,
+    "oldPublicAsset": {
+      "path": "public/audio/narration/leishen.mp3",
+      "bytes": 497462,
+      "sha256": "bee9c133efb21212196aee7bbea7272480c04e6c4a1cf352292dfb4af61562b8"
+    },
+    "oldArchivedPath": "raw/_build/leishen-pre-promotion-20261115/leishen-previous.mp3"
+  },
+  "limitations": [
+    "Native151 zero/near-zero facets retained; no topology/manifold repair.",
+    "Native exact attribute preservation applies to uncompressed rig only; runtime Meshopt/WebP2048 is lossy. Compressed independent rest max0.2044mm, normal max0.09495degrees, UV component max0.0001363.",
+    "120Hz motion extrema are sampled, not analytical proof. Actual Stage edge audit excludes sub5mm compression-noise-dominated edges; independent offline compressed QA provides finer source-edge audit.",
+    "Candidate QA used explicit GLB/new audio routes and local readiness override. Formal public QA subsequently passed with actual served model/audio, true committed-intent readiness and no routes/override. Exact-SHA deployed production verification pending."
+  ],
+  "deployment": {
+    "verified": false,
+    "status": "pending independent commit, push main, exact-SHA workflows and actual production verification"
+  },
+  "standardPublicScreenshots": {
+    "parentPersonallyRead": true,
+    "images": [
+      {
+        "path": "raw/_build/leishen-standard-shots-20261115/idle.png",
+        "bytes": 947913,
+        "sha256": "2a27fc95bd70dcab218ad669bee74033d8ee291e2d8f2dc18bd03e03609ee409"
+      },
+      {
+        "path": "raw/_build/leishen-standard-shots-20261115/walk.png",
+        "bytes": 948266,
+        "sha256": "18e285b04455278e186399ac3eed27884d53b979379825090228a7f742ff5131"
+      },
+      {
+        "path": "raw/_build/leishen-standard-shots-20261115/special.png",
+        "bytes": 948967,
+        "sha256": "a76a82f1317c16221cc902acd869ccbda4956d04b74efec1d38c1e14a60a42ba"
+      },
+      {
+        "path": "raw/_build/leishen-standard-shots-20261115/walk-close0.png",
+        "bytes": 301147,
+        "sha256": "868262daa46533fcdc9f019808f10e0eee05ee83e716e48d02b3d24f990f4ba8"
+      },
+      {
+        "path": "raw/_build/leishen-standard-shots-20261115/walk-close1.png",
+        "bytes": 300611,
+        "sha256": "0c360911e84a7a6ef23d31290e1f7efe5aaaf101ddb57422b930760c3d963e94"
+      },
+      {
+        "path": "raw/_build/leishen-standard-shots-20261115/walk-close2.png",
+        "bytes": 300796,
+        "sha256": "12172fa84897a2e3be7e294ac6f605290571121f40ea1901139a2bea6477b66c"
+      }
+    ],
+    "judgment": "Intact complete head, dark eyes and continuous native scaled long body. Three actions and consecutive walk frames show no new root tear, ghost body or grounded limb requirements. Entire silhouette clear of controls."
+  },
+  "formalPublicStageQA": {
+    "path": "raw/_build/leishen-stage-qa-20261115-public-v1/report.json",
+    "bytes": 6551512,
+    "sha256": "976ad9bfb92607ea6a1c7570931dbf0084d87985ef714d1021fadc1f46837630",
+    "passed": true,
+    "publicAsset": true,
+    "previewReadyOverride": false,
+    "modelInterception": false,
+    "narration": {
+      "mode": "served-public",
+      "path": "http://localhost:5199/audio/narration/leishen.mp3",
+      "sha256": "477d112bdab697a3d5cce1f694555684819043e5b4e891b29409c8d34d0774b2",
+      "sizeBytes": 1062961,
+      "intercepted": false,
+      "interceptionCount": 0
+    },
+    "sections": {
+      "native-reference": {
+        "passed": true
+      },
+      "native-stage": {
+        "passed": true
+      },
+      "clip-boundaries": {
+        "passed": true
+      },
+      "motion-idle": {
+        "passed": true
+      },
+      "motion-walk": {
+        "passed": true
+      },
+      "motion-special": {
+        "passed": true
+      },
+      "transitions": {
+        "passed": true
+      },
+      "native-ink-closeups": {
+        "passed": true
+      },
+      "responsive-1440x900": {
+        "passed": true
+      },
+      "responsive-1024x768": {
+        "passed": true
+      },
+      "responsive-800x900": {
+        "passed": true
+      },
+      "responsive-641x900": {
+        "passed": true
+      },
+      "responsive-390x900": {
+        "passed": true
+      },
+      "responsive-390x844": {
+        "passed": true
+      },
+      "remount-ownership": {
+        "passed": true
+      },
+      "controls-narration": {
+        "passed": true
+      },
+      "runtime-errors": {
+        "passed": true
+      }
+    },
+    "errors": [],
+    "failures": [],
+    "specialReturnedToIdle": true,
+    "narrationPlayedAndStopped": true,
+    "parentPersonallyReadAdditionalImages": [
+      {
+        "path": "raw/_build/leishen-stage-qa-20261115-public-v1/walk-head-front-plus-x.png",
+        "bytes": 1025534,
+        "sha256": "9ef0eb36d5928b1affcb525484a546adf6892a46f70abe67a77eaa151d8c084b"
+      },
+      {
+        "path": "raw/_build/leishen-stage-qa-20261115-public-v1/responsive-390x844-special.png",
+        "bytes": 262652,
+        "sha256": "c549f1bff5f2d9a0f9ff3d295780308b1b4b074b34ab1a4249b782ddbc8f8082"
+      }
+    ]
+  },
+  "localChecks": {
+    "command": "pnpm typecheck && pnpm validate && pnpm build",
+    "passed": true,
+    "gitDiffCheckPassed": true,
+    "gitLfsStatusInspected": true,
+    "retainedBuildMainEntry": "assets/index-BMWg9v5d.js",
+    "lfsBinaryPaths": [
+      "public/models/leishen/body.glb",
+      "public/audio/narration/leishen.mp3"
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "id": "leishen-production-20261114-living-human-face-v2-medium",
+  "beast": "leishen",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One complete long blue-green scaled serpentine dragon with ONE healthy LIVING adult human head. Natural warm skin fully covers the round human cranium, forehead, soft cheeks, ears, nose, closed lips and chin. Two ordinary human eyes with dark brown irises and black pupils, relaxed expression, short dark hair. Full fleshy face, never skull, skeleton, exposed teeth or mask. Short broad neck grows continuously into a rounded muscular upper abdomen and long dragon trunk; no human torso. Overlapping blue-green scales and pale broad belly scutes, subtle abdominal fullness. Body length about nine times thickness, extended in a shallow horizontal S, head and one steadily tapering pointed tail widely separated, no coils or body crossings. Complete head to tail visible. No arms, hands, feet, horns, wings, beard, dragon snout, drum, weapon, armor, props or base. One continuous organic animal, no collar or flat cut neck.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

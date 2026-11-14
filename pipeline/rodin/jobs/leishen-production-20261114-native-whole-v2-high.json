@@ -1,0 +1,14 @@
+{
+  "id": "leishen-production-20261114-native-whole-v2-high",
+  "beast": "leishen",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Refine the ONE complete living human-faced serpent in all four references. Preserve the exact raised neck, head orientation relative to body, long extended trunk and single tapering pointed tail. Complete healthy adult human head with intact forehead, cheeks, human nose, closed lips, chin, two ears, full cranium, short dark hair, two ordinary eyes with dark brown irises and black pupils. Warm human skin blends organically into a thick blue-green scaled neck, continuous pale broad belly scutes and long teal serpentine body. All head and tail visible. Preserve native proportions and open extended pose. No skull face, mask, faceplate, exposed teeth, flat-cut neck, collar, extra head, arms, legs, horns, wings, coils, self-contact, branches, props or pedestal. Fine organic scales and natural human facial detail.",
+  "images": [
+    "concept/leishen/production-20261114-native-whole-v2/view_34.png",
+    "concept/leishen/production-20261114-native-whole-v2/view_side.png",
+    "concept/leishen/production-20261114-native-whole-v2/view_front.png",
+    "concept/leishen/production-20261114-native-whole-v2/view_back.png"
+  ],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000, "addons": "HighPack" }
+}

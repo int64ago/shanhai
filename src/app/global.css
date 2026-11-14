@@ -800,7 +800,7 @@ button {
 
 /* 长篇考据在窄屏改为可滚动横排，给模型留出空间并保留原文与设计分栏。 */
 @media (max-width: 1000px) {
-  .card:is([data-beast="yinglong"], [data-beast="jimeng"], [data-beast="zhulong"]) {
+  .card:is([data-beast="yinglong"], [data-beast="jimeng"], [data-beast="zhulong"], [data-beast="leishen"]) {
     writing-mode: horizontal-tb;
     width: min(280px, calc(100vw - 88px));
     max-height: 32vh;
@@ -809,17 +809,17 @@ button {
     scrollbar-width: thin;
   }
 
-  .card:is([data-beast="yinglong"], [data-beast="jimeng"], [data-beast="zhulong"]) .card-name { font-size: 24px; }
-  .card:is([data-beast="yinglong"], [data-beast="jimeng"], [data-beast="zhulong"]) .story-btn { padding: 5px 7px; }
-  .card:is([data-beast="yinglong"], [data-beast="jimeng"], [data-beast="zhulong"]) .card-source { font-size: 14px; line-height: 1.8; letter-spacing: .06em; }
-  .card:is([data-beast="yinglong"], [data-beast="jimeng"], [data-beast="zhulong"]) .card-source cite { margin-top: .4em; }
-  .card:is([data-beast="yinglong"], [data-beast="jimeng"], [data-beast="zhulong"]) .card-label { margin: 0 .5em .3em 0; padding: 1px 3px; }
-  .card:is([data-beast="yinglong"], [data-beast="jimeng"], [data-beast="zhulong"]) .card-inferred { display: block; flex-shrink: 0; padding: 8px; }
+  .card:is([data-beast="yinglong"], [data-beast="jimeng"], [data-beast="zhulong"], [data-beast="leishen"]) .card-name { font-size: 24px; }
+  .card:is([data-beast="yinglong"], [data-beast="jimeng"], [data-beast="zhulong"], [data-beast="leishen"]) .story-btn { padding: 5px 7px; }
+  .card:is([data-beast="yinglong"], [data-beast="jimeng"], [data-beast="zhulong"], [data-beast="leishen"]) .card-source { font-size: 14px; line-height: 1.8; letter-spacing: .06em; }
+  .card:is([data-beast="yinglong"], [data-beast="jimeng"], [data-beast="zhulong"], [data-beast="leishen"]) .card-source cite { margin-top: .4em; }
+  .card:is([data-beast="yinglong"], [data-beast="jimeng"], [data-beast="zhulong"], [data-beast="leishen"]) .card-label { margin: 0 .5em .3em 0; padding: 1px 3px; }
+  .card:is([data-beast="yinglong"], [data-beast="jimeng"], [data-beast="zhulong"], [data-beast="leishen"]) .card-inferred { display: block; flex-shrink: 0; padding: 8px; }
 }
 
-/* 烛龙的两篇引文在小横屏同样保留为可滚动横排。 */
+/* 人首长躯的古籍卡片在小横屏同样保留为可滚动横排。 */
 @media (min-width: 1001px) and (max-width: 1100px) {
-  .card[data-beast="zhulong"] {
+  .card:is([data-beast="zhulong"], [data-beast="leishen"]) {
     writing-mode: horizontal-tb;
     width: 280px;
     max-height: 32vh;
@@ -827,12 +827,12 @@ button {
     gap: 12px;
     scrollbar-width: thin;
   }
-  .card[data-beast="zhulong"] .card-name { font-size: 24px; }
-  .card[data-beast="zhulong"] .story-btn { padding: 5px 7px; }
-  .card[data-beast="zhulong"] .card-source { font-size: 14px; line-height: 1.8; letter-spacing: .06em; }
-  .card[data-beast="zhulong"] .card-source cite { margin-top: .4em; }
-  .card[data-beast="zhulong"] .card-label { margin: 0 .5em .3em 0; padding: 1px 3px; }
-  .card[data-beast="zhulong"] .card-inferred { display: block; flex-shrink: 0; padding: 8px; }
+  .card:is([data-beast="zhulong"], [data-beast="leishen"]) .card-name { font-size: 24px; }
+  .card:is([data-beast="zhulong"], [data-beast="leishen"]) .story-btn { padding: 5px 7px; }
+  .card:is([data-beast="zhulong"], [data-beast="leishen"]) .card-source { font-size: 14px; line-height: 1.8; letter-spacing: .06em; }
+  .card:is([data-beast="zhulong"], [data-beast="leishen"]) .card-source cite { margin-top: .4em; }
+  .card:is([data-beast="zhulong"], [data-beast="leishen"]) .card-label { margin: 0 .5em .3em 0; padding: 1px 3px; }
+  .card:is([data-beast="zhulong"], [data-beast="leishen"]) .card-inferred { display: block; flex-shrink: 0; padding: 8px; }
 }
 
 @media (max-width: 640px) {
