@@ -2,6 +2,21 @@
   "_note": "第三方素材授权登记；上线前统一核对。音频素材到位后同样登记在这里。",
   "assets": [
     {
+      "path": "public/models/jiaochong/body.glb",
+      "source": "Hyper3D Rodin两阶段生成：原生双首v3 Medium 0.5积分，实际四视图、双颈、双掌双足Read后Gen-2.5-Extreme-High/HighPack 1积分；含此前不合格主体与独立头部尝试共4积分，失败候选未上线。完整50000三角面、两个人首、共同肩胸及各五指趾均为原生。正比例归一1.8米，19骨idle/walk/special，完整头手足保护、双颈独立轻转、圆周支撑足位置和朝向逆向烘焙。Meshopt medium/WebP2048，simplify/flatten/join/weld/resample/palette/instance均false。任务UUID、不可变源SHA256、绑定校准、主场景验收与重生成解说见pipeline/provenance/jiaochong.json。",
+      "sourceComponents": [
+        {"path":"raw/jiaochong-production-20261114-two-human-heads-v3-high/base_high_pbr.glb","job":"jiaochong-production-20261114-two-human-heads-v3-high","tier":"Gen-2.5-Extreme-High","uuid":"bf50e54c-1c0c-4f6b-9163-e6c650ba98e8","sha256":"44e1537945dd66315cd2ec6dc65932942a04e792043da8b468f814b212e4e1d0"}
+      ],
+      "author": "Hyper3D Rodin AI生成；项目离线骨架动作与工笔水墨渲染",
+      "license": "沿用项目既有Hyper3D Rodin输出条款"
+    },
+    {
+      "path": "public/audio/narration/jiaochong.mp3",
+      "source": "2026-11-14按最终原生模型的后梳深发、暖赭肤色与赭褐短裤更新src/app/beasts.ts艺术补足解说，以pipeline/tts/narrate.ts、CosyVoice v2/longsanshu重新生成MP3 22050Hz，替换2026-11-08旧解说；古籍原文未改。文本、音频哈希与旧版保留说明见pipeline/provenance/jiaochong.json。",
+      "author": "项目原创考据解说词；百炼龙三叔合成",
+      "license": "沿用项目既有百炼CosyVoice合成输出条款"
+    },
+    {
       "path": "public/models/xingxing/body.glb",
       "source": "Hyper3D Rodin两阶段制作：早期Medium不合格保留，原生张指v2 Medium 0.5积分，Read四视图与指趾特写后Gen-2.5-Extreme-High/HighPack 1积分；含早期Medium总计2积分，未加extreme-high贴图。原始High完整50000三角面，白耳、无尾、各五指趾均为原生；正比例归一到1.35米，右整足约0.355毫米接地修正，17骨idle/walk/special，圆周支撑逆向烘焙与五次多项式摆腿衔接。UV局部灰肤色校正保留白耳、眉颊颏白纹、眼鼻与明度细节；仅为同次校色填充未映射贴图边缘。Meshopt medium/WebP2048，resample/simplify/flatten/join/weld均false。原始SHA256、任务UUID、贴图修改与主场景验收见pipeline/provenance/xingxing.json。",
       "sourceComponents": [

@@ -56,6 +56,7 @@ import { Zhubieyu } from '../beasts/zhubieyu/Zhubieyu'
 import { Changyou } from '../beasts/changyou/Changyou'
 import { Zhuyan } from '../beasts/zhuyan/Zhuyan'
 import { Xingxing } from '../beasts/xingxing/Xingxing'
+import { Jiaochong } from '../beasts/jiaochong/Jiaochong'
 import { Bashe } from '../beasts/bashe/Bashe'
 import { FeiyiSnake } from '../beasts/feiyi_snake/FeiyiSnake'
 import { CameraRig } from './CameraRig'
@@ -169,6 +170,8 @@ export function Stage() {
           <Bashe />
         ) : selected === 'xingxing' ? (
           <Xingxing />
+        ) : selected === 'jiaochong' ? (
+          <Jiaochong />
         ) : selected === 'zhuyan' ? (
           <Zhuyan />
         ) : selected === 'changyou' ? (

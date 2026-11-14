@@ -68,5 +68,32 @@
     "No readiness from generation/download or numerical counts",
     "Individual commit,exact-SHA CI/deploy success and production verification before next release"
   ],
+  "reconfirmation20261114": {
+    "directHumanSelection": "确认执行，沿用原授权",
+    "source": "Actual AskUserQuestion response after current Lu and Jimeng automatic approval denials",
+    "explicitNextCalls": [
+      {"job": "lu_fish-production-20261108-native-body-medium", "expectedCredits": 0.5},
+      {"job": "jimeng-production-20261114-native-human-v2-medium", "expectedCredits": 0.5}
+    ],
+    "scope": "Execute both named calls and continue necessary subsequent generation, quality retries and individual main/Actions/production releases for original17 under original per-beast12/aggregate204 new-credit caps",
+    "priorNewCreditsAtConfirmation": 10.5,
+    "baselineReset": false,
+    "note": "Fresh actual human response resolves the later Lu and Jimeng denials. No new204-credit grant and no permission/provider configuration change."
+  },
+  "reconfirmation20261114Second": {
+    "directHumanSelection": "确认执行并继续原17只",
+    "source": "Actual AskUserQuestion response after Jimeng v4, Jiaochong v3 and Xixiyu v3 automatic approval denials",
+    "explicitNextCalls": [
+      {"job":"jimeng-production-20261114-four-fingers-thumb-v4-medium","expectedCredits":0.5},
+      {"job":"jiaochong-production-20261114-two-human-heads-v3-medium","expectedCredits":0.5},
+      {"job":"xixiyu-production-20261114-slender-body-v3-medium","expectedCredits":0.5},
+      {"job":"lu_fish-production-20261114-rounded-rump-v3-medium","expectedCredits":0.5},
+      {"job":"lu_fish-production-20261114-rounded-tail-high","expectedCredits":1}
+    ],
+    "scope": "Execute these five prepared calls and continue original17 necessary paid generation, quality retries and individual main/Actions/production releases under original caps and visual gates",
+    "priorNewCreditsAtConfirmation":18.5,
+    "baselineReset":false,
+    "note":"Fresh actual human answer resolves the three new denials. No added credit allowance and no permission/provider configuration change. Offline-only was not selected."
+  },
   "excluded": "No new scope for unrelated beasts or dependency/provider/permission configuration changes"
 }

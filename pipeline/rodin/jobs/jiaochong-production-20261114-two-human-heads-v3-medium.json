@@ -1,0 +1,8 @@
+{
+  "id": "jiaochong-production-20261114-two-human-heads-v3-medium",
+  "beast": "jiaochong",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE complete TWO-HEADED HUMAN deity. Exactly TWO separate normal adult human HEADS side by side, each with complete face, hair, eyes, nose, lips, ears and rounded skull. Two short thick natural necks merge smoothly into ONE common broad shoulder girdle and ONE human torso, one chest, one abdomen, one pelvis. Exactly TWO arms and TWO legs total. Balanced upright stance, bare feet flat, five toes per foot. Relaxed open A pose, arms away from torso, palms forward; each hand has FOUR long fingers plus ONE opposed thumb, five digits total, fingers separated by visible gaps. Natural modest human muscles and smooth warm ochre human skin. Plain short brown hip wrap, tied dark hair on each head. Both heads and all hands and feet fully visible. Broad seamless organic neck bases, no thin poles, collars or seams. No blank mannequin heads, third head, central head, extra torso, extra arms, shoulder armor, scales, wings, tail, props or scenery.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

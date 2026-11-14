@@ -18,19 +18,23 @@ export function CameraRig() {
     // The long, low snake needs room above the selector and beside the text card.
     const bashe = selected === 'bashe'
     const xingxingTablet = selected === 'xingxing' && width > 640 && aspect <= 1.3
-    const fov = bashe ? 40 : xingxingTablet && width < 760 ? 36 : BASE_FOV
+    const jiaochong = selected === 'jiaochong'
+    const jiaochongTablet = jiaochong && width > 640 && aspect <= 1.3
+    const fov = bashe ? 40 : jiaochongTablet ? 50 : jiaochong ? 42 : xingxingTablet && width < 760 ? 36 : BASE_FOV
     const minAspect = 1.2
     if (aspect >= minAspect) {
       camera.fov = fov
     } else {
       const halfH = Math.tan((fov * Math.PI) / 360) * (minAspect / aspect)
-      camera.fov = Math.min(bashe ? 75 : 70, (Math.atan(halfH) * 360) / Math.PI)
+      camera.fov = Math.min(bashe || jiaochong ? 75 : 70, (Math.atan(halfH) * 360) / Math.PI)
     }
     const snakeOffset = width >= 600 ? (aspect > 1.3 ? -9 : -3.5) : 0
     // The full source/design card remains visible above 640px; keep Xingxing
     // beside it on portrait tablets as well as on wide desktop screens.
     const xingxingOffset = xingxingTablet ? -5.5 : aspect > 1.3 ? -6 : 0
-    camera.filmOffset = bashe ? snakeOffset : xingxingOffset
+    // Fit both heads and outstretched hands beside the portrait source card.
+    const jiaochongOffset = jiaochongTablet ? (width < 760 ? -8 : -6.5) : aspect > 1.3 ? -6 : 0
+    camera.filmOffset = bashe ? snakeOffset : jiaochong ? jiaochongOffset : xingxingOffset
     camera.updateProjectionMatrix()
   }, [camera, aspect, width, selected])
 

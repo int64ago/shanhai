@@ -3,19 +3,23 @@
   "updatedAt": "2026-11-14",
   "authorization": "pipeline/rodin/remaining-17-authorization-20261113.json",
   "ledgerBaselineLines": 143,
-  "newSubmittedTransactions": 17,
-  "newCreditsConsumed": 10.5,
+  "newSubmittedTransactions": 38,
+  "newCreditsConsumed": 23.0,
   "newCreditsPerBeast": {
-    "xingxing": 1.5,
-    "kui": 0.5,
-    "jiaochong": 2,
+    "jiaochong": 4.0,
     "kuafu": 3.5,
     "leishen": 0.5,
     "zhulong": 0.5,
-    "xixiyu": 0.5,
+    "xixiyu": 1.5,
     "xiangliu": 0.5,
     "qiangliang": 0.5,
-    "shuhu": 0.5
+    "shuhu": 0.5,
+    "kui": 1.0,
+    "xingxing": 1.5,
+    "lu_fish": 4.5,
+    "jimeng": 1.5,
+    "yinglong": 2.0,
+    "lingyu": 1.0
   },
   "cachedRecoveriesWithoutNewCharges": [
     {
@@ -164,21 +168,22 @@
     "kuafuV1OfflineHands": "Rejected after one candidate and one correction. Worker found foot geometry accidentally removed by an unbounded hand-deletion predicate, plus palm UV seams and wrist collars. Neither derivative is reusable or accepted. Native v2 remains immutable and independent."
   },
   "latestAutomaticApprovalBlock": {
-    "job": "jimeng-production-20261114-native-human-v2-medium",
+    "job": "jimeng-production-20261114-open-palms-v5-medium",
+    "expectedCost": 0.5,
     "submitted": false,
     "consumed": 0,
-    "expectedCost": 0.5,
-    "reason": "Corrected986-character prompt request denied by automatic Real-World Transactions approval; requires explicit paid Jimeng coverage despite existing original17 authorization/reconfirmation. No further retry or alternate execution."
+    "reason": "Automatic Real-World Transactions approval requires explicit human confirmation; prior batch approval recognized only as assistant summary"
   },
   "runtimeAssetsChanged": true,
-  "runtimeAssetStatus": "Xingxing v6 accepted, committed and pushed main; exact-SHA CI/deploy successful; production files/UI/narration/responsive verification passed and all5 images parent-reviewed.",
+  "runtimeAssetStatus": "Xingxing remains latest verified production release; Jiaochong locally accepted and marked ready pending individual main push/CI/deploy/production verification.",
   "newBeastsMarkedReady": [
-    "xingxing"
+    "xingxing",
+    "jiaochong"
   ],
-  "readyCount": "46/62",
+  "readyCount": "47/62",
   "latestVerifiedRelease": "df2e439e19ccbb7ea2794f2dda0b2166676bc63e",
   "goalComplete": false,
-  "limits": "Generation, downloads, topology and numerical checks do not establish final acceptance. Xingxing alone is newly released and production-verified. Other accepted High parts are incomplete, rejected offline derivatives stay rejected, and 16 beasts plus previously rejected remakes remain unfinished. Raw evidence paths are local ignored diagnostic material.",
+  "limits": "Xingxing remains latest verified production release. Jiaochong is locally accepted and ready pending individual main release verification; 15 other beasts plus rejected remakes remain unfinished. Raw evidence paths are local ignored diagnostic material.",
   "productionVerification": {
     "beast": "xingxing",
     "sha": "df2e439e19ccbb7ea2794f2dda0b2166676bc63e",
@@ -191,22 +196,7 @@
     "localChecks": "pnpm typecheck && pnpm validate && pnpm build; git diff --check; git lfs status; all passed",
     "retainedDistEntry": "assets/index-DYbO9m0m.js"
   },
-  "latestAutomaticApprovalBlockStatus": "Historical three entries resolved by actual human reconfirmation; current lu_fish and jimeng blocks remain unresolved.",
-  "currentAutomaticApprovalBlocks": [
-    {
-      "job": "lu_fish-production-20261108-native-body-medium",
-      "submitted": false,
-      "consumed": 0,
-      "reason": "Unresolved automatic approval denial recorded before Xingxing release"
-    },
-    {
-      "job": "jimeng-production-20261114-native-human-v2-medium",
-      "submitted": false,
-      "consumed": 0,
-      "expectedCost": 0.5,
-      "reason": "Corrected986-character prompt request denied by automatic Real-World Transactions approval; requires explicit paid Jimeng coverage despite existing original17 authorization/reconfirmation. No further retry or alternate execution."
-    }
-  ],
+  "latestAutomaticApprovalBlockStatus": "New three denials after the resolved v4/v3 sequence; these calls were not submitted. Kui v3 completed normally and was rejected visually. No bypass or further paid retry.",
   "offlineReviews20261114": [
     {
       "beast": "xixiyu",
@@ -231,5 +221,487 @@
         "close_head_side.png"
       ]
     }
-  ]
+  ],
+  "resolvedAutomaticApprovalBlocks20261114": {
+    "actualHumanSelection": "确认执行，沿用原授权",
+    "blocks": [
+      {
+        "job": "lu_fish-production-20261108-native-body-medium",
+        "submitted": false,
+        "consumed": 0,
+        "reason": "Unresolved automatic approval denial recorded before Xingxing release"
+      },
+      {
+        "job": "jimeng-production-20261114-native-human-v2-medium",
+        "submitted": false,
+        "consumed": 0,
+        "expectedCost": 0.5,
+        "reason": "Corrected986-character prompt request denied by automatic Real-World Transactions approval; requires explicit paid Jimeng coverage despite existing original17 authorization/reconfirmation. No further retry or alternate execution."
+      }
+    ],
+    "resolution": "Fresh actual direct human confirmation explicitly covers both named calls plus future necessary original17 production under unchanged baseline/caps. Both named calls completed normally at0.5each."
+  },
+  "postReconfirmation20261114": {
+    "authorization": "pipeline/rodin/remaining-17-authorization-20261113.json",
+    "newSubmissions": [
+      {
+        "time": "2026-11-14T02:04:44.243Z",
+        "beast": "lu_fish",
+        "job": "lu_fish-production-20261108-native-body-medium",
+        "hash": "73b97e365e415ef4",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "ce875f4f-223e-4172-aa0f-ddc639a0dfb4",
+        "consumed": 0.5
+      },
+      {
+        "time": "2026-11-14T02:05:01.846Z",
+        "beast": "jimeng",
+        "job": "jimeng-production-20261114-native-human-v2-medium",
+        "hash": "eb51c5c9d76cd3a5",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "40e973dc-84fa-4a38-8269-e677ded0fad4",
+        "consumed": 0.5
+      },
+      {
+        "time": "2026-11-14T02:07:49.064Z",
+        "beast": "yinglong",
+        "job": "yinglong-production-20261114-smooth-body-v2-medium",
+        "hash": "711284382cfa28cb",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "f4c2e5b1-1767-4f4c-90c1-e8668d87e8c2",
+        "consumed": 0.5
+      },
+      {
+        "time": "2026-11-14T02:08:03.953Z",
+        "beast": "xixiyu",
+        "job": "xixiyu-production-20261114-feather-tail-v2-medium",
+        "hash": "94ce1cd528902a75",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "920bf89b-ff44-4e43-adcb-1560b891fc5c",
+        "consumed": 0.5
+      },
+      {
+        "time": "2026-11-14T02:10:10.304Z",
+        "beast": "jiaochong",
+        "job": "jiaochong-production-20261114-broad-neck-roots-v2-medium",
+        "hash": "331d41df28963dbe",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "6e9ac1a3-fe56-43d2-84fb-ec63d61d87ba",
+        "consumed": 0.5
+      },
+      {
+        "time": "2026-11-14T02:10:33.923Z",
+        "beast": "lingyu",
+        "job": "lingyu-production-20261114-horizontal-fish-v2-medium",
+        "hash": "ec6fe0251a786bc3",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "4cbd95a2-a482-457c-837c-f9cc12e5f1e9",
+        "consumed": 0.5
+      },
+      {
+        "time": "2026-11-14T02:17:03.132Z",
+        "beast": "jimeng",
+        "job": "jimeng-production-20261114-splayed-hands-v3-medium",
+        "hash": "4bad833a54cb57cf",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "9e041d75-8959-4716-9b23-d8c84fbe7ade",
+        "consumed": 0.5
+      },
+      {
+        "time": "2026-11-14T02:17:22.080Z",
+        "beast": "lu_fish",
+        "job": "lu_fish-production-20261114-tailless-bovine-v2-medium",
+        "hash": "b584003a6bc6c7cf",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "6bfd50ec-69c3-4528-85ea-c428694689bd",
+        "consumed": 0.5
+      },
+      {
+        "time": "2026-11-14T02:17:29.922Z",
+        "beast": "lu_fish",
+        "job": "lu_fish-production-20261114-wing-mother-medium",
+        "hash": "7a90e30e1a5f44e5",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "119ca55e-258d-4054-83c3-bbc0a66a136b",
+        "consumed": 0.5
+      },
+      {
+        "time": "2026-11-14T02:18:14.747Z",
+        "beast": "lu_fish",
+        "job": "lu_fish-production-20261114-snake-tail-mother-medium",
+        "hash": "9aa9663827d19f10",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "6e18ef09-16f5-4e54-81d9-d29bceae6bc4",
+        "consumed": 0.5
+      },
+      {
+        "time": "2026-11-14T02:28:29.630Z",
+        "beast": "yinglong",
+        "job": "yinglong-production-20261114-smooth-body-v2-high",
+        "hash": "acae54c6f07f27d6",
+        "tier": "Gen-2.5-Extreme-High",
+        "uuid": "b390fde4-38b0-4262-a501-dbaa8b2ce5a2",
+        "consumed": 1
+      },
+      {
+        "time": "2026-11-14T02:28:48.281Z",
+        "beast": "yinglong",
+        "job": "yinglong-production-20261108-wing-medium",
+        "hash": "198f095d02e982af",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "b4894fa0-8caa-4246-b992-6745e07ce6bc",
+        "consumed": 0.5
+      },
+      {
+        "time": "2026-11-14T02:35:30.672Z",
+        "beast": "lu_fish",
+        "job": "lu_fish-production-20261114-wing-mother-high",
+        "hash": "47b090aa33b14f36",
+        "tier": "Gen-2.5-Extreme-High",
+        "uuid": "8b2d2e1b-0b7c-4c5c-856f-386d9fbe0c0c",
+        "consumed": 1
+      },
+      {
+        "time": "2026-11-14T03:50:18.524Z",
+        "beast": "lingyu",
+        "job": "lingyu-production-20261114-anterior-face-v3-medium",
+        "hash": "3eebe4886a90509c",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "6d5d079e-608e-4623-8750-d7c875cfbbf4",
+        "consumed": 0.5
+      }
+    ],
+    "status": "Earlier post-confirmation jobs completed; subsequent denial sequence resolved by actual second reconfirmation; see postReconfirmation20261114Second."
+  },
+  "parentVisualDecisions20261114": [
+    {
+      "job": "lu_fish-production-20261108-native-body-medium",
+      "sourceSha256": "42c4dcc35e3d4035a2cd7e09f01a3f8eddb46d17fb0897bee9ea944b61c60918",
+      "decision": "rejected",
+      "reason": "Multiple native tails (two lateral snake-like tails plus central tail); feet have three claw-like toes instead of selected cloven hoof; wings lie at upper shoulders rather than low flanks.",
+      "parentReviewed": "Actual four full views (separate files or four-view contact sheet); decisive anatomical closeups where applicable",
+      "evidence": "raw/_build/native-mediums-review-20261114/lu_fish-production-20261108-native-body-medium"
+    },
+    {
+      "job": "jimeng-production-20261114-native-human-v2-medium",
+      "sourceSha256": "d139940c166ade5bb95ab8d5e88db83b3c124e900c934556dbf6022c3bfbb4e8",
+      "decision": "rejected",
+      "reason": "Human body/chest improved, but native hands retain missing or merged/crowded digit silhouettes in both palm/back closeups; no qualified five-digit reference.",
+      "parentReviewed": "Actual four full views (separate files or four-view contact sheet); decisive anatomical closeups where applicable",
+      "evidence": "raw/_build/native-mediums-review-20261114/jimeng-production-20261114-native-human-v2-medium"
+    },
+    {
+      "job": "yinglong-production-20261114-smooth-body-v2-medium",
+      "sourceSha256": "b95f30c013144e6770140ee12b09df4964a115acee99a95c631f88f560f637f3",
+      "decision": "accepted-body-reference-for-paired-wing-assembly-only",
+      "reason": "One continuous dragon head, rounded long scaled trunk and one tapered tail. Two small lateral scaled shoulder-root cores may be retained ONLY as internal volume under the planned two feather-wing roots; no additional exposed limbs may remain after assembly. Low flat crown/brow scutes retained as scales, not separate horns. High must be reviewed again; no complete-beast/runtime acceptance.",
+      "parentReviewed": "Actual four full views (separate files or four-view contact sheet); decisive anatomical closeups where applicable",
+      "evidence": "raw/_build/native-mediums-review-20261114/yinglong-production-20261114-smooth-body-v2-medium"
+    },
+    {
+      "job": "xixiyu-production-20261114-feather-tail-v2-medium",
+      "sourceSha256": "6351ae660b09d4fb270620178cf85cd89664747fb26b9550d8f007669779af54",
+      "decision": "needs-bounded-correction",
+      "reason": "Good magpie head and native long feather tail, but two folded native wings and upright silhouette remain. Worker correcting to smooth wingless horizontal reference for10 later wings; no High yet.",
+      "parentReviewed": "Actual four full views (separate files or four-view contact sheet); decisive anatomical closeups where applicable",
+      "evidence": "raw/_build/native-mediums-review-20261114/xixiyu-production-20261114-feather-tail-v2-medium"
+    },
+    {
+      "job": "jiaochong-production-20261114-broad-neck-roots-v2-medium",
+      "sourceSha256": "fc1a80b1b54c1e016ad4ca9642c3c804350e816b8aaf8973727d33f92917a7e6",
+      "decision": "needs-bounded-dual-head-reference-assembly",
+      "reason": "Shared torso and native hands/feet are useful. Two oversized mannequin blank heads instead of short neck roots. Worker preparing two actual human heads with broad organic neck joins; no High yet.",
+      "parentReviewed": "Actual four full views (separate files or four-view contact sheet); decisive anatomical closeups where applicable",
+      "evidence": "raw/_build/native-mediums-review-20261114/jiaochong-production-20261114-broad-neck-roots-v2-medium"
+    },
+    {
+      "job": "lingyu-production-20261114-horizontal-fish-v2-medium",
+      "sourceSha256": "7be000c3cc5fd615bc06634849b4e9049b29f7f5eb36d8798d15b85f0e3c96ee",
+      "decision": "rejected",
+      "reason": "Horizontal fish torso present but retains separate native fish head plus an additional human head atop the back, rather than one human face at anterior fish head. No qualified complete reference.",
+      "parentReviewed": "Actual four full views (separate files or four-view contact sheet); decisive anatomical closeups where applicable",
+      "evidence": "raw/_build/native-mediums-review-20261114/lingyu-production-20261114-horizontal-fish-v2-medium"
+    },
+    {
+      "job": "lu_fish-production-20261114-wing-mother-medium",
+      "sourceSha256": "f343125b61d93d54f1c4f3ccfdea0186187593e9139d720e840e59778df36492",
+      "decision": "accepted-single-wing-High-reference-only",
+      "reason": "One elongated native feather wing with layered vanes, rounded volumetric shoulder root and pale ochre palette; parent Read all4 full views and2 actual root closeups. Final low-flank join and wing motion still require assembly/application review.",
+      "parentReviewed": [
+        "contact_four_views.png",
+        "root_or_tip_high_z_plus_y_from_xplus.png",
+        "root_or_tip_high_z_endface.png"
+      ]
+    },
+    {
+      "job": "lu_fish-production-20261114-snake-tail-mother-medium",
+      "decision": "needs-root-correction-before-High",
+      "reason": "One curved scaly appendage but BOTH ends are pointed with dark conical color; planned proximal root must be rounded/broad for organic sacral join. Parent Read4views and2endpointcloseups; no High yet."
+    },
+    {
+      "job": "yinglong-high-body-20261114",
+      "decision": "accepted-source-part-only",
+      "reason": "Single native dragon head, continuous long scaled body and one tapered tail. Shoulder cores must become concealed inside two organic wing roots; no rig/complete-beast acceptance.",
+      "parentReviewed": "Actual exported/reimported full views and decisive closeups personally opened with Read",
+      "evidence": "raw/_build/yinglong-high-review-20261114"
+    },
+    {
+      "job": "yinglong-wing-medium-20261114",
+      "decision": "rejected",
+      "reason": "Conspicuous black conical proximal spike instead of rounded shoulder root.",
+      "parentReviewed": "Actual exported/reimported full views and decisive closeups personally opened with Read",
+      "evidence": "raw/_build/yinglong-wing-medium-review-20261114"
+    },
+    {
+      "job": "lu-wing-high-20261114",
+      "decision": "accepted-source-part-only",
+      "reason": "One layered ivory/ochre feather wing with closed rounded volumetric root. Low-flank joins and motion not accepted yet.",
+      "parentReviewed": "Actual exported/reimported full views and decisive closeups personally opened with Read",
+      "evidence": "raw/_build/lu-wing-high-review-20261114"
+    },
+    {
+      "job": "xixiyu-v2-corrected-reference-20261114",
+      "decision": "rejected",
+      "reason": "Plump spherical belly, sideways head, flank blemish and tail-rump notch remain in actual exported model.",
+      "parentReviewed": "Actual exported/reimported full views and decisive closeups personally opened with Read",
+      "evidence": "raw/_build/xixiyu-v2-wingless-reference-20261114/correction"
+    },
+    {
+      "job": "jimeng-v3-corrected-reference-20261114",
+      "decision": "rejected",
+      "reason": "Extra finger removed but reconstructed palm edge is jagged with dark triangular underside slivers.",
+      "parentReviewed": "Actual exported/reimported full views and decisive closeups personally opened with Read",
+      "evidence": "raw/_build/jimeng-v3-five-digit-reference-20261114/attempt-2/reimport-review"
+    },
+    {
+      "job": "jiaochong-dual-head-reference-20261114",
+      "decision": "rejected",
+      "reason": "Neck tone bands and conspicuous triangular shading facets on both palms; protected split normals changed.",
+      "parentReviewed": "Actual exported/reimported full views and decisive closeups personally opened with Read",
+      "evidence": "raw/_build/jiaochong-dual-head-reference-20261114/correction"
+    },
+    {
+      "job": "lu-body-tailless-reference-20261114",
+      "decision": "rejected",
+      "reason": "Small faceted grey rump patch and pinched vertical transition; no qualified body-only High reference.",
+      "parentReviewed": "Actual exported/reimported full views and decisive closeups personally opened with Read",
+      "evidence": "raw/_build/lu-body-tailless-reference-20261114/after"
+    },
+    {
+      "job": "yinglong-native-static-20261114",
+      "decision": "rejected-for-rigging",
+      "reason": "Visible native shoulder-core contours and wing-cap attachment boundaries, unequal front/back feather exposure despite both dorsal faces up.",
+      "parentReviewed": "Actual exported/reimported full views and decisive closeups personally opened with Read",
+      "evidence": "raw/_build/yinglong-native-static-20261114/correction"
+    },
+    {
+      "job": "lu-tail-rounded-root-reference-20261114",
+      "decision": "accepted-isolated-High-reference-only",
+      "reason": "One curved scaled shaft, broad closed rounded proximal dome and one pointed distal tip. Root flesh/scale shading boundary remains: High must regenerate continuous root shading; no assembled/runtime acceptance.",
+      "parentReviewed": "Actual exported/reimported full views and decisive closeups personally opened with Read",
+      "evidence": "raw/_build/lu-tail-corrected-four-review-20261114"
+    },
+    {
+      "job": "lingyu-anterior-v3-20261114",
+      "decision": "rejected",
+      "reason": "Face now at fish anterior, but posterior appendages are hand-shaped rather than complete five-toed human feet; fins overlap forelimb roots and face has an abrupt round border.",
+      "parentReviewed": "Actual exported/reimported full views and decisive closeups personally opened with Read",
+      "evidence": "raw/_build/lingyu-anterior-v3-review-20261114"
+    },
+    {
+      "job": "jiaochong-production-20261114-two-human-heads-v3-medium",
+      "sourceSha256": "e93c84e68d4966ffdfa850bc11b1e1c71e21cf1a9fa9f916c66a6987ca6a1c24",
+      "decision": "accepted-whole-body-High-reference-only",
+      "reason": "Native two human heads on broad continuous short necks and one common torso; two arms, two legs, four long fingers plus opposed thumb per hand and five native toes per foot. No donor head/neck surgery or damaged palm normals. Actual four-view contact, head/neck and both palm/feet closeups personally Read. High must be inspected again; no readiness.",
+      "conceptDirectory": "concept/jiaochong/production-20261114-native-two-heads-v3"
+    },
+    {
+      "job": "jiaochong-production-20261114-two-human-heads-v3-high",
+      "sourceSha256": "44e1537945dd66315cd2ec6dc65932942a04e792043da8b468f814b212e4e1d0",
+      "decision": "accepted-native-source-for-rigging-only",
+      "reason": "Parent personally Read actual four views, front/back dual heads and broad organic necks, both five-digit palms and five-toed feet. One shared torso and two arms/legs retained. Stylized facial and muscle planes acceptable for source rigging; animated deformation and actual ink-shaded application appearance still require acceptance. No model readiness or release implied.",
+      "evidence": "raw/_build/jiaochong-high-v3-review-20261114",
+      "rigWorker": "a66e61c850cf124f7"
+    },
+    {
+      "job": "yinglong-native-symmetric-root-trial-20261114",
+      "sourceSha256": "f28eaf2980041b0d567dec630b302a755541b5239f1ccf3d524ef210e0d3daf7",
+      "decision": "rejected-for-rigging",
+      "reason": "Baked reflection correctly solves bilateral feather orientation, but actual parent-reviewed four views and root sheet still show exposed shoulder ledges and hard wing-cap/body boundaries. No rig or whole-body High reference acceptance.",
+      "evidence": "raw/_build/yinglong-native-symmetric-root-trial-20261114"
+    },
+    {
+      "job": "jimeng-production-20261114-four-fingers-thumb-v4-medium",
+      "decision": "rejected",
+      "reason": "Actual hand-side views show merged or missing long fingers; no High reference.",
+      "evidence": "raw/_build/jimeng-v4-review-20261114",
+      "sourceSha256": "b79ae8d38fa63fb35bf5fad970a45e7ccfab1fbe3ba438161a756bf06c82e9fe"
+    },
+    {
+      "job": "xixiyu-production-20261114-slender-body-v3-medium",
+      "decision": "rejected",
+      "reason": "Slender torso achieved but native fish fins and forked fish membrane tail returned; no High reference.",
+      "evidence": "raw/_build/xixiyu-v3-review-20261114",
+      "sourceSha256": "29ec0293532da5e0dd43e885fe9d4abdfca052b3adcf141a8551251174f1c482"
+    },
+    {
+      "job": "lu_fish-production-20261114-rounded-rump-v3-medium",
+      "decision": "rejected",
+      "reason": "Horns, ordinary native tail, poor split-hoof definition and one lifted foot; no High reference.",
+      "evidence": "raw/_build/lu-body-v3-review-20261114",
+      "sourceSha256": "4b06463c45e2de2494e80a2c668769037a3b50d6b15f765630f96826d69e080f"
+    },
+    {
+      "job": "kui-production-20261114-single-central-leg-v3-medium",
+      "decision": "rejected",
+      "reason": "Actual four views and leg/hoof closeups show four legs and two horns; violates explicit one-foot hornless source.",
+      "evidence": "raw/_build/kui-native-v3-review-20261114",
+      "sourceSha256": "4f0969350fd21a9c2404bdc761fc8fb4d596d77695a45588717707906eea1090"
+    },
+    {
+      "job": "xixiyu-slender-aligned-reference-20261114",
+      "decision": "rejected",
+      "reason": "Actual 34 image shows ribbon-like lateral S torso and angular stretched neck transition. Single bounded trial retained; no High reference.",
+      "evidence": "raw/_build/xixiyu-slender-aligned-reference-20261114"
+    },
+    {
+      "job": "lu-complete-static-reference-20261114",
+      "decision": "rejected",
+      "reason": "Rump patch covered, but wing cap edges and abrupt fur-to-scale tail intersection remain conspicuous in parent-reviewed actual exported 34 and join closeups. No whole-beast High reference or rig acceptance.",
+      "evidence": "raw/_build/lu-complete-static-reference-20261114"
+    }
+  ],
+  "ledgerRechecked": {
+    "baselineSha256": "fe456f658ff1c014b53a4b9c9cecd1dd244f684c18dc117fe50ca1bf7d5af792",
+    "baselineLines": 143,
+    "ledgerSha256": "f8b56cbdb2ed2b5d9016a422378403337814d398f355be04cddf4cdead5bcbd3",
+    "newTransactions": 38,
+    "newCredits": 23.0
+  },
+  "resolvedAutomaticApprovalBlocks20261114Second": {
+    "actualHumanSelection": "确认执行并继续原17只",
+    "blocks": [
+      {
+        "job": "jimeng-production-20261114-four-fingers-thumb-v4-medium",
+        "expectedCost": 0.5,
+        "submitted": false,
+        "consumed": 0,
+        "reason": "Real-World Transactions: direct confirmation required; prior approval recognized only as assistant summary"
+      },
+      {
+        "job": "jiaochong-production-20261114-two-human-heads-v3-medium",
+        "expectedCost": 0.5,
+        "submitted": false,
+        "consumed": 0,
+        "reason": "Real-World Transactions: direct confirmation required; prior approval recognized only as assistant summary"
+      },
+      {
+        "job": "xixiyu-production-20261114-slender-body-v3-medium",
+        "expectedCost": 0.5,
+        "submitted": false,
+        "consumed": 0,
+        "reason": "Real-World Transactions: direct confirmation required; prior approval recognized only as assistant summary"
+      }
+    ],
+    "resolution": "RESOLVED by actual human selection 确认执行并继续原17只 (authorization.reconfirmation20261114Second); same three Medium calls subsequently completed normally. Historical denials were zero-charge nontransactions. Original baseline and caps unchanged."
+  },
+  "currentAutomaticApprovalBlocks": [
+    {
+      "job": "jimeng-production-20261114-open-palms-v5-medium",
+      "expectedCost": 0.5,
+      "submitted": false,
+      "consumed": 0,
+      "reason": "Automatic Real-World Transactions approval requires explicit human confirmation; prior batch approval recognized only as assistant summary"
+    },
+    {
+      "job": "yinglong-production-20261114-native-winged-serpent-v3-medium",
+      "expectedCost": 0.5,
+      "submitted": false,
+      "consumed": 0,
+      "reason": "Automatic Real-World Transactions approval requires explicit human confirmation; prior batch approval recognized only as assistant summary"
+    },
+    {
+      "job": "lingyu-production-20261114-human-feet-v4-medium",
+      "expectedCost": 0.5,
+      "submitted": false,
+      "consumed": 0,
+      "reason": "Automatic Real-World Transactions approval requires explicit human confirmation; prior batch approval recognized only as assistant summary"
+    }
+  ],
+  "postReconfirmation20261114Second": {
+    "authorization": "reconfirmation20261114Second",
+    "newSubmissions": [
+      {
+        "time": "2026-11-14T04:15:47.607Z",
+        "beast": "jimeng",
+        "job": "jimeng-production-20261114-four-fingers-thumb-v4-medium",
+        "hash": "9b27967812a0d7d6",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "99235047-3f20-4df2-bbd4-0d27ddcecea9",
+        "consumed": 0.5
+      },
+      {
+        "time": "2026-11-14T04:15:48.729Z",
+        "beast": "jiaochong",
+        "job": "jiaochong-production-20261114-two-human-heads-v3-medium",
+        "hash": "679ce59bc140bf76",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "a48944aa-3f16-485b-8d9b-2a2eed86a58a",
+        "consumed": 0.5
+      },
+      {
+        "time": "2026-11-14T04:15:49.736Z",
+        "beast": "lu_fish",
+        "job": "lu_fish-production-20261114-rounded-rump-v3-medium",
+        "hash": "789fc3016480f83e",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "7a233554-783b-4e62-a177-5ad6fafd9fbb",
+        "consumed": 0.5
+      },
+      {
+        "time": "2026-11-14T04:15:49.841Z",
+        "beast": "xixiyu",
+        "job": "xixiyu-production-20261114-slender-body-v3-medium",
+        "hash": "de2ffb9ed4bfa356",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "d3852f04-e056-4c86-b46a-181a3e1c9c6d",
+        "consumed": 0.5
+      },
+      {
+        "time": "2026-11-14T04:21:08.312Z",
+        "beast": "lu_fish",
+        "job": "lu_fish-production-20261114-rounded-tail-high",
+        "hash": "326868c53af033ee",
+        "tier": "Gen-2.5-Extreme-High",
+        "uuid": "5e8ce3c8-a510-4f81-8269-e4e3344afad7",
+        "consumed": 1
+      },
+      {
+        "time": "2026-11-14T04:21:42.980Z",
+        "beast": "jiaochong",
+        "job": "jiaochong-production-20261114-two-human-heads-v3-high",
+        "hash": "17ec6685040f1860",
+        "tier": "Gen-2.5-Extreme-High",
+        "uuid": "bf50e54c-1c0c-4f6b-9163-e6c650ba98e8",
+        "consumed": 1
+      },
+      {
+        "time": "2026-11-14T04:52:18.221Z",
+        "beast": "kui",
+        "job": "kui-production-20261114-single-central-leg-v3-medium",
+        "hash": "335b52e67d9ed274",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "6374a0d6-5767-4b18-b47b-52d58741ccb5",
+        "consumed": 0.5
+      }
+    ],
+    "status": "All five explicitly reconfirmed calls, subsequent Jiaochong High and Kui v3 completed. Jiaochong subsequently passed local runtime acceptance; deployment pending."
+  },
+  "localPendingRelease": {
+    "beast": "jiaochong",
+    "candidateSha256": "db455cf21c0797428df5d60f001e02b35f2f34eba20f7c9fbb48013e2bb7295c",
+    "status": "Parent accepted full runtime and final Stage/UI/narration/responsive evidence; commit and deployment pending"
+  },
+  "productionReadyCount": "46/62",
+  "localReadyCount": "47/62"
 }

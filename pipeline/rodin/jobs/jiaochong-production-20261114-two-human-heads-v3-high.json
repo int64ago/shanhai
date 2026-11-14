@@ -1,0 +1,14 @@
+{
+  "id": "jiaochong-production-20261114-two-human-heads-v3-high",
+  "beast": "jiaochong",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "ONE complete Jiaochong deity matching the four reviewed views: exactly TWO complete adult human heads side by side on TWO short broad necks, flowing seamlessly into ONE shared shoulder girdle, ONE chest, abdomen and pelvis. Exactly TWO arms and TWO legs. Preserve the balanced upright relaxed A pose, open forward palms and flat bare feet. EACH hand has exactly FOUR long fingers plus ONE shorter opposed thumb, five total, all separated by clear air gaps. EACH complete foot has exactly FIVE rounded human toes. Preserve both calm human faces, normal eyes, noses, lips and ears, dark swept-back hair, modest athletic muscles, warm ochre human skin and plain brown short garment. Refine natural skin, facial features, fingers and toes without changing anatomy or silhouette. Smooth organic broad neck bases, no seams, collars, poles or merged faces. No third head, extra torso, extra arms, missing or extra digits, claws, scales, wings, tail, props, pedestal or scenery. Entire figure crown to toes visible.",
+  "images": [
+    "concept/jiaochong/production-20261114-native-two-heads-v3/view_34.png",
+    "concept/jiaochong/production-20261114-native-two-heads-v3/view_side.png",
+    "concept/jiaochong/production-20261114-native-two-heads-v3/view_front.png",
+    "concept/jiaochong/production-20261114-native-two-heads-v3/view_back.png"
+  ],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000, "addons": "HighPack" }
+}

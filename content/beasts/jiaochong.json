@@ -15,7 +15,7 @@
     },
     {
       "item": "面貌、衣饰与设色（设计参考）",
-      "basis": "本段没有规定性别、年龄、面貌、发须、衣饰、肤色或纹样。成人面貌、紧凑发髻、暖赭肤色与短赭色腰衣均为设计补足。"
+      "basis": "本段没有规定性别、年龄、面貌、发须、衣饰、肤色或纹样。成人面貌、后梳深发、暖赭肤色与赭褐短裤均为设计补足。"
     },
     {
       "item": "蜂类关联（考据说明）",
@@ -23,9 +23,9 @@
     }
   ],
   "production": {
-    "status": "blocked",
-    "reason": "共用双颈根人形主体与单人首母件Medium规格已准备，完整主体、双首组装、动作与视觉验收尚未完成，不以两副半身或四足躯加首冒充完成。",
-    "modelReady": false,
-    "provenance": "pipeline/rodin/remaining-humanoid-specs.json"
+    "status": "ready",
+    "reason": "原生双首共身High保留完整五指手足；19骨静、行、神通及圆周接地动作经实际主场景、双颈手足特写与响应式构图验收。",
+    "modelReady": true,
+    "provenance": "pipeline/provenance/jiaochong.json"
   }
 }

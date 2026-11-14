@@ -1,0 +1,432 @@
+{
+  "beast": "jiaochong",
+  "date": "2026-11-14",
+  "status": "parent-reviewed-native-high-runtime",
+  "source": [
+    {
+      "book": "山海經·中山經·中次六經",
+      "text": "縞羝山之首，曰平逢之山，南望伊洛，東望穀城之山，無草木，無水，多沙石。有神焉，其狀如人而二首，名曰驕蟲，是為螫蟲，實惟蜂蜜之廬，其祠之：用一雄雞，穰而勿殺。"
+    }
+  ],
+  "inferences": [
+    {
+      "item": "人形双首与共同肩带（设计参考）",
+      "basis": "其状如人而二首是明文。一具人形身躯、共用肩胸腰盆、左右并列的双颈双首与二臂二腿，是本次造型布局；经文未规定双首位置或身体比例。"
+    },
+    {
+      "item": "面貌、衣饰与设色（设计参考）",
+      "basis": "本段没有规定性别、年龄、面貌、发须、衣饰、肤色或纹样。成人面貌、后梳深发、暖赭肤色与赭褐短裤均为设计补足。"
+    },
+    {
+      "item": "蜂类关联（考据说明）",
+      "basis": "是为螫虫、实惟蜂蜜之庐据原文，体现与螫虫、蜂类的关联。本段没有明说统领天下蜂群或操纵虫群；蜂的数量、种类与流蜜光辉等表现属于艺术想象。"
+    }
+  ],
+  "transactions": [
+    {
+      "time": "2026-11-13T14:22:51.589Z",
+      "beast": "jiaochong",
+      "job": "jiaochong-production-20261108-body-medium",
+      "hash": "be583f28d732bee9",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "67a62fec-55a1-4bb3-92aa-5d1964de13e9",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-13T14:41:09.444Z",
+      "beast": "jiaochong",
+      "job": "jiaochong-production-20261108-head-medium",
+      "hash": "91dd5619ee1661ba",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "9e7884bf-cdc2-417c-b84e-4a0bc338d027",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-13T14:56:20.476Z",
+      "beast": "jiaochong",
+      "job": "jiaochong-production-20261113-head-high",
+      "hash": "66c3726ce523233e",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "62b2e822-3d1e-43fc-9e23-5d9d0a47e18f",
+      "consumed": 1
+    },
+    {
+      "time": "2026-11-14T02:10:10.304Z",
+      "beast": "jiaochong",
+      "job": "jiaochong-production-20261114-broad-neck-roots-v2-medium",
+      "hash": "331d41df28963dbe",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "6e9ac1a3-fe56-43d2-84fb-ec63d61d87ba",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-14T04:15:48.729Z",
+      "beast": "jiaochong",
+      "job": "jiaochong-production-20261114-two-human-heads-v3-medium",
+      "hash": "679ce59bc140bf76",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "a48944aa-3f16-485b-8d9b-2a2eed86a58a",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-14T04:21:42.980Z",
+      "beast": "jiaochong",
+      "job": "jiaochong-production-20261114-two-human-heads-v3-high",
+      "hash": "17ec6685040f1860",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "bf50e54c-1c0c-4f6b-9163-e6c650ba98e8",
+      "consumed": 1
+    }
+  ],
+  "totalConsumed": 4.0,
+  "highSource": {
+    "path": "raw/jiaochong-production-20261114-two-human-heads-v3-high/base_high_pbr.glb",
+    "bytes": 26271744,
+    "sha256": "44e1537945dd66315cd2ec6dc65932942a04e792043da8b468f814b212e4e1d0",
+    "uuid": "bf50e54c-1c0c-4f6b-9163-e6c650ba98e8",
+    "originalTriangles": 50000,
+    "originalVertices": 35744,
+    "immutable": true,
+    "textureModeAddon": false
+  },
+  "highRequest": {
+    "path": "pipeline/rodin/jobs/jiaochong-production-20261114-two-human-heads-v3-high.json",
+    "bytes": 1614,
+    "sha256": "1651de7500a56c16f41cb21c88a6618cc416e30be0c363cceb579e264d2953cd",
+    "images": [
+      {
+        "path": "concept/jiaochong/production-20261114-native-two-heads-v3/view_34.png",
+        "bytes": 562440,
+        "sha256": "b95fd5785e08f9a4ef362d743e73381099167b9487f2b95464401f44d5e96e1f"
+      },
+      {
+        "path": "concept/jiaochong/production-20261114-native-two-heads-v3/view_side.png",
+        "bytes": 518706,
+        "sha256": "97fc8b78a6bf4744e6c780ce5735181974a1fa4b9ef4ae54b57bd6405aea2865"
+      },
+      {
+        "path": "concept/jiaochong/production-20261114-native-two-heads-v3/view_front.png",
+        "bytes": 586773,
+        "sha256": "8d52db5558f53b32edce3f59de6f84eb2b2f681894c7287f1257988706fda64d"
+      },
+      {
+        "path": "concept/jiaochong/production-20261114-native-two-heads-v3/view_back.png",
+        "bytes": 565740,
+        "sha256": "1aeb8588bd2222e609fe7698147e28fc527ad1a9b3180581ac0491263a9d4832"
+      }
+    ]
+  },
+  "calibration": {
+    "path": "pipeline/provenance/jiaochong-calibration.json",
+    "bytes": 15059,
+    "sha256": "1bd1c6927359b06f378c2c8819b51ddd0231511bc5067a1c3e4b4059003a0d01"
+  },
+  "runtime": {
+    "path": "public/models/jiaochong/body.glb",
+    "bytes": 826664,
+    "sha256": "db455cf21c0797428df5d60f001e02b35f2f34eba20f7c9fbb48013e2bb7295c",
+    "triangles": 50000,
+    "bones": 19,
+    "clips": [
+      "idle",
+      "walk",
+      "special"
+    ],
+    "compression": "Meshopt MEDIUM + WebP2048; simplify/flatten/join/weld/resample/palette/instance false"
+  },
+  "runtimeContract": {
+    "restHeight": 1.8,
+    "radius": 1.0,
+    "speed": 0.08,
+    "scale": 1.0,
+    "idleDuration": 4.0,
+    "walkSeconds": 2.4,
+    "specialDuration": 4.0,
+    "stanceDuty": 0.66,
+    "oppositeLegPhase": 0.5,
+    "forward": "glTF +Z / Blender -Y",
+    "worldAngle": "PI/2 - (0.08/1.0)*elapsedWalkSeconds",
+    "worldPosition": "[radius*cos(angle), 0, radius*sin(angle)]",
+    "worldYaw": "PI-angle",
+    "startPosition": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "startYaw": 1.5707963267948966,
+    "animation": "walk.timeScale=1; clip phase resets on walk restart, while accumulated circular world angle is retained across action changes; root scale=1",
+    "stance": "inverse circular position AND sole yaw; full foot protected; duty .66; right phase +.5",
+    "swing": "quintic C2 recovery; sin^4 clearance",
+    "transitions": "no-slip guarantee applies to full-weight clips; fades need separate review",
+    "sourceMetadataNote": "The exported GLB audit runtimeContract text says reset elapsed time on restart; the actual component retains accumulated world angle and resets only the clip/footstep phase. Global rotation equivariance preserves the circular stance cancellation."
+  },
+  "sourcePreservation": {
+    "uniformScale": 0.9463972958455529,
+    "decodedOrigin": [
+      0.00018990039825439453,
+      0.0007687807083129883,
+      -0.9513412714004517
+    ],
+    "decodedPositionsSha256": "9564ec94c7c64752ed353ac8e015ff400a2fa183bedd0fd13b7436f95a8e7769",
+    "normalizedPositionsSha256": "551298374f164e13cc1101678664b5612186cbbb2facc6ed425ccf90a6ec4d85",
+    "decodedNativeFingerprint": {
+      "vertices": 35744,
+      "faces": 50000,
+      "edgesSha256": "10ecbaeb86a91c5810b143b9f9b2445bfa0038a35d9d208c4af35c030bcd9a95",
+      "loopsSha256": "1e535574d2cbbc05f5dc3e3e1e514a3b4a7cbc54c1550c6dbb89440da78db065",
+      "polygonSizesSha256": "5fb35b9d69168912af61263b6af80bb5662a253edce9efb70d74c1dd41e80823",
+      "polygonMaterialsSha256": "4cbbd9be0cba685835755f827758705db5a413c5494c34262cd25946a73e7582",
+      "uvSha256": {
+        "UVMap": "21ca2d6617d703719e6b4ed242895d7c680f45a946f4fedbf1d20ebc9ef4c9a6"
+      },
+      "cornerNormalsSha256": "65fec9b4909deb71559cf09238a97f58536a142e8364c941e0c6d25d261a49f8",
+      "pbrSha256": "3e3cf35506f0882e5eb0d9ae1395027ca1c88bdad0147affff9f12a38492313b",
+      "embeddedImageSha256": {
+        "texture_diffuse": "6fb1a9dd6a62007fd387e4a224b8eeda5e856a4a243fb931da7efc6c1e4d8dac",
+        "texture_metallic-texture_roughness": "4eab5b7f800c67a7e36687197cfc6bbcb5915c4d6e1ffd16afcd3c8ed3051f40",
+        "texture_normal": "739925c1f69ddfe44eb4eade037740871c6694726b38a9d6267e9fede0ded086"
+      }
+    },
+    "nativeFingerprint": {
+      "vertices": 35744,
+      "faces": 50000,
+      "edgesSha256": "10ecbaeb86a91c5810b143b9f9b2445bfa0038a35d9d208c4af35c030bcd9a95",
+      "loopsSha256": "1e535574d2cbbc05f5dc3e3e1e514a3b4a7cbc54c1550c6dbb89440da78db065",
+      "polygonSizesSha256": "5fb35b9d69168912af61263b6af80bb5662a253edce9efb70d74c1dd41e80823",
+      "polygonMaterialsSha256": "4cbbd9be0cba685835755f827758705db5a413c5494c34262cd25946a73e7582",
+      "uvSha256": {
+        "UVMap": "21ca2d6617d703719e6b4ed242895d7c680f45a946f4fedbf1d20ebc9ef4c9a6"
+      },
+      "cornerNormalsSha256": "78992dd917078dd9e673aa26db995ed51a4a5e8872585a478bb4562b6e46dbff",
+      "pbrSha256": "3e3cf35506f0882e5eb0d9ae1395027ca1c88bdad0147affff9f12a38492313b",
+      "embeddedImageSha256": {
+        "texture_diffuse": "6fb1a9dd6a62007fd387e4a224b8eeda5e856a4a243fb931da7efc6c1e4d8dac",
+        "texture_metallic-texture_roughness": "4eab5b7f800c67a7e36687197cfc6bbcb5915c4d6e1ffd16afcd3c8ed3051f40",
+        "texture_normal": "739925c1f69ddfe44eb4eade037740871c6694726b38a9d6267e9fede0ded086"
+      }
+    },
+    "maxNormalizationNormalRoundoff": 0.00045859813690185547,
+    "geometryEdits": false,
+    "normalization": "positive uniform scale plus translation only"
+  },
+  "riggedCandidate": {
+    "path": "raw/_build/jiaochong-native-rig-20261114/rigged.glb",
+    "bytes": 27075444,
+    "sha256": "25de8a70565bb8d35cbef0de4978c5306f9e56887722e539c00362870852b4eb"
+  },
+  "rigExecutionRecipeSha256": "00d12b6657309fdfcecb50fba13ecafc63f7c8ee9b02a991ef50d1c7845a5c6b",
+  "rigRecipeOutputOnlyAddition": "After successful rig execution, recipe additionally exports geometry-only rest-reference.json for runtime QA. No rig/geometry/animation logic changed. Current recipe hash recorded below.",
+  "sourceRigAndReimportQA": {
+    "maxRestCoordinateError": 1.2394766599754803e-06,
+    "vertices": 35788,
+    "faces": 50000,
+    "numericalQA": {
+      "idle": {
+        "samples": 481,
+        "samplingHz": 120,
+        "minSoleHeight": 9.503146713996102e-09,
+        "maxSoleHeight": 0.002609322080388665,
+        "maxFullFootWorldStanceDrift": 0.0,
+        "maxFullFootOrientationDrift": 0.0,
+        "maxProtectedShapeDrift": 8.079959796236658e-07,
+        "allVertexLoopSeam": 0.0,
+        "maxAllVertexWrapVelocityJump": 0.00014935845381293985,
+        "wrapVelocityDt": 0.0033333333333333335,
+        "plantIntervals": 2,
+        "selection": "reviewed connected rest anatomy before weights; evaluated native mesh"
+      },
+      "walk": {
+        "samples": 577,
+        "samplingHz": 120,
+        "minSoleHeight": -3.3998746857832884e-06,
+        "maxSoleHeight": 0.0026092843618243933,
+        "maxFullFootWorldStanceDrift": 7.093795524482229e-05,
+        "maxFullFootOrientationDrift": 4.411700966423605e-06,
+        "maxProtectedShapeDrift": 1.062518631411713e-06,
+        "allVertexLoopSeam": 0.0,
+        "maxAllVertexWrapVelocityJump": 0.0033695278550250414,
+        "wrapVelocityDt": 0.0033333333333333335,
+        "plantIntervals": 6,
+        "selection": "reviewed connected rest anatomy before weights; evaluated native mesh"
+      },
+      "special": {
+        "samples": 481,
+        "samplingHz": 120,
+        "minSoleHeight": 9.503146713996102e-09,
+        "maxSoleHeight": 0.002609322080388665,
+        "maxFullFootWorldStanceDrift": 0.0,
+        "maxFullFootOrientationDrift": 0.0,
+        "maxProtectedShapeDrift": 8.079959796236658e-07,
+        "allVertexLoopSeam": 0.0,
+        "maxAllVertexWrapVelocityJump": 0.00015232019159854191,
+        "wrapVelocityDt": 0.0033333333333333335,
+        "plantIntervals": 2,
+        "selection": "reviewed connected rest anatomy before weights; evaluated native mesh"
+      }
+    }
+  },
+  "actualAppQA": {
+    "path": "raw/_build/jiaochong-stage-final-20261114/report.json",
+    "bytes": 5463,
+    "sha256": "a53ae88ece5616ad8c43849159277393892a512aed4b7a35c5e4eccba6418e5d",
+    "passed": true,
+    "anatomy": {
+      "unmatched": 0,
+      "maxPositionError": 0.00011034860998653429,
+      "maxWeightError": 0,
+      "masks": {
+        "head_l": 7485,
+        "neck_l": 561,
+        "arm_l": 2505,
+        "hand_l": 1257,
+        "leg_l": 3938,
+        "foot_l": 1191,
+        "sole_l": 12,
+        "head_r": 7806,
+        "neck_r": 508,
+        "arm_r": 2582,
+        "hand_r": 1314,
+        "leg_r": 3779,
+        "foot_r": 1138,
+        "sole_r": 10,
+        "chest": 1590,
+        "pelvis": 1072
+      },
+      "triangles": 50000,
+      "bones": 19,
+      "meshes": 1,
+      "outlines": 1,
+      "invalid": 0
+    },
+    "idle": {
+      "maxStanceDrift": 0,
+      "maxRigidError": 2.716530889124158e-10,
+      "minFootHeight": 1.5678424203358077e-07,
+      "samples": 36,
+      "intervals": [
+        "l/0",
+        "r/0"
+      ]
+    },
+    "walk": {
+      "maxStanceDrift": 6.323062423072106e-05,
+      "maxRigidError": 1.1425769291806276e-07,
+      "minFootHeight": -3.202286053771708e-06,
+      "samples": 150,
+      "intervals": [
+        "l/0",
+        "r/1",
+        "l/1",
+        "r/2",
+        "l/2",
+        "r/3",
+        "l/3",
+        "r/4",
+        "l/4",
+        "r/5",
+        "l/5",
+        "r/6",
+        "l/6",
+        "r/7"
+      ]
+    },
+    "special": {
+      "maxStanceDrift": 0,
+      "maxRigidError": 1.4391143832170883e-09,
+      "minFootHeight": 1.5678424203358077e-07,
+      "samples": 34,
+      "intervals": [
+        "l/0",
+        "r/0"
+      ]
+    },
+    "narrationPlayedAndStopped": true
+  },
+  "scripts": [
+    {
+      "path": "pipeline/blender/rig_jiaochong_native.py",
+      "bytes": 45335,
+      "sha256": "c6be051351ba63b04cd055d8b630439064e9b8ff8e2d6ce1ebc100382cea1ce6"
+    },
+    {
+      "path": "scripts/qa-jiaochong-app.mjs",
+      "bytes": 17281,
+      "sha256": "5af30f985715b31d0b5a35f9b5fae349e90d0ebca47e593a49b35c8a4d4e3c1e"
+    },
+    {
+      "path": "src/beasts/jiaochong/Jiaochong.tsx",
+      "bytes": 4667,
+      "sha256": "b8e8296122901cfa40d41cf2ff33bdd886ddbd0be0745a0d73b8834bd44e0db5"
+    },
+    {
+      "path": "src/scene/CameraRig.tsx",
+      "bytes": 1994,
+      "sha256": "7fb151a088c11b495f48b2563ec520429bb35509b94e2deac5b844b1812811f1"
+    }
+  ],
+  "narration": {
+    "path": "public/audio/narration/jiaochong.mp3",
+    "bytes": 585651,
+    "sha256": "04cb2ccbcd75acd29568eeb4b520023b5e8293a48d3cf0d9d79cd46071bea810",
+    "model": "cosyvoice-v2",
+    "voice": "longsanshu",
+    "story": "《中山经·中次六经》说，平逢之山无草木、无水，多沙石。有神名骄虫，其状如人而二首，是为螫虫，实惟蜂蜜之庐。人形和两首是经文明确记下的特征。画中采用双首共身的形象，左右两个短颈各承一首；具体排布、成人面貌、后梳深发、暖赭肤色和赭褐短裤都是设计补足。原文与蜂相关的记述，也没有明说它统领天下蜂群。",
+    "storySha256": "4567c73292bcd8c3ff8ce215e3d6bdbdcc88f3d7b5cc99df54e45fb2ba299d7b",
+    "priorSha256": "32cdb730eabd98c5a4ef79bd15d57dfa2667a003f11262d299dc295930bd44c1",
+    "reason": "Replace planned hair bun/waist wrap description with actual swept-back dark hair and brown shorts; classical source unchanged."
+  },
+  "parentReviewedImages": [
+    {
+      "path": "raw/_build/jiaochong-default-shots-20261114/release-idle.png",
+      "bytes": 893103,
+      "sha256": "2a82cb4a1cacbb4e19b11f6e39a572c23da0de816f18c7e2798986b9c127a669"
+    },
+    {
+      "path": "raw/_build/jiaochong-default-shots-20261114/release-walk.png",
+      "bytes": 891766,
+      "sha256": "2aa7c4fdd8bffe813d9405f0ade5263c598e4594c67d4835b4167dfbaf272195"
+    },
+    {
+      "path": "raw/_build/jiaochong-default-shots-20261114/release-special.png",
+      "bytes": 892833,
+      "sha256": "c0fa3c0034b2e91953ee8c50f06ab709d132fc161d4789f46cdd8326891b64dc"
+    },
+    {
+      "path": "raw/_build/jiaochong-default-shots-20261114/idle-641-final.png",
+      "bytes": 393456,
+      "sha256": "b3283c381de9e16d1efbb3d03e6bca8a7bdd43b2f8745ec0864136fe96d263a5"
+    },
+    {
+      "path": "raw/_build/jiaochong-default-shots-20261114/idle-800.png",
+      "bytes": 497084,
+      "sha256": "6582eafddeea89537b7c1719a5926ce1804f31fc8fa73a656a5b5f9a96107624"
+    },
+    {
+      "path": "raw/_build/jiaochong-default-shots-20261114/idle-390.png",
+      "bytes": 280485,
+      "sha256": "9869d12a4e7014511bf261cb2944443ac529fa58237b400932e46d4fe19be20e"
+    },
+    {
+      "path": "raw/_build/jiaochong-default-shots-20261114/walk-close0.png",
+      "bytes": 274397,
+      "sha256": "2cd326b9a597696b2533276cbe4a26dc92b11d03c816deeaec91a699d4bcb614"
+    },
+    {
+      "path": "raw/_build/jiaochong-default-shots-20261114/walk-close1.png",
+      "bytes": 275593,
+      "sha256": "3ae0bea83b2514a44a7b580f144f4e2055416d212865ea2d84827cd2115d4668"
+    },
+    {
+      "path": "raw/_build/jiaochong-default-shots-20261114/walk-close2.png",
+      "bytes": 273712,
+      "sha256": "23f570c69c1b73a99175a9001a9d27de1839e4967d7046dbab3cf31f8e72d650"
+    }
+  ],
+  "acceptance": "Actual native High four views and extremities, full masks, exported/reimported poses, real Stage ink anatomy/motion, planted supports, remount ownership, controls/narration and responsive screenshots personally reviewed. Readiness does not follow generation or numeric counts alone.",
+  "limitations": [
+    "Stylized native facial and muscle planes retained; no facial reconstruction or individual finger animation.",
+    "Native right sole starts 1.6mm higher; original sole geometry preserved. Actual full-foot planted drift remains below1mm.",
+    "No physics simulation; camera uses a compact full-body portrait framing."
+  ],
+  "deployment": "Pending separate main push, exact-SHA CI/deploy and actual production verification."
+}
