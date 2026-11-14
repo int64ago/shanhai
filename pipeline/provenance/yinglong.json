@@ -715,7 +715,22 @@
     "localAudit": "pipeline/rodin/remaining-17-progress-20261113.json"
   },
   "deployment": {
-    "verified": false,
-    "reason": "Exact-SHA Actions and live production checks are recorded after pushing this model commit."
+    "beast": "yinglong",
+    "sha": "ba434dab0205136750a1c842ec3dcf2d33083805",
+    "ci": {
+      "id": 43588271621,
+      "status": "completed",
+      "conclusion": "success"
+    },
+    "deploy": {
+      "id": 43588271617,
+      "status": "completed",
+      "conclusion": "success"
+    },
+    "productionReport": "raw/_build/yinglong-production-release-20261114/report.json",
+    "productionReportSha256": "dc2f77562fda66d175f787c4f830ac674ab45a485fa6c3535111c1264bcabe7e",
+    "passed": true,
+    "parentPersonallyReadFiveProductionScreenshots": true,
+    "verified": true
   }
 }

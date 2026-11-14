@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "beast": "zhulong",
+  "sourceSha256": "02097f47531438ad80c6aef6ca1f6043b73dc461097ac7b872967ec880dd8b74",
+  "acceptedForRiggingOnly": true,
+  "anatomyMasksReviewed": true,
+  "coordinates": "Blender X/right Y/back Z/up; native lengthY3.2m; minimumZ baked to0.22m",
+  "evidence": "Read raw/_build/zhulong-native-v4-high-review-20261114/{contact_four_views,human_head,neck_back,top_body}.png before measurement; adult human face, thick short neck, one native red snake trunk/tail, no wings/limbs.",
+  "cuts": {
+    "head": {
+      "planes": [
+        {
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "offset": -0.92
+        }
+      ],
+      "seeds": [
+        12252,
+        31880
+      ],
+      "count": 17602,
+      "indicesSha256": "95574bb2015a36481f0ed8bb4deb2abb74c21034e58c3d4ecf26f2903f867b2f"
+    },
+    "neck": {
+      "planes": [
+        {
+          "normal": [
+            0,
+            -1,
+            0
+          ],
+          "offset": 0.92
+        },
+        {
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "offset": -0.6
+        }
+      ],
+      "seeds": [
+        5513
+      ],
+      "count": 3293,
+      "indicesSha256": "60af4909c610d6ce21e9fb8f76910d86a3984804586c7f393b5767cb9c3dee48"
+    }
+  },
+  "headBlendY": [
+    -0.92,
+    -0.66
+  ],
+  "tailMaskStartY": 0.75,
+  "landmarks": {
+    "centerline": [
+      [
+        -0.056183447688817986,
+        -0.92,
+        0.44008883804082866
+      ],
+      [
+        -0.07419676182468374,
+        -0.8149253403203682,
+        0.43331271886235617
+      ],
+      [
+        -0.09109995227417825,
+        -0.7088474268386435,
+        0.4374886235315901
+      ],
+      [
+        -0.09780464591786135,
+        -0.6017052788836813,
+        0.43648931598249535
+      ],
+      [
+        -0.09614891349570615,
+        -0.4948116699597355,
+        0.4250624762343852
+      ],
+      [
+        -0.10221191398736833,
+        -0.38826188332652645,
+        0.41229698901937945
+      ],
+      [
+        -0.11408201525004791,
+        -0.2817019883047254,
+        0.40444194031786806
+      ],
+      [
+        -0.12777573098071887,
+        -0.17511615507850098,
+        0.4016847336623888
+      ],
+      [
+        -0.13788645387617623,
+        -0.06812080455482304,
+        0.4021775448945691
+      ],
+      [
+        -0.14744668723577956,
+        0.03896671974665506,
+        0.4036329662683166
+      ],
+      [
+        -0.1530004522642762,
+        0.14627743200059654,
+        0.4052932142940013
+      ],
+      [
+        -0.15584024896874404,
+        0.25369615317835353,
+        0.401942021951497
+      ],
+      [
+        -0.15621698627324865,
+        0.36088007652405946,
+        0.3933393748295187
+      ],
+      [
+        -0.15277803384790153,
+        0.46744866256047096,
+        0.37961706054358085
+      ],
+      [
+        -0.15030111778945393,
+        0.5737021658862556,
+        0.3639574754077263
+      ],
+      [
+        -0.13039496471453696,
+        0.6778717069575959,
+        0.346783809500187
+      ],
+      [
+        -0.09309444454519478,
+        0.7769262394991322,
+        0.3292336487493072
+      ],
+      [
+        -0.04206113263219731,
+        0.8701209382615618,
+        0.3127593518846878
+      ],
+      [
+        0.005628403567262548,
+        0.964409739439046,
+        0.2932862554668332
+      ],
+      [
+        0.03982877711095309,
+        1.064769297635317,
+        0.27628875532292635
+      ],
+      [
+        0.0640058285259208,
+        1.168503440727278,
+        0.26192335252287524
+      ],
+      [
+        0.08156178076642069,
+        1.2742319912268667,
+        0.25323097844052944
+      ],
+      [
+        0.09406280329822894,
+        1.3808844408025918,
+        0.24877832366659564
+      ],
+      [
+        0.10264531013838285,
+        1.488000946184315,
+        0.24515185317734983
+      ],
+      [
+        0.1108654136955738,
+        1.595,
+        0.23841361761093138
+      ]
+    ],
+    "humanHeadCenter": [
+      0.07420559704303739,
+      -1.3432959294319153,
+      0.6382303369045257
+    ]
+  },
+  "measurementMethod": "181 native longitudinal 2/98 percentile cross-section envelope midpoints in X/Z; three smoothing passes on BONES ONLY; 24 equal arc-length segments preserve actual native lateral curve, vertical profile, head direction and thick short neck. Positive uniform length normalization only.",
+  "runtimeContract": {
+    "scale": 1,
+    "restLengthY": 3.2,
+    "permanentMinimumZ": 0.22,
+    "forward": "glTF+Z / Blender-Y",
+    "outerLocomotionRequired": false
+  },
+  "maskReview": "Personally Read source human-head/neck/top/four-view evidence and full head-neck front/back/side/top mask images BEFORE binding. Conservative green mask includes complete adult human face, jaw, ears, hair, crown fragment and lower nape; orange native short red neck transitions behind it. All native geometry remains unchanged."
+}

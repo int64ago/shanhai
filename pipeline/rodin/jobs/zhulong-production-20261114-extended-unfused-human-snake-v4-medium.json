@@ -1,0 +1,8 @@
+{
+  "id": "zhulong-production-20261114-extended-unfused-human-snake-v4-medium",
+  "beast": "zhulong",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One ancient mythical animal: a normal adult HUMAN HEAD directly continuing into one long red snake body. Entire animal stretched almost STRAIGHT horizontally from head at one end to a single pointed tail at the other, slight gentle curve only. Every part of the trunk separated from every other part by empty space, no coil, loop, ring, knot or returning body. Body about seven head lengths, thick near head and gradually tapering. Human forehead, eyes with eyelids, projecting human nose, closed human lips, ears, chin and short black hair. Short thick neck, head only slightly raised above trunk. Warm human facial skin gradually becomes cinnabar scales. No reptile snout, human shoulders, chest, long upright neck, arms, legs, wings or horns. Complete human head and long single tail visible. Organic living animal, no base or props.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

@@ -1241,7 +1241,22 @@
     }
   ],
   "deployment": {
-    "verified": false,
-    "reason": "Release commit, exact-SHA CI/Deploy and actual production validation follow the reviewed model commit."
+    "verified": true,
+    "beast": "jimeng",
+    "sha": "8b19061535e48b61c037effe8a94fec2f55260db",
+    "ci": {
+      "id": 43590803838,
+      "status": "completed",
+      "conclusion": "success"
+    },
+    "deploy": {
+      "id": 43590803456,
+      "status": "completed",
+      "conclusion": "success"
+    },
+    "productionReport": "raw/_build/jimeng-production-release-20261114/report.json",
+    "productionReportSha256": "03913e7cefce435f4a1a060d2a8d618323f08cd3c59d83d8a092b8a3fe594be8",
+    "passed": true,
+    "parentPersonallyReadFiveProductionScreenshots": true
   }
 }

@@ -59,6 +59,7 @@ import { Xingxing } from '../beasts/xingxing/Xingxing'
 import { Jiaochong } from '../beasts/jiaochong/Jiaochong'
 import { Yinglong } from '../beasts/yinglong/Yinglong'
 import { Jimeng } from '../beasts/jimeng/Jimeng'
+import { Zhulong } from '../beasts/zhulong/Zhulong'
 import { Bashe } from '../beasts/bashe/Bashe'
 import { FeiyiSnake } from '../beasts/feiyi_snake/FeiyiSnake'
 import { CameraRig } from './CameraRig'
@@ -178,6 +179,8 @@ export function Stage() {
           <Yinglong />
         ) : selected === 'jimeng' ? (
           <Jimeng />
+        ) : selected === 'zhulong' ? (
+          <Zhulong />
         ) : selected === 'zhuyan' ? (
           <Zhuyan />
         ) : selected === 'changyou' ? (

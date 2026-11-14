@@ -2,6 +2,27 @@
   "_note": "第三方素材授权登记；上线前统一核对。音频素材到位后同样登记在这里。",
   "assets": [
     {
+      "path": "public/models/zhulong/body.glb",
+      "source": "Hyper3D Rodin两阶段原生v4 Medium四视图实读后Extreme-High/HighPack 1积分，50000三角面、完整人面赤色蛇身单尾。正比例长3.2米、26骨idle6/walk4/special6，完整人头刚性保护与低位原地行波。原生NORMAL/UV/index/PBR在未压缩rig逐位保留；运行时Meshopt medium/WebP2048有量化误差，不减面、不flatten/join/weld/resample。父水墨视觉发现灰眼纹过浅后，仅226眼区纹素提深，baseColor改无损PNG使非眼4194078纹素完全相同；没有新增黑瞳、扩大眼睑或改几何/骨架/动画。真实任务收据、源SHA、独立mask、全部变更与验收见pipeline/provenance/zhulong.json。",
+      "sourceComponents": [
+        {
+          "path": "raw/zhulong-production-20261114-native-whole-v4-high/base_high_pbr.glb",
+          "job": "zhulong-production-20261114-native-whole-v4-high",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "56bc706b-3d7e-4539-a3f8-4e0f26a76bf1",
+          "sha256": "02097f47531438ad80c6aef6ca1f6043b73dc461097ac7b872967ec880dd8b74"
+        }
+      ],
+      "author": "Hyper3D Rodin AI生成；项目离线绑定、动作、眼纹局部提深与工笔水墨渲染",
+      "license": "沿用项目既有Hyper3D Rodin输出条款"
+    },
+    {
+      "path": "public/audio/narration/zhulong.mp3",
+      "source": "2026-11-14按最终完整人面、厚短颈、赤色蛇躯、黑发和低位原地行波更新艺术补足解说，pipeline/tts/narrate.ts、CosyVoice v2/longsanshu、MP3 22050Hz；大荒北经烛龙与海外北经烛阴两篇原文分列，不混写山名或把直目译作竖瞳。文本、音频SHA和实际播放停止证据见pipeline/provenance/zhulong.json。",
+      "author": "项目原创考据解说词；百炼龙三叔合成",
+      "license": "沿用项目既有百炼CosyVoice合成输出条款"
+    },
+    {
       "path": "public/models/jimeng/body.glb",
       "source": "Hyper3D Rodin两阶段制作：原生v6 Medium四视图与五指趾实读后Extreme-High/HighPack 1积分；完整原生龙首人身50000三角面，双手各五指、双足各五趾。正比例归一1.8米，17骨idle4/walk2.4/special4，圆周完整支撑足位置与朝向逆向烘焙，头手足刚性保护。无网格手术、足底拉平、重算法线或PBR替换；编码法线微小误差如实披露。Meshopt medium/WebP2048，simplify/flatten/join/weld/resample/palette/instance均false。源UUID/SHA256、校准、独立几何mask、实际水墨Stage及完整绕行构图验收见pipeline/provenance/jimeng.json。",
       "sourceComponents": [
@@ -80,7 +101,7 @@
       "license": "沿用项目既有百炼 CosyVoice 合成输出条款"
     },
     {
-      "path": "public/audio/narration/{kuafu,qiangliang,tianwu,longzhi,xixiyu,xingtian,zhulong,leishen,xiangliu}.mp3",
+      "path": "public/audio/narration/{kuafu,qiangliang,tianwu,longzhi,xixiyu,xingtian,leishen,xiangliu}.mp3",
       "source": "2026-11-08 按核源修正后的 src/app/beasts.ts 故事重新生成；pipeline/tts/narrate.ts，CosyVoice v2 / longsanshu，MP3 22050 Hz。逐条原文与推断分别保存在 content/beasts/<id>.json；文本及音频哈希、浏览器实际解码播放与停止证据见 pipeline/provenance/source-narration-20261108.json。语音修订不表示对应三维模型已完成。",
       "author": "项目原创考据解说词；百炼龙三叔合成",
       "license": "沿用项目既有百炼 CosyVoice 合成输出条款"

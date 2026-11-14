@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "beast": "zhulong",
+  "sourceSha256": "02097f47531438ad80c6aef6ca1f6043b73dc461097ac7b872967ec880dd8b74",
+  "runtimeSha256": "636580bbb5b26c9d7ffccb5d1a1434509a62e07e75afa227081e5a77a0680a0d",
+  "anatomyMasksReviewed": true,
+  "maskReview": "Personally Read full geometry-eye-mask-front, both eye-mask zooms, both genuine UV-mask atlas zooms and before/after albedo. Supports remain inside existing narrow gray iris-like details; eyelids, sclera, forehead, face and body excluded. No distinct black native pupil is claimed or added.",
+  "projection": "1200px native-albedo-front, source geometry and genuine UV, direction(.35,.1,1), target(.07,.64,1.3), ortho .9m",
+  "sourceObservation": "Existing narrow gray iris-like patch in screen-left opening and broader gray iris-like patch with pale highlight in screen-right opening. No unambiguous black pupil spot resolved. Enhance only existing gray texture, never add a pupil or widen eyelids.",
+  "screenPolygons": {
+    "screen_left_iris": [
+      [
+        516,
+        604
+      ],
+      [
+        521,
+        603
+      ],
+      [
+        525,
+        605
+      ],
+      [
+        525,
+        610
+      ],
+      [
+        521,
+        612
+      ],
+      [
+        516,
+        610
+      ]
+    ],
+    "screen_right_iris": [
+      [
+        751,
+        598
+      ],
+      [
+        763,
+        596
+      ],
+      [
+        779,
+        598
+      ],
+      [
+        784,
+        602
+      ],
+      [
+        781,
+        608
+      ],
+      [
+        773,
+        611
+      ],
+      [
+        759,
+        609
+      ],
+      [
+        752,
+        605
+      ]
+    ]
+  },
+  "thresholds": {
+    "sourceChromaFullBelow": 28,
+    "sourceChromaZeroAbove": 42,
+    "sourceLumaFullBelow": 155,
+    "sourceLumaZeroAbove": 195,
+    "minimumBlueRedRatio": 0.72,
+    "maximumDarkeningFraction": 0.64
+  },
+  "nonEyePixelReference": "Decoded 2048x2048 runtime baseColor WebP; derived image encoded lossless PNG so all pixels outside audited mask remain bit exact. Native source PNG and runtime source GLBs remain unchanged.",
+  "maskAuditSha256": "00795de6b74ed45ecf8fbbf90bd764c5a6befeb6b308eaa458abe1c9b0fde714",
+  "maskPixelSha256": "c6676741ef98b6bf32c9529c5c35104a4b06406ad111223c1043d1fa82eb782e"
+}

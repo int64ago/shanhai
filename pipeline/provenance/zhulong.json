@@ -1,0 +1,1032 @@
+{
+  "beast": "zhulong",
+  "date": "2026-11-14",
+  "status": "parent-accepted-public-native-high-runtime",
+  "source": [
+    {
+      "book": "山海经·大荒北经",
+      "text": "西北海外，赤水之北，有章尾山。有神，人面蛇身而赤，直目正乘，其暝乃晦，其視乃明，不食不寢不息，風雨是謁。是燭九陰，是謂燭龍。"
+    },
+    {
+      "book": "山海经·海外北经",
+      "text": "鍾山之神名曰燭陰，視為晝，瞑為夜，吹為冬，呼為夏，不飲，不食，不息，息為風，身長千里。在無啓之東。其為物，人面，蛇身，赤色，居鍾山下。"
+    }
+  ],
+  "inferences": [
+    {
+      "item": "两篇神名、山名与尺度分列",
+      "basis": "大荒北经称章尾山烛龙，海外北经称钟山烛阴；两篇均记人面蛇身赤色。冬夏、息为风与身长千里属于海外篇，两篇分别引用，不据此断言两山为同一地点。观看缩比属于设计处理。"
+    },
+    {
+      "item": "人面接颈与完整蛇躯",
+      "basis": "人面蛇身为明文，完整颅形、发式、面部神情、接颈、蛇躯比例、鳞片、腹侧与尖尾形状未细述。自然相连的人面蛇身与伸展浅S姿态属于造型设计。"
+    },
+    {
+      "item": "直目与肢角选择",
+      "basis": "直目正乘保留原句，其含义不直接等同于竖缝瞳孔。普通成对有眼睑眼形、无角、无翼与无肢均为设计选择，原文未明确这些配置。九阴不是九首九眼的器官计数，金焰神冠也无本条依据。"
+    },
+    {
+      "item": "赤色与明晦冬夏演绎",
+      "basis": "赤色为明文；朱红蛇躯、暖肤人面、黑发及其具体色阶均为艺术设色。低位原地行波为长躯动作设计。昼夜、冬夏与风雨是两篇叙事，正文未规定具体光源、眼睑动画、攻击过程或鸣声，本模型不据此擅增法器或器官。"
+    }
+  ],
+  "transactions": [
+    {
+      "time": "2026-11-13T14:25:04.150Z",
+      "beast": "zhulong",
+      "job": "zhulong-production-20261108-body-medium",
+      "hash": "b4a6f2c782d85298",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "a2b3958a-d8b0-4b8f-9e32-b1af70e19c55",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-14T05:37:37.818Z",
+      "beast": "zhulong",
+      "job": "zhulong-production-20261114-native-human-face-v2-medium",
+      "hash": "3eba1649ceabdc70",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "8072a7e3-eeb7-4dec-aa16-80a89cdadd83",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-14T05:45:40.527Z",
+      "beast": "zhulong",
+      "job": "zhulong-production-20261114-human-head-red-python-v3-medium",
+      "hash": "5b2e892863e72ba5",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "809e47cd-ef4a-4f5a-85a0-7ece196deb04",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-14T10:01:21.734Z",
+      "beast": "zhulong",
+      "job": "zhulong-production-20261114-extended-unfused-human-snake-v4-medium",
+      "hash": "bfbc6a6473257570",
+      "tier": "Gen-2.5-Medium",
+      "uuid": "e6e86777-cae7-435e-936a-763a3071b943",
+      "consumed": 0.5
+    },
+    {
+      "time": "2026-11-14T10:08:11.433Z",
+      "beast": "zhulong",
+      "job": "zhulong-production-20261114-native-whole-v4-high",
+      "hash": "01e7d12bee844b06",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "56bc706b-3d7e-4539-a3f8-4e0f26a76bf1",
+      "consumed": 1
+    }
+  ],
+  "lifetimeConsumed": 3.0,
+  "newCreditsAgainstFixed143LineBaseline": 3.0,
+  "highSource": {
+    "path": "raw/zhulong-production-20261114-native-whole-v4-high/base_high_pbr.glb",
+    "bytes": 33956024,
+    "sha256": "02097f47531438ad80c6aef6ca1f6043b73dc461097ac7b872967ec880dd8b74"
+  },
+  "highRequest": {
+    "path": "pipeline/rodin/jobs/zhulong-production-20261114-native-whole-v4-high.json",
+    "bytes": 1421,
+    "sha256": "79732025f760cafe5792c0cfcf9bd8196f323a169783672ca6c47d0e557d5ead",
+    "images": [
+      {
+        "path": "concept/zhulong/production-20261114-native-whole-v4/view_34.png",
+        "bytes": 491425,
+        "sha256": "cb5826978cacbae03bf2b7674b0fbe29627bf7ad45bb38d935df023453ca4f19"
+      },
+      {
+        "path": "concept/zhulong/production-20261114-native-whole-v4/view_side.png",
+        "bytes": 509797,
+        "sha256": "7d1ae038402a6f44b777dabe5f1ba43d56f7ce590e8afce06ff872f9d5256408"
+      },
+      {
+        "path": "concept/zhulong/production-20261114-native-whole-v4/view_front.png",
+        "bytes": 477716,
+        "sha256": "08138f47509202e41f299c6d31a518c76d73d9396d39dcfa5172831a7c2cad80"
+      },
+      {
+        "path": "concept/zhulong/production-20261114-native-whole-v4/view_back.png",
+        "bytes": 476103,
+        "sha256": "d10686184b462684c99c1b8a8363e46d2e771f32afc49093f58fce90bba99351"
+      }
+    ]
+  },
+  "rigRecipe": {
+    "path": "pipeline/blender/rig_zhulong_native.py",
+    "bytes": 35918,
+    "sha256": "a602a64d49dafc2d64b10286cf2d05dbcbc7c5067e7a9a26deea9737cfb4ab3e"
+  },
+  "helperSha256": {
+    "rig_yinglong_native.py": "fac74a81862fe113dca4c4fc47a44d1ba41a2b1718b9db0c623e859d688d16a9",
+    "rig_jiaochong_native.py": "c6be051351ba63b04cd055d8b630439064e9b8ff8e2d6ce1ebc100382cea1ce6",
+    "rig_quadruped.py": "8e7a29db4562dc642104fbe904c3c89a4689d5ceab9184529a7b0e091cd3be1b",
+    "rig_zhuyan_native.py": "c1b1951e4c3ee22c4fe171c153425bafdde02fa7460bd32b2cabd333648dbdbd",
+    "turnaround.py": "e7011a02a386ec4f0cbc87f016536c43e2c5626cf709f06ff4da20b5a3b38bc0"
+  },
+  "calibration": {
+    "path": "pipeline/provenance/zhulong-calibration.json",
+    "bytes": 4924,
+    "sha256": "1f80ab53cedc8a537432dad0fbc33b0c9d7562a1e91746a245065e4bd37cbd2b"
+  },
+  "riggedCandidate": {
+    "path": "raw/_build/zhulong-native-rig-20261114/rigged.glb",
+    "bytes": 42554556,
+    "sha256": "e6f5f53db7323322de35e62aaf0d4c2a3c5148e4f4ecd01eca57a315a45e7d31"
+  },
+  "independentRestReference": {
+    "path": "raw/_build/zhulong-native-rig-20261114/rest-reference.json",
+    "bytes": 1637197,
+    "sha256": "fd9bff7083eba3e0387eae7e6acf4bdc53fed4dc4be8a4edc15e7874bc86e316"
+  },
+  "runtimeContract": {
+    "scale": 1.0,
+    "forward": "glTF+Z / Blender-Y",
+    "restLengthY": 3.2,
+    "permanentMinimumZ": 0.22,
+    "permanentElevationMethod": "Baked translation in native mesh coordinates and matching skeleton rests; no normalization node scale",
+    "outerLocomotionRequired": false,
+    "animatedRootTranslation": "Small periodic vertical bob centered at zero; no X/Z runtime locomotion",
+    "idleDuration": 6.0,
+    "walkDuration": 4.0,
+    "specialDuration": 6.0,
+    "walkMeaning": "Stationary slow 3D axial traveling wave",
+    "specialReturn": "Matches idle phase0 pose, velocity and acceleration at both endpoints",
+    "interpolation": "60fps source keys; actual periodic C2 glTF CUBICSPLINE; Float32 residuals disclosed in QA",
+    "boneScale": "Every bone scale is exactly one in all clips; no longitudinal stretching",
+    "productionAccepted": false
+  },
+  "nativePreservation": {
+    "preservation": {
+      "sourceBoundsBlender": [
+        [
+          -0.1766129583120346,
+          -0.946496307849884,
+          -0.21365490555763245
+        ],
+        [
+          0.1768759936094284,
+          0.9513583779335022,
+          0.21684345602989197
+        ]
+      ],
+      "positiveUniformScale": 1.6861143395070426,
+      "decodedOrigin": [
+        0.00013151764869689941,
+        0.002431035041809082,
+        -0.21365490555763245
+      ],
+      "permanentElevationBakedM": 0.22,
+      "meshObjectScale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sourceFingerprint": {
+        "vertices": 31954,
+        "faces": 50000,
+        "edgesSha256": "cf75be31854a451d44c384a6f5b3c13fb23366e8c6fcb36e50829723ae2bc610",
+        "loopsSha256": "f8359bab9ac3dc23e2fdebb4565023443c24fc2f4e71839f30bf2510fbe092e8",
+        "polygonSizesSha256": "5fb35b9d69168912af61263b6af80bb5662a253edce9efb70d74c1dd41e80823",
+        "polygonMaterialsSha256": "4cbbd9be0cba685835755f827758705db5a413c5494c34262cd25946a73e7582",
+        "uvSha256": {
+          "UVMap": "188b3c1470ef35a8185c4c2ad88a675e7c9d4e4259880cdc536109f8bcb1c6b0"
+        },
+        "cornerNormalsSha256": "887cb531521ed74d0c981230d19f15408d8cdd9dbb51eb42bb4ec9aca83adfa1",
+        "pbrSha256": "3e3cf35506f0882e5eb0d9ae1395027ca1c88bdad0147affff9f12a38492313b",
+        "embeddedImageSha256": {
+          "texture_diffuse": "8073dbf7984f69e6551f9919e05e44b3e32e8b9bf7956e1472bc0b2fe7839c00",
+          "texture_metallic-texture_roughness": "fc8e55bacc1c3a592e928ecb62dbee81dcdca45025de00fccf885ed18bcc5ab3",
+          "texture_normal": "c5d914f3eae400b6fdc01160f98abc4f26d0c6ec56d7316f37a14010bbe2eb3e"
+        }
+      },
+      "normalizedFingerprint": {
+        "vertices": 31954,
+        "faces": 50000,
+        "edgesSha256": "cf75be31854a451d44c384a6f5b3c13fb23366e8c6fcb36e50829723ae2bc610",
+        "loopsSha256": "f8359bab9ac3dc23e2fdebb4565023443c24fc2f4e71839f30bf2510fbe092e8",
+        "polygonSizesSha256": "5fb35b9d69168912af61263b6af80bb5662a253edce9efb70d74c1dd41e80823",
+        "polygonMaterialsSha256": "4cbbd9be0cba685835755f827758705db5a413c5494c34262cd25946a73e7582",
+        "uvSha256": {
+          "UVMap": "188b3c1470ef35a8185c4c2ad88a675e7c9d4e4259880cdc536109f8bcb1c6b0"
+        },
+        "cornerNormalsSha256": "5dc25522bd7d6d8dfba5cf01eb4b755c4dbbbf905e11d5d3bd8e7bd20712f7fe",
+        "pbrSha256": "3e3cf35506f0882e5eb0d9ae1395027ca1c88bdad0147affff9f12a38492313b",
+        "embeddedImageSha256": {
+          "texture_diffuse": "8073dbf7984f69e6551f9919e05e44b3e32e8b9bf7956e1472bc0b2fe7839c00",
+          "texture_metallic-texture_roughness": "fc8e55bacc1c3a592e928ecb62dbee81dcdca45025de00fccf885ed18bcc5ab3",
+          "texture_normal": "c5d914f3eae400b6fdc01160f98abc4f26d0c6ec56d7316f37a14010bbe2eb3e"
+        }
+      },
+      "maximumNormalizationPositionErrorM": 9.755752650164595e-08,
+      "decodedCornerNormalCodecError": 0.00046912580728530884,
+      "geometryReconstruction": false,
+      "recoloring": false,
+      "normalRecomputation": false,
+      "restPositionsSha256": "37fe0d4aee9b7114fe42dcdc54921c2976d2548585fe070feeb3cb1884272ff6"
+    },
+    "nativeAttributePassthrough": {
+      "nativeVertices": 31954,
+      "nativeTriangles": 50000,
+      "nativeNormalSha256": "9853d5098897517d94b3660fe68b37a313da1a88cdb1034aa6871451f66853fd",
+      "nativeUVSha256": "e8a6d9820fc245518926675fd739b37b54c2df15370702cfef5c8fb41a3ccb43",
+      "nativeIndexSha256": "129aa5e287a88c20a74a949062ccccd711ae2e281dedb73a492d96cea91c3964",
+      "nativeNormalUVIndexBytesPreservedExactly": true,
+      "geometryChange": "Positive uniform source normalization and permanent translation only",
+      "recoloring": false,
+      "blenderNormalCodecBypassedInActualGltf": true
+    },
+    "limitations": [
+      "Offline rigging candidate only; actual Stage/shader/crossfade/compression/release acceptance belongs to parent.",
+      "Native adult face, thick short neck, red palette, tiny crown shell and existing degenerate facets are deliberately retained; no source correction.",
+      "Bounds are120Hz sampled extrema with1cm advisory padding, not an analytical extrema certificate.",
+      "C2 periodic spline construction has disclosed Float32 output timing/tangent residuals; all actual buffer values and tangents close exactly.",
+      "Native PNG/PBR candidate is uncompressed; parent must meet runtime asset budget without changing anatomy and rerun QA against rest-reference.json."
+    ]
+  },
+  "compression": {
+    "schemaVersion": 1,
+    "beast": "zhulong",
+    "candidate": "/Users/int64ago/workspace/shanhai/.claude/worktrees/beast-bingfeng/raw/_build/zhulong-runtime-20261114-v1/body.glb",
+    "candidateBytes": 2435896,
+    "candidateSha256": "636580bbb5b26c9d7ffccb5d1a1434509a62e07e75afa227081e5a77a0680a0d",
+    "inputRigSha256": "e6f5f53db7323322de35e62aaf0d4c2a3c5148e4f4ecd01eca57a315a45e7d31",
+    "sourceSha256": "02097f47531438ad80c6aef6ca1f6043b73dc461097ac7b872967ec880dd8b74",
+    "restReferenceSha256": "fd9bff7083eba3e0387eae7e6acf4bdc53fed4dc4be8a4edc15e7874bc86e316",
+    "optimizer": "@gltf-transform/cli 4.5.1",
+    "command": {
+      "executable": "/Users/int64ago/.nvs/node/24.19.0/arm64/bin/node",
+      "args": [
+        "/Users/int64ago/workspace/shanhai/.claude/worktrees/beast-bingfeng/node_modules/@gltf-transform/cli/bin/cli.js",
+        "optimize",
+        "/Users/int64ago/workspace/shanhai/.claude/worktrees/beast-bingfeng/raw/_build/zhulong-native-rig-20261114/rigged.glb",
+        "/Users/int64ago/workspace/shanhai/.claude/worktrees/beast-bingfeng/raw/_build/zhulong-runtime-20261114-v1/body.glb",
+        "--compress",
+        "meshopt",
+        "--meshopt-level",
+        "medium",
+        "--texture-compress",
+        "webp",
+        "--texture-size",
+        "2048",
+        "--simplify",
+        "false",
+        "--flatten",
+        "false",
+        "--join",
+        "false",
+        "--weld",
+        "false",
+        "--resample",
+        "false",
+        "--palette",
+        "false",
+        "--instance",
+        "false"
+      ],
+      "cwd": "/Users/int64ago/workspace/shanhai/.claude/worktrees/beast-bingfeng"
+    },
+    "offlineQaPassed": true,
+    "compressedAnimationSamplersPreservedExactly": true,
+    "compressedMaterialParametersAndSlotsPreserved": true,
+    "compressedRawNativePayloadByteIdentical": false,
+    "textures": [
+      {
+        "mimeType": "image/webp",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 304634
+      },
+      {
+        "mimeType": "image/webp",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 78634
+      },
+      {
+        "mimeType": "image/webp",
+        "size": [
+          2048,
+          2048
+        ],
+        "bytes": 39704
+      }
+    ],
+    "formalOfflineImagesPersonallyRead": [
+      "/Users/int64ago/workspace/shanhai/.claude/worktrees/beast-bingfeng/raw/_build/zhulong-native-rig-20261114/walk-contact.png",
+      "/Users/int64ago/workspace/shanhai/.claude/worktrees/beast-bingfeng/raw/_build/zhulong-native-rig-20261114/reimport-poses/walk-02-t1.000-human-head-front.png",
+      "/Users/int64ago/workspace/shanhai/.claude/worktrees/beast-bingfeng/raw/_build/zhulong-native-rig-20261114/reimport-poses/walk-06-t3.000-neck-back.png",
+      "/Users/int64ago/workspace/shanhai/.claude/worktrees/beast-bingfeng/raw/_build/zhulong-native-rig-20261114/reimport-poses/special-02-t1.500-neck-side.png"
+    ],
+    "browserQaRun": false,
+    "rigGenerationRepeated": false,
+    "productionAccepted": false,
+    "evidenceSha256": {
+      "compression-command.json": "e7abb7a0bd4237609b36125e3df2822e5b3996cce00b1b78309b1b9a3578023d",
+      "decoded-for-qa.glb": "8416e2fda7159207259ddd8219dd52e888570beab68befd2d5ec7ee5c06356e7",
+      "compression.log": "c2ebaa32f1050398d3f7bce7571332584f687e6936b0cdbcedc99b635da70641",
+      "decoded-accessor-audit.json": "6da3affed07872053cf26ccc42b0c4be2adc560f986873d24547cddab1e48c8f",
+      "body.glb": "636580bbb5b26c9d7ffccb5d1a1434509a62e07e75afa227081e5a77a0680a0d",
+      "offline-qa.json": "41fd0f66b33faa9d57db8b9ae06a01fdb2968a0da198ddfdf8afcd58dee3254d"
+    },
+    "note": "Promote only body.glb after parent Stage/shader/crossfade/responsive/narration QA. decoded-for-qa.glb is a CPU evaluation derivative, not the runtime candidate."
+  },
+  "eyeContrastDerivative": {
+    "candidate": "/Users/int64ago/workspace/shanhai/.claude/worktrees/beast-bingfeng/raw/_build/zhulong-runtime-eye-contrast-20261114-v1/body.glb",
+    "candidateSha256": "9ede5f4f9dfb5c37c449553d4cf17ace0996ab83437609601420222afb1ee703",
+    "candidateBytes": 4008572,
+    "sourceSha256": "02097f47531438ad80c6aef6ca1f6043b73dc461097ac7b872967ec880dd8b74",
+    "parentRuntimeSha256": "636580bbb5b26c9d7ffccb5d1a1434509a62e07e75afa227081e5a77a0680a0d",
+    "scriptSha256": "71f2ab9db67c151e2d0664a51f39128558c64ea0d7300c601127fa29f830afa8",
+    "calibration": {
+      "schemaVersion": 1,
+      "beast": "zhulong",
+      "sourceSha256": "02097f47531438ad80c6aef6ca1f6043b73dc461097ac7b872967ec880dd8b74",
+      "runtimeSha256": "636580bbb5b26c9d7ffccb5d1a1434509a62e07e75afa227081e5a77a0680a0d",
+      "anatomyMasksReviewed": true,
+      "maskReview": "Personally Read full geometry-eye-mask-front, both eye-mask zooms, both genuine UV-mask atlas zooms and before/after albedo. Supports remain inside existing narrow gray iris-like details; eyelids, sclera, forehead, face and body excluded. No distinct black native pupil is claimed or added.",
+      "projection": "1200px native-albedo-front, source geometry and genuine UV, direction(.35,.1,1), target(.07,.64,1.3), ortho .9m",
+      "sourceObservation": "Existing narrow gray iris-like patch in screen-left opening and broader gray iris-like patch with pale highlight in screen-right opening. No unambiguous black pupil spot resolved. Enhance only existing gray texture, never add a pupil or widen eyelids.",
+      "screenPolygons": {
+        "screen_left_iris": [
+          [
+            516,
+            604
+          ],
+          [
+            521,
+            603
+          ],
+          [
+            525,
+            605
+          ],
+          [
+            525,
+            610
+          ],
+          [
+            521,
+            612
+          ],
+          [
+            516,
+            610
+          ]
+        ],
+        "screen_right_iris": [
+          [
+            751,
+            598
+          ],
+          [
+            763,
+            596
+          ],
+          [
+            779,
+            598
+          ],
+          [
+            784,
+            602
+          ],
+          [
+            781,
+            608
+          ],
+          [
+            773,
+            611
+          ],
+          [
+            759,
+            609
+          ],
+          [
+            752,
+            605
+          ]
+        ]
+      },
+      "thresholds": {
+        "sourceChromaFullBelow": 28,
+        "sourceChromaZeroAbove": 42,
+        "sourceLumaFullBelow": 155,
+        "sourceLumaZeroAbove": 195,
+        "minimumBlueRedRatio": 0.72,
+        "maximumDarkeningFraction": 0.64
+      },
+      "nonEyePixelReference": "Decoded 2048x2048 runtime baseColor WebP; derived image encoded lossless PNG so all pixels outside audited mask remain bit exact. Native source PNG and runtime source GLBs remain unchanged.",
+      "maskAuditSha256": "00795de6b74ed45ecf8fbbf90bd764c5a6befeb6b308eaa458abe1c9b0fde714",
+      "maskPixelSha256": "c6676741ef98b6bf32c9529c5c35104a4b06406ad111223c1043d1fa82eb782e"
+    },
+    "maskAudit": {
+      "sourceSha256": "02097f47531438ad80c6aef6ca1f6043b73dc461097ac7b872967ec880dd8b74",
+      "runtimeSha256": "636580bbb5b26c9d7ffccb5d1a1434509a62e07e75afa227081e5a77a0680a0d",
+      "regions": {
+        "screen_left_iris": {
+          "nativeUvPixelHull": [
+            [
+              2556,
+              265
+            ],
+            [
+              2557,
+              264
+            ],
+            [
+              2558,
+              264
+            ],
+            [
+              2567,
+              272
+            ],
+            [
+              2568,
+              274
+            ],
+            [
+              2568,
+              279
+            ],
+            [
+              2567,
+              285
+            ],
+            [
+              2566,
+              287
+            ],
+            [
+              2564,
+              286
+            ],
+            [
+              2563,
+              285
+            ],
+            [
+              2557,
+              276
+            ],
+            [
+              2556,
+              271
+            ]
+          ],
+          "runtimeChangedSupportTexels": 30,
+          "runtimeUvBoundsXY": [
+            [
+              1280,
+              134
+            ],
+            [
+              1283,
+              142
+            ]
+          ],
+          "geometryBoundsGltf": [
+            [
+              0.0811934694647789,
+              0.6516443490982056,
+              1.5215528011322021
+            ],
+            [
+              0.09103657305240631,
+              0.6589870452880859,
+              1.5361223220825195
+            ]
+          ],
+          "nativeSourceLumaRange": [
+            89.66799999999999,
+            190.1048
+          ]
+        },
+        "screen_right_iris": {
+          "nativeUvPixelHull": [
+            [
+              1243,
+              3180
+            ],
+            [
+              1249,
+              3177
+            ],
+            [
+              1255,
+              3175
+            ],
+            [
+              1269,
+              3175
+            ],
+            [
+              1275,
+              3176
+            ],
+            [
+              1288,
+              3179
+            ],
+            [
+              1298,
+              3184
+            ],
+            [
+              1302,
+              3187
+            ],
+            [
+              1304,
+              3189
+            ],
+            [
+              1305,
+              3193
+            ],
+            [
+              1304,
+              3197
+            ],
+            [
+              1298,
+              3197
+            ],
+            [
+              1280,
+              3196
+            ],
+            [
+              1262,
+              3192
+            ],
+            [
+              1250,
+              3188
+            ],
+            [
+              1244,
+              3182
+            ]
+          ],
+          "runtimeChangedSupportTexels": 196,
+          "runtimeUvBoundsXY": [
+            [
+              622,
+              1588
+            ],
+            [
+              650,
+              1597
+            ]
+          ],
+          "geometryBoundsGltf": [
+            [
+              0.2442428320646286,
+              0.6511126756668091,
+              1.4418669939041138
+            ],
+            [
+              0.26546454429626465,
+              0.6618239283561707,
+              1.4540584087371826
+            ]
+          ],
+          "nativeSourceLumaRange": [
+            105.88179999999998,
+            187.5576
+          ]
+        }
+      },
+      "changedTexels": 226,
+      "totalTexels": 4194304,
+      "thresholds": {
+        "sourceChromaFullBelow": 28,
+        "sourceChromaZeroAbove": 42,
+        "sourceLumaFullBelow": 155,
+        "sourceLumaZeroAbove": 195,
+        "minimumBlueRedRatio": 0.72,
+        "maximumDarkeningFraction": 0.64
+      },
+      "alphaChanged": false,
+      "nonEyePixelsBitExact": true,
+      "nonEyePixelBeforeSha256": "412b9d9dca86fa558533db63013cd7307f220e406cdbae5a705534d11d66b836",
+      "nonEyePixelAfterSha256": "412b9d9dca86fa558533db63013cd7307f220e406cdbae5a705534d11d66b836",
+      "runtimeBeforePixelSha256": "5aa57ef9fd1a584a1cdeb8997620cd6d74e37a232f630b858d007104c841fdf8",
+      "runtimeAfterPixelSha256": "ebceb2a66cc7ac7921f85230bb52d969bd58b990fafc0ab7c9a11c71a1142135",
+      "anatomyMasksReviewed": false,
+      "candidateCreated": false,
+      "nonEyePixelReference": "Decoded 2048x2048 runtime baseColor WebP; derived image encoded lossless PNG so all pixels outside audited mask remain bit exact. Native source PNG and runtime source GLBs remain unchanged."
+    },
+    "images": [
+      {
+        "image": 0,
+        "changed": false,
+        "beforeSha256": "d438d3f104d041714f548f3b77ff57da19c21fab65a5e9fcbf1d30d5873fc98f",
+        "afterSha256": "d438d3f104d041714f548f3b77ff57da19c21fab65a5e9fcbf1d30d5873fc98f"
+      },
+      {
+        "image": 1,
+        "changed": true,
+        "beforeSha256": "ea8bdb6ea4819fd4506cfe3d455cf39448de7cd6b1d3d5fc814226a0af4c9448",
+        "afterSha256": "bc5dfbe9b81587c93614c856217622b71e425d7d1d84be0d2cadf97b1ca4cde1"
+      },
+      {
+        "image": 2,
+        "changed": false,
+        "beforeSha256": "ee73221a1a6d1315cf9362ae9c00753a4c8dc6ebdf119acb3626e5f57aae37b7",
+        "afterSha256": "ee73221a1a6d1315cf9362ae9c00753a4c8dc6ebdf119acb3626e5f57aae37b7"
+      }
+    ],
+    "geometrySkinAnimationAccessorBytesUnchanged": true,
+    "materialsUnchanged": true,
+    "otherPbrImagesBytesUnchanged": true,
+    "nonEyePixelsBitExact": true,
+    "baseColorEncoding": "Lossless PNG preserving every decoded runtime pixel outside reviewed iris mask; other textures remain original WebP",
+    "exhaustiveNativeUvOccupancy": {
+      "changedTexelsOnEyeGeometry": 226,
+      "sourceTrianglesAffected": 19,
+      "sourceTriangleIndices": [
+        3516,
+        3986,
+        3987,
+        3991,
+        3992,
+        3994,
+        3995,
+        6407,
+        6408,
+        6409,
+        6410,
+        6411,
+        6412,
+        6413,
+        6414,
+        6415,
+        6974,
+        6975,
+        6976
+      ],
+      "allOccupancyRestrictedToTwoReviewedEyeRegions": true,
+      "boundsGltf": [
+        [
+          0.08104698878012814,
+          0.6515604634729187,
+          1.4422910298808826
+        ],
+        [
+          0.265258869174661,
+          0.6614251292075951,
+          1.5290162961482192
+        ]
+      ]
+    },
+    "analyticalContrast": {
+      "meanCurrentShaderInkBefore": 0.03258127565695895,
+      "meanCurrentShaderInkAfter": 0.7113202233160899,
+      "note": "Analytical current shader ink gate only; not an actual Stage render"
+    },
+    "sourceObservation": "Existing narrow gray iris-like patch in screen-left opening and broader gray iris-like patch with pale highlight in screen-right opening. No unambiguous black pupil spot resolved. Enhance only existing gray texture, never add a pupil or widen eyelids.",
+    "productionAccepted": false,
+    "browserQaRun": false,
+    "independentGlbDecode": {
+      "passed": true,
+      "allDecodedAccessorsExact": true,
+      "accessorCount": 140,
+      "baseColorMimeType": "image/png",
+      "baseColorSize": [
+        2048,
+        2048
+      ],
+      "geometryCompression": "EXT_meshopt_compression retained"
+    },
+    "actualEmbeddedImagePixelVerification": {
+      "passed": true,
+      "changedTexels": 226,
+      "nonEyeTexelsUnchanged": 4194078,
+      "nonEyeBeforeSha256": "412b9d9dca86fa558533db63013cd7307f220e406cdbae5a705534d11d66b836",
+      "nonEyeAfterSha256": "412b9d9dca86fa558533db63013cd7307f220e406cdbae5a705534d11d66b836",
+      "alphaBitExact": true
+    },
+    "parentReview": {
+      "accepted": true,
+      "personallyRead": true,
+      "evidence": "raw/_build/zhulong-stage-qa-20261114-eye-v1",
+      "reason": "Read actual walk/special human-head, neck-side/back and desktop/tablet/phone images. Existing narrow gray iris detail is discernibly darker; complete face/cranium/ears and continuous neck remain. No distinct black pupil is asserted or added."
+    }
+  },
+  "eyeContrastRecipe": {
+    "path": "pipeline/blender/refine_zhulong_native_eye_contrast.py",
+    "bytes": 19569,
+    "sha256": "71f2ab9db67c151e2d0664a51f39128558c64ea0d7300c601127fa29f830afa8"
+  },
+  "eyeCalibration": {
+    "path": "pipeline/provenance/zhulong-eye-calibration.json",
+    "bytes": 2270,
+    "sha256": "66aac26a3f1b4f69e2895c598ff6878bd9026d1743a3383e1b8af698d4ba3f1d"
+  },
+  "runtime": {
+    "path": "public/models/zhulong/body.glb",
+    "bytes": 4008572,
+    "sha256": "9ede5f4f9dfb5c37c449553d4cf17ace0996ab83437609601420222afb1ee703"
+  },
+  "candidateStageQA": {
+    "path": "raw/_build/zhulong-stage-qa-20261114-eye-v1/report.json",
+    "bytes": 6556460,
+    "sha256": "a6678305d1977dd44c32ad3fe720ff34753ee40e150fb7aa5bd8fac9753ebfaf",
+    "passed": true,
+    "previewReadyOverride": true,
+    "sections": {
+      "native-reference": {
+        "passed": true
+      },
+      "native-stage": {
+        "passed": true
+      },
+      "clip-boundaries": {
+        "passed": true
+      },
+      "motion-idle": {
+        "passed": true
+      },
+      "motion-walk": {
+        "passed": true
+      },
+      "motion-special": {
+        "passed": true
+      },
+      "transitions": {
+        "passed": true
+      },
+      "native-ink-closeups": {
+        "passed": true
+      },
+      "responsive-1440x900": {
+        "passed": true
+      },
+      "responsive-1024x768": {
+        "passed": true
+      },
+      "responsive-800x900": {
+        "passed": true
+      },
+      "responsive-641x900": {
+        "passed": true
+      },
+      "responsive-390x900": {
+        "passed": true
+      },
+      "responsive-390x844": {
+        "passed": true
+      },
+      "remount-ownership": {
+        "passed": true
+      },
+      "controls-narration": {
+        "passed": true
+      },
+      "runtime-errors": {
+        "passed": true
+      }
+    }
+  },
+  "qaRecipe": {
+    "path": "scripts/qa-zhulong-app.mjs",
+    "bytes": 32659,
+    "sha256": "6af537cc7daf883ae9ce980d3ca81140708f7e31234ba8fa271a59be65ef2645"
+  },
+  "narration": {
+    "path": "public/audio/narration/zhulong.mp3",
+    "bytes": 939663,
+    "sha256": "d590c026d21f621ba4a007d489a8bfdbad250419a50af23fc5ac67a9666516aa",
+    "provider": "CosyVoice v2",
+    "voice": "longsanshu",
+    "sampleRate": 22050,
+    "channels": 1,
+    "durationSeconds": 58.72325,
+    "previous": {
+      "path": "raw/_build/zhulong-narration-before-20261114/zhulong.mp3",
+      "sha256": "2f79d6cb0cbb3ba72c7b6184bcc60d92202c05d05cab88df46bfcd34be7575ee"
+    }
+  },
+  "rejectedAttempts": [
+    {
+      "evidence": "raw/_build/zhulong-stage-qa-20261114-v1",
+      "reason": "1024x768 card occluded native vertices; corrected species-specific card layout and camera."
+    },
+    {
+      "evidence": "raw/_build/zhulong-stage-qa-20261114-v3",
+      "reason": "Numerical checks passed but actual ink gray iris detail washed pale. Parent rejected; derived local contrast candidate and repeated full Stage QA."
+    }
+  ],
+  "deployment": {
+    "verified": false,
+    "reason": "Accepted runtime committed first; exact-SHA Actions and actual production verification follow push."
+  },
+  "publicStageQA": {
+    "path": "raw/_build/zhulong-stage-qa-20261114-public-v1/report.json",
+    "bytes": 6556127,
+    "sha256": "afea203386332243060028cdf519da66a89c79fb2658e9f2fc54443840e9bc71",
+    "passed": true,
+    "publicAsset": true,
+    "previewReadyOverride": false,
+    "sections": {
+      "native-reference": {
+        "passed": true
+      },
+      "native-stage": {
+        "passed": true
+      },
+      "clip-boundaries": {
+        "passed": true
+      },
+      "motion-idle": {
+        "passed": true
+      },
+      "motion-walk": {
+        "passed": true
+      },
+      "motion-special": {
+        "passed": true
+      },
+      "transitions": {
+        "passed": true
+      },
+      "native-ink-closeups": {
+        "passed": true
+      },
+      "responsive-1440x900": {
+        "passed": true
+      },
+      "responsive-1024x768": {
+        "passed": true
+      },
+      "responsive-800x900": {
+        "passed": true
+      },
+      "responsive-641x900": {
+        "passed": true
+      },
+      "responsive-390x900": {
+        "passed": true
+      },
+      "responsive-390x844": {
+        "passed": true
+      },
+      "remount-ownership": {
+        "passed": true
+      },
+      "controls-narration": {
+        "passed": true
+      },
+      "runtime-errors": {
+        "passed": true
+      }
+    },
+    "nativeReference": {
+      "sourceSha256": "02097f47531438ad80c6aef6ca1f6043b73dc461097ac7b872967ec880dd8b74",
+      "nativeVertices": 31954,
+      "matchedCompressedVertices": 31954,
+      "maximumRestError": 0.00020276721598935955,
+      "maximumReverseRestError": 0.00020276721598935955,
+      "matchingToleranceM": 0.00025,
+      "maskMethod": "Bidirectional rest-position geometry matching; no compressed-index or weight-derived masks",
+      "maskCounts": {
+        "head": 17602,
+        "neck": 3293,
+        "body": 14352,
+        "tail": 2208,
+        "all_native": 31954
+      },
+      "completeHeadAnchorCount": 3,
+      "edgeCounts": {
+        "neck": 8862,
+        "body": 39643,
+        "tail": 6218
+      },
+      "minimumEdgeLengthM": 0.005
+    },
+    "clipBoundaries": {
+      "idle": {
+        "positionSeamM": 3.7075396563868364e-08,
+        "wrapVelocityDifferenceMps": 0.0007355303540995154,
+        "wrapAccelerationDifferenceMps2": 0.005363317933983388,
+        "dt": 0.01,
+        "sampledVertices": 31954
+      },
+      "walk": {
+        "positionSeamM": 1.331286441678918e-07,
+        "wrapVelocityDifferenceMps": 0.003670181233918485,
+        "wrapAccelerationDifferenceMps2": 0.013098185850677638,
+        "dt": 0.01,
+        "sampledVertices": 31954
+      },
+      "special": {
+        "positionSeamM": 3.7075396563868364e-08,
+        "wrapVelocityDifferenceMps": 0.0007357070709442794,
+        "wrapAccelerationDifferenceMps2": 0.005226511615231213,
+        "dt": 0.01,
+        "sampledVertices": 31954
+      },
+      "specialIdleEndpoint": {
+        "position": 0,
+        "velocity": 4.667295063159685e-07,
+        "acceleration": 0.00015997956658724095
+      }
+    },
+    "remountOwnership": null,
+    "narrationPlayback": [
+      {
+        "src": "http://127.0.0.1:5199/audio/narration/zhulong.mp3",
+        "currentTime": 0.166031,
+        "paused": false,
+        "readyState": 4
+      }
+    ],
+    "runtimeErrors": []
+  },
+  "localChecks": {
+    "commands": [
+      "pnpm typecheck",
+      "pnpm validate",
+      "pnpm build",
+      "git diff --check",
+      "git lfs status"
+    ],
+    "passed": true,
+    "beastsValidated": 62,
+    "readyModelsValidated": 50,
+    "vite": "8.3.5"
+  },
+  "reproduceRigArgv": [
+    "/Applications/Blender.app/Contents/MacOS/Blender",
+    "--background",
+    "--factory-startup",
+    "--disable-autoexec",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "/Users/int64ago/workspace/shanhai/.claude/worktrees/beast-bingfeng/pipeline/blender/rig_zhulong_native.py",
+    "--",
+    "/Users/int64ago/workspace/shanhai/.claude/worktrees/beast-bingfeng/raw/zhulong-production-20261114-native-whole-v4-high/base_high_pbr.glb",
+    "/Users/int64ago/workspace/shanhai/.claude/worktrees/beast-bingfeng/raw/_build/zhulong-native-rig-20261114-reproduce",
+    "--calibration",
+    "/Users/int64ago/workspace/shanhai/.claude/worktrees/beast-bingfeng/raw/_build/zhulong-native-calibration-20261114/calibration.json",
+    "--accepted-source-sha256",
+    "02097f47531438ad80c6aef6ca1f6043b73dc461097ac7b872967ec880dd8b74"
+  ],
+  "requiredScreenshots": {
+    "parentPersonallyReadAll": true,
+    "images": [
+      {
+        "path": "concept/zhulong/production-20261114-final/idle.png",
+        "bytes": 832584,
+        "sha256": "c5a07e90c2114b75caf4cdabdf422568dd46f56eaceb9f1a76779d00574b7284"
+      },
+      {
+        "path": "concept/zhulong/production-20261114-final/walk.png",
+        "bytes": 832648,
+        "sha256": "e1de0f9145cf62b0c2a477ab68210790d804dfef9517719768053da53d1b12ae"
+      },
+      {
+        "path": "concept/zhulong/production-20261114-final/special.png",
+        "bytes": 832675,
+        "sha256": "30e67bdf638aa68371e36fd50429fc5fb483b58f0c664db43cb3dab91a4c4f20"
+      },
+      {
+        "path": "concept/zhulong/production-20261114-final/walk-close0.png",
+        "bytes": 424459,
+        "sha256": "f756ab8a9ed116bf018e3c491c3f575d0ab8ddbe21946248c057b7d96cc8f0b8"
+      },
+      {
+        "path": "concept/zhulong/production-20261114-final/walk-close1.png",
+        "bytes": 424970,
+        "sha256": "a3410c5756c39f4bc6189a19a16d83d508cf5ae0b923f5acb69610d967f314b9"
+      },
+      {
+        "path": "concept/zhulong/production-20261114-final/walk-close2.png",
+        "bytes": 424249,
+        "sha256": "847b46d5af5a3bd973f099b8f6c2a3f1891b345aa6743f658e27491340ad6f1f"
+      },
+      {
+        "path": "concept/zhulong/production-20261114-final/walk-head-front.png",
+        "bytes": 938029,
+        "sha256": "f846b14226254f7533a5a202ccd3c34a220447c5f6d1d528a57d8a962517877a"
+      },
+      {
+        "path": "concept/zhulong/production-20261114-final/responsive-390x844.png",
+        "bytes": 255301,
+        "sha256": "e7c43e3ce05718065f91651e6f96b6333cf7d34fb9d39d6d2825900cc1905f91"
+      }
+    ],
+    "commands": [
+      "node scripts/shot.mjs http://localhost:5199/?beast=zhulong&action=idle|walk|special OUT.png 1440x900 2200",
+      "node scripts/closeups.mjs http://localhost:5199/?beast=zhulong&action=walk PREFIX 3 280 320,160,1060,580"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "zhulong-production-20261114-native-whole-v4-high",
+  "beast": "zhulong",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "One complete Zhulong matching all four reference views. A fully HUMAN adult head with normal forehead, human eyelids, projecting human nose, lips, ears, jaw and chin, short black hair. Head joins a SHORT THICK red scaled neck that continuously becomes one long extended red snake trunk and ONE pointed tail. Preserve almost-straight horizontal reference pose with only gentle curvature, head slightly raised. Seven-head-length body, rounded thick front gradually tapers rearward. Smooth healthy organic transition from warm human face/ear skin into cinnabar neck scales. Entire human head and entire tail visible. No coils, returning trunk, fused bridges, knots, branches, upright stalk neck, reptile face, muzzle, cobra hood, human chest, shoulders, arms, legs, wings, horns, pedestal or props. Preserve exact reference anatomy and proportions.",
+  "images": [
+    "concept/zhulong/production-20261114-native-whole-v4/view_34.png",
+    "concept/zhulong/production-20261114-native-whole-v4/view_side.png",
+    "concept/zhulong/production-20261114-native-whole-v4/view_front.png",
+    "concept/zhulong/production-20261114-native-whole-v4/view_back.png"
+  ],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000, "addons": "HighPack" }
+}
