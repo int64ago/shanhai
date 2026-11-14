@@ -1,0 +1,12 @@
+{
+  "id": "tianwu-production-20261115-native-eight-leg-core-v2-medium",
+  "beast": "tianwu",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "A living eight-legged mammalian BODY CORE for TIANWU: exactly EIGHT complete muscular feline legs arranged as FOUR clearly separated bilateral pairs along one long horizontal tiger-like trunk. Every leg grows organically from its own shoulder or hip girdle, with natural upper leg, knee or elbow, lower leg, ankle and broad feline paw. Each paw has four short forward toes and dark curved claws, all eight soles on one level. Pairs spaced evenly along both flanks; legs angled slightly outward so eight separate paws and all leg roots are readable. Deep continuous ribcage, softly rounded belly between the paired roots, short dense fur. Back fur blue-green and warm ochre yellow, underside pale cream. Front ends in a broad low rounded furry shoulder dome and rear in a rounded furry rump, both closed with no head, neck, tail, socket, cut or stump. Complete mature animal core, natural varied PBR, neutral light, no base or props.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

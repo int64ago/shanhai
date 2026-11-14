@@ -1,0 +1,12 @@
+{
+  "id": "longzhi-production-20261115-four-paw-fox-trunk-v3-medium",
+  "beast": "longzhi",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "A mature living russet FOX TRUNK with exactly FOUR complete legs, viewed standing on four broad tiger paws. Slender horizontal ribcage, long level back, muscular shoulders, narrow waist and rounded haunches. Warm reddish-brown layered fur with cream chest and underside. Each leg has one natural ankle and a broad feline paw with four forward toes, short dark curved claws and a flat weight-bearing sole. Front pair set slightly wider than the rear pair; all four paws separated and visible. The FRONT ends in a low rounded furry shoulder dome without a head or neck. The REAR ends in a high smoothly rounded furry rump without any tail, projection or fifth limb. Underside slopes gently between the four independent leg roots. Complete healthy anatomical body reference for later attachment of heads and tails. Natural varied fur PBR, neutral studio light. No socket, cut face, stump, collar, plinth or detached piece.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

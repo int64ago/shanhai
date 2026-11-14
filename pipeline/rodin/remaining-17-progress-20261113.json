@@ -3,20 +3,20 @@
   "updatedAt": "2026-11-15",
   "authorization": "pipeline/rodin/remaining-17-authorization-20261113.json",
   "ledgerBaselineLines": 143,
-  "newSubmittedTransactions": 77,
-  "newCreditsConsumed": 45.0,
+  "newSubmittedTransactions": 85,
+  "newCreditsConsumed": 49.0,
   "newCreditsPerBeast": {
     "jiaochong": 4.0,
-    "kuafu": 3.5,
+    "kuafu": 4.0,
     "leishen": 2.0,
     "zhulong": 3.0,
-    "xixiyu": 1.5,
+    "xixiyu": 2.0,
     "xiangliu": 1.5,
-    "qiangliang": 3.0,
-    "shuhu": 4.5,
-    "kui": 2.5,
+    "qiangliang": 3.5,
+    "shuhu": 5.0,
+    "kui": 4.0,
     "xingxing": 1.5,
-    "lu_fish": 4.5,
+    "lu_fish": 5.0,
     "jimeng": 3.5,
     "yinglong": 4.0,
     "lingyu": 3.0,
@@ -150,9 +150,19 @@
       "expectedCost": 1,
       "submitted": false,
       "consumed": 0
+    },
+    {
+      "beast": "longzhi",
+      "job": "longzhi-production-20261115-four-paw-fox-trunk-v3-medium",
+      "jobFile": "pipeline/rodin/jobs/longzhi-production-20261115-four-paw-fox-trunk-v3-medium.json",
+      "expectedCredits": 0.5,
+      "submitted": false,
+      "consumed": 0,
+      "reason": "Real-World Transactions: explicit user confirmation for this generation or a specifically scoped ongoing paid batch would clear the block.",
+      "context": "Automatic review rejected despite recorded prior direct execute-and-continue confirmation for original17. No retry, alternate worker, provider or permission changes."
     }
   ],
-  "denialStatus": "Automatic Real-World Transactions review still requires direct confirmation covering Kui v5 or ongoing batch; denied again after parent directly re-read original batch answer. No alternate tool/worker/job submission.",
+  "denialStatus": "Longzhi v3 paid submission newly denied before execution. Earlier Kui v5 refusal remains resolved; do not confuse the two decisions.",
   "postReconfirmation": {
     "baselineReset": false,
     "newHighHeads": [
@@ -170,12 +180,14 @@
     "kuafuV1OfflineHands": "Rejected after one candidate and one correction. Worker found foot geometry accidentally removed by an unbounded hand-deletion predicate, plus palm UV seams and wrist collars. Neither derivative is reusable or accepted. Native v2 remains immutable and independent."
   },
   "latestAutomaticApprovalBlock": {
-    "job": "kui-production-20261114-natural-text-only-monopod-v5-medium",
-    "expectedCost": 0.5,
+    "beast": "longzhi",
+    "job": "longzhi-production-20261115-four-paw-fox-trunk-v3-medium",
+    "jobFile": "pipeline/rodin/jobs/longzhi-production-20261115-four-paw-fox-trunk-v3-medium.json",
+    "expectedCredits": 0.5,
     "submitted": false,
     "consumed": 0,
-    "status": "automatic-approval-denied-before-execution",
-    "reason": "Automatic Real-World Transactions review still requires direct confirmation covering Kui v5 or ongoing batch; denied again after parent directly re-read original batch answer. No alternate tool/worker/job submission."
+    "reason": "Real-World Transactions: explicit user confirmation for this generation or a specifically scoped ongoing paid batch would clear the block.",
+    "context": "Automatic review rejected despite recorded prior direct execute-and-continue confirmation for original17. No retry, alternate worker, provider or permission changes."
   },
   "runtimeAssetsChanged": true,
   "runtimeAssetStatus": "Xingxing,Jiaochong,Yinglong,Jimeng,Zhulong,Leishen individually released to main; each exact-SHA CI/Deploy and actual production verified. 51/62 live.",
@@ -841,12 +853,14 @@
   },
   "currentAutomaticApprovalBlocks": [
     {
-      "job": "kui-production-20261114-natural-text-only-monopod-v5-medium",
-      "expectedCost": 0.5,
+      "beast": "longzhi",
+      "job": "longzhi-production-20261115-four-paw-fox-trunk-v3-medium",
+      "jobFile": "pipeline/rodin/jobs/longzhi-production-20261115-four-paw-fox-trunk-v3-medium.json",
+      "expectedCredits": 0.5,
       "submitted": false,
       "consumed": 0,
-      "status": "automatic-approval-denied-before-execution",
-      "reason": "Automatic Real-World Transactions review still requires direct confirmation covering Kui v5 or ongoing batch; denied again after parent directly re-read original batch answer. No alternate tool/worker/job submission."
+      "reason": "Real-World Transactions: explicit user confirmation for this generation or a specifically scoped ongoing paid batch would clear the block.",
+      "context": "Automatic review rejected despite recorded prior direct execute-and-continue confirmation for original17. No retry, alternate worker, provider or permission changes."
     }
   ],
   "postReconfirmation20261114Second": {
@@ -1052,14 +1066,16 @@
     "status": "All four same prepared jobs completed via normal parent client after direct human instruction; source anatomy review pending. Tool notifications are not human consent."
   },
   "activeOfflineWork": [
-    "Leishen3566af9 main/CI/Deploy/live verified; parent personally Read all5 production screenshots. 51/62 live; goal incomplete.",
-    "Qiangliang v6 parent Read3/4 and four ends: hands with thumbs/fingers, feet with4dark toe lobes. Rejected four-cloven anatomy. Bounded offline improvement of native v5 true four-hoof pastern roots now underway; no paid/rig/public acceptance.",
-    "Kui v4 High rejected after actual PBR reads: correct one leg but white toy surface/block hoof unchanged. Text-only v5 request automatically denied, no submission/charge. Independent bounded offline naturalization reference underway.",
-    "Xingtian v5 both hands have independently diagnosed true distal central-finger bridges. Minus-X is not a complete healthy donor. Bounded local bridge separation underway, preserving successful closed shoulders/chest eyes/navel mouth/feet.",
-    "Longzhi fifth-paw removal preserved4paws but both exported local closures remain a flat patch/UV blotch; parent Read and rejected, stopped that method. New qualified native torso or redesigned organic lower abdomen required.",
-    "Xiangliu local root tissue candidate/fix rejected after actual GLB root images: stretched folds/individual wrapping and protected head normal errors. Original nine-head layout/source retained; need truly organic common roots, no rig/public acceptance.",
-    "Shuhu v7 source body/wing root and two v4 rump closures rejected. New effective structure method required.",
-    "All other unready beasts and previously rejected remakes remain in scope."
+    "Main0135ec628e6bcce0816881aed5860b68956a95cb exact-SHA CI, Deploy and actual production verification passed. 51/62 live; no new ready candidates.",
+    "Kui native v5 and v6 rejected for four legs; single-image v7 rejected for toy-like body and rectangular hoof. Read-only feasibility of healthy v5 body plus single native leg now underway.",
+    "Lu_fish v4 rejected for horns, shoulder hump and ordinary tail stalk with snake-head-like tip. Single-image v5 draft frozen, never submitted.",
+    "Shuhu native v8 rejected for ordinary horse head. Native-tail reshape rejected for bent flattened transition. Single-image v9 draft frozen, never submitted.",
+    "Qiangliang native v7 rejected for fingers/toes instead of true cloven hooves. V5 four-band replacement candidate+fix rejected after parent Read actual wrist images and independent audit:31 inconsistent winding edges, visible crease and material transition. No third attempt.",
+    "Xingtian Jimeng-hand transplant candidate+color fix rejected for residual wrist ring and faceted transition. Five-digit donor hands and protected body retained; read-only material-versus-geometry wrist diagnostic underway.",
+    "Kuafu graph-grasp attempt rejected for self-intersections, inverted Jacobians and failed opposing contact. Native-grasp v3 parent rejected after actual wrist/palm/snake closeups: snakes draped on wrists, no opposed grip.",
+    "Xiangliu common-volume root candidate+fix rejected at geometry gate: open/nonmanifold boundaries, unmatched interfaces and crossings. No new PBR or final acceptance. This implementation stopped.",
+    "Xixiyu native v4 rejected. Alternative retaining two native wings as first pair of ten also blocked by fused wing/body shell; no confirmed two independent free wing surfaces, no candidate or High.",
+    "Tianwu existing-source inventory completed: no accepted native production parts; new eight-leg-core draft prepared but unsubmitted. Longzhi v3 draft blocked before execution; Lingyu and other remakes unfinished."
   ],
   "resolvedAutomaticApprovalBlocks20261114Fourth": {
     "directHumanSelection": "执行并继续原17只",
@@ -1743,6 +1759,345 @@
         "foot_minus_x_minus_y.png",
         "foot_plus_x_minus_y.png"
       ]
+    },
+    {
+      "beast": "kui",
+      "sourceSha256": "2fbebd7bf27602baffbda7be3d62d6000066409fbe9efbeae7dc4684b4f81f44",
+      "decision": "rejected-native-v5-four-legs",
+      "reason": "Improved living bovine surface but four complete ordinary legs/hooves, not one belly-center support limb.",
+      "parentPersonallyRead": true,
+      "evidenceDirectory": "raw/_build/kui-natural-v5-native-review-20261115-v1",
+      "images": [
+        "contact_four_views.png",
+        "single_hoof.png",
+        "belly_root.png"
+      ]
+    },
+    {
+      "beast": "xingtian",
+      "candidateSha256": "4bbf36c273b60844ca9b891b12293a39ac78762c4ca371f8cb1d5385e56812f2",
+      "decision": "rejected-local-finger-slits",
+      "reason": "Central fingers separated but straight grooves, flat tips and wedge-shaped inner edges remain.",
+      "parentPersonallyRead": true,
+      "evidenceDirectory": "raw/_build/xingtian-v5-fingers-fix1-reimport-review-20261115-0101",
+      "images": [
+        "hand_plus_x_back.png",
+        "hand_plus_x_tips.png",
+        "hand_minus_x_tips.png",
+        "contact_four_views.png"
+      ]
+    },
+    {
+      "beast": "shuhu",
+      "candidateSha256": "9f51ff653130ac6b3dcf0f201d5179945850edd6297b49201c0abf0e0a74f3a3",
+      "decision": "rejected-single-tail-high-reference",
+      "reason": "Native-root topology retained and one tip achieved, but bent root shoulder/flattened transition and old black horse-tail material remain.",
+      "parentPersonallyRead": true,
+      "evidenceDirectory": "raw/_build/shuhu-v4-native-tail-reshape-correction1-review-20261115-0130",
+      "images": [
+        "contact_four_views.png",
+        "tail_root_left.png",
+        "tail_root_right.png",
+        "single_tail_tip.png"
+      ]
+    },
+    {
+      "beast": "kui",
+      "decision": "rejected-native-v6-four-legs-and-horns",
+      "reason": "Four complete legs/soles and two horns; no central monopod.",
+      "parentPersonallyRead": true,
+      "sourceSha256": "f8982db714ea2106ffaa8c23eb414c91423aded368bcd8bc530d44a30273d49e",
+      "evidenceDirectory": "raw/_build/kui-v6-native-review-20261115-v1",
+      "images": [
+        "belly_bottom.png",
+        "head_front.png",
+        "contact_four_views.png"
+      ]
+    },
+    {
+      "beast": "lu_fish",
+      "decision": "rejected-native-v4-horns-and-tail",
+      "reason": "Upturned horns, shoulder hump and ordinary thin tail stalk ending in snake-head-like block; not selected hornless ox/single tapering snake-tail design.",
+      "parentPersonallyRead": true,
+      "sourceSha256": "ecfa0cee0398f3ba199b114b01fdd54a6ac9775705ca491aa1af63ad23e0b5a4",
+      "evidenceDirectory": "raw/_build/lu-fish-v4-native-independent-review-20261115-0200",
+      "images": [
+        "contact_four_views.png"
+      ]
+    },
+    {
+      "beast": "shuhu",
+      "decision": "rejected-native-v8-horse-head",
+      "reason": "Ordinary complete horse head rather than human face; four horse legs do not resolve head-anatomy failure.",
+      "parentPersonallyRead": true,
+      "sourceSha256": "0c54d3d1aa14af51578625ed13305fd72513ac93c2132c8943eaa6234eeb9671",
+      "evidenceDirectory": "raw/_build/shuhu-native-v8-review-20261115-v1",
+      "images": [
+        "contact_four_views.png",
+        "sacral_tail_root.png",
+        "front_hooves.png"
+      ]
+    },
+    {
+      "beast": "qiangliang",
+      "decision": "rejected-native-v7-fingers-and-toes",
+      "reason": "Wrists retain palms, opposed thumbs and fleshy fingers; feet retain multiple fleshy toes/claws. No four true cloven hoof terminals.",
+      "parentPersonallyRead": true,
+      "sourceSha256": "46d75c8e2f1cd2405f8ffcd5fcb87f57962fe3d3b3ee84c0bfa300cb1c3f5aad",
+      "evidenceDirectory": "raw/_build/qiangliang-v7-native-review-20261115-v1",
+      "images": [
+        "arm_minus_back.png",
+        "arm_plus_back.png",
+        "leg_minus_front.png",
+        "leg_plus_front.png"
+      ]
+    },
+    {
+      "beast": "kui",
+      "decision": "rejected-single-guide-v7-toy-surface-and-block-hoof",
+      "reason": "One central leg retained, but input toy barrel, simplified muzzle, low-variation white surface and rectangular cloven blocks remain.",
+      "parentPersonallyRead": true,
+      "sourceSha256": "d671f4d959b96f864f41127fed1ef79b9b6761b655a475ca8cc970141f31fbe6",
+      "evidenceDirectory": "raw/_build/kui-single-guide-v7-native-review-20261115-v1",
+      "images": [
+        "contact_four_views.png",
+        "leg_hoof.png",
+        "root_surface.png"
+      ]
+    },
+    {
+      "beast": "xixiyu",
+      "decision": "rejected-native-v4-folded-wings-and-sloping-core",
+      "reason": "Geometric bilateral folded wings clearly remain; rounded sloping torso and broad multilayer tail do not meet selected horizontal wingless core reference.",
+      "parentPersonallyRead": true,
+      "sourceSha256": "22c6eca7bc06d6831275576d05f382e523725ed46be3ac4c057b07de80630689",
+      "evidenceDirectory": "raw/_build/xixiyu-v4-native-readonly-review-20261115-a",
+      "images": [
+        "view_plus_x_side.png",
+        "full_top.png",
+        "belly_bottom.png",
+        "tail_root_side.png",
+        "tail_feathers_top.png"
+      ]
+    },
+    {
+      "beast": "xingtian",
+      "decision": "rejected-dual-source-hands-residual-wrist-ring",
+      "reason": "Healthy donor fingers retained, but palm-root texture ring and angular dorsal wrist transition remain after color fix.",
+      "parentPersonallyRead": true,
+      "candidateSha256": "ad0478b300cf769c1361efbbf907f0be12d92e5e37a1dc64309d1a4cad4fc0ef",
+      "evidenceDirectory": "raw/_build/xingtian-jimeng-hands-fix1-reimport-review-20261115-0208",
+      "images": [
+        "wrist_plus_x_front.png",
+        "wrist_minus_x_back.png",
+        "contact_four_views.png"
+      ]
+    },
+    {
+      "beast": "xiangliu",
+      "decision": "rejected-common-volume-geometry-gate",
+      "reason": "New roots have open/nonmanifold boundaries, unmatched native interfaces, self/body crossings; actual image shows black neck gaps and jagged torso boundary. No texture stage.",
+      "parentPersonallyRead": true,
+      "candidateSha256": "58f29b77dd0a88860b6c8a2df8bdec678ab52bad99c6985f78d63d531a4981f3",
+      "evidenceDirectory": "raw/_build/xiangliu-common-volume-correction1-actual-glb-review-20261115",
+      "images": [
+        "roots_front.png"
+      ]
+    },
+    {
+      "beast": "kuafu",
+      "decision": "rejected-graph-grasp-self-intersections",
+      "reason": "Graph/DQS trial has body/hand-snake crossings, nonpositive Jacobians and no secure opposed thumb/four-finger grip.",
+      "parentPersonallyRead": true,
+      "candidateSha256": "b7b6228a6e40958faef62a2583bddc8573eb601c418c878bd94a555107f1cc6c",
+      "evidenceDirectory": "raw/_build/kuafu-graph-grasp-20261115-a",
+      "images": [
+        "hand_L_palm.png",
+        "hand_R_palm.png"
+      ]
+    },
+    {
+      "beast": "kuafu",
+      "sourceSha256": "14d46d1ad8338faf253e9681c3fe2a08cc6991bfcfcada86397514516c755b80",
+      "decision": "rejected-native-v3-no-opposed-grip",
+      "reason": "Snakes hang around wrists/dorsal hands; four fingers and opposing thumb do not grip one shared snake segment. Positive-X complete snake head not established; negative-X snake has ambiguous branched contour. No fusion/intersection acceptance.",
+      "parentPersonallyRead": true,
+      "evidenceDirectory": "raw/_build/kuafu-v3-native-grasp-readonly-review-20261115-a",
+      "images": [
+        "hand_negx_minus_y.png",
+        "hand_negx_contact_bottom.png",
+        "hand_posx_inner_thumb.png",
+        "snake_posx_whole.png",
+        "snake_negx_whole.png"
+      ]
+    },
+    {
+      "beast": "qiangliang",
+      "decision": "rejected-four-band-pastern-fix1",
+      "sourceSha256": "a1e0905177df7b6327aacf7c0a1a68a670d9852d753dce1e906039e3e0d2a562",
+      "candidateSha256": "4650dfb0a271e8524144eb248dad8e6c8de2fff561d9726d3a923dbd52e2c945",
+      "reason": "31 inconsistent winding edges introduced (24 within +X new band,7 along hoof interface); visible wrist-root crease, hard material boundary and local keratin blemishes. Native protection and closed topology do not constitute acceptance.",
+      "parentPersonallyRead": true,
+      "evidenceDirectory": "raw/_build/qiangliang-v5-rebuilt-pastern-20261115-fix1",
+      "images": [
+        "arm_1_front.png",
+        "arm_1_back.png",
+        "arm_-1_back.png"
+      ],
+      "independentAuditSha256": "6d33b5ad2c721ee24cd8f594a549b56aa7a35295a3264b66861fa6fff4112581"
+    }
+  ],
+  "qualityPriorityContinuation20261115": {
+    "authorization": {
+      "date": "2026-11-15",
+      "source": "Current direct human AskUserQuestion response in this conversation",
+      "humanMessage": "不用担心积分花费问题，还很充足，确保质量优先",
+      "question": "自动审批拦截了已备好的夔 v5（Medium，0.5 积分），要求明确的执行确认。是否执行这笔，并继续原 17 只所需的付费重生成、验收后的 High 和逐只发布？沿用每只新增最多 12、总新增最多 204 的原上限；当前已用 45，固定基线不变。",
+      "selectedAnswer": "执行并继续原17只 (Recommended)",
+      "fixedBaselineLines": 143,
+      "fixedBaselineSha256": "fe456f658ff1c014b53a4b9c9cecd1dd244f684c18dc117fe50ca1bf7d5af792",
+      "perBeastNewCap": 12,
+      "aggregateNewCap": 204,
+      "baselineReset": false
+    },
+    "newTransactions": [
+      {
+        "time": "2026-11-14T17:14:50.079Z",
+        "beast": "kui",
+        "job": "kui-production-20261114-natural-text-only-monopod-v5-medium",
+        "hash": "8aaf3a17a4d12a20",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "71fe07b8-93cd-4e58-b6a4-e42a2f0e3dbc",
+        "consumed": 0.5,
+        "sourcePath": "raw/kui-production-20261114-natural-text-only-monopod-v5-medium/base_basic_pbr.glb",
+        "downloaded": true,
+        "sourceSha256": "2fbebd7bf27602baffbda7be3d62d6000066409fbe9efbeae7dc4684b4f81f44",
+        "sourceBytes": 1961500
+      },
+      {
+        "time": "2026-11-14T17:19:06.275Z",
+        "beast": "lu_fish",
+        "job": "lu_fish-production-20261115-native-ox-snake-tail-v4-medium",
+        "hash": "c840878ccb3617b4",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "2f71974c-380b-4a95-bf72-32cf5a1890c5",
+        "consumed": 0.5,
+        "sourcePath": "raw/lu_fish-production-20261115-native-ox-snake-tail-v4-medium/base_basic_pbr.glb",
+        "downloaded": true,
+        "sourceSha256": "ecfa0cee0398f3ba199b114b01fdd54a6ac9775705ca491aa1af63ad23e0b5a4",
+        "sourceBytes": 2850096
+      },
+      {
+        "time": "2026-11-14T17:21:03.602Z",
+        "beast": "kui",
+        "job": "kui-production-20261115-living-monoped-v6-medium",
+        "hash": "08037f99704bb5a0",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "17297197-e578-427d-be60-f5a03f603bad",
+        "consumed": 0.5,
+        "sourcePath": "raw/kui-production-20261115-living-monoped-v6-medium/base_basic_pbr.glb",
+        "downloaded": true,
+        "sourceSha256": "f8982db714ea2106ffaa8c23eb414c91423aded368bcd8bc530d44a30273d49e",
+        "sourceBytes": 2184324
+      },
+      {
+        "time": "2026-11-14T17:21:26.236Z",
+        "beast": "shuhu",
+        "job": "shuhu-production-20261115-native-single-snake-tail-whole-v8-medium",
+        "hash": "2324d8105a132c8f",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "179edc15-0613-40ef-8a01-70bf81cdc38e",
+        "consumed": 0.5,
+        "sourcePath": "raw/shuhu-production-20261115-native-single-snake-tail-whole-v8-medium/base_basic_pbr.glb",
+        "downloaded": true,
+        "sourceSha256": "0c54d3d1aa14af51578625ed13305fd72513ac93c2132c8943eaa6234eeb9671",
+        "sourceBytes": 1784664
+      },
+      {
+        "time": "2026-11-14T17:22:31.080Z",
+        "beast": "qiangliang",
+        "job": "qiangliang-production-20261115-native-ungulate-terminals-v7-medium",
+        "hash": "d78a97069242fef7",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "b775bd5c-51e0-44ae-a549-6d85ab954936",
+        "consumed": 0.5,
+        "sourcePath": "raw/qiangliang-production-20261115-native-ungulate-terminals-v7-medium/base_basic_pbr.glb",
+        "downloaded": true,
+        "sourceSha256": "46d75c8e2f1cd2405f8ffcd5fcb87f57962fe3d3b3ee84c0bfa300cb1c3f5aad",
+        "sourceBytes": 2025876
+      },
+      {
+        "time": "2026-11-14T17:29:42.387Z",
+        "beast": "xixiyu",
+        "job": "xixiyu-production-20261115-native-magpie-core-v4-medium",
+        "hash": "99c542f179bbb414",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "72b2db39-daa1-43a1-8ff0-84b87750ab22",
+        "consumed": 0.5,
+        "sourcePath": "raw/xixiyu-production-20261115-native-magpie-core-v4-medium/base_basic_pbr.glb",
+        "downloaded": true,
+        "sourceSha256": "22c6eca7bc06d6831275576d05f382e523725ed46be3ac4c057b07de80630689",
+        "sourceBytes": 1981100
+      },
+      {
+        "time": "2026-11-14T17:32:06.336Z",
+        "beast": "kui",
+        "job": "kui-production-20261115-single-guide-living-monoped-v7-medium",
+        "hash": "c7e9daac44705997",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "c29c5c73-55cf-4717-90a8-8e709af78c7a",
+        "consumed": 0.5,
+        "sourcePath": "raw/kui-production-20261115-single-guide-living-monoped-v7-medium/base_basic_pbr.glb",
+        "downloaded": true,
+        "sourceSha256": "d671f4d959b96f864f41127fed1ef79b9b6761b655a475ca8cc970141f31fbe6",
+        "sourceBytes": 1293652
+      },
+      {
+        "time": "2026-11-14T17:32:54.091Z",
+        "beast": "kuafu",
+        "job": "kuafu-production-20261115-native-grasp-v3-medium",
+        "hash": "2b7637d2e3f22763",
+        "tier": "Gen-2.5-Medium",
+        "uuid": "57b85843-74b3-48d1-aac1-6f272aa8ae83",
+        "consumed": 0.5,
+        "sourcePath": "raw/kuafu-production-20261115-native-grasp-v3-medium/base_basic_pbr.glb",
+        "downloaded": true,
+        "sourceSha256": "14d46d1ad8338faf253e9681c3fe2a08cc6991bfcfcada86397514516c755b80",
+        "sourceBytes": 1393492
+      }
+    ],
+    "readiness": "No candidate in this continuation marked ready. 51/62 live; exact audit main0135ec6 verified."
+  },
+  "imageGuidanceMethodReview20261115": {
+    "decision": "Freeze unsubmitted Lu v5/Shuhu v9 single-image drafts; input defects cannot be assumed removable by a descriptive prompt.",
+    "officialEvidence": "https://docs.hyper3d.ai/en/api-specification/rodin-gen2.md",
+    "officialScope": "Image-to-3D supports one to five images and optional prompt; no verified statement that prompt overrides input geometry.",
+    "thirdPartyEvidence": "https://help.layer.ai/articles/3846437406-prompt-rodin-for-image-to-3d",
+    "thirdPartyScope": "Reported near-identical same-image/same-seed results with and without descriptive prompt; not an official guarantee.",
+    "localExperiment": "Kui single-guide v7 retained toy-like source appearance and block hooves."
+  },
+  "latestRepositoryVerification20261115": {
+    "typecheck": "passed",
+    "validate": "passed",
+    "build": "passed",
+    "gitDiffCheck": "passed",
+    "gitLfsStatus": "checked; only existing three text records modified, no staged binary assets",
+    "resultBundle": "dist/assets/index-BMWg9v5d.js",
+    "runtimeAssetsChangedInThisContinuation": false,
+    "newReady": 0
+  },
+  "unsubmittedCoreDrafts20261115": [
+    {
+      "beast": "longzhi",
+      "path": "pipeline/rodin/jobs/longzhi-production-20261115-four-paw-fox-trunk-v3-medium.json",
+      "expectedCredits": 0.5,
+      "status": "automatic-approval-denied-before-execution"
+    },
+    {
+      "beast": "tianwu",
+      "path": "pipeline/rodin/jobs/tianwu-production-20261115-native-eight-leg-core-v2-medium.draft.json",
+      "expectedCredits": 0.5,
+      "status": "draft-only-not-submitted"
     }
   ]
 }

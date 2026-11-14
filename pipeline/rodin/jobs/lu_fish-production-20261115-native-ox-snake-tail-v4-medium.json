@@ -1,0 +1,12 @@
+{
+  "id": "lu_fish-production-20261115-native-ox-snake-tail-v4-medium",
+  "beast": "lu_fish",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "A mature living hornless ox with a broad moist bovine muzzle, small ears, dark eyes, thick neck, level back, deep ribcage and natural muscular rump. Fine warm grey-brown short fur follows the muscles, with subtle skin folds and varied natural roughness. FOUR separate sturdy bovine legs stand evenly on FOUR dark keratin CLOVEN HOOVES: each hoof has exactly two rounded solid halves and one central cleft. Anatomical exception: exactly ONE long scaled snake tail grows continuously from the normal midline sacrum, with a broad round muscular root, a flexible gradually narrowing shaft and one pointed tip. The single tail curves backward clear of both hind legs and stays above ground. There is no ordinary bovine tail or second tail. Smooth continuous low flanks below the ribs are reserved for later wings; this body has no wings. Entire head, body, four grounded hooves and complete tail visible. Realistic organic animal and PBR fur, skin, scales and hoof. No horns, fins, claws, paws, stumps, props or pedestal.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

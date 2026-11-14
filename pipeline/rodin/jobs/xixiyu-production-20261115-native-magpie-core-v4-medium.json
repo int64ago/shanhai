@@ -1,0 +1,12 @@
+{
+  "id": "xixiyu-production-20261115-native-magpie-core-v4-medium",
+  "beast": "xixiyu",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE slim FEATHERED MAGPIE CORE, a wingless and legless bird body for later assembly. A small natural magpie head with two dark eyes and a straight pointed beak faces forward along a horizontal neck and elongated narrow torso. Level back, shallow belly, body length three times its depth. Fine overlapping ink-black contour feathers on head and back, cream-white belly and flanks, subtle blue iridescence. ONE long narrow wedge-shaped magpie tail extends straight behind the rump: layered long flat tail feathers with visible shafts, paired vanes and individual rounded ends, about as long as the torso. Smooth feathered contours on both sides, without attached wings or wing stumps. The underside has no legs, feet or stumps. Entire beak, slender body and all tail feathers visible in a horizontal neutral pose. Realistic living bird anatomy and varied matte feather PBR. No appendages, props, support or pedestal.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

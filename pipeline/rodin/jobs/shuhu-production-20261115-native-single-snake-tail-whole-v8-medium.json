@@ -1,0 +1,12 @@
+{
+  "id": "shuhu-production-20261115-native-single-snake-tail-whole-v8-medium",
+  "beast": "shuhu",
+  "budget": 12.5,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE living Shuhu: a complete adult HUMAN HEAD on a mature horse neck and body. Normal human cranium, forehead, eyes, nose, closed lips, jaw, chin, two human ears and short dark hair; no muzzle or horse ears. A curved muscular equine neck joins a HORIZONTAL chestnut barrel torso and rounded rump. Exactly FOUR independent horse legs, two fore and two hind, each with a pastern and ONE solid single hoof; all four planted, separated and visible. ONE scaled snake tail grows as unbroken living tissue from the dorsal sacrum, turns backward clear of both hindlegs and tapers from a round muscular base to one fine tip. It REPLACES the horse tail: no hair tail, second tail, branches, plugs or capped junction. Warm porous skin, fine chestnut short coat, subtle muscle planes, small overlapping reptile scales and pale belly scutes; coat gradually meets scales at the tail base. Varied organic PBR roughness, no plastic or toy gloss. Full body visible. No wings, feathers, human torso, arms, saddle, props or base.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

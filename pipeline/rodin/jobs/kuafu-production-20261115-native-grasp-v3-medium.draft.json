@@ -1,0 +1,12 @@
+{
+  "id": "kuafu-production-20261115-native-grasp-v3-medium",
+  "beast": "kuafu",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "KUAFU, full standing mature Chinese male giant, one intact normal human head and body, two arms, two legs, healthy bare human feet with five toes each. Living warm skin, natural muscles, short brown cloth waist wrap, not a toy or statue. Arms held away from hips, elbows gently bent; both hands clearly visible in front, palms facing inward. EXACTLY TWO separate complete yellow snakes, ONE held in EACH hand. In each hand a near-straight snake MID-BODY runs crosswise across the palm: four fingers curl around that same segment, finger pads press one side, the opposed thumb pad presses the other, forming a secure closed grip. Five distinct natural digits per hand. Snake skin and palm skin stay visibly separate, no fusion or piercing. Each snake has one readable head and a tapering tail extending freely beyond opposite ends of its grip; loose curves clear of wrists, body and other snake. Short swept-back hair, ears exposed and empty. Balanced stance, both soles flat. No extra limbs, props, base or cropped parts.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

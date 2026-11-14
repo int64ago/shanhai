@@ -1,0 +1,12 @@
+{
+  "id": "kui-production-20261114-natural-text-only-monopod-v5-medium",
+  "beast": "kui",
+  "budget": 12.5,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "A mature living bovine with fine short slate blue-grey fur, a weighty ribcage, subtle shoulder muscles, soft skin folds and a realistic moist muzzle with shaped nostrils and dark eyes. Small soft ears, hornless head. Anatomical exception: exactly ONE load-bearing leg emerges broadly from the belly MIDPOINT on the centerline, with one knee, one shin and one shared ankle ending in ONE dark keratin cloven hoof. Its two curved tapered claws have rounded toes, sloping walls and a shallow natural hairline, not square blocks or boots. The chest, rump and both flanks have continuous legless contours: no other limb roots, stumps or hidden limbs. Clear empty space below chest and rump. One slender bovine tail curves above ground without supporting the animal. Balanced calm stance, entire body and sole hoof visible in a neutral three-quarter view. Organic animal proportions and natural PBR skin, fur and hoof material. No horns, antlers, wings, extra hooves, props or pedestal.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

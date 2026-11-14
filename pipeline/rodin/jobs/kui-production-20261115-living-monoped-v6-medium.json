@@ -1,0 +1,12 @@
+{
+  "id": "kui-production-20261115-living-monoped-v6-medium",
+  "beast": "kui",
+  "budget": 12.5,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "KUI, A ONE-LEGGED LIVING MONOPED. Exactly ONE muscular support limb at the belly centerline; one upper leg, one knee, one shin, one ankle and one dark cloven hoof. Its entire body is supported by this sole central leg. Smooth legless chest, legless rump and legless sides, with open air beneath the front and rear body. The solitary belly leg has a broad fleshy root and narrows naturally through the knee and pastern to one keratin hoof split into two curved rounded claws. Above it is a horizontal mature ox-like ribcage, thick neck, hornless bovine head, soft ears, dark eyes, moist muzzle and loose dewlap. One slender lifted tail. Fine slate-grey short fur follows organic muscles and skin folds; realistic living skin and dark hoof PBR. Calm balanced stance, entire creature and its sole hoof visible. The central monopod limb is the only limb: no forelegs, hindlegs, paired legs, side legs, stumps, additional hooves, horns, wings, props or base.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

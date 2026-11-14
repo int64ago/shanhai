@@ -1,0 +1,15 @@
+{
+  "id": "kui-production-20261115-single-guide-living-monoped-v7-medium",
+  "beast": "kui",
+  "budget": 12.5,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "Use this SINGLE image ONLY to locate the ONE central support leg; freely rebuild the shape and surfaces as a mature LIVING animal. Exactly one belly-center leg, one knee, one shared pastern and one cloven hoof, no other limb roots. Rebuild a weighty ribcage, natural shoulder muscles, fleshy underside, loose dewlap, healthy hornless bovine head, dark eyes, shaped nostrils and a moist broad muzzle. Fine short slate-grey fur follows skin and muscle instead of a smooth toy barrel. The sole leg has believable muscle and tendon contours. Its hoof is dark ridged keratin with TWO curved tapered claws, rounded toes and sloping walls, joining a shallow curved coronary hairline. Replace the rectangular white hoof blocks, waxy skin and simplified muzzle. One slender lifted tail. Complete calm balanced monoped in neutral light, rich natural PBR. No forelegs, hindlegs, paired legs, extra hooves, horns, wings, props or pedestal.",
+  "images": [
+    "concept/kui/production-20261114-native-monopod-v4/view_34.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}

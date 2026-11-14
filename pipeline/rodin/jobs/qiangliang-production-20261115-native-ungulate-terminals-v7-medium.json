@@ -1,0 +1,12 @@
+{
+  "id": "qiangliang-production-20261115-native-ungulate-terminals-v7-medium",
+  "beast": "qiangliang",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "Qiangliang, mature living tiger-headed deity. Four identical OX-TYPE CLOVEN HOOF ENDS, including BOTH forearms: each ends in TWO stout horn capsules with rounded soles and ONE deep central cleft beneath a SINGLE pastern. Human-shaped upright chest, waist and pelvis; two arms, two legs. No palm, side thumb, fingers, fleshy digits or tiger paws. Each limb narrows into a rounded living pastern, joining dark umber horn through a thin pale curved coronary hairline; continuous tissue, flush edges, no overhang, cuff, ring, bracelet or boot. Both elbows have long rearward rounded processes covered by skin. Complete adult orange tiger head, ears, jaw and neck. Varied tawny-grey short fur, subtle stripes, warm skin undertones, pores, fine hair and matte ridged horn; no white plastic. Calm broad stance, level lower hoof soles, arms clear of torso, forehooves turned slightly forward to show the split. Dark short waistcloth. Entire head and four ends visible. No snakes, tail, head horns, wings, props or base.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 20000
+  }
+}
