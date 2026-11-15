@@ -39,6 +39,10 @@ export function createOutline(mesh: Mesh, width: number, depthBias?: number) {
   } else {
     outline = new Mesh(mesh.geometry, mat)
   }
+  // AnimationMixer writes the source mesh's array in place; the outline must
+  // share those weights so corrective shapes and their silhouette stay aligned.
+  outline.morphTargetInfluences = mesh.morphTargetInfluences
+  outline.morphTargetDictionary = mesh.morphTargetDictionary
   outline.position.copy(mesh.position)
   outline.quaternion.copy(mesh.quaternion)
   outline.scale.copy(mesh.scale)

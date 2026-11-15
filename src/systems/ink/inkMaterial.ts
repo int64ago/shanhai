@@ -21,9 +21,10 @@ export interface InkOptions {
 /** 光从左上前方来，与场景的留白方向一致 */
 const LIGHT = new Vector3(-0.5, 0.85, 0.45).normalize()
 
-// 顶点着色器共用：支持蒙皮，输出视空间法线、视线方向、世界坐标和未变形的模型坐标
+// 顶点着色器共用：支持形态修正与蒙皮，噪声仍采样未变形的模型坐标
 const VERTEX = /* glsl */ `
   #include <common>
+  #include <morphtarget_pars_vertex>
   #include <skinning_pars_vertex>
   varying vec2 vUv;
   varying vec3 vN;
@@ -33,11 +34,14 @@ const VERTEX = /* glsl */ `
   void main() {
     vUv = uv;
     vObj = position;
+    #include <morphinstance_vertex>
     #include <beginnormal_vertex>
+    #include <morphnormal_vertex>
     #include <skinbase_vertex>
     #include <skinnormal_vertex>
     #include <defaultnormal_vertex>
     #include <begin_vertex>
+    #include <morphtarget_vertex>
     #include <skinning_vertex>
     #include <project_vertex>
     vN = normalize(transformedNormal);
@@ -161,15 +165,19 @@ export function createOutlineMaterial(width = 0.006, depthBias = 0.0012) {
     },
     vertexShader: /* glsl */ `
       #include <common>
+      #include <morphtarget_pars_vertex>
       #include <skinning_pars_vertex>
       uniform float uWidth;
       uniform float uDepthBias;
       ${NOISE_GLSL}
       void main() {
+        #include <morphinstance_vertex>
         #include <beginnormal_vertex>
+        #include <morphnormal_vertex>
         #include <skinbase_vertex>
         #include <skinnormal_vertex>
         #include <begin_vertex>
+        #include <morphtarget_vertex>
         float press = 0.35 + 1.3 * vnoise(position.xy * 9.0 + position.z * 5.0);
         transformed += normalize(objectNormal) * uWidth * press;
         #include <skinning_vertex>
