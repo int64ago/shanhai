@@ -37,6 +37,9 @@ jobs:
       - name: Typecheck
         run: pnpm typecheck
 
+      - name: Test beast recipe build orchestration
+        run: node --test pipeline/build_beast.test.mjs
+
       - name: Validate beast assets & LFS integrity
         run: pnpm validate
 

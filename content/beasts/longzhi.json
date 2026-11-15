@@ -26,7 +26,56 @@
       "basis": "其音如婴儿、食人据原文。具体音高、节奏与音色是听觉演绎；缓步、九首各自顾盼与九尾错相摆动均为动画推断。"
     }
   ],
+  "parts": [
+    {
+      "id": "body",
+      "job": "pipeline/rodin/jobs/longzhi-production-20261115-native-fourpaw-body-v3-high.json",
+      "instances": 1,
+      "length": 1,
+      "texSize": 2048
+    }
+  ],
+  "recipe": {
+    "mode": "custom",
+    "bodyLength": 1,
+    "trimTail": false,
+    "prepareScript": "pipeline/blender/prepare_longzhi.py",
+    "prepareArgs": [
+      "--body",
+      "{body.raw}",
+      "--head",
+      "concept/longzhi/production-20261115-prepared/head.glb",
+      "--tail",
+      "concept/longzhi/production-20261115-prepared/tail.glb",
+      "--output",
+      "{body.out}"
+    ],
+    "rigScript": "pipeline/blender/rig_longzhi.py",
+    "qaScript": "pipeline/blender/qa_longzhi.py"
+  },
   "productionAudit": {
+    "checkedOn": "2026-11-16",
+    "status": "parent-accepted-and-integrated",
+    "gate": "v15-anatomy-material-world-stance-and-runtime-reviewed",
+    "currentSources": "concept/longzhi/production-20261115-prepared/provenance.json",
+    "sourceGeometry": "Actual High body and head; reshaped actual High tail, using a disclosed Medium texture donor only. Assembled surface is an offline remesh derivative.",
+    "classicalAnatomy": "Fox form, nine heads, nine tails, tiger claws. Layout, root musculature, colors and motion remain inferred.",
+    "evidenceDirectory": "raw/_build/longzhi-20261115-agent-ac000ca6",
+    "paidCallsByWorker": 0,
+    "mediumFinalGeometry": false,
+    "runtimeIntegration": true,
+    "runtimeSha256": "0bc2c539ca20f868374bd9b2dd36664881cbdac4975a09ba49cfca6ad74966ac",
+    "runtimeBytes": 3363584,
+    "fullRecipeBuild": "bash pipeline/build_beast.sh longzhi exited 0; output byte-identical to accepted candidate",
+    "numericalQa": "raw/_build/longzhi-20261115-agent-ac000ca6/compressed-v15-qa/numerical-qa.json",
+    "browserQa": "raw/_build/longzhi-20261115-agent-ac000ca6/app-orbit-final/report.json",
+    "fullOrbitUiQa": "raw/_build/longzhi-20261115-agent-ac000ca6/orbit-v3/report.json",
+    "parentStageQa": "/tmp/shanhai-parent-longzhi-stage/report.json",
+    "followCameraCleanup": "Two independently driven 120s walks, switching to Jiuweihu and remounting Longzhi, return shared camera translation within 8.30e-14m and 4.00e-14m. All 4800 walk steps finite; no accumulated translation.",
+    "visualReview": "Parent Read actual three actions, three motion closeups, ink shoulder/nape/rump and desktop/390/700 full-orbit worst frames. Full-orbit actual vertex UI clearance at least 24.15px; source and design scroll readable.",
+    "ready": true
+  },
+  "historicalProductionAudit20261107": {
     "status": "blocked",
     "gate": "anatomical-structure-before-rigging",
     "checkedOn": "2026-11-07",
@@ -94,7 +143,13 @@
       "note": "仅为被拒绝的未压缩试作。九首九尾语义节点计数和有限数值通过，不代表已清净原生器官、无穿插或连接可信。未提交为运行时资产。"
     },
     "evidence": {
-      "reviewedViews": ["/tmp/longzhi-blocked/view_34.png", "/tmp/longzhi-blocked/view_front.png", "/tmp/longzhi-blocked/view_back.png", "/tmp/longzhi-blocked/view_side.png", "/tmp/longzhi-blocked/view_left.png"],
+      "reviewedViews": [
+        "/tmp/longzhi-blocked/view_34.png",
+        "/tmp/longzhi-blocked/view_front.png",
+        "/tmp/longzhi-blocked/view_back.png",
+        "/tmp/longzhi-blocked/view_side.png",
+        "/tmp/longzhi-blocked/view_left.png"
+      ],
       "geometryAudit": "/tmp/longzhi-blocked/geometry-audit.json",
       "prepareLog": "/tmp/longzhi-blocked/prepare.log",
       "ignoredDraftDirectory": "raw/_build/longzhi/blocked-drafts",

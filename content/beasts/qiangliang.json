@@ -44,10 +44,55 @@
       "note": "另读转录作強良、四蹄長肘、海水北注焉及銜蛇銜操蛇；与Gutenberg多一銜的写法一致。只作为转录差异见证，不推断两站底本独立。"
     }
   ],
+  "parts": [
+    {
+      "id": "body",
+      "job": "pipeline/rodin/jobs/qiangliang-production-20261115-four-hoof-v4-high.json",
+      "instances": 1,
+      "length": 1.65,
+      "texSize": 2048
+    },
+    {
+      "id": "snake",
+      "job": "pipeline/rodin/jobs/kuafu-production-20261113-snake-high.json",
+      "instances": 2,
+      "length": 0.46,
+      "texSize": 1024
+    }
+  ],
+  "recipe": {
+    "mode": "custom",
+    "bodyLength": 1.65,
+    "trimTail": false,
+    "prepareScript": "prepare_qiangliang.py",
+    "prepareArgs": [
+      "--body-in", "{body.raw}",
+      "--snake-in", "{snake.raw}",
+      "--body-out", "{body.out}",
+      "--snake-out", "{snake.out}"
+    ],
+    "rigScript": "rig_qiangliang_native.py",
+    "qaScript": "scripts/qa-qiangliang.mjs"
+  },
   "production": {
-    "status": "blocked",
-    "reason": "虎首人身四蹄长肘主体与单蛇母件Medium规格已准备；完整主体、四蹄布局、衔操两蛇的实际接触、动作与视觉验收尚未完成。",
-    "modelReady": false,
-    "provenance": "pipeline/rodin/remaining-humanoid-specs.json"
+    "status": "parent-accepted-native-high-runtime",
+    "ready": true,
+    "acceptedOn": "2026-11-15",
+    "parentQa": "scripts/qa-qiangliang.mjs; six actual walk cycles, two ownership remounts and special-to-idle passed",
+    "parentVisualReview": "Read integrated idle/walk/special, three continuous motion frames, mouth-held and forearm-supported snakes, and both cloven feet",
+    "reason": "复用现有真实 High 回执，四个蹄腕近端在原连续网格上有界平滑并在 UV 蒙版内修复烘焙凹槽；保留虎首、人身、四分瓣蹄、后小蹄与长肘。20骨三动作和两份现有蛇母件完成口衔/蹄腕托持装配，主场景离线视觉与落足复核。",
+    "modelReady": true,
+    "bodyJobHash": "c90b0ef6b99b2d94",
+    "bodyTaskUuid": "9c2c777e-e5d0-4e84-87c6-ee311bb44279",
+    "bodyNativeSha256": "1d01a71b9685df1535b3a364216decc3657c5c4827173038be7dbebfc507cf3a",
+    "offlineBuild": "bash pipeline/build_beast.sh qiangliang",
+    "textureRepairScript": "pipeline/blender/repair_qiangliang_textures.py",
+    "snakeSource": "复用夸父真实 Extreme-High 单蛇母件 raw/kuafu-production-20261113-snake-high/base_high_pbr.glb。旧会话以 normalize.py --length 1.0 产出 inspect_snake/norm_snake.glb；统一配方直接从同一原始 High 重建，不反读发布资产。灰绿色为运行时设计设色。",
+    "snakeTier": "Gen-2.5-Extreme-High",
+    "snakeJobHash": "39ec2fd5956715de",
+    "snakeTaskUuid": "33de858d-5fe5-424e-9abc-d4a8d9c9c67b",
+    "snakeNativeSha256": "5d0878e6d57bfc47447423406ba3e47bbdcece78e22e00df9b4902c95d81b1ee",
+    "snakeReviewedNormalizedSha256": "92a06f1e6be7da289eb7b40967804997d1737bfe159ffb35fabeb93cf1220d6b",
+    "additionalPaidCalls": 0
   }
 }

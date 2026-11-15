@@ -1,0 +1,19 @@
+{
+  "id": "longzhi-production-20261115-native-fourpaw-body-v3-high",
+  "beast": "longzhi",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Match this reviewed native BODY PART in all four views: one mature fox-shaped russet quadruped trunk, exactly four complete separate legs and four broad feline tiger paws. Preserve rounded toes, dark curved claws, natural ankles, flat planted soles, horizontal back, warm red-brown short fur, cream chest and belly. Preserve the naturally closed furry shoulder dome and smoothly rounded completely tailless rump. Fine coat direction follows muscles and subtle skin folds. Improve living fur, skin and claw detail while preserving the proportions and continuous leg roots. This is a headless and tailless body mother part for later assembly, not a complete creature. No head, neck stalk, tail, fifth leg, extra paw, socket, cut face, flat cap, collar, horns, wings, props or base. Entire torso and four paws visible.",
+  "images": [
+    "concept/longzhi/production-20261115-native-fourpaw-body-v3/view_34.png",
+    "concept/longzhi/production-20261115-native-fourpaw-body-v3/view_side.png",
+    "concept/longzhi/production-20261115-native-fourpaw-body-v3/view_front.png",
+    "concept/longzhi/production-20261115-native-fourpaw-body-v3/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

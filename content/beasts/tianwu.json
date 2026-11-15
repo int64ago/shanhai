@@ -48,9 +48,66 @@
       "note": "此篇明确虎身十尾，没有写足数或青黄色；不与海外东经八足八尾合并为同一造型明文。另以https://shanhaijing.5000yan.com/14-17.html独立核实。"
     }
   ],
+  "parts": [
+    {
+      "id": "body",
+      "jobId": "tianwu-production-20261115-trunk-high",
+      "instances": 1,
+      "length": 3.8,
+      "texSize": 2048
+    },
+    {
+      "id": "leg",
+      "jobId": "tianwu-production-20261115-leg-high",
+      "instances": 8,
+      "length": 0.66,
+      "texSize": 2048
+    },
+    {
+      "id": "headneck",
+      "jobId": "tianwu-production-20261115-headneck-high",
+      "instances": 8,
+      "length": 0.9,
+      "texSize": 2048
+    },
+    {
+      "id": "tail",
+      "jobId": "tianwu-production-20261115-tail-high",
+      "instances": 8,
+      "length": 1.2,
+      "texSize": 2048
+    }
+  ],
+  "recipe": {
+    "mode": "custom",
+    "bodyLength": 3.8,
+    "trimTail": false,
+    "prepareScript": "pipeline/blender/prepare_tianwu_high.py",
+    "prepareArgs": [
+      "--recipe",
+      "--raw-root",
+      "raw",
+      "--trunk",
+      "{body.raw}",
+      "--leg",
+      "{leg.raw}",
+      "--headneck",
+      "{headneck.raw}",
+      "--tail",
+      "{tail.raw}",
+      "--output-dir",
+      "{outDir}"
+    ],
+    "rigScript": "pipeline/blender/rig_tianwu.py",
+    "qaScript": "scripts/qa-tianwu.mjs"
+  },
   "production": {
-    "status": "blocked",
-    "modelReady": false,
-    "reason": "现有HIGH母件组合原型的多颈呈直杆、八足腰带呈套筒且腹部平切，部分尾根悬在臀缘外，未满足可信自然接根；无生产模型、动作或SFX交付。"
+    "status": "parent-accepted-and-integrated",
+    "modelReady": true,
+    "parentRuntimeAcceptance": "passed",
+    "parentVisualAcceptance": "passed: actual compressed idle/walk/special face, shoulder, hip and eight-tail closeups",
+    "reason": "主工作区四原始High母件正式重建、四GLB逐字节一致；160实际掌面支撑区间、28skins/28outlines两轮、297姿真实UI净距、三态实际运动与390/700双向滚轮均通过。固定观察点与DEV近景恢复已独立断言；标准三态和连续帧及最终近景已父级Read。主要PBR仍光滑，不宣称明显细毛或全身自交证书。",
+    "checkedOn": "2026-11-16",
+    "provenance": "pipeline/provenance/tianwu.json"
   }
 }

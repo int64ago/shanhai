@@ -30,10 +30,79 @@
       "basis": "暖赭肤色、短发露耳、短褐色腰衣、巨步姿态和蛇的摆动均为艺术补足，经文没有规定这些具体外观与动作。"
     }
   ],
+  "parts": [
+    {
+      "id": "body",
+      "job": "pipeline/rodin/jobs/kuafu-production-20261115-native-closed-fist-v4-high.json",
+      "instances": 1,
+      "length": 1.9,
+      "texSize": 2048
+    },
+    {
+      "id": "hand",
+      "job": "pipeline/rodin/jobs/kuafu-production-20261115-five-digit-grip-v7-high.json",
+      "instances": 2,
+      "length": 0.2755,
+      "texSize": 1024
+    },
+    {
+      "id": "ear",
+      "job": "pipeline/rodin/jobs/kuafu-production-20261115-continuous-ear-v4-high.json",
+      "instances": 2,
+      "length": 0.24,
+      "texSize": 1024
+    }
+  ],
+  "recipe": {
+    "mode": "custom",
+    "bodyLength": 1.9,
+    "trimTail": false,
+    "prepareScript": "prepare_kuafu.py",
+    "prepareArgs": [
+      "--body-in", "{body.raw}",
+      "--hand-in", "{hand.raw}",
+      "--ear-in", "{ear.raw}",
+      "--out-dir", "{outDir}"
+    ],
+    "rigScript": "rig_kuafu.py",
+    "qaScript": "scripts/qa-kuafu.mjs"
+  },
   "production": {
-    "status": "blocked",
-    "modelReady": false,
-    "reason": "完整人形主体与单黄蛇母件Medium规格已准备；主体结构、两耳两手共四蛇的可信接触、动作与视觉验收尚未完成，不把规格或粗胚作为完成凭据。",
-    "provenance": "pipeline/rodin/remaining-humanoid-specs.json"
+    "status": "verified-offline-local-high",
+    "modelReady": true,
+    "reason": "真实 Extreme-High 躯干保留完整双足和躯干，仅替换原有三指带及融合蛇皮的缺陷手域；新 High 五指握手通过连续腕根接入。两条原生手蛇保留远端形体、重建融合中段，两条 High 连续 J 形耳蛇染赭金后分别贴合耳廓。统一配方构建、三动作、实际舞台接触 QA 与逐张视觉检查均已完成。",
+    "highSources": {
+      "body": {
+        "job": "kuafu-production-20261115-native-closed-fist-v4-high",
+        "hash": "9535f71a413212b8",
+        "uuid": "37416407-958e-4356-9663-b7baadac948d",
+        "sha256": "74988b874c178dfade1a79a44d18c37dd1662c2563ae25189a4f23c1eeae6601"
+      },
+      "hand": {
+        "job": "kuafu-production-20261115-five-digit-grip-v7-high",
+        "hash": "ab3b1a3ef0081d8a",
+        "uuid": "2e75ffe5-8011-473c-80b2-1ec0f88122ab",
+        "sha256": "206521bc8725d871f3673ec59b7a82ac6eb204080ff5bffe3f2a46c07b873d95"
+      },
+      "ear": {
+        "job": "kuafu-production-20261115-continuous-ear-v4-high",
+        "hash": "be9c44f3e97cd1ca",
+        "uuid": "3c8fb4e2-87f2-4b42-8a48-878ea06abddb",
+        "sha256": "3f9345be90a463e337e4f0a3f7ffd1f09abd600362ad677b8caa1865c4f4a8f7"
+      }
+    },
+    "frozenAudit": {
+      "triangles": 33314,
+      "sha256": "c079cd2c31748a1a79e3c34e7582006f0f306e264b409e6658258cc2af36a3ac",
+      "preserved": "positions, per-corner UV and cyclic face winding",
+      "wristBoundaryEdges": 0,
+      "wristNonManifoldEdges": 0
+    },
+    "heldSnakeRepair": "原生蛇远端保留；归一高度 0.575–0.735 的融合域移除，以连续中段连接，握持接触带刚性随手，其余上下蛇段独立摆动。",
+    "buildCommand": "bash pipeline/build_beast.sh kuafu",
+    "prepareAudit": "raw/_build/kuafu/prepare-audit.json",
+    "stageQa": "raw/_build/kuafu-framing-qa-1/report.json",
+    "framingQa": "桌面 1440×900 与手机 390×844 各推进真实 R3F 时钟 80 秒，三态共各 96 个表面投影样本，圆行覆盖 7.11 弧度；完整人体及四蛇避开原文卡片、选择器、动作与控制区，保留 8px 安全距离。",
+    "additionalPaidCalls": 0
   }
 }

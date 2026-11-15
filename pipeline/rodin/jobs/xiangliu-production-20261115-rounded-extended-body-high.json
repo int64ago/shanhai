@@ -1,0 +1,19 @@
+{
+  "id": "xiangliu-production-20261115-rounded-extended-body-high",
+  "beast": "xiangliu",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "ONE complete headless long muscular blue-green serpent trunk. Preserve the reference shallow S extended shape, rounded closed anterior mass and steadily tapering pointed tail. Serpent body length about eight times maximum diameter. Thick circular cross section, natural fine teal scales and light subdued belly scutes. The anterior is a solid smoothly rounded volume for locally sculpted nine neck roots later, not a cut plane or cap. No heads, necks, stalks, horns, limbs, wings, sockets, holes, collars, clothes, pedestals or props. No loop, ring, self-contact, crossing or coils. Entire body and tail visible, exact clean silhouette from the four reference views. Organic natural muscular serpent skin.",
+  "images": [
+    "concept/xiangliu/production-20261115-rounded-extended-body/view_34.png",
+    "concept/xiangliu/production-20261115-rounded-extended-body/view_side.png",
+    "concept/xiangliu/production-20261115-rounded-extended-body/view_front.png",
+    "concept/xiangliu/production-20261115-rounded-extended-body/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

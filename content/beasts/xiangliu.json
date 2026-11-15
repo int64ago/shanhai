@@ -2,6 +2,19 @@
   "id": "xiangliu",
   "name": "相柳",
   "archetype": "serpentine",
+  "parts": [
+    { "id": "body", "job": "pipeline/rodin/jobs/xiangliu-production-20261115-rounded-extended-body-high.json", "instances": 1, "length": 7, "texSize": 2048 },
+    { "id": "head", "job": "pipeline/rodin/jobs/leishen-production-20261114-native-whole-v2-high.json", "instances": 9, "length": 0.4, "texSize": 1024 }
+  ],
+  "recipe": {
+    "mode": "custom",
+    "bodyLength": 7,
+    "prepareScript": "pipeline/blender/prepare_xiangliu.py",
+    "prepareArgs": ["--body-in", "{body.raw}", "--head-in", "{head.raw}", "--head-out", "{head.out}", "--out-dir", "{outDir}", "--native-body"],
+    "rigScript": "pipeline/blender/rig_xiangliu.py",
+    "qaScript": "scripts/qa-xiangliu.mjs"
+  },
+  "actions": ["idle", "walk", "special"],
   "source": [
     { "book": "海外北經", "text": "相柳者，九首人面，蛇身而青。" },
     { "book": "大荒北經", "text": "共工臣名曰相繇，九首蛇身，自環，食于九土。" }
@@ -19,11 +32,15 @@
     "note": "本次重新读取两篇相关段落，确认两段source均为各自连续形态句；海外篇开头为相柳氏，形态句为相柳者，不互换称谓。完整上下文由指定研究提交pipeline/provenance/xiangliu.json留存；本文件不跨段删接原文。"
   },
   "production": {
-    "status": "blocked",
-    "ready": false,
-    "modelReady": false,
-    "modelProduced": false,
+    "status": "parent-accepted-and-integrated",
+    "ready": true,
+    "modelReady": true,
+    "checkedOn": "2026-11-16",
+    "runtimeSha256": "2139241a94ab7bf20383460d1a573973f10192c6ab6e2f0fdd7f41502839ccf6",
+    "runtimeBytes": 3609804,
+    "modelProduced": true,
     "specification": "pipeline/rodin/specs/xiangliu-production-20261108.json",
-    "reason": "尚无本任务已验收的连续蛇躯、九颈自然接根及九首组合模型。旧研究与人首候选不等于九首蛇成品；Medium主体和单首颈规格仅为准备材料，不宣称模型、动作或运行时交付。"
+    "provenance": "pipeline/provenance/xiangliu-production-20261115.json",
+    "reason": "真实相柳蛇躯High核实50,000三角面，九首复用已完成的雷神High人面母件；只对前躯与九颈做有界连续体积融合。完整人面、共根几何与v10新组织密鳞材质通过父审。父统一配方重建产物已独立通过实际Stage三态、97骨行波、刚性人首、实际动作按钮、神通自动返回、两次重挂及手机/700px原文设计滚动检查，最终标准三态与连续近景已逐张检查。重建body与候选压缩字节不同，按当前父产物单独验收；原生微拓扑缺陷及UV岛边色差保留披露。"
   }
 }

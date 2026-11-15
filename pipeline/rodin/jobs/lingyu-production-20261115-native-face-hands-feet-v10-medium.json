@@ -1,0 +1,8 @@
+{
+  "id": "lingyu-production-20261115-native-face-hands-feet-v10-medium",
+  "beast": "lingyu",
+  "budget": 12.5,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One complete mythical fish with a HUMAN FACE, TWO HUMAN ARMS and TWO HUMAN LEGS. A horizontal elongated silver-blue scaled fish body, human face forms its entire rounded anterior end, facing forward along the fish body axis. Human forehead, two eyes, human nose, closed human lips and chin; no separate fish face, no human torso or person riding on fish. Two short anatomical human arms grow organically from the left and right sides behind the face, each ends in a hand with four distinct fingers and one thumb. Two short anatomical human legs grow from the left and right rear underside, each has a knee, ankle and elongated human foot with five toes pointing forward. Rear limbs are feet, never hands or paddles. Four limbs total, well separated from torso. One forked fish tail fin, small dorsal fin, no other side fins. Natural continuous rounded shoulder and hip muscles blending into scales without collars, rings, cuffs or cuts. Whole body neutral swimming pose, no props or base.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb" }
+}

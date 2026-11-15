@@ -1,0 +1,19 @@
+{
+  "id": "tianwu-production-20261115-trunk-high",
+  "beast": "tianwu",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "ONE isolated headless limbless tailless mammalian water-beast TRUNK matching the approved reference: continuous feline ribcage, substantial rounded shoulder chest, narrowing abdomen, rounded full pelvis. Level gently varying back, hanging curved belly, softly rounded front and rear with enough organic tissue for deeply embedded later neck, limb and tail roots. All visible trunk tissue must be native High geometry with coherent millimeter-scale short fur over the meter-scale torso, subtle shoulder/hip skin folds and restrained directional fur flow. Preserve volume under surface detail; no smooth plastic surface, broad painted color bands or sculpted armor ridges. Muted blue-green and warm gamboge back with smooth natural color transitions. No heads, faces, legs, paws, tails, sockets, repeated mounting stumps, sliced planes, tubes, plates, pedestal or scene. Never attempt eight feet or eight necks in this job.",
+  "images": [
+    "concept/tianwu-high-refs/trunk/view_34.png",
+    "concept/tianwu-high-refs/trunk/view_side.png",
+    "concept/tianwu-high-refs/trunk/view_front.png",
+    "concept/tianwu-high-refs/trunk/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

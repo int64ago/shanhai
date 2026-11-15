@@ -1,0 +1,19 @@
+{
+  "id": "kuafu-production-20261115-native-closed-fist-v4-high",
+  "beast": "kuafu",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Match these four reviewed views: complete mature human serpent handler with exactly TWO yellow snakes, ONE gripped in EACH CLOSED FIST. Preserve body proportions, normal head, exposed EMPTY ears, brown waist wrap, two arms and two planted five-toed bare feet. Preserve the power grips: four curled fingers and opposed thumb enclose the same snake middle; each snake has one complete raised head and a freely tapering tail below its fist. Improve healthy finger anatomy, knuckles, fingernails and distinct skin-versus-scale boundaries at both palms, without fusion, penetration, floating gaps or extra fingers. Natural warm skin with subtle pores and folds, detailed yellow scales and varied roughness, no plastic smoothness. Two held snakes only; ear snakes will be added separately later. Keep full body, both heads and both tail tips visible, no added props, staff or pedestal.",
+  "images": [
+    "concept/kuafu/production-20261115-native-closed-fist-v4/view_34.png",
+    "concept/kuafu/production-20261115-native-closed-fist-v4/view_side.png",
+    "concept/kuafu/production-20261115-native-closed-fist-v4/view_front.png",
+    "concept/kuafu/production-20261115-native-closed-fist-v4/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

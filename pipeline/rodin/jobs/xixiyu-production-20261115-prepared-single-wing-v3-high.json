@@ -1,0 +1,18 @@
+{
+  "id": "xixiyu-production-20261115-prepared-single-wing-v3-high",
+  "beast": "xixiyu",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "images": [
+    "concept/xixiyu/production-20261115-prepared-single-wing-high-reference/view_34.png",
+    "concept/xixiyu/production-20261115-prepared-single-wing-high-reference/view_side.png",
+    "concept/xixiyu/production-20261115-prepared-single-wing-high-reference/view_front.png",
+    "concept/xixiyu/production-20261115-prepared-single-wing-high-reference/view_back.png"
+  ],
+  "prompt": "One isolated SINGLE mythical bird wing matching all four references, with a narrow rounded root at one end and long overlapping dark blue-black flight feathers widening into a tapered fan. Preserve the complete feather silhouette, proportions and root. Clearly visible overlapping silver-grey FISH SCALES grow only at the DISTAL FEATHER TIPS, on both faces of the wing; the main feather shafts and bases retain feather texture. Organic feather layering with clean continuous root, subtle matte blue-black plumage, crisp silver scaled tips. Exactly one wing, no bird body, no head, no legs, no second wing, no pedestal. Entire root and all feather tips visible.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "addons": "HighPack"
+  }
+}

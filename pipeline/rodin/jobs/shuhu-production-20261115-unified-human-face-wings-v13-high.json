@@ -1,0 +1,18 @@
+{
+  "id": "shuhu-production-20261115-unified-human-face-wings-v13-high",
+  "beast": "shuhu",
+  "budget": 12.5,
+  "tier": "Gen-2.5-Extreme-High",
+  "images": [
+    "concept/shuhu/view_34.png",
+    "concept/shuhu/view_side.png",
+    "concept/shuhu/view_front.png",
+    "concept/shuhu/view_back.png"
+  ],
+  "prompt": "Reconstruct the SAME complete mythical creature shown in all four reference views. One HUMAN FACE with human nose, lips and chin; horse ears and mane, long horse neck and horse torso. Exactly FOUR horse legs with four hooves, TWO feathered bird wings naturally rooted in the shoulders, and ONE long green scaled SNAKE TAIL emerging from the rump. Preserve the human face, complete four-legged proportions, feather shapes and single snake tail. Continuous organic shoulder, belly, hip and tail-root anatomy. Warm chestnut body, dark mane, brown feather wings, green overlapping tail scales. No additional heads, horns, legs, wings or tails; no horsehair tail. Full body visible, no base, no accessories.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "addons": "HighPack"
+  }
+}

@@ -6,7 +6,7 @@ This repository is designed to be **agent-native** (compatible with Claude Code,
 
 ## 1. Project Overview
 
-**Shanhai World (《山海异兽录》, https://shanhaiworld.org/)** is an interactive Web 3D bestiary of ten mythical creatures from the ancient Chinese *Classic of Mountains and Seas* (《山海经》), rendered in real-time **Chinese Gongbi ink-wash style (工笔淡彩 + 水墨线描)**.
+**Shanhai World (《山海异兽录》, https://shanhaiworld.org/)** is an interactive Web 3D bestiary of 62 mythical creatures from the ancient Chinese *Classic of Mountains and Seas* (《山海经》), rendered in real-time **Chinese Gongbi ink-wash style (工笔淡彩 + 水墨线描)**.
 
 - **Frontend Stack**: Vite 8 + React 19 (`StrictMode`) + TypeScript + Three.js (`~0.186.0`) + `@react-three/fiber` + `@react-three/drei` + `@react-three/postprocessing` + `zustand`
 - **3D Asset Pipeline**: Hyper3D Rodin Gen-2.5 API (`pipeline/rodin/generate.ts`) + Headless Blender 5.2 LTS Python scripts (`pipeline/blender/*.py`) + `@gltf-transform/cli` (`meshopt` + WebP compression)

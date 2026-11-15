@@ -1,27 +1,62 @@
 {
   "date": "2026-11-13",
-  "updatedAt": "2026-11-15",
+  "updatedAt": "2026-11-16",
   "authorization": "pipeline/rodin/remaining-17-authorization-20261113.json",
   "ledgerBaselineLines": 143,
-  "newSubmittedTransactions": 85,
-  "newCreditsConsumed": 49.0,
+  "currentParentIntegration": {
+    "date": "2026-11-16",
+    "branch": "feat/remaining-beasts",
+    "readyCatalogEntries": 62,
+    "acceptedLocalChanges": [
+      "xixiyu-high-wing-upgrade",
+      "qiangliang",
+      "shuhu",
+      "kuafu",
+      "kui",
+      "longzhi",
+      "lingyu",
+      "xingtian",
+      "xiangliu",
+      "lu_fish",
+      "tianwu"
+    ],
+    "remainingPending": [],
+    "releaseStatus": "all62-accepted-final-gates-passed-prepared-for-single-consolidated-main-release",
+    "latestReviews": "pipeline/provenance/remaining-beasts-recovery-20261115.json",
+    "note": "Historical rejection records below remain unchanged. Later acceptance applies only to the specifically reviewed source or integrated asset; generation receipts alone never change readiness."
+  },
+  "newSubmittedTransactions": 134,
+  "newCreditsConsumed": 84,
   "newCreditsPerBeast": {
-    "jiaochong": 4.0,
-    "kuafu": 4.0,
-    "leishen": 2.0,
-    "zhulong": 3.0,
-    "xixiyu": 2.0,
-    "xiangliu": 1.5,
-    "qiangliang": 3.5,
-    "shuhu": 5.0,
-    "kui": 4.0,
+    "jiaochong": 4,
+    "kuafu": 10,
+    "leishen": 2,
+    "zhulong": 3,
+    "xixiyu": 6.5,
+    "xiangliu": 3.5,
+    "qiangliang": 4.5,
+    "shuhu": 7.5,
+    "kui": 7,
     "xingxing": 1.5,
-    "lu_fish": 5.0,
+    "lu_fish": 7.5,
     "jimeng": 3.5,
-    "yinglong": 4.0,
-    "lingyu": 3.0,
-    "xingtian": 2.0,
-    "longzhi": 1.0
+    "yinglong": 4,
+    "lingyu": 5.5,
+    "xingtian": 3,
+    "longzhi": 5,
+    "tianwu": 6
+  },
+  "receiptRecovery20261115": {
+    "additionalTransactions": 27,
+    "additionalCredits": 16.5,
+    "sources": [
+      "beast-bingfeng",
+      "agent-ae511af079a13a446"
+    ],
+    "deduplicationKey": "uuid",
+    "baselineSha256Verified": true,
+    "baselineReset": false,
+    "note": "Recovered actual receipts only. Generation receipts do not establish anatomy acceptance, runtime readiness, or release. Qiangliang four-hoof-v4 High submitted for one credit; model review pending."
   },
   "cachedRecoveriesWithoutNewCharges": [
     {
@@ -822,7 +857,7 @@
     "fixedBaselineSha256": "fe456f658ff1c014b53a4b9c9cecd1dd244f684c18dc117fe50ca1bf7d5af792",
     "ledgerSha256": "a398a1a2759e9da1687581e190acc0f9eaedccb14e18a9a4dd6466b350fe5954",
     "newSubmittedTransactions": 77,
-    "newCreditsConsumed": 45.0
+    "newCreditsConsumed": 45
   },
   "resolvedAutomaticApprovalBlocks20261114Second": {
     "actualHumanSelection": "确认执行并继续原17只",

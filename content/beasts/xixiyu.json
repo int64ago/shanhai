@@ -11,7 +11,7 @@
   "inferred": [
     {
       "item": "十翼的五对分层排布（设计参考）",
-      "basis": "十翼是明文，左右各五翼、前后错层、翼根肌肉与错拍节奏均未细述，属于设计补足。"
+      "basis": "十翼是明文。本作保留躯干原生的一对折翼，再装配四对展翼，共十翼；左右五对、折展分工、错层排布和错拍节奏均为设计补足。"
     },
     {
       "item": "流线水生躯体、鹊样头喙与长尾（设计参考）",
@@ -19,7 +19,7 @@
     },
     {
       "item": "青墨素白设色与银灰羽端鳞（设计参考）",
-      "basis": "羽端有鳞是明文。鳞片的形状、银灰色、排列密度及青墨素白羽色均为艺术设计。"
+      "basis": "羽端有鳞是明文。两片原生折翼的长羽尖端补建贴合羽面的手工鱼鳞，八片展翼保留来源模型的羽端鳞；鳞片形状、银灰色、交错排列和青墨素白羽色均为艺术设计。"
     },
     {
       "item": "鹊鸣节奏与御火呈现（设计参考）",
@@ -39,5 +39,65 @@
       "url": "https://www.quanxue.cn/ct_baijia/shanhai/shanhai04.html",
       "note": "独立简体正文作鳛鳛、嚣水、御火、瘅、棕橿；音如鹊和十翼、羽端鳞、食之不瘅均在正文。注解和现代释文不混入source。"
     }
-  ]
+  ],
+  "parts": [
+    { "id": "body", "job": "pipeline/rodin/jobs/xixiyu-production-20261115-native-feather-core-v6-high.json", "length": 1.45, "texSize": 2048 },
+    { "id": "wing", "job": "pipeline/rodin/jobs/xixiyu-production-20261115-prepared-single-wing-v4-50k-high.json", "instances": 8, "length": 0.58, "texSize": 1024 }
+  ],
+  "production": {
+    "status": "native-high-with-high-modular-wings-stage-verified",
+    "ready": true,
+    "modelReady": true,
+    "modelProduced": true,
+    "acceptedOn": "2026-11-15",
+    "anatomy": "已实读高模及来源四图：鹊样头喙、两眼、羽躯与单长羽尾，保留两片原生折翼，无腿足、鱼鳍、额外头尾；再装八片展翼，共十翼。无足游姿及两折八展分工均为设计补足。",
+    "adaptation": "保留躯干高模原生折翼与尾，不挤压翼尖；只在原生折翼长羽尖端手工补建贴面银灰鱼鳞。外挂翼先由历史中模分离出的单翼渲染四图，再生成实际五万面的High单翼；single模式按已审原生-Y根部对齐根梢及翼面并均匀缩放，不裁切、焊接、删岛或减面，保留原生羽端鳞，生成正向绕序的左右母件后装配八翼。已审挂点、扇面错层和动作保持不变；新源原生弦宽约0.334米，运行时倍率用1.0，恢复历史已审扇面的有效宽度。挂点、扇面排布和比例均为艺术设计。默认paired模式保留历史中模配对提取流程。",
+    "bodySource": {
+      "job": "pipeline/rodin/jobs/xixiyu-production-20261115-native-feather-core-v6-high.json",
+      "tier": "Gen-2.5-Extreme-High",
+      "raw": "raw/xixiyu-production-20261115-native-feather-core-v6-high/base_high_pbr.glb",
+      "sha256": "80681f206aca415fece477056416212fe355a76ff2828f0a1597b4da14213ce4",
+      "reviewedConcept": "concept/xixiyu/production-20261115-native-feather-core-v6/"
+    },
+    "wingSource": {
+      "job": "pipeline/rodin/jobs/xixiyu-production-20261115-prepared-single-wing-v4-50k-high.json",
+      "tier": "Gen-2.5-Extreme-High",
+      "raw": "raw/xixiyu-production-20261115-prepared-single-wing-v4-50k-high/base_high_pbr.glb",
+      "sha256": "a8ab142867363096b528491631633b3650f9f453820abbf218059a5b48bf1830",
+      "sourceTriangles": 50000,
+      "preparedTrianglesPerSide": 50000,
+      "qualityOverride": 50000,
+      "nativeRootAxis": "-Y",
+      "reviewedConcept": "concept/xixiyu/production-20261115-prepared-single-wing-high-reference/",
+      "instances": 8
+    },
+    "historicalWingSource": {
+      "job": "pipeline/rodin/jobs/xixiyu-production-20261115-distal-scaled-feather-wing-v2-medium.json",
+      "tier": "Gen-2.5-Medium",
+      "raw": "raw/xixiyu-production-20261115-distal-scaled-feather-wing-v2-medium/base_basic_pbr.glb",
+      "sha256": "cb070ad3b67ee2715bcb88b11b37d37296d09bcb13dce4438d3405abb31d7ea1",
+      "role": "历史已验收运行时翼；paired模式分离单翼后渲染四图，作为当前High翼的图生来源",
+      "preparedTrianglesPerSide": 8684,
+      "runtimeSha256": "6229de606ca8788a739db0cb5509ed504eba050ff3c864e902861f8b3b56283d"
+    },
+    "excludedWingSource": {
+      "job": "pipeline/rodin/jobs/xixiyu-production-20261115-prepared-single-wing-v3-high.json",
+      "sourceTriangles": 500000,
+      "reason": "该请求遗漏quality_override，实际五十万面；仅作原生检查，未自动减面或用于生产运行时"
+    },
+    "runtime": {
+      "body": { "path": "public/models/xixiyu/body.glb", "bytes": 870268, "sha256": "759be8d3f54add2660d869d8534ef27f4dd84b536a502021d7745948adfffcaf" },
+      "wing": { "path": "public/models/xixiyu/wing.glb", "bytes": 860672, "sha256": "5b3700b966c1f71bdd810bb5080dec22a78a57ac5bde91d677b8b2f46d69751b" },
+      "compression": "meshopt + WebP body2048/wing1024; no simplification"
+    },
+    "acceptance": "父会话曾Read中模外挂版本完整三态、运动特写及原生羽端鳞审计图并接受造型；本次另Read当前v4原生四视图并接受High单翼与羽端鳞生产源。新源统一配方prepare→rig→optimize真实构建通过；实际Stage验证八外挂、十蒙皮与十描边，StrictMode无重复挂载、缓存不变，动作切换、重挂载与神通回静通过。父会话已实读并接受运行时弦宽倍率1.0的新源完整三态与三帧运动特写；八展翼扇面间隙恢复，无明显新增穿插。"
+  },
+  "recipe": {
+    "mode": "custom",
+    "bodyLength": 1.45,
+    "prepareScript": "pipeline/blender/prepare_xixiyu.py",
+    "prepareArgs": ["--body-in", "{body.raw}", "--wing-in", "{wing.raw}", "--out-dir", "{outDir}", "--body-length", "{body.length}", "--wing-span", "{wing.length}", "--wing-mode", "single", "--single-root-axis=-y"],
+    "rigScript": "pipeline/blender/rig_xixiyu.py",
+    "qaScript": "scripts/qa-xixiyu-app.mjs"
+  }
 }

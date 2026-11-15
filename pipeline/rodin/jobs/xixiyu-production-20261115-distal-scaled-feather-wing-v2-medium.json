@@ -1,0 +1,8 @@
+{
+  "id": "xixiyu-production-20261115-distal-scaled-feather-wing-v2-medium",
+  "beast": "xixiyu",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE complete isolated organic MAGPIE WING, gently spread with a rounded fleshy root and a long narrow fan of flight feathers. Wing length about four times its root thickness. Show articulated upper wing, wrist, distinct feather shafts and fine barbed vanes. Dark blue-black flight feathers with restrained white coverts. ONLY the final tenth at the distal TIP of EACH long feather carries tiny overlapping silver-grey FISH SCALES, naturally embedded at that feather end. Most of every feather remains clearly feathered. No scales on the root, main wing or proximal feather vanes. A single healthy continuous wing with softly rounded muscular root for later assembly. Natural matte feather roughness, subtle iridescence and small keratin scale highlights. Entire root and every tip visible. No second wing, body, head, feet, fin membrane, bat digits, armor, blade, jewelry, mounting plate, base or scenery.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 20000 }
+}

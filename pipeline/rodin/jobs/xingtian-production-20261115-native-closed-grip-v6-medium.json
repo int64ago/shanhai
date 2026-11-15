@@ -1,0 +1,8 @@
+{
+  "id": "xingtian-production-20261115-native-closed-grip-v6-medium",
+  "beast": "xingtian",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One complete mythological Xingtian, a muscular headless humanoid guardian. Upright full body, two arms and two legs, level bare feet planted apart. The shoulders rise into one smooth closed rounded skin dome: no head, no neck, no opening. Exactly TWO expressive almond-shaped eyes replace the nipples on the chest; a horizontal mouth with sculpted upper and lower lips replaces the navel on the lower abdomen. No other eyes, nipples, face, mouth or belly button. Two natural closed human fists, each with four curled fingers and one opposed thumb enclosing a straight wooden handle. Left fist holds a round wooden shield with rear handle; right fist holds a simple single-bladed bronze axe. Arms held away from chest so both chest eyes and belly mouth are visible. Continuous living shoulder, elbow and wrist anatomy, distinct finger knuckles. Warm brown skin, plain dark cloth around waist. Realistic organic sculpture, no armor, no pedestal, no extra limbs.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb" }
+}

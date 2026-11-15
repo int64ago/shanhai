@@ -1,0 +1,51 @@
+{
+  "beast": "tianwu",
+  "version": 1,
+  "note": "Public receipt fields verified against the four returned native High GLBs. No credentials, private cache paths or ignored receipt sidecars are needed for a rebuild.",
+  "sources": {
+    "trunk": {
+      "job": "tianwu-production-20261115-trunk-high",
+      "hash": "f85e29418106ee65",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "edb5f337-627f-401d-b769-8b5d4bf13c44",
+      "consumed": 1,
+      "sourceSha256": "318a79a034eefc81dcafb88786e10640115c298c73ffe510dd6527942d9284cc",
+      "bytes": 25456212,
+      "triangles": 50000,
+      "vertices": 25419
+    },
+    "leg": {
+      "job": "tianwu-production-20261115-leg-high",
+      "hash": "be48cf5b9e8a516b",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "b408048f-4823-4520-984d-3c0a590e295f",
+      "consumed": 1,
+      "sourceSha256": "cf1714e0506c3e23d9698f10bafc1026e6ca6fb808a8c77a94a949f939c642ab",
+      "bytes": 22185980,
+      "triangles": 50000,
+      "vertices": 25732
+    },
+    "headneck": {
+      "job": "tianwu-production-20261115-headneck-high",
+      "hash": "bb73cbaedbe877d2",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "6bd73fbb-754a-4c20-9c70-0e05523ebb89",
+      "consumed": 1,
+      "sourceSha256": "7f8df400a021a101f202b5d70ccf7b5605109776f98d40a2aa4e1e5970129d07",
+      "bytes": 19446124,
+      "triangles": 50000,
+      "vertices": 29313
+    },
+    "tail": {
+      "job": "tianwu-production-20261115-tail-high",
+      "hash": "8522c97654ee563d",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "6acc6385-efe8-4e8e-837d-f39ac31ec6da",
+      "consumed": 1,
+      "sourceSha256": "ee38dde788a160cde3e28e3b95ad4031b18e14b6d354011587e18482a6e6e954",
+      "bytes": 17906384,
+      "triangles": 50000,
+      "vertices": 25501
+    }
+  }
+}

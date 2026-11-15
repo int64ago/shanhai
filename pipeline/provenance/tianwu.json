@@ -1,0 +1,536 @@
+{
+  "beast": "tianwu",
+  "date": "2026-11-16",
+  "status": "parent-accepted-and-integrated",
+  "sourcePassage": "content/beasts/tianwu.json#source",
+  "anatomyDisclosure": "Four SHA/receipt-verified native Extreme-High mother types: trunk x1, leg x8, human headneck x8, round tail x8. Parent approved v6 bounded shoulder/hip/sacral tissue and v3 local claws. Major native geometry/UV/PBR retained; only local junction proxies resampled. Claw shortening/darkening and iris atlas contrast are disclosed local art. No native whole-animal or visible fine-fur claim. No paid calls by worker.",
+  "sourceComponents": [
+    {
+      "path": "raw/tianwu-production-20261115-trunk-high/base_high_pbr.glb",
+      "sha256": "318a79a034eefc81dcafb88786e10640115c298c73ffe510dd6527942d9284cc",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "edb5f337-627f-401d-b769-8b5d4bf13c44"
+    },
+    {
+      "path": "raw/tianwu-production-20261115-headneck-high/base_high_pbr.glb",
+      "sha256": "7f8df400a021a101f202b5d70ccf7b5605109776f98d40a2aa4e1e5970129d07",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "6bd73fbb-754a-4c20-9c70-0e05523ebb89"
+    },
+    {
+      "path": "raw/tianwu-production-20261115-tail-high/base_high_pbr.glb",
+      "sha256": "ee38dde788a160cde3e28e3b95ad4031b18e14b6d354011587e18482a6e6e954",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "6acc6385-efe8-4e8e-837d-f39ac31ec6da"
+    },
+    {
+      "path": "raw/tianwu-production-20261115-leg-high/base_high_pbr.glb",
+      "sha256": "cf1714e0506c3e23d9698f10bafc1026e6ca6fb808a8c77a94a949f939c642ab",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "b408048f-4823-4520-984d-3c0a590e295f"
+    }
+  ],
+  "rebuild": {
+    "command": "pipeline/build_beast.sh tianwu",
+    "prepareScript": "pipeline/blender/prepare_tianwu_high.py",
+    "method": "Four declared raw placeholders; SHA/receipt checks; versioned positive uniform registration matrices; deterministic eightfold placement; three bounded root-volume proxies and edge/normal matched shared tissue; local claw and iris atlas art; four source-type skeleton GLBs; Meshopt/WebP2048; runtime procedural three action states.",
+    "opaqueFrozenDerivedGlbRequired": false,
+    "requiredInputs": [
+      "raw/tianwu-production-20261115-trunk-high/base_high_pbr.glb",
+      "raw/tianwu-production-20261115-leg-high/base_high_pbr.glb",
+      "raw/tianwu-production-20261115-headneck-high/base_high_pbr.glb",
+      "raw/tianwu-production-20261115-tail-high/base_high_pbr.glb"
+    ],
+    "newPaidCalls": 0,
+    "actualRebuildLog": "raw/_build/tianwu-native-recipe-public-receipts-v2.log",
+    "actualRebuildPassed": true,
+    "codeDependencies": [
+      "pipeline/blender/prepare_tianwu_high.py",
+      "pipeline/blender/reference_tianwu_parts.py",
+      "pipeline/blender/prepare_tianwu.py",
+      "pipeline/blender/rig_tianwu.py"
+    ],
+    "publicSourceManifest": "pipeline/provenance/tianwu-native-sources.json",
+    "dependencyNote": "Native mode imports reusable helpers from reference_tianwu_parts.py and prepare_tianwu.py but never reads historical donor GLBs. Public receipts are versioned in tianwu-native-sources.json; no ignored sidecar, private cache, frozen blend or layout JSON is required. Only four declared original raw High GLBs are external inputs. Existing parent prepareArgs support files are infrastructure, not worker replacement patches."
+  },
+  "construction": {
+    "majorNativeSurfacePreserved": true,
+    "fullVoxelRemesh": false,
+    "localVolumeVoxelSizeM": 0.004,
+    "boundedRegions": [
+      "shoulder",
+      "middle hips",
+      "sacrum"
+    ],
+    "sharedTissue": "Locally resampled root patches only, smooth bounded concave fillets; boundaries sink into source surface with interpolated native normals and source-sampled linear pigment.",
+    "localAtlasArt": [
+      "two bounded projecting claws darkened and shortened along actual toe axis; Jacobian inverse-transpose normals",
+      "two human irises strengthened in owned diffuse copy, complete source geometry retained"
+    ],
+    "authoredFineFurApplied": false,
+    "fineFurAssessment": "Major PBR remains smooth; no claim of visibly native or authored fine fur.",
+    "fullSelfIntersectionCertificate": false
+  },
+  "highStageProposal": {
+    "status": "Four native source gates, v6 bounded root assembly, v3 claws and all twelve final compressed ink three-state face/root/tail detail images accepted by parent. Unified four-source recipe rebuilt successfully; local ready-stage QA complete or in progress, parent integration runtime acceptance pending.",
+    "sourceCoverage": "Four independent mothers cover all major visible regions: limbless trunk once, complete single limb eight times, complete human face/curved neck eight times, single round tail eight times. No whole-animal eight-foot generation gamble.",
+    "unverifiedHighDonors": false,
+    "referenceScript": "pipeline/blender/reference_tianwu_parts.py",
+    "references": {
+      "trunk": "concept/tianwu-high-refs/trunk",
+      "headneck": "concept/tianwu-high-refs/headneck",
+      "tail": "concept/tianwu-high-refs/tail",
+      "leg": "concept/tianwu-high-refs/leg"
+    },
+    "drafts": [
+      "pipeline/rodin/jobs/tianwu-production-20261115-trunk-high.draft.json",
+      "pipeline/rodin/jobs/tianwu-production-20261115-leg-high.draft.json",
+      "pipeline/rodin/jobs/tianwu-production-20261115-headneck-high.draft.json",
+      "pipeline/rodin/jobs/tianwu-production-20261115-tail-high.draft.json"
+    ],
+    "requestedTier": "Gen-2.5-Extreme-High",
+    "qualityOverride": 50000,
+    "addons": "HighPack",
+    "textureModeExtremeHigh": false,
+    "draftCostCredits": 4,
+    "assemblyPlan": "Four compressed native High mothers with positive-scale clones, cached geometry/maps and owned skeleton/materials. Preserve major native surfaces/UV/PBR; rebuild only three bounded root-volume tissue patches and disclose local claw/iris atlas edits. No full-animal voxel remesh. No authored fine fur applied. Actual compressed three-state root and face closeups read and accepted.",
+    "workerDraftBudgetNote": "Generation client enforces cumulative per-beast budget; parent formal jobs use 12-credit ceiling, each Extreme-High request remains nominally one credit. Do not use early budget=1 worker drafts as final submissions.",
+    "parentSubmitted": {
+      "trunk": {
+        "job": "tianwu-production-20261115-trunk-high",
+        "reportedHashPrefix": "f85e29418106ee65"
+      },
+      "headneck": {
+        "job": "tianwu-production-20261115-headneck-high",
+        "reportedHashPrefix": "bb73cbaedbe877d2"
+      },
+      "tail": {
+        "job": "tianwu-production-20261115-tail-high",
+        "reportedHashPrefix": "8522c97654ee563d"
+      },
+      "receiptsVerifiedHere": true
+    },
+    "legReferenceRepair": "Keep only complete lower-paw connected component; discard disconnected abdominal crop fragments, weld coincident glTF seams, continue exact native cut loop into curved upper-limb loft, close proximal root, local voxel fusion .002m. Actual four images reviewed after repair; reference only.",
+    "nativePreparationScript": "pipeline/blender/prepare_tianwu_high.py",
+    "registrationEvidence": "raw/_build/tianwu-native-registered-v2",
+    "nativeStaticPreviewStatus": "Parent Read all seven native v6 assembly images and claw-v3 lower closeup; static continuous root/anatomy gate passed. Parent later Read and accepted all twelve final compressed ink runtime closeups; coordinator integration runtime gate pending.",
+    "sourceDefinedRegistration": "prepare_tianwu_high.py NATIVE_REGISTRATION declares all four source SHA256 and positive uniform transforms; --native-layout reconstructs without ignored reference GLBs or .blend state.",
+    "boundedTissueEvidence": "raw/_build/tianwu-native-assembly-v6: worker and parent Read all four views and shoulder, sacrum, belly closeups. Parent static root gate passed. Shared authored tissue is not native Rodin geometry.",
+    "localClawRepair": "v1 heel mask rejected; v2 incomplete single-tip mask rejected. raw/_build/tianwu-claw-repair-v3 actual four views and lower closeup Read: two actual -Y projecting tips locally shortened/darkened, full paw/toe grooves/proximal muscle preserved. Owned 4096 atlas copy; imported normals transported with local Jacobian inverse transpose. No native four-even-claw claim.",
+    "modularPrototype": "Four native source-type GLBs with independent skeletons and embedded source-defined placement metadata installed; leg includes two offline mirrored prototypes sharing maps. Runtime integration complete, compressed geometric palm/face/support/sharing/remount QA passed. Parent integration runtime gate pending."
+  },
+  "rig": {
+    "script": "pipeline/blender/rig_tianwu.py",
+    "feet": 8,
+    "necks": 8,
+    "tails": 8,
+    "idleSeconds": 6,
+    "walkSeconds": 4,
+    "specialSeconds": 5,
+    "supportDuty": 0.68,
+    "strideM": 0.06,
+    "runtimeUniformScale": 0.6,
+    "runtimeCircleRadiusM": 0.3529411764705882,
+    "sourcePivotX": 0.75,
+    "supportMethod": "At touchdown choose a fixed world sole position and orientation. Invert the actual circle translation and yaw separately for every foot, including its distance from the turning pivot. Root-parented sole effectors preserve absolute orientation; two-segment analytic limb solve follows the target. Cubic swing matches both support endpoint derivatives. This replaces the old straight clip rather than rotating that clip.",
+    "faceMethod": "Complete mother cranial height section has a rigid cranium influence, lower neck transition only. Independent decoded geometry masks measure pair distances.",
+    "driver": "Procedural native source-type owned skeletons in Tianwu.tsx; core passthrough rig_tianwu.py recognizes native placement metadata. No stale candidate baked clips used."
+  },
+  "runtime": {
+    "component": "src/beasts/tianwu/Tianwu.tsx",
+    "ownership": "SkeletonUtils clone per instance; effect-owned ink/outline install/restore/dispose; unique owned skeletons disposed on cleanup; dispose={null} protects cached geometry/maps.",
+    "route": "Fixed circle center and radius 0.35294117647058826m at uniform scale .60; walk time persists across action changes. Camera coverage and actual compressed soles tested over more than two turns.",
+    "qaScript": "scripts/qa-tianwu.mjs",
+    "qaPort": 5208,
+    "assets": [
+      "body.glb",
+      "leg.glb",
+      "headneck.glb",
+      "tail.glb"
+    ],
+    "sharing": "Eight heads share one geometry; eight tails one geometry; eight legs two offline mirrored geometry prototypes with shared maps. Each mounted clone owns skeletons and effect materials/outlines. Hidden opposite-side skeletons are also disposed; cached geometry/maps remain immutable."
+  },
+  "evidence": {
+    "correctedStaticReference": "raw/_build/tianwu-direct-field-v6",
+    "rejectedAtlasExperiments": [
+      "raw/_build/tianwu-reference-v4",
+      "raw/_build/tianwu-reference-v5",
+      "raw/_build/tianwu-reference-v6",
+      "raw/_build/tianwu-reference-v7",
+      "raw/_build/tianwu-reference-v8",
+      "raw/_build/tianwu-reference-v9"
+    ],
+    "oldRejectedDelivery": "raw/_build/tianwu-original-delivery-v1",
+    "oldRuntimeQaHistoricalOnly": "raw/_build/tianwu-runtime-final-v2",
+    "rebuildLog": "raw/_build/tianwu-native-recipe-public-receipts-v2.log",
+    "historicalCandidateRuntime": "raw/_build/tianwu-runtime-circle-v2",
+    "currentRuntime": "raw/_build/tianwu-high-runtime-final-v7",
+    "finalLayout": "raw/_build/tianwu-high-layout-final-v10",
+    "parentAcceptedTwelveInkDetails": "raw/_build/tianwu-high-runtime-v5",
+    "rebuiltStaticReference": "raw/_build/tianwu-reference-v10",
+    "requiredActionShotsAndCloseups": "raw/_build/tianwu-high-required-shots-final-v2"
+  },
+  "acceptance": {
+    "ready": true,
+    "parentVisualAccepted": true,
+    "parentRuntimeAcceptance": "passed in coordinator checkout on 2026-11-16",
+    "parentStaticDirectionApproved": "Native High assembly-v6 all seven images and claw-v3 lower detail accepted; parent later accepted all twelve compressed ink three-state face/shoulder/hip/tail detail images.",
+    "historicalCandidateParentDirection": "Earlier direct-field-v6 warm gray faces and round curved tails accepted as direction only; it did not certify native High assets.",
+    "highStageComplete": true,
+    "reason": "Actual parent four-source formal recipe matches reviewed assets byte-for-byte. Complete native support/remount/inspection restoration/297-pose layout/live action/source-design wheel suite passed; parent inspected required states, motion frames and final responsive/detail images.",
+    "currentChecks": {
+      "typecheck": "passed",
+      "validate": "passed after parent accepted final twelve images and authorized local ready=true; required chain task bllnk4714 exit0",
+      "build": "passed final native High production bundle after public receipt and38degree desktop framing changes; full required chain task bruxexdvm exit0",
+      "qaBrowser": "Passed final38degree native High production-preview and strictmode-dev, raw/_build/tianwu-high-browser-framing-final.log (task bechdbcwp exit0).",
+      "nativeRuntime": "Full compressed geometry/support/face/palm/sharing/remount suite final-v7 passed; new297-pose real UI geometry clearance and resumed live action motion suite final-v10 passed, errors=[].",
+      "visual": "Worker Read native High idle/walk/special and three continuous closeups in tianwu-high-required-shots-v1, all twelve final compressed ink detail images in tianwu-high-runtime-v5; parent independently Read and accepted all twelve final images. Worker Read real ActionBar and responsive 390/700 captures with coordinator live shared stylesheet in final-v6; no overlap, both source/design mouse wheel paths tested."
+    }
+  },
+  "historicalQa": {
+    "modelSha256": "0ff4609037ea18d61f71039379213be4e6f2a0a83d5b97d6908c700196bfe9d2",
+    "supportIntervals": 32,
+    "maximumWorldSoleDriftM": 0.00016250174163624114,
+    "maximumVerticalDriftM": 3.0649038180511484e-05,
+    "note": "Passed numerical straight-route QA and project checks, but failed parent visual review. Not applicable acceptance for the revised circular model."
+  },
+  "limitations": [
+    "Native High runtime replaces the earlier derived candidate. Parent accepted all final compressed ink three-state detail images; coordinator integration runtime acceptance remains pending.",
+    "Major native PBR remains smooth; no obvious fine-fur claim.",
+    "No whole-body self-intersection certificate.",
+    "Existing narration and generic footsteps retained; no new dedicated vocal recording."
+  ],
+  "historicalCandidateQa": {
+    "modelSha256": "971694a14b92d818e81d938f71dd1221b1430599cea46ee7a4af0f8b8764f929",
+    "modelBytes": 8751920,
+    "supportIntervals": 160,
+    "maximumWorldSoleDriftM": 0.00037701907538854076,
+    "maximumVerticalDriftM": 8.069818520084482e-07,
+    "maximumHeadDistanceDriftM": 1.313598661234483e-07,
+    "maximumAbsoluteNdcBound": 0.9385045964479516,
+    "remounts": [
+      {
+        "skins": 1,
+        "outlines": 1
+      },
+      {
+        "skins": 1,
+        "outlines": 1
+      }
+    ],
+    "errors": [],
+    "finalHighAcceptance": false
+  },
+  "actualHighSources": [
+    {
+      "time": "2026-11-15T14:40:30.119Z",
+      "beast": "tianwu",
+      "job": "tianwu-production-20261115-trunk-high",
+      "hash": "f85e29418106ee65",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "edb5f337-627f-401d-b769-8b5d4bf13c44",
+      "consumed": 1,
+      "source": "raw/tianwu-production-20261115-trunk-high/base_high_pbr.glb",
+      "sourceSha256": "318a79a034eefc81dcafb88786e10640115c298c73ffe510dd6527942d9284cc",
+      "bytes": 25456212,
+      "triangles": 50000,
+      "vertices": 25419,
+      "localSource": "raw/tianwu-production-20261115-trunk-high/base_high_pbr.glb",
+      "actualReviewDirectory": "raw/_build/tianwu-actual-high-v1/trunk",
+      "workerReadActualFourViewsAndTwoCloseups": true,
+      "parentVisualAcceptance": true,
+      "surfaceDetailAssessment": "Coherent complete native High major volume; requested millimeter-scale fine fur not visibly achieved in trunk/tail, human hair contains visible fine flow but skin remains smooth. Parent source gate accepted; never claim native fur detail from triangle count.",
+      "textures": [
+        {
+          "name": "texture_diffuse",
+          "width": 4096,
+          "height": 4096
+        },
+        {
+          "name": "texture_metallic-texture_roughness",
+          "width": 4096,
+          "height": 4096
+        },
+        {
+          "name": "texture_normal",
+          "width": 4096,
+          "height": 4096
+        }
+      ]
+    },
+    {
+      "time": "2026-11-15T14:40:29.863Z",
+      "beast": "tianwu",
+      "job": "tianwu-production-20261115-headneck-high",
+      "hash": "bb73cbaedbe877d2",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "6bd73fbb-754a-4c20-9c70-0e05523ebb89",
+      "consumed": 1,
+      "source": "raw/tianwu-production-20261115-headneck-high/base_high_pbr.glb",
+      "sourceSha256": "7f8df400a021a101f202b5d70ccf7b5605109776f98d40a2aa4e1e5970129d07",
+      "bytes": 19446124,
+      "triangles": 50000,
+      "vertices": 29313,
+      "localSource": "raw/tianwu-production-20261115-headneck-high/base_high_pbr.glb",
+      "actualReviewDirectory": "raw/_build/tianwu-actual-high-v1/headneck",
+      "workerReadActualFourViewsAndTwoCloseups": true,
+      "parentVisualAcceptance": true,
+      "surfaceDetailAssessment": "Coherent complete native High major volume; requested millimeter-scale fine fur not visibly achieved in trunk/tail, human hair contains visible fine flow but skin remains smooth. Parent source gate accepted; never claim native fur detail from triangle count.",
+      "textures": [
+        {
+          "name": "texture_diffuse",
+          "width": 4096,
+          "height": 4096
+        },
+        {
+          "name": "texture_metallic-texture_roughness",
+          "width": 4096,
+          "height": 4096
+        },
+        {
+          "name": "texture_normal",
+          "width": 4096,
+          "height": 4096
+        }
+      ]
+    },
+    {
+      "time": "2026-11-15T14:40:30.599Z",
+      "beast": "tianwu",
+      "job": "tianwu-production-20261115-tail-high",
+      "hash": "8522c97654ee563d",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "6acc6385-efe8-4e8e-837d-f39ac31ec6da",
+      "consumed": 1,
+      "source": "raw/tianwu-production-20261115-tail-high/base_high_pbr.glb",
+      "sourceSha256": "ee38dde788a160cde3e28e3b95ad4031b18e14b6d354011587e18482a6e6e954",
+      "bytes": 17906384,
+      "triangles": 50000,
+      "vertices": 25501,
+      "localSource": "raw/tianwu-production-20261115-tail-high/base_high_pbr.glb",
+      "actualReviewDirectory": "raw/_build/tianwu-actual-high-v1/tail",
+      "workerReadActualFourViewsAndTwoCloseups": true,
+      "parentVisualAcceptance": true,
+      "surfaceDetailAssessment": "Coherent complete native High major volume; requested millimeter-scale fine fur not visibly achieved in trunk/tail, human hair contains visible fine flow but skin remains smooth. Parent source gate accepted; never claim native fur detail from triangle count.",
+      "textures": [
+        {
+          "name": "texture_diffuse",
+          "width": 4096,
+          "height": 4096
+        },
+        {
+          "name": "texture_metallic-texture_roughness",
+          "width": 4096,
+          "height": 4096
+        },
+        {
+          "name": "texture_normal",
+          "width": 4096,
+          "height": 4096
+        }
+      ]
+    },
+    {
+      "time": "2026-11-15T14:50:24.183Z",
+      "beast": "tianwu",
+      "job": "tianwu-production-20261115-leg-high",
+      "hash": "be48cf5b9e8a516b",
+      "tier": "Gen-2.5-Extreme-High",
+      "uuid": "b408048f-4823-4520-984d-3c0a590e295f",
+      "consumed": 1,
+      "source": "raw/tianwu-production-20261115-leg-high/base_high_pbr.glb",
+      "sourceSha256": "cf1714e0506c3e23d9698f10bafc1026e6ca6fb808a8c77a94a949f939c642ab",
+      "bytes": 22185980,
+      "triangles": 50000,
+      "vertices": 25732,
+      "localSource": "raw/tianwu-production-20261115-leg-high/base_high_pbr.glb",
+      "actualReviewDirectory": "raw/_build/tianwu-actual-high-v1/leg",
+      "workerReadActualFourViewsAndTwoCloseups": true,
+      "parentVisualAcceptance": true,
+      "surfaceDetailAssessment": "Complete rounded curved leg and wide paw; two pale central claws visually prominent, local shortening/darkening proposed; fine fur still absent.",
+      "textures": [
+        {
+          "name": "texture_diffuse",
+          "width": 4096,
+          "height": 4096
+        },
+        {
+          "name": "texture_metallic-texture_roughness",
+          "width": 4096,
+          "height": 4096
+        },
+        {
+          "name": "texture_normal",
+          "width": 4096,
+          "height": 4096
+        }
+      ]
+    }
+  ],
+  "historicalCandidateDonors": [
+    {
+      "path": "raw/tianwu-eight-foot-reference-20261115/base_derived_pbr.glb",
+      "sha256": "926da12651f8201b13e41923466ddfb5021bc251d2e2d94e140de43985d8271a",
+      "origin": "Read-only link to beast-bingfeng/raw/_build/tianwu-v5-organic-torso-round-roots-20261115-candidate5/tianwu-organic-single-torso-eight-legs-gray.glb. This declared gray donor is itself derived; original lower-limb donor SHA256 6544f54656294809c4581cbc35012fc4f07d23a553635746eab2381071bbe58f. No verified High receipt for this source."
+    },
+    {
+      "path": "raw/tianwu-head-source/base_basic_pbr.glb",
+      "job": "xiangliu-production-20261114-living-human-headneck-v2-medium",
+      "tier": "Gen-2.5-Medium",
+      "sha256": "2e778cc74cfdb032eaa2463037e1a485f6b4acfe381780f0bd482501be9ef7cc",
+      "origin": "Generic complete human face/upper neck reused at positive scale .48, cropped below normalized Z=.34, not a native Tianwu High donor."
+    }
+  ],
+  "historicalCandidateRebuild": {
+    "command": "pipeline/build_beast.sh tianwu",
+    "prepareScript": "pipeline/blender/prepare_tianwu.py",
+    "method": "Verify declared donor SHA256 values; import body/head donors; deterministic layout defined in script; construct eight necks/eight tails; voxel .0028 and local fairing; sample native face UV luminance into neutral warm point pigment; export COLOR_0; rig circular world-fixed sole targets; Meshopt compression.",
+    "opaqueFrozenDerivedGlbRequired": false,
+    "requiredInputs": [
+      "raw/tianwu-eight-foot-reference-20261115/base_derived_pbr.glb",
+      "raw/tianwu-head-source/base_basic_pbr.glb"
+    ],
+    "requiredLayout": "Versioned in prepare_tianwu.py, no ignored layout manifest dependency",
+    "requiredAnatomySidecar": "Generated from donor geometry and source-defined curves at build time",
+    "newPaidCalls": 0
+  },
+  "historicalCandidateConstruction": {
+    "voxelSizeM": 0.0028,
+    "bodyLiftM": 0.11,
+    "headSourceScale": 0.48,
+    "necks": "Actual native cut-loop continuation into round curved lofts; basal caps inside chest; continuous shared tissue fairing.",
+    "tails": "Eight round curved procedural tails; root radius .080m, length about 1.16m, tapered .006m tip; roots embedded inside sacrum. Reference only, not a native High tail claim.",
+    "material": "Continuous point pigment COLOR_0, smooth maximal warm head fields across neighboring neck rows; donor UV luminance protects short dark hair and facial features. No derived atlas in the reviewed point-pigment candidate.",
+    "fullSelfIntersectionCertificate": false
+  },
+  "nativeRuntimeQa": {
+    "report": "raw/_build/tianwu-high-runtime-final-v7/report.json",
+    "passed": true,
+    "measurement": "Actual decoded and deformed SkinnedMesh vertices in world coordinates. Geometric bind-height masks independent of weights/bone names: complete low palm below .078m, contact sole below .022m, four actual X/Z edge extrema, and cranial geometry at or above 1.0m including lower jaw.",
+    "supportIntervals": 160,
+    "maximumWorldSoleDriftM": 1.0007475246751875e-15,
+    "maximumVerticalDriftM": 5.204170427930421e-18,
+    "maximumHeadDistanceDriftM": 5.967448757360216e-16,
+    "maximumPalmDistanceDriftM": 3.7470027081099033e-16,
+    "remounts": [
+      {
+        "skins": 28,
+        "outlines": 28
+      },
+      {
+        "skins": 28,
+        "outlines": 28
+      }
+    ],
+    "sharing": {
+      "headGeometries": 1,
+      "tailGeometries": 1,
+      "legGeometries": 2,
+      "skeletons": 28
+    },
+    "errors": [],
+    "parentReadAcceptedAllTwelveFinalInkDetails": true,
+    "workerReadNativeActionShotsAndContinuousCloseups": true,
+    "surfaceAssessment": "Dark irises remain visible within native eyelids after Meshopt/WebP2048 ink rendering. Shoulder and hip tissue stays closed in three actions, without black rings; eight round tapered tail branches remain separated, two foreshortened toward inspection camera. PBR remains smooth; no obvious fine-fur claim.",
+    "layoutReport": "raw/_build/tianwu-high-layout-final-v10/report.json",
+    "layoutPassed": true,
+    "layoutMinimumClearancePx": {
+      "1440": 21.95166696260833,
+      "390": 14.841871241951482,
+      "700": 36.578556069931
+    },
+    "layoutWorstScreenshots": [
+      "raw/_build/tianwu-high-layout-final-v10/worst-1440.png",
+      "raw/_build/tianwu-high-layout-final-v10/worst-390.png",
+      "raw/_build/tianwu-high-layout-final-v10/worst-700.png"
+    ],
+    "realLiveActionResumeAndMotionPassed": true,
+    "layoutMethod": "1440/390/700 viewports, three action poses, 33 phases over one complete circle each (297 poses). Real card/actions/controls/title/scroll rectangles. Actual deformed mesh vertices step113, switch to all 852355 vertices whenever sampled clearance is below24px; require at least8px. Real action clicks resume useFrame and assert moving head matrices and advancing walk clock."
+  },
+  "nativePublicAssets": [
+    {
+      "path": "public/models/tianwu/body.glb",
+      "bytes": 1929116,
+      "sha256": "74f07145c7450f8f462282cee7c8f47f656023fba090af07a0c03237cfb7dd4c"
+    },
+    {
+      "path": "public/models/tianwu/headneck.glb",
+      "bytes": 421760,
+      "sha256": "8810021de22555f66e19d44c9a6bbdb7506ba7a3572e6dacddfc1c0c09c82a85"
+    },
+    {
+      "path": "public/models/tianwu/leg.glb",
+      "bytes": 668828,
+      "sha256": "448da30bee488261dc01e3cf44b0475f0cdf73e5f4911d4d47c23ba788e9a341"
+    },
+    {
+      "path": "public/models/tianwu/tail.glb",
+      "bytes": 371788,
+      "sha256": "ba7b88713fa338265aa988c7cb8b1514da9ac32390922a611d0dfc2d787b6bde"
+    }
+  ],
+  "parentAcceptance": {
+    "date": "2026-11-16",
+    "recipeCommand": "bash pipeline/build_beast.sh tianwu",
+    "exitCode": 0,
+    "fourRuntimeAssetsByteIdenticalToReviewedWorker": true,
+    "assets": [
+      {
+        "path": "public/models/tianwu/body.glb",
+        "bytes": 1929116,
+        "sha256": "74f07145c7450f8f462282cee7c8f47f656023fba090af07a0c03237cfb7dd4c"
+      },
+      {
+        "path": "public/models/tianwu/headneck.glb",
+        "bytes": 421760,
+        "sha256": "8810021de22555f66e19d44c9a6bbdb7506ba7a3572e6dacddfc1c0c09c82a85"
+      },
+      {
+        "path": "public/models/tianwu/leg.glb",
+        "bytes": 668828,
+        "sha256": "448da30bee488261dc01e3cf44b0475f0cdf73e5f4911d4d47c23ba788e9a341"
+      },
+      {
+        "path": "public/models/tianwu/tail.glb",
+        "bytes": 371788,
+        "sha256": "ba7b88713fa338265aa988c7cb8b1514da9ac32390922a611d0dfc2d787b6bde"
+      }
+    ],
+    "report": "/tmp/shanhai-parent-tianwu-stage-v3/report.json",
+    "passed": true,
+    "errors": [],
+    "supportIntervals": 160,
+    "maximumActualWorldSoleDriftM": 1.0007475246751875e-15,
+    "remounts": 2,
+    "skinsAndOutlinesPerMount": 28,
+    "cameraRestorationExact": true,
+    "fixedCameraTarget": [
+      0,
+      0.6,
+      0
+    ],
+    "minimumGeometryClearancePx": {
+      "1440": 21.95166696260833,
+      "390": 14.84187124195167,
+      "700": 36.578556069931565
+    },
+    "clearanceSampling": "297 poses: 33 full-circle phases x3 actions x3 widths. Step113; below24px use all852355 vertices; minimum required8px. Finite sampling, not a whole-surface continuous-motion certificate.",
+    "realActionMotionAndBidirectionalCardWheelPassed": true,
+    "priorRejectedReports": [
+      "/tmp/shanhai-parent-tianwu-stage/report.json",
+      "/tmp/shanhai-parent-tianwu-stage-v2/report.json"
+    ],
+    "cameraCorrection": "Own fixed target while mounted; restore previous target on cleanup. DEV inspection saves complete state only on entry and restores only when active; before/after camera assertions passed.",
+    "parentReadStandardSixImages": true,
+    "parentReadFinalResponsiveAndNativeDetails": true,
+    "finalPostCameraFixStandardImages": [
+      "/tmp/shanhai-final-tianwu-idle.png",
+      "/tmp/shanhai-final-tianwu-walk.png",
+      "/tmp/shanhai-final-tianwu-special.png",
+      "/tmp/shanhai-final-tianwu-motion0.png",
+      "/tmp/shanhai-final-tianwu-motion1.png",
+      "/tmp/shanhai-final-tianwu-motion2.png"
+    ],
+    "finalPostCameraFixImagesRead": true
+  }
+}

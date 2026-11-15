@@ -26,11 +26,58 @@
       "basis": "在海中给出栖居处，未详写运动方式。本条没有鲛人之名，也未说明与鲛人记述的源流关系。"
     }
   ],
+  "recipe": {
+    "mode": "custom",
+    "bodyLength": 2.4,
+    "trimTail": false,
+    "prepareScript": "pipeline/blender/prepare_lingyu.py",
+    "prepareArgs": [
+      "{body.raw}",
+      "{body.out}",
+      "--length",
+      "{body.length}",
+      "--donor",
+      "raw/xingtian-production-20261115-closed-grip-whole-v7-high/base_high_pbr.glb"
+    ],
+    "rigScript": "pipeline/blender/rig_lingyu.py",
+    "qaScript": "scripts/qa-lingyu-app.mjs",
+    "compression": {
+      "weld": false,
+      "resample": false,
+      "meshoptLevel": "medium"
+    }
+  },
+  "parts": [
+    {
+      "id": "body",
+      "job": "pipeline/rodin/jobs/lingyu-production-20261115-corrected-human-limbs-v12-high.json",
+      "length": 2.4,
+      "texSize": 2048
+    }
+  ],
   "production": {
-    "status": "in-progress",
-    "modelReady": false,
-    "reason": "已核对古籍原文与设计推断，并生成对应评书；三维造型、绑定与视觉验收尚未完成。",
-    "narrationProvenance": "pipeline/provenance/source-narration-20261113.json"
+    "status": "parent-accepted-and-integrated",
+    "modelReady": true,
+    "checkedOn": "2026-11-16",
+    "reason": "真实v12 High保留唯一人面、前侧双臂与各五指；双足前掌以刑天v7 High五趾几何有界修复。眼区UV局部虹膜、瞳孔和眼睑对比通过实际水墨图审查。父统一配方逐字节重建、三态与连续运动图、最终压缩资产17项专项Stage检查通过；6视口构图、原文设计滚动、实际讲述播放停止和三次StrictMode重挂通过。30骨游弋保持离地，不采用地面步态。",
+    "runtimeSha256": "fb3125ebf3e1eb98c61d18527bc13fedc59365a56455ef4e92e1267687c78e87",
+    "runtimeBytes": 1869612,
+    "parentStageQa": "/tmp/shanhai-parent-lingyu-stage/report.json",
+    "parentStageSectionsPassed": 17,
+    "fullRecipeBuild": "Parent prepare/rig/compress exited 0, byte-identical SHA256 and size.",
+    "eyeMaterialRepair": "仅4096平方baseColor中7050像素改变超过1字节，约0.042%；非眼像素精确保留仅指无损PNG修补步骤，最终WebP有损。geometry/skin/animation不变。",
+    "narrationProvenance": "pipeline/provenance/source-narration-20261113.json",
+    "sourceHigh": {
+      "job": "pipeline/rodin/jobs/lingyu-production-20261115-corrected-human-limbs-v12-high.json",
+      "sha256": "214672b66577aec8fe33badb95e91c500c92fde72aa7298e4e8765237e5ed308"
+    },
+    "geometryDonor": {
+      "job": "pipeline/rodin/jobs/xingtian-production-20261115-closed-grip-whole-v7-high.json",
+      "sha256": "7b8f311778d006197a22113b397193a651d66fb3a2de9801d1da2ede32622cc8",
+      "region": "仅双足跖趾前侧与趾列；负X足离线局部反射并纠正绕序，保留陵鱼足弓、后跟、踝和全身其他保护区。",
+      "acceptedStaticPatchSha256": "b4a02d4ae07c06a35b8bdc818e8da789640ffaf4e46b33cfb87cc3f8b787184b",
+      "limitation": "近照保留轻微原生横向褶痕；实际水墨三态与近景已检查，原生退化及非流形区域有保留，不宣称全水密。"
+    }
   },
   "editionNotes": [
     {

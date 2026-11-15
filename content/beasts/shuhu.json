@@ -26,10 +26,36 @@
       "basis": "页面注释解释为喜抱舉人。好举人的记述不足以写定诙谐温顺的性格，举人的具体方式也未在正文详写。"
     }
   ],
+  "recipe": {
+    "mode": "custom",
+    "bodyLength": 1.7,
+    "trimTail": false,
+    "prepareScript": "pipeline/blender/prepare_shuhu_native.py",
+    "prepareArgs": ["{body.raw}", "{body.out}", "--length", "{body.length}"],
+    "rigScript": "pipeline/blender/rig_shuhu_native.py",
+    "qaScript": "scripts/qa-shuhu.mjs"
+  },
+  "parts": [
+    {
+      "id": "body",
+      "job": "pipeline/rodin/jobs/shuhu-production-20261115-unified-human-face-wings-v13-high.json",
+      "instances": 1,
+      "length": 1.7,
+      "texSize": 2048
+    }
+  ],
   "production": {
-    "status": "in-progress",
-    "modelReady": false,
-    "reason": "已核对古籍原文与设计推断，并生成对应评书；三维造型、绑定与视觉验收尚未完成。",
+    "status": "native-high-runtime-parent-accepted",
+    "ready": true,
+    "modelReady": true,
+    "specification": "pipeline/rodin/jobs/shuhu-production-20261115-unified-human-face-wings-v13-high.json",
+    "sourceSha256": "0bd5963144eeda704e46e5ca1c8d902a0756ad6039252b2422f88a473ebe3cbe",
+    "reason": "父会话已接受原生High解剖；完整保留500000三角面，40骨idle/walk/special与水墨场景已在本机Chrome Metal和390×844手机视口通过检查，父会话已Read并接受桌面与手机视口三态、面翼及翼尾根特写、三帧连续运动图；尚未做实体手机性能验收。",
+    "runtimeTriangles": 500000,
+    "runtimeBones": 40,
+    "runtimeBytes": 4046656,
+    "runtimeSha256": "c0083d99110ca8ccc9fc38f9fcc8c31b30d445d229b8988d47800cbf9c7291b9",
+    "runtimeQa": "scripts/qa-shuhu.mjs",
     "narrationProvenance": "pipeline/provenance/source-narration-20261113.json"
   },
   "editionNotes": [

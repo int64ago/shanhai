@@ -5,6 +5,10 @@ export default defineConfig({
   plugins: [react()],
   // 浏览器端只暴露 VITE_ 前缀变量，HYPER3D_API_KEY 不会进前端包
   envPrefix: 'VITE_',
+  server: {
+    // Isolated beast builds must not reload the parent app during visual QA.
+    watch: { ignored: ['**/.claude/worktrees/**'] },
+  },
   build: {
     chunkSizeWarningLimit: 1100,
     rolldownOptions: {

@@ -26,11 +26,43 @@
       "basis": "页面注释说此亦蛰类也，解释死为蛰伏无知如死；原文未记夏雷触发复活。其音如留牛未规定具体音高节奏，食之无肿疾保留为古籍记述。"
     }
   ],
+  "recipe": {
+    "mode": "custom",
+    "bodyLength": 2.19017607864707,
+    "trimTail": false,
+    "prepareScript": "pipeline/blender/prepare_lu_fish_recipe.py",
+    "prepareArgs": [
+      "{body.raw}",
+      "{body.out}"
+    ],
+    "rigScript": "pipeline/blender/rig_lu_fish_recipe.py",
+    "qaScript": "scripts/qa-lu-fish-app.mjs"
+  },
+  "parts": [
+    {
+      "id": "body",
+      "job": "pipeline/rodin/jobs/lu_fish-production-20261115-reviewed-low-wing-single-tail-v9-high.json",
+      "instances": 1,
+      "texSize": 2048
+    }
+  ],
+  "actions": [
+    "idle",
+    "walk",
+    "special"
+  ],
   "production": {
-    "status": "in-progress",
-    "modelReady": false,
-    "reason": "已核对古籍原文与设计推断，并生成对应评书；三维造型、绑定与视觉验收尚未完成。",
-    "narrationProvenance": "pipeline/provenance/source-narration-20261113.json"
+    "status": "parent-accepted-and-integrated",
+    "modelReady": true,
+    "sourceGeometryAccepted": true,
+    "parentRuntimeAccepted": true,
+    "sourceSha256": "390ffe36efa5722c0cec3a89c881d2c54f66711afc60d75b46013a3d60867bd9",
+    "frozenRepairSha256": "367b05b52fb5e3c2f8ffc2e1b556b6f9c2be567bec439b9e214b07108881c9a7",
+    "provenance": "pipeline/provenance/lu_fish.json",
+    "reason": "主工作区从声明原始High正式配方重建，修整/rig/压缩模型逐字节一致；实际served public三态、支撑相、完整蹄刚性、StrictMode三轮、390/700原文设计滚动及六张标准图已通过父级验收。保留原生细臀纹与既载拓扑限制。",
+    "narrationProvenance": "pipeline/provenance/source-narration-20261113.json",
+    "checkedOn": "2026-11-16",
+    "runtimeSha256": "34f1f018f93ddfe535ac87c70a91ac67e6d1187884508a5759ccbf094379723f"
   },
   "editionNotes": [
     {

@@ -18,7 +18,7 @@
       "basis": "经文以牛比形，未逐一规定耳尾、皮毛和躯干比例；依牛形补足，不增添其他足肢。"
     },
     {
-      "item": "苍身有据；蓝灰短毛的具体色阶、日月光影的明暗与风雨画法为艺术演绎。",
+      "item": "苍身有据；蓝灰短毛的具体色阶、日月光晕、脚边水波与风雨画法为艺术演绎。",
       "basis": "原文写苍身、其光如日月及出入水则必风雨，没有规定具体蓝灰色值、发光部位或风雨图样。"
     },
     {
@@ -26,10 +26,37 @@
       "basis": "其聲如雷是对夔鸣声的比拟。聲聞五百里位于黄帝取皮为鼓、用雷兽骨的后文，所述为鼓声，不是夔鸣声的传播距离。"
     }
   ],
+  "recipe": {
+    "mode": "custom",
+    "bodyLength": 1.6,
+    "trimTail": false,
+    "prepareScript": "pipeline/blender/prepare_kui_native.py",
+    "prepareArgs": ["{body.raw}", "{body.out}", "--length", "{body.length}"],
+    "rigScript": "pipeline/blender/rig_kui_native.py",
+    "qaScript": "scripts/qa-kui.mjs"
+  },
+  "parts": [{
+    "id": "body",
+    "job": "pipeline/rodin/jobs/kui-production-20261115-reviewed-monopod-v10-high.json",
+    "instances": 1,
+    "length": 1.6,
+    "texSize": 2048
+  }],
   "production": {
-    "status": "in-progress",
-    "modelReady": false,
-    "reason": "已核对古籍原文与设计推断，并生成对应评书；三维造型、绑定与视觉验收尚未完成。",
+    "status": "native-high-runtime-parent-accepted-local",
+    "ready": true,
+    "modelReady": true,
+    "specification": "pipeline/rodin/jobs/kui-production-20261115-reviewed-monopod-v10-high.json",
+    "sourceSha256": "31117de85c4577871ffee01facea75abfd851eccc070ebdbed13ede7721de662",
+    "reason": "父已独立验收实际三态与单足起落、刚性脸蹄、StrictMode三次重挂、390/360手机视口及桌面/390手机各30秒整圈；60样本覆盖7.26弧度，按全部变形顶点验证8px界面安全区。保留50000三角面/PBR、16骨；耳后细线与蹄冠原生唇缘保留，原生细毛较弱。为本机Chrome Metal视口模拟，非实体机性能验收。",
+    "parentStageQa": "/tmp/shanhai-parent-kui-stage-v2/report.json",
+    "parentWalkSupportDriftMeters": 0.00026955060863166126,
+    "parentWalkFlightHeightMeters": 0.14282914786740042,
+    "runtimeTriangles": 50000,
+    "runtimeBones": 16,
+    "runtimeBytes": 501632,
+    "runtimeSha256": "2279b5c2804defdab455cf24fad3610c3f441f6ef67936299d4c3869f725c73c",
+    "runtimeQa": "scripts/qa-kui.mjs",
     "narrationProvenance": "pipeline/provenance/source-narration-20261113.json"
   },
   "editionNotes": [

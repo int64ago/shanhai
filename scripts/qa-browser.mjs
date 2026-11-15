@@ -13,6 +13,7 @@ const report = {
   initialGlbs: [],
   initialRender: null,
   archetypes: [],
+  placeholder: null,
   actions: [],
   retryRecovered: false,
   uiFlows: {},
@@ -100,7 +101,13 @@ try {
       assert((await page.locator('.card-source').first().innerText()).includes('原文'))
       assert((await page.locator('.card-inferred').innerText()).includes('设计'))
 
-      // 2. Switch across all 5 archetypes + shared Quadruped + custom Ershu + Placeholder + cache hit
+      // Snapshot the catalog before filtering; completed beasts need no placeholder.
+      const expectedAllCount = await page.locator('.scroll-item').count()
+      const expectedReadyNames = await page.locator('.scroll-item.is-ready').allTextContents()
+      assert(expectedAllCount >= 62, `unexpected catalog size: ${expectedAllCount}`)
+      assert(expectedReadyNames.length >= 40, `unexpected ready count: ${expectedReadyNames.length}`)
+
+      // 2. Switch across all 5 archetypes + shared Quadruped + custom Ershu + cache hit
       const switches = [
         { id: 'dijiang', name: '帝江', archetype: 'sac', parts: 3 },
         { id: 'qitu', name: '鵸鵌', archetype: 'avian', parts: 3 },
@@ -108,7 +115,6 @@ try {
         { id: 'feiyi_snake', name: '肥遗', archetype: 'serpentine', parts: 1 },
         { id: 'lushu', name: '鹿蜀', archetype: 'quadruped-shared', parts: 1 },
         { id: 'ershu', name: '耳鼠', archetype: 'quadruped-custom', parts: 1 },
-        { id: 'xingtian', name: '刑天', archetype: 'placeholder', parts: 1 },
       ]
 
       for (const item of switches) {
@@ -117,11 +123,20 @@ try {
         await waitStageState(page, item.id, 'ready')
         assert.equal(await page.locator('.stage-error').count(), 0, `${item.id}: unexpected error banner`)
         assert.equal(await page.locator('.card-name').innerText(), item.name)
-        if (item.archetype === 'placeholder') {
-          assert(await page.locator('.card-note').isVisible(), 'unready beast shows pending note')
-          assert(glbRequests.includes('/models/_placeholder/fox.glb'), 'placeholder loads fox.glb on demand')
-        }
         report.archetypes.push({ ...item, ms: Date.now() - t0 })
+      }
+
+      const pending = page.locator('.scroll-item.is-pending').first()
+      if (await pending.count()) {
+        const name = (await pending.innerText()).trim()
+        await pending.click()
+        await page.waitForFunction((name) => document.querySelector('.card-name')?.textContent?.trim() === name, name)
+        const id = await page.locator('[data-beast]').getAttribute('data-beast')
+        assert(id, 'pending beast card exposes its ID')
+        await waitStageState(page, id, 'ready')
+        assert(await page.locator('.card-note').isVisible(), 'unready beast shows pending note')
+        assert(glbRequests.includes('/models/_placeholder/fox.glb'), 'placeholder loads fox.glb on demand')
+        report.placeholder = { id, name }
       }
 
       const glbCountBeforeCacheHit = glbRequests.length
@@ -169,10 +184,11 @@ try {
       // 5. Region tabs, catalog modal search, narration & controls
       await page.locator('.scroll-tab', { hasText: '已现' }).click()
       const readyScrollCount = await page.locator('.scroll-item').count()
-      assert(readyScrollCount >= 40 && readyScrollCount < 62, `unexpected ready filter count: ${readyScrollCount}`)
+      assert.deepEqual(await page.locator('.scroll-item').allTextContents(), expectedReadyNames, 'ready filter lists exactly the ready beasts')
+      assert.equal(await page.locator('.scroll-item.is-pending').count(), 0, 'ready filter excludes pending beasts')
       await page.locator('.scroll-tab', { hasText: '全卷' }).click()
       const allScrollCount = await page.locator('.scroll-item').count()
-      assert(allScrollCount >= 62, `unexpected full scroll count: ${allScrollCount}`)
+      assert.equal(allScrollCount, expectedAllCount, 'full scroll restores the complete catalog')
 
       await page.locator('.catalog-trigger').click()
       await page.locator('.catalog-panel').waitFor({ state: 'visible' })
@@ -202,6 +218,9 @@ try {
       assert.equal(await qualityBtn.innerText(), nextQuality[q3])
 
       report.uiFlows = { readyScrollCount, allScrollCount, catalogSearchPassed: true, narrationToggled: true, qualityCycled: true }
+
+      // Release the desktop WebGL context before the independent mobile check.
+      await page.close()
 
       // 6. Mobile viewport smoke check
       const mobilePage = await browser.newPage({ viewport: { width: 390, height: 844 } })

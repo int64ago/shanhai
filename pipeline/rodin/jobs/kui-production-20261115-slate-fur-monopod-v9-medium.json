@@ -1,0 +1,8 @@
+{
+  "id": "kui-production-20261115-slate-fur-monopod-v9-medium",
+  "beast": "kui",
+  "budget": 12.5,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "An anatomical sculpture of a ONE-LEGGED HORNLESS OX. A horizontal muscular bovine torso, realistic ox head with broad wet muzzle and small ears, blue-grey short fur, amber eyes, one slender ox tail. EXACTLY ONE thick living leg grows from the middle of the belly and supports the entire body. One ankle ends in a natural rounded two-toed cloven bovine hoof with curved dark keratin walls and two small dewclaws. The other three legs do not exist: smooth unbroken belly everywhere else, no stumps. Natural tapered joints and rounded hoof crown, no rectangular blocks or boots. Detailed living hide, tendon and fur, neutral side-facing standing pose, no horns, no platform, no stylized white toy surface.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb" }
+}

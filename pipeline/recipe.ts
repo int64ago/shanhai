@@ -15,6 +15,7 @@ import { join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { BEASTS, type BeastArchetype, type BeastEntry } from '../src/app/beasts.ts'
 import { toBeastComponentName, type BeastContentSpec } from '../src/app/beastSpec.ts'
+import { resolveCompressionArgs } from './compression.ts'
 
 export const ROOT = resolve(fileURLToPath(new URL('..', import.meta.url)))
 
@@ -33,6 +34,8 @@ export interface ResolvedBuildPlan {
   bodyLength: number
   trimTail: boolean
   prepareScript: string | null
+  prepareArgs: string[] | null
+  compressionArgs: string[]
   rigScript: string | null
   bodyJobId: string | null
   parts: ResolvedPart[]
@@ -153,7 +156,10 @@ export function resolveBeastRecipe(id: string): ResolvedBeastRecipe {
       archetype: entry.archetype,
       bodyLength,
       trimTail,
-      prepareScript,
+      // Discovered legacy scripts have different CLIs; execution requires an explicit recipe.
+      prepareScript: recipe?.prepareScript ? prepareScript : null,
+      prepareArgs: recipe?.prepareScript ? (recipe.prepareArgs ?? ['{body.raw}', '{body.out}']) : null,
+      compressionArgs: resolveCompressionArgs(recipe?.compression),
       rigScript,
       bodyJobId,
       parts: extraParts,

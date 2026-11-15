@@ -1,0 +1,14 @@
+{
+  "id": "kuafu-production-20261113-snake-high",
+  "beast": "kuafu",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "One complete slender golden YELLOW SNAKE matching the four reviewed reference views. Preserve one small natural snake head with two dark eyes and closed mouth, one continuous round flexible body, the open flowing S-shaped curve with no self contact or crossing, and a continuously tapering single pointed tail. Preserve the head-to-tail proportions and slim circular cross section. Refine the surface into delicate overlapping golden ochre scales and lighter yellow ventral scutes, with small natural nostrils, subtle eyelids and a clear closed mouth line. Avoid glossy plastic appearance. Entire animal isolated and visible. No limbs, horns, wings, second head, second snake, exposed tongue, props, person, pedestal or background. No geometric ribbon, flattening, loops or body intersections.",
+  "images": [
+    "concept/kuafu/production-20261113-snake/view_34.png",
+    "concept/kuafu/production-20261113-snake/view_side.png",
+    "concept/kuafu/production-20261113-snake/view_front.png",
+    "concept/kuafu/production-20261113-snake/view_back.png"
+  ],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000, "addons": "HighPack", "seed": 11133 }
+}

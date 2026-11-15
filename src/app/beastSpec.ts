@@ -29,10 +29,18 @@ export interface BeastRecipeSpec {
   trimTail?: boolean
   /** Relative to pipeline/blender/ or repo root */
   prepareScript?: string
+  /** CLI arguments; supports {body.raw}, {body.out}, {body.length}, {outDir}, and {<part>.raw|out|length}. */
+  prepareArgs?: string[]
   /** Relative to pipeline/blender/ or repo root */
   rigScript?: string
   /** Relative to repo root */
   qaScript?: string
+  /** Per-beast exceptions for preserving geometry or animation curves during compression. */
+  compression?: {
+    weld?: boolean
+    resample?: boolean
+    meshoptLevel?: 'medium' | 'high'
+  }
 }
 
 export interface BeastContentSpec {

@@ -1,0 +1,19 @@
+{
+  "id": "kuafu-production-20261115-continuous-ear-v4-high",
+  "beast": "kuafu",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "images": [
+    "concept/kuafu/production-20261115-continuous-ear-v4/view_34.png",
+    "concept/kuafu/production-20261115-continuous-ear-v4/view_side.png",
+    "concept/kuafu/production-20261115-continuous-ear-v4/view_front.png",
+    "concept/kuafu/production-20261115-continuous-ear-v4/view_back.png"
+  ],
+  "prompt": "One complete living pale GOLDEN YELLOW snake following the continuous open inverted-J curve in all four references. Preserve the single rounded head, two small dark eyes, closed mouth, narrow cylindrical neck, broad soft hook and long hanging tapered tail. One continuous body from snout to tail tip with no detached pieces, sharp kinks or self-intersections. Regenerate natural overlapping small ochre-yellow scales and pale belly shields over the authored shape guide. Fine head plates, realistic eyes and subtle closed mouth line. The open hook is intentional. Exactly one snake; no ear, person, ornament, appendage, second head, second tail, pedestal or base. Entire snake visible.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

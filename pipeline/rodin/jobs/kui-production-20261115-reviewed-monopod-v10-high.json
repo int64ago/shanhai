@@ -1,0 +1,19 @@
+{
+  "id": "kui-production-20261115-reviewed-monopod-v10-high",
+  "beast": "kui",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "One complete Kui matching the four reviewed views: a hornless bovine creature with exactly ONE central leg beneath its rounded heavy body. Preserve the single organic leg root, continuous belly, one planted cloven hoof and small rear dewclaw. No second leg, extra limb, residual hip stumps, horns or pedestal. Preserve the bovine face, two ears, dark nostrils, amber eyes and single long tapered tail with a natural tuft. Continuous slate blue-gray short fur covers head, neck, torso, leg and tail, with fine directional hair and subtle natural roughness. No scarf boundary, color blocks, hard collars, plastic smoothness, torn sheets or open cuts. Keep rounded body volume and a smooth narrowing ankle into the dark hoof; do not add ankle ornaments. Entire creature including hoof and tail tip visible. Neutral balanced standing pose on its one leg. Preserve the reference anatomy exactly and improve fine skin, fur and hoof detail.",
+  "images": [
+    "concept/kui/production-20261115-reviewed-monopod-v10/view_34.png",
+    "concept/kui/production-20261115-reviewed-monopod-v10/view_side.png",
+    "concept/kui/production-20261115-reviewed-monopod-v10/view_front.png",
+    "concept/kui/production-20261115-reviewed-monopod-v10/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

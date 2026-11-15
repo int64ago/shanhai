@@ -835,6 +835,8 @@ button {
 }
 
 @media (min-width: 641px) and (max-width: 1000px) {
+  .controls { bottom: 164px; }
+
   .story-caption {
     left: 32px;
     right: 96px;
@@ -847,7 +849,7 @@ button {
 
 /* 长篇考据在窄屏改为可滚动横排，给模型留出空间并保留原文与设计分栏。 */
 @media (max-width: 1000px) {
-  .card:is([data-beast="yinglong"], [data-beast="jimeng"], [data-beast="zhulong"], [data-beast="leishen"]) {
+  .card:is([data-beast="yinglong"], [data-beast="jimeng"], [data-beast="zhulong"], [data-beast="leishen"], [data-beast="longzhi"], [data-beast="lingyu"], [data-beast="xingtian"], [data-beast="xiangliu"], [data-beast="kui"], [data-beast="shuhu"], [data-beast="kuafu"], [data-beast="qiangliang"], [data-beast="xixiyu"], [data-beast="lu_fish"], [data-beast="tianwu"]) {
     writing-mode: horizontal-tb;
     width: min(280px, calc(100vw - 88px));
     max-height: 32vh;
@@ -856,12 +858,12 @@ button {
     scrollbar-width: thin;
   }
 
-  .card:is([data-beast="yinglong"], [data-beast="jimeng"], [data-beast="zhulong"], [data-beast="leishen"]) .card-name { font-size: 24px; }
-  .card:is([data-beast="yinglong"], [data-beast="jimeng"], [data-beast="zhulong"], [data-beast="leishen"]) .story-btn { padding: 5px 7px; }
-  .card:is([data-beast="yinglong"], [data-beast="jimeng"], [data-beast="zhulong"], [data-beast="leishen"]) .card-source { font-size: 14px; line-height: 1.8; letter-spacing: .06em; }
-  .card:is([data-beast="yinglong"], [data-beast="jimeng"], [data-beast="zhulong"], [data-beast="leishen"]) .card-source cite { margin-top: .4em; }
-  .card:is([data-beast="yinglong"], [data-beast="jimeng"], [data-beast="zhulong"], [data-beast="leishen"]) .card-label { margin: 0 .5em .3em 0; padding: 1px 3px; }
-  .card:is([data-beast="yinglong"], [data-beast="jimeng"], [data-beast="zhulong"], [data-beast="leishen"]) .card-inferred { display: block; flex-shrink: 0; padding: 8px; }
+  .card:is([data-beast="yinglong"], [data-beast="jimeng"], [data-beast="zhulong"], [data-beast="leishen"], [data-beast="longzhi"], [data-beast="lingyu"], [data-beast="xingtian"], [data-beast="xiangliu"], [data-beast="kui"], [data-beast="shuhu"], [data-beast="kuafu"], [data-beast="qiangliang"], [data-beast="xixiyu"], [data-beast="lu_fish"], [data-beast="tianwu"]) .card-name { font-size: 24px; }
+  .card:is([data-beast="yinglong"], [data-beast="jimeng"], [data-beast="zhulong"], [data-beast="leishen"], [data-beast="longzhi"], [data-beast="lingyu"], [data-beast="xingtian"], [data-beast="xiangliu"], [data-beast="kui"], [data-beast="shuhu"], [data-beast="kuafu"], [data-beast="qiangliang"], [data-beast="xixiyu"], [data-beast="lu_fish"], [data-beast="tianwu"]) .story-btn { padding: 5px 7px; }
+  .card:is([data-beast="yinglong"], [data-beast="jimeng"], [data-beast="zhulong"], [data-beast="leishen"], [data-beast="longzhi"], [data-beast="lingyu"], [data-beast="xingtian"], [data-beast="xiangliu"], [data-beast="kui"], [data-beast="shuhu"], [data-beast="kuafu"], [data-beast="qiangliang"], [data-beast="xixiyu"], [data-beast="lu_fish"], [data-beast="tianwu"]) .card-source { font-size: 14px; line-height: 1.8; letter-spacing: .06em; }
+  .card:is([data-beast="yinglong"], [data-beast="jimeng"], [data-beast="zhulong"], [data-beast="leishen"], [data-beast="longzhi"], [data-beast="lingyu"], [data-beast="xingtian"], [data-beast="xiangliu"], [data-beast="kui"], [data-beast="shuhu"], [data-beast="kuafu"], [data-beast="qiangliang"], [data-beast="xixiyu"], [data-beast="lu_fish"], [data-beast="tianwu"]) .card-source cite { margin-top: .4em; }
+  .card:is([data-beast="yinglong"], [data-beast="jimeng"], [data-beast="zhulong"], [data-beast="leishen"], [data-beast="longzhi"], [data-beast="lingyu"], [data-beast="xingtian"], [data-beast="xiangliu"], [data-beast="kui"], [data-beast="shuhu"], [data-beast="kuafu"], [data-beast="qiangliang"], [data-beast="xixiyu"], [data-beast="lu_fish"], [data-beast="tianwu"]) .card-label { margin: 0 .5em .3em 0; padding: 1px 3px; }
+  .card:is([data-beast="yinglong"], [data-beast="jimeng"], [data-beast="zhulong"], [data-beast="leishen"], [data-beast="longzhi"], [data-beast="lingyu"], [data-beast="xingtian"], [data-beast="xiangliu"], [data-beast="kui"], [data-beast="shuhu"], [data-beast="kuafu"], [data-beast="qiangliang"], [data-beast="xixiyu"], [data-beast="lu_fish"], [data-beast="tianwu"]) .card-inferred { display: block; flex-shrink: 0; padding: 8px; }
 }
 
 /* 人首长躯的古籍卡片在小横屏同样保留为可滚动横排。 */
@@ -913,7 +915,7 @@ button {
   }
 
   .actions {
-    bottom: 146px;
+    bottom: 156px;
   }
 
   .stage-status {
@@ -922,7 +924,7 @@ button {
 
   .controls {
     right: 16px;
-    bottom: 140px;
+    bottom: 156px;
   }
 
   .scroll-item {

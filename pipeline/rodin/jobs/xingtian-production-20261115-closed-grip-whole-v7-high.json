@@ -1,0 +1,19 @@
+{
+  "id": "xingtian-production-20261115-closed-grip-whole-v7-high",
+  "beast": "xingtian",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "One complete mythical Xingtian warrior exactly matching the four views. Broad muscular human torso ends in a smooth closed shoulder plateau: no head, no neck, no stump, hole or cup. Two eyes are on the chest and one closed human mouth at the navel. Two arms and two legs with intact human feet and five toes each. Both hands have four naturally curled fingers and an opposing thumb enclosing a clear empty cylindrical grip channel. Preserve fingers and thumbs, knuckle volumes, fingernails and curved grip cavity. Smooth natural continuous wrists joining the forearms, no cuffs, collars, hard seams or floating parts. Warm gray human skin and plain short brown waist garment as reference, subtle natural detail. Neutral standing pose with arm clearance, entire body and both feet visible. No axe, shield, weapons, handle, props, pedestal, extra face, extra head or extra limbs. Preserve the reference anatomy and closed upper torso exactly.",
+  "images": [
+    "concept/xingtian/production-20261115-closed-grip-high-reference/view_34.png",
+    "concept/xingtian/production-20261115-closed-grip-high-reference/view_side.png",
+    "concept/xingtian/production-20261115-closed-grip-high-reference/view_front.png",
+    "concept/xingtian/production-20261115-closed-grip-high-reference/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

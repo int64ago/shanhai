@@ -1,0 +1,315 @@
+{
+  "beast": "xiangliu",
+  "status": "parent-accepted-and-integrated",
+  "ready": true,
+  "checkedOn": "2026-11-16",
+  "workerPaidApiCalls": 0,
+  "body": {
+    "job": "xiangliu-production-20261115-rounded-extended-body-high",
+    "tier": "Gen-2.5-Extreme-High",
+    "receiptHash": "4550e147828e5cb1",
+    "uuid": "588c4b3a-796f-4caf-ad23-715495ff4a27",
+    "receiptStatus": "done",
+    "consumed": 1,
+    "qualityOverride": 50000,
+    "addons": "HighPack",
+    "actualTriangles": 50000,
+    "rawSha256": "f0122ffce404437474bd7ce5aaa4edae776a027ba5d8f833d950d3665a8f7a75",
+    "paidSubmissionBy": "coordinator",
+    "nativeSourceAxes": {
+      "anterior": "+X",
+      "tail": "-X"
+    },
+    "localEdits": "Positive uniform normalization and rigid rotation/translation; actual posterior mesh and UV retained. Only anterior Y >= 0.10 rebuilt as one continuous union with nine locally authored tapered necks; native diffuse projected into a new atlas with a gradual colour transition. No source tangent-space normal map retained on rebuilt tissue. New neck diffuse samples the actual native High dorsal flank at physical metre scale, replacing the superseded synthetic oval scales and sparse lateral patch; source patch spans normalized Y -1.8 to -0.6 and a 0.4m circumferential arc centred on the dorsal surface. New root tissue uses metre-space triplanar sampling, fading to actual original projection only across Y 0.10 to 0.45 at the retained posterior junction. The upper neck retains a neutral native-cut colour fade. Actual pre-WebP atlas raycast measured 15.3913 dark lines/m against 16.7905 lines/m in the same physical native reference probe (ratio 0.9167). Coordinator visually accepted v10 root, side and nape ink views; geometry and material are frozen pending independent Stage acceptance."
+  },
+  "heads": {
+    "originBeast": "leishen",
+    "newXiangliuGeneration": false,
+    "job": "leishen-production-20261114-native-whole-v2-high",
+    "tier": "Gen-2.5-Extreme-High",
+    "receiptHash": "c30d2d784ae1a394",
+    "uuid": "654c721b-5d05-45e9-975f-c9a6b05a9031",
+    "receiptStatus": "done",
+    "consumed": 1,
+    "qualityOverride": 50000,
+    "rawSha256": "454cee9efe4a0f60324ccb3d6cfb69c2bf217e34c44d2df6f2835c21ae429c9e",
+    "historicalExtractionSha256": "282651c399d5a2012dc855f0eb4fb023e412eaeae38d4bb3ee7049be3c87c4c8",
+    "sourceReceipt": "pipeline/rodin/cache/c30d2d784ae1a394/meta.json in the historical beast-bingfeng worktree",
+    "instances": 9,
+    "localEdits": "Complete native human faces, ears, cranium and hair retained above normalized mother Z = 0.40; only lower snake neck clipped. Positive uniform scale 1.38 (1.2 times the previous 1.15 candidate) and rigid yaw per head. Actual enlarged lower rim and low-frequency anatomical tangent guide a bounded 0.30m fit of newly authored upper necks. Lower throat diffuse approaches the shared tissue colour and its normal map fades to neutral at the cut; native human face geometry is not stretched."
+  },
+  "candidateAssets": [
+    {
+      "path": "public/models/xiangliu/body.glb",
+      "bytes": 3609820,
+      "sha256": "d5b36c970a603e652941841f2acdd07c7af6a7160acb89ac235921dd28ac21dd"
+    },
+    {
+      "path": "public/models/xiangliu/head.glb",
+      "bytes": 382576,
+      "sha256": "1f3d9070d2c5e0b427498dba49ce243836a2f7f72eb484cff00586720a066e70"
+    }
+  ],
+  "geometryAudit": {
+    "evidence": "raw/_build/xiangliu-20261115/actual-high-dense-colour-v10/independent-geometry-audit.json",
+    "approvedStaticGeometry": "raw/_build/xiangliu-20261115/actual-high-local-root-v8/body_norm.glb",
+    "allVertexPositionMultisetsPreservedAtMetres": 0.00001,
+    "posteriorPositionNormalUvIndexBytesIdentical": true,
+    "completeWeldedComponents": 1,
+    "completeTriangles": 259329,
+    "retainedOriginalPosteriorFaces": 30640,
+    "newTissueTriangleOverlapPairs": 0,
+    "retainedNativeHeadOverlapPairs": 18,
+    "retainedNativePosteriorOverlapPairs": 2,
+    "inheritedBoundaryEdges": 22,
+    "inheritedNonmanifoldEdges": 33,
+    "minimumSampledNativeHeadSurfaceGapMetres": 0.3736056387424469,
+    "limitation": "Native microdefects remain; this is not a fully manifold or universally intersection-free mesh. New tissue and native heads can export in a different vertex order; only posterior attribute bytes are claimed identical."
+  },
+  "runtimeAudit": {
+    "evidence": "raw/_build/xiangliu-20261115/final-delivery/qa.json",
+    "actualCompressedGlb": true,
+    "browser": "Installed Chrome with native Metal GPU",
+    "focusedQaPassed": true,
+    "browserErrors": [],
+    "bones": {
+      "root": 1,
+      "spine": 24,
+      "neck": 63,
+      "head": 9
+    },
+    "rigidNativeHeadVertices": 72634,
+    "invalidFaceWeights": 0,
+    "materialMeshes": 3,
+    "ownedOutlineShells": 3,
+    "allDiffuseMapsUseUv0": true,
+    "cachedSourceUnchangedAfterRemounts": 2,
+    "clipDurationsSeconds": {
+      "idle": 8.033333778381348,
+      "walk": 4.0333333015441895,
+      "special": 3.633333444595337
+    },
+    "sampling": "Five fractions per full clip, 15 total; LoopOnce with clampWhenFinished samples the actual final keyframe without repeat-wrap. Actual decoded default skin provides rest distances for posterior edges at least 5mm long in stage world coordinates",
+    "maximumPosteriorEdgeStrain": {
+      "idle": 0.02300270461992493,
+      "walk": 0.0863530186878313,
+      "special": 0.057567575060123555
+    },
+    "maximumLoopMatrixError": 0,
+    "minimumSampledHeadAabbGapWorldUnits": 0.10327080333150607,
+    "responsiveSourceDesign": [
+      {
+        "width": 700,
+        "height": 1000,
+        "actualWheelScrollTop": 131,
+        "designVisible": true,
+        "separateSourceQuotes": 2
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "actualWheelScrollTop": 122,
+        "designVisible": true,
+        "separateSourceQuotes": 2
+      }
+    ],
+    "visualGate": "Coordinator accepted v10 geometry/material; worker read all three actual shot views, three consecutive walk frames, ink root/side/nape, mobile and 700px source/design scroll screenshots. Independent coordinator Stage acceptance remains pending."
+  },
+  "verification": {
+    "unifiedRecipeBuild": "passed; raw/_build/xiangliu-20261115/unified-v10-build.log",
+    "typecheck": "passed",
+    "validate": "blocked by intentional ready=false while component exists (pipeline/validate.ts:122); no validator bypass or premature ready change",
+    "productionBuild": "passed; raw/_build/xiangliu-20261115/final-build.log",
+    "qaBrowser": "passed; raw/_build/xiangliu-20261115/full-browser/browser-qa.json and strictmode-qa.json",
+    "binaryLfs": "body.glb and head.glb staged as LFS pointers; no commit or push",
+    "finalApproval": "Parent independently accepted rebuilt runtime and promoted ready on 2026-11-16; consolidated release still pending"
+  },
+  "textureAudit": {
+    "evidence": "raw/_build/xiangliu-20261115/actual-high-dense-colour-v10/texture-density-audit.json",
+    "scope": "Actual atlas pixels sampled through triangle UV after surface raycast, before WebP/Meshopt",
+    "physicalProbeMetres": 0.7146917278648428,
+    "nativeReferenceLinesPerMetre": 16.79045598561811,
+    "actualAtlasLinesPerMetre": 15.391251320149935,
+    "lineDensityRatio": 0.9166666666666667,
+    "nativeReferenceLuminance90to10": 0.28624698529435044,
+    "actualAtlasLuminance90to10": 0.28374339157879347,
+    "islandEdgeAudit": "raw/_build/xiangliu-20261115/actual-high-dense-colour-v10/local-uv-seam-audit.json",
+    "sharedEdgesAcrossIslands": 1468,
+    "edgesWithMaxRgbDeltaOverPointOne": 200,
+    "maxRgbEdgeDelta": 0.46855628490448,
+    "percentile95RgbEdgeDelta": 0.20045147240161876,
+    "limitation": "Nearest-pixel island-edge colour differences remain; no fully seamless texture claim. New tissue has rebuilt geometric normals and no inherited tangent normal map."
+  },
+  "rejectedOrSupersededReferences": [
+    {
+      "job": "xiangliu-production-20261114-rounded-serpent-trunk-v2-medium",
+      "tier": "Gen-2.5-Medium",
+      "use": "Historical palette/reference only; not used as final body geometry"
+    },
+    {
+      "job": "xiangliu-production-20261114-living-human-headneck-v2-medium",
+      "tier": "Gen-2.5-Medium",
+      "use": "Historical source review only; not the final head source"
+    },
+    {
+      "job": "xiangliu-production-20261115-complete-nine-human-heads-v4-medium",
+      "tier": "Gen-2.5-Medium",
+      "use": "Rejected native count/anatomy study; Y-patch geometry not reused"
+    }
+  ],
+  "sourcePolicy": "Classical quotes remain verbatim in content/beasts/xiangliu.json source; long neck arrangement, exact shades, facial appearance, motion and sound remain inferred. No poison, glow or extra human chest/shoulders asserted as source anatomy.",
+  "acceptedParentAssets": [
+    {
+      "path": "public/models/xiangliu/body.glb",
+      "bytes": 3609804,
+      "sha256": "2139241a94ab7bf20383460d1a573973f10192c6ab6e2f0fdd7f41502839ccf6"
+    },
+    {
+      "path": "public/models/xiangliu/head.glb",
+      "bytes": 382576,
+      "sha256": "1f3d9070d2c5e0b427498dba49ce243836a2f7f72eb484cff00586720a066e70"
+    }
+  ],
+  "parentRebuild": {
+    "command": "bash pipeline/build_beast.sh xiangliu",
+    "pipelineSucceeded": true,
+    "bodyByteIdentical": false,
+    "headByteIdentical": true,
+    "candidateBodyBytes": 3609820,
+    "parentBodyBytes": 3609804,
+    "difference": "24 JSON Meshopt lengths/offsets and new-tissue compressed BIN differ. BMesh set iteration and remeshing are plausible ordering sources, not independently established as the sole cause. No complete semantic multiset equivalence claim. Parent rebuilt asset independently accepted through actual Stage and visual checks.",
+    "postBuildCandidateShaAssertion": "failed; retained as reproducibility limitation"
+  },
+  "parentStage": {
+    "report": "/tmp/shanhai-parent-xiangliu-stage-v3/qa.json",
+    "passed": true,
+    "errors": [],
+    "source": {
+      "catalogReady": false,
+      "clips": [
+        {
+          "name": "idle",
+          "duration": 8.033333778381348
+        },
+        {
+          "name": "walk",
+          "duration": 4.0333333015441895
+        },
+        {
+          "name": "special",
+          "duration": 3.633333444595337
+        }
+      ],
+      "rigidVertices": 72634,
+      "invalidFaceWeights": 0,
+      "trianglesInRigidHeads": 135927,
+      "textureCoordinates": [
+        {
+          "name": "Qing_serpent_rebuilt_UV_tissue",
+          "channel": 0,
+          "uv": true
+        },
+        {
+          "name": "Actual_High_body_original_UV_TBN",
+          "channel": 0,
+          "uv": true
+        },
+        {
+          "name": "Native_High_human_face_preserved",
+          "channel": 0,
+          "uv": true
+        }
+      ]
+    },
+    "specialReturn": {
+      "steps": 67,
+      "action": "idle"
+    },
+    "remounts": [
+      {
+        "heads": 9,
+        "spine": 24,
+        "neck": 63,
+        "outlines": 3,
+        "meshes": 3,
+        "invalid": 0,
+        "sourceUnchanged": true
+      },
+      {
+        "heads": 9,
+        "spine": 24,
+        "neck": 63,
+        "outlines": 3,
+        "meshes": 3,
+        "invalid": 0,
+        "sourceUnchanged": true,
+        "time": 0.05
+      }
+    ],
+    "cycles": [
+      {
+        "action": "idle",
+        "loopError": 0,
+        "headMotion": 0.022485563627074493,
+        "maximumPosteriorStrain": 0.02300270461992493,
+        "minimumHeadGap": 0.11379826863689771
+      },
+      {
+        "action": "walk",
+        "loopError": 0,
+        "headMotion": 0.028874857528777706,
+        "maximumPosteriorStrain": 0.0863530186878313,
+        "minimumHeadGap": 0.10580130043493897
+      },
+      {
+        "action": "special",
+        "loopError": 0,
+        "headMotion": 0.06659843751401996,
+        "maximumPosteriorStrain": 0.057567575060123555,
+        "minimumHeadGap": 0.10327080333150607
+      }
+    ],
+    "sourceDesignChecks": [
+      {
+        "width": 700,
+        "height": 1000,
+        "sources": [
+          "原文相柳者，九首人面，蛇身而青。——《海外北經》",
+          "原文共工臣名曰相繇，九首蛇身，自環，食于九土。——《大荒北經》"
+        ],
+        "scrollTop": 88,
+        "scrollHeight": 406,
+        "clientHeight": 318,
+        "writingMode": "horizontal-tb",
+        "designDisplay": "block",
+        "designBorder": "rgba(181, 50, 42, 0.5)",
+        "designLabel": "设计",
+        "designVisible": true,
+        "cardInsideViewport": true
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "sources": [
+          "原文相柳者，九首人面，蛇身而青。——《海外北經》",
+          "原文共工臣名曰相繇，九首蛇身，自環，食于九土。——《大荒北經》"
+        ],
+        "scrollTop": 122,
+        "scrollHeight": 390,
+        "clientHeight": 268,
+        "writingMode": "horizontal-tb",
+        "designDisplay": "block",
+        "designBorder": "rgba(181, 50, 42, 0.5)",
+        "designLabel": "设计",
+        "designVisible": true,
+        "cardInsideViewport": true
+      }
+    ],
+    "visuals": {
+      "standardShots": "/tmp/shanhai-parent-xiangliu-{idle,walk,special}.png",
+      "motion": "/tmp/shanhai-parent-xiangliu-motion{0,1,2}.png",
+      "stageRootAndResponsiveImages": "/tmp/shanhai-parent-xiangliu-stage-v3/",
+      "parentReadAll": true
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "kuafu-production-20261115-five-digit-grip-v7-high",
+  "beast": "kuafu",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "images": [
+    "concept/kuafu/production-20261115-five-digit-grip-v7/view_34.png",
+    "concept/kuafu/production-20261115-five-digit-grip-v7/view_side.png",
+    "concept/kuafu/production-20261115-five-digit-grip-v7/view_front.png",
+    "concept/kuafu/production-20261115-five-digit-grip-v7/view_back.png"
+  ],
+  "prompt": "Reconstruct the SINGLE adult HUMAN RIGHT HAND and short forearm in these four corrected views. Preserve exactly FIVE DIGITS: four distinct curled fingers with four knuckles and four fingernails, plus one opposing thumb. Keep the C-shaped grip and empty transverse oval space between fingers, thumb and palm. Fingers bend toward the palm with natural fleshy joints; thumb opposes them from below. Improve continuous skin anatomy, remove tiny stretched web triangles, preserve separate fingers and clean nails. Matte warm peach skin with subtle natural creases and consistent color, smooth wrist merging into a short forearm. Entire hand and forearm visible. No snake, held object, second hand, torso, jewelry, glove or base.",
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

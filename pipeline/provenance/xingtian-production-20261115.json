@@ -1,0 +1,80 @@
+{
+  "beast": "xingtian",
+  "status": "parent-accepted-and-integrated",
+  "checkedOn": "2026-11-16",
+  "ready": true,
+  "source": {
+    "job": "pipeline/rodin/jobs/xingtian-production-20261115-closed-grip-whole-v7-high.json",
+    "tier": "Gen-2.5-Extreme-High",
+    "requestHash": "ae3d2c4d108be860",
+    "uuid": "037ac060-5f54-4ca9-aa2c-d06382bb8d39",
+    "consumed": 1,
+    "sha256": "7b8f311778d006197a22113b397193a651d66fb3a2de9801d1da2ede32622cc8",
+    "triangles": 50000,
+    "vertices": 31425,
+    "nativeAnatomy": "Headless closed shoulder cap, two chest eyes, navel mouth, two closed five-digit hands and two five-toe feet",
+    "preCompressionProtection": "prepare appends normalization nodes and six local prop meshes; rig appends skin, clips and attachments. Native source BIN prefix and geometry/PBR records retained. Final compression is lossy."
+  },
+  "localProps": {
+    "method": "Independent locally authored wooden shield, back handle and single-bladed axe fitted through unchanged native grips",
+    "nativeHandsChanged": false,
+    "toolMeshes": 6,
+    "inferred": "Prop shape, size, material, hand choice and dance are artistic interpretations of 幹戚"
+  },
+  "runtime": {
+    "path": "public/models/xingtian/body.glb",
+    "sha256": "5d9c740e0d383057cbcb28d64aa00ccca598fe0f4d671d017a0aeb842a274375",
+    "bytes": 858384,
+    "bones": 19,
+    "meshes": 7,
+    "outlines": 7,
+    "clipDurationsSeconds": { "idle": 4, "walk": 32, "special": 4.800000190734863 },
+    "compression": "Meshopt medium, resample false, WebP2048; no simplify/flatten/join",
+    "worldTravel": "Walk path baked into root; runtime does not add a second translation"
+  },
+  "parentRebuild": {
+    "command": "bash pipeline/build_beast.sh xingtian",
+    "pipelineSucceeded": true,
+    "workerCandidateSha256": "056173bc61e59ba7201bd9dd1067c433919a5e8191c41253256c6a1c48ce0c70",
+    "wholeGlbByteIdentical": false,
+    "completeBinByteIdentical": true,
+    "onlyJsonDifference": "/extras/xingtianRig/sourcePreparedSHA256",
+    "workerPreparedSha256": "cac8033d1c8da66531c721551e3fc2162cae229481d18cd0d1996e4968302286",
+    "parentPreparedSha256": "47104eb3ef89eb8ee0c49a791683b4b1673018e9926023eec7f2a30378368ace",
+    "limitation": "The post-build candidate-SHA assertion failed; the build itself succeeded. Intermediate GLB serialization ordering is plausible but not proven as the precise cause. No whole-file reproducibility claim."
+  },
+  "parentStage": {
+    "report": "/tmp/shanhai-parent-xingtian-stage/xingtian-qa.json",
+    "passed": true,
+    "testedCandidateSha256": "056173bc61e59ba7201bd9dd1067c433919a5e8191c41253256c6a1c48ce0c70",
+    "applicabilityToRebuild": "Complete BIN byte identity preserves tested geometry, PBR, skin and animation data; rebuilt bytes also inspected with standard shot and closeups scripts",
+    "errors": [],
+    "geometryPoses": 412,
+    "maximumBidirectionalRestErrorMetres": 0.00006481759161054373,
+    "maximumStanceVertexDriftMetres": 9.908250341143749e-8,
+    "maximumAbsoluteSoleHeightMetres": 0.000019086668380907668,
+    "rigidMasks": { "chest": 13171, "leftHand": 1602, "rightHand": 1858, "leftFoot": 1463, "rightFoot": 1530 },
+    "maximumRigidFootPairDriftMetres": 1.7924967066207387e-9,
+    "maximumToolAttachmentDriftMetres": 2.7755575615628914e-16,
+    "gripClearanceMetres": { "axe": 0.00011859847834823703, "shield": 0.00012783835665519184 },
+    "toolCollisions": { "poses": 85, "intersections": 0, "method": "Actual compressed triangles with BVH/bidirectional segment tests; exact coplanarity excluded" },
+    "strictMode": "23 snapshots through action switches/remounts, cached graph unchanged, no shared resource disposal",
+    "responsiveProjection": {
+      "method": "Actual projected triangle AABB to real DOM rectangles, 167 poses per viewport, required gap 8px",
+      "minimumUiGapPixels": { "1440x900": 31.521233405097405, "820x1180": 140.14884834539785, "700x1000": 98.44117607483476, "390x844": 26.351749502954135 },
+      "sourceAndDesign": "Actual wheel scrolling reaches all four inference lines and classical text"
+    },
+    "specialReturnsIdle": true
+  },
+  "parentVisual": {
+    "standardShots": "/tmp/shanhai-parent-xingtian-{idle,walk,special}.png",
+    "consecutiveMotion": "/tmp/shanhai-parent-xingtian-motion{0,1,2}.png",
+    "readAll": true,
+    "observations": "Closed headless cap, chest eyes and navel mouth legible; complete native grips hold independent axe/shield; soles and limbs remain coherent through movement."
+  },
+  "limitations": [
+    "Inherited wrist/lower-leg dark texture seams retained; no claim of seam-free native PBR.",
+    "Finite sampled poses and simulated viewport sizes are not an exhaustive continuous collision proof or physical-device performance certification.",
+    "Original quotation uses 形天; catalog display name 刑天 and all visual extrapolations remain separately documented."
+  ]
+}

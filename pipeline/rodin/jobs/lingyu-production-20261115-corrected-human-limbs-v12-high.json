@@ -1,0 +1,19 @@
+{
+  "id": "lingyu-production-20261115-corrected-human-limbs-v12-high",
+  "beast": "lingyu",
+  "budget": 12.5,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "One complete mythical fish exactly following the four reference views. ONE human face forms the rounded anterior end of a horizontal silver-blue scaled fish body. Two human arms emerge from the front sides, each with four fingers and an opposing thumb. Two short human legs emerge from the rear underside, each with a knee, ankle and human foot with five short toes pointing forward. Natural continuous elbows, knees, ankles and small heels; human feet, never rear hands or paddles. Smooth organic transitions from skin into scales, no collars, cuffs, spherical joints, gaps or extra heads. One forked fish tail and one small dorsal fin with a broad integrated root and a thin curved edge. Preserve the single face, four limb positions, full toes, tail and neutral pose visible in the references. Fine natural scale detail, restrained warm skin, no human torso, rider, clothes, props or pedestal. Entire creature visible.",
+  "images": [
+    "concept/lingyu/production-20261115-corrected-human-limbs-v12/view_34.png",
+    "concept/lingyu/production-20261115-corrected-human-limbs-v12/view_side.png",
+    "concept/lingyu/production-20261115-corrected-human-limbs-v12/view_front.png",
+    "concept/lingyu/production-20261115-corrected-human-limbs-v12/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

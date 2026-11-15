@@ -1,0 +1,8 @@
+{
+  "id": "kuafu-production-20261115-human-c-grip-hand-v6-medium",
+  "beast": "kuafu",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "An anatomically accurate adult HUMAN RIGHT HAND with a short forearm, isolated life sculpture in matte warm peach skin. A relaxed C-SHAPED GRIP: exactly FOUR curled fingers, index middle ring and little finger, form four separate parallel arcs with four knuckles and four fingernails; ONE thumb lies on the OPPOSITE side. The palm and fingers surround an EMPTY oval gap. Natural finger lengths, distinct joints, fleshy palm and wrist, five digits total. Keep clear shallow gaps between fingers rather than a solid mitten. Short forearm ends in a smooth rounded stump. Whole hand and forearm visible, palm facing camera, all four finger arcs readable. No snake, no rope, no held object, no torso, no jewelry, no glove, no base.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb" }
+}

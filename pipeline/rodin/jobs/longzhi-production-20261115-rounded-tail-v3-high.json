@@ -1,0 +1,19 @@
+{
+  "id": "longzhi-production-20261115-rounded-tail-v3-high",
+  "beast": "longzhi",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Match these four reviewed views of ONE isolated long bushy fox TAIL. Preserve the round three-dimensional cross-section, gentle curve and continuous soft orange fur volume. The small closed orange ROOT is on the opposite end from the fine WHITE TIP. Fur expands smoothly from the narrow root into a full middle, then narrows gradually into a single natural fine white tip. Preserve the silhouette and orange-to-white placement. Improve fine directional fox fur and varied matte roughness without turning the volume into a flat feather, broad leaf, capsule or hard sculpted grooves. No fox body, head, legs, extra tails, rings or pedestal. The whole root, full round middle and complete white tip must remain visible. This is one tail mother part for later nine-tail assembly.",
+  "images": [
+    "concept/longzhi/production-20261115-rounded-tail-v3/view_34.png",
+    "concept/longzhi/production-20261115-rounded-tail-v3/view_side.png",
+    "concept/longzhi/production-20261115-rounded-tail-v3/view_front.png",
+    "concept/longzhi/production-20261115-rounded-tail-v3/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "longzhi-production-20261115-muscular-fox-headneck-v5-high",
+  "beast": "longzhi",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "One complete living red fox head and curved muscular neck matching all four geometry references. Preserve the entire cranium, two upright ears, two amber eyes, narrow muzzle, black nose and closed mouth. Softly convex posterior skull merges continuously into the neck, without transverse ridges, sharp creases or grooves. Narrow middle neck gradually widens into a broad rounded CLOSED root, never a needle or square pedestal. The simplified reference neck paint communicates shape. Regenerate natural fine SHORT russet fur with varied local growth directions, softly blended cream-white throat and cheeks; no stretched vertical fibers, woven pattern or bald plastic neck. Matte fur, moist black nose, readable eyes. Exactly one fox head and neck, no torso, chest, shoulders, limbs, collar, props or extra heads. Entire ears, muzzle and root visible.",
+  "images": [
+    "concept/longzhi/production-20261115-muscular-neck-v5/view_34.png",
+    "concept/longzhi/production-20261115-muscular-neck-v5/view_side.png",
+    "concept/longzhi/production-20261115-muscular-neck-v5/view_front.png",
+    "concept/longzhi/production-20261115-muscular-neck-v5/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

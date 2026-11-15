@@ -1,0 +1,19 @@
+{
+  "id": "tianwu-production-20261115-leg-high",
+  "beast": "tianwu",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "ONE isolated complete feline weight-bearing LEG matching the approved four-view reference. Thick rounded organic muscle root, naturally articulated upper limb and lower limb, one substantial broad paw with four rounded forward toes, dark short claws, visible toe creases and coherent heel pad. Root widest, ankle narrower, full three-dimensional muscle throughout, slight natural bend suitable for grounded walking. Fine millimeter-scale short tawny and blue-green fur over the half-meter limb, natural skin compression at joints and detailed paw pads/claw sheaths; match the trunk fur scale. No plastic surface, broad painted color bands or oversized fur spikes. Entire leg visible, no flat sliced proximal cap, no ankle cuff, no straight pole, no body, second limb, head, tails, pedestal or scene. It will be instanced eight times later; generate exactly one complete limb only. Keep native High paw geometry with sole topology suitable for a rigid level support phase.",
+  "images": [
+    "concept/tianwu-high-refs/leg/view_34.png",
+    "concept/tianwu-high-refs/leg/view_side.png",
+    "concept/tianwu-high-refs/leg/view_front.png",
+    "concept/tianwu-high-refs/leg/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

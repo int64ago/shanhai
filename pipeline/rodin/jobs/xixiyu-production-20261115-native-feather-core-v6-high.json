@@ -1,0 +1,19 @@
+{
+  "id": "xixiyu-production-20261115-native-feather-core-v6-high",
+  "beast": "xixiyu",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Match these four reviewed views of a horizontal legless aquatic MAGPIE with exactly TWO naturally folded feather wings and one long feather tail. Preserve the small pointed black beak, two dark bird eyes, streamlined feathered torso, one continuous wing root per side and complete tail. Keep two wings only; eight further wings will be assembled separately later. Improve individual fine contour feathers, readable tail-feather shafts and vanes, soft layering and natural matte roughness with restrained blue-black sheen and white belly. Tiny overlapping silver-grey scales occur ONLY at the distal tips of long WING FEATHERS; keep the rest of the wings and entire body clearly feathered. No fish muzzle, gills, fins, scales over the body, forked membrane tail, legs, feet or extra wings. Full beak, both folded wings and complete long tail visible. No props, base or environment.",
+  "images": [
+    "concept/xixiyu/production-20261115-native-feather-core-v6/view_34.png",
+    "concept/xixiyu/production-20261115-native-feather-core-v6/view_side.png",
+    "concept/xixiyu/production-20261115-native-feather-core-v6/view_front.png",
+    "concept/xixiyu/production-20261115-native-feather-core-v6/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "tianwu-production-20261115-tail-high",
+  "beast": "tianwu",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "ONE isolated organic feline TAIL matching the approved four-view reference, length about seven times the thick root diameter. Substantial soft round three-dimensional volume, thick rounded root suitable for deep embedding into a sacrum, gently bending centerline, gradual smooth root-to-tip taper ending in a small soft BLUNT rounded tip. Short fine coherent blue-green and tawny fur with individual millimeter-scale strands matching the trunk fur over the meter-long tail; delicate directional coat flow, natural tissue and clear volume. No smooth plastic color bands, coarse armor ridges or long wool locks. No needle or horn, no hard spike, no flat ribbon, no straight stick, no multiple tails, body, leg, head, pedestal or scene. It will be instanced eight times later; generate exactly one complete substantial tail.",
+  "images": [
+    "concept/tianwu-high-refs/tail/view_34.png",
+    "concept/tianwu-high-refs/tail/view_side.png",
+    "concept/tianwu-high-refs/tail/view_front.png",
+    "concept/tianwu-high-refs/tail/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

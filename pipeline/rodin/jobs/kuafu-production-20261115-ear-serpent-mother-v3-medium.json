@@ -1,0 +1,8 @@
+{
+  "id": "kuafu-production-20261115-ear-serpent-mother-v3-medium",
+  "beast": "kuafu",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "ONE isolated small living GOLDEN YELLOW SNAKE posed in a loose inverted J curve to drape around an ear. Realistic rounded snake head, two small dark eyes, closed mouth, cylindrical muscular body with clearly visible overlapping scales and a narrow tapering tail. Snake body about 25 times longer than its average thickness; head slightly wider than body, never triangular or wedge shaped. Upper crook broad and softly rounded with an open inner gap, long lower body hangs freely; one continuous serpent, not a closed ring, not a rope, not jewelry. Matte pale ochre scales with a subtle darker dorsal pattern and lighter belly shields. Complete head, curve and tail visible, neutral background, no person, no ear, no body or base.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb" }
+}

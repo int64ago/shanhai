@@ -1,0 +1,24 @@
+{
+  "beast": "lingyu",
+  "sourceHighSha256": "214672b66577aec8fe33badb95e91c500c92fde72aa7298e4e8765237e5ed308",
+  "probedRuntimeSha256": "4030ab637df6a92d32e9eb571af2f95452907f10cf8184fc677fbacd93c3e763",
+  "coordinateFrame": "Original native glTF coordinates, +Y up and +Z forward",
+  "method": "Actual Stage skinned-mesh raycasts return native UV and barycentric coordinates; barycentric interpolation of the cached unanimated source skin gives decoded rest positions, including mesh quantization transforms. Invert the recorded preparation scale and origin. Eye bounds follow the visible original eyelids; no symmetric-face assumption.",
+  "probeScript": "scripts/review-lingyu-eyes.mjs",
+  "eyes": [
+    {"name": "eye_screen_left", "center": [0.013, 0.141], "halfWidth": 0.032, "upper": 0.0105, "lower": 0.008, "irisRadius": [0.008, 0.009]},
+    {"name": "eye_screen_right", "center": [0.143, 0.140], "halfWidth": 0.026, "upper": 0.0105, "lower": 0.008, "irisRadius": [0.008, 0.009]}
+  ],
+  "actualProbes": [
+    {"screen": [610, 340], "uv": [0.6285174903725299, 0.6976574234053559], "raw": [0.01146859152578893, 0.14539825063577405, 0.8347486324665145]},
+    {"screen": [610, 350], "uv": [0.6299972485767782, 0.6950770104598394], "raw": [0.011493426098210736, 0.13915223807538313, 0.8357731760858806]},
+    {"screen": [610, 360], "uv": [0.6311563205392358, 0.6914030019005694], "raw": [0.011789049778775136, 0.13302307618302445, 0.8403826108166597]},
+    {"screen": [820, 340], "uv": [0.8934738021645074, 0.8731752873117984], "raw": [0.1457270453858708, 0.14498180213213618, 0.8093528614847197]},
+    {"screen": [820, 350], "uv": [0.8934628913875444, 0.8697049939944521], "raw": [0.14570976470628666, 0.1385284659602979, 0.810138053682428]},
+    {"screen": [820, 360], "uv": [0.895826097423351, 0.8643022153652115], "raw": [0.1451072556860642, 0.13229063787057393, 0.8178192673435543]}
+  ],
+  "reviewedPreview": {"imageSize": [2048, 2048], "changedPixelsOver1Byte": 1772, "eyeMaterialGate": "Parent visually accepted idle/walk/special actual ink face closeups"},
+  "pixelClaimScope": "Exact non-eye pixel equality is checked only during the uncompressed PNG edit. Runtime WebP encoding is lossy and has no exact pixel-equality claim.",
+  "geometryChanges": false,
+  "runtimeReady": false
+}

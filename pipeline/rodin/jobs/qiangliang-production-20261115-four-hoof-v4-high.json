@@ -1,0 +1,14 @@
+{
+  "id": "qiangliang-production-20261115-four-hoof-v4-high",
+  "beast": "qiangliang",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "One complete Qiangliang deity matching all four reference views: orange-black striped tiger head with pink nose and white cheek fur on a short neck, muscular warm-grey human torso, TWO arms with pronounced long backward-pointing elbow spurs, plain dark grey shorts, and TWO muscular legs. Preserve the EXACT four cloven hooves total: BOTH arms end in smooth living pasterns and split bovine cloven hooves with small rear dewclaws instead of hands (no fingers, no thumbs, no claws); BOTH legs end in smooth living pasterns and level flat-planted split bovine cloven hooves with small rear dewclaws (no toes). Smooth continuous pastern transitions with no collar seams, rings, or cuffs. Preserve orange tiger-striped shoulders and outer forearms, warm grey chest/abdomen/legs, and dark ivory-grey hoof shells. Complete organic anatomy from crown to flat soles, no snakes, no tail, no wings, no props.",
+  "images": [
+    "concept/qiangliang/production-20261115-four-hoof-v4/view_34.png",
+    "concept/qiangliang/production-20261115-four-hoof-v4/view_side.png",
+    "concept/qiangliang/production-20261115-four-hoof-v4/view_front.png",
+    "concept/qiangliang/production-20261115-four-hoof-v4/view_back.png"
+  ],
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb", "quality_override": 50000, "addons": "HighPack" }
+}

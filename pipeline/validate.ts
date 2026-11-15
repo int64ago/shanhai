@@ -10,6 +10,7 @@ import { join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { BEASTS } from '../src/app/beasts.ts'
 import { toBeastComponentName, type BeastContentSpec } from '../src/app/beastSpec.ts'
+import { resolveCompressionArgs } from './compression.ts'
 
 const ROOT = resolve(fileURLToPath(new URL('..', import.meta.url)))
 const MAX_BEAST_BYTES = 15 * 1024 * 1024
@@ -61,6 +62,22 @@ function validateContentSpec(id: string, expectedName: string, expectedArchetype
     }
   }
   if (meta.recipe) {
+    resolveCompressionArgs(meta.recipe.compression)
+    if (meta.recipe.prepareArgs !== undefined) {
+      if (!meta.recipe.prepareScript) throw new Error(`[${id}] recipe.prepareArgs 需要显式 prepareScript`)
+      if (!Array.isArray(meta.recipe.prepareArgs) || meta.recipe.prepareArgs.some(arg => typeof arg !== 'string' || arg.includes('\0'))) {
+        throw new Error(`[${id}] recipe.prepareArgs 必须为无 NUL 的字符串数组`)
+      }
+      const placeholders = new Set(['body.raw', 'body.out', 'body.length', 'outDir'])
+      for (const part of meta.parts ?? []) {
+        for (const field of ['raw', 'out', 'length']) placeholders.add(`${part.id}.${field}`)
+      }
+      for (const arg of meta.recipe.prepareArgs) {
+        for (const match of arg.matchAll(/\{([^{}]+)\}/g)) {
+          if (!placeholders.has(match[1])) throw new Error(`[${id}] 未知预处理占位符: {${match[1]}}`)
+        }
+      }
+    }
     if (meta.recipe.prepareScript && !existsSync(resolveRecipePath(meta.recipe.prepareScript, 'blender'))) {
       throw new Error(`[${id}] recipe.prepareScript 不存在: ${meta.recipe.prepareScript}`)
     }

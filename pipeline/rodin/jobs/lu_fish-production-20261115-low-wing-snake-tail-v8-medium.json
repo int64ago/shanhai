@@ -1,0 +1,8 @@
+{
+  "id": "lu_fish-production-20261115-low-wing-snake-tail-v8-medium",
+  "beast": "lu_fish",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "A complete living mythical ox with bird wings and a snake tail. One HORNLESS bovine head and neck, broad cow muzzle, horizontal muscular ox torso, exactly FOUR separate bovine legs with level cloven hooves. One pair of broad feathered BIRD WINGS grows from the LOW LEFT AND RIGHT FLANKS just behind the front legs, below the spine; wings spread sideways, organic thick muscular shoulders. Exactly ONE long scaled snake tail emerges naturally from the rump and tapers to a single point. No other tail, no tail hair, no horns, no mane. Slate grey-brown bovine hide, dark hoof keratin, soft layered brown-grey feathers, subtle green-grey snake scales. Realistic organic anatomy, all four legs visible, whole creature in neutral standing pose, no base or props.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb" }
+}

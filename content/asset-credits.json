@@ -2,10 +2,153 @@
   "_note": "第三方素材授权登记；上线前统一核对。音频素材到位后同样登记在这里。",
   "assets": [
     {
+      "path": "public/models/xingtian/body.glb",
+      "sha256": "5d9c740e0d383057cbcb28d64aa00ccca598fe0f4d671d017a0aeb842a274375",
+      "bytes": 858384,
+      "source": "实际v7 Extreme-High/HighPack原生无首整身50000三角面，乳目脐口、双闭合五指握手与双五趾足。独立本地斧盾几何嵌入未改原生手；19骨三态，整手/胸腹/足刚性，圆行路径烘焙与世界固定支撑。Meshopt medium、resample false、WebP2048。父统一配方成功，最终BIN与专项验收候选完全一致，仅审计JSON字段不同；整个GLB不宣称字节一致。父实际Stage、握持/工具碰撞、四视口8px UI及最终三态连续图通过。原生腕/小腿暗纹保留，严格共面碰撞不在检测范围。详见pipeline/provenance/xingtian-production-20261115.json。",
+      "sourceComponents": [
+        {
+          "job": "xingtian-production-20261115-closed-grip-whole-v7-high",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "037ac060-5f54-4ca9-aa2c-d06382bb8d39",
+          "sha256": "7b8f311778d006197a22113b397193a651d66fb3a2de9801d1da2ede32622cc8"
+        }
+      ],
+      "author": "Hyper3D Rodin AI生成；项目独立工具制作、绑定、动作与工笔水墨渲染",
+      "license": "沿用项目既有Hyper3D Rodin输出条款"
+    },
+    {
+      "path": "public/models/xiangliu/body.glb",
+      "source": "相柳蛇躯为真实Gen-2.5-Extreme-High/HighPack、50000三角面；父进程统一提交1积分。九个人首复用已完成的雷神High母件，不是新生成的相柳High人首。原后躯几何、UV和PBR保留，只有前躯与九颈做有界连续体积融合；新组织以原生High侧腹按米制取样鳞纹，颈缘局部设色与法线渐变。97骨含24脊段、九条七节颈链及九个刚性头骨，idle/walk/special独立相位；Meshopt/WebP2048。统一配方、真实收据/SHA、保留的源微小缺陷及实际水墨QA见pipeline/provenance/xiangliu-production-20261115.json。",
+      "sourceComponents": [
+        {
+          "path": "raw/xiangliu-production-20261115-rounded-extended-body-high/base_high_pbr.glb",
+          "job": "xiangliu-production-20261115-rounded-extended-body-high",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "588c4b3a-796f-4caf-ad23-715495ff4a27",
+          "sha256": "f0122ffce404437474bd7ce5aaa4edae776a027ba5d8f833d950d3665a8f7a75"
+        },
+        {
+          "path": "raw/leishen-production-20261114-native-whole-v2-high/base_high_pbr.glb",
+          "job": "leishen-production-20261114-native-whole-v2-high",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "654c721b-5d05-45e9-975f-c9a6b05a9031",
+          "sha256": "454cee9efe4a0f60324ccb3d6cfb69c2bf217e34c44d2df6f2835c21ae429c9e"
+        }
+      ],
+      "author": "Hyper3D Rodin AI生成；项目局部融合、原生鳞纹取样、独立九颈蒙皮与工笔水墨渲染",
+      "license": "沿用项目既有Hyper3D Rodin输出条款",
+      "sha256": "2139241a94ab7bf20383460d1a573973f10192c6ab6e2f0fdd7f41502839ccf6",
+      "bytes": 3609804
+    },
+    {
+      "path": "public/models/xiangliu/head.glb",
+      "source": "复用雷神leishen-production-20261114-native-whole-v2-high原生完整人首，非新相柳付费生成。母件Z=0.40以下截除、正比1.38与颈缘局部过渡，脸、耳、头颅及头发保留；1024 WebP/Meshopt。运行时九首已经并入body.glb，以独立头骨保持整脸刚性。",
+      "author": "Hyper3D Rodin AI生成；项目母件提取与局部颈缘处理",
+      "license": "沿用项目既有Hyper3D Rodin输出条款",
+      "sha256": "1f3d9070d2c5e0b427498dba49ce243836a2f7f72eb484cff00586720a066e70",
+      "bytes": 382576
+    },
+    {
+      "path": "public/models/lingyu/body.glb",
+      "source": "实际v12 Extreme-High/HighPack 50000三角面人面鱼躯；双足前掌有界移植本批刑天v7 High五趾，保留49159个保护三角形及原生其余形体。30骨idle6/walk4/special6，离地约0.22米游弋，完整脸、手、足刚性；最终53648三角面。4096平方baseColor仅7050眼区像素改变超过1字节，非眼精确保留仅指无损PNG修补步骤；最终WebP有损。Meshopt medium、weld/resample false，运行时1869612字节，SHA256 fb3125ebf3e1eb98c61d18527bc13fedc59365a56455ef4e92e1267687c78e87。父统一配方字节一致、17项实际Stage及三态连续图审查通过。轻微原生横褶及非流形区域保留。详见content/beasts/lingyu.json和pipeline/provenance/remaining-beasts-recovery-20261115.json。",
+      "sourceComponents": [
+        {
+          "job": "lingyu-production-20261115-corrected-human-limbs-v12-high",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "f7b188f2-497e-430c-b6d4-adff124cdf8d",
+          "sha256": "214672b66577aec8fe33badb95e91c500c92fde72aa7298e4e8765237e5ed308"
+        },
+        {
+          "job": "xingtian-production-20261115-closed-grip-whole-v7-high",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "037ac060-5f54-4ca9-aa2c-d06382bb8d39",
+          "sha256": "7b8f311778d006197a22113b397193a651d66fb3a2de9801d1da2ede32622cc8",
+          "region": "双足前掌及五趾，仅为复用供体，无新付费生成"
+        }
+      ],
+      "author": "Hyper3D Rodin AI生成；项目局部手术、眼区设色、绑定与工笔水墨渲染",
+      "license": "沿用项目既有Hyper3D Rodin输出条款"
+    },
+    {
+      "path": "public/models/longzhi/body.glb",
+      "source": "Hyper3D Rodin实际High完整四爪狐躯、完整狐首颈母件九份与圆厚尾母件九份；尾纹使用已披露并打包的Medium颜色供体，最终几何无Medium。离线体素融合、局部根部平顺与减面形成新衍生表皮，非原生High拓扑原样保留。统一UV图集保守光栅化及High狐面细节重烘，旧切掌与截颅候选未采用。89骨idle4.8/walk2.4/special4.8，圆周支撑足XYZ与整掌朝向反算，StrictMode克隆缓存隔离与工笔墨线。保留55个极小碎分量、123边界边/124非流形边，不宣称完全水密。完整源SHA、局部修改、固定母件与验收记录见concept/longzhi/production-20261115-prepared/provenance.json和pipeline/provenance/remaining-beasts-recovery-20261115.json。",
+      "sourceComponents": [
+        {
+          "job": "longzhi-production-20261115-native-fourpaw-body-v3-high",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "18684ba1-6b35-4a63-a376-c4ed1c0f0e59",
+          "sha256": "7d5d92c9efb6c0d5eb1a2ff600da05f4d814377e479b90e83fa10ecf49179ab4"
+        },
+        {
+          "job": "longzhi-production-20261115-muscular-fox-headneck-v5-high",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "4541b340-0632-4af0-8526-ae5c70e32e16",
+          "sha256": "fc4fa0ec4cdd7d2cdfd21bc2fc3ba024590f802b75a67078e7b1d9a03c346f54",
+          "instances": 9
+        },
+        {
+          "job": "longzhi-production-20261115-rounded-tail-v3-high",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "4b603216-1d41-438b-9f0e-35173aa1cec3",
+          "sha256": "bc7fae056c7a8e35de27fe8965ad41b00201bd9ff6317e33cd4472a615f00cc1",
+          "instances": 9
+        }
+      ],
+      "author": "Hyper3D Rodin AI生成；项目离线表皮重建、局部设色、绑定与工笔水墨渲染",
+      "license": "沿用项目既有Hyper3D Rodin输出条款"
+    },
+    {
+      "path": "public/models/kui/body.glb",
+      "source": "四视图审阅后实际Extreme-High/HighPack v10，50000三角面、16骨，保留原生几何/UV/逐角法线/PBR至绑定阶段。单足居腹、分蹄与单牛尾为设计补足；idle与special稳足，walk以单足支撑、起跳、回收与落地作半径0.65米圆行。原生细毛较弱，以局部shader轻量接入native normal/roughness，未修改形体；耳后细线与蹄冠唇缘披露保留。父实际Stage三态、刚性脸蹄、接地、两手机视口、三次重挂与桌面/手机各30秒整圈变形顶点8px UI安全区检查通过。浏览器为本机Chrome Metal视口模拟，非实体机性能认证。源、运行时SHA与验收见content/beasts/kui.json和pipeline/provenance/remaining-beasts-recovery-20261115.json。",
+      "sourceComponents": [
+        {
+          "job": "kui-production-20261115-reviewed-monopod-v10-high",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "5491d139-65e5-472d-8b04-e029172ac430",
+          "sha256": "31117de85c4577871ffee01facea75abfd851eccc070ebdbed13ede7721de662"
+        }
+      ],
+      "author": "Hyper3D Rodin AI生成；项目绑定、单足动作、局部材质与工笔水墨渲染",
+      "license": "沿用项目既有Hyper3D Rodin输出条款"
+    },
+    {
+      "path": "public/models/kuafu/",
+      "source": "实际 Extreme-High 躯干 v4、五指握手 v7 与连续耳蛇 v4。躯干缺陷手域以 High 手母件及连续腕桥替换；保留两条原生握蛇远端，重建融合中段，握持带刚性随手。两条 High 耳蛇局部染赭金，运行时挂于双耳。下身与躯干受保护的 33314 三角面位置、逐角 UV 与环序摘要保留。45 骨三动作、双耳各 8 骨链、圆行防滑支撑；统一配方由实际 raw 源重建。body/ear 为运行时加载，hand.glb 为声明的准备母件输出。父舞台三态、接触、重挂、桌面与手机各 80 秒整圈和 UI 安全区检查通过。源收据、SHA、局部修补与运行时哈希见 content/beasts/kuafu.json 及 pipeline/provenance/remaining-beasts-recovery-20261115.json。",
+      "sourceComponents": [
+        {
+          "job": "kuafu-production-20261115-native-closed-fist-v4-high",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "37416407-958e-4356-9663-b7baadac948d",
+          "sha256": "74988b874c178dfade1a79a44d18c37dd1662c2563ae25189a4f23c1eeae6601"
+        },
+        {
+          "job": "kuafu-production-20261115-five-digit-grip-v7-high",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "2e75ffe5-8011-473c-80b2-1ec0f88122ab",
+          "sha256": "206521bc8725d871f3673ec59b7a82ac6eb204080ff5bffe3f2a46c07b873d95"
+        },
+        {
+          "job": "kuafu-production-20261115-continuous-ear-v4-high",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "3c8fb4e2-87f2-4b42-8a48-878ea06abddb",
+          "sha256": "3f9345be90a463e337e4f0a3f7ffd1f09abd600362ad677b8caa1865c4f4a8f7"
+        }
+      ],
+      "author": "Hyper3D Rodin AI生成；项目局部几何与材质修补、绑定、动作和工笔水墨渲染",
+      "license": "沿用项目既有Hyper3D Rodin输出条款"
+    },
+    {
       "path": "public/models/leishen/body.glb",
       "source": "Hyper3D Rodin两阶段原生完整人首龙躯：v2 Medium四视图及完整头颈实读后Extreme-High/HighPack 1积分；含此前失败Medium共2积分。原生50983顶点、50000三角面，完整健康人头、天然鳞颈长躯与单尖尾，无臂足角翼为设计。正比长3.2米、26骨idle6/walk4/special6，完整头刚性，原地三维行波与两次腹段缓慢抬动。源NORMAL/UV/index/PBR字节在未压缩rig保持；原生表面图扩散弧坐标及针状面一致权重修复颈腹权重跳变，没有改几何或降低动作幅度。运行时Meshopt medium、16bit皮肤权重、WebP2048，最大边应变7.79%；不减面/flatten/join/weld/resample。源UUID/SHA、校准、独立几何mask、失败候选和真实Stage验收见pipeline/provenance/leishen.json。",
       "sourceComponents": [
-        {"path":"raw/leishen-production-20261114-native-whole-v2-high/base_high_pbr.glb","job":"leishen-production-20261114-native-whole-v2-high","tier":"Gen-2.5-Extreme-High","uuid":"654c721b-5d05-45e9-975f-c9a6b05a9031","sha256":"454cee9efe4a0f60324ccb3d6cfb69c2bf217e34c44d2df6f2835c21ae429c9e"}
+        {
+          "path": "raw/leishen-production-20261114-native-whole-v2-high/base_high_pbr.glb",
+          "job": "leishen-production-20261114-native-whole-v2-high",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "654c721b-5d05-45e9-975f-c9a6b05a9031",
+          "sha256": "454cee9efe4a0f60324ccb3d6cfb69c2bf217e34c44d2df6f2835c21ae429c9e"
+        }
       ],
       "author": "Hyper3D Rodin AI生成；项目离线绑定、动作与工笔水墨渲染",
       "license": "沿用项目既有Hyper3D Rodin输出条款"
@@ -41,7 +184,13 @@
       "path": "public/models/jimeng/body.glb",
       "source": "Hyper3D Rodin两阶段制作：原生v6 Medium四视图与五指趾实读后Extreme-High/HighPack 1积分；完整原生龙首人身50000三角面，双手各五指、双足各五趾。正比例归一1.8米，17骨idle4/walk2.4/special4，圆周完整支撑足位置与朝向逆向烘焙，头手足刚性保护。无网格手术、足底拉平、重算法线或PBR替换；编码法线微小误差如实披露。Meshopt medium/WebP2048，simplify/flatten/join/weld/resample/palette/instance均false。源UUID/SHA256、校准、独立几何mask、实际水墨Stage及完整绕行构图验收见pipeline/provenance/jimeng.json。",
       "sourceComponents": [
-        {"path":"raw/jimeng-production-20261114-native-whole-v6-high/base_high_pbr.glb","job":"jimeng-production-20261114-native-whole-v6-high","tier":"Gen-2.5-Extreme-High","uuid":"317aeb38-270d-4217-9b24-111fa92f822a","sha256":"ffac63d46490bf6c1177c9ecc8f8744491a4f089d2110e12a50f7a0342765556"}
+        {
+          "path": "raw/jimeng-production-20261114-native-whole-v6-high/base_high_pbr.glb",
+          "job": "jimeng-production-20261114-native-whole-v6-high",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "317aeb38-270d-4217-9b24-111fa92f822a",
+          "sha256": "ffac63d46490bf6c1177c9ecc8f8744491a4f089d2110e12a50f7a0342765556"
+        }
       ],
       "author": "Hyper3D Rodin AI生成；项目离线绑定、动作与工笔水墨渲染",
       "license": "沿用项目既有Hyper3D Rodin输出条款"
@@ -56,7 +205,13 @@
       "path": "public/models/yinglong/body.glb",
       "source": "Hyper3D Rodin两阶段生成：完整原生v4 Medium 0.5积分，亲自Read四视图、头尾与双侧翼根后Extreme-High/HighPack 1积分；失败拼装稿与原生重试保留在provenance，不上线。50000三角面、单首长躯单尾与双羽翼原生保留；正比例翼展3.2米，34骨含24轴段及双翼各3关节，idle6/walk4/special6，永久最低点0.65米烘焙rest，原地空中行波。直接GLB保留原生NORMAL/UV/index/PBR字节，运行时再Meshopt medium/WebP2048，不减面、扁平化、合并、焊接或重采样。最终压缩文件、源任务UUID/SHA256、源校准、独立mask匹配、实际Stage与音频验收详见pipeline/provenance/yinglong.json。",
       "sourceComponents": [
-        {"path":"raw/yinglong-production-20261114-native-whole-v4-high/base_high_pbr.glb","job":"yinglong-production-20261114-native-whole-v4-high","tier":"Gen-2.5-Extreme-High","uuid":"8a57e6ea-97b7-4f2f-8b64-345aa1ff7ae0","sha256":"ac09ad235ef121212c695c54d8593234212df4d5a93818df113ff8002ab9eb00"}
+        {
+          "path": "raw/yinglong-production-20261114-native-whole-v4-high/base_high_pbr.glb",
+          "job": "yinglong-production-20261114-native-whole-v4-high",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "8a57e6ea-97b7-4f2f-8b64-345aa1ff7ae0",
+          "sha256": "ac09ad235ef121212c695c54d8593234212df4d5a93818df113ff8002ab9eb00"
+        }
       ],
       "author": "Hyper3D Rodin AI生成；项目离线骨架动作与工笔水墨渲染",
       "license": "沿用项目既有Hyper3D Rodin输出条款"
@@ -71,7 +226,13 @@
       "path": "public/models/jiaochong/body.glb",
       "source": "Hyper3D Rodin两阶段生成：原生双首v3 Medium 0.5积分，实际四视图、双颈、双掌双足Read后Gen-2.5-Extreme-High/HighPack 1积分；含此前不合格主体与独立头部尝试共4积分，失败候选未上线。完整50000三角面、两个人首、共同肩胸及各五指趾均为原生。正比例归一1.8米，19骨idle/walk/special，完整头手足保护、双颈独立轻转、圆周支撑足位置和朝向逆向烘焙。Meshopt medium/WebP2048，simplify/flatten/join/weld/resample/palette/instance均false。任务UUID、不可变源SHA256、绑定校准、主场景验收与重生成解说见pipeline/provenance/jiaochong.json。",
       "sourceComponents": [
-        {"path":"raw/jiaochong-production-20261114-two-human-heads-v3-high/base_high_pbr.glb","job":"jiaochong-production-20261114-two-human-heads-v3-high","tier":"Gen-2.5-Extreme-High","uuid":"bf50e54c-1c0c-4f6b-9163-e6c650ba98e8","sha256":"44e1537945dd66315cd2ec6dc65932942a04e792043da8b468f814b212e4e1d0"}
+        {
+          "path": "raw/jiaochong-production-20261114-two-human-heads-v3-high/base_high_pbr.glb",
+          "job": "jiaochong-production-20261114-two-human-heads-v3-high",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "bf50e54c-1c0c-4f6b-9163-e6c650ba98e8",
+          "sha256": "44e1537945dd66315cd2ec6dc65932942a04e792043da8b468f814b212e4e1d0"
+        }
       ],
       "author": "Hyper3D Rodin AI生成；项目离线骨架动作与工笔水墨渲染",
       "license": "沿用项目既有Hyper3D Rodin输出条款"
@@ -86,7 +247,13 @@
       "path": "public/models/xingxing/body.glb",
       "source": "Hyper3D Rodin两阶段制作：早期Medium不合格保留，原生张指v2 Medium 0.5积分，Read四视图与指趾特写后Gen-2.5-Extreme-High/HighPack 1积分；含早期Medium总计2积分，未加extreme-high贴图。原始High完整50000三角面，白耳、无尾、各五指趾均为原生；正比例归一到1.35米，右整足约0.355毫米接地修正，17骨idle/walk/special，圆周支撑逆向烘焙与五次多项式摆腿衔接。UV局部灰肤色校正保留白耳、眉颊颏白纹、眼鼻与明度细节；仅为同次校色填充未映射贴图边缘。Meshopt medium/WebP2048，resample/simplify/flatten/join/weld均false。原始SHA256、任务UUID、贴图修改与主场景验收见pipeline/provenance/xingxing.json。",
       "sourceComponents": [
-        {"path":"raw/xingxing-production-20261113-open-digits-v2-high/base_high_pbr.glb","job":"xingxing-production-20261113-open-digits-v2-high","tier":"Gen-2.5-Extreme-High","uuid":"bbc9d8c5-792a-428c-b2f3-993db047b8a6","sha256":"af138ac179b91c5217977cb59fe0f13bd8bedcb522429ac1c7a42c00ee5adeca"}
+        {
+          "path": "raw/xingxing-production-20261113-open-digits-v2-high/base_high_pbr.glb",
+          "job": "xingxing-production-20261113-open-digits-v2-high",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "bbc9d8c5-792a-428c-b2f3-993db047b8a6",
+          "sha256": "af138ac179b91c5217977cb59fe0f13bd8bedcb522429ac1c7a42c00ee5adeca"
+        }
       ],
       "author": "Hyper3D Rodin AI生成；项目离线绑定、动作与局部设色",
       "license": "沿用项目既有Hyper3D Rodin输出条款"
@@ -95,7 +262,13 @@
       "path": "public/models/bashe/body.glb",
       "source": "Hyper3D Rodin两阶段制作：Medium初版及重试各0.5积分，矫正四视图后Gen-2.5-Extreme-High/HighPack 1积分，共2积分，未加extreme-high贴图。原始High完整50000三角面，蛇首、长躯与渐细单尾均为原生；24段轴骨加root共25骨，离线按纵向腹面包络贴地，idle/walk/special。头部UV局部青色校正保留眼鼻深色、明度与纹理，身体不重涂。Meshopt medium/WebP2048，resample/simplify/flatten/join/instance/palette均false，保留动画浮点循环端点。实际SHA256、任务UUID、三态变形、资源释放和响应式构图验收见pipeline/provenance/bashe.json。",
       "sourceComponents": [
-        {"path": "raw/bashe-production-20261108-v2-high/base_high_pbr.glb", "job": "bashe-production-20261108-v2-high", "tier": "Gen-2.5-Extreme-High", "uuid": "7ca14d0b-c355-4670-8843-36cad3316dbd", "sha256": "a34b5e9dd91ba14e12693bb948d6b00d9f2e654a0e9a49473bcbeb995f0263d4"}
+        {
+          "path": "raw/bashe-production-20261108-v2-high/base_high_pbr.glb",
+          "job": "bashe-production-20261108-v2-high",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "7ca14d0b-c355-4670-8843-36cad3316dbd",
+          "sha256": "a34b5e9dd91ba14e12693bb948d6b00d9f2e654a0e9a49473bcbeb995f0263d4"
+        }
       ],
       "author": "Hyper3D Rodin AI生成；项目离线轴骨绑定、动画与局部设色",
       "license": "沿用项目既有Hyper3D Rodin输出条款"
@@ -104,7 +277,13 @@
       "path": "public/models/zhuyan/body.glb",
       "source": "Hyper3D Rodin 两阶段生成；Medium 0.5积分，矫正四视图后 Gen-2.5-Extreme-High / HighPack 1积分，共1.5积分，未加 extreme-high 贴图。原始High 50000三角面完整保留，双耳、双手双足及各五指趾均为原生解剖；正比例归一与左整足约1.35mm接地修正，17骨 idle/walk/special，完整手部与头颏刚性保护，圆周支撑足逆向烘焙。Meshopt/WebP2048，不自动减面、扁平化、合并或实例化。原始SHA256、任务UUID、实际主场景落足/切换/资源释放与视觉证据见 pipeline/provenance/zhuyan.json。",
       "sourceComponents": [
-        {"path": "raw/zhuyan-production-20261108-v1-high/base_high_pbr.glb", "job": "zhuyan-production-20261108-v1-high", "tier": "Gen-2.5-Extreme-High", "uuid": "46ad1232-a5e7-407f-9946-10034479208f", "sha256": "83f7ef1fb4038f74538447b20df30dbcffba5ddc7614bd741a59b05a4afdcc6a"}
+        {
+          "path": "raw/zhuyan-production-20261108-v1-high/base_high_pbr.glb",
+          "job": "zhuyan-production-20261108-v1-high",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "46ad1232-a5e7-407f-9946-10034479208f",
+          "sha256": "83f7ef1fb4038f74538447b20df30dbcffba5ddc7614bd741a59b05a4afdcc6a"
+        }
       ],
       "author": "Hyper3D Rodin AI生成；项目离线绑定动画与工笔水墨渲染",
       "license": "沿用项目既有Hyper3D Rodin输出条款"
@@ -131,9 +310,27 @@
       "path": "public/models/xuangui/body.glb",
       "source": "全新 Hyper3D Rodin 三部件两阶段生成。Medium 龟体/鸟首颈/蛇尾各 0.5，Read 矫正四视图后分别提交 Gen-2.5-Extreme-High / HighPack 各 1，共六笔实耗 4.5 积分；未传 texture_mode extreme-high。原始 HIGH 三角化实际面数为 33056 / 34096 / 33082，总 100234 面，未冒称每件五万面。龟体拥有背腹甲、甲桥及四个出肢口，鸟颈根加宽嵌入前甲口，单条渐细蛇尾接入后甲口；25 骨含独立足掌、四段颈链和八段尾链，idle/walk/special。meshopt/WebP，simplify/flatten/join/resample 均 false。所有任务 UUID、实耗、输入 hash 和 HIGH 文件 SHA256 见 content/beasts/xuangui.json 与 pipeline/rodin/credits.log。",
       "sourceComponents": [
-        {"path": "raw/xuangui-body-max/base_high_pbr.glb", "job": "xuangui-body-max", "tier": "Gen-2.5-Extreme-High", "uuid": "455876d0-eb15-4208-919b-db888e970766", "sha256": "ced3c4528d81d75939accf4629941c71a47e20c0e67b4224df7ef348fc5946b9"},
-        {"path": "raw/xuangui-head-max/base_high_pbr.glb", "job": "xuangui-head-max", "tier": "Gen-2.5-Extreme-High", "uuid": "781ad381-efe1-4874-ba48-a33040e7766f", "sha256": "90087c63a1844168657fe4c9e31be887351538b8d786a2ccd6d42ed8e944cbd8"},
-        {"path": "raw/xuangui-tail-max/base_high_pbr.glb", "job": "xuangui-tail-max", "tier": "Gen-2.5-Extreme-High", "uuid": "6201df5f-8a5c-4965-8d6e-0c6cb21a76d4", "sha256": "9c078b6d55f8219e018a4d21340c32ab33e207b07f04635ad20303e82fdbcfdd"}
+        {
+          "path": "raw/xuangui-body-max/base_high_pbr.glb",
+          "job": "xuangui-body-max",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "455876d0-eb15-4208-919b-db888e970766",
+          "sha256": "ced3c4528d81d75939accf4629941c71a47e20c0e67b4224df7ef348fc5946b9"
+        },
+        {
+          "path": "raw/xuangui-head-max/base_high_pbr.glb",
+          "job": "xuangui-head-max",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "781ad381-efe1-4874-ba48-a33040e7766f",
+          "sha256": "90087c63a1844168657fe4c9e31be887351538b8d786a2ccd6d42ed8e944cbd8"
+        },
+        {
+          "path": "raw/xuangui-tail-max/base_high_pbr.glb",
+          "job": "xuangui-tail-max",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "6201df5f-8a5c-4965-8d6e-0c6cb21a76d4",
+          "sha256": "9c078b6d55f8219e018a4d21340c32ab33e207b07f04635ad20303e82fdbcfdd"
+        }
       ],
       "author": "Hyper3D Rodin AI 生成；项目离线姿态矫正、器官组装、绑定与工笔水墨渲染",
       "license": "沿用项目既有 Hyper3D Rodin 输出条款"
@@ -154,8 +351,20 @@
       "path": "public/models/zhubieyu/body.glb",
       "source": "本兽全新两阶段Hyper3D Rodin生成：肺状主体与自然单足各Medium 0.5积分，经Blender矫正并Read四面后，各以34首张的四视图提交Gen-2.5-Extreme-High/HighPack 1积分。共4次新事务、实际3积分，未用extreme-high附加贴图。两个原始HIGH均50000三角面；normalize后主体49962面、单足49974面，保留稠密表面与UV，六足由同一新足母件复制并向体内埋根。双眼、眼睑、单珠细珠层和贴肤皮褶为项目原创几何。独立21骨、idle/walk/special，实际sole平面刚性权重、圆周位置与yaw逆向烘焙，meshopt/WebP不减面压缩。完整UUID、输入hash、raw SHA256、各阶段成本见content/beasts/zhubieyu.json production。",
       "sourceComponents": [
-        {"job": "zhubieyu-body-max", "tier": "Gen-2.5-Extreme-High", "uuid": "b61fc1a6-d1b1-4244-8713-70cbeb999dcc", "path": "raw/zhubieyu-body-max/base_high_pbr.glb", "sha256": "913de0c4513d0d2824d622ce5f42225189dbc25f8a4b0ff7cb38adf10e8b1e74"},
-        {"job": "zhubieyu-leg-max", "tier": "Gen-2.5-Extreme-High", "uuid": "229b947a-e85f-47e8-ad9b-73c046b1988a", "path": "raw/zhubieyu-leg-max/base_high_pbr.glb", "sha256": "143d2d5ec642595259b518e87e240d6bf9c8c889828371e7368181adb6292580"}
+        {
+          "job": "zhubieyu-body-max",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "b61fc1a6-d1b1-4244-8713-70cbeb999dcc",
+          "path": "raw/zhubieyu-body-max/base_high_pbr.glb",
+          "sha256": "913de0c4513d0d2824d622ce5f42225189dbc25f8a4b0ff7cb38adf10e8b1e74"
+        },
+        {
+          "job": "zhubieyu-leg-max",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "229b947a-e85f-47e8-ad9b-73c046b1988a",
+          "path": "raw/zhubieyu-leg-max/base_high_pbr.glb",
+          "sha256": "143d2d5ec642595259b518e87e240d6bf9c8c889828371e7368181adb6292580"
+        }
       ],
       "author": "项目全新Hyper3D Rodin输出与原创组装、眼珠细节、绑定动画",
       "license": "沿用项目既有Hyper3D Rodin输出条款；新增离线与运行时制作属项目自制"
@@ -202,9 +411,27 @@
       "path": "public/models/bifang/body.glb",
       "source": "全新 Hyper3D 两阶段重做：鹤躯、单足、单翼母件分别 Medium→Blender矫正四面并Read检查→Gen-2.5-Extreme-High。首版单翼误生双翼弃用，Medium重试单翼成功；本轮4次Medium各0.5、3次HIGH各1，实际新增5积分，历史基线1.5，新增上限12。HIGH全部首张34、HighPack、50000面、无texture_mode极高附加，使用真实base_high_pbr.glb。离线把鹤躯平切底部修成圆腹，独足居中挂接，单翼镜像配对并反转右侧面绕序，无运行时负缩放。新增少量立体上腿覆羽为离线造型补足。独立23骨；idle、1.4秒单足跃行walk、4.8秒站定舒翼special。120Hz线性IK，支撑相足掌反向速度匹配运行时0.14m/s固定朝向，三态测量三个非共线真实变形足底顶点的世界XYZ与趾向。meshopt/WebP 2048、不减面不合并不扁平、不重采样。重建脚本pipeline/blender/prepare_bifang.py、rig_bifang.py，实记pipeline/rodin/credits.log。",
       "sourceComponents": [
-        { "path": "raw/bifang-quality-remake-body-high/base_high_pbr.glb", "job": "bifang-quality-remake-body-high", "tier": "Gen-2.5-Extreme-High", "uuid": "fae5a2c8-442d-4e1a-9a53-929e9a677e78", "sha256": "d558f4a212cbe068d1ae138238094ef88ea651a4d0c3f93c46210df7299bb13d" },
-        { "path": "raw/bifang-quality-remake-leg-high/base_high_pbr.glb", "job": "bifang-quality-remake-leg-high", "tier": "Gen-2.5-Extreme-High", "uuid": "b27f3612-b3a7-4f08-9756-b59b3256cf03", "sha256": "cebf14a07c1120320f0d342c894043a5be363a61ad19775c3f51168f14e1f569" },
-        { "path": "raw/bifang-quality-remake-wing-high/base_high_pbr.glb", "job": "bifang-quality-remake-wing-high", "tier": "Gen-2.5-Extreme-High", "uuid": "6a908272-7e1b-42ff-b5ce-73706728066d", "sha256": "391bdc32c5821e0811ddeb2a799d1afe3577c527d58cbf7cc869e6f2efc7c105" }
+        {
+          "path": "raw/bifang-quality-remake-body-high/base_high_pbr.glb",
+          "job": "bifang-quality-remake-body-high",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "fae5a2c8-442d-4e1a-9a53-929e9a677e78",
+          "sha256": "d558f4a212cbe068d1ae138238094ef88ea651a4d0c3f93c46210df7299bb13d"
+        },
+        {
+          "path": "raw/bifang-quality-remake-leg-high/base_high_pbr.glb",
+          "job": "bifang-quality-remake-leg-high",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "b27f3612-b3a7-4f08-9756-b59b3256cf03",
+          "sha256": "cebf14a07c1120320f0d342c894043a5be363a61ad19775c3f51168f14e1f569"
+        },
+        {
+          "path": "raw/bifang-quality-remake-wing-high/base_high_pbr.glb",
+          "job": "bifang-quality-remake-wing-high",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "6a908272-7e1b-42ff-b5ce-73706728066d",
+          "sha256": "391bdc32c5821e0811ddeb2a799d1afe3577c527d58cbf7cc869e6f2efc7c105"
+        }
       ],
       "sourceReference": "https://zh.wikisource.org/wiki/山海經/西山經 · 章莪之山：有鳥焉，其狀如鶴，一足，赤文青質而白喙，名曰畢方，其鳴自叫也，見則其邑有譌火。足位、趾形、翼数、羽层、色阶、纹路位置、具体声音与丹火特效均独立列inferred。",
       "author": "Hyper3D Rodin新生成与项目离线矫正、覆羽雕刻、组装和绑定",
@@ -220,9 +447,36 @@
       "path": "public/models/feiyi_snake/body.glb",
       "source": "本轮全新 Hyper3D Rodin 两阶段生成：四次 Medium（蛇身首版 U 形拒用并重试一次、自然足母件、羽翼母件），Blender 按蛇构型归一、修圆足根并 Read 四面后，分别提交三次 Gen-2.5-Extreme-High + HighPack，多视图各实际 1 积分。7 个实际生成任务共 5.0 积分，上限 12；另三次种子越界 HTTP400 未创建任务、未扣费。最终三份 HIGH 原始输出均为 50,000 三角面、均为 base_high_pbr.glb；未使用旧库存、未把 Medium 当 HIGH。主体保留有机头颈、完整腹鳞、渐细长尾；足母件 6 份、羽翼母件 4 份自然下埋接合，未新增球形足根或替代管状蛇身。24 节蛇脊、六条三节足链、四组五节羽翼链，合计 63 骨。离线反射坐标后重算法线，运行时均为正缩放。最终 549,080 三角面；meshopt/WebP 2K，不减面、不 flatten/join、不 resample，Blender 也保留全部动画采样，避免长脊链抽帧误差。父视觉验收后追加零付费的蛇身贴图离线灰褐校色（pipeline/grade-feiyi-snake.mjs）：原深色贴图与浓墨阈值叠加导致背/头过黑，采用明度曲线并保留双眼 UV 深色，未修改共享 shader。原 BIN 前缀 5,715,716 bytes 逐字节保留，几何/法线/蒙皮/动画与其余贴图均未改；仅追加校色后的 2K WebP 并重定向蛇身 baseColor image。既有 7 任务 / 5.0 积分账目不变。runtime 6,224,276 bytes，SHA256 a0ff07e4268999e8b193a2b833dd9bc3abb94a2e19a7e386554389ed7c1070b8；校色前 runtime SHA256 59f2e6d041a1199c181ec048d4f56d9eafc3c2a0c87991d63b0bb6a4857da70a。",
       "sourceComponents": [
-        { "path": "raw/feiyi_snake-body-high/base_high_pbr.glb", "job": "feiyi_snake-body-high", "tier": "Gen-2.5-Extreme-High", "uuid": "ae6821a1-975e-4859-812a-3c9045da4127", "jobHash": "7a94c0470614bed0", "sha256": "a5bb55c90f8456a3990b811da612e940c91f9fac00b21b6dcd8381d3d4b13314", "triangles": 50000, "consumed": 1 },
-        { "path": "raw/feiyi_snake-leg-high/base_high_pbr.glb", "job": "feiyi_snake-leg-high", "tier": "Gen-2.5-Extreme-High", "uuid": "8a881ea4-5354-43cd-9087-5c42d1c8c9ee", "jobHash": "f39619b3b179bcb9", "sha256": "c20ab3c3e13a684771d66f3be1ec931b0122bfc08ebe58fa785663f69bd93055", "triangles": 50000, "consumed": 1 },
-        { "path": "raw/feiyi_snake-wing-high/base_high_pbr.glb", "job": "feiyi_snake-wing-high", "tier": "Gen-2.5-Extreme-High", "uuid": "9e8c8330-e6b6-45c0-ac3d-2d5f8dae2309", "jobHash": "97edbc49d3ba9d32", "sha256": "297901b0a352315ee33c2838e83871f7123377f971990854c71b501ce9b01e9e", "triangles": 50000, "consumed": 1 }
+        {
+          "path": "raw/feiyi_snake-body-high/base_high_pbr.glb",
+          "job": "feiyi_snake-body-high",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "ae6821a1-975e-4859-812a-3c9045da4127",
+          "jobHash": "7a94c0470614bed0",
+          "sha256": "a5bb55c90f8456a3990b811da612e940c91f9fac00b21b6dcd8381d3d4b13314",
+          "triangles": 50000,
+          "consumed": 1
+        },
+        {
+          "path": "raw/feiyi_snake-leg-high/base_high_pbr.glb",
+          "job": "feiyi_snake-leg-high",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "8a881ea4-5354-43cd-9087-5c42d1c8c9ee",
+          "jobHash": "f39619b3b179bcb9",
+          "sha256": "c20ab3c3e13a684771d66f3be1ec931b0122bfc08ebe58fa785663f69bd93055",
+          "triangles": 50000,
+          "consumed": 1
+        },
+        {
+          "path": "raw/feiyi_snake-wing-high/base_high_pbr.glb",
+          "job": "feiyi_snake-wing-high",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "9e8c8330-e6b6-45c0-ac3d-2d5f8dae2309",
+          "jobHash": "97edbc49d3ba9d32",
+          "sha256": "297901b0a352315ee33c2838e83871f7123377f971990854c71b501ce9b01e9e",
+          "triangles": 50000,
+          "consumed": 1
+        }
       ],
       "sourceReference": "山海經·西山經之首·太華山：有蛇焉，名曰肥𧔥，六足四翼，見則天下大旱。与英山同名鸟、渾夕山一首兩身蛇分开。位置、趾形、羽质、设色及动作均为 inferred。",
       "author": "Hyper3D Rodin AI 生成；项目 Blender 解剖校正、组装、绑定与水墨着色",
@@ -244,9 +498,28 @@
       "path": "public/models/yayu/body.glb",
       "source": "零新生成，仅只读复用三个经账本、SHA256 和实际面数核验的 Gen-2.5-Extreme-High 母件，各原始输入均为 50,000 三角面。诸怀 HIGH 牛躯去掉原牛首/兽耳、原分蹄足端和原尾，裁后含封口 31,270 面；新增渐细颈肩和四条系部，并与该牛躯离线体素融合为连续 425,680 面。该重塑与朱赭涂色为项目离线制作，未声称是新的 HIGH 生成输出。陆吾 HIGH 人首去衣领及颈底凸缘，含封口 41,192 面，保留五官与发须；面部赤褐色为新绘制。鹿蜀 HIGH 四个单蹄裁后分别含封口 770/748/715/736 面，未以牛分蹄替代马足；新涂墨褐色并平整蹄底。另补单牛尾。独立 21 骨，idle/walk/special，全模 472,401 三角面；meshopt/WebP，simplify/flatten/join 均 false。支撑相逆向烘焙真实圆周目标与整蹄 yaw，QA 测全部实际 sole 世界顶点位移及方向。脚本 pipeline/blender/prepare_yayu.py、rig_yayu.py。",
       "sourceComponents": [
-        { "path": "raw/zhuhuai-body-max/base_basic_pbr.glb", "verifiedLocation": ".claude/worktrees/beast-zhuhuai/raw/zhuhuai-body-max/base_basic_pbr.glb", "job": "zhuhuai-body-max", "tier": "Gen-2.5-Extreme-High", "uuid": "a05682d7-8854-4f16-9d1d-dd4835fb3bd8", "sha256": "7ebc4af0473b83c89a2940f7490e71ef4aa941972db1b3f6aa41e781f4de460d" },
-        { "path": "raw/luwu-head-max/base_basic_pbr.glb", "job": "luwu-head-max", "tier": "Gen-2.5-Extreme-High", "uuid": "9e3f8c0b-64d5-44bb-bb6d-665ce47866aa", "sha256": "98341132b84ef9b8d3a3e1dee9ed1961a2c7fe61202064bd3e326d0c9c7f402e" },
-        { "path": "raw/lushu-body-max/base_basic_pbr.glb", "job": "lushu-body-max", "tier": "Gen-2.5-Extreme-High", "uuid": "0a08ed3c-20a6-4e1e-bf55-5c3fe02da6db", "sha256": "4674581c5c0cca6dff4bbb4c570004abb876be5bd1e2edf7bb9b98704dc61740" }
+        {
+          "path": "raw/zhuhuai-body-max/base_basic_pbr.glb",
+          "verifiedLocation": ".claude/worktrees/beast-zhuhuai/raw/zhuhuai-body-max/base_basic_pbr.glb",
+          "job": "zhuhuai-body-max",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "a05682d7-8854-4f16-9d1d-dd4835fb3bd8",
+          "sha256": "7ebc4af0473b83c89a2940f7490e71ef4aa941972db1b3f6aa41e781f4de460d"
+        },
+        {
+          "path": "raw/luwu-head-max/base_basic_pbr.glb",
+          "job": "luwu-head-max",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "9e3f8c0b-64d5-44bb-bb6d-665ce47866aa",
+          "sha256": "98341132b84ef9b8d3a3e1dee9ed1961a2c7fe61202064bd3e326d0c9c7f402e"
+        },
+        {
+          "path": "raw/lushu-body-max/base_basic_pbr.glb",
+          "job": "lushu-body-max",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "0a08ed3c-20a6-4e1e-bf55-5c3fe02da6db",
+          "sha256": "4674581c5c0cca6dff4bbb4c570004abb876be5bd1e2edf7bb9b98704dc61740"
+        }
       ],
       "sourceReference": "https://zh.wikisource.org/wiki/山海經/北山經 · 北山經之首 · 少咸之山：有獸焉，其狀如牛，而赤身、人面、馬足，名曰窫窳，其音如嬰兒，是食人。仅采用本篇，角尾、比例、发须、设色和动作另列 inferred。",
       "author": "项目既有 HIGH AI 素材与离线重塑、涂色、组装及绑定",
@@ -376,9 +649,27 @@
       "path": "public/models/boyi/body.glb",
       "source": "本轮独立授权重新生成：羊躯、单耳、单尾分别经过 Gen-2.5-Medium → Blender 矫正及 Read 四视图 → Gen-2.5-Extreme-High，34 首图、HighPack、50,000 面，未加 texture_mode 附费。羊躯 HIGH 首次产生补片硬折面，重做连续 Medium 雕刻引导后重新 HIGH；7 笔真实事务共 5.5 积分，独立本轮上限 12，起始账本 67 行且猼訑历史计费 0。采用新的 HIGH-v2 有机羊躯及原生四足分蹄、四份新 HIGH 单耳、九份新 HIGH 有体积毛尾；旧饕餮羊躯、原程序直杆腿、方蹄和刺条尾均已替换。背目眼数为推断，原创眼组件逐顶点贴合实际背部曲面，面部不补眼。足底局部平整、加深趾间裂隙并沿共边分离实际蹄网格；同一足骨绑定接缝。独立 98 骨，四耳九尾双背目和 idle/walk/special；714,527 三角面，3,924,436 字节，meshopt/WebP，不减面、不 flatten、不 join。UUID、全部原始 HIGH SHA256、未采用首轮、四视图逐图哈希及本轮 baseline 均在 pipeline/provenance/boyi.json。脚本 prepare_boyi.py、rig_boyi.py、scripts/qa-boyi.mjs。",
       "sourceComponents": [
-        { "path": "raw/boyi-quality-remake-body-high-v2/base_high_pbr.glb", "job": "boyi-quality-remake-body-high-v2", "tier": "Gen-2.5-Extreme-High", "uuid": "0b970715-eb69-451f-878b-005b50009ec1", "sha256": "3771c14d9e20a626dc738e04e70bbf004cdfbe7779f7aff0a038d8d26045a743" },
-        { "path": "raw/boyi-quality-remake-ear-high/base_high_pbr.glb", "job": "boyi-quality-remake-ear-high", "tier": "Gen-2.5-Extreme-High", "uuid": "da06d17a-7bfa-4190-9e7a-5c539523c89a", "sha256": "34e147e0ae35fbfd1f6f1993ad48a1563817a51a557a7f902076abf0ce72d542" },
-        { "path": "raw/boyi-quality-remake-tail-high/base_high_pbr.glb", "job": "boyi-quality-remake-tail-high", "tier": "Gen-2.5-Extreme-High", "uuid": "4db15744-ad6c-4644-8d49-bbfac39b333d", "sha256": "f20ef44b927264d60336a2009481573808653955b768dea2382e56b86707bc72" }
+        {
+          "path": "raw/boyi-quality-remake-body-high-v2/base_high_pbr.glb",
+          "job": "boyi-quality-remake-body-high-v2",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "0b970715-eb69-451f-878b-005b50009ec1",
+          "sha256": "3771c14d9e20a626dc738e04e70bbf004cdfbe7779f7aff0a038d8d26045a743"
+        },
+        {
+          "path": "raw/boyi-quality-remake-ear-high/base_high_pbr.glb",
+          "job": "boyi-quality-remake-ear-high",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "da06d17a-7bfa-4190-9e7a-5c539523c89a",
+          "sha256": "34e147e0ae35fbfd1f6f1993ad48a1563817a51a557a7f902076abf0ce72d542"
+        },
+        {
+          "path": "raw/boyi-quality-remake-tail-high/base_high_pbr.glb",
+          "job": "boyi-quality-remake-tail-high",
+          "tier": "Gen-2.5-Extreme-High",
+          "uuid": "4db15744-ad6c-4644-8d49-bbfac39b333d",
+          "sha256": "f20ef44b927264d60336a2009481573808653955b768dea2382e56b86707bc72"
+        }
       ],
       "sourceReference": "https://zh.wikisource.org/wiki/山海經/南山經 · 南山經之首 · 基山。原文其狀如羊、九尾四耳、其目在背、佩之不畏；背目数量、无角、毛色、耳尾形状及羊鸣均在 inferred 中明确标出。佩之不畏不是主动攻击法术。",
       "author": "本轮 Hyper3D HIGH 羊躯、耳尾母件与项目离线矫正、背目及绑定",
@@ -499,6 +790,76 @@
       "source": "既有 chenghuang-body-max/base_high_pbr.glb 高模离线复用；49,988 三角面犬科母件，按天马白犬参考调整面颊与犬吻、重绘黑头，再独立绑定飞行动作（pipeline/blender/adapt_tianma_high.py、rig_tianma.py）。未追加高模生成任务；尾部复用 public/models/zheng/tail.glb。",
       "author": "项目自有 AI 生成素材与离线改制",
       "license": "Hyper3D Rodin 生成输出（沿用项目既有源资产条款）"
+    },
+    {
+      "path": "public/models/qiangliang/",
+      "source": "Verified Extreme-High body qiangliang-production-20261115-four-hoof-v4-high, UUID 9c2c777e-e5d0-4e84-87c6-ee311bb44279, 50,000 triangles. Bounded proximal hoof smoothing and masked PBR repair retain tiger head, human torso, four cloven extremities and long elbows. Snake source kuafu-production-20261113-snake-high, UUID 33de858d-5fe5-424e-9abc-d4a8d9c9c67b, reused twice with independent supported bone chains. Body has 20 bones and three actions. Unified recipe rebuilds from original raw sources; hashes and parent runtime/contact review in content/beasts/qiangliang.json and pipeline/provenance/remaining-beasts-recovery-20261115.json. No new paid calls for this offline integration.",
+      "author": "项目自有 AI 生成素材、离线修整与绑定",
+      "license": "Hyper3D Rodin 生成输出（沿用项目既有源资产条款）"
+    },
+    {
+      "path": "public/models/shuhu/body.glb",
+      "source": "Corrected human-faced, four-hoof, two-wing, single-scaled-tail reference reviewed before Extreme-High shuhu-production-20261115-unified-human-face-wings-v13-high, UUID 4ffe4198-c562-4574-93e2-7dc96c6debdf. Actual source has 500,000 triangles because the historical request omitted quality_override; the original request is preserved unchanged. Positive uniform normalization, 40-bone native binding, contact-preserving three-action animation, meshopt and WebP 2048 without simplification. Source and runtime hashes, actual desktop/phone viewport checks and visual acceptance are recorded in content/beasts/shuhu.json and recovery provenance.",
+      "author": "项目自有 AI 生成素材、参考修整与绑定",
+      "license": "Hyper3D Rodin 生成输出（沿用项目既有源资产条款）"
+    },
+    {
+      "path": "public/models/xixiyu/",
+      "source": "Verified native feathered core and a separately reviewed High single-wing mother. Accepted wing job xixiyu-production-20261115-prepared-single-wing-v4-50k-high, UUID 14b43bc6-87a9-4ec9-87de-e4e0017523ec, explicitly requested and returned 50,000 triangles. Earlier 500,000-triangle wing v3 is not used. Eight mounted High wings plus two native folded wings form ten; authored native feather-tip scales are disclosed. Offline reflected right-wing winding and positive runtime scale, preserved High wing chord, continuous flap phase and shortest-angle turns. Reproducible recipe and exact hashes in content/beasts/xixiyu.json; meshopt/WebP with no simplification.",
+      "author": "项目自有 AI 生成素材、原创羽端鳞片与动态绑定",
+      "license": "Hyper3D Rodin 生成输出沿用既有条款；新增羽端鳞片为项目原创几何"
+    },
+    {
+      "path": "public/models/lu_fish/body.glb",
+      "source": "Hyper3D Rodin Gen-2.5-Extreme-High; UUID 0573056a-2036-4b56-bd74-77562cf76eaa; 1 credit; native low-wing ox shape and single snake tail. Bounded scalp/rump repair, native rig and standard Meshopt/WebP2048; pipeline/provenance/lu_fish.json. Parent rebuilt SHA256 34f1f018f93ddfe535ac87c70a91ac67e6d1187884508a5759ccbf094379723f (865788 bytes).",
+      "author": "Hyper3D AI generation; project original bounded repair, rigging and ink rendering",
+      "license": "Hyper3D Rodin generated output under existing project license terms"
+    },
+    {
+      "path": "public/models/tianwu/{body,leg,headneck,tail}.glb",
+      "source": "四份经收据与SHA核验的Extreme-High/HighPack母件，各原生50000三角面：无肢躯干×1、曲腿宽掌×8、完整人面曲颈×8、圆尾×8。四个实际形体门与v6连接体/v3足爪经父级实图审核；仅肩/髋/骶三个有界代理重建共享组织，保留主要原生几何/UV/PBR，非整兽全表面重网格。两枚突爪局部缩短/深色修补、虹膜局部atlas辨识增强均为本地美术，不冒称原生均匀四爪或原生细毛。主要PBR仍较光滑。四压缩母件共享geometry/maps，镜像足几何离线反射并运输原角法线；每实例拥有骨架及effect材质/墨线。圆路线反算脚掌位置与朝向，实际解码蒙皮顶点多点世界支撑QA、完整脸刚性、三态与最终视觉验收详见pipeline/provenance/tianwu.json。此worker无付费请求。父级已逐张实读并接受最终12张三态压缩水墨眼睛/肩髋接根/八尾近景；父库四来源重建与完整运行时/相机恢复/297姿净距验收已通过。",
+      "sourceComponents": [
+        {
+          "path": "raw/tianwu-production-20261115-trunk-high/base_high_pbr.glb",
+          "sha256": "318a79a034eefc81dcafb88786e10640115c298c73ffe510dd6527942d9284cc"
+        },
+        {
+          "path": "raw/tianwu-production-20261115-leg-high/base_high_pbr.glb",
+          "sha256": "cf1714e0506c3e23d9698f10bafc1026e6ca6fb808a8c77a94a949f939c642ab"
+        },
+        {
+          "path": "raw/tianwu-production-20261115-headneck-high/base_high_pbr.glb",
+          "sha256": "7f8df400a021a101f202b5d70ccf7b5605109776f98d40a2aa4e1e5970129d07"
+        },
+        {
+          "path": "raw/tianwu-production-20261115-tail-high/base_high_pbr.glb",
+          "sha256": "ee38dde788a160cde3e28e3b95ad4031b18e14b6d354011587e18482a6e6e954"
+        }
+      ],
+      "author": "Hyper3D Rodin原生High母件；项目有界共享组织、局部足爪/虹膜美术、骨架动作与工笔水墨渲染",
+      "license": "沿用项目既有Hyper3D Rodin输出条款；程序派生部分为项目原创",
+      "acceptedParentAssets": [
+        {
+          "path": "public/models/tianwu/body.glb",
+          "bytes": 1929116,
+          "sha256": "74f07145c7450f8f462282cee7c8f47f656023fba090af07a0c03237cfb7dd4c"
+        },
+        {
+          "path": "public/models/tianwu/headneck.glb",
+          "bytes": 421760,
+          "sha256": "8810021de22555f66e19d44c9a6bbdb7506ba7a3572e6dacddfc1c0c09c82a85"
+        },
+        {
+          "path": "public/models/tianwu/leg.glb",
+          "bytes": 668828,
+          "sha256": "448da30bee488261dc01e3cf44b0475f0cdf73e5f4911d4d47c23ba788e9a341"
+        },
+        {
+          "path": "public/models/tianwu/tail.glb",
+          "bytes": 371788,
+          "sha256": "ba7b88713fa338265aa988c7cb8b1514da9ac32390922a611d0dfc2d787b6bde"
+        }
+      ]
     }
   ]
 }

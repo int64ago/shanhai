@@ -55,7 +55,8 @@ AI 3D 生成无法正确处理“多头、多尾、多翼、六足、单足”�
 1. 用 `normalize.py` 将初版模型归一到米制与 +Z 朝向。
 2. 若初版存在 AI 典型姿态缺陷（如走兽后躯下蹲、单足禽重心偏斜、多余残肢），在 Blender 中用 `turnaround.py`（或构型专用矫正参数）修正网格，并渲染无透视正交四视图 `concept/<id>/view_{34,side,front,back}.png`。
    - **渲染后必须用 Read 检查四视图**，确认轮廓、对称性、重心与无多余残肢后再提交高模。
-3. 提交 `Gen-2.5-Extreme-High`（5 万面顶配几何 + 默认 4K 贴图 + `addons: "HighPack"`）多视图图生 3D（`view_34.png` 放第一张定材质）：
+3. 提交 `Gen-2.5-Extreme-High`（显式设置 `params.quality_override: 50000` 为 5 万面 + 默认 4K 贴图 + `addons: "HighPack"`）多视图图生 3D（`view_34.png` 放第一张定材质）：
+   - 不依赖服务端默认面数；下载后核验实际三角面数。本次实测省略该参数会返回 50 万面，重复挂接多份母件时会显著放大运行时开销。已提交任务的参数与回执保留原样，不能改写为另一种请求。
    - **不要传 `texture_mode: "extreme-high"`**：工笔水墨分染管线最终会将贴图压缩为 2K/4K WebP 并做阶梯水彩分染，不传 `texture_mode: "extreme-high"` 可省去额外的 `+2.0` 积分（Stage 2 单件仅需 `1.0` 积分，两阶段合计 **`1.5` 积分 / 部件**）。
    - 运行时统一取返回的 `base_high_pbr.glb`（若返回 `base.glb` 则自动回退）。
 

@@ -26,10 +26,44 @@
       "basis": "原文只称帝，未具名黄帝或颛顼，也未授刑天战神职衔。朴素腰布、土色肤色与肌肉比例属于艺术补足；后世不屈意象属于对故事的延伸理解。"
     }
   ],
+  "parts": [
+    {
+      "id": "body",
+      "job": "pipeline/rodin/jobs/xingtian-production-20261115-closed-grip-whole-v7-high.json",
+      "length": 1,
+      "texSize": 2048
+    }
+  ],
+  "recipe": {
+    "mode": "custom",
+    "bodyLength": 1,
+    "trimTail": false,
+    "prepareScript": "prepare_xingtian.py",
+    "prepareArgs": ["{body.raw}", "{body.out}", "--length", "{body.length}", "--audit-out", "raw/_build/xingtian/prepare-audit.json"],
+    "rigScript": "rig_xingtian.py",
+    "compression": {
+      "meshoptLevel": "medium",
+      "resample": false
+    },
+    "qaScript": "scripts/qa-xingtian-app.mjs"
+  },
   "production": {
-    "status": "blocked-no-credible-existing-humanoid-master",
-    "modelReady": false,
-    "reason": "复用已验31件HIGH库存及相关视图，本次账本增量检查无新增HIGH候选。已有孤立人头、人掌与四足躯体不能提供可信的无首人体胸腹、肩臂、髋膝及支撑足。乳目脐口需要融合拓扑，干戚需要自然握持与负重动作；不以错误拼装或粗胚宣称完成。",
-    "provenance": "pipeline/rodin/xingtian-production-20261108-spec.json"
+    "status": "parent-accepted-and-integrated",
+    "modelReady": true,
+    "checkedOn": "2026-11-16",
+    "reason": "父实际Stage专项及最终三态/连续运动近景已通过。原生几何双向匹配、整手/胸腹刚性、世界足底支撑、握持净空、85姿工具碰撞及StrictMode审计通过；桌面、820/700平板和390手机各167姿投影三角形UI净距超过8px，原文与设计实际滚动可读全。父统一配方完整执行成功；与候选完整BIN逐字节一致，仅JSON的sourcePreparedSHA256审计字段不同，不宣称整个GLB字节一致。",
+    "runtimeSha256": "5d9c740e0d383057cbcb28d64aa00ccca598fe0f4d671d017a0aeb842a274375",
+    "runtimeBytes": 858384,
+    "compressedQA": "scripts/qa-xingtian-app.mjs；几何动作按0.1秒、UI三角形净距按0.25秒、工具碰撞按0.5秒采样，碰撞检测不包含严格共面交叠。",
+    "bodyTier": "Gen-2.5-Extreme-High",
+    "bodySource": "raw/xingtian-production-20261115-closed-grip-whole-v7-high/base_high_pbr.glb",
+    "bodySourceSha256": "7b8f311778d006197a22113b397193a651d66fb3a2de9801d1da2ede32622cc8",
+    "actualSourceTriangles": 50000,
+    "requestHash": "ae3d2c4d108be860",
+    "uuid": "037ac060-5f54-4ca9-aa2c-d06382bb8d39",
+    "consumed": 1,
+    "bodyReference": "v5 Medium完整本体加v7 High独立五指手制作的空手四图；此双源参考非High生产资产。v7为新生成的单网格整身High，斧盾由本地独立几何挂接。",
+    "sourceProtection": "prepare只追加归一节点与本地工具，rig只追加蒙皮/动作和挂点。原始High BIN前缀及POSITION/NORMAL/UV/index/PBR记录保持原样；未重拓扑或全身remesh。腕/小腿暗缝主要来自原生贴图，尚未修复。",
+    "provenance": "pipeline/provenance/xingtian-production-20261115.json"
   }
 }

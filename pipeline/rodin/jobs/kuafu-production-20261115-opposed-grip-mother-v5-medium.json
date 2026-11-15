@@ -1,0 +1,8 @@
+{
+  "id": "kuafu-production-20261115-opposed-grip-mother-v5-medium",
+  "beast": "kuafu",
+  "budget": 12,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "An isolated realistic adult HUMAN RIGHT HAND and forearm gently grasping the middle of ONE living golden-yellow snake. Exactly FOUR separate curled human fingers with four visible knuckles wrap around the snake, and ONE thumb presses from the OPPOSITE side. The snake passes between fingers and palm; its head and tail emerge freely on opposite sides of the fist. Distinct skin surfaces at contact, no fused fingers or skin fused to snake. Natural fingernails and joints, warm brown human skin, smooth round wrist transitioning into a 20 cm forearm. The yellow snake has a rounded head, two small dark eyes and fine overlapping scales, cylindrical body tapering toward the tail. Whole hand, forearm, snake head and snake tail visible, neutral background, no body, no accessories or base.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb" }
+}

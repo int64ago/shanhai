@@ -1,0 +1,19 @@
+{
+  "id": "tianwu-production-20261115-headneck-high",
+  "beast": "tianwu",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "ONE isolated complete human head on one substantial gently S-curved organic neck matching the four views. Healthy human face, projecting nose and chin, two ears, clear eyelids, dark pupils, restrained eyebrows and defined lips. Warm ivory-tan skin with subtle pores, short dark hair with fine strands. Preserve the entire head and natural neck proportions. Neck skin gradually transitions into fine short blue-green and tawny fur toward the broad root, matching millimeter-scale trunk fur. Remove straight color seams or collar-like boundaries. Natural continuous muscle volume and rounded basal tissue suitable for embedding into a shared beast chest. No plastic surface, rock texture, painted bands, cylindrical pole, collar, torso, shoulders, bust plinth, second head, snout, mask, crest, split face or scene. Keep eyes, mouth and skin distinct under pale ink rendering. Eight copies will be assembled later; generate only one complete head and curved neck.",
+  "images": [
+    "concept/tianwu-high-refs/headneck/view_34.png",
+    "concept/tianwu-high-refs/headneck/view_side.png",
+    "concept/tianwu-high-refs/headneck/view_front.png",
+    "concept/tianwu-high-refs/headneck/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

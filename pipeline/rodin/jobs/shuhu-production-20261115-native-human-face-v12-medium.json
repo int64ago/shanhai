@@ -1,0 +1,8 @@
+{
+  "id": "shuhu-production-20261115-native-human-face-v12-medium",
+  "beast": "shuhu",
+  "budget": 12.5,
+  "tier": "Gen-2.5-Medium",
+  "prompt": "One complete organic mythical winged horse with an unmistakably HUMAN FACE and a SNAKE TAIL. A full chestnut horse body on exactly FOUR separate straight horse legs and four level hooves; level back and belly. One thick natural equine neck ends in a short rounded human cranium with human eyes, human nose, cheeks, small human lips and chin. NO horse muzzle, NO horse head, NO human torso, NO horns. Two broad feathered bird wings grow naturally from the shoulders, spread halfway so both feather surfaces and organic muscular roots are visible. One long smooth scaled green snake tail grows continuously from the rump and tapers to one pointed end: no horsehair tail, no second tail. Short dark hair merges softly into the neck mane. Standing neutral anatomical reference, legs well separated, whole creature visible. Continuous skin and fur across head, neck, shoulder, wing and tail roots, no collars, seams, plates, props or base.",
+  "params": { "mesh_mode": "Raw", "geometry_file_format": "glb" }
+}

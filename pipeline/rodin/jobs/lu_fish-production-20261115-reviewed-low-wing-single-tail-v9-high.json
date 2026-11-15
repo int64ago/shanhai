@@ -1,0 +1,19 @@
+{
+  "id": "lu_fish-production-20261115-reviewed-low-wing-single-tail-v9-high",
+  "beast": "lu_fish",
+  "budget": 12,
+  "tier": "Gen-2.5-Extreme-High",
+  "prompt": "Create one anatomically coherent mythical Lu Fish matching all four views: a hornless bovine head and body, four sturdy legs with cloven hooves, two feathered wings with low organic roots on the lateral ribcage, and exactly ONE continuous snake tail emerging naturally from the rump. Preserve the low wing placement, feather silhouette, bovine proportions and tail curve. Keep wing roots below the back line with broad skin-to-feather transitions. The tail must be solid, round in cross-section, scaled, and gradually taper to a pointed tip. Replace flat pale scalp repair patches with a smoothly rounded skull covered in continuous natural short fur. Use muted warm gray fur, pale sage feathers and gray-green tail scales. No horns, horn stumps, scalp plates, extra tails, cow-tail tuft, wing sleeves or open tail troughs.",
+  "images": [
+    "concept/lu_fish/production-20261115-reviewed-low-wing-single-tail-v9/view_34.png",
+    "concept/lu_fish/production-20261115-reviewed-low-wing-single-tail-v9/view_side.png",
+    "concept/lu_fish/production-20261115-reviewed-low-wing-single-tail-v9/view_front.png",
+    "concept/lu_fish/production-20261115-reviewed-low-wing-single-tail-v9/view_back.png"
+  ],
+  "params": {
+    "mesh_mode": "Raw",
+    "geometry_file_format": "glb",
+    "quality_override": 50000,
+    "addons": "HighPack"
+  }
+}

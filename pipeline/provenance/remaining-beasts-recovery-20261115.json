@@ -1,0 +1,1270 @@
+{
+  "date": "2026-11-15",
+  "scope": "Recovery of unfinished beast work and review of new generation results",
+  "releaseStatus": "unreleased",
+  "authorization": "pipeline/rodin/remaining-17-authorization-20261113.json",
+  "spending": {
+    "baselineLines": 143,
+    "baselineSha256Verified": true,
+    "recoveredTransactions": 27,
+    "recoveredCredits": 16.5,
+    "deduplicatedBy": "uuid",
+    "newTransactionsThisContinuation": 22,
+    "newCreditsThisContinuation": 18.5,
+    "totalTransactionsAfterBaseline": 134,
+    "totalCreditsAfterBaseline": 84,
+    "baselineReset": false
+  },
+  "reviews": [
+    {
+      "beast": "qiangliang",
+      "job": "qiangliang-production-20261115-four-hoof-v4-high",
+      "uuid": "9c2c777e-e5d0-4e84-87c6-ee311bb44279",
+      "hash": "c90b0ef6b99b2d94",
+      "consumed": 1,
+      "newChargeThisContinuation": false,
+      "sourceSha256": "1d01a71b9685df1535b3a364216decc3657c5c4827173038be7dbebfc507cf3a",
+      "reviewRoot": ".claude/worktrees/agent-ae511af079a13a446/raw/_build/qiangliang-high-terminal-review-20261115",
+      "parentReadImages": [
+        "contact_four_views.png",
+        "ankle_side.png",
+        "wrist_plus_x.png"
+      ],
+      "decision": "native-source-not-accepted; local correction pending",
+      "observations": "Tiger head, human torso, four cloven hooves and extended elbows are visible. Proximal hoof edges form boot-like cuffs with pronounced grooves and a wrist depression. These are visual defects; the evidence does not establish open topology. Two snakes and runtime animation remain undelivered."
+    },
+    {
+      "beast": "xingtian",
+      "job": "xingtian-production-20261115-native-closed-grip-v6-medium",
+      "hash": "7a2ad5647b1a8383",
+      "uuid": null,
+      "consumed": 0,
+      "decision": "provider-rejected-before-successful-submission",
+      "error": "IMAGE_CONTENT_VIOLATION",
+      "receiptRecorded": false
+    },
+    {
+      "beast": "shuhu",
+      "job": "shuhu-production-20261115-native-human-face-v12-medium",
+      "uuid": "2080228d-7a71-4369-b79f-f36c63823b0c",
+      "hash": "adbd60acf95b6257",
+      "consumed": 0.5,
+      "reviewRoot": "raw/_build/shuhu-v12-native-review",
+      "parentReadImages": [
+        "contact_four_views.png"
+      ],
+      "decision": "rejected-as-high-reference",
+      "observations": "Horse muzzle and equine face remain. Both a horsehair tail and a separate green snake tail are present. Four legs and two feathered wings alone do not establish correct anatomy."
+    },
+    {
+      "beast": "lingyu",
+      "job": "lingyu-production-20261115-native-face-hands-feet-v10-medium",
+      "uuid": "32708ca2-d79d-4aa7-9ff8-2c34001467bb",
+      "hash": "f5dd1a9962c39c00",
+      "consumed": 0.5,
+      "reviewRoot": "raw/_build/lingyu-v10-native-review",
+      "parentReadImages": [
+        "contact_four_views.png"
+      ],
+      "decision": "rejected-as-high-reference",
+      "observations": "Human face is visible on the anterior fish body. Arms emerge too high on the back, and posterior extremities retain hand-shaped digits rather than human feet. The head/body rim is also sharply separated.",
+      "offlineCorrection": {
+        "candidate": "raw/_build/lingyu-v10-toes-candidate/body.glb",
+        "parentReadImages": [
+          "raw/_build/lingyu-v10-toes-review/contact_four_views.png",
+          "raw/_build/lingyu-v10-toes-review/feet.png"
+        ],
+        "decision": "rejected",
+        "observations": "The attempted symmetry and posterior-digit deformation duplicated facial features and left distorted/disconnected-looking extremities. No runtime asset or production script was retained; the experiment remains under ignored raw/_build."
+      }
+    }
+  ],
+  "additionalNativeReviews": [
+    {
+      "beast": "lu_fish",
+      "job": "lu_fish-production-20261115-low-wing-snake-tail-v8-medium",
+      "uuid": "ed509a98-a37f-48c7-8218-0af404cd09cb",
+      "hash": "37b69fdf5690272f",
+      "consumed": 0.5,
+      "parentReadImages": [
+        "raw/_build/lu-fish-v8-native-review/contact_four_views.png"
+      ],
+      "decision": "requires-anatomy-correction-before-high",
+      "observations": "Four bovine legs and two low feathered wings with continuous native shoulders are visible. Horns and three tail forms remain: one bovine tail and two snake-like strands on one flank. Native wing roots may be retained for a corrected reference; this source is not accepted intact."
+    },
+    {
+      "beast": "kui",
+      "job": "kui-production-20261115-slate-fur-monopod-v9-medium",
+      "uuid": "2553eecc-3a77-4103-906d-ac323b49a450",
+      "hash": "5f1edd1115d0d706",
+      "consumed": 0.5,
+      "parentReadImages": [
+        "raw/_build/kui-v9-native-review/contact_four_views.png"
+      ],
+      "decision": "rejected-as-high-reference",
+      "observations": "The result is a conventional four-legged bovine with small horns. Blue-grey fur detail does not compensate for the missing single-leg anatomy."
+    }
+  ],
+  "followupReviews": [
+    {
+      "beast": "kuafu",
+      "job": "kuafu-production-20261115-opposed-grip-mother-v5-medium",
+      "uuid": "c4ed08be-885b-415d-ad26-751622c46987",
+      "hash": "6bbc90c7f86daa74",
+      "consumed": 0.5,
+      "parentReadImages": [
+        "raw/_build/kuafu-grip-v5-native-review/contact_four_views.png"
+      ],
+      "decision": "rejected-as-high-reference",
+      "observations": "The generated object has two snake heads and no complete human hand or forearm. White finger-like shapes are fused into the snakes. It cannot serve as a grasping-hand mother."
+    },
+    {
+      "beast": "kuafu",
+      "job": "kuafu-production-20261115-ear-serpent-mother-v3-medium",
+      "uuid": "45fe5fdd-fe68-4647-910a-95fd4db6aedb",
+      "hash": "a6107983ca0b1064",
+      "consumed": 0.5,
+      "parentReadImages": [
+        "raw/_build/kuafu-ear-v3-native-review/contact_four_views.png"
+      ],
+      "decision": "rejected-as-high-reference",
+      "observations": "The hook-shaped snake has a separate disconnected tail segment and an ear-like appendage. No High submission or runtime promotion."
+    },
+    {
+      "beast": "shuhu",
+      "referenceDirectory": "concept/shuhu",
+      "parentReadReferenceImages": [
+        "view_34.png",
+        "view_side.png",
+        "view_front.png",
+        "view_back.png"
+      ],
+      "referenceDecision": "accepted-after-wing-root-rump-color-tail-scale-and-belly-corrections",
+      "job": "shuhu-production-20261115-unified-human-face-wings-v13-high",
+      "uuid": "4ffe4198-c562-4574-93e2-7dc96c6debdf",
+      "hash": "e329585d5374f4af",
+      "consumed": 1,
+      "sourceSha256": "0bd5963144eeda704e46e5ca1c8d902a0756ad6039252b2422f88a473ebe3cbe",
+      "actualSourceTriangles": 500000,
+      "nativeReviewRoot": ".claude/worktrees/agent-a076d8df0561acb68/raw/_build/shuhu-v13-high-native-review-20261115",
+      "parentReadNativeImages": [
+        "view_34_minus_y.png",
+        "view_plus_x_side.png",
+        "view_minus_y_front_or_back.png",
+        "view_plus_y_front_or_back.png",
+        "wing_roots.png",
+        "tail_root.png"
+      ],
+      "decision": "native-high-anatomy-accepted-for-rigging-only",
+      "observations": "One human face, four hooves, two feather wings and one scaled snake tail remain. No prior wing-root spheres, rump black star or extra tail. Rigging and runtime acceptance are pending."
+    },
+    {
+      "beast": "xixiyu",
+      "referenceDirectory": "concept/xixiyu/production-20261115-prepared-single-wing-high-reference",
+      "parentReadReferenceImages": [
+        "view_34.png",
+        "view_side.png",
+        "view_front.png",
+        "view_back.png"
+      ],
+      "referenceDecision": "accepted-single-wing-with-distal-feather-scales",
+      "job": "xixiyu-production-20261115-prepared-single-wing-v3-high",
+      "uuid": "dc885ab0-ee97-46e2-be92-23b8f4c8ed58",
+      "hash": "3c6e5a5fd85d44df",
+      "consumed": 1,
+      "decision": "downloaded-native-review-and-integration-pending",
+      "observations": "This is an upgrade of the currently accepted Medium modular wing. The integrated baseline remains unchanged until the actual High mother and adapted preparation pass visual and runtime checks."
+    }
+  ],
+  "currentProductionReviews": [
+    {
+      "beast": "lingyu",
+      "version": "runtime-eye-preview-v1",
+      "parentReadImages": [
+        "browser-qa-v2/special-face.png",
+        "browser-qa-v2/special-hand_+1.png",
+        "browser-qa-v2/desktop-walk.png",
+        "browser-qa-v2/desktop-special.png",
+        "browser-qa-v2/framing-390x844-special.png",
+        "lingyu-eye-preview-v1/stage/idle-face.png",
+        "lingyu-eye-preview-v1/stage/walk-face.png",
+        "lingyu-eye-preview-v1/stage/special-face.png"
+      ],
+      "decision": "bounded-eye-material-correction-accepted-awaiting-final-rebuild-and-parent-stage",
+      "observations": "Original runtime face had pale eyes without clear pupils. Stage raycast/UV-located restrained dark iris/pupil and upper-eyelid contrast now visible in all three actual ink face closeups. No face-wide darkening or geometry change. Worker reports 1772 changed eye image pixels out of 2048 squared, with exact unchanged mask exterior at the uncompressed material-patch step only; runtime WebP remains lossy. Five-toed forefeet and inherited transverse folds retained. Final unified rebuild, compressed candidate QA and parent integration pending; catalog remains unready."
+    },
+    {
+      "beast": "lu_fish",
+      "referenceDirectory": "concept/lu_fish/production-20261115-reviewed-low-wing-single-tail-v9",
+      "parentReadReferenceImages": [
+        "view_34.png",
+        "view_side.png",
+        "view_front.png",
+        "view_back.png"
+      ],
+      "parentReadReferenceCloseups": [
+        "repaired_flank.png",
+        "tail_root_back.png",
+        "upper_connection.png"
+      ],
+      "referenceDecision": "v26-bounded-rump-repair-accepted-as-High-reference-only",
+      "referenceDisclosure": "Disclosed local rump retopology, UV/color repair and rounded tapering tail-tip correction. Original low wings/roots, lower legs/hooves and selected core directed position/UV triangles retained. Minor posterior fur-scale variation and pale scalp patch remain in the reference; the High request asks for a naturally furred rounded scalp.",
+      "job": "lu_fish-production-20261115-reviewed-low-wing-single-tail-v9-high",
+      "hash": "e762a8090da4a8c7",
+      "uuid": "0573056a-2036-4b56-bd74-77562cf76eaa",
+      "consumed": 1,
+      "sourceSha256": "390ffe36efa5722c0cec3a89c881d2c54f66711afc60d75b46013a3d60867bd9",
+      "bytes": 25179360,
+      "actualTriangles": 50000,
+      "actualVertices": 39557,
+      "decision": "native-high-main-anatomy-accepted-for-bounded-local-scalp-and-rump-repair-before-rigging",
+      "parentReadNativeImages": [
+        "contact_four_views.png",
+        "head_scalp.png",
+        "rump_tail_root.png",
+        "round_tail_tip.png",
+        "wing_root_right.png",
+        "wing_root_left.png"
+      ],
+      "parentReadGrayImages": [
+        "head_scalp.png",
+        "rump_tail_root.png"
+      ],
+      "observations": "Actual native four hooves, two low feather wings with continuous roots, one solid round tapering snake tail and hornless bovine silhouette reviewed. Scalp flat patch and protrusions remain geometric; posterior peeling streak is mainly PBR/normal detail. Parent allows bounded scalp fairing and local short-fur recoloring, posterior material/normal correction and only clay-confirmed ridge smoothing. Protect wing roots, hoofs, tail cross-section/tip and all other High surface/PBR; no whole-body remesh or repeated API call. Repair review, rig and runtime acceptance remain pending."
+    },
+    {
+      "beast": "tianwu",
+      "referenceDirectory": "concept/tianwu-high-refs",
+      "parentReadReferenceImages": "All sixteen trunk/headneck/tail/leg view_{34,side,front,back}.png images",
+      "referenceDecision": "accepted-as-four-isolated-High-mother-references-only",
+      "referenceDisclosure": "Derived and locally reconstructed references; limb reference retains lower-paw donor and rebuilds upper muscle volume. No reference is claimed as an existing High runtime source.",
+      "returnedHighSources": [
+        {
+          "job": "tianwu-production-20261115-trunk-high",
+          "hash": "f85e29418106ee65",
+          "uuid": "edb5f337-627f-401d-b769-8b5d4bf13c44",
+          "consumed": 1,
+          "sourceSha256": "318a79a034eefc81dcafb88786e10640115c298c73ffe510dd6527942d9284cc",
+          "bytes": 25456212,
+          "actualTriangles": 50000,
+          "actualVertices": 25419
+        },
+        {
+          "job": "tianwu-production-20261115-headneck-high",
+          "hash": "bb73cbaedbe877d2",
+          "uuid": "6bd73fbb-754a-4c20-9c70-0e05523ebb89",
+          "consumed": 1,
+          "sourceSha256": "7f8df400a021a101f202b5d70ccf7b5605109776f98d40a2aa4e1e5970129d07",
+          "bytes": 19446124,
+          "actualTriangles": 50000,
+          "actualVertices": 29313
+        },
+        {
+          "job": "tianwu-production-20261115-tail-high",
+          "hash": "8522c97654ee563d",
+          "uuid": "6acc6385-efe8-4e8e-837d-f39ac31ec6da",
+          "consumed": 1,
+          "sourceSha256": "ee38dde788a160cde3e28e3b95ad4031b18e14b6d354011587e18482a6e6e954",
+          "bytes": 17906384,
+          "actualTriangles": 50000,
+          "actualVertices": 25501
+        }
+      ],
+      "legHigh": {
+        "job": "tianwu-production-20261115-leg-high",
+        "hash": "be48cf5b9e8a516b",
+        "uuid": "b408048f-4823-4520-984d-3c0a590e295f",
+        "consumed": 1,
+        "sourceSha256": "cf1714e0506c3e23d9698f10bafc1026e6ca6fb808a8c77a94a949f939c642ab",
+        "bytes": 22185980,
+        "actualTriangles": 50000,
+        "actualVertices": 25732,
+        "status": "native-shape-accepted-with-bounded-claw-repair-required"
+      },
+      "decision": "four-actual-High-mother-shapes-accepted-for-local-tissue-assembly-only",
+      "parentReadNativeReviewDirectory": ".claude/worktrees/agent-acd8404db363b4b01/raw/_build/tianwu-actual-high-v1",
+      "parentReadNativeImages": "Each trunk/headneck/tail/leg view_{34,side,front,back}.png, trunk detail_upper, headneck detail_lower, leg detail_lower",
+      "remainingMaterialWork": "Native short fur was not visibly generated on trunk, tail or upper leg; disclose local art-authored micro-fur/normal detail. Soften posterior neck color boundary. Shorten and darken two pale protruding claws while retaining paw and toe creases. Preserve actual main High surfaces; rebuild only bounded shoulder/hip/sacrum junction tissue. Four compressed mother GLBs may share geometry/maps across positive-scale clones, with owned skeleton/material cleanup. Assembly, runtime and final readiness remain pending.",
+      "observations": "All new requests explicitly specify quality_override 50000 and HighPack, with no extreme-high texture addon. Parent verified the three returned GLB counts and source SHA values against unique actual receipts. Each raw GLB and a public receipt were copied into a new empty worker directory without private cache metadata. Runtime remains pending; previous COLOR_0 candidate does not establish High acceptance. Original authorization baseline unchanged; Tianwu NEW spending is 6 of 12 credits."
+    },
+    {
+      "beast": "kui",
+      "job": "kui-production-20261115-reviewed-monopod-v10-high",
+      "hash": "22d13e3716c3b668",
+      "uuid": "5491d139-65e5-472d-8b04-e029172ac430",
+      "consumed": 1,
+      "time": "2026-11-15T14:15:25.795Z",
+      "sourceSha256": "31117de85c4577871ffee01facea75abfd851eccc070ebdbed13ede7721de662",
+      "actualTriangles": 50000,
+      "actualVertices": 29294,
+      "parentReadReferenceImages": "concept/kui/production-20261115-reviewed-monopod-v10/view_{34,side,front,back}.png",
+      "parentReadReferenceCloseups": [
+        "check_shoulder_coat.png",
+        "check_tail_coat.png",
+        "check_ankle_side.png"
+      ],
+      "decision": "actual-high-native-shape-accepted-for-rigging-only",
+      "parentReadNativeReviewDirectory": ".claude/worktrees/agent-a076d8df0561acb68/raw/_build/kui-v10-high-native-review",
+      "parentReadNativeImages": [
+        "view_34_minus_y.png",
+        "view_plus_x_side.png",
+        "view_minus_y_front_or_back.png",
+        "view_plus_y_front_or_back.png",
+        "belly_leg_root.png",
+        "ankle_side.png",
+        "tail_root_shaft.png",
+        "hornless_face.png"
+      ],
+      "observations": "Reviewed reference has one continuous central leg, no horns, consistent slate-blue short fur and tapered tufted tail. Reference is a disclosed local volume reconstruction; its procedural Blender material is represented by the submitted PNG views, not claimed as an existing baked runtime material. Parent actual native images confirm one leg, no horns, continuous belly root and tapered tufted tail. Fine fur is weaker than reference, ear has a fine dark line and native hoof crown lip remains; inspect actual ink before deciding bounded material repairs. Native shape accepted for rigging only; runtime not yet integrated."
+    },
+    {
+      "beast": "lingyu",
+      "candidate": "lingyu-v13-donor-forefeet-d/lingyu-donor-forefeet.glb",
+      "candidateSha256": "b4a02d4ae07c06a35b8bdc818e8da789640ffaf4e46b33cfb87cc3f8b787184b",
+      "parentReadImages": [
+        "contact_feet.png",
+        "foot_-1_top_cutaway.png",
+        "foot_+1_top_cutaway.png",
+        "whole_34.png"
+      ],
+      "decision": "bounded-five-toe-repair-accepted-for-rigging-only",
+      "observations": "Verified actual Xingtian v7 High forefoot geometry locally replaces only the metatarsal-toe ROI; five short forward toes with size variation and gaps visible on both feet. Heel/arch/ankle, face, hands and fish body protected. Mild inherited transverse skin folds retained; inspect again in ink. Worker reports 49159 protected triangles and complete original BIN prefix preserved; original degenerate/nonmanifold faces remain disclosed. Candidate not yet integrated or ready."
+    },
+    {
+      "beast": "kuafu",
+      "job": "kuafu-production-20261115-human-c-grip-hand-v6-medium",
+      "uuid": "e872420e-e399-41cf-8944-443ba50f098a",
+      "hash": "7e59368f2823bac8",
+      "consumed": 0.5,
+      "sourceSha256": "fbada2cbd11e62f94d9ea7ca36aba7fccaf5ae014e2a265831cf29fefcaed9b8",
+      "decision": "accepted-as-five-digit-geometry-donor-only",
+      "correctionScript": "pipeline/blender/prepare_kuafu_grip_reference.py",
+      "observations": "Open hand corrected offline to four curled fingers and an opposing thumb before reviewed High submission. Not accepted as a finished gripping runtime hand."
+    },
+    {
+      "beast": "kuafu",
+      "job": "kuafu-production-20261115-five-digit-grip-v7-high",
+      "uuid": "2e75ffe5-8011-473c-80b2-1ec0f88122ab",
+      "hash": "ab3b1a3ef0081d8a",
+      "consumed": 1,
+      "sourceSha256": "206521bc8725d871f3673ec59b7a82ac6eb204080ff5bffe3f2a46c07b873d95",
+      "actualTriangles": 50000,
+      "parentReadImages": [
+        ".claude/worktrees/agent-ae511af079a13a446/raw/_build/kuafu-native-review-hand/contact_four_views.png"
+      ],
+      "decision": "accepted-hand-mother-for-bounded-Kuafu-and-Xingtian-wrist-repair",
+      "observations": "Four curled fingers, opposing thumb, empty grip cavity and continuous wrist. No whole-beast acceptance."
+    },
+    {
+      "beast": "kuafu",
+      "job": "kuafu-production-20261115-continuous-ear-v4-high",
+      "uuid": "3c8fb4e2-87f2-4b42-8a48-878ea06abddb",
+      "hash": "be9c44f3e97cd1ca",
+      "consumed": 1,
+      "sourceSha256": "3f9345be90a463e337e4f0a3f7ffd1f09abd600362ad677b8caa1865c4f4a8f7",
+      "referenceScript": "pipeline/blender/prepare_kuafu_ear_reference.py",
+      "parentReadImages": [
+        "raw/_build/kuafu-ear-v4-high-native-review/contact_four_views.png"
+      ],
+      "decision": "accepted-continuous-ear-snake-mother-for-local-gold-recolor-and-binding",
+      "observations": "One continuous head, J hook and tapered tail. Pale native color requires disclosed local ochre-gold recoloring."
+    },
+    {
+      "beast": "longzhi",
+      "job": "longzhi-production-20261115-muscular-fox-headneck-v5-high",
+      "uuid": "4541b340-0632-4af0-8526-ae5c70e32e16",
+      "hash": "659796b61e7cecbd",
+      "consumed": 1,
+      "referenceDirectory": "concept/longzhi/production-20261115-muscular-neck-v5",
+      "parentReadReferenceImages": [
+        "view_34.png",
+        "view_side.png",
+        "view_front.png",
+        "view_back.png"
+      ],
+      "decision": "head-neck-source-only-not-whole-beast-ready",
+      "observations": "Corrected nape and throat reference accepted before High. Worker is repairing neck coat, torso projection and root transitions; final assembled anatomy remains unaccepted."
+    },
+    {
+      "beast": "xiangliu",
+      "job": "xiangliu-production-20261115-rounded-extended-body-high",
+      "uuid": "588c4b3a-796f-4caf-ad23-715495ff4a27",
+      "hash": "4550e147828e5cb1",
+      "consumed": 1,
+      "sourceSha256": "f0122ffce404437474bd7ce5aaa4edae776a027ba5d8f833d950d3665a8f7a75",
+      "actualTriangles": 50000,
+      "referenceDirectory": "concept/xiangliu/production-20261115-rounded-extended-body",
+      "parentReadReferenceImages": [
+        "view_34.png",
+        "view_side.png",
+        "view_front.png",
+        "view_back.png"
+      ],
+      "nativeReviewDirectory": ".claude/worktrees/agent-aecac0b9b1cbca098/raw/_build/xiangliu-20261115/actual-body-high-review",
+      "parentReadNativeImages": [
+        "view_34.png",
+        "view_side.png",
+        "view_front.png",
+        "view_back.png"
+      ],
+      "decision": "actual-high-body-accepted-for-bounded-anterior-nine-neck-fusion-only",
+      "observations": "Continuous rounded body and single tapered tail accepted. Nine-neck layout, chin/occiput transitions, skin color and full runtime remain pending."
+    },
+    {
+      "beast": "lingyu",
+      "job": "lingyu-production-20261115-corrected-human-limbs-v12-high",
+      "uuid": "f7b188f2-497e-430c-b6d4-adff124cdf8d",
+      "hash": "ae6f219faf14f79a",
+      "consumed": 1,
+      "referenceDirectory": "concept/lingyu/production-20261115-corrected-human-limbs-v12",
+      "parentReadReferenceImages": [
+        "view_34.png",
+        "view_side.png",
+        "view_front.png",
+        "view_back.png"
+      ],
+      "parentAdditionalReadImages": [
+        "foot_side.png",
+        "contact_four_views.png"
+      ],
+      "sourceSha256": "214672b66577aec8fe33badb95e91c500c92fde72aa7298e4e8765237e5ed308",
+      "actualTriangles": 50000,
+      "parentReadNativeImages": [
+        ".claude/worktrees/lingyu-v11-recovery/raw/_build/lingyu-v12-high-native-review/contact_four_views.png",
+        ".claude/worktrees/lingyu-v11-recovery/raw/_build/lingyu-v12-high-native-review/feet_side_plus_x.png",
+        ".claude/worktrees/lingyu-v11-recovery/raw/_build/lingyu-v12-high-native-review/face_body_transition.png"
+      ],
+      "parentReadNativeDigitImages": [
+        ".claude/worktrees/lingyu-v11-recovery/raw/_build/lingyu-v12-high-native-digits-front/toes_plus_x.png",
+        ".claude/worktrees/lingyu-v11-recovery/raw/_build/lingyu-v12-high-native-digits-front/toes_minus_x.png",
+        ".claude/worktrees/lingyu-v11-recovery/raw/_build/lingyu-v12-high-native-digits-front/palm_plus_x.png",
+        ".claude/worktrees/lingyu-v11-recovery/raw/_build/lingyu-v12-high-native-digits-front/palm_minus_x.png"
+      ],
+      "decision": "actual-high-body-and-hands-retained-forefeet-require-bounded-repair-before-rigging",
+      "observations": "v11 spherical heel and segmented joints rejected. Actual v12 High preserves one human face, anterior arms and posterior legs with continuous smaller heels. Both hands have four fingers and an opposing thumb. Actual forefeet are broad rounded paddles with a transverse groove and no clear five-toe row; original High is not accepted intact for rigging. Bounded forefoot reconstruction may reuse verified Xingtian v7 High toe geometry, preserving Lingyu heel, ankle and body, with explicit source and protected-region audits."
+    },
+    {
+      "beast": "xingtian",
+      "job": "xingtian-production-20261115-closed-grip-whole-v7-high",
+      "uuid": "037ac060-5f54-4ca9-aa2c-d06382bb8d39",
+      "hash": "ae3d2c4d108be860",
+      "consumed": 1,
+      "referenceDirectory": "concept/xingtian/production-20261115-closed-grip-high-reference",
+      "parentReadReferenceImages": [
+        "view_34.png",
+        "view_side.png",
+        "view_front.png",
+        "view_back.png"
+      ],
+      "parentReadGripImages": [
+        "/tmp/shanhai-xingtian-5203/closed-grip-reference-v2/reimport-audit/empty_1_palm.png",
+        "/tmp/shanhai-xingtian-5203/closed-grip-reference-v2/reimport-audit/empty_-1_channel.png"
+      ],
+      "sourceSha256": "7b8f311778d006197a22113b397193a651d66fb3a2de9801d1da2ede32622cc8",
+      "actualTriangles": 50000,
+      "nativeReviewDirectory": "/tmp/shanhai-xingtian-5203/whole-v7-high-native-review",
+      "parentReadNativeImages": [
+        "front.png",
+        "back.png",
+        "side.png",
+        "oblique.png",
+        "shoulder-top.png",
+        "feet.png",
+        "hand_1_palm.png",
+        "hand_-1_palm.png"
+      ],
+      "decision": "actual-high-anatomy-accepted-for-independent-props-and-rigging-only",
+      "observations": "Reference combines v5 Medium torso with accepted v7 High hands. Actual whole-body High has a closed broad shoulder plateau, chest eyes, navel mouth, intact five-toed feet and four curled fingers plus opposing thumb on both hands. Reference wrist connector has become continuous native tissue. Fine dark wrist/lower-leg lines remain visible and need PBR diagnosis and bounded repair if visible in ink. No axe or shield baked into source; independent prop contact and runtime are still unaccepted."
+    },
+    {
+      "beast": "tianwu",
+      "decision": "worker-runtime-candidate-rejected-before-parent-integration",
+      "parentReadImages": [
+        "raw/_build/tianwu-colored-v2/front.png",
+        "raw/_build/tianwu-colored-v2/shoulder.png",
+        "raw/_build/tianwu-colored-v2/sacrum.png",
+        "raw/_build/tianwu-accepted-idle.png",
+        "raw/_build/tianwu-accepted-walk.png",
+        "raw/_build/tianwu-accepted-special.png"
+      ],
+      "observations": "Numerical support QA passed, but visible straight color seams, projection specks, green indistinct faces and very thin tails remain. Disclosed Medium/derived geometry does not complete the required reviewed High workflow. Worker is correcting reference anatomy/materials, reproducibility, owned skeleton cleanup and bounded locomotion. Parent catalog remains pending."
+    }
+  ],
+  "latestStaticCandidateReviews": [
+    {
+      "beast": "xiangliu",
+      "version": "actual-high-local-root-v8",
+      "reviewDirectory": ".claude/worktrees/agent-aecac0b9b1cbca098/raw/_build/xiangliu-20261115/actual-high-local-root-v8",
+      "parentReadImages": [
+        "heads_view_front.png",
+        "single_view_side.png",
+        "single_view_back.png",
+        "roots_view_34.png",
+        "clay_single_view_side.png",
+        "clay_single_view_back.png",
+        "view_34.png",
+        "view_front.png",
+        "view_side.png",
+        "view_back.png"
+      ],
+      "decision": "static-geometry-accepted-for-final-rigging-material-gate-pending-actual-ink",
+      "observations": "Enlarged heads and longer upper-neck taper remove the old shoulder ledge. Side/back clay confirms continuous jaw/occiput transition; nine heads remain separated. Circumferential texture rings removed by correcting UV seam triangles, and runtime maps consolidated onto UV0. Root native large outlined scales still differ in contrast/density from new neck scales; lower-jaw skin/color transition remains fairly straight. Inspect actual ink root and head side/back before any bounded material repair. Worker discloses 26 local UV edge color differences and 20 inherited source overlap groups; not claimed globally seamless or intersection-free. Parent catalog remains pending."
+    },
+    {
+      "beast": "longzhi",
+      "version": "all-high-v12 / app-v11-material",
+      "reviewDirectory": ".claude/worktrees/agent-ac000ca672ddf4a5e/raw/_build/longzhi-20261115-agent-ac000ca6",
+      "parentReadImages": [
+        "all-high-v12-review/front.png",
+        "all-high-v12-review/side.png",
+        "all-high-v12-review/back.png",
+        "all-high-v12-review/34.png",
+        "all-high-v12-review/shoulder.png",
+        "all-high-v12-review/nape.png",
+        "all-high-v12-review/rump.png",
+        "app-v11-material/ink-shoulder.png",
+        "app-v11-material/ink-nape.png",
+        "app-v11-material/ink-rump.png"
+      ],
+      "decision": "static-anatomy-and-ink-shoulder-accepted-two-short-tail-root-rings-require-bounded-repair",
+      "observations": "Nine fox faces, nine rounded tails and four clawed feet visible. Former white knee patches and black triangles absent. Actual ink shoulder white bib blends acceptably, and spotted tails can retain their design contrast. Two short lateral tail roots still read as dark rings with pale collars; requested only local color/normal continuity, bounded geometric smoothing only if clay confirms a groove. Back-neck ink view partly blocked by fan tails; worker will supplement an unobstructed view. World-support QA reported by worker, not yet independently verified in parent."
+    },
+    {
+      "beast": "kui",
+      "reviewDirectory": ".claude/worktrees/agent-a076d8df0561acb68/raw/_build/kui-v9-correction",
+      "parentReadImages": [
+        "check_side.png",
+        "check_back.png",
+        "check_underside.png"
+      ],
+      "decision": "continuous-single-leg-shape-retained-material-correction-required-before-high",
+      "observations": "Reconstructed lower torso now joins one central leg continuously; prior hip shelf and posterior thin sheets are absent. Current deep-blue native head/neck fur meets a plain smooth grey torso at a sharp scarf-like boundary; tail also has a straight color/width transition. Correct consistent blue-grey short fur and those boundaries before final four-view High reference acceptance."
+    },
+    {
+      "beast": "xiangliu",
+      "reviewDirectory": ".claude/worktrees/agent-aecac0b9b1cbca098/raw/_build/xiangliu-20261115/actual-high-local-root-v4",
+      "parentReadImages": [
+        "view_34.png",
+        "view_front.png",
+        "view_side.png",
+        "view_back.png",
+        "heads_view_front.png",
+        "roots_view_34.png"
+      ],
+      "decision": "shared-root-layout-retained-neck-tip-and-atlas-repair-required-before-rigging",
+      "observations": "Nine visible human faces and shared anterior volume retained. Necks remain thick relative to heads with a ledge below jaw/ears, circumferential texture rings and abrupt scale density differences at the trunk. Requested bounded upper-neck taper, continuous jaw/occiput blending and atlas correction; posterior actual High body remains protected."
+    }
+  ],
+  "kuafuRuntimeCandidateReview": {
+    "historicalReview": true,
+    "supersededBy": "integration.kuafu records the later corrected framing acceptance and parent integration",
+    "status": "anatomy-and-contact-preliminary-accepted-framing-correction-required",
+    "workerTree": ".claude/worktrees/agent-ae511af079a13a446",
+    "parentReadAnatomyImages": [
+      "raw/_build/kuafu-release-qa/anatomy-hand-l.png",
+      "raw/_build/kuafu-release-qa/anatomy-hand-r.png",
+      "raw/_build/kuafu-release-qa/anatomy-grip-side.png",
+      "raw/_build/kuafu-release-qa/anatomy-ear-l.png",
+      "raw/_build/kuafu-release-qa/anatomy-ear-r.png",
+      "raw/_build/kuafu-release-qa/anatomy-feet.png"
+    ],
+    "parentReadFullImages": [
+      "raw/_build/kuafu-release-idle.png",
+      "raw/_build/kuafu-release-walk.png",
+      "raw/_build/kuafu-release-special.png"
+    ],
+    "observations": "Replaced five-digit hands grip two yellow snakes; two smaller continuous snakes hang over actual ears, with improved wrist skin blend. Source body and feet remain intact. All three full-stage images have feet obscured by the bottom selector, including the walk support foot. Candidate must correct desktop and phone UI-safe framing before final acceptance and parent integration.",
+    "workerReportedMaximumFootDriftMeters": 0.0003265,
+    "workerReportedMaximumGripDriftMeters": 1.12e-15,
+    "parentStageQaRun": false,
+    "readyChangedInParent": false
+  },
+  "integration": {
+    "readyFlagsChanged": [
+      "xixiyu",
+      "qiangliang",
+      "shuhu",
+      "kuafu",
+      "kui",
+      "longzhi",
+      "lingyu",
+      "xingtian",
+      "xiangliu",
+      "lu_fish",
+      "tianwu"
+    ],
+    "releaseStatus": "all62-parent-accepted-final-checks-passed-prepared-for-single-consolidated-main-release",
+    "lingyu": {
+      "status": "parent-accepted-and-integrated",
+      "checkedOn": "2026-11-16",
+      "runtimeSha256": "fb3125ebf3e1eb98c61d18527bc13fedc59365a56455ef4e92e1267687c78e87",
+      "runtimeBytes": 1869612,
+      "triangles": 53648,
+      "bones": 30,
+      "parentStageQa": "/tmp/shanhai-parent-lingyu-stage/report.json",
+      "parentStageQaPassed": true,
+      "sectionsPassed": 17,
+      "errors": [],
+      "fullRecipeRebuild": "Parent actual prepare/rig/compress exit 0, byte-identical runtime SHA and size.",
+      "parentRead": "Standard idle/walk/special and three continuous motion closeups; actual final ink face, hands, feet and responsive frames.",
+      "eyeRepair": "Bounded iris/pupil/lid contrast, 7050 pixels of 4096 squared changed above one byte. Unchanged exterior applies to the lossless PNG patch step only, not final lossy WebP. Geometry, skin and animations unchanged by eye repair.",
+      "limitations": "Native transverse forefoot folds and inherited degenerate/nonmanifold regions remain. Local Chrome Metal emulated viewports, not physical device certification. Final consolidated global checks still required."
+    },
+    "longzhiCandidate": {
+      "status": "parent-accepted-and-integrated",
+      "checkedOn": "2026-11-16",
+      "fullOrbitUi": {
+        "passed": true,
+        "samplesPerViewport": 384,
+        "radians": 6.2972834967315485,
+        "verticesPerSample": 222304,
+        "minimumClearancePx": {
+          "1440x900": 24.152740062412775,
+          "390x844": 35.505146625936845,
+          "700x900": 25.335460156990393
+        },
+        "unsafeVertices": 0
+      },
+      "cameraUnmount": {
+        "passed": true,
+        "method": "Independent two actual 120s walks, switch to Jiuweihu, remount Longzhi; monotonic current R3F clock and finite assertions every frame.",
+        "walkSteps": 4800,
+        "cameraReturnErrorMeters": [
+          8.290355806926891e-14,
+          3.996556164807701e-14
+        ],
+        "secondMountAccumulation": false,
+        "earlierDiagnostic": "An earlier second-round NaN was retained; not reproduced in the controlled new-page run. HMR not established as sole cause."
+      },
+      "runtimeSha256": "0bc2c539ca20f868374bd9b2dd36664881cbdac4975a09ba49cfca6ad74966ac",
+      "runtimeBytes": 3363584,
+      "triangles": 276353,
+      "bones": 89,
+      "parentStageQa": "/tmp/shanhai-parent-longzhi-stage/report.json",
+      "parentStageQaPassed": true,
+      "parentCatalogReadyAtStage": false,
+      "parentWorldStanceSamples": 86,
+      "parentMaximumWorldStanceDriftM": 0.0004572736286803039,
+      "parentRemounts": 3,
+      "parentSharedDisposals": 0,
+      "parentNarrationPlayedAndStopped": true,
+      "parentInfantCryCalls": 1,
+      "parentInfantCryPeakAmplitude": 0.15086284279823303,
+      "parentRead": "Parent read final Stage shots and orbit-v3 worst frames; independent two-round 120-second camera cleanup check passed before ready promotion.",
+      "sourceProvenance": "concept/longzhi/production-20261115-prepared/provenance.json",
+      "fullRecipeRebuild": "Initial parent attempt found missing body raw input; verified actual High body source SHA and collected only that GLB. Parent actual prepare/rig/compress full recipe rebuild exited 0 and reproduced the accepted 3363584-byte runtime SHA exactly. No paid generation.",
+      "topologyDisclosure": "Connected main skin with 55 tiny residual components; 123 boundary edges/124 nonmanifold edges. Not claimed exactly single-component watertight."
+    },
+    "kui": {
+      "status": "parent-accepted-and-integrated",
+      "runtimeSha256": "2279b5c2804defdab455cf24fad3610c3f441f6ef67936299d4c3869f725c73c",
+      "runtimeBytes": 501632,
+      "triangles": 50000,
+      "bones": 16,
+      "parentStageQa": "/tmp/shanhai-parent-kui-stage-v2/report.json",
+      "parentStageQaPassed": true,
+      "parentWalkSupportDriftMeters": 0.00026955060863166126,
+      "parentWalkFlightHeightMeters": 0.14282914786740042,
+      "parentIdleSupportResidualMeters": 0.001683150818004154,
+      "parentSpecialSupportResidualMeters": 0.001983025044387903,
+      "parentRigidFaceHoofErrorMeters": 6.301276548936752e-06,
+      "framing": {
+        "desktop": "1440x900",
+        "phones": [
+          "390x844",
+          "360x740"
+        ],
+        "fullCircleSizes": [
+          "1440x900",
+          "390x844"
+        ],
+        "simulatedWalkSecondsPerSize": 30,
+        "samplesPerCircle": 60,
+        "walkRadiansPerSize": 7.26153846153841,
+        "uiPaddingPixels": 8,
+        "uiSurfaceViolations": 0
+      },
+      "parentRemounts": 3,
+      "observations": "Native single central leg, hornless bovine body and tapered ox tail retained. Fine fur is weak; native normal/roughness contributes locally to ink. Ear line and native hoof crown lip retained and disclosed. Parent inspected actual three actions and anatomy. Initial full-circle QA used bounding-box UI intersection and produced a false positive across empty space; screenshot inspection confirmed the false alarm, then all actual deformed vertices were projected with unchanged 8px padding and the full circle passed. No camera or geometry change was used to hide the alarm.",
+      "verification": "Independent parent Stage passed. Required standard idle/walk/special shots and three continuous walk closeups were Read. Full unified prepare/rig/compress rebuild exited 0 with byte-identical 501632-byte runtime SHA. Parent pnpm typecheck, validate (56 ready), build and qa:browser production-preview plus StrictMode passed; exact ready membership 56/62, phone 390x844, unexpectedErrors empty.",
+      "deviceScope": "Local Chrome Metal phone viewport emulation; not a physical-mobile benchmark."
+    },
+    "kuafu": {
+      "status": "parent-accepted-and-integrated-after-framing-correction",
+      "bodyRuntimeSha256": "537043d92d35efcb0b9d85bb62bb6d7e2dbc92b829397e9cba62f0c84e89ae93",
+      "earRuntimeSha256": "fd324c5ff266b90dd625f961600d352c96d46387f1e4d75c58ec9900a11ba75c",
+      "handMotherRuntimeSha256": "f3d46f8d8154122a66bd8df1d126c0bf01bddaf71b7f546a31c33163476d2dae",
+      "parentStageQa": "/tmp/shanhai-parent-kuafu-stage/report.json",
+      "parentStageQaPassed": true,
+      "parentWalkPlantedDriftMeters": 0.0003132032212051044,
+      "parentMaximumGripDriftMeters": 1.3322676295501878e-15,
+      "parentFramingQa": {
+        "desktop": "1440x900",
+        "phone": "390x844",
+        "samplesPerSize": 96,
+        "simulatedWalkSecondsPerSize": 80,
+        "walkRadiansPerSize": 7.11,
+        "uiOcclusionViolations": 0,
+        "paddingPixels": 8
+      },
+      "parentReadStandardActionAndMotionImages": "/tmp/shanhai-parent-kuafu-{idle,walk,special,motion0,motion1,motion2}.png",
+      "parentReadAnatomyImages": [
+        "/tmp/shanhai-parent-kuafu-stage/anatomy-hand-l.png",
+        "/tmp/shanhai-parent-kuafu-stage/anatomy-ear-l.png",
+        "/tmp/shanhai-parent-kuafu-stage/anatomy-feet.png"
+      ],
+      "parentUnifiedBuildReproducedByteIdentically": true,
+      "boundedRepairs": "High hand mothers replace defective body hands through wrist bridges; original held-snake ends retain a locally reconstructed continuous middle. Actual High ear snakes use local ochre recolor. Protected lower-body/torso position, corner UV and winding digest covers 33314 triangles. Hands are fused into body; separately packaged hand.glb is the declared preparation output, not a runtime duplicate.",
+      "camera": "Kuafu-only FOV 40 / portrait cap 80; follow target height .82 desktop / 1.5 phone. Existing Shuhu camera cap retained.",
+      "verification": "Parent required typecheck, validate (55 ready) and build passed. Dedicated Stage checks and standard action/motion screenshots passed and were Read. Full pnpm qa:browser production regression and StrictMode passed after integration: exact ready membership 55/62, mobile 390x844, unexpectedErrors empty."
+    },
+    "xixiyu": {
+      "status": "accepted-high-wing-upgrade-integrated",
+      "wingJob": "xixiyu-production-20261115-prepared-single-wing-v4-50k-high",
+      "wingSourceSha256": "a8ab142867363096b528491631633b3650f9f453820abbf218059a5b48bf1830",
+      "wingRuntimeSha256": "5b3700b966c1f71bdd810bb5080dec22a78a57ac5bde91d677b8b2f46d69751b",
+      "wingTrianglesPerSide": 50000,
+      "wingChordMultiplier": 1,
+      "parentReadHighActionAndMotionImages": "/tmp/shanhai-xixiyu-5203/high-v4-chord1-{idle,walk,special,motion0,motion1,motion2}.png",
+      "parentIntegratedStandardHighImages": "/tmp/shanhai-parent-xixiyu-high-{idle,walk,special,motion0,motion1,motion2}.png",
+      "parentIntegratedStandardHighImagesRead": true,
+      "parentHighStageQa": "/tmp/shanhai-parent-xixiyu-high-stage/xixiyu-qa.json",
+      "parentHighStageQaPassed": true,
+      "parentHighIdleToWalkMaximumFrameDisplacementMeters": 0.014544388700787664,
+      "anatomy": "Two native folded wings plus eight modular wings; hand-modeled scales added at native feather tips.",
+      "parentStageQa": "/tmp/shanhai-parent-xixiyu-stage/xixiyu-qa.json",
+      "parentStageQaPassed": true,
+      "idleToWalkMaximumFrameDisplacementMeters": 0.013625906593670987,
+      "parentReadActionImages": [
+        "/tmp/shanhai-parent-xixiyu-idle.png",
+        "/tmp/shanhai-parent-xixiyu-walk.png",
+        "/tmp/shanhai-parent-xixiyu-special.png"
+      ],
+      "parentReadMotionImages": [
+        "/tmp/shanhai-parent-xixiyu-motion0.png",
+        "/tmp/shanhai-parent-xixiyu-motion1.png",
+        "/tmp/shanhai-parent-xixiyu-motion2.png"
+      ]
+    },
+    "qiangliang": {
+      "status": "parent-accepted-and-integrated",
+      "bodyRuntimeSha256": "0f56de9c5bd039afc4733ce9db33211ed96a86c36320e2f8aa616b68f943bedd",
+      "snakeRuntimeSha256": "33723c4ad91d737b9f175b7797ce8c3ebff31c2d68de19f69d1e937beb3a314b",
+      "snakeSourceJob": "kuafu-production-20261113-snake-high",
+      "snakeSourceUuid": "33de858d-5fe5-424e-9abc-d4a8d9c9c67b",
+      "snakeSourceSha256": "5d0878e6d57bfc47447423406ba3e47bbdcece78e22e00df9b4902c95d81b1ee",
+      "reproducibility": "Unified preparation performs bounded geometry smoothing, masked texture repair, and normalizes the original High snake. Actual unified build reproduced accepted assets byte-for-byte; no published-asset fallback.",
+      "parentStageQa": "/tmp/shanhai-parent-qiangliang-stage/report.json",
+      "parentStageQaPassed": true,
+      "parentWalkPlantedDriftMeters": 0.00028013137836005767,
+      "parentReadActionImages": [
+        "/tmp/shanhai-parent-qiangliang-idle.png",
+        "/tmp/shanhai-parent-qiangliang-walk.png",
+        "/tmp/shanhai-parent-qiangliang-special.png"
+      ],
+      "parentReadMotionImages": [
+        "/tmp/shanhai-parent-qiangliang-motion0.png",
+        "/tmp/shanhai-parent-qiangliang-motion1.png",
+        "/tmp/shanhai-parent-qiangliang-motion2.png"
+      ]
+    },
+    "shuhu": {
+      "status": "parent-accepted-and-integrated",
+      "runtimeSha256": "c0083d99110ca8ccc9fc38f9fcc8c31b30d445d229b8988d47800cbf9c7291b9",
+      "runtimeBytes": 4046656,
+      "triangles": 500000,
+      "bones": 40,
+      "parentStageQa": "/tmp/shanhai-parent-shuhu-stage/report.json",
+      "parentStageQaPassed": true,
+      "parentWalkPlantedDriftMeters": 0.0004253153062567033,
+      "parentFrameMsP95": {
+        "idle": 18.3,
+        "walk": 18.4,
+        "special": 18.3,
+        "phoneViewport": 18.4
+      },
+      "deviceScope": "Local Chrome Metal, 390x844 viewport emulation; not physical mobile hardware.",
+      "visualReview": "Parent Read desktop and phone three actions, face/wing and wing/tail roots and three motion closeups; native hip ridge remains visible, consistent with accepted native source. Parent actual Stage and standard shot/closeups also pass."
+    },
+    "browserQa": "Production QA selects an actual pending entry, verifies exact ready-filter membership and releases the desktop WebGL context before the independent mobile check. Vite ignores isolated worktree changes to prevent unrelated HTML rebuilds reloading the parent app.",
+    "verification": "Six recipe orchestration tests, pnpm typecheck, pnpm validate and pnpm build passed after baseline integration. First default SwiftShader browser run timed out loading the mobile stage; Chrome browser and StrictMode checks passed. After closing the desktop page before mobile, default pnpm qa:browser passed as well. After integrating High-wing Xixiyu, Qiangliang and Shuhu: all six recipe tests, pnpm typecheck, pnpm validate (54 ready), pnpm build, default pnpm qa:browser production and StrictMode checks passed. Further code or asset changes require verification again.",
+    "xingtian": {
+      "status": "parent-accepted-and-integrated",
+      "checkedOn": "2026-11-16",
+      "provenance": "pipeline/provenance/xingtian-production-20261115.json",
+      "runtime": {
+        "path": "public/models/xingtian/body.glb",
+        "sha256": "5d9c740e0d383057cbcb28d64aa00ccca598fe0f4d671d017a0aeb842a274375",
+        "bytes": 858384,
+        "bones": 19,
+        "meshes": 7,
+        "outlines": 7,
+        "clipDurationsSeconds": {
+          "idle": 4,
+          "walk": 32,
+          "special": 4.800000190734863
+        },
+        "compression": "Meshopt medium, resample false, WebP2048; no simplify/flatten/join",
+        "worldTravel": "Walk path baked into root; runtime does not add a second translation"
+      },
+      "parentStage": {
+        "report": "/tmp/shanhai-parent-xingtian-stage/xingtian-qa.json",
+        "passed": true,
+        "testedCandidateSha256": "056173bc61e59ba7201bd9dd1067c433919a5e8191c41253256c6a1c48ce0c70",
+        "applicabilityToRebuild": "Complete BIN byte identity preserves tested geometry, PBR, skin and animation data; rebuilt bytes also inspected with standard shot and closeups scripts",
+        "errors": [],
+        "geometryPoses": 412,
+        "maximumBidirectionalRestErrorMetres": 6.481759161054373e-05,
+        "maximumStanceVertexDriftMetres": 9.908250341143749e-08,
+        "maximumAbsoluteSoleHeightMetres": 1.9086668380907668e-05,
+        "rigidMasks": {
+          "chest": 13171,
+          "leftHand": 1602,
+          "rightHand": 1858,
+          "leftFoot": 1463,
+          "rightFoot": 1530
+        },
+        "maximumRigidFootPairDriftMetres": 1.7924967066207387e-09,
+        "maximumToolAttachmentDriftMetres": 2.7755575615628914e-16,
+        "gripClearanceMetres": {
+          "axe": 0.00011859847834823703,
+          "shield": 0.00012783835665519184
+        },
+        "toolCollisions": {
+          "poses": 85,
+          "intersections": 0,
+          "method": "Actual compressed triangles with BVH/bidirectional segment tests; exact coplanarity excluded"
+        },
+        "strictMode": "23 snapshots through action switches/remounts, cached graph unchanged, no shared resource disposal",
+        "responsiveProjection": {
+          "method": "Actual projected triangle AABB to real DOM rectangles, 167 poses per viewport, required gap 8px",
+          "minimumUiGapPixels": {
+            "1440x900": 31.521233405097405,
+            "820x1180": 140.14884834539785,
+            "700x1000": 98.44117607483476,
+            "390x844": 26.351749502954135
+          },
+          "sourceAndDesign": "Actual wheel scrolling reaches all four inference lines and classical text"
+        },
+        "specialReturnsIdle": true
+      },
+      "parentRebuild": {
+        "command": "bash pipeline/build_beast.sh xingtian",
+        "pipelineSucceeded": true,
+        "workerCandidateSha256": "056173bc61e59ba7201bd9dd1067c433919a5e8191c41253256c6a1c48ce0c70",
+        "wholeGlbByteIdentical": false,
+        "completeBinByteIdentical": true,
+        "onlyJsonDifference": "/extras/xingtianRig/sourcePreparedSHA256",
+        "workerPreparedSha256": "cac8033d1c8da66531c721551e3fc2162cae229481d18cd0d1996e4968302286",
+        "parentPreparedSha256": "47104eb3ef89eb8ee0c49a791683b4b1673018e9926023eec7f2a30378368ace",
+        "limitation": "The post-build candidate-SHA assertion failed; the build itself succeeded. Intermediate GLB serialization ordering is plausible but not proven as the precise cause. No whole-file reproducibility claim."
+      },
+      "parentVisual": {
+        "standardShots": "/tmp/shanhai-parent-xingtian-{idle,walk,special}.png",
+        "consecutiveMotion": "/tmp/shanhai-parent-xingtian-motion{0,1,2}.png",
+        "readAll": true,
+        "observations": "Closed headless cap, chest eyes and navel mouth legible; complete native grips hold independent axe/shield; soles and limbs remain coherent through movement."
+      }
+    },
+    "xiangliu": {
+      "status": "parent-accepted-and-integrated",
+      "checkedOn": "2026-11-16",
+      "provenance": "pipeline/provenance/xiangliu-production-20261115.json",
+      "assets": [
+        {
+          "path": "public/models/xiangliu/body.glb",
+          "bytes": 3609804,
+          "sha256": "2139241a94ab7bf20383460d1a573973f10192c6ab6e2f0fdd7f41502839ccf6"
+        },
+        {
+          "path": "public/models/xiangliu/head.glb",
+          "bytes": 382576,
+          "sha256": "1f3d9070d2c5e0b427498dba49ce243836a2f7f72eb484cff00586720a066e70"
+        }
+      ],
+      "parentStage": {
+        "report": "/tmp/shanhai-parent-xiangliu-stage-v3/qa.json",
+        "passed": true,
+        "errors": [],
+        "source": {
+          "catalogReady": false,
+          "clips": [
+            {
+              "name": "idle",
+              "duration": 8.033333778381348
+            },
+            {
+              "name": "walk",
+              "duration": 4.0333333015441895
+            },
+            {
+              "name": "special",
+              "duration": 3.633333444595337
+            }
+          ],
+          "rigidVertices": 72634,
+          "invalidFaceWeights": 0,
+          "trianglesInRigidHeads": 135927,
+          "textureCoordinates": [
+            {
+              "name": "Qing_serpent_rebuilt_UV_tissue",
+              "channel": 0,
+              "uv": true
+            },
+            {
+              "name": "Actual_High_body_original_UV_TBN",
+              "channel": 0,
+              "uv": true
+            },
+            {
+              "name": "Native_High_human_face_preserved",
+              "channel": 0,
+              "uv": true
+            }
+          ]
+        },
+        "specialReturn": {
+          "steps": 67,
+          "action": "idle"
+        },
+        "remounts": [
+          {
+            "heads": 9,
+            "spine": 24,
+            "neck": 63,
+            "outlines": 3,
+            "meshes": 3,
+            "invalid": 0,
+            "sourceUnchanged": true
+          },
+          {
+            "heads": 9,
+            "spine": 24,
+            "neck": 63,
+            "outlines": 3,
+            "meshes": 3,
+            "invalid": 0,
+            "sourceUnchanged": true,
+            "time": 0.05
+          }
+        ],
+        "cycles": [
+          {
+            "action": "idle",
+            "loopError": 0,
+            "headMotion": 0.022485563627074493,
+            "maximumPosteriorStrain": 0.02300270461992493,
+            "minimumHeadGap": 0.11379826863689771
+          },
+          {
+            "action": "walk",
+            "loopError": 0,
+            "headMotion": 0.028874857528777706,
+            "maximumPosteriorStrain": 0.0863530186878313,
+            "minimumHeadGap": 0.10580130043493897
+          },
+          {
+            "action": "special",
+            "loopError": 0,
+            "headMotion": 0.06659843751401996,
+            "maximumPosteriorStrain": 0.057567575060123555,
+            "minimumHeadGap": 0.10327080333150607
+          }
+        ],
+        "sourceDesignChecks": [
+          {
+            "width": 700,
+            "height": 1000,
+            "sources": [
+              "原文相柳者，九首人面，蛇身而青。——《海外北經》",
+              "原文共工臣名曰相繇，九首蛇身，自環，食于九土。——《大荒北經》"
+            ],
+            "scrollTop": 88,
+            "scrollHeight": 406,
+            "clientHeight": 318,
+            "writingMode": "horizontal-tb",
+            "designDisplay": "block",
+            "designBorder": "rgba(181, 50, 42, 0.5)",
+            "designLabel": "设计",
+            "designVisible": true,
+            "cardInsideViewport": true
+          },
+          {
+            "width": 390,
+            "height": 844,
+            "sources": [
+              "原文相柳者，九首人面，蛇身而青。——《海外北經》",
+              "原文共工臣名曰相繇，九首蛇身，自環，食于九土。——《大荒北經》"
+            ],
+            "scrollTop": 122,
+            "scrollHeight": 390,
+            "clientHeight": 268,
+            "writingMode": "horizontal-tb",
+            "designDisplay": "block",
+            "designBorder": "rgba(181, 50, 42, 0.5)",
+            "designLabel": "设计",
+            "designVisible": true,
+            "cardInsideViewport": true
+          }
+        ],
+        "visuals": {
+          "standardShots": "/tmp/shanhai-parent-xiangliu-{idle,walk,special}.png",
+          "motion": "/tmp/shanhai-parent-xiangliu-motion{0,1,2}.png",
+          "stageRootAndResponsiveImages": "/tmp/shanhai-parent-xiangliu-stage-v3/",
+          "parentReadAll": true
+        }
+      },
+      "parentRebuild": {
+        "command": "bash pipeline/build_beast.sh xiangliu",
+        "pipelineSucceeded": true,
+        "bodyByteIdentical": false,
+        "headByteIdentical": true,
+        "candidateBodyBytes": 3609820,
+        "parentBodyBytes": 3609804,
+        "difference": "24 JSON Meshopt lengths/offsets and new-tissue compressed BIN differ. BMesh set iteration and remeshing are plausible ordering sources, not independently established as the sole cause. No complete semantic multiset equivalence claim. Parent rebuilt asset independently accepted through actual Stage and visual checks.",
+        "postBuildCandidateShaAssertion": "failed; retained as reproducibility limitation"
+      },
+      "limitations": [
+        "Native microdefects remain; this is not a fully manifold or universally intersection-free mesh. New tissue and native heads can export in a different vertex order; only posterior attribute bytes are claimed identical.",
+        "Nearest-pixel island-edge colour differences remain; no fully seamless texture claim. New tissue has rebuilt geometric normals and no inherited tangent normal map."
+      ]
+    },
+    "verificationRuns": [
+      {
+        "date": "2026-11-16",
+        "readyCatalogEntries": 60,
+        "checks": {
+          "typecheck": "passed",
+          "validate": "passed",
+          "build": "passed",
+          "qaBrowserProduction": "passed",
+          "qaBrowserStrictMode": "passed",
+          "recipeTests": "8/8 passed"
+        },
+        "scope": "After final parent Xingtian and Xiangliu integration; Lu, Tianwu and shared responsive fixes still pending"
+      },
+      {
+        "date": "2026-11-16",
+        "readyCatalogEntries": 62,
+        "typecheck": "passed",
+        "validate": "passed",
+        "build": "passed",
+        "recipeTests": {
+          "passed": 8,
+          "failed": 0
+        },
+        "browserQa": "passed: final accepted metadata production preview and StrictMode suites",
+        "secretAndPersonalPathScan": "147 current text files passed",
+        "stagedLfsActualByteChecks": 102
+      }
+    ],
+    "sharedLayoutRegression": {
+      "date": "2026-11-16",
+      "scope": "Shared mobile controls/actions bottom156 and portrait-tablet controls164",
+      "xingtian": {
+        "report": "/tmp/shanhai-parent-xingtian-final-layout/xingtian-qa.json",
+        "passed": true,
+        "assetSha256": "5d9c740e0d383057cbcb28d64aa00ccca598fe0f4d671d017a0aeb842a274375",
+        "minimumMobileUiGapPixels": 11.956072270440604,
+        "geometrySkipped": true,
+        "geometryPreviouslyVerifiedWithByteIdenticalBin": true
+      },
+      "lingyu": {
+        "report": "/tmp/shanhai-parent-lingyu-final-layout/report.json",
+        "passedSections": 17,
+        "failures": [],
+        "errors": []
+      },
+      "longzhi": {
+        "report": "/tmp/shanhai-parent-longzhi-final-layout/report.json",
+        "passed": true,
+        "viewports": [
+          {
+            "size": {
+              "width": 1440,
+              "height": 900
+            },
+            "minimumPx": 24.152740062412775,
+            "angleCovered": 6.2972834967315485,
+            "samples": 384,
+            "unsafe": 0,
+            "covered": 0,
+            "clipped": 0
+          },
+          {
+            "size": {
+              "width": 390,
+              "height": 844
+            },
+            "minimumPx": 26.41583331668486,
+            "angleCovered": 6.2972834967315485,
+            "samples": 384,
+            "unsafe": 0,
+            "covered": 0,
+            "clipped": 0
+          },
+          {
+            "size": {
+              "width": 700,
+              "height": 900
+            },
+            "minimumPx": 24.018459914388362,
+            "angleCovered": 6.2972834967315485,
+            "samples": 384,
+            "unsafe": 0,
+            "covered": 0,
+            "clipped": 0
+          }
+        ],
+        "errors": []
+      },
+      "parentRead": "Longzhi three actual worst-orbit frames, Xingtian phone extreme walk, Lingyu phone special and 641px walk inspected after final shared layout",
+      "xiangliuFirstRerun": {
+        "report": "/tmp/shanhai-parent-xiangliu-final-layout/qa.json",
+        "passed": false,
+        "reason": "page.screenshot timeout at responsive capture; errors=[], all three actual actions and special-to-idle passed before capture. Independent rerun pending after parallel GPU QA."
+      },
+      "xiangliuIsolatedRerun": {
+        "report": "/tmp/shanhai-parent-xiangliu-final-isolated/qa.json",
+        "passed": true,
+        "errors": [],
+        "parentReadResponsiveImages": true,
+        "note": "Isolated sequential rerun passed actual three actions, special return, remount/cache checks and 700/390 source/design wheel; earlier screenshot timeout remains recorded."
+      }
+    },
+    "responsiveFollowup": {
+      "status": "merged-awaiting-final-global-verification",
+      "scope": [
+        "kui",
+        "shuhu",
+        "kuafu",
+        "qiangliang",
+        "xixiyu"
+      ],
+      "cardScroll": "Five IDs added to all seven existing horizontal scrollable card selectors; actual wheel reaches both source and inference ends at 390x844 and 700x900",
+      "buttons": {
+        "phoneBottom": 156,
+        "tabletControlsBottom": 164,
+        "perimeterHitTests": 8710,
+        "trialClicks": 110,
+        "misses": 0,
+        "overlappingPanels": 0,
+        "minimumPanelGapPhonePixels": 8.890625,
+        "minimumPanelGapTabletPixels": 9.8125
+      },
+      "fourBeastTabletFraming": {
+        "widthRange": "641..1000",
+        "maximumAspect": 1.3,
+        "scope": [
+          "kui",
+          "shuhu",
+          "kuafu",
+          "xixiyu"
+        ],
+        "phoneDesktopBranchesPreserved": true,
+        "minimumSampledBoundaryGapPixels": 20.83,
+        "finiteWindowFrames": 3888
+      },
+      "qiangliangIncrement": {
+        "report": ".claude/worktrees/agent-a076d8df0561acb68/raw/_build/qiangliang-parent-current-qa/report.json",
+        "frames": 648,
+        "allNativeVerticesPerFrame": 83906,
+        "minimumGapPixels": 13.0332,
+        "clipped": 0,
+        "errors": [],
+        "parentReadWorstWidths": [
+          641,
+          700,
+          1000
+        ],
+        "branchRegression": "1120 combinations, 1100 unchanged, only 20 Qiangliang portrait-tablet combinations changed"
+      },
+      "limits": "Finite continuous-window projection checks; four-beast cases use about 2200 vertices per mesh, Qiangliang uses all vertices. Not arbitrary-future-trajectory or physical-device performance certification.",
+      "workerApiCalls": 0
+    },
+    "lu_fish": {
+      "status": "parent-accepted-and-integrated",
+      "provenance": "pipeline/provenance/lu_fish.json",
+      "ready": true,
+      "runtimeSha256": "34f1f018f93ddfe535ac87c70a91ac67e6d1187884508a5759ccbf094379723f",
+      "recipeByteIdentical": true,
+      "parentStage": "/tmp/shanhai-parent-lu-stage/report.json",
+      "parentReadStandardSixImages": true
+    },
+    "tianwuPendingFullSequence": {
+      "report": "/tmp/shanhai-parent-tianwu-stage/report.json",
+      "passed": false,
+      "minimumClearancePx": {
+        "390": 6.735110558907006,
+        "700": 4.590859454498543
+      },
+      "note": "Worker layout-only passed, but complete coordinator suite after details/remounts found margins below8px. Kept as rejection until root cause and rerun resolved.",
+      "followup": {
+        "secondReport": "/tmp/shanhai-parent-tianwu-stage-v2/report.json",
+        "secondFailure": "Inspection changed shared camera quaternion",
+        "observation": "Camera target inherited Jiuweihu moving target [0,0.567032004603564,0.362647949360797] after remount; camera quaternion was not yet consistent with this target. No asset mismatch.",
+        "correction": "Tianwu now owns fixed target [0,.6,0] while mounted and restores prior target on cleanup. DEV inspection captures only on entry and restores only while active; full QA asserts target and camera restoration before layout.",
+        "pendingRerun": "/tmp/shanhai-parent-tianwu-stage-v3/report.json"
+      },
+      "resolution": "Resolved by fixed target ownership and active-only complete DEV camera restoration; v3 full suite passed without reload or relaxed margins."
+    },
+    "recipeInputAudit": {
+      "date": "2026-11-16",
+      "uniqueRawPbrInputs": 19,
+      "explicitUses": 20,
+      "productionAndQaDependencies": 59,
+      "allVersionedDependenciesPresent": true,
+      "referenceImages": 84,
+      "sourceRecovery": {
+        "job": "xixiyu-production-20261115-native-feather-core-v6-high",
+        "sourceSha256": "80681f206aca415fece477056416212fe355a76ff2828f0a1597b4da14213ce4",
+        "bytes": 31892400,
+        "uuid": "86700aec-a6ae-486e-bca4-4039acd3d009",
+        "method": "Copied existing verified original into a new ignored raw job directory; no API request or receipt/cache copy."
+      },
+      "credentialScan": "Actual environment key absent from changed text; no personal absolute paths after portable Shuhu reference correction."
+    },
+    "tianwu": {
+      "status": "parent-accepted-and-integrated",
+      "provenance": "pipeline/provenance/tianwu.json",
+      "ready": true,
+      "assets": [
+        {
+          "path": "public/models/tianwu/body.glb",
+          "bytes": 1929116,
+          "sha256": "74f07145c7450f8f462282cee7c8f47f656023fba090af07a0c03237cfb7dd4c"
+        },
+        {
+          "path": "public/models/tianwu/headneck.glb",
+          "bytes": 421760,
+          "sha256": "8810021de22555f66e19d44c9a6bbdb7506ba7a3572e6dacddfc1c0c09c82a85"
+        },
+        {
+          "path": "public/models/tianwu/leg.glb",
+          "bytes": 668828,
+          "sha256": "448da30bee488261dc01e3cf44b0475f0cdf73e5f4911d4d47c23ba788e9a341"
+        },
+        {
+          "path": "public/models/tianwu/tail.glb",
+          "bytes": 371788,
+          "sha256": "ba7b88713fa338265aa988c7cb8b1514da9ac32390922a611d0dfc2d787b6bde"
+        }
+      ],
+      "parentStage": "/tmp/shanhai-parent-tianwu-stage-v3/report.json",
+      "passed": true,
+      "parentReadStandardAndFinalResponsiveDetailImages": true
+    },
+    "finalVerification": {
+      "date": "2026-11-16",
+      "readyCatalogEntries": 62,
+      "command": "pnpm typecheck && pnpm validate && pnpm build && pnpm qa:browser && node --test pipeline/build_beast.test.mjs",
+      "exitCode": 0,
+      "productionPreviewBrowserPassed": true,
+      "strictModeBrowserPassed": true,
+      "recipeTestsPassed": 8,
+      "allStagedLfsPointersMatchActualBytes": 102,
+      "privatePathsAndCredentialPatternsAbsentInChangedText": 147,
+      "githubActionsAndProductionVerification": "Performed after commit/push; consult exact-commit Actions runs for release outcome."
+    }
+  }
+}

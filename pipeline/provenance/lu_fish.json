@@ -1,0 +1,329 @@
+{
+  "schemaVersion": 1,
+  "beast": "lu_fish",
+  "status": "parent-accepted-and-integrated",
+  "parentRuntimeAccepted": true,
+  "source": {
+    "job": "lu_fish-production-20261115-reviewed-low-wing-single-tail-v9-high",
+    "jobSpecification": "pipeline/rodin/jobs/lu_fish-production-20261115-reviewed-low-wing-single-tail-v9-high.json",
+    "promptHash": "e762a8090da4a8c7",
+    "uuid": "0573056a-2036-4b56-bd74-77562cf76eaa",
+    "consumedCredits": 1,
+    "workerApiCalls": 0,
+    "path": "raw/lu_fish-production-20261115-reviewed-low-wing-single-tail-v9-high/base_high_pbr.glb",
+    "sha256": "390ffe36efa5722c0cec3a89c881d2c54f66711afc60d75b46013a3d60867bd9",
+    "bytes": 25179360,
+    "triangles": 50000,
+    "splitVertices": 39557,
+    "exactUniquePositions": 24947,
+    "sourceTopologyDisclosure": "98 source triangles collapse under exact-position welding; excluding these, 0 boundary edges and 1 nonmanifold edge. This source is not certified manifold or self-intersection-free.",
+    "receipt": "raw/lu_fish-production-20261115-reviewed-low-wing-single-tail-v9-high/verified-public-receipt.json",
+    "parentSourceAnatomyGatePassed": true,
+    "actualSourceImagesRead": "raw/_build/lu-fish-v9-high-native-review",
+    "referenceDirectory": "concept/lu_fish/production-20261115-reviewed-low-wing-single-tail-v9",
+    "frozenReferenceSha256": "02ce124f637f51ca932531129899d2829bde0fd4d7a5d3645a543373b9843cf2"
+  },
+  "boundedRepair": {
+    "script": "pipeline/blender/repair_lu_fish_high.py",
+    "frozenVersion": "repair4",
+    "path": "raw/_build/lu-fish-v9-high-local-repair-4/lu_fish_high_local_repair.glb",
+    "sha256": "367b05b52fb5e3c2f8ffc2e1b556b6f9c2be567bec439b9e214b07108881c9a7",
+    "parentLocalGeometryPbrGatePassed": true,
+    "actualBeforeAfterClayPbrRead": true,
+    "comparisons": [
+      "raw/_build/lu-fish-v9-high-after-repair-4/scalp_before_after.png",
+      "raw/_build/lu-fish-v9-high-after-repair-4/rump_before_after.png"
+    ],
+    "scalpMovedSplitVertices": 563,
+    "scalpMaximumDisplacementNormalized": 0.022,
+    "rumpMovedSplitVertices": 736,
+    "rumpMaximumDisplacementNormalized": 0.0038,
+    "localAtlasFaces": 3160,
+    "nativePbrProtectedFaces": 46840,
+    "scalpRoi": "absX<.078, -.42<Y<-.255, Z>.571; calibrated above native eyelids and ears",
+    "rumpGeometryRoi": "absX<.075, .20<Y<.267, .285<Z<.46; scale-bearing tail excluded",
+    "rumpMaterialRoi": "absX<.115, .17<Y<=.265, .235<Z<.515; central scale-bearing tail root excluded",
+    "audit": {
+      "path": "raw/_build/lu-fish-v9-high-local-repair-4/actual-export-audit.json",
+      "actualTriangles": 50000,
+      "unmatchedExportVertices": 0,
+      "missingOrChangedPlannedOrientedTriangles": 0,
+      "unexpectedOrientedTriangles": 0,
+      "missingOrMaterialChangedProtectedTriangles": 0,
+      "maximumOutsideGeometryRoiPositionError": 3.3100770953155845e-08,
+      "maximumOriginalUvError": 0,
+      "originalPbrSignatureAndEmbeddedImagesPreserved": true,
+      "pass": true
+    },
+    "disclosure": "Fine native rump surface traces remain. The approved bounded repair does not assert a complete self-intersection certificate. Original High and accepted four-view references were not edited."
+  },
+  "rig": {
+    "script": "pipeline/blender/rig_lu_fish_native.py",
+    "scriptSha256": "d08ba80efbd7c2c87235813a23999209ec64a19f67e0735158f63dd6acb91581",
+    "directory": "raw/_build/lu-fish-native-rig-5",
+    "riggedSha256": "7cce242205a74f9df72f09b9fa2f2144c34b4f2c132d94df440281ab2daed15e",
+    "normalizedNativeFingerprintSha256": "5d82b5a36d20fd92a579faa09da615d6d379b25e107f4c57348e5d9c9b6a6379",
+    "heightMeters": 1.35,
+    "positiveUniformSourceScale": 2.19017607864707,
+    "boneCount": 35,
+    "nativeGeometryUvNormalsMaterialFingerprintUnchangedDuringSkinning": true,
+    "nativeLowWingChains": "two 3-bone native wing chains; broad native collars; no external wing meshes or sleeves",
+    "nativeTailChain": "9 bones following native centerline; full circular cross-sections use tail weights; native pointed tip retained",
+    "hooves": "All four complete source-defined hoof regions rigidly bound to their own foot bone; analytic 2-bone IK; foot cancels full limb rotation and circular yaw",
+    "runtimeContract": {
+      "radiusMeters": 1.05,
+      "speedMetersPerSecond": 0.16,
+      "walkSeconds": 1.6,
+      "stanceDuty": 0.68,
+      "phases": {
+        "back_l": 0,
+        "front_l": 0.25,
+        "back_r": 0.5,
+        "front_r": 0.75
+      },
+      "rootYaw": "PI-angle",
+      "swing": "quintic position/velocity/acceleration interpolation and sin(pi*q)^4 clearance"
+    },
+    "clipSeconds": {
+      "idle": 4,
+      "walk": 1.6,
+      "special": 4
+    },
+    "actualExportPoseAndMaskImagesRead": true,
+    "formalBuildCommand": "bash pipeline/build_beast.sh lu_fish",
+    "formalPrepare": {
+      "entry": "pipeline/blender/prepare_lu_fish_recipe.py",
+      "args": [
+        "{body.raw}",
+        "{body.out}"
+      ],
+      "dependencies": [
+        "pipeline/blender/repair_lu_fish_high.py",
+        "pipeline/blender/audit_lu_fish_v8_reference.py"
+      ],
+      "input": "Declared High raw from parts[id=body]; pinned source SHA256",
+      "output": "body_norm.glb; rebuilt repair4 must match frozen bytes exactly",
+      "audit": "raw/_build/lu_fish/prepare-d4brj0qd/repair/actual-export-audit.json"
+    },
+    "formalRig": {
+      "entry": "pipeline/blender/rig_lu_fish_recipe.py",
+      "args": [
+        "body_norm.glb",
+        "body_rig.glb",
+        "--preview",
+        "rig.png"
+      ],
+      "dependencies": [
+        "pipeline/blender/rig_lu_fish_native.py",
+        "pipeline/blender/rig_quadruped.py",
+        "pipeline/blender/rig_jingwei.py",
+        "pipeline/blender/rig_avian.py",
+        "pipeline/blender/turnaround.py"
+      ],
+      "audit": "raw/_build/lu_fish/rig-7ty40blc/native/audit.json",
+      "restReference": "raw/_build/lu_fish/rig-7ty40blc/native/rest-reference.json"
+    },
+    "formalRecipeVerification": {
+      "log": "raw/lu-fish-formal-recipe.log",
+      "prepareReproducedFrozenRepairByteForByte": true,
+      "rigReproducedReviewedRigByteForByte": true,
+      "compressedRuntimeMatchesReviewedPublicByteForByte": true,
+      "runtimeSha256": "34f1f018f93ddfe535ac87c70a91ac67e6d1187884508a5759ccbf094379723f",
+      "ignoredRepairInputRequired": false,
+      "fixedMotherAssetRequired": false,
+      "apiCalls": 0
+    },
+    "buildRequirements": [
+      "Blender 5.2.3 LTS with bundled bpy/bmesh/mathutils/numpy",
+      "pnpm lockfile toolchain: tsx and gltf-transform",
+      "declared High raw asset with recorded SHA256"
+    ],
+    "customBuildNote": "The formal prepare adapter rebuilds repair4 from the declared original High, audits it and checks the frozen hash before writing body_norm.glb. The rig adapter preserves the reviewed native implementation and standard output contract. Evidence directories are generated outputs, never inputs. Generic normalize/weld/remesh is not applied before this native rig; compression keeps standard defaults."
+  },
+  "runtime": {
+    "component": "src/beasts/lu_fish/LuFish.tsx",
+    "asset": "public/models/lu_fish/body.glb",
+    "sha256": "34f1f018f93ddfe535ac87c70a91ac67e6d1187884508a5759ccbf094379723f",
+    "bytes": 865788,
+    "triangles": 50000,
+    "skinnedMaterialPrimitives": 2,
+    "compression": {
+      "exception": null,
+      "method": "standard gltf-transform optimize defaults, WebP2048 and Meshopt",
+      "flags": "--simplify false --flatten false --join false --instance false --palette false --texture-compress webp --texture-size 2048 --compress meshopt",
+      "globalDefaultsChanged": false
+    },
+    "sourceLoreSeparatedFromInference": true,
+    "strictMode": "SkeletonUtils clone; effect-owned ink materials and outlines with cleanup; no cached scene mutation",
+    "actions": "idle breath/head/wing/tail motion, circular planted-hoof walk, one-shot wing display with return to idle",
+    "responsiveCard": "Lu included in existing scrollable source/design card rules; verified at 390 and 700 pixels against final parent CSS (phone controls/actions bottom 156px, tablet controls bottom 164px). Isolated CSS equals parent CSS plus only Lu selectors.",
+    "cameraFollow": {
+      "implementation": "Accumulate only Lu root translation in followTranslation; apply to shared camera and controls.target; subtract only that accumulator on unmount and clear it",
+      "targetHeightMeters": {
+        "phoneAndOther": 0.68,
+        "portraitTablet": 0.86,
+        "wideDesktop": 0.52
+      },
+      "portraitTabletCondition": "640 < width <= 1100 and aspect <= 1.3",
+      "wideDesktopCondition": "width > 1100 and aspect > 1.3",
+      "fovOrFilmOffsetChanged": false,
+      "sharedCameraRigChanged": false
+    }
+  },
+  "qa": {
+    "script": "scripts/qa-lu-fish-app.mjs",
+    "candidateReport": "raw/_build/lu-fish-compressed-qa-final/report.json",
+    "servedPublicReport": "raw/_build/lu-fish-final-runtime-qa/report.json",
+    "servedPublicLog": "raw/lu-fish-final-runtime-qa.log",
+    "servedPublicFormalRecipeRestReference": "raw/_build/lu_fish/rig-7ty40blc/native/rest-reference.json",
+    "servedPublicSha256MatchesAsset": true,
+    "servedPublicWithoutModelInterception": true,
+    "publicMotionImagesRead": [
+      "raw/lu-fish-public-idle.png",
+      "raw/lu-fish-public-walk.png",
+      "raw/lu-fish-public-special.png",
+      "raw/lu-fish-public-walk-closeup-0.png",
+      "raw/lu-fish-public-walk-closeup-1.png",
+      "raw/lu-fish-public-walk-closeup-2.png",
+      "raw/lu-fish-public-special-closeup-0.png",
+      "raw/lu-fish-public-special-closeup-1.png",
+      "raw/lu-fish-public-special-closeup-2.png"
+    ],
+    "independentMaskMethod": "Frozen source positions, bidirectional rest geometry matching; compressed indices and weights do not define source anatomical masks",
+    "maximumBidirectionalRestErrorMeters": 0.0001416723457669085,
+    "maximumOfflineWorldStanceDriftMeters": 0.0012166200502983571,
+    "maximumMountedRuntimeWorldStanceDriftMeters": 0.0013203082236162582,
+    "maximumCompleteHoofDistanceDriftMeters": 9.516234791923095e-06,
+    "maximumCompleteHeadDistanceDriftMeters": 2.387677433546287e-08,
+    "minimumSoleHeightMeters": -0.0010119648621771393,
+    "maximumStanceSoleHeightMeters": 8.286223925835223e-05,
+    "invalidPositions": 0,
+    "offlineSamplingHz": 120,
+    "offlineWalkCycles": 2,
+    "liveRuntimeFrames": 194,
+    "strictModeRemountsPassed": 3,
+    "sharedResourcesDisposed": 0,
+    "cachedSourceUnchanged": true,
+    "uiWidthsWithSourceAndDesignScrollPassed": [
+      390,
+      700
+    ],
+    "horizontalPageOverflow": false,
+    "browserErrors": [],
+    "threeStateActualCompressedScreenshotsRead": true,
+    "finalImagesRead": [
+      "raw/_build/lu-fish-final-runtime-qa/idle.png",
+      "raw/_build/lu-fish-final-runtime-qa/walk.png",
+      "raw/_build/lu-fish-final-runtime-qa/special.png",
+      "raw/_build/lu-fish-final-runtime-qa/ui-390-design-end.png",
+      "raw/_build/lu-fish-final-runtime-qa/ui-700-design-end.png",
+      "raw/_build/lu-fish-clearance-final/390-initial.png",
+      "raw/_build/lu-fish-clearance-final/390-worst.png",
+      "raw/_build/lu-fish-clearance-final/700-initial.png",
+      "raw/_build/lu-fish-clearance-final/700-worst.png",
+      "raw/_build/lu-fish-clearance-final/1440-initial.png",
+      "raw/_build/lu-fish-clearance-final/1440-worst.png"
+    ],
+    "geometricUiClearance": {
+      "script": "scripts/qa-lu-fish-clearance.mjs",
+      "report": "raw/_build/lu-fish-clearance-final/report.json",
+      "method": "Project every actual compressed skinned surface vertex through the mounted runtime camera against actual card/actions/controls/scroll DOM rectangles and viewport edges",
+      "samplingLimitation": "Discrete animation and heading samples; no claim of continuous-time or projected-triangle intersection certification",
+      "surfaceThresholdPixels": 9,
+      "inkOutlineAllowancePixels": 1,
+      "requestedVisibleGapPixels": 8,
+      "perViewport": [
+        {
+          "width": 390,
+          "height": 900,
+          "card": 58.482786736980756,
+          "actions": 150.71813745330212,
+          "controls": 56.09826997203313,
+          "scroll": 193.60876245330212,
+          "viewport": 48.68721771958258
+        },
+        {
+          "width": 700,
+          "height": 900,
+          "card": 32.254496647781934,
+          "actions": 19.301679739625342,
+          "controls": 79.28295497289658,
+          "scroll": 85.11417973962534,
+          "viewport": 118.78545899733501
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "card": 256.2211629289725,
+          "actions": 35.522948315417025,
+          "controls": 120.47699261092974,
+          "scroll": 79.68841139853123,
+          "viewport": 92.6351191390886
+        }
+      ],
+      "perViewportWalkPoses": 826,
+      "perViewportIdlePoses": 648,
+      "perViewportSpecialPoses": 648,
+      "perViewportVertexSamples": 85412622,
+      "walkHeadingSpanRadians": 6.283185307179564,
+      "walkFrameStepMaximumSeconds": 0.05,
+      "standingHeadings": 72,
+      "standingClipStepSeconds": 0.5,
+      "passed": true
+    },
+    "cameraFollowCleanup": {
+      "script": "scripts/qa-lu-fish-camera.mjs",
+      "report": "raw/_build/lu-fish-camera-cleanup/report.json",
+      "widths": [
+        390,
+        700,
+        1440
+      ],
+      "independentTrialsPerWidth": 2,
+      "method": "Mounted real useFrame: each Lu mount walks a full 360 degrees plus 90 degrees to retain nonzero followTranslation, then switches to Lushu and settles before comparing shared camera and target with pre-Lu baseline; remount and repeat",
+      "maximumCameraBaselineErrorMeters": 8.863585650797668e-14,
+      "maximumTargetBaselineErrorMeters": 7.185690432611821e-08,
+      "allFinite": true,
+      "passed": true
+    },
+    "projectChecks": {
+      "typecheck": "pass",
+      "validate": "pass",
+      "build": "pass",
+      "qaBrowserProductionPreviewAndStrictMode": "pass",
+      "luServedPublicRuntime": "pass",
+      "luPythonAndNodeHelperSyntax": "pass",
+      "gitDiffWhitespace": "pass",
+      "lfsFilter": "lfs",
+      "command": "pnpm typecheck && pnpm validate && pnpm build && pnpm qa:browser",
+      "buildLog": "raw/lu-fish-final-recipe-camera-project-checks.log",
+      "browserLog": "raw/lu-fish-final-recipe-camera-project-checks.log",
+      "luGeometricUiClearance": "pass",
+      "luCameraFollowCleanup": "pass"
+    }
+  },
+  "parentAcceptance": {
+    "date": "2026-11-16",
+    "recipeCommand": "bash pipeline/build_beast.sh lu_fish",
+    "exitCode": 0,
+    "repairByteIdentical": true,
+    "rigByteIdentical": true,
+    "runtimeByteIdentical": true,
+    "runtimeSha256": "34f1f018f93ddfe535ac87c70a91ac67e6d1187884508a5759ccbf094379723f",
+    "prepareAudit": "raw/_build/lu_fish/prepare-5cgmpocw/repair/actual-export-audit.json",
+    "restReference": "raw/_build/lu_fish/rig-ylb62r9o/native/rest-reference.json",
+    "actualServedPublicReport": "/tmp/shanhai-parent-lu-stage/report.json",
+    "passed": true,
+    "errors": [],
+    "maximumMountedStanceDriftM": 0.001236387127370662,
+    "parentReadImages": [
+      "/tmp/shanhai-parent-lu-idle.png",
+      "/tmp/shanhai-parent-lu-walk.png",
+      "/tmp/shanhai-parent-lu-special.png",
+      "/tmp/shanhai-parent-lu-motion0.png",
+      "/tmp/shanhai-parent-lu-motion1.png",
+      "/tmp/shanhai-parent-lu-motion2.png"
+    ],
+    "workerCompleteOrbitAndCameraCleanup": "qa.worldGeometryClearance and qa.cameraCleanup; finite full-orbit samples with actual geometry, not a real-device performance guarantee"
+  }
+}

@@ -34,6 +34,11 @@ ARCHETYPE=$(node -e "const p = JSON.parse(process.argv[1]); console.log(p.archet
 PLAN_BODY_LEN=$(node -e "const p = JSON.parse(process.argv[1]); console.log(p.bodyLength)" "$BUILD_PLAN")
 PLAN_TRIM_TAIL=$(node -e "const p = JSON.parse(process.argv[1]); console.log(p.trimTail ? '1' : '0')" "$BUILD_PLAN")
 PLAN_RIG=$(node -e "const p = JSON.parse(process.argv[1]); console.log(p.rigScript || '')" "$BUILD_PLAN")
+PLAN_PREPARE=$(node -e "const p = JSON.parse(process.argv[1]); console.log(p.prepareScript || '')" "$BUILD_PLAN")
+if [[ -n "$PLAN_PREPARE" && ! -f "$ROOT/$PLAN_PREPARE" ]]; then
+  echo "找不到配方预处理脚本: $PLAN_PREPARE" >&2
+  exit 1
+fi
 
 if [[ $# -eq 0 ]]; then
   BODY_JOB=$(node -e "const p = JSON.parse(process.argv[1]); console.log(p.bodyJobId || '')" "$BUILD_PLAN")
@@ -42,9 +47,7 @@ if [[ $# -eq 0 ]]; then
     exit 2
   fi
   PARTS=()
-  while IFS= read -r line; do
-    [[ -n "$line" ]] && PARTS+=("$line")
-  done < <(node -e "
+  PART_LINES=$(node -e "
     const p = JSON.parse(process.argv[1]);
     for (const part of p.parts || []) {
       if (!part.jobId) {
@@ -54,6 +57,9 @@ if [[ $# -eq 0 ]]; then
       console.log(part.name + ':' + part.jobId + ':' + part.length + ':' + (part.texSize || 1024));
     }
   " "$BUILD_PLAN")
+  while IFS= read -r line; do
+    [[ -n "$line" ]] && PARTS+=("$line")
+  done <<< "$PART_LINES"
 else
   BODY_JOB=$1
   shift 1
@@ -152,14 +158,25 @@ cleanup() {
 }
 trap cleanup EXIT
 
+# The resolver emits only validated compression options. Keep argv boundaries.
+node --input-type=module - "$BUILD_PLAN" >"$RUN_DIR/compression-args" <<'NODE'
+const args = JSON.parse(process.argv[2]).compressionArgs ?? []
+if (!Array.isArray(args) || args.some(arg => typeof arg !== 'string' || arg.includes('\0'))) {
+  throw new Error('Invalid compression arguments')
+}
+for (const arg of args) process.stdout.write(arg + '\0')
+NODE
+COMPRESSION_ARGS=()
+while IFS= read -r -d '' arg; do COMPRESSION_ARGS+=("$arg"); done <"$RUN_DIR/compression-args"
+
 run_blender() {
   local script_path=$1
   local expected_out=$2
   shift 2
   local log_file
-  log_file=$(mktemp "$RUN_DIR/blender.XXXXXX.log")
+  log_file=$(mktemp "$RUN_DIR/blender.log.XXXXXX")
 
-  if ! "$BLENDER" --background --factory-startup --python-exit-code 1 --python "$script_path" -- "$@" >"$log_file" 2>&1; then
+  if ! "$BLENDER" --background --factory-startup --disable-autoexec --python-exit-code 1 --python "$script_path" -- "$@" >"$log_file" 2>&1; then
     echo "Blender 执行失败: $script_path" >&2
     tail -n 40 "$log_file" >&2 || true
     return 1
@@ -179,7 +196,7 @@ optimize() {
   # 不做自动减面（AI 网格减面后蒙皮容易坏），不合并、不扁平化（保留骨骼层级）
   pnpm -s exec gltf-transform optimize "$in_glb" "$out_glb" \
     --simplify false --flatten false --join false --instance false --palette false \
-    --texture-compress webp --texture-size "$tex_size" --compress meshopt
+    --texture-compress webp --texture-size "$tex_size" --compress meshopt ${COMPRESSION_ARGS[@]+"${COMPRESSION_ARGS[@]}"}
   if [[ ! -s "$out_glb" ]]; then
     echo "gltf-transform 未生成输出文件: $out_glb" >&2
     return 1
@@ -193,7 +210,49 @@ optimize() {
   ls -la "$out_glb" | awk '{print "SIZE", $5, $NF}'
 }
 
-run_blender "$ROOT/pipeline/blender/normalize.py" "$RUN_DIR/body_norm.glb" "$BODY_RAW" "$RUN_DIR/body_norm.glb" --length "$BODY_LEN" ${TRIM_FLAG[@]+"${TRIM_FLAG[@]}"}
+if [[ -n "$PLAN_PREPARE" ]]; then
+  # Resolve placeholders as argv values, never as shell source. NUL framing
+  # preserves whitespace and empty arguments in custom script interfaces.
+  node --input-type=module - "$BUILD_PLAN" "$BODY_RAW" "$RUN_DIR" ${PARSED_PARTS[@]+"${PARSED_PARTS[@]}"} >"$RUN_DIR/prepare-args" <<'NODE'
+const [planText, bodyRaw, outDir, ...parts] = process.argv.slice(2)
+const plan = JSON.parse(planText)
+const values = {
+  'body.raw': bodyRaw,
+  'body.out': `${outDir}/body_norm.glb`,
+  'body.length': String(plan.bodyLength),
+  outDir,
+}
+for (const entry of parts) {
+  const [name, , length, , raw] = entry.split('|')
+  values[`${name}.raw`] = raw
+  values[`${name}.out`] = `${outDir}/${name}_norm.glb`
+  values[`${name}.length`] = length
+}
+if (!Array.isArray(plan.prepareArgs) || plan.prepareArgs.some(arg => typeof arg !== 'string')) {
+  throw new Error('recipe.prepareArgs must be an array of strings')
+}
+const args = plan.prepareArgs.map(arg => arg.replace(/\{([^{}]+)\}/g, (_, key) => {
+  if (!Object.hasOwn(values, key)) throw new Error(`Unknown preparation placeholder: {${key}}`)
+  return values[key]
+}))
+for (const arg of args) {
+  if (arg.includes('\0')) throw new Error('Preparation arguments cannot contain NUL')
+  process.stdout.write(arg + '\0')
+}
+NODE
+  PREPARE_ARGS=()
+  while IFS= read -r -d '' arg; do PREPARE_ARGS+=("$arg"); done <"$RUN_DIR/prepare-args"
+  run_blender "$ROOT/$PLAN_PREPARE" "$RUN_DIR/body_norm.glb" ${PREPARE_ARGS[@]+"${PREPARE_ARGS[@]}"}
+  for entry in ${PARSED_PARTS[@]+"${PARSED_PARTS[@]}"}; do
+    IFS='|' read -r PNAME PJOB PLEN PTEX PART_RAW <<< "$entry"
+    if [[ ! -s "$RUN_DIR/${PNAME}_norm.glb" ]]; then
+      echo "配方预处理未生成部件: ${PNAME}_norm.glb" >&2
+      exit 1
+    fi
+  done
+else
+  run_blender "$ROOT/pipeline/blender/normalize.py" "$RUN_DIR/body_norm.glb" "$BODY_RAW" "$RUN_DIR/body_norm.glb" --length "$BODY_LEN" ${TRIM_FLAG[@]+"${TRIM_FLAG[@]}"}
+fi
 run_blender "$RIG_PATH" "$RUN_DIR/body_rig.glb" "$RUN_DIR/body_norm.glb" "$RUN_DIR/body_rig.glb" --preview "$RUN_DIR/rig.png"
 optimize "$RUN_DIR/body_rig.glb" "$STAGE_OUT/body.glb" 2048
 
@@ -201,7 +260,9 @@ if [[ ${#PARSED_PARTS[@]} -gt 0 ]]; then
   for entry in "${PARSED_PARTS[@]}"; do
     IFS='|' read -r PNAME PJOB PLEN PTEX PART_RAW <<< "$entry"
     echo "== part:$PNAME ($PJOB len=$PLEN tex=$PTEX)"
-    run_blender "$ROOT/pipeline/blender/normalize.py" "$RUN_DIR/${PNAME}_norm.glb" "$PART_RAW" "$RUN_DIR/${PNAME}_norm.glb" --length "$PLEN"
+    if [[ -z "$PLAN_PREPARE" ]]; then
+      run_blender "$ROOT/pipeline/blender/normalize.py" "$RUN_DIR/${PNAME}_norm.glb" "$PART_RAW" "$RUN_DIR/${PNAME}_norm.glb" --length "$PLEN"
+    fi
     optimize "$RUN_DIR/${PNAME}_norm.glb" "$STAGE_OUT/${PNAME}.glb" "$PTEX"
   done
 fi
