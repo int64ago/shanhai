@@ -14,6 +14,8 @@ export interface InkOptions {
   inkBoost?: number
   /** 尾尖留白强度：白梢狐尾取 1，赤尾等通体设色取 0。 */
   tipWhite?: number
+  /** 第二层分染；end > start，strength 为 0..1。默认保持原有水墨效果。 */
+  wash2?: { start: number; end: number; strength: number }
 }
 
 /** 光从左上前方来，与场景的留白方向一致 */
@@ -59,6 +61,7 @@ const FRAGMENT = /* glsl */ `
   uniform vec3 uTint;
   uniform float uInkBoost;
   uniform float uTipWhite;
+  uniform vec3 uWash2;
   varying vec2 vUv;
   varying vec3 vN;
   varying vec3 vViewDir;
@@ -102,7 +105,7 @@ const FRAGMENT = /* glsl */ `
 
     // 第一遍淡彩铺底，第二遍在背光处叠一层，边界带水渍的硬边
     float wash1 = smoothstep(0.12, 0.3, tone + (fiber - 0.5) * 0.2);
-    float wash2 = smoothstep(0.52, 0.58, tone + (wet - 0.5) * 0.3);
+    float wash2 = smoothstep(uWash2.x, uWash2.y, tone + (wet - 0.5) * 0.3) * uWash2.z;
     vec3 col = uPaper * mix(vec3(1.0), pigment, 0.35 + 0.65 * wash1);
     col *= mix(vec3(1.0), vec3(0.74, 0.76, 0.8), wash2);
     // 浓墨部位与轮廓内侧的墨线
@@ -124,6 +127,7 @@ export function createInkMaterial({
   tint = '#ffffff',
   inkBoost = 0,
   tipWhite = 1,
+  wash2 = { start: 0.52, end: 0.58, strength: 1 },
 }: InkOptions) {
   return new ShaderMaterial({
     uniforms: {
@@ -137,6 +141,7 @@ export function createInkMaterial({
       uTint: { value: new Color(tint) },
       uInkBoost: { value: inkBoost },
       uTipWhite: { value: tipWhite },
+      uWash2: { value: new Vector3(wash2.start, wash2.end, wash2.strength) },
     },
     vertexShader: VERTEX,
     fragmentShader: FRAGMENT,
