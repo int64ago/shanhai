@@ -115,5 +115,3 @@ export function FeiyiSnake() {
     <primitive object={rig.scene} dispose={null} />
   </group>
 }
-
-useGLTF.preload(URL)

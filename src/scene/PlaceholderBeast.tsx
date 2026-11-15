@@ -31,5 +31,3 @@ export function PlaceholderBeast() {
     </group>
   )
 }
-
-useGLTF.preload(URL)

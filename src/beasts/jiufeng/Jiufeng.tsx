@@ -12,6 +12,7 @@ const BASE = '/models/jiufeng/'
 const FACE_X = [-0.42, -0.21, 0, 0.21, 0.42, -0.315, -0.105, 0.105, 0.315]
 
 export function Jiufeng() {
+  useGLTF.preload(`${BASE}head.glb`)
   const body = useGLTF(`${BASE}body.glb`)
   const face = useGLTF(`${BASE}head.glb`)
   const action = useApp((s) => s.action)
@@ -127,5 +128,3 @@ export function Jiufeng() {
     <primitive object={rig.scene} />
   </group>
 }
-
-for (const part of ['body', 'head']) useGLTF.preload(`${BASE}${part}.glb`)

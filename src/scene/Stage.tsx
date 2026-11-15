@@ -1,211 +1,193 @@
-import { Suspense } from 'react'
+import { Component, Suspense, useCallback, useEffect, useState, type ReactNode } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls, PerformanceMonitor } from '@react-three/drei'
+import { ContactShadows, OrbitControls, PerformanceMonitor, useGLTF, useProgress } from '@react-three/drei'
 import { NoToneMapping, SRGBColorSpace } from 'three'
 import { useApp, useQuality } from '../app/store'
-import { PALETTE } from './palette'
-import { Sky } from './Sky'
-import { Mountains } from './Mountains'
-import { Mist } from './Mist'
-import { ContactShadows } from '@react-three/drei'
-import { PaperGround } from './PaperGround'
 import { INK } from '../systems/ink/palette'
-import { Effects } from './Effects'
-import { PlaceholderBeast } from './PlaceholderBeast'
-import { Jiuweihu } from '../beasts/jiuweihu/Jiuweihu'
-import { Dijiang } from '../beasts/dijiang/Dijiang'
-import { Bo } from '../beasts/bo/Bo'
-import { Bifang } from '../beasts/bifang/Bifang'
-import { Lushu } from '../beasts/lushu/Lushu'
-import { Feifei } from '../beasts/feifei/Feifei'
-import { Fuzhu } from '../beasts/fuzhu/Fuzhu'
-import { Dangkang } from '../beasts/dangkang/Dangkang'
-import { Zheng } from '../beasts/zheng/Zheng'
-import { Tiangou } from '../beasts/tiangou/Tiangou'
-import { Qiongqi } from '../beasts/qiongqi/Qiongqi'
-import { Taotie } from '../beasts/taotie/Taotie'
-import { Luwu } from '../beasts/luwu/Luwu'
-import { Kaiming } from '../beasts/kaiming/Kaiming'
-import { Mengji } from '../beasts/mengji/Mengji'
-import { Bibi } from '../beasts/bibi/Bibi'
-import { Lili } from '../beasts/lili/Lili'
-import { Jingwei } from '../beasts/jingwei/Jingwei'
-import { MinBird } from '../beasts/min_bird/MinBird'
-import { Qingniao } from '../beasts/qingniao/Qingniao'
-import { Qitu } from '../beasts/qitu/Qitu'
-import { Gudiao } from '../beasts/gudiao/Gudiao'
-import { Jiufeng } from '../beasts/jiufeng/Jiufeng'
-import { Zhuhuai } from '../beasts/zhuhuai/Zhuhuai'
-import { Chenghuang } from '../beasts/chenghuang/Chenghuang'
-import { Huan } from '../beasts/huan/Huan'
-import { Tianma } from '../beasts/tianma/Tianma'
-import { Bingfeng } from '../beasts/bingfeng/Bingfeng'
-import { Zouwu } from '../beasts/zouwu/Zouwu'
-import { Ershu } from '../beasts/ershu/Ershu'
-import { Qique } from '../beasts/qique/Qique'
-import { Boyi } from '../beasts/boyi/Boyi'
-import { Tongtong } from '../beasts/tongtong/Tongtong'
-import { Fenghuang } from '../beasts/fenghuang/Fenghuang'
-import { Fengxi } from '../beasts/fengxi/Fengxi'
-import { ScreenPeng } from '../beasts/screen_peng/ScreenPeng'
-import { Jinwu } from '../beasts/jinwu/Jinwu'
-import { Yingzhao } from '../beasts/yingzhao/Yingzhao'
-import { Yayu } from '../beasts/yayu/Yayu'
-import { Xuangui } from '../beasts/xuangui/Xuangui'
-import { Zhubieyu } from '../beasts/zhubieyu/Zhubieyu'
-import { Changyou } from '../beasts/changyou/Changyou'
-import { Zhuyan } from '../beasts/zhuyan/Zhuyan'
-import { Xingxing } from '../beasts/xingxing/Xingxing'
-import { Jiaochong } from '../beasts/jiaochong/Jiaochong'
-import { Yinglong } from '../beasts/yinglong/Yinglong'
-import { Jimeng } from '../beasts/jimeng/Jimeng'
-import { Zhulong } from '../beasts/zhulong/Zhulong'
-import { Leishen } from '../beasts/leishen/Leishen'
-import { Bashe } from '../beasts/bashe/Bashe'
-import { FeiyiSnake } from '../beasts/feiyi_snake/FeiyiSnake'
+import { getBeastComponent, resetBeastComponent } from './beastRegistry'
 import { CameraRig } from './CameraRig'
+import { Effects } from './Effects'
+import { Mist } from './Mist'
+import { Mountains } from './Mountains'
+import { PALETTE } from './palette'
+import { PaperGround } from './PaperGround'
+import { Sky } from './Sky'
+
+interface ErrorBoundaryProps {
+  onError: (error: Error) => void
+  children: ReactNode
+}
+
+interface ErrorBoundaryState {
+  hasError: boolean
+}
+
+class BeastErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  state: ErrorBoundaryState = { hasError: false }
+
+  static getDerivedStateFromError(): ErrorBoundaryState {
+    return { hasError: true }
+  }
+
+  componentDidCatch(error: Error) {
+    this.props.onError(error)
+  }
+
+  render() {
+    if (this.state.hasError) return null
+    return this.props.children
+  }
+}
+
+function SuspenseTracker({ onChange }: { onChange: (loading: boolean) => void }) {
+  useEffect(() => {
+    onChange(true)
+    return () => onChange(false)
+  }, [onChange])
+  return null
+}
+
+function BeastReadyBeacon({
+  readyKey,
+  onReady,
+}: {
+  readyKey: string
+  onReady: (key: string) => void
+}) {
+  useEffect(() => {
+    onReady(readyKey)
+  }, [readyKey, onReady])
+  return null
+}
+
+function ActiveBeast({
+  id,
+  readyKey,
+  onReady,
+}: {
+  id: string
+  readyKey: string
+  onReady: (key: string) => void
+}) {
+  const BeastComponent = getBeastComponent(id)
+  return (
+    <>
+      <BeastComponent />
+      <BeastReadyBeacon readyKey={readyKey} onReady={onReady} />
+    </>
+  )
+}
+
+function StageStatus({
+  suspending,
+  error,
+  onRetry,
+}: {
+  suspending: boolean
+  error: Error | null
+  onRetry: (failedUrls: string[]) => void
+}) {
+  const { active, progress, errors } = useProgress()
+
+  if (error) {
+    return (
+      <div className="stage-status stage-error" role="alert">
+        <span>神兽现世受阻，未能载入模型</span>
+        <button className="stage-retry" onClick={() => onRetry(errors)}>
+          重试加载
+        </button>
+      </div>
+    )
+  }
+
+  if (!suspending && !active) return null
+
+  const pct = progress > 0 && progress < 100 ? ` · ${Math.round(progress)}%` : ''
+  return (
+    <div className="stage-status stage-loading" role="status" aria-live="polite">
+      <span>展卷召兽{pct}</span>
+    </div>
+  )
+}
 
 export function Stage() {
   const { dpr } = useQuality()
   const stepQuality = useApp((s) => s.stepQuality)
   const selected = useApp((s) => s.selected)
+  const [suspending, setSuspending] = useState(false)
+  const [errorState, setErrorState] = useState<{ key: string; error: Error } | null>(null)
+  const [retryKey, setRetryKey] = useState(0)
+  const [readyKey, setReadyKey] = useState<string | null>(null)
+
+  const activeKey = `${selected}:${retryKey}`
+  const error = errorState?.key === activeKey ? errorState.error : null
+  const stageState = error ? 'error' : readyKey === activeKey ? 'ready' : 'loading'
+
+  const handleBoundaryError = useCallback(
+    (err: Error) => {
+      setErrorState({ key: activeKey, error: err })
+    },
+    [activeKey],
+  )
+
+  const handleRetry = useCallback(
+    (failedUrls: string[]) => {
+      for (const url of failedUrls) {
+        try {
+          useGLTF.clear(url)
+        } catch {
+          // ignore invalid or uncached path
+        }
+      }
+      for (const part of ['body', 'head', 'tail', 'wing', 'leg']) {
+        useGLTF.clear(`/models/${selected}/${part}.glb`)
+      }
+      useGLTF.clear('/models/_placeholder/fox.glb')
+      resetBeastComponent(selected)
+      setErrorState(null)
+      setRetryKey((k) => k + 1)
+    },
+    [selected],
+  )
 
   return (
-    <Canvas
-      dpr={[1, dpr]}
-      camera={{ position: [3.2, 1.3, 3.8], fov: 32, near: 0.1, far: 1000 }}
-      // 色调映射交给后期的 AgX，渲染器本身不做
-      gl={{ antialias: false, toneMapping: NoToneMapping, outputColorSpace: SRGBColorSpace }}
-    >
-      <PerformanceMonitor onDecline={() => stepQuality(-1)} onIncline={() => stepQuality(1)} flipflops={3} />
-      <CameraRig />
-      <fog attach="fog" args={[PALETTE.mist, 10, 44]} />
+    <>
+      <Canvas
+        dpr={[1, dpr]}
+        camera={{ position: [3.2, 1.3, 3.8], fov: 32, near: 0.1, far: 1000 }}
+        // 色调映射交给后期的 AgX，渲染器本身不做
+        gl={{ antialias: false, toneMapping: NoToneMapping, outputColorSpace: SRGBColorSpace }}
+      >
+        <PerformanceMonitor onDecline={() => stepQuality(-1)} onIncline={() => stepQuality(1)} flipflops={3} />
+        <CameraRig />
+        <fog attach="fog" args={[PALETTE.mist, 10, 44]} />
 
-      <Sky />
-      <Mountains />
-      <Mist />
+        <Sky />
+        <Mountains />
+        <Mist />
 
-      <PaperGround />
-      <ContactShadows position={[0, 0.005, 0]} color={INK.ink} opacity={0.45} scale={10} blur={2.2} far={2} resolution={512} />
-      <Suspense fallback={null}>
-        {selected === 'jiuweihu' ? (
-          <Jiuweihu />
-        ) : selected === 'dijiang' ? (
-          <Dijiang />
-        ) : selected === 'bo' ? (
-          <Bo />
-        ) : selected === 'bifang' ? (
-          <Bifang />
-        ) : selected === 'lushu' ? (
-          <Lushu />
-        ) : selected === 'fuzhu' ? (
-          <Fuzhu />
-        ) : selected === 'dangkang' ? (
-          <Dangkang />
-        ) : selected === 'zheng' ? (
-          <Zheng />
-        ) : selected === 'tiangou' ? (
-          <Tiangou />
-        ) : selected === 'feifei' ? (
-          <Feifei />
-        ) : selected === 'qiongqi' ? (
-          <Qiongqi />
-        ) : selected === 'taotie' ? (
-          <Taotie />
-        ) : selected === 'luwu' ? (
-          <Luwu />
-        ) : selected === 'kaiming' ? (
-          <Kaiming />
-        ) : selected === 'mengji' ? (
-          <Mengji />
-        ) : selected === 'bibi' ? (
-          <Bibi />
-        ) : selected === 'lili' ? (
-          <Lili />
-        ) : selected === 'jiufeng' ? (
-          <Jiufeng />
-        ) : selected === 'gudiao' ? (
-          <Gudiao />
-        ) : selected === 'qitu' ? (
-          <Qitu />
-        ) : selected === 'qingniao' ? (
-          <Qingniao />
-        ) : selected === 'min_bird' ? (
-          <MinBird />
-        ) : selected === 'jingwei' ? (
-          <Jingwei />
-        ) : selected === 'zhuhuai' ? (
-          <Zhuhuai />
-        ) : selected === 'chenghuang' ? (
-          <Chenghuang />
-        ) : selected === 'huan' ? (
-          <Huan />
-        ) : selected === 'tianma' ? (
-          <Tianma />
-        ) : selected === 'bingfeng' ? (
-          <Bingfeng />
-        ) : selected === 'zouwu' ? (
-          <Zouwu />
-        ) : selected === 'ershu' ? (
-          <Ershu />
-        ) : selected === 'qique' ? (
-          <Qique />
-        ) : selected === 'boyi' ? (
-          <Boyi />
-        ) : selected === 'tongtong' ? (
-          <Tongtong />
-        ) : selected === 'fenghuang' ? (
-          <Fenghuang />
-        ) : selected === 'fengxi' ? (
-          <Fengxi />
-        ) : selected === 'screen_peng' ? (
-          <ScreenPeng />
-        ) : selected === 'jinwu' ? (
-          <Jinwu />
-        ) : selected === 'yingzhao' ? (
-          <Yingzhao />
-        ) : selected === 'yayu' ? (
-          <Yayu />
-        ) : selected === 'xuangui' ? (
-          <Xuangui />
-        ) : selected === 'zhubieyu' ? (
-          <Zhubieyu />
-        ) : selected === 'bashe' ? (
-          <Bashe />
-        ) : selected === 'xingxing' ? (
-          <Xingxing />
-        ) : selected === 'jiaochong' ? (
-          <Jiaochong />
-        ) : selected === 'yinglong' ? (
-          <Yinglong />
-        ) : selected === 'jimeng' ? (
-          <Jimeng />
-        ) : selected === 'zhulong' ? (
-          <Zhulong />
-        ) : selected === 'leishen' ? (
-          <Leishen />
-        ) : selected === 'zhuyan' ? (
-          <Zhuyan />
-        ) : selected === 'changyou' ? (
-          <Changyou />
-        ) : selected === 'feiyi_snake' ? (
-          <FeiyiSnake />
-        ) : (
-          <PlaceholderBeast />
-        )}
-      </Suspense>
-      <Effects />
+        <PaperGround />
+        <ContactShadows position={[0, 0.005, 0]} color={INK.ink} opacity={0.45} scale={10} blur={2.2} far={2} resolution={512} />
+        <BeastErrorBoundary key={activeKey} onError={handleBoundaryError}>
+          <Suspense fallback={<SuspenseTracker onChange={setSuspending} />}>
+            <ActiveBeast id={selected} readyKey={activeKey} onReady={setReadyKey} />
+          </Suspense>
+        </BeastErrorBoundary>
+        <Effects />
 
-      <OrbitControls
-        makeDefault
-        target={[0, 0.6, 0]}
-        enablePan={false}
-        enableDamping
-        minDistance={2.2}
-        maxDistance={9}
-        minPolarAngle={0.6}
-        maxPolarAngle={Math.PI / 2 - 0.08}
-      />
-    </Canvas>
+        <OrbitControls
+          makeDefault
+          target={[0, 0.6, 0]}
+          enablePan={false}
+          enableDamping
+          minDistance={2.2}
+          maxDistance={9}
+          minPolarAngle={0.6}
+          maxPolarAngle={Math.PI / 2 - 0.08}
+        />
+      </Canvas>
+      <span hidden data-stage-beast={selected} data-stage-state={stageState} />
+      <StageStatus suspending={suspending} error={error} onRetry={handleRetry} />
+    </>
   )
 }

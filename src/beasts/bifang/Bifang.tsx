@@ -129,5 +129,3 @@ export function Bifang() {
     <FoxFire emitters={rig.emitters} intensity={fire} coreColor="#d98a62" edgeColor="#9e3b2a" />
   </>
 }
-
-useGLTF.preload(BODY_URL)

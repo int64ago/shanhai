@@ -11,7 +11,11 @@ description: "通用的《山海经》神兽制作工作流（构型判定与异
 
 ---
 
-## 1. 解剖构型判定与部件拆解（`content/beasts/<id>.json`）
+## 1. 统一异兽登记与制作配方（`content/beasts/<id>.json`）
+
+- 新增或补齐神兽前，先运行 `pnpm beast:scaffold <id>` 自动生成 `content/beasts/<id>.json`（考据设定与制作配方）和 `pipeline/rodin/jobs/<id>-body-v1.json` 模板；运行 `pnpm beast:recipe <id>` 可随时查看解析后的部件、脚本与缺失项。
+- 运行时组件新建于 `src/beasts/<id>/<PascalCaseId>.tsx` 后，[beastRegistry.ts](../../src/scene/beastRegistry.ts) 会自动按目录发现并拆分懒加载 chunk，无需手工登记；交付时仅需将 `src/app/beasts.ts` 中对应条目的 `ready` 设为 `true`，`pnpm validate` 会统一校验总目、配方、组件、GLB 与语音的一致性。
+- `content/beasts/<id>.json` 可选配置 `recipe`（`mode` / `bodyLength` / `trimTail` / `prepareScript` / `rigScript` / `qaScript`）与 `parts`（`id` / `job` / `instances` / `length` / `texSize`），配置完成后可直接运行 `pipeline/build_beast.sh <id>` 按统一配方打包。
 
 ### 1.1 古籍原文与设计推断分栏
 - `source`：只收《山海经》原文与篇目，不混入后世引申。
@@ -121,4 +125,4 @@ node scripts/closeups.mjs "http://localhost:5199/?beast=<id>&action=walk" /tmp/s
 - [ ] 体表无外轮廓穿模黑斑，有眼部位不发白，外挂器官与躯干墨线/设色统一、根部无悬空或残影
 - [ ] “静 / 行 / 神通”三态过渡自然，着地肢体不滑步、不翘趾，空中/水生/囊体构型律动流畅
 - [ ] 古籍卡片“原文”与“设计”朱框分栏清晰
-- [ ] `pnpm typecheck && pnpm build` 零报错，新增二进制资产已由 Git LFS 追踪（`git lfs status`）
+- [ ] `pnpm typecheck && pnpm validate && pnpm build` 与 `pnpm qa:browser` 零报错，新增二进制资产已由 Git LFS 追踪（`git lfs status`）

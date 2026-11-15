@@ -84,6 +84,8 @@ function legCycle(p: number, duty = 0.6): [swing: number, lift: number] {
 const _v = new Vector3()
 
 export function Dijiang() {
+  useGLTF.preload(WING_URL)
+  useGLTF.preload(LEG_URL)
   const body = useGLTF(BODY_URL)
   const wingGltf = useGLTF(WING_URL)
   const legGltf = useGLTF(LEG_URL)
@@ -336,7 +338,3 @@ export function Dijiang() {
     </>
   )
 }
-
-useGLTF.preload(BODY_URL)
-useGLTF.preload(WING_URL)
-useGLTF.preload(LEG_URL)

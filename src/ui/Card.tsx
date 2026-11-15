@@ -1,14 +1,10 @@
 import { useLayoutEffect, useRef, useState, type CSSProperties } from 'react'
 import { ARCHETYPE_LABELS, BEASTS } from '../app/beasts'
+import type { BeastContentSpec } from '../app/beastSpec'
 import { useApp } from '../app/store'
 
-interface BeastContent {
-  source: { book: string; text: string }[]
-  inferred: { item: string; basis: string }[]
-}
-
 const CONTENT = Object.fromEntries(
-  Object.entries(import.meta.glob<BeastContent>('../../content/beasts/*.json', { eager: true, import: 'default' })).map(
+  Object.entries(import.meta.glob<BeastContentSpec>('../../content/beasts/*.json', { eager: true, import: 'default' })).map(
     ([path, data]) => [path.split('/').pop()!.replace('.json', ''), data],
   ),
 )

@@ -46,6 +46,7 @@ const POSES: Record<BeastAction, TailPose> = {
 const _v = new Vector3()
 
 export function Bo() {
+  useGLTF.preload(TAIL_URL)
   const body = useGLTF(BODY_URL)
   const tailGltf = useGLTF(TAIL_URL)
   const action = useApp((s) => s.action)
@@ -248,6 +249,3 @@ export function Bo() {
     </>
   )
 }
-
-useGLTF.preload(BODY_URL)
-useGLTF.preload(TAIL_URL)

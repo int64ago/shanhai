@@ -163,5 +163,3 @@ export function Ershu() {
     </group>
   </group>
 }
-
-useGLTF.preload(URL)

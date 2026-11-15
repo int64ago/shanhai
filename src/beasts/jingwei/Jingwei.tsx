@@ -116,5 +116,3 @@ export function Jingwei() {
     </mesh>
   </>
 }
-
-useGLTF.preload(URL)

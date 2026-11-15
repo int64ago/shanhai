@@ -114,5 +114,3 @@ export function Yayu() {
     <primitive object={rig.scene} />
   </group>
 }
-
-useGLTF.preload(URL)

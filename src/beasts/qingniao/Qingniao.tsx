@@ -118,5 +118,3 @@ export function Qingniao() {
     {birds.map((bird, i) => <primitive key={i} object={bird.holder} />)}
   </group>
 }
-
-useGLTF.preload(URL)

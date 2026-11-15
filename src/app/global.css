@@ -246,6 +246,53 @@ button {
   transform: translateX(-50%);
 }
 
+/* 模型加载进度与重试提示 */
+.stage-status {
+  position: fixed;
+  left: 50%;
+  bottom: 236px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 7px 16px;
+  font-family: var(--kai);
+  font-size: 14px;
+  letter-spacing: 0.14em;
+  color: var(--ink);
+  background: rgba(239, 230, 210, 0.88);
+  border: 1px solid var(--paper-edge);
+  border-radius: 999px;
+  box-shadow: 0 6px 20px rgba(31, 26, 20, 0.12);
+  backdrop-filter: blur(6px);
+  z-index: 12;
+  white-space: nowrap;
+}
+
+.stage-loading {
+  pointer-events: none;
+}
+
+.stage-error {
+  border-color: rgba(181, 50, 42, 0.55);
+  color: var(--cinnabar);
+}
+
+.stage-retry {
+  padding: 3px 10px;
+  font-family: var(--kai);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  color: var(--paper);
+  background: var(--cinnabar);
+  border-radius: 999px;
+  transition: opacity 0.2s;
+}
+
+.stage-retry:hover {
+  opacity: 0.88;
+}
+
 .action-btn {
   min-width: 52px;
   height: 34px;
@@ -867,6 +914,10 @@ button {
 
   .actions {
     bottom: 146px;
+  }
+
+  .stage-status {
+    bottom: 196px;
   }
 
   .controls {

@@ -131,5 +131,3 @@ export function Boyi() {
     <primitive object={rig.scene} dispose={null} />
   </group>
 }
-
-useGLTF.preload(URL)

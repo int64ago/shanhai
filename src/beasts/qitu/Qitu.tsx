@@ -12,6 +12,8 @@ const HEADS = [[-0.08, -0.07, 0, 0.55], [0, 0.05, 0.06, 0], [0.08, -0.07, 0, -0.
 const TAILS = [-0.85, -0.51, -0.17, 0.17, 0.51, 0.85]
 
 export function Qitu() {
+  useGLTF.preload(`${BASE}head.glb`)
+  useGLTF.preload(`${BASE}tail.glb`)
   const body = useGLTF(`${BASE}body.glb`)
   const head = useGLTF(`${BASE}head.glb`)
   const tail = useGLTF(`${BASE}tail.glb`)
@@ -150,5 +152,3 @@ export function Qitu() {
     <primitive object={rig.torso.scene as Object3D} />
   </group>
 }
-
-for (const part of ['body', 'head', 'tail']) useGLTF.preload(`${BASE}${part}.glb`)

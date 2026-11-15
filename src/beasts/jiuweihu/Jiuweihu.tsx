@@ -50,6 +50,7 @@ const POSES: Record<BeastAction, TailPose> = {
 const _v = new Vector3()
 
 export function Jiuweihu() {
+  useGLTF.preload(TAIL_URL)
   const body = useGLTF(BODY_URL)
   const tailGltf = useGLTF(TAIL_URL)
   const action = useApp((s) => s.action)
@@ -254,6 +255,3 @@ export function Jiuweihu() {
     </>
   )
 }
-
-useGLTF.preload(BODY_URL)
-useGLTF.preload(TAIL_URL)

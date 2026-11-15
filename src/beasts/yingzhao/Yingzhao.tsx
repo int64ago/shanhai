@@ -114,5 +114,3 @@ export function Yingzhao() {
     <primitive object={rig.scene} />
   </group>
 }
-
-useGLTF.preload(URL)

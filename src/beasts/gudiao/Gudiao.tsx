@@ -106,5 +106,3 @@ export function Gudiao() {
     <primitive object={rig.scene} />
   </group>
 }
-
-useGLTF.preload(URL)

@@ -143,5 +143,3 @@ export function Xuangui() {
     </mesh>
   </group>
 }
-
-useGLTF.preload(URL)

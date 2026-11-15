@@ -135,5 +135,3 @@ export function Zhubieyu() {
     </mesh>
   </group>
 }
-
-useGLTF.preload(URL)

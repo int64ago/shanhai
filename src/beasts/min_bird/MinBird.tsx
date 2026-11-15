@@ -99,5 +99,3 @@ export function MinBird() {
     <primitive object={rig.scene} />
   </group>
 }
-
-useGLTF.preload(URL)

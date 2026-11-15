@@ -11,8 +11,9 @@ concurrency:
 
 jobs:
   verify:
-    name: Typecheck, Validate Assets & Build
+    name: Typecheck, Validate, Build & Browser QA
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout repository (with Git LFS)
         uses: actions/checkout@v4
@@ -41,3 +42,32 @@ jobs:
 
       - name: Build production bundle
         run: pnpm build
+
+      - name: Cache Playwright Chromium
+        id: playwright-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('pnpm-lock.yaml') }}
+
+      - name: Install Playwright Chromium browser & system deps
+        run: |
+          if [ "${{ steps.playwright-cache.outputs.cache-hit }}" = "true" ]; then
+            pnpm exec playwright-core install-deps chromium
+          else
+            pnpm exec playwright-core install chromium --with-deps
+          fi
+
+      - name: Run key browser QA (production preview + StrictMode dev)
+        env:
+          QA_OUT_DIR: ${{ runner.temp }}/qa-reports
+        run: pnpm qa:browser
+
+      - name: Upload browser QA reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-qa-reports
+          path: ${{ runner.temp }}/qa-reports
+          if-no-files-found: ignore
+          retention-days: 7
